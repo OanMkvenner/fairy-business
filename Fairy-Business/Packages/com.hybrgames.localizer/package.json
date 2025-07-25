@@ -1,0 +1,14 @@
+{
+  "name": "com.hybrgames.localizer",
+  "version": "1.0.0",
+  "displayName": "HYBR Localizer",
+  "unity": "2022.3",
+  "dependencies": {
+    "com.hybrgames.utils": "1.0.0"
+  },
+  "author": {
+    "name": "Jonas Kopcsek",
+    "email": "jonas.kopcsek@hybr.co",
+    "url": "https://www.hybr.co"
+  }
+}

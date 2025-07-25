@@ -1,0 +1,20 @@
+{
+    "name": "hybrgames.saveload.runtime",
+    "rootNamespace": "",
+    "references": [
+        "hybrgames.loadingmanager",
+        "Unity.Mathematics",
+        "hybrgames.utils",
+        "UniTask",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

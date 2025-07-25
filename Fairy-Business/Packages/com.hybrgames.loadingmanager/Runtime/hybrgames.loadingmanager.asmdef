@@ -1,0 +1,16 @@
+{
+    "name": "hybrgames.loadingmanager",
+    "rootNamespace": "",
+    "references": [
+        "hybrgames.utils"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

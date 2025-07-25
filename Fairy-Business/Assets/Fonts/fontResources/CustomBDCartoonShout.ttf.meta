@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 781e7ba5089f60e4099c4bef38470c14
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - BD Cartoon Shout
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 165db339119986f42be0bbd667ab030a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

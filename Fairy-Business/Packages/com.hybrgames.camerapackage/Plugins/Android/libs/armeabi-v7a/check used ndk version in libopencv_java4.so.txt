@@ -1,0 +1,3 @@
+open .so in notepad++
+
+search for "General configuration for OpenCV"

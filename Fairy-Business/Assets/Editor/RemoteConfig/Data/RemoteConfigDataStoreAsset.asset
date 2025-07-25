@@ -1,0 +1,1148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"95c7e029-2ec2-4349-acab-b928825ca379\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"releasedVersionIOS\",\r\n      \"type\":
+    \"string\",\r\n      \"value\": \"0.8.3\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"632f47c0-87a0-4427-8d0b-45b06fe85658\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"releasedVersionANDROID\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"0.8.3\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"06a81946-c7a9-482d-8f0f-6135fe4f8e01\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"string_key\",\r\n      \"type\": \"string\",\r\n      \"value\":
+    \"string_value\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"a820b88e-92c5-48e3-8321-ba53805ac512\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"int_key\",\r\n      \"type\": \"long\",\r\n      \"value\": 1\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"0a908ba3-3c01-4cf7-a6ee-b7c820fa998d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"bool_key\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"e508a68e-dbe7-4a77-b284-3c9d4868df16\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"long_key\",\r\n      \"type\": \"long\",\r\n      \"value\": 10000\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"81fbdf5a-f263-4f4b-86f5-9cf918b7e505\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"float_key\",\r\n      \"type\": \"float\",\r\n     
+    \"value\": 1.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"16fbd5db-73a5-40ce-b5b9-2d2af31fc458\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"json_key\",\r\n      \"type\": \"json\",\r\n      \"schemaId\": null,\r\n     
+    \"value\": {\r\n        \"sample_key\": \"sample_value\"\r\n      }\r\n    }\r\n 
+    },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a779fa0f-47b3-4f5f-a025-65f86fae4406\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"languages\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"en\": {\r\n          \"languageCode\":
+    \"en\",\r\n          \"unitySystemLanguage\": \"English\",\r\n          \"translatedLanguageName\":
+    \"English\",\r\n          \"enabled\": \"yes\",\r\n          \"buttonFont\":
+    \"atlantic-cruiseSDF\",\r\n          \"textFieldFont\": \"Arvo-Regular\",\r\n         
+    \"description\": \"english language settings\"\r\n        },\r\n        \"de\":
+    {\r\n          \"languageCode\": \"de\",\r\n          \"unitySystemLanguage\":
+    \"German\",\r\n          \"translatedLanguageName\": \"Deutsch\",\r\n         
+    \"enabled\": \"yes\",\r\n          \"buttonFont\": \"atlantic-cruiseSDF\",\r\n         
+    \"textFieldFont\": \"Arvo-Regular\",\r\n          \"description\": \"german language
+    settings\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"cba652e6-7057-4e13-be97-fe0806ab44e3\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"translation_en\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"emergencyMessage\": \"\",\r\n       
+    \"gameName\": \"Finding Atlantis\",\r\n        \"language\": \"language\",\r\n       
+    \"chooseLanguage\": \"Choose Language\",\r\n        \"playGame\": \"Play\",\r\n       
+    \"backToGame\": \"Back to game\",\r\n        \"resetTutorial\": \"Reset Tutorials\",\r\n       
+    \"options\": \"Options\",\r\n        \"optionSoundeffects\": \"Sound effects\",\r\n       
+    \"optionMusic\": \"Music\",\r\n        \"restart\": \"Restart\",\r\n        \"quit\":
+    \"Quit\",\r\n        \"gameSetup\": \"Set up your game\",\r\n        \"notSoMeanMonsters\":
+    \"Not so mean monsters\",\r\n        \"meanMonsters\": \"Mean monsters\",\r\n       
+    \"notPirateMode\": \"No pirates on the horizon\",\r\n        \"pirateMode\":
+    \"Pirate mode\",\r\n        \"8x8mode\": \"Big game: 8x8\",\r\n        \"6x6mode\":
+    \"Small game: 6x6\",\r\n        \"tutorialOn\": \"Tutorial On\",\r\n        \"tutorialOff\":
+    \"Tutorial Off\",\r\n        \"startGame\": \"Start game\",\r\n        \"gameIntroductionSummaryTitle\":
+    \"Traces of civilisation\",\r\n        \"gameIntroductionSummary6x6\": \"The
+    sea map contains 4 neighbouring Atlantis fields (adjascent or diagonally) and
+    4 randomly distributed artifacts.\",\r\n        \"gameIntroductionSummary8x8\":
+    \"The sea map contains 6 neighbouring Atlantis fields (adjascent or diagonally)
+    and 6 randomly distributed artifacts.\",\r\n        \"seaMonster\": \"Sea Monster!\",\r\n       
+    \"monsterEffect_0\": \"(X) your captain is hurt. The next time you use your captain
+    card, it will be their last appearance.\",\r\n        \"monsterEffect_0_plural\":
+    \"(X) your captains are hurt. The next time you use a captain card, it will be
+    their last appearance.\",\r\n        \"monsterEffect_1\": \"(X) you loose one
+    of your silent-running cards\",\r\n        \"monsterEffect_plural_1\": \"(X)
+    each of you looses one of your silent running cards\",\r\n        \"monsterEffect_2\":
+    \"(X) you loose your radiograph card\",\r\n        \"monsterEffect_plural_2\":
+    \"(X) each of you looses their radiograph card\",\r\n        \"monsterEffect_3\":
+    \"(X) you got placed on a random position on the map.\",\r\n        \"monsterEffect_3_plural\":
+    \"(X) each of you got placed on a random position on the map.\",\r\n        \"monsterEffect_4\":
+    \"(X) you loose your sonar card\",\r\n        \"monsterEffect_4_plural\": \"(X)
+    each of you looses their sonar cards.\",\r\n        \"ovenExplanation\": \"Flip
+    a card and scan its front in the desired orientation to move openly in the direction
+    of the compass.\",\r\n        \"readyToStart\": \"Everyone aboard!\",\r\n       
+    \"settings\": \"Settings\",\r\n        \"gameSetupChooseColor\": \"Choose your
+    color by clicking on the respective submarine.\",\r\n        \"gameSetupChoosePosition\":
+    \"Choose your approximate position at the table relative to the device by clicking
+    the respective rectangle on the side.\",\r\n        \"chooseClass\": \"CHOOSE
+    YOUR CAPTAIN\",\r\n        \"astrologist\": \"Astrologist\",\r\n        \"cartographer\":
+    \"Cartographer\",\r\n        \"miner\": \"Miner\",\r\n        \"navy\": \"Navy\",\r\n       
+    \"cptNemo\": \"Captain Nemo\",\r\n        \"raider\": \"Raider\",\r\n       
+    \"sailor\": \"Sailor\",\r\n        \"spy\": \"Spy\",\r\n        \"initialEmergeMessage\":
+    \"These are the initial positions of all players. Place your wooden boats on
+    the paper map.\",\r\n        \"onlyForYou\": \"this hidden action is for your
+    eyes only!\",\r\n        \"hiddenActionExplanation\": \"Please take the device
+    in your hands and make sure no one else can see the screen.\\n\\nThen tap the
+    eye.\",\r\n        \"revealHiddenScreen\": \"REVEAL >\",\r\n        \"remainingActions\":
+    \"Remaining actions: \",\r\n        \"isTurnOf\": \"Turn of: \",\r\n        \"youWentToN\":
+    \"You went to North.\",\r\n        \"youWentToS\": \"You went to South.\",\r\n       
+    \"youWentToW\": \"You went to West.\",\r\n        \"youWentToE\": \"You went
+    to East.\",\r\n        \"emergedCardsBack\": \"You\u2018ve emerged. Take all
+    your cards back.\",\r\n        \"youFoundAtlantis\": \"Holy squid! You\u2018ve
+    found Atlantis!\",\r\n        \"youFoundNothing\": \"Nothing found. Your exploration
+    was unsuccessful.\",\r\n        \"showingRadiograph\": \"The radiograph result
+    is being shown.\",\r\n        \"showingSonar\": \"The sonar result is being shown.\",\r\n       
+    \"showingPeriscope\": \"The periscope result is being shown.\",\r\n        \"youLeftMine\":
+    \"You\u2018ve left a mine.\",\r\n        \"youMineDestroyedPrevious\": \"Your
+    mine destroyed a previous mine. Both where destroyed.\",\r\n        \"doubleSecretMovement\":
+    \"Double Silent Running\",\r\n        \"whereDoYouGoSecretly\": \"Pick a direction
+    to move your submarine secretly by one field.\",\r\n        \"whereDoYouGoSecretlyDouble\":
+    \"Pick a direction to move your submarine secretly by two fields.\",\r\n       
+    \"secretMovementSuccessful\": \"You moved secretly by one field.\",\r\n       
+    \"firstSecretMovementSuccessful\": \"You moved secretly by ONE field.\",\r\n       
+    \"bothSecretMovementsSuccessful\": \"You moved secretly by two fields!\",\r\n       
+    \"secondSecretMovementNotSuccessful\": \"The second secret movement has NOT been
+    executed!\",\r\n        \"gefroreneWelleRequest\": \"Please pick a quadrant.
+    All submarines inside of it will be teleported to random fields.\",\r\n       
+    \"gefroreneWelleResult\": \"All submarines in the chosen quadrant have landed
+    on random fields. What a mess!\",\r\n        \"goldGraeberResult\": \"There are
+    (X) Trace(s) (Atlantis or Artifact) in your 9-field space.\",\r\n        \"artifactFoundAndMonsterAppeared\":
+    \"You found an Artifact and spawned a Sea Monster.\",\r\n        \"allMonstersMoveBy1Field\":
+    \"All other monsters move randomly by one field!\",\r\n        \"navGlueCardResult\":
+    \"Great sailor! This movement doesn\u2018t decrement your actions counter.\",\r\n       
+    \"noAtlanticTraceToN\": \"There is no Atlantic Trace to the North.\",\r\n       
+    \"noAtlanticTraceToS\": \"There is no Atlantic Trace to the South.\",\r\n       
+    \"noAtlanticTraceToW\": \"There is no Atlantic Trace to the West.\",\r\n       
+    \"noAtlanticTraceToE\": \"There is no Atlantic Trace to the East.\",\r\n       
+    \"atlanticTraceToN\": \"There is an Atlantic Trace (X) field(s) away to the North.\",\r\n       
+    \"atlanticTraceToS\": \"There is an Atlantic Trace (X) field(s) away to the South.\",\r\n       
+    \"atlanticTraceToW\": \"There is an Atlantic Trace (X) field(s) away to the West.\",\r\n       
+    \"atlanticTraceToE\": \"There is an Atlantic Trace (X) field(s) away to the East.\",\r\n       
+    \"nemoActionN\": \"Nemo went to North.  Nemo, take one card back from your discard
+    pile.\",\r\n        \"nemoActionS\": \"Nemo went to South.  Nemo, take one card
+    back from your discard pile.\",\r\n        \"nemoActionW\": \"Nemo went to West. 
+    Nemo, take one card back from your discard pile.\",\r\n        \"nemoActionE\":
+    \"Nemo went to East.  Nemo, take one card back from your discard pile.\",\r\n       
+    \"movedToAdjascentArtifactAndRecovered\": \"You have been moved to the adjascent
+    artifact and you recovered it. Draw two artifact cards, check them out and pick
+    one to keep!\",\r\n        \"noAdjascentArtifact\": \"There are no adjascent
+    artifacts. Nothing happens.\",\r\n        \"xWonGame\": \"(X) won. CongraTUNAlations!\",\r\n       
+    \"atlantisGuessWrong\": \"What the herring! This was not correct. You find yourself
+    on a random space of the map and wasted the rest of your turn.\",\r\n       
+    \"ownMineHitYou\": \"Your own mine hit you. Discard two cards (except the Surface-Card!).
+    The mine is gone.\",\r\n        \"aMineHitYou\": \"A mine hit you. Give (X) an
+    Artifact card - either a discarded one or one from your hand. If you do not have
+    any artifacts, discard two cards of your hand (except the Surface-Card!). The
+    mine is gone.\",\r\n        \"mineHitMonster\": \"A mine hit a Sea Monster. Both
+    where destroyed!\",\r\n        \"silentRun\": \"Silent Running\",\r\n       
+    \"hereYouAre\": \"(X), here you are!\",\r\n        \"yourInitialPosition\": \"This
+    is your initial position.\",\r\n        \"astrologistTitle\": \"Astrologist\",\r\n       
+    \"astrologistText\": \"Select any space and check if it contains traces of civilization.
+    Pick a space and tap the OK button.\",\r\n        \"astrologistNoIntel\": \"No
+    traces in the selected space!\",\r\n        \"astrologistTraceIntel\": \"There
+    are traces (Atlantis or artifact) in the selected space!\",\r\n        \"spyTitle\":
+    \"Spy\",\r\n        \"spyText\": \"View all submarines in the eight spaces surrounding
+    you.\",\r\n        \"done\": \"Done\",\r\n        \"privacyOnlyForYou\": \"(X),
+    this secret action is only for your eyes.\",\r\n        \"taintedGrail\": \"Tainted
+    Grail\",\r\n        \"taintedGrailText\": \"All players must discard two cards.
+    Surface may not be one of them.\\n\\nAfter playing, place this card face up in
+    front of you.\",\r\n        \"portalToAtlantis\": \"Portal To Atlantis\",\r\n       
+    \"youTeleportedToRandomAtlantisField\": \"You have been teleported to a random
+    field with Atlantis. But where are you now?\",\r\n        \"cardOnlyAvailableInPirateMode\":
+    \"This card is only playable in pirate mode.\",\r\n        \"seedOfYouth\": \"Seed
+    Of Youth\",\r\n        \"seedOfYouthText\": \"Refresh your handcards without
+    surfacing. This doesn't cost you an action.\\n\\nAfter using put down this card
+    faceup in front of you.\",\r\n        \"davyJonesTitle\": \"Davy Jones Locker\",\r\n       
+    \"davyJonesText\": \"See all remaining and excavated artifacts on the map.\",\r\n       
+    \"poseidonsHornTitle\": \"Poseidon's Horn\",\r\n        \"poseidonsHornText\":
+    \"View the locations of all Players and Sea Monsters.\",\r\n        \"guidingAmuTitle\":
+    \"Guiding Amulet\",\r\n        \"guidingAmuText\": \"Check how many Atlantis
+    space are in each quadrant.\",\r\n        \"bermudaTitle\": \"Bermuda Square\",\r\n       
+    \"bermudaText\": \"View a rectangle with the dimensions of Atlantis.\",\r\n       
+    \"eternalHourglass\": \"Eternal Hourglass\",\r\n        \"eternalHourglassText\":
+    \"Gain two actions. This doesn't cost you an action.\\n\\nAfter using put down
+    this card faceup in front of you.\",\r\n        \"sailorClassCardPopup\": \"The
+    waves are on your side! where do you want to go?\",\r\n        \"foundAtlantis\":
+    \"You have found Atlantis!\",\r\n        \"foundArtifact\": \"You found an artifact!\",\r\n       
+    \"foundArtifactDrawCard\": \"Draw one artifact card!\",\r\n        \"foundArtifactMonsterWarning\":
+    \"Careful: A new Sea-monster now lurks on this position for its next prey.\",\r\n       
+    \"tutStoryIntro1\": \"Choose your player colors, place the privacy shield in
+    front of you and hide your navigation-paper behind it. Get some pens ready.\",\r\n       
+    \"tutStoryIntro2\": \"Each player gets their corresponding Submarine-piece and
+    one token of every players color.\",\r\n        \"tutStoryIntro3\": \"Shuffle
+    the artifact cards and put the pile in the middle of the table.\",\r\n       
+    \"tutStoryIntro4\": \"Every player gets the card-deck of their respective color.
+    The 'Drop Mine' and 'Periscope' cards are only needed in the Pirate mode.\",\r\n       
+    \"tutStoryIntro5\": \"Every player chooses one captains-card and takes it up
+    into their hands together with their card-deck.\",\r\n        \"tutStoryIntro6\":
+    \"Each player chooses one color and aproximate seating place relative to the
+    device.\",\r\n        \"TutStoryGrampa1\": \"A strong gust of wind makes you
+    look up. The steel fuselage under your feet vibrates slightly. The sea is still
+    calm, but you can smell the upcoming storm.\",\r\n        \"TutStoryGrampa2\":
+    \"You remember the old stories of your Grandpa, of distand lands, exotic smells
+    and the seven seas. Even when the whole world seemed explored, he still kept
+    dreaming of a mystic place, the most legendary of them all. \u201EIt harbors
+    treasures of unthinkable wealth und long forgotten secrets, protected by dangerous
+    monstrous wardens.\u201D Your eyes light up at the memory of these words. Back
+    in the day you swore you would one day find this legendary place - Atlantis.\",\r\n       
+    \"TutStoryGrampa3\": \"And today you have something, your grandpa could only
+    have dreamt of: A boat capable of diving!\\nA glimpse towards the east reveals
+    the submarine of your friend of old times, Captain Glue, at the horizon.\\n\\nSubmerge,
+    fellow bubbleheads! The race has begun!\",\r\n        \"TutStoryPuzzle1\": \"Find
+    Atlantis! Whoever finds out first where all fields of atlantis are can win the
+    game by using 'explore' on one of its locations. You can see an example of how
+    Atlantis is structured on one of the \u201EThe Riddle\u201D helper cards. Obviousely
+    atlantis will be in a different place every time. You can use the same symbols
+    for notes on your sheet of paper, or you can draw whatever you like, we ain't
+    your boss!\",\r\n        \"TutStoryPuzzle2\": \"All atlantis fields are always
+    connected to eachother, either diagonally, vertically or horizontally. Explore
+    a location of atlantis to get a chance to solve the puzzle and win the game.\",\r\n       
+    \"TutStoryPuzzle3\": \"Artifacts provide their finders with powerful effects.
+    'Explore' one to recover it and receive an artifact card. Artifacts are usually
+    single-use cards.\\n\\nAtlantis as well as artifacts are also commonly called
+    \u201ETraces of civilization\u201D or for short \u201ETraces\u201D\",\r\n       
+    \"TutStoryPuzzle4\": \"Important! Traces (Atlantis AND artifacts) are ALWAYS
+    on top of sea mounts AND on all their 4 adjecent sides are ALSO sea mounts! Check
+    it.\",\r\n        \"TutStoryCards1\": \"Lets check out your cards. These are
+    your possible actions to explore the deep sea. Read up on all of their effects
+    first.\",\r\n        \"TutStoryCards2\": \"There is another possibility for moving
+    your submarine thats not written on the cards: Every non-artifact card can be
+    burned in your engines! To do so, click the burner symbol and scan the FRONT
+    of the card you want to burn. Instead of the original effect of the card, you
+    now move one field in the direction of the compass needle depicted on the card's
+    back. All players will see which direction you took.\",\r\n        \"TutStoryCards3\":
+    \"Each turn you have 2 actions to use. To use an action just scan the card you
+    want to use by holding it above the device camera and then discard the used card.
+    To get your cards back into your hand you have to use the emerge-card.\",\r\n       
+    \"TutStoryCards4\": \"The captain and any artifacts in your hand can also be
+    used just as normal actions.\",\r\n        \"TutStoryInitialPositions\": \"These
+    are your initial positions. Use your pieces and the map in front of you to track
+    your own positions and the positions of your opponents.\",\r\n        \"TutStoryInitialPositions2\":
+    \"Mind the points of the compass. Write the letters N, W, S and E in the compass
+    rose on your maps. \",\r\n        \"TutStoryInitialPositions2b\": \"Remember:
+    North lies in the same direction for all players. Your seat and orientation do
+    not matter. Each submarine will move in the same direction on the device and
+    on your sea maps.\",\r\n        \"TutStoryInitialPositions3\": \"Soon you will
+    go underwater and move secretly. From then on try to keep your position secret
+    for as long as possible.\",\r\n        \"TutEdge1\": \"One more thing: in the
+    6x6 mode, you cannot move onto the blue edge. There cannot be any traces on it
+    either. However, it can contain see mounts if a neighbouring field contains a
+    trace.\",\r\n        \"TutEdge2\": \"The app never tells you that you are at
+    an edge, otherwise your opponents would know too much about your position. The
+    Sonar can show mounts outside of the sea, and the Radiograph, if used on an outside
+    field, will simply detect nothing.\",\r\n        \"TutEdge3\": \"If you ride
+    against an edge, be it accidentally or on purpose, the app will NOT tell you.
+    It is discrete :-)\",\r\n        \"TutEdge8x8\": \"In the 8x8 mode the blue fields
+    on your maps behave just the same as the white fields. The inactive rand is not
+    marked.  Use the space around the sea to note down the sea mounts.\",\r\n       
+    \"TutScanning1\": \"To use a card, scan it with the front camera front side up,
+    like shown.\",\r\n        \"TutScanning2\": \"Some cards feature a compass needle.
+    Such cards can be rotated during scanning to change the orientation of their
+    effect.\",\r\n        \"TutSonar\": \"Sonar allows you to learn more about the
+    surrounding topography. It tells you if and where there are sea mounts in the
+    surrounding 8 fields. If you are at the border of the map you can even see fields
+    outside the map.\",\r\n        \"TutRadiograph\": \"Use the radiograph to check
+    two fields in opposite direction for traces of civilisation (magnifying glass).
+    Watch the orientation of the compass needle on the front of the card!\",\r\n       
+    \"TutRadiographPirateMode\": \"In pirate mode, the radiograph can confuse Traces
+    with Mines!\",\r\n        \"TutPeriscope\": \"With the periscope you can detect
+    dangers in the 8 surrounding fields. It reacts to mines and monsters alike.\",\r\n       
+    \"TutSecretMove\": \"Use silent running to move secretly. Choose the direction
+    secretly in the app and move your player-piece on your paper, depending on the
+    action by one (for long silent running by two) fields into the chosen direciton.\",\r\n       
+    \"TutEmerge\": \"Even the most hardy of deepdivers need to take a breath occationally.
+    Emerging is your only regular way of getting back all your used cards (including
+    the emerge-card itself) into your hand.\\n\\nThe catch? When emerging the app
+    tells shows to everyone where you are on the map.\",\r\n        \"TutMoveAndMine\":
+    \"With this card you move into the direction of the compass and leave a mine
+    behind where you came from. We recommend to use the tokens to mark your mine
+    and the mines of your enemies (if you know where they are). Only one Mine can
+    be active per player, older mines are destroyed.\",\r\n        \"TutExplore\":
+    \"This is an important skill of yours, exploring, so listen closely!\\nWhen diving
+    to search the ground closely, you can be absolutely sure whether you have an
+    artifact, atlantis, or nothing at all below you, meaning exactly where you are
+    right now.\\nFurthermore this action allows you to\\n\u2022 Recover artifacts,
+    if present\\n\u2022 To try and win! Explore a piece of atlantis to get a chance
+    for a final guess.\",\r\n        \"TutArtifact\": \"Playing an artifact uses
+    one action (if not stated otherwise by the artifact). Openly put down the used
+    card in front of you. You are NOT allowed to pick it back up. Each person is
+    only allowed to use each artifact ONCE (unless you manage to loose it and regain
+    it somehow)\\n\\nUnluckily recovering an artifact angers the ocean. A sea-monster
+    awakes at your position and waits for a new prey.\\n\\nYou are safe from it until
+    you start moving again.\",\r\n        \"TutPirateMode\": \"Welcome to Pirate
+    Mode, arr! You will use mines to find your enemies and steal their artefacts.
+    You will you the Periscope to find dangers before colliding with them, yo-ho!\",\r\n       
+    \"playYourNextCard\": \"Your turn, (X)! Play (scan) a card and discard it afterwards.\",\r\n       
+    \"atlantisFindingHeader\": \"Have you found Atlantis?\",\r\n        \"atlantisFindingExplanation\":
+    \", select all fields with Atlantis. If all of them are correct, you win the
+    game! Otherwise you'll be punished...\",\r\n        \"atlantisResolveButton\":
+    \"Recover Atlantis:\\nsolve the game\",\r\n        \"atlantisContinue\": \"Continue
+    Game\",\r\n        \"showFullMap\": \"Show full Map\",\r\n        \"8x8AtlantisFields\":
+    \"This 8x8 playing field contains 6 connected Atlantis-fields and 6 randomly
+    distributed Treasures with hidden Artifacs in them.\",\r\n        \"6x6AtlantisFields\":
+    \"This 6x6 playing field contains 4 connected Atlantis-fields and 4 randomly
+    distributed Treasures with hidden Artifacs in them.\",\r\n        \"8x8AtlantisFieldsReminder\":
+    \"Reminder: There are exactly 6 connected fields of Atlantis! Connections can
+    be diagonally, vertically or horizontally\",\r\n        \"6x6AtlantisFieldsReminder\":
+    \"Reminder: There are exactly 4 connected fields of Atlantis! Connections can
+    be diagonally, vertically or horizontally\",\r\n        \"pleaseSelectAllAtlantisFields6x6\":
+    \"Please select exactly 4 fields for your guess.\",\r\n        \"pleaseSelectAllAtlantisFields8x8\":
+    \"Please select exactly 6 fields for your guess.\",\r\n        \"betaVersionWarning\":
+    \"If you find any bugs, grammatical errors or otherwise annoying things in the
+    app, please send us a message on Discord, social Media or mail us on info@hybr.co\\n\\nHave
+    Fun!\",\r\n        \"newerVersionAvailable\": \"new version availabe!\",\r\n       
+    \"weisenderRingCorrection\": \"This card shows you how many ATLANTIS FIELDS there
+    are in each quadrant (there is a mistake on the card).\"\r\n      }\r\n    }\r\n 
+    },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"174d1598-4c5d-4455-a08b-79ebf76ede85\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"translation_de\",\r\n      \"type\":
+    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"emergencyMessage\":
+    \"\",\r\n        \"gameName\": \"Finding Atlantis\",\r\n        \"language\":
+    \"Sprache\",\r\n        \"chooseLanguage\": \"W\xE4hle Sprache\",\r\n       
+    \"playGame\": \"Spielen\",\r\n        \"backToGame\": \"Zur\xFCck zum Spiel\",\r\n       
+    \"resetTutorial\": \"Tutorials zur\xFCcksetzen\",\r\n        \"options\": \"Einstellungen\",\r\n       
+    \"optionSoundeffects\": \"Soundeffekte\",\r\n        \"optionMusic\": \"Musik\",\r\n       
+    \"restart\": \"Neustarten\",\r\n        \"quit\": \"Beenden\",\r\n        \"gameSetup\":
+    \"Spiel konfigurieren\",\r\n        \"notSoMeanMonsters\": \"Ungeheuer lauern\",\r\n       
+    \"meanMonsters\": \"Ungeheuer gehen auf die Jagd\",\r\n        \"notPirateMode\":
+    \"Friedlicher Wettstreit\",\r\n        \"pirateMode\": \"Piratenmodus\",\r\n       
+    \"8x8mode\": \"Gro\xDFe Karte\",\r\n        \"6x6mode\": \"Kleine Karte\",\r\n       
+    \"tutorialOn\": \"Tutorial\",\r\n        \"tutorialOff\": \"Kein Tutorial\",\r\n       
+    \"startGame\": \"Spiel starten\",\r\n        \"gameIntroductionSummaryTitle\":
+    \"Spuren der Zivilisation\",\r\n        \"gameIntroductionSummary6x6\": \"Die
+    Seekarte enth\xE4lt 4 benachbarte Atlantis-Felder (auch diagonal m\xF6glich)
+    und 4 zuf\xE4llig verteilte Artefakte.\",\r\n        \"gameIntroductionSummary8x8\":
+    \"Die Seekarte enth\xE4lt 6 benachbarte Atlantis-Felder (auch diagonal m\xF6glich)
+    und 6 zuf\xE4llig verteilte Artefakte.\",\r\n        \"seaMonster\": \"Seeungeheuer!\",\r\n       
+    \"monsterEffect_0\": \"(X), dein Kapit\xE4n ist verletzt. Das n\xE4chste Mal,
+    dass du die Kapit\xE4n-Karte nutzt, wird sein letztes sein.\",\r\n        \"monsterEffect_0_plural\":
+    \"(X), eure Kapit\xE4ne sind verletzt. Das jeweils n\xE4chste Mal, dass ihr eure
+    Kapit\xE4n-Karten nutzt, wird ihr letztes sein.\",\r\n        \"monsterEffect_1\":
+    \"(X), du verlierst eine Schleichfahrt-Karte. Entscheide selbst welche.\",\r\n       
+    \"monsterEffect_plural_1\": \"(X), ihr verliert jeweils eine Schleichfahrt-Karte.
+    Entscheidet selbst welche.\",\r\n        \"monsterEffect_2\": \"(X), du verlierst
+    deinen Radiographen.\",\r\n        \"monsterEffect_plural_2\": \"(X), ihr verliert
+    jeweils euren Radiographen.\",\r\n        \"monsterEffect_3\": \"(X), du wurdest
+    auf eine Zufallsposition versetzt.\",\r\n        \"monsterEffect_3_plural\":
+    \"(X), ihr wurdet jeweils auf zuf\xE4llige Positionen versetzt.\",\r\n       
+    \"monsterEffect_4\": \"(X), du verlierst deine Sonar-Karte.\",\r\n        \"monsterEffect_4_plural\":
+    \"(X), ihr verliert jeweils eure Sonar-Karte.\",\r\n        \"ovenExplanation\":
+    \"Drehe eine deiner Karten auf Ihre R\xFCckseite. Benutze den Kompass um deine
+    Fahrtrichtung einzustellen und halte die Karte so \xFCber den Scanner.\",\r\n       
+    \"readyToStart\": \"Alle Spieler an Bord!\",\r\n        \"settings\": \"Einstellungen\",\r\n       
+    \"gameSetupChooseColor\": \"W\xE4hle deine Farbe, indem du auf das entsprechende
+    U-Boot tippst.\",\r\n        \"gameSetupChoosePosition\": \"W\xE4hle deine ungef\xE4hre
+    Position am Spieltisch relativ zum Ger\xE4t, indem du auf das entsprechende Rechteck
+    tippst.\",\r\n        \"chooseClass\": \"CAPTAIN AUSW\xC4HLEN\",\r\n        \"astrologist\":
+    \"Astrologin\",\r\n        \"cartographer\": \"Kartograph\",\r\n        \"<r\":
+    \"Goldgr\xE4ber\",\r\n        \"navy\": \"Kommandant\",\r\n        \"cptNemo\":
+    \"Captain Nemo\",\r\n        \"raider\": \"R\xE4uberin\",\r\n        \"sailor\":
+    \"Navigator Glue\",\r\n        \"spy\": \"Spionin\",\r\n        \"initialEmergeMessage\":
+    \"Markiert euch alle Spielerpositionen mit den eigenen U-Booten und den anderen
+    Spielsteinen auf eurer Seekarte. \",\r\n        \"onlyForYou\": \"Diese Geheimaktion
+    ist nur f\xFCr deine Augen bestimmt!\",\r\n        \"hiddenActionExplanation\":
+    \"Nimm bitte das Ger\xE4t in die H\xE4nde und stelle sicher, dass niemand den
+    Bildschirm sieht.\\n\\nKlicke anschlie\xDFend auf das Auge.\",\r\n        \"revealHiddenScreen\":
+    \"AUFDECKEN >\",\r\n        \"remainingActions\": \"Verleibende Aktionen: \",\r\n       
+    \"isTurnOf\": \"An der Reihe: \",\r\n        \"youWentToN\": \"Du bist nach Norden
+    gefahren.\",\r\n        \"youWentToS\": \"Du bist nach S\xFCden gefahren.\",\r\n       
+    \"youWentToW\": \"Du bist nach Westen gefahren.\",\r\n        \"youWentToE\":
+    \"Du bist nach Osten gefahren.\",\r\n        \"emergedCardsBack\": \"Du bist
+    aufgetaucht. Nimm all deine Karten zur\xFCck.\",\r\n        \"youFoundAtlantis\":
+    \"Heilige Makrele! Du hast Atlantis gefunden!\",\r\n        \"youFoundNothing\":
+    \"Nichts gefunden. Deine Erforschungs- Aktion hat nichts zu Tage gebracht.\",\r\n       
+    \"showingRadiograph\": \"Das Radiographen-Ergebnis wird angezeigt.\",\r\n       
+    \"showingSonar\": \"Das Sonar-Ergebnis wird angezeigt.\",\r\n        \"showingPeriscope\":
+    \"Das Periskop-Ergebnis wird angezeigt.\",\r\n        \"youLeftMine\": \"Du hast
+    eine Mine hinterlassen.\",\r\n        \"youMineDestroyedPrevious\": \"Deine Mine
+    hat die vorherige zerst\xF6rt. Beide verschwinden.\",\r\n        \"doubleSecretMovement\":
+    \"Weite Schleichfahrt\",\r\n        \"whereDoYouGoSecretly\": \"W\xE4hle eine
+    Richtung und bewege dein U-Boot heimlich um ein Feld.\",\r\n        \"whereDoYouGoSecretlyDouble\":
+    \"W\xE4hle eine Richtung und bewege dein U-Boot heimlich um zwei Felder.\",\r\n       
+    \"secretMovementSuccessful\": \"Du hast dich heimlich um ein Feld bewegt.\",\r\n       
+    \"firstSecretMovementSuccessful\": \"Du hast dich heimlich um EIN Feld bewegt.\",\r\n       
+    \"bothSecretMovementsSuccessful\": \"Du hast dich heimlich um zwei Felder bewegt.\",\r\n       
+    \"secondSecretMovementNotSuccessful\": \"Die zweite Schleichfahrt wurde NICHT
+    ausgef\xFChrt.\",\r\n        \"gefroreneWelleRequest\": \"W\xE4hle einen Quadranten.
+    Alle U-Boote darin werden auf zuf\xE4llige Felder bewegt.\",\r\n        \"gefroreneWelleResult\":
+    \"Alle U-Boote im ausgew\xE4hlten Quadranten sind auf zuf\xE4lligen Feldern gelandet.
+    Was f\xFCr ein Klamauk!\",\r\n        \"goldGraeberResult\": \"Es gibt (X) Spur(en)
+    der Zivilisation (Atlantis oder Artefakt) in deiner 9-Felder-Nachbarschaft.\",\r\n       
+    \"artifactFoundAndMonsterAppeared\": \"Du hast ein Artefakt gefunden und ein
+    Seemonster erscheinen lassen.\",\r\n        \"allMonstersMoveBy1Field\": \"Alle
+    anderen Monster bewegen sich zuf\xE4llig um ein Feld!\",\r\n        \"navGlueCardResult\":
+    \"Gro\xDFartiger Seemann! Diese Bewegung verringert deine Aktions-Zahl nicht.\",\r\n       
+    \"noAtlanticTraceToN\": \"Keine Spuren in Richtung Norden.\",\r\n        \"noAtlanticTraceToS\":
+    \"Keine Spuren in Richtung S\xFCden.\",\r\n        \"noAtlanticTraceToW\": \"Keine
+    Spuren in Richtung Westen.\",\r\n        \"noAtlanticTraceToE\": \"Keine Spuren
+    in Richtung Osten.\",\r\n        \"atlanticTraceToN\": \"Es gibt Spuren (X) Feld(er)
+    in Richtung Norden.\",\r\n        \"atlanticTraceToS\": \"Es gibt Spuren (X)
+    Feld(er) in Richtung S\xFCden.\",\r\n        \"atlanticTraceToW\": \"Es gibt
+    Spuren (X) Feld(er) in Richtung Westen.\",\r\n        \"atlanticTraceToE\": \"Es
+    gibt Spuren (X) Feld(er) in Richtung Osten.\",\r\n        \"nemoActionN\": \"Nemo
+    ist nach Norden gefahren. Nemo, nimm eine abgeworfene Karte zur\xFCck auf die
+    Hand.\",\r\n        \"nemoActionS\": \"Nemo ist nach S\xFCden gefahren. Nemo,
+    nimm eine abgeworfene Karte zur\xFCck auf die Hand.\",\r\n        \"nemoActionW\":
+    \"Nemo ist nach Westen gefahren. Nemo, nimm eine abgeworfene Karte zur\xFCck
+    auf die Hand.\",\r\n        \"nemoActionE\": \"Nemo ist nach Osten gefahren.
+    Nemo, nimm eine abgeworfene Karte zur\xFCck auf die Hand.\",\r\n        \"movedToAdjascentArtifactAndRecovered\":
+    \"Du wurdest auf ein angrenzendes Feld mit einem Artefakt verschoben und du hast
+    es geborgen. Ziehe zwei Artefaktkarten, schaue sie dir an und behalte eine.\",\r\n       
+    \"noAdjascentArtifact\": \"Es gibt keine Artefakte auf angrenzenden Feldern.
+    Nichts passiert.\",\r\n        \"xWonGame\": \"(X) hat gewonnen. Gl\xFCckwunsch!\",\r\n       
+    \"atlantisGuessWrong\": \"Was zur Alge?! Das war leider nicht richtig. Du findest
+    dich jetzt auf einem zuf\xE4lligen Feld der Karte wieder und verlierst den Rest
+    deines Zuges.\",\r\n        \"ownMineHitYou\": \"Deine eigene Mine hat dich getroffen.
+    Wirf wenn m\xF6glich zwei Karten ab (au\xDFer der Auftauchen-Karte!). Die Mine
+    wurde zerst\xF6rt.\",\r\n        \"aMineHitYou\": \"Eine Mine hat dich getroffen.
+    Gib (X) ein bereits ausgespieltes Artefakt oder ein Artefakt aus der Hand. Falls
+    du keine Artefakte besitzt, wirf zwei Karten von deiner Hand ab (au\xDFer der
+    Auftauchen-Karte!). Die Mine wurde zerst\xF6rt.\",\r\n        \"mineHitMonster\":
+    \"Eine Mine hat ein Seeungeher getroffen. Beide wurden zerst\xF6rt.\",\r\n       
+    \"silentRun\": \"Schleichfahrt\",\r\n        \"hereYouAre\": \"(X), hier bist
+    du!\",\r\n        \"yourInitialPosition\": \"Das ist deine Anfangsposition.\",\r\n       
+    \"astrologistTitle\": \"Astrologin\",\r\n        \"astrologistText\": \"W\xE4hle
+    ein Feld und \xFCberpr\xFCfe es auf Spuren. Markiere ein Feld und tippe auf den
+    OK-Button.\",\r\n        \"astrologistNoIntel\": \"Keine Spuren auf dem ausgew\xE4hlten
+    Feld!\",\r\n        \"astrologistTraceIntel\": \"Es gibt eine Spur (Atlantis
+    oder Artefakt) auf dem ausgew\xE4hlten Feld!\",\r\n        \"spyTitle\": \"Spionin\",\r\n       
+    \"spyText\": \"Sieh alle U-Boote in den acht dich umgebenden Feldern.\",\r\n       
+    \"done\": \"Fertig\",\r\n        \"privacyOnlyForYou\": \"(X), diese Geheimaktion
+    ist nur f\xFCr deine Augen bestimmt.\",\r\n        \"taintedGrail\": \"Unheiliger
+    Gral\",\r\n        \"taintedGrailText\": \"Alle Spieler*innen m\xFCssen zwei
+    Karten abwerfen. \u201EAuftauchen\u201C darf nicht dabei sein.\\n\\nLege die
+    Karte nach dem Ausspielen offen von dir ab.\",\r\n        \"portalToAtlantis\":
+    \"Portmuschel\",\r\n        \"youTeleportedToRandomAtlantisField\": \"Du wurdest
+    auf ein zuf\xE4lliges Feld von Atlantis teleportiert. Aber wo bist du nun?\",\r\n       
+    \"cardOnlyAvailableInPirateMode\": \"Diese Aktion ist nur im Piratenmodus verf\xFCgbar.
+    Sortiert alle Minenman\xF6ver und Periskope aus.\",\r\n        \"seedOfYouth\":
+    \"Saat der Jugend\",\r\n        \"seedOfYouthText\": \"Erneue deine Hand, ohne
+    aufzutauchen. Diese Aktion ist frei.\\n\\nLege die Karte nach dem Ausspielen
+    offen von dir ab.\",\r\n        \"davyJonesTitle\": \"Davy Jones' Truhe\",\r\n       
+    \"davyJonesText\": \"Sieh alle verleibenden und gehobenen Artefakte auf der Seekarte.\",\r\n       
+    \"poseidonsHornTitle\": \"Poseidons Horn\",\r\n        \"poseidonsHornText\":
+    \"Sieh die Positionen aller U-Boote und Seeungeheuer.\",\r\n        \"guidingAmuTitle\":
+    \"Weisender Ring\",\r\n        \"guidingAmuText\": \"Erfahre wie viele Atlantisfelder
+    in jedem Quadranten liegen.\",\r\n        \"bermudaTitle\": \"Bermuda-Rechteck\",\r\n       
+    \"bermudaText\": \"Sieh ein Rechteck mit den Au\xDFema\xDFen von Atlantis.\",\r\n       
+    \"eternalHourglass\": \"Ewige Sanduhr\",\r\n        \"eternalHourglassText\":
+    \"Erhalte zwei zus\xE4tzliche Aktionen. Diese Aktion ist frei.\\n\\nLege die
+    Karte nach dem Ausspielen offen von dir ab.\",\r\n        \"sailorClassCardPopup\":
+    \"Die Wellen sind auf deiner Seite. Wo f\xE4hrst du hin?\",\r\n        \"foundAtlantis\":
+    \"Du hast Atlantis gefunden!\",\r\n        \"foundArtifact\": \"Du hast ein Artefakt
+    gefunden!\",\r\n        \"foundArtifactDrawCard\": \"Ziehe eine Artefakt-Karte!\",\r\n       
+    \"foundArtifactMonsterWarning\": \"Achtung: Ein neues See-Monster lauert an dieser
+    Stelle jetzt auf sein n\xE4chstes Opfer.\",\r\n        \"tutStoryIntro1\": \"W\xE4hlt
+    eure Spielerfarben, baut den entsprechenden Sichtschutz auf und versteckt dahinter
+    euer Navigationsblatt. Organisiert euch Stifte.\",\r\n        \"tutStoryIntro2\":
+    \"Jede*r bekommt eine passende U-Boot-Figur und jeweils einen Spielstein der
+    mitspielenden Farben.\",\r\n        \"tutStoryIntro3\": \"Legt die Artefaktkarten
+    als Stapel in die Mitte des Tischs.\",\r\n        \"tutStoryIntro4\": \"Jede*r
+    erh\xE4lt ein Kartendeck in der gew\xE4hlten Farbe. Das Minenman\xF6ver und das
+    Periskop bitte vorher aussortieren. Sie werden nur im Piratenmodus ben\xF6tigt.\",\r\n       
+    \"tutStoryIntro5\": \"Sucht euch jeweils eine Captain-Karte aus und nehmt sie
+    auf die Hand.\",\r\n        \"tutStoryIntro6\": \"W\xE4hlt nacheinander eine
+    Farbe und euren ungef\xE4hren Sitzplatz relativ zu dem Smartphone/Tablet in eurer
+    Mitte aus.\",\r\n        \"TutStoryGrampa1\": \"Ein kr\xE4ftiger Windsto\xDF
+    l\xE4sst dich aufschauen. Der Stahlrumpf unter deinen F\xFC\xDFen vibriert leise.
+    Die See ist noch ruhig, doch du riechst das aufkommende Unwetter.\",\r\n       
+    \"TutStoryGrampa2\": \"Du erinnerst dich an die Geschichten deines Gro\xDFvaters,
+    von fernen L\xE4ndern, exotischen Ger\xFCchen und den sieben Weltmeeren. Selbst
+    als die ganze Erde entdeckt schien, tr\xE4umte er noch immer von einem mystischen
+    Ort, dem sagenumwobensten von allen. \u201EEr birgt kostbare Sch\xE4tze und lang
+    vergessene Geheimnisse, beh\xFCtet von gef\xE4hrlichen W\xE4chtern.\u201D Deine
+    Augen leuchteten bei dieser Vorstellung. Damals hast du dir geschworen, du w\xFCrdest
+    Atlantis finden.\",\r\n        \"TutStoryGrampa3\": \"Und heute hast du etwas,
+    das dein Gro\xDFvater sich nicht h\xE4tte vorstellen k\xF6nnen: Ein tauchendes
+    Boot.\\nDu blickst nach Osten und siehst das U-Boot deines damaligen Freundes
+    Captain Glue am Horizont.\\n\\n\u201EAbtauchen, ihr Leichtmatrosen! Der Wettlauf
+    beginnt!\u201D\",\r\n        \"TutStoryPuzzle1\": \"Findet Atlantis! Wer die
+    versunkene Stadt zuerst komplett ortet und erforscht, gewinnt das Spiel!\\n\\nAuf
+    der Spielerhilfe \u201EDas R\xE4tsel\u201D seht ihr wo Atlantis verborgen sein
+    k\xF6nnte. Allerdings wird sich Atalntis immer an einem anderen Ort befinden.
+    Ihr k\xF6nnt aber die gleichen Symbole f\xFCr eure Notizen nutzen. Oder du malst
+    was du willst, wir sind ja nicht dein Chef!\",\r\n        \"TutStoryPuzzle2\":
+    \"Die 4 Atlantis-Felder grenzen immer direkt oder diagonal aneinander. Erforscht
+    ihr Atlantis, d\xFCrft ihr seine Position aufl\xF6sen.\",\r\n        \"TutStoryPuzzle3\":
+    \"Artefakte verleihen ihren Finder*innen m\xE4chtige F\xE4higkeiten. Erforsche
+    eines, um es zu bergen und eine Artefakt-Karte zu ziehen. Es handelt sich meist
+    um einmalige Aktionen.\\n\\nAtlantis und Artefakte werden auch als \u201ESpuren
+    von Zivilisation\u201D, oder kurz \u201ESpuren\u201D zusammengefasst.\",\r\n       
+    \"TutStoryPuzzle4\": \"Obacht! Spuren (Atlantis und Artefakte) liegen IMMER auf
+    Seebergen UND an allen ihren 4 Seiten liegt ein weiterer Seeberg an! Pr\xFCft
+    es nach.\",\r\n        \"TutStoryCards1\": \"Werfen wir einen Blick in eure Karten.
+    Das sind eure Aktionsm\xF6glichkeiten um den Meeresgrund zu erkunden. Lest sie
+    euch einmal genau durch.\",\r\n        \"TutStoryCards2\": \"Es gibt noch eine
+    weitere M\xF6glichkeit, sich fortzubewegen, die nicht auf den Karten steht: Jede
+    Aktionskarte kann verheizt werden! Dr\xFCcke dazu auf \u201EVerheizensymbol\u201D
+    und scanne die VORDERSEITE. Statt der beschriebenen Aktion bewegst du dich um
+    ein Feld in die Richtung der Kompassnadel auf der Kartenr\xFCckseite. Alle Mispieler
+    sehen die Fahrtrichtung.\",\r\n        \"TutStoryCards3\": \"Spielablauf: Pro
+    Runde hat jede*r 2 Aktionen. Scannt dazu die jeweilige Karte und legt sie ab.
+    Mit AUFTAUCHEN d\xFCrft ihr eure abgelegten Karten wieder auf die Hand nehmen.\",\r\n       
+    \"TutStoryCards4\": \"Auch der Captain und Artefakte werden als Aktionen genutzt.
+    \",\r\n        \"TutStoryInitialPositions\": \"Das sind eure Positionen auf der
+    Karte. Nutzt eure Spielsteine, um eure eigenen Positionen und die eurer Gegner
+    auf der Karte vor euch zu markieren.\",\r\n        \"TutStoryInitialPositions2\":
+    \"Beachtet die Himmelsrichtungen. Tragt die Symbole N, W, S und E in die Windrose
+    auf euren Seekarte ein.\",\r\n        \"TutStoryInitialPositions2b\": \"Denkt
+    immer daran: Norden liegt f\xFCr alle Spieler in der gleichen Richtung, unabh\xE4nging
+    von eurem Sitzplatz und eurer Orientierung. Jedes U-Boot wird sich auf all euren
+    Karten und dem Ger\xE4t immer in die gleiche Richtung bewegen.\",\r\n       
+    \"TutStoryInitialPositions3\": \"Mit einer Schleichfahrt taucht ihr gleich unter
+    und bewegt euch heimlich um ein Feld. Versucht ab dann eure Position geheim zu
+    halten!\",\r\n        \"TutEdge1\": \"Noch ein kleiner Hinweis am Rande: Der
+    blaue Rand ist im 6x6-Modus nicht befahrbar und kann keine Spuren enthalten.
+    Es k\xF6nnen sich aber Seeberge darauf befinden, falls eine Spur am Rand liegt.\",\r\n       
+    \"TutEdge2\": \"Die App weist euch nie darauf hin, dass ihr am Rand seid, um
+    euren Gegnern keine Hinweise zu geben. Der Sonar kann auch Seeberge au\xDFerhalb
+    des Meeres anzeigen; der Radiograph schl\xE4gt bei Feldern au\xDFerhalb des Meeres
+    einfach nicht aus.\",\r\n        \"TutEdge3\": \"Solltet ihr aus Versehen oder
+    gar absichtlich gegen den Rand fahren, wird die App euch ebenfalls nicht darauf
+    hinweisen. Die App ist diskret :-)\",\r\n        \"TutEdge8x8\": \"Im 8x8-Modus
+    verhalten sich die blauen Felder auf euren Karten genauso wie alle anderen. Der
+    unbefahrbare Rand wurde nicht eingezeichnet. Nutzt den Raum um das Meer herum,
+    um Seeberge und -tiefen au\xDFerhalb des Meeres zu zeichnen.\",\r\n        \"TutScanning1\":
+    \"Um eine Karte einzusetzen, scanne sie mithilfe der Frontkamera mit der Vorderseite
+    nach oben, wie dargestellt.\",\r\n        \"TutScanning2\": \"Auf manchen Karten
+    ist eine Kompassnadel dargestellt. Solche Karten kannst du beim Scannen drehen,
+    um die gew\xFCnschte Wirkungsrichtung zu erzielen.\",\r\n        \"TutSonar\":
+    \"Mit dem Sonar erh\xE4ltst du Informationen \xFCber\\ndie Topographie deiner
+    Umgebung. Erfahre, ob und wo sich in deinen 8 umgebenden Feldern Seeberge befinden.
+    Befindest du dich am Rand der Seekarte, bekommst du sogar Informationen \xFCber
+    diese hinaus.\",\r\n        \"TutRadiograph\": \"Nutze den Radiographen, um zwei
+    anliegende Felder in gegens\xE4tzliche Richtung auf Spuren (Lupensymbol) zu erforschen.
+    Halte beim Scannen die Radiographen-karte mit der Kompassnadel in die gew\xFCnschte
+    Richtung!\",\r\n        \"TutRadiographPirateMode\": \"Im Piratenmodus kann der
+    Radiograph zwischen Minen und Spuren leider nicht unterscheiden!\",\r\n       
+    \"TutPeriscope\": \"Mit dem Periskop erkennst du Gefahren in den 8 dich umgebenden
+    Feldern. Es schl\xE4gt aus bei Minen und Seeungeheuern.\",\r\n        \"TutSecretMove\":
+    \"Nutze die Schleichfahrt, um dich verdeckt fortzubewegen. Du w\xE4hlst die Richtung
+    geheim in der App und ziehst deine Figur auf deine Karten, je nach Aktion, um
+    ein (oder bei weiter Schleichfahrt zwei) Felder in die entsprechende Richtung
+    vor.\",\r\n        \"TutEmerge\": \"Jede*r noch so gute Tiefseetaucher*in muss
+    ab und zu mal Luft holen. Auftauchen ist die einzige regul\xE4re M\xF6glichkeit,
+    alle deine Karten (inkl. der Auftauchen-Karte selbst) wieder zur\xFCck auf die\\nHand
+    zu nehmen.\\n\\nDer Haken? Beim Auftauchen ver\xF6ffentlicht die App deinen Standort.\",\r\n       
+    \"TutMoveAndMine\": \"Mit dieser Karte f\xE4hrst du in die mit dem Kompass festgelegte\\nRichtung
+    und legst hinter dir eine Mine ab. Wir empfehlen dir, deine und fremde Minen
+    mithilfe der beigelegten achteckigen Spielsteine zu markieren. Es kann pro Spieler
+    immer nur eine Mine aktiv sein, eine \xE4ltere Mine desselben Spielers wird gegebenenfalls
+    zerst\xF6rt.\",\r\n        \"TutExplore\": \"Hui! Wichtige Aktion, das Erforschen.
+    Aufgepasst!\\nHast du den Untergrund erforscht, kannst du dir sicher sein, ob
+    sich ein Artefakt oder Atlantis oder gar keine Spuren unter dir, also auf deinem
+    Feld, befinden. Die Aktion ist au\xDFerdem notwendig, um\\n\u2022 Artefakte genauer
+    zu untersuchen\\nund damit eine Artefakt -Karte\\naufzuziehen.\\n\u2022 zu gewinnen!
+    Erforsche daf\xFCr ein Atlantis-Symbol.\",\r\n        \"TutArtifact\": \"Das
+    Ausspielen eines Artefakts ben\xF6tigt eine Aktion (falls nicht explizit anders
+    beschrieben). Lege die Karte dann vor dir ab. Sie darf nicht wieder aufgezogen
+    werden. Pro Person darf ein Artefakt nur einmal genutzt werden (es sei denn,
+    es wird \xFCber eine Mine zur\xFCckgewonnen).\\n\\nUngl\xFCcklicherweise erz\xFCrnt
+    das Erforschen von Artefakten\\nden Ozean. Ein Seeungeheuer erwacht am selben
+    Ort und lauert auf sein n\xE4chstes Opfer.\\n\\nDu als beschw\xF6rende*r Spieler*in
+    bleibst erstmal verschont, bis du dich aus dem Staub gemacht hast.\",\r\n       
+    \"TutPirateMode\": \"Du spielst den Piratenmodus! Frech! Setzt Minen ein, um
+    andere Spieler ausfindig zu machen und um ihnen Artefakte zu stehlen. Benutze
+    das Periskop um Gefahren aufzusp\xFCren bevor du in sie reinf\xE4hrst. Hals-
+    und Beinbruch!\",\r\n        \"playYourNextCard\": \"Du bist dran, (X)! Spiele
+    (scanne) eine Karte und lege sie dann auf deinen Ablagestapel.\",\r\n       
+    \"atlantisFindingHeader\": \"Wei\xDFt du, wo Atlantis liegt?\",\r\n        \"atlantisFindingExplanation\":
+    \", markiere alle Felder von Atlantis. Sind die gew\xE4hlten Felder korrekt,
+    gewinnst du das Spiel! Anderenfalls wirst du bestraft...\",\r\n        \"atlantisResolveButton\":
+    \"Atlantis bergen:\\nSpiel aufl\xF6sen\",\r\n        \"atlantisContinue\": \"Spiel
+    fortsetzen\",\r\n        \"showFullMap\": \"Ganze Karte anzeigen\",\r\n       
+    \"8x8AtlantisFields\": \"Das 8x8 Spielfeld beinhaltet 6 zusammenh\xE4ngende Atlantis-Felder
+    und 6 einzeln verteilte Sch\xE4tze in denen sich Artefakte verbergen.\",\r\n       
+    \"6x6AtlantisFields\": \"Das 6x6 Spielfeld beinhaltet 4 zusammenh\xE4ngende Atlantis-Felder
+    und 4 einzeln verteilte Sch\xE4tze in denen sich Artefakte verbergen.\",\r\n       
+    \"8x8AtlantisFieldsReminder\": \"Erinnerung: Es existieren genau 6 zusammenh\xE4ngende
+    Atlantis-Felder! Die verbindungen k\xF6nnen diagonal, vertikal oder horizontal
+    sein.\",\r\n        \"6x6AtlantisFieldsReminder\": \"Erinnerung: Es existieren
+    genau 4 zusammenh\xE4ngende Atlantis-Felder! Die verbindungen k\xF6nnen diagonal,
+    vertikal oder horizontal sein.\",\r\n        \"pleaseSelectAllAtlantisFields6x6\":
+    \"Bitte w\xE4hle genau 4 Felder aus, um Atlantis vollst\xE4ndig zu bergen.\",\r\n       
+    \"pleaseSelectAllAtlantisFields8x8\": \"Bitte w\xE4hle genau 6 Felder aus, um
+    Atlantis vollst\xE4ndig zu bergen.\",\r\n        \"betaVersionWarning\": \"Wenn
+    ihr Bugs, Textfehler oder sonstige st\xF6rende Dinge findet, meldet sie uns bitte
+    \xFCber Discord, soziale Medien oder an info@hybr.co\\n\\nViel Spa\xDF!\",\r\n       
+    \"newerVersionAvailable\": \"neue Version verf\xFCgbar!\",\r\n        \"weisenderRingCorrection\":
+    \"Diese Karte zeigt, wie viele ATLANTIS-FELDER in jedem Quadranten liegen (Druckfehler
+    auf der Karte).\"\r\n      }\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"95c7e029-2ec2-4349-acab-b928825ca379\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"releasedVersionIOS\",\r\n      \"type\":
+    \"string\",\r\n      \"value\": \"0.8.3\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"632f47c0-87a0-4427-8d0b-45b06fe85658\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"releasedVersionANDROID\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"0.8.3\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"06a81946-c7a9-482d-8f0f-6135fe4f8e01\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"string_key\",\r\n      \"type\": \"string\",\r\n      \"value\":
+    \"string_value\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"a820b88e-92c5-48e3-8321-ba53805ac512\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"int_key\",\r\n      \"type\": \"long\",\r\n      \"value\": 1\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"0a908ba3-3c01-4cf7-a6ee-b7c820fa998d\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"bool_key\",\r\n      \"type\": \"bool\",\r\n     
+    \"value\": true\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"e508a68e-dbe7-4a77-b284-3c9d4868df16\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"long_key\",\r\n      \"type\": \"long\",\r\n      \"value\": 10000\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"81fbdf5a-f263-4f4b-86f5-9cf918b7e505\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"float_key\",\r\n      \"type\": \"float\",\r\n     
+    \"value\": 1.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"16fbd5db-73a5-40ce-b5b9-2d2af31fc458\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"json_key\",\r\n      \"type\": \"json\",\r\n      \"schemaId\": null,\r\n     
+    \"value\": {\r\n        \"sample_key\": \"sample_value\"\r\n      }\r\n    }\r\n 
+    },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a779fa0f-47b3-4f5f-a025-65f86fae4406\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"languages\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"en\": {\r\n          \"languageCode\":
+    \"en\",\r\n          \"unitySystemLanguage\": \"English\",\r\n          \"translatedLanguageName\":
+    \"English\",\r\n          \"enabled\": \"yes\",\r\n          \"buttonFont\":
+    \"atlantic-cruiseSDF\",\r\n          \"textFieldFont\": \"Arvo-Regular\",\r\n         
+    \"description\": \"english language settings\"\r\n        },\r\n        \"de\":
+    {\r\n          \"languageCode\": \"de\",\r\n          \"unitySystemLanguage\":
+    \"German\",\r\n          \"translatedLanguageName\": \"Deutsch\",\r\n         
+    \"enabled\": \"yes\",\r\n          \"buttonFont\": \"atlantic-cruiseSDF\",\r\n         
+    \"textFieldFont\": \"Arvo-Regular\",\r\n          \"description\": \"german language
+    settings\"\r\n        }\r\n      }\r\n    }\r\n  },\r\n  {\r\n    \"metadata\":
+    {\r\n      \"entityId\": \"cba652e6-7057-4e13-be97-fe0806ab44e3\"\r\n    },\r\n   
+    \"rs\": {\r\n      \"key\": \"translation_en\",\r\n      \"type\": \"json\",\r\n     
+    \"schemaId\": null,\r\n      \"value\": {\r\n        \"emergencyMessage\": \"\",\r\n       
+    \"gameName\": \"Finding Atlantis\",\r\n        \"language\": \"language\",\r\n       
+    \"chooseLanguage\": \"Choose Language\",\r\n        \"playGame\": \"Play\",\r\n       
+    \"backToGame\": \"Back to game\",\r\n        \"resetTutorial\": \"Reset Tutorials\",\r\n       
+    \"options\": \"Options\",\r\n        \"optionSoundeffects\": \"Sound effects\",\r\n       
+    \"optionMusic\": \"Music\",\r\n        \"restart\": \"Restart\",\r\n        \"quit\":
+    \"Quit\",\r\n        \"gameSetup\": \"Set up your game\",\r\n        \"notSoMeanMonsters\":
+    \"Not so mean monsters\",\r\n        \"meanMonsters\": \"Mean monsters\",\r\n       
+    \"notPirateMode\": \"No pirates on the horizon\",\r\n        \"pirateMode\":
+    \"Pirate mode\",\r\n        \"8x8mode\": \"Big game: 8x8\",\r\n        \"6x6mode\":
+    \"Small game: 6x6\",\r\n        \"tutorialOn\": \"Tutorial On\",\r\n        \"tutorialOff\":
+    \"Tutorial Off\",\r\n        \"startGame\": \"Start game\",\r\n        \"gameIntroductionSummaryTitle\":
+    \"Traces of civilisation\",\r\n        \"gameIntroductionSummary6x6\": \"The
+    sea map contains 4 neighbouring Atlantis fields (adjascent or diagonally) and
+    4 randomly distributed artifacts.\",\r\n        \"gameIntroductionSummary8x8\":
+    \"The sea map contains 6 neighbouring Atlantis fields (adjascent or diagonally)
+    and 6 randomly distributed artifacts.\",\r\n        \"seaMonster\": \"Sea Monster!\",\r\n       
+    \"monsterEffect_0\": \"(X) your captain is hurt. The next time you use your captain
+    card, it will be their last appearance.\",\r\n        \"monsterEffect_0_plural\":
+    \"(X) your captains are hurt. The next time you use a captain card, it will be
+    their last appearance.\",\r\n        \"monsterEffect_1\": \"(X) you loose one
+    of your silent-running cards\",\r\n        \"monsterEffect_plural_1\": \"(X)
+    each of you looses one of your silent running cards\",\r\n        \"monsterEffect_2\":
+    \"(X) you loose your radiograph card\",\r\n        \"monsterEffect_plural_2\":
+    \"(X) each of you looses their radiograph card\",\r\n        \"monsterEffect_3\":
+    \"(X) you got placed on a random position on the map.\",\r\n        \"monsterEffect_3_plural\":
+    \"(X) each of you got placed on a random position on the map.\",\r\n        \"monsterEffect_4\":
+    \"(X) you loose your sonar card\",\r\n        \"monsterEffect_4_plural\": \"(X)
+    each of you looses their sonar cards.\",\r\n        \"ovenExplanation\": \"Flip
+    a card and scan its front in the desired orientation to move openly in the direction
+    of the compass.\",\r\n        \"readyToStart\": \"Everyone aboard!\",\r\n       
+    \"settings\": \"Settings\",\r\n        \"gameSetupChooseColor\": \"Choose your
+    color by clicking on the respective submarine.\",\r\n        \"gameSetupChoosePosition\":
+    \"Choose your approximate position at the table relative to the device by clicking
+    the respective rectangle on the side.\",\r\n        \"chooseClass\": \"CHOOSE
+    YOUR CAPTAIN\",\r\n        \"astrologist\": \"Astrologist\",\r\n        \"cartographer\":
+    \"Cartographer\",\r\n        \"miner\": \"Miner\",\r\n        \"navy\": \"Navy\",\r\n       
+    \"cptNemo\": \"Captain Nemo\",\r\n        \"raider\": \"Raider\",\r\n       
+    \"sailor\": \"Sailor\",\r\n        \"spy\": \"Spy\",\r\n        \"initialEmergeMessage\":
+    \"These are the initial positions of all players. Place your wooden boats on
+    the paper map.\",\r\n        \"onlyForYou\": \"this hidden action is for your
+    eyes only!\",\r\n        \"hiddenActionExplanation\": \"Please take the device
+    in your hands and make sure no one else can see the screen.\\n\\nThen tap the
+    eye.\",\r\n        \"revealHiddenScreen\": \"REVEAL >\",\r\n        \"remainingActions\":
+    \"Remaining actions: \",\r\n        \"isTurnOf\": \"Turn of: \",\r\n        \"youWentToN\":
+    \"You went to North.\",\r\n        \"youWentToS\": \"You went to South.\",\r\n       
+    \"youWentToW\": \"You went to West.\",\r\n        \"youWentToE\": \"You went
+    to East.\",\r\n        \"emergedCardsBack\": \"You\u2018ve emerged. Take all
+    your cards back.\",\r\n        \"youFoundAtlantis\": \"Holy squid! You\u2018ve
+    found Atlantis!\",\r\n        \"youFoundNothing\": \"Nothing found. Your exploration
+    was unsuccessful.\",\r\n        \"showingRadiograph\": \"The radiograph result
+    is being shown.\",\r\n        \"showingSonar\": \"The sonar result is being shown.\",\r\n       
+    \"showingPeriscope\": \"The periscope result is being shown.\",\r\n        \"youLeftMine\":
+    \"You\u2018ve left a mine.\",\r\n        \"youMineDestroyedPrevious\": \"Your
+    mine destroyed a previous mine. Both where destroyed.\",\r\n        \"doubleSecretMovement\":
+    \"Double Silent Running\",\r\n        \"whereDoYouGoSecretly\": \"Pick a direction
+    to move your submarine secretly by one field.\",\r\n        \"whereDoYouGoSecretlyDouble\":
+    \"Pick a direction to move your submarine secretly by two fields.\",\r\n       
+    \"secretMovementSuccessful\": \"You moved secretly by one field.\",\r\n       
+    \"firstSecretMovementSuccessful\": \"You moved secretly by ONE field.\",\r\n       
+    \"bothSecretMovementsSuccessful\": \"You moved secretly by two fields!\",\r\n       
+    \"secondSecretMovementNotSuccessful\": \"The second secret movement has NOT been
+    executed!\",\r\n        \"gefroreneWelleRequest\": \"Please pick a quadrant.
+    All submarines inside of it will be teleported to random fields.\",\r\n       
+    \"gefroreneWelleResult\": \"All submarines in the chosen quadrant have landed
+    on random fields. What a mess!\",\r\n        \"goldGraeberResult\": \"There are
+    (X) Trace(s) (Atlantis or Artifact) in your 9-field space.\",\r\n        \"artifactFoundAndMonsterAppeared\":
+    \"You found an Artifact and spawned a Sea Monster.\",\r\n        \"allMonstersMoveBy1Field\":
+    \"All other monsters move randomly by one field!\",\r\n        \"navGlueCardResult\":
+    \"Great sailor! This movement doesn\u2018t decrement your actions counter.\",\r\n       
+    \"noAtlanticTraceToN\": \"There is no Atlantic Trace to the North.\",\r\n       
+    \"noAtlanticTraceToS\": \"There is no Atlantic Trace to the South.\",\r\n       
+    \"noAtlanticTraceToW\": \"There is no Atlantic Trace to the West.\",\r\n       
+    \"noAtlanticTraceToE\": \"There is no Atlantic Trace to the East.\",\r\n       
+    \"atlanticTraceToN\": \"There is an Atlantic Trace (X) field(s) away to the North.\",\r\n       
+    \"atlanticTraceToS\": \"There is an Atlantic Trace (X) field(s) away to the South.\",\r\n       
+    \"atlanticTraceToW\": \"There is an Atlantic Trace (X) field(s) away to the West.\",\r\n       
+    \"atlanticTraceToE\": \"There is an Atlantic Trace (X) field(s) away to the East.\",\r\n       
+    \"nemoActionN\": \"Nemo went to North.  Nemo, take one card back from your discard
+    pile.\",\r\n        \"nemoActionS\": \"Nemo went to South.  Nemo, take one card
+    back from your discard pile.\",\r\n        \"nemoActionW\": \"Nemo went to West. 
+    Nemo, take one card back from your discard pile.\",\r\n        \"nemoActionE\":
+    \"Nemo went to East.  Nemo, take one card back from your discard pile.\",\r\n       
+    \"movedToAdjascentArtifactAndRecovered\": \"You have been moved to the adjascent
+    artifact and you recovered it. Draw two artifact cards, check them out and pick
+    one to keep!\",\r\n        \"noAdjascentArtifact\": \"There are no adjascent
+    artifacts. Nothing happens.\",\r\n        \"xWonGame\": \"(X) won. CongraTUNAlations!\",\r\n       
+    \"atlantisGuessWrong\": \"What the herring! This was not correct. You find yourself
+    on a random space of the map and wasted the rest of your turn.\",\r\n       
+    \"ownMineHitYou\": \"Your own mine hit you. Discard two cards (except the Surface-Card!).
+    The mine is gone.\",\r\n        \"aMineHitYou\": \"A mine hit you. Give (X) an
+    Artifact card - either a discarded one or one from your hand. If you do not have
+    any artifacts, discard two cards of your hand (except the Surface-Card!). The
+    mine is gone.\",\r\n        \"mineHitMonster\": \"A mine hit a Sea Monster. Both
+    where destroyed!\",\r\n        \"silentRun\": \"Silent Running\",\r\n       
+    \"hereYouAre\": \"(X), here you are!\",\r\n        \"yourInitialPosition\": \"This
+    is your initial position.\",\r\n        \"astrologistTitle\": \"Astrologist\",\r\n       
+    \"astrologistText\": \"Select any space and check if it contains traces of civilization.
+    Pick a space and tap the OK button.\",\r\n        \"astrologistNoIntel\": \"No
+    traces in the selected space!\",\r\n        \"astrologistTraceIntel\": \"There
+    are traces (Atlantis or artifact) in the selected space!\",\r\n        \"spyTitle\":
+    \"Spy\",\r\n        \"spyText\": \"View all submarines in the eight spaces surrounding
+    you.\",\r\n        \"done\": \"Done\",\r\n        \"privacyOnlyForYou\": \"(X),
+    this secret action is only for your eyes.\",\r\n        \"taintedGrail\": \"Tainted
+    Grail\",\r\n        \"taintedGrailText\": \"All players must discard two cards.
+    Surface may not be one of them.\\n\\nAfter playing, place this card face up in
+    front of you.\",\r\n        \"portalToAtlantis\": \"Portal To Atlantis\",\r\n       
+    \"youTeleportedToRandomAtlantisField\": \"You have been teleported to a random
+    field with Atlantis. But where are you now?\",\r\n        \"cardOnlyAvailableInPirateMode\":
+    \"This card is only playable in pirate mode.\",\r\n        \"seedOfYouth\": \"Seed
+    Of Youth\",\r\n        \"seedOfYouthText\": \"Refresh your handcards without
+    surfacing. This doesn't cost you an action.\\n\\nAfter using put down this card
+    faceup in front of you.\",\r\n        \"davyJonesTitle\": \"Davy Jones Locker\",\r\n       
+    \"davyJonesText\": \"See all remaining and excavated artifacts on the map.\",\r\n       
+    \"poseidonsHornTitle\": \"Poseidon's Horn\",\r\n        \"poseidonsHornText\":
+    \"View the locations of all Players and Sea Monsters.\",\r\n        \"guidingAmuTitle\":
+    \"Guiding Amulet\",\r\n        \"guidingAmuText\": \"Check how many Atlantis
+    space are in each quadrant.\",\r\n        \"bermudaTitle\": \"Bermuda Square\",\r\n       
+    \"bermudaText\": \"View a rectangle with the dimensions of Atlantis.\",\r\n       
+    \"eternalHourglass\": \"Eternal Hourglass\",\r\n        \"eternalHourglassText\":
+    \"Gain two actions. This doesn't cost you an action.\\n\\nAfter using put down
+    this card faceup in front of you.\",\r\n        \"sailorClassCardPopup\": \"The
+    waves are on your side! where do you want to go?\",\r\n        \"foundAtlantis\":
+    \"You have found Atlantis!\",\r\n        \"foundArtifact\": \"You found an artifact!\",\r\n       
+    \"foundArtifactDrawCard\": \"Draw one artifact card!\",\r\n        \"foundArtifactMonsterWarning\":
+    \"Careful: A new Sea-monster now lurks on this position for its next prey.\",\r\n       
+    \"tutStoryIntro1\": \"Choose your player colors, place the privacy shield in
+    front of you and hide your navigation-paper behind it. Get some pens ready.\",\r\n       
+    \"tutStoryIntro2\": \"Each player gets their corresponding Submarine-piece and
+    one token of every players color.\",\r\n        \"tutStoryIntro3\": \"Shuffle
+    the artifact cards and put the pile in the middle of the table.\",\r\n       
+    \"tutStoryIntro4\": \"Every player gets the card-deck of their respective color.
+    The 'Drop Mine' and 'Periscope' cards are only needed in the Pirate mode.\",\r\n       
+    \"tutStoryIntro5\": \"Every player chooses one captains-card and takes it up
+    into their hands together with their card-deck.\",\r\n        \"tutStoryIntro6\":
+    \"Each player chooses one color and aproximate seating place relative to the
+    device.\",\r\n        \"TutStoryGrampa1\": \"A strong gust of wind makes you
+    look up. The steel fuselage under your feet vibrates slightly. The sea is still
+    calm, but you can smell the upcoming storm.\",\r\n        \"TutStoryGrampa2\":
+    \"You remember the old stories of your Grandpa, of distand lands, exotic smells
+    and the seven seas. Even when the whole world seemed explored, he still kept
+    dreaming of a mystic place, the most legendary of them all. \u201EIt harbors
+    treasures of unthinkable wealth und long forgotten secrets, protected by dangerous
+    monstrous wardens.\u201D Your eyes light up at the memory of these words. Back
+    in the day you swore you would one day find this legendary place - Atlantis.\",\r\n       
+    \"TutStoryGrampa3\": \"And today you have something, your grandpa could only
+    have dreamt of: A boat capable of diving!\\nA glimpse towards the east reveals
+    the submarine of your friend of old times, Captain Glue, at the horizon.\\n\\nSubmerge,
+    fellow bubbleheads! The race has begun!\",\r\n        \"TutStoryPuzzle1\": \"Find
+    Atlantis! Whoever finds out first where all fields of atlantis are can win the
+    game by using 'explore' on one of its locations. You can see an example of how
+    Atlantis is structured on one of the \u201EThe Riddle\u201D helper cards. Obviousely
+    atlantis will be in a different place every time. You can use the same symbols
+    for notes on your sheet of paper, or you can draw whatever you like, we ain't
+    your boss!\",\r\n        \"TutStoryPuzzle2\": \"All atlantis fields are always
+    connected to eachother, either diagonally, vertically or horizontally. Explore
+    a location of atlantis to get a chance to solve the puzzle and win the game.\",\r\n       
+    \"TutStoryPuzzle3\": \"Artifacts provide their finders with powerful effects.
+    'Explore' one to recover it and receive an artifact card. Artifacts are usually
+    single-use cards.\\n\\nAtlantis as well as artifacts are also commonly called
+    \u201ETraces of civilization\u201D or for short \u201ETraces\u201D\",\r\n       
+    \"TutStoryPuzzle4\": \"Important! Traces (Atlantis AND artifacts) are ALWAYS
+    on top of sea mounts AND on all their 4 adjecent sides are ALSO sea mounts! Check
+    it.\",\r\n        \"TutStoryCards1\": \"Lets check out your cards. These are
+    your possible actions to explore the deep sea. Read up on all of their effects
+    first.\",\r\n        \"TutStoryCards2\": \"There is another possibility for moving
+    your submarine thats not written on the cards: Every non-artifact card can be
+    burned in your engines! To do so, click the burner symbol and scan the FRONT
+    of the card you want to burn. Instead of the original effect of the card, you
+    now move one field in the direction of the compass needle depicted on the card's
+    back. All players will see which direction you took.\",\r\n        \"TutStoryCards3\":
+    \"Each turn you have 2 actions to use. To use an action just scan the card you
+    want to use by holding it above the device camera and then discard the used card.
+    To get your cards back into your hand you have to use the emerge-card.\",\r\n       
+    \"TutStoryCards4\": \"The captain and any artifacts in your hand can also be
+    used just as normal actions.\",\r\n        \"TutStoryInitialPositions\": \"These
+    are your initial positions. Use your pieces and the map in front of you to track
+    your own positions and the positions of your opponents.\",\r\n        \"TutStoryInitialPositions2\":
+    \"Mind the points of the compass. Write the letters N, W, S and E in the compass
+    rose on your maps. \",\r\n        \"TutStoryInitialPositions2b\": \"Remember:
+    North lies in the same direction for all players. Your seat and orientation do
+    not matter. Each submarine will move in the same direction on the device and
+    on your sea maps.\",\r\n        \"TutStoryInitialPositions3\": \"Soon you will
+    go underwater and move secretly. From then on try to keep your position secret
+    for as long as possible.\",\r\n        \"TutEdge1\": \"One more thing: in the
+    6x6 mode, you cannot move onto the blue edge. There cannot be any traces on it
+    either. However, it can contain see mounts if a neighbouring field contains a
+    trace.\",\r\n        \"TutEdge2\": \"The app never tells you that you are at
+    an edge, otherwise your opponents would know too much about your position. The
+    Sonar can show mounts outside of the sea, and the Radiograph, if used on an outside
+    field, will simply detect nothing.\",\r\n        \"TutEdge3\": \"If you ride
+    against an edge, be it accidentally or on purpose, the app will NOT tell you.
+    It is discrete :-)\",\r\n        \"TutEdge8x8\": \"In the 8x8 mode the blue fields
+    on your maps behave just the same as the white fields. The inactive rand is not
+    marked.  Use the space around the sea to note down the sea mounts.\",\r\n       
+    \"TutScanning1\": \"To use a card, scan it with the front camera front side up,
+    like shown.\",\r\n        \"TutScanning2\": \"Some cards feature a compass needle.
+    Such cards can be rotated during scanning to change the orientation of their
+    effect.\",\r\n        \"TutSonar\": \"Sonar allows you to learn more about the
+    surrounding topography. It tells you if and where there are sea mounts in the
+    surrounding 8 fields. If you are at the border of the map you can even see fields
+    outside the map.\",\r\n        \"TutRadiograph\": \"Use the radiograph to check
+    two fields in opposite direction for traces of civilisation (magnifying glass).
+    Watch the orientation of the compass needle on the front of the card!\",\r\n       
+    \"TutRadiographPirateMode\": \"In pirate mode, the radiograph can confuse Traces
+    with Mines!\",\r\n        \"TutPeriscope\": \"With the periscope you can detect
+    dangers in the 8 surrounding fields. It reacts to mines and monsters alike.\",\r\n       
+    \"TutSecretMove\": \"Use silent running to move secretly. Choose the direction
+    secretly in the app and move your player-piece on your paper, depending on the
+    action by one (for long silent running by two) fields into the chosen direciton.\",\r\n       
+    \"TutEmerge\": \"Even the most hardy of deepdivers need to take a breath occationally.
+    Emerging is your only regular way of getting back all your used cards (including
+    the emerge-card itself) into your hand.\\n\\nThe catch? When emerging the app
+    tells shows to everyone where you are on the map.\",\r\n        \"TutMoveAndMine\":
+    \"With this card you move into the direction of the compass and leave a mine
+    behind where you came from. We recommend to use the tokens to mark your mine
+    and the mines of your enemies (if you know where they are). Only one Mine can
+    be active per player, older mines are destroyed.\",\r\n        \"TutExplore\":
+    \"This is an important skill of yours, exploring, so listen closely!\\nWhen diving
+    to search the ground closely, you can be absolutely sure whether you have an
+    artifact, atlantis, or nothing at all below you, meaning exactly where you are
+    right now.\\nFurthermore this action allows you to\\n\u2022 Recover artifacts,
+    if present\\n\u2022 To try and win! Explore a piece of atlantis to get a chance
+    for a final guess.\",\r\n        \"TutArtifact\": \"Playing an artifact uses
+    one action (if not stated otherwise by the artifact). Openly put down the used
+    card in front of you. You are NOT allowed to pick it back up. Each person is
+    only allowed to use each artifact ONCE (unless you manage to loose it and regain
+    it somehow)\\n\\nUnluckily recovering an artifact angers the ocean. A sea-monster
+    awakes at your position and waits for a new prey.\\n\\nYou are safe from it until
+    you start moving again.\",\r\n        \"TutPirateMode\": \"Welcome to Pirate
+    Mode, arr! You will use mines to find your enemies and steal their artefacts.
+    You will you the Periscope to find dangers before colliding with them, yo-ho!\",\r\n       
+    \"playYourNextCard\": \"Your turn, (X)! Play (scan) a card and discard it afterwards.\",\r\n       
+    \"atlantisFindingHeader\": \"Have you found Atlantis?\",\r\n        \"atlantisFindingExplanation\":
+    \", select all fields with Atlantis. If all of them are correct, you win the
+    game! Otherwise you'll be punished...\",\r\n        \"atlantisResolveButton\":
+    \"Recover Atlantis:\\nsolve the game\",\r\n        \"atlantisContinue\": \"Continue
+    Game\",\r\n        \"showFullMap\": \"Show full Map\",\r\n        \"8x8AtlantisFields\":
+    \"This 8x8 playing field contains 6 connected Atlantis-fields and 6 randomly
+    distributed Treasures with hidden Artifacs in them.\",\r\n        \"6x6AtlantisFields\":
+    \"This 6x6 playing field contains 4 connected Atlantis-fields and 4 randomly
+    distributed Treasures with hidden Artifacs in them.\",\r\n        \"8x8AtlantisFieldsReminder\":
+    \"Reminder: There are exactly 6 connected fields of Atlantis! Connections can
+    be diagonally, vertically or horizontally\",\r\n        \"6x6AtlantisFieldsReminder\":
+    \"Reminder: There are exactly 4 connected fields of Atlantis! Connections can
+    be diagonally, vertically or horizontally\",\r\n        \"pleaseSelectAllAtlantisFields6x6\":
+    \"Please select exactly 4 fields for your guess.\",\r\n        \"pleaseSelectAllAtlantisFields8x8\":
+    \"Please select exactly 6 fields for your guess.\",\r\n        \"betaVersionWarning\":
+    \"If you find any bugs, grammatical errors or otherwise annoying things in the
+    app, please send us a message on Discord, social Media or mail us on info@hybr.co\\n\\nHave
+    Fun!\",\r\n        \"newerVersionAvailable\": \"new version availabe!\",\r\n       
+    \"weisenderRingCorrection\": \"This card shows you how many ATLANTIS FIELDS there
+    are in each quadrant (there is a mistake on the card).\"\r\n      }\r\n    }\r\n 
+    },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"174d1598-4c5d-4455-a08b-79ebf76ede85\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"translation_de\",\r\n      \"type\":
+    \"json\",\r\n      \"schemaId\": null,\r\n      \"value\": {\r\n        \"emergencyMessage\":
+    \"\",\r\n        \"gameName\": \"Finding Atlantis\",\r\n        \"language\":
+    \"Sprache\",\r\n        \"chooseLanguage\": \"W\xE4hle Sprache\",\r\n       
+    \"playGame\": \"Spielen\",\r\n        \"backToGame\": \"Zur\xFCck zum Spiel\",\r\n       
+    \"resetTutorial\": \"Tutorials zur\xFCcksetzen\",\r\n        \"options\": \"Einstellungen\",\r\n       
+    \"optionSoundeffects\": \"Soundeffekte\",\r\n        \"optionMusic\": \"Musik\",\r\n       
+    \"restart\": \"Neustarten\",\r\n        \"quit\": \"Beenden\",\r\n        \"gameSetup\":
+    \"Spiel konfigurieren\",\r\n        \"notSoMeanMonsters\": \"Ungeheuer lauern\",\r\n       
+    \"meanMonsters\": \"Ungeheuer gehen auf die Jagd\",\r\n        \"notPirateMode\":
+    \"Friedlicher Wettstreit\",\r\n        \"pirateMode\": \"Piratenmodus\",\r\n       
+    \"8x8mode\": \"Gro\xDFe Karte\",\r\n        \"6x6mode\": \"Kleine Karte\",\r\n       
+    \"tutorialOn\": \"Tutorial\",\r\n        \"tutorialOff\": \"Kein Tutorial\",\r\n       
+    \"startGame\": \"Spiel starten\",\r\n        \"gameIntroductionSummaryTitle\":
+    \"Spuren der Zivilisation\",\r\n        \"gameIntroductionSummary6x6\": \"Die
+    Seekarte enth\xE4lt 4 benachbarte Atlantis-Felder (auch diagonal m\xF6glich)
+    und 4 zuf\xE4llig verteilte Artefakte.\",\r\n        \"gameIntroductionSummary8x8\":
+    \"Die Seekarte enth\xE4lt 6 benachbarte Atlantis-Felder (auch diagonal m\xF6glich)
+    und 6 zuf\xE4llig verteilte Artefakte.\",\r\n        \"seaMonster\": \"Seeungeheuer!\",\r\n       
+    \"monsterEffect_0\": \"(X), dein Kapit\xE4n ist verletzt. Das n\xE4chste Mal,
+    dass du die Kapit\xE4n-Karte nutzt, wird sein letztes sein.\",\r\n        \"monsterEffect_0_plural\":
+    \"(X), eure Kapit\xE4ne sind verletzt. Das jeweils n\xE4chste Mal, dass ihr eure
+    Kapit\xE4n-Karten nutzt, wird ihr letztes sein.\",\r\n        \"monsterEffect_1\":
+    \"(X), du verlierst eine Schleichfahrt-Karte. Entscheide selbst welche.\",\r\n       
+    \"monsterEffect_plural_1\": \"(X), ihr verliert jeweils eine Schleichfahrt-Karte.
+    Entscheidet selbst welche.\",\r\n        \"monsterEffect_2\": \"(X), du verlierst
+    deinen Radiographen.\",\r\n        \"monsterEffect_plural_2\": \"(X), ihr verliert
+    jeweils euren Radiographen.\",\r\n        \"monsterEffect_3\": \"(X), du wurdest
+    auf eine Zufallsposition versetzt.\",\r\n        \"monsterEffect_3_plural\":
+    \"(X), ihr wurdet jeweils auf zuf\xE4llige Positionen versetzt.\",\r\n       
+    \"monsterEffect_4\": \"(X), du verlierst deine Sonar-Karte.\",\r\n        \"monsterEffect_4_plural\":
+    \"(X), ihr verliert jeweils eure Sonar-Karte.\",\r\n        \"ovenExplanation\":
+    \"Drehe eine deiner Karten auf Ihre R\xFCckseite. Benutze den Kompass um deine
+    Fahrtrichtung einzustellen und halte die Karte so \xFCber den Scanner.\",\r\n       
+    \"readyToStart\": \"Alle Spieler an Bord!\",\r\n        \"settings\": \"Einstellungen\",\r\n       
+    \"gameSetupChooseColor\": \"W\xE4hle deine Farbe, indem du auf das entsprechende
+    U-Boot tippst.\",\r\n        \"gameSetupChoosePosition\": \"W\xE4hle deine ungef\xE4hre
+    Position am Spieltisch relativ zum Ger\xE4t, indem du auf das entsprechende Rechteck
+    tippst.\",\r\n        \"chooseClass\": \"CAPTAIN AUSW\xC4HLEN\",\r\n        \"astrologist\":
+    \"Astrologin\",\r\n        \"cartographer\": \"Kartograph\",\r\n        \"<r\":
+    \"Goldgr\xE4ber\",\r\n        \"navy\": \"Kommandant\",\r\n        \"cptNemo\":
+    \"Captain Nemo\",\r\n        \"raider\": \"R\xE4uberin\",\r\n        \"sailor\":
+    \"Navigator Glue\",\r\n        \"spy\": \"Spionin\",\r\n        \"initialEmergeMessage\":
+    \"Markiert euch alle Spielerpositionen mit den eigenen U-Booten und den anderen
+    Spielsteinen auf eurer Seekarte. \",\r\n        \"onlyForYou\": \"Diese Geheimaktion
+    ist nur f\xFCr deine Augen bestimmt!\",\r\n        \"hiddenActionExplanation\":
+    \"Nimm bitte das Ger\xE4t in die H\xE4nde und stelle sicher, dass niemand den
+    Bildschirm sieht.\\n\\nKlicke anschlie\xDFend auf das Auge.\",\r\n        \"revealHiddenScreen\":
+    \"AUFDECKEN >\",\r\n        \"remainingActions\": \"Verleibende Aktionen: \",\r\n       
+    \"isTurnOf\": \"An der Reihe: \",\r\n        \"youWentToN\": \"Du bist nach Norden
+    gefahren.\",\r\n        \"youWentToS\": \"Du bist nach S\xFCden gefahren.\",\r\n       
+    \"youWentToW\": \"Du bist nach Westen gefahren.\",\r\n        \"youWentToE\":
+    \"Du bist nach Osten gefahren.\",\r\n        \"emergedCardsBack\": \"Du bist
+    aufgetaucht. Nimm all deine Karten zur\xFCck.\",\r\n        \"youFoundAtlantis\":
+    \"Heilige Makrele! Du hast Atlantis gefunden!\",\r\n        \"youFoundNothing\":
+    \"Nichts gefunden. Deine Erforschungs- Aktion hat nichts zu Tage gebracht.\",\r\n       
+    \"showingRadiograph\": \"Das Radiographen-Ergebnis wird angezeigt.\",\r\n       
+    \"showingSonar\": \"Das Sonar-Ergebnis wird angezeigt.\",\r\n        \"showingPeriscope\":
+    \"Das Periskop-Ergebnis wird angezeigt.\",\r\n        \"youLeftMine\": \"Du hast
+    eine Mine hinterlassen.\",\r\n        \"youMineDestroyedPrevious\": \"Deine Mine
+    hat die vorherige zerst\xF6rt. Beide verschwinden.\",\r\n        \"doubleSecretMovement\":
+    \"Weite Schleichfahrt\",\r\n        \"whereDoYouGoSecretly\": \"W\xE4hle eine
+    Richtung und bewege dein U-Boot heimlich um ein Feld.\",\r\n        \"whereDoYouGoSecretlyDouble\":
+    \"W\xE4hle eine Richtung und bewege dein U-Boot heimlich um zwei Felder.\",\r\n       
+    \"secretMovementSuccessful\": \"Du hast dich heimlich um ein Feld bewegt.\",\r\n       
+    \"firstSecretMovementSuccessful\": \"Du hast dich heimlich um EIN Feld bewegt.\",\r\n       
+    \"bothSecretMovementsSuccessful\": \"Du hast dich heimlich um zwei Felder bewegt.\",\r\n       
+    \"secondSecretMovementNotSuccessful\": \"Die zweite Schleichfahrt wurde NICHT
+    ausgef\xFChrt.\",\r\n        \"gefroreneWelleRequest\": \"W\xE4hle einen Quadranten.
+    Alle U-Boote darin werden auf zuf\xE4llige Felder bewegt.\",\r\n        \"gefroreneWelleResult\":
+    \"Alle U-Boote im ausgew\xE4hlten Quadranten sind auf zuf\xE4lligen Feldern gelandet.
+    Was f\xFCr ein Klamauk!\",\r\n        \"goldGraeberResult\": \"Es gibt (X) Spur(en)
+    der Zivilisation (Atlantis oder Artefakt) in deiner 9-Felder-Nachbarschaft.\",\r\n       
+    \"artifactFoundAndMonsterAppeared\": \"Du hast ein Artefakt gefunden und ein
+    Seemonster erscheinen lassen.\",\r\n        \"allMonstersMoveBy1Field\": \"Alle
+    anderen Monster bewegen sich zuf\xE4llig um ein Feld!\",\r\n        \"navGlueCardResult\":
+    \"Gro\xDFartiger Seemann! Diese Bewegung verringert deine Aktions-Zahl nicht.\",\r\n       
+    \"noAtlanticTraceToN\": \"Keine Spuren in Richtung Norden.\",\r\n        \"noAtlanticTraceToS\":
+    \"Keine Spuren in Richtung S\xFCden.\",\r\n        \"noAtlanticTraceToW\": \"Keine
+    Spuren in Richtung Westen.\",\r\n        \"noAtlanticTraceToE\": \"Keine Spuren
+    in Richtung Osten.\",\r\n        \"atlanticTraceToN\": \"Es gibt Spuren (X) Feld(er)
+    in Richtung Norden.\",\r\n        \"atlanticTraceToS\": \"Es gibt Spuren (X)
+    Feld(er) in Richtung S\xFCden.\",\r\n        \"atlanticTraceToW\": \"Es gibt
+    Spuren (X) Feld(er) in Richtung Westen.\",\r\n        \"atlanticTraceToE\": \"Es
+    gibt Spuren (X) Feld(er) in Richtung Osten.\",\r\n        \"nemoActionN\": \"Nemo
+    ist nach Norden gefahren. Nemo, nimm eine abgeworfene Karte zur\xFCck auf die
+    Hand.\",\r\n        \"nemoActionS\": \"Nemo ist nach S\xFCden gefahren. Nemo,
+    nimm eine abgeworfene Karte zur\xFCck auf die Hand.\",\r\n        \"nemoActionW\":
+    \"Nemo ist nach Westen gefahren. Nemo, nimm eine abgeworfene Karte zur\xFCck
+    auf die Hand.\",\r\n        \"nemoActionE\": \"Nemo ist nach Osten gefahren.
+    Nemo, nimm eine abgeworfene Karte zur\xFCck auf die Hand.\",\r\n        \"movedToAdjascentArtifactAndRecovered\":
+    \"Du wurdest auf ein angrenzendes Feld mit einem Artefakt verschoben und du hast
+    es geborgen. Ziehe zwei Artefaktkarten, schaue sie dir an und behalte eine.\",\r\n       
+    \"noAdjascentArtifact\": \"Es gibt keine Artefakte auf angrenzenden Feldern.
+    Nichts passiert.\",\r\n        \"xWonGame\": \"(X) hat gewonnen. Gl\xFCckwunsch!\",\r\n       
+    \"atlantisGuessWrong\": \"Was zur Alge?! Das war leider nicht richtig. Du findest
+    dich jetzt auf einem zuf\xE4lligen Feld der Karte wieder und verlierst den Rest
+    deines Zuges.\",\r\n        \"ownMineHitYou\": \"Deine eigene Mine hat dich getroffen.
+    Wirf wenn m\xF6glich zwei Karten ab (au\xDFer der Auftauchen-Karte!). Die Mine
+    wurde zerst\xF6rt.\",\r\n        \"aMineHitYou\": \"Eine Mine hat dich getroffen.
+    Gib (X) ein bereits ausgespieltes Artefakt oder ein Artefakt aus der Hand. Falls
+    du keine Artefakte besitzt, wirf zwei Karten von deiner Hand ab (au\xDFer der
+    Auftauchen-Karte!). Die Mine wurde zerst\xF6rt.\",\r\n        \"mineHitMonster\":
+    \"Eine Mine hat ein Seeungeher getroffen. Beide wurden zerst\xF6rt.\",\r\n       
+    \"silentRun\": \"Schleichfahrt\",\r\n        \"hereYouAre\": \"(X), hier bist
+    du!\",\r\n        \"yourInitialPosition\": \"Das ist deine Anfangsposition.\",\r\n       
+    \"astrologistTitle\": \"Astrologin\",\r\n        \"astrologistText\": \"W\xE4hle
+    ein Feld und \xFCberpr\xFCfe es auf Spuren. Markiere ein Feld und tippe auf den
+    OK-Button.\",\r\n        \"astrologistNoIntel\": \"Keine Spuren auf dem ausgew\xE4hlten
+    Feld!\",\r\n        \"astrologistTraceIntel\": \"Es gibt eine Spur (Atlantis
+    oder Artefakt) auf dem ausgew\xE4hlten Feld!\",\r\n        \"spyTitle\": \"Spionin\",\r\n       
+    \"spyText\": \"Sieh alle U-Boote in den acht dich umgebenden Feldern.\",\r\n       
+    \"done\": \"Fertig\",\r\n        \"privacyOnlyForYou\": \"(X), diese Geheimaktion
+    ist nur f\xFCr deine Augen bestimmt.\",\r\n        \"taintedGrail\": \"Unheiliger
+    Gral\",\r\n        \"taintedGrailText\": \"Alle Spieler*innen m\xFCssen zwei
+    Karten abwerfen. \u201EAuftauchen\u201C darf nicht dabei sein.\\n\\nLege die
+    Karte nach dem Ausspielen offen von dir ab.\",\r\n        \"portalToAtlantis\":
+    \"Portmuschel\",\r\n        \"youTeleportedToRandomAtlantisField\": \"Du wurdest
+    auf ein zuf\xE4lliges Feld von Atlantis teleportiert. Aber wo bist du nun?\",\r\n       
+    \"cardOnlyAvailableInPirateMode\": \"Diese Aktion ist nur im Piratenmodus verf\xFCgbar.
+    Sortiert alle Minenman\xF6ver und Periskope aus.\",\r\n        \"seedOfYouth\":
+    \"Saat der Jugend\",\r\n        \"seedOfYouthText\": \"Erneue deine Hand, ohne
+    aufzutauchen. Diese Aktion ist frei.\\n\\nLege die Karte nach dem Ausspielen
+    offen von dir ab.\",\r\n        \"davyJonesTitle\": \"Davy Jones' Truhe\",\r\n       
+    \"davyJonesText\": \"Sieh alle verleibenden und gehobenen Artefakte auf der Seekarte.\",\r\n       
+    \"poseidonsHornTitle\": \"Poseidons Horn\",\r\n        \"poseidonsHornText\":
+    \"Sieh die Positionen aller U-Boote und Seeungeheuer.\",\r\n        \"guidingAmuTitle\":
+    \"Weisender Ring\",\r\n        \"guidingAmuText\": \"Erfahre wie viele Atlantisfelder
+    in jedem Quadranten liegen.\",\r\n        \"bermudaTitle\": \"Bermuda-Rechteck\",\r\n       
+    \"bermudaText\": \"Sieh ein Rechteck mit den Au\xDFema\xDFen von Atlantis.\",\r\n       
+    \"eternalHourglass\": \"Ewige Sanduhr\",\r\n        \"eternalHourglassText\":
+    \"Erhalte zwei zus\xE4tzliche Aktionen. Diese Aktion ist frei.\\n\\nLege die
+    Karte nach dem Ausspielen offen von dir ab.\",\r\n        \"sailorClassCardPopup\":
+    \"Die Wellen sind auf deiner Seite. Wo f\xE4hrst du hin?\",\r\n        \"foundAtlantis\":
+    \"Du hast Atlantis gefunden!\",\r\n        \"foundArtifact\": \"Du hast ein Artefakt
+    gefunden!\",\r\n        \"foundArtifactDrawCard\": \"Ziehe eine Artefakt-Karte!\",\r\n       
+    \"foundArtifactMonsterWarning\": \"Achtung: Ein neues See-Monster lauert an dieser
+    Stelle jetzt auf sein n\xE4chstes Opfer.\",\r\n        \"tutStoryIntro1\": \"W\xE4hlt
+    eure Spielerfarben, baut den entsprechenden Sichtschutz auf und versteckt dahinter
+    euer Navigationsblatt. Organisiert euch Stifte.\",\r\n        \"tutStoryIntro2\":
+    \"Jede*r bekommt eine passende U-Boot-Figur und jeweils einen Spielstein der
+    mitspielenden Farben.\",\r\n        \"tutStoryIntro3\": \"Legt die Artefaktkarten
+    als Stapel in die Mitte des Tischs.\",\r\n        \"tutStoryIntro4\": \"Jede*r
+    erh\xE4lt ein Kartendeck in der gew\xE4hlten Farbe. Das Minenman\xF6ver und das
+    Periskop bitte vorher aussortieren. Sie werden nur im Piratenmodus ben\xF6tigt.\",\r\n       
+    \"tutStoryIntro5\": \"Sucht euch jeweils eine Captain-Karte aus und nehmt sie
+    auf die Hand.\",\r\n        \"tutStoryIntro6\": \"W\xE4hlt nacheinander eine
+    Farbe und euren ungef\xE4hren Sitzplatz relativ zu dem Smartphone/Tablet in eurer
+    Mitte aus.\",\r\n        \"TutStoryGrampa1\": \"Ein kr\xE4ftiger Windsto\xDF
+    l\xE4sst dich aufschauen. Der Stahlrumpf unter deinen F\xFC\xDFen vibriert leise.
+    Die See ist noch ruhig, doch du riechst das aufkommende Unwetter.\",\r\n       
+    \"TutStoryGrampa2\": \"Du erinnerst dich an die Geschichten deines Gro\xDFvaters,
+    von fernen L\xE4ndern, exotischen Ger\xFCchen und den sieben Weltmeeren. Selbst
+    als die ganze Erde entdeckt schien, tr\xE4umte er noch immer von einem mystischen
+    Ort, dem sagenumwobensten von allen. \u201EEr birgt kostbare Sch\xE4tze und lang
+    vergessene Geheimnisse, beh\xFCtet von gef\xE4hrlichen W\xE4chtern.\u201D Deine
+    Augen leuchteten bei dieser Vorstellung. Damals hast du dir geschworen, du w\xFCrdest
+    Atlantis finden.\",\r\n        \"TutStoryGrampa3\": \"Und heute hast du etwas,
+    das dein Gro\xDFvater sich nicht h\xE4tte vorstellen k\xF6nnen: Ein tauchendes
+    Boot.\\nDu blickst nach Osten und siehst das U-Boot deines damaligen Freundes
+    Captain Glue am Horizont.\\n\\n\u201EAbtauchen, ihr Leichtmatrosen! Der Wettlauf
+    beginnt!\u201D\",\r\n        \"TutStoryPuzzle1\": \"Findet Atlantis! Wer die
+    versunkene Stadt zuerst komplett ortet und erforscht, gewinnt das Spiel!\\n\\nAuf
+    der Spielerhilfe \u201EDas R\xE4tsel\u201D seht ihr wo Atlantis verborgen sein
+    k\xF6nnte. Allerdings wird sich Atalntis immer an einem anderen Ort befinden.
+    Ihr k\xF6nnt aber die gleichen Symbole f\xFCr eure Notizen nutzen. Oder du malst
+    was du willst, wir sind ja nicht dein Chef!\",\r\n        \"TutStoryPuzzle2\":
+    \"Die 4 Atlantis-Felder grenzen immer direkt oder diagonal aneinander. Erforscht
+    ihr Atlantis, d\xFCrft ihr seine Position aufl\xF6sen.\",\r\n        \"TutStoryPuzzle3\":
+    \"Artefakte verleihen ihren Finder*innen m\xE4chtige F\xE4higkeiten. Erforsche
+    eines, um es zu bergen und eine Artefakt-Karte zu ziehen. Es handelt sich meist
+    um einmalige Aktionen.\\n\\nAtlantis und Artefakte werden auch als \u201ESpuren
+    von Zivilisation\u201D, oder kurz \u201ESpuren\u201D zusammengefasst.\",\r\n       
+    \"TutStoryPuzzle4\": \"Obacht! Spuren (Atlantis und Artefakte) liegen IMMER auf
+    Seebergen UND an allen ihren 4 Seiten liegt ein weiterer Seeberg an! Pr\xFCft
+    es nach.\",\r\n        \"TutStoryCards1\": \"Werfen wir einen Blick in eure Karten.
+    Das sind eure Aktionsm\xF6glichkeiten um den Meeresgrund zu erkunden. Lest sie
+    euch einmal genau durch.\",\r\n        \"TutStoryCards2\": \"Es gibt noch eine
+    weitere M\xF6glichkeit, sich fortzubewegen, die nicht auf den Karten steht: Jede
+    Aktionskarte kann verheizt werden! Dr\xFCcke dazu auf \u201EVerheizensymbol\u201D
+    und scanne die VORDERSEITE. Statt der beschriebenen Aktion bewegst du dich um
+    ein Feld in die Richtung der Kompassnadel auf der Kartenr\xFCckseite. Alle Mispieler
+    sehen die Fahrtrichtung.\",\r\n        \"TutStoryCards3\": \"Spielablauf: Pro
+    Runde hat jede*r 2 Aktionen. Scannt dazu die jeweilige Karte und legt sie ab.
+    Mit AUFTAUCHEN d\xFCrft ihr eure abgelegten Karten wieder auf die Hand nehmen.\",\r\n       
+    \"TutStoryCards4\": \"Auch der Captain und Artefakte werden als Aktionen genutzt.
+    \",\r\n        \"TutStoryInitialPositions\": \"Das sind eure Positionen auf der
+    Karte. Nutzt eure Spielsteine, um eure eigenen Positionen und die eurer Gegner
+    auf der Karte vor euch zu markieren.\",\r\n        \"TutStoryInitialPositions2\":
+    \"Beachtet die Himmelsrichtungen. Tragt die Symbole N, W, S und E in die Windrose
+    auf euren Seekarte ein.\",\r\n        \"TutStoryInitialPositions2b\": \"Denkt
+    immer daran: Norden liegt f\xFCr alle Spieler in der gleichen Richtung, unabh\xE4nging
+    von eurem Sitzplatz und eurer Orientierung. Jedes U-Boot wird sich auf all euren
+    Karten und dem Ger\xE4t immer in die gleiche Richtung bewegen.\",\r\n       
+    \"TutStoryInitialPositions3\": \"Mit einer Schleichfahrt taucht ihr gleich unter
+    und bewegt euch heimlich um ein Feld. Versucht ab dann eure Position geheim zu
+    halten!\",\r\n        \"TutEdge1\": \"Noch ein kleiner Hinweis am Rande: Der
+    blaue Rand ist im 6x6-Modus nicht befahrbar und kann keine Spuren enthalten.
+    Es k\xF6nnen sich aber Seeberge darauf befinden, falls eine Spur am Rand liegt.\",\r\n       
+    \"TutEdge2\": \"Die App weist euch nie darauf hin, dass ihr am Rand seid, um
+    euren Gegnern keine Hinweise zu geben. Der Sonar kann auch Seeberge au\xDFerhalb
+    des Meeres anzeigen; der Radiograph schl\xE4gt bei Feldern au\xDFerhalb des Meeres
+    einfach nicht aus.\",\r\n        \"TutEdge3\": \"Solltet ihr aus Versehen oder
+    gar absichtlich gegen den Rand fahren, wird die App euch ebenfalls nicht darauf
+    hinweisen. Die App ist diskret :-)\",\r\n        \"TutEdge8x8\": \"Im 8x8-Modus
+    verhalten sich die blauen Felder auf euren Karten genauso wie alle anderen. Der
+    unbefahrbare Rand wurde nicht eingezeichnet. Nutzt den Raum um das Meer herum,
+    um Seeberge und -tiefen au\xDFerhalb des Meeres zu zeichnen.\",\r\n        \"TutScanning1\":
+    \"Um eine Karte einzusetzen, scanne sie mithilfe der Frontkamera mit der Vorderseite
+    nach oben, wie dargestellt.\",\r\n        \"TutScanning2\": \"Auf manchen Karten
+    ist eine Kompassnadel dargestellt. Solche Karten kannst du beim Scannen drehen,
+    um die gew\xFCnschte Wirkungsrichtung zu erzielen.\",\r\n        \"TutSonar\":
+    \"Mit dem Sonar erh\xE4ltst du Informationen \xFCber\\ndie Topographie deiner
+    Umgebung. Erfahre, ob und wo sich in deinen 8 umgebenden Feldern Seeberge befinden.
+    Befindest du dich am Rand der Seekarte, bekommst du sogar Informationen \xFCber
+    diese hinaus.\",\r\n        \"TutRadiograph\": \"Nutze den Radiographen, um zwei
+    anliegende Felder in gegens\xE4tzliche Richtung auf Spuren (Lupensymbol) zu erforschen.
+    Halte beim Scannen die Radiographen-karte mit der Kompassnadel in die gew\xFCnschte
+    Richtung!\",\r\n        \"TutRadiographPirateMode\": \"Im Piratenmodus kann der
+    Radiograph zwischen Minen und Spuren leider nicht unterscheiden!\",\r\n       
+    \"TutPeriscope\": \"Mit dem Periskop erkennst du Gefahren in den 8 dich umgebenden
+    Feldern. Es schl\xE4gt aus bei Minen und Seeungeheuern.\",\r\n        \"TutSecretMove\":
+    \"Nutze die Schleichfahrt, um dich verdeckt fortzubewegen. Du w\xE4hlst die Richtung
+    geheim in der App und ziehst deine Figur auf deine Karten, je nach Aktion, um
+    ein (oder bei weiter Schleichfahrt zwei) Felder in die entsprechende Richtung
+    vor.\",\r\n        \"TutEmerge\": \"Jede*r noch so gute Tiefseetaucher*in muss
+    ab und zu mal Luft holen. Auftauchen ist die einzige regul\xE4re M\xF6glichkeit,
+    alle deine Karten (inkl. der Auftauchen-Karte selbst) wieder zur\xFCck auf die\\nHand
+    zu nehmen.\\n\\nDer Haken? Beim Auftauchen ver\xF6ffentlicht die App deinen Standort.\",\r\n       
+    \"TutMoveAndMine\": \"Mit dieser Karte f\xE4hrst du in die mit dem Kompass festgelegte\\nRichtung
+    und legst hinter dir eine Mine ab. Wir empfehlen dir, deine und fremde Minen
+    mithilfe der beigelegten achteckigen Spielsteine zu markieren. Es kann pro Spieler
+    immer nur eine Mine aktiv sein, eine \xE4ltere Mine desselben Spielers wird gegebenenfalls
+    zerst\xF6rt.\",\r\n        \"TutExplore\": \"Hui! Wichtige Aktion, das Erforschen.
+    Aufgepasst!\\nHast du den Untergrund erforscht, kannst du dir sicher sein, ob
+    sich ein Artefakt oder Atlantis oder gar keine Spuren unter dir, also auf deinem
+    Feld, befinden. Die Aktion ist au\xDFerdem notwendig, um\\n\u2022 Artefakte genauer
+    zu untersuchen\\nund damit eine Artefakt -Karte\\naufzuziehen.\\n\u2022 zu gewinnen!
+    Erforsche daf\xFCr ein Atlantis-Symbol.\",\r\n        \"TutArtifact\": \"Das
+    Ausspielen eines Artefakts ben\xF6tigt eine Aktion (falls nicht explizit anders
+    beschrieben). Lege die Karte dann vor dir ab. Sie darf nicht wieder aufgezogen
+    werden. Pro Person darf ein Artefakt nur einmal genutzt werden (es sei denn,
+    es wird \xFCber eine Mine zur\xFCckgewonnen).\\n\\nUngl\xFCcklicherweise erz\xFCrnt
+    das Erforschen von Artefakten\\nden Ozean. Ein Seeungeheuer erwacht am selben
+    Ort und lauert auf sein n\xE4chstes Opfer.\\n\\nDu als beschw\xF6rende*r Spieler*in
+    bleibst erstmal verschont, bis du dich aus dem Staub gemacht hast.\",\r\n       
+    \"TutPirateMode\": \"Du spielst den Piratenmodus! Frech! Setzt Minen ein, um
+    andere Spieler ausfindig zu machen und um ihnen Artefakte zu stehlen. Benutze
+    das Periskop um Gefahren aufzusp\xFCren bevor du in sie reinf\xE4hrst. Hals-
+    und Beinbruch!\",\r\n        \"playYourNextCard\": \"Du bist dran, (X)! Spiele
+    (scanne) eine Karte und lege sie dann auf deinen Ablagestapel.\",\r\n       
+    \"atlantisFindingHeader\": \"Wei\xDFt du, wo Atlantis liegt?\",\r\n        \"atlantisFindingExplanation\":
+    \", markiere alle Felder von Atlantis. Sind die gew\xE4hlten Felder korrekt,
+    gewinnst du das Spiel! Anderenfalls wirst du bestraft...\",\r\n        \"atlantisResolveButton\":
+    \"Atlantis bergen:\\nSpiel aufl\xF6sen\",\r\n        \"atlantisContinue\": \"Spiel
+    fortsetzen\",\r\n        \"showFullMap\": \"Ganze Karte anzeigen\",\r\n       
+    \"8x8AtlantisFields\": \"Das 8x8 Spielfeld beinhaltet 6 zusammenh\xE4ngende Atlantis-Felder
+    und 6 einzeln verteilte Sch\xE4tze in denen sich Artefakte verbergen.\",\r\n       
+    \"6x6AtlantisFields\": \"Das 6x6 Spielfeld beinhaltet 4 zusammenh\xE4ngende Atlantis-Felder
+    und 4 einzeln verteilte Sch\xE4tze in denen sich Artefakte verbergen.\",\r\n       
+    \"8x8AtlantisFieldsReminder\": \"Erinnerung: Es existieren genau 6 zusammenh\xE4ngende
+    Atlantis-Felder! Die verbindungen k\xF6nnen diagonal, vertikal oder horizontal
+    sein.\",\r\n        \"6x6AtlantisFieldsReminder\": \"Erinnerung: Es existieren
+    genau 4 zusammenh\xE4ngende Atlantis-Felder! Die verbindungen k\xF6nnen diagonal,
+    vertikal oder horizontal sein.\",\r\n        \"pleaseSelectAllAtlantisFields6x6\":
+    \"Bitte w\xE4hle genau 4 Felder aus, um Atlantis vollst\xE4ndig zu bergen.\",\r\n       
+    \"pleaseSelectAllAtlantisFields8x8\": \"Bitte w\xE4hle genau 6 Felder aus, um
+    Atlantis vollst\xE4ndig zu bergen.\",\r\n        \"betaVersionWarning\": \"Wenn
+    ihr Bugs, Textfehler oder sonstige st\xF6rende Dinge findet, meldet sie uns bitte
+    \xFCber Discord, soziale Medien oder an info@hybr.co\\n\\nViel Spa\xDF!\",\r\n       
+    \"newerVersionAvailable\": \"neue Version verf\xFCgbar!\",\r\n        \"weisenderRingCorrection\":
+    \"Diese Karte zeigt, wie viele ATLANTIS-FELDER in jedem Quadranten liegen (Druckfehler
+    auf der Karte).\"\r\n      }\r\n    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"721185b6-2af3-409e-8552-87e60e30c30a\",\r\n   
+    \"name\": \"development\",\r\n    \"id\": \"45ec7580-379c-4aaf-b57e-98e5b141c14c\",\r\n   
+    \"isDefault\": false,\r\n    \"createdAt\": \"2022-11-18T16:47:26Z\",\r\n   
+    \"updatedAt\": \"2022-11-18T16:47:26Z\"\r\n  },\r\n  {\r\n    \"projectId\":
+    \"721185b6-2af3-409e-8552-87e60e30c30a\",\r\n    \"name\": \"production\",\r\n   
+    \"id\": \"4f47d254-3fbb-47d4-9c5d-268481ef713d\",\r\n    \"isDefault\": true,\r\n   
+    \"createdAt\": \"2022-11-15T18:05:24Z\",\r\n    \"updatedAt\": \"2022-11-15T18:05:24Z\"\r\n 
+    }\r\n]"

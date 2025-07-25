@@ -1,0 +1,28 @@
+{
+  "$schema": "https://ugs-config-schemas.unity3d.com/v1/remote-config.schema.json",
+  "entries": {
+    "languages":{
+      "en" : {
+        "languageCode": "en",
+        "unitySystemLanguage": "English",
+        "translatedLanguageName": "English",
+        "enabled": "yes",
+        "buttonFont": "atlantic-cruiseSDF",
+        "textFieldFont": "Arvo-Regular",
+        "description": "english language settings"
+      },
+      "de" : {
+        "languageCode": "fr",
+        "unitySystemLanguage": "French",
+        "translatedLanguageName": "lol",
+        "enabled": "yes",
+        "buttonFont": "atlantic-cruiseSDF",
+        "textFieldFont": "Arvo-Regular",
+        "description": "french language settings"
+      }
+    }
+  },
+
+  "types" : {
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "hybrgames.localizer",
+    "rootNamespace": "",
+    "references": [
+        "hybrgames.loadingmanager",
+        "hybrgames.tweenanimator",
+        "Unity.Mathematics",
+        "hybrgames.utils",
+        "UniTask",
+        "Unity.TextMeshPro",
+        "hybrgames.saveload.runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ugs-config-schemas.unity3d.com/v1/remote-config.schema.json",
+  "entries": {
+    "example_string_key": "string_value",
+    "example_int_key": 1,
+    "example_bool_key": true,
+    "example_long_key": 10000,
+    "example_float_key": 1,
+    "example_json_key": {
+      "sample_key": "sample_value"
+    }
+  },
+
+  "types" : {
+    "example_long_key": "LONG",
+    "example_float_key": "FLOAT"
+  }
+}

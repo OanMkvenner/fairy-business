@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <SOLibPaths>F:\Programming\UnityProjects\hybr-atlantis\Atlantis-Unity\Assets\Plugins\Android\libs\armeabi-v7a\libOTLib.so;C:\Microsoft\AndroidNDK64\android-ndk-r16b\prebuilt\android-arm\gdbserver\gdbserver;C:\Microsoft\AndroidNDK64\android-ndk-r16b\sources\cxx-stl\llvm-libc++\libs\armeabi-v7a\libc++_static.a;C:\Microsoft\AndroidNDK64\android-ndk-r16b\sources\cxx-stl\llvm-libc++\libs\armeabi-v7a\libc++abi.a</SOLibPaths>
+  <AndroidLibPaths />
+  <OObjPaths>F:\Programming\UnityProjects\OT Suite\CPP\VS Project\OT Algorithm\OTLib\ARM\Release</OObjPaths>
+  <Configuration>Release</Configuration>
+  <Platform>ARM</Platform>
+  <AndroidArchitecture>armeabi-v7a</AndroidArchitecture>
+  <!--links to other recipe files-->
+  <RecipeFiles />
+</project>

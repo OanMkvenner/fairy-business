@@ -1,0 +1,15 @@
+{
+  "name": "com.hybrgames.nodeeditor",
+  "version": "1.0.0",
+  "displayName": "HYBR Node Editor",
+  "description": "Adds a Nodebased View transition system",
+  "unity": "2021.1",
+  "dependencies": {
+      "com.github.siccity.xnode" : "1.8.0"
+  },
+  "author": {
+    "name": "Jonas Kopcsek",
+    "email": "jonas.kopcsek@hybr.co",
+    "url": "https://www.hybr.co"
+  }
+}

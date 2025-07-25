@@ -1,0 +1,26 @@
+{
+  "name": "com.hybrgames.camerapackage",
+  "version": "1.0.0",
+  "displayName": "HYBR Camera Library",
+  "unity": "2022.3",
+  "dependencies": {
+    "ai.natml.natml": "1.1.15",
+    "ai.natml.videokit": "0.0.18-alpha.2",
+    "com.hybrgames.loadingmanager": "1.0.0"
+  },
+  "author": {
+    "name": "Jonas Kopcsek",
+    "email": "jonas.kopcsek@hybr.co",
+    "url": "https://www.hybr.co"
+  },
+  "scopedRegistries": [
+    {
+      "name": "NatML",
+      "url": "https://registry.npmjs.com",
+      "scopes": [
+        "ai.natml",
+        "ai.fxn"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: fd4b815dea12d664fbe87938be828175
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Atlantic Cruise
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5188708ff50ba894f8e27ab8569745e5, type: 3}
+  - {fileID: 12800000, guid: f3f6b0aa0d5360c42913fa4c281b3524, type: 3}
+  - {fileID: 12800000, guid: 16c86b58787fcfa4db55eac1f977ae49, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

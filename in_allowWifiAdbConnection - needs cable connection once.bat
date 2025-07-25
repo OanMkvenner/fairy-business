@@ -1,0 +1,1 @@
+F:\Programming\Libraries\Adroid_SDK\platform-tools\adb tcpip 5555

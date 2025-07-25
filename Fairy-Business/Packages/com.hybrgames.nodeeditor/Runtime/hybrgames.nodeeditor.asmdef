@@ -1,0 +1,20 @@
+{
+    "name": "hybrgames.nodeeditor",
+    "rootNamespace": "",
+    "references": [
+        "hybrgames.utils",
+        "Unity.TextMeshPro",
+        "XNode",
+        "XNodeEditor",
+        "hybrgames.tweenanimator"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

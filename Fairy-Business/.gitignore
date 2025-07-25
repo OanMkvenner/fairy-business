@@ -1,0 +1,77 @@
+# =============== #
+# Unity generated #
+# =============== #
+.utmp/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+/[Bb]uilds/
+/[Ll]ibrary/
+/UserSettings/
+/Logs/
+sysinfo.txt
+*.stackdump
+/Assets/AssetStoreTools*
+*.apk
+*.unitypackage
+*.csproj
+
+
+# ===================================== #
+# Plugins								#
+# ===================================== #
+/Assets/DOTween Examples*
+/Assets/Plugins/VSCode*
+/Assets/Mirror
+/Assets/ParrelSync
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+# /*.csproj these are needed for VSCode and annoying to generate...
+/*.pidb
+*.pidb.meta
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+.consulo/
+/*.tmp
+/*.svd
+.vsconfig
+
+# ===================================== #
+# VS Code generated 					#
+# ===================================== #
+.vscode/
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+Corridor/Library/ShaderCache/
+Corridor/Library/metadata/
+
+# ================== #
+# Firebase related #
+# ================== #
+/*remote_config_data
+/Packages/com.google.external-dependency-manager
+/Packages/com.google.firebase.app
+/Packages/com.google.firebase.remote-config
+/Packages/com.google.firebase.analytics
+/Packages/com.google.firebase.crashlytics
+/Assets/GeneratedLocalRepo
+/Assets/GeneratedLocalRepo/Firebase
+/Assets/GeneratedLocalRepo/Firebase.meta

@@ -1,0 +1,14 @@
+{
+  "name": "com.hybrgames.utils",
+  "version": "1.0.0",
+  "displayName": "HYBR Utils",
+  "description": "Initiates other HYBR components",
+  "unity": "2021.1",
+  "dependencies": {
+  },
+  "author": {
+    "name": "Jonas Kopcsek",
+    "email": "jonas.kopcsek@hybr.co",
+    "url": "https://www.hybr.co"
+  }
+}

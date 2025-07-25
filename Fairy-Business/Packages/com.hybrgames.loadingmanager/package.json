@@ -1,0 +1,12 @@
+{
+  "name": "com.hybrgames.loadingmanager",
+  "version": "1.0.0",
+  "displayName": "HYBR Loading Manager",
+  "description": "Initiates other HYBR components",
+  "unity": "2021.1",
+  "author": {
+    "name": "Jonas Kopcsek",
+    "email": "jonas.kopcsek@hybr.co",
+    "url": "https://www.hybr.co"
+  }
+}

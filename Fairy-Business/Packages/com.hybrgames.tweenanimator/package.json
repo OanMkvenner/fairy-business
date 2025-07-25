@@ -1,0 +1,15 @@
+{
+  "name": "com.hybrgames.tweenanimator",
+  "version": "1.0.0",
+  "displayName": "HYBR Tween Animator",
+  "description": "Defines default animations for buttons and views and stuff",
+  "unity": "2021.1",
+  "dependencies": {
+    
+  },
+  "author": {
+    "name": "Jonas Kopcsek",
+    "email": "jonas.kopcsek@hybr.co",
+    "url": "https://www.hybr.co"
+  }
+}

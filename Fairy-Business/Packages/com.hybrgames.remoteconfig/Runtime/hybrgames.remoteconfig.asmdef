@@ -1,0 +1,24 @@
+{
+    "name": "hybrgames.remoteconfig",
+    "rootNamespace": "",
+    "references": [
+        "hybrgames.loadingmanager",
+        "hybrgames.utils",
+        "hybrgames.saveload.runtime",
+        "UniTask",
+        "Unity.Services.Core",
+        "Analytics",
+        "Unity.Services.RemoteConfig",
+        "Unity.Services.Authentication",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

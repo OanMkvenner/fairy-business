@@ -197,17 +197,17 @@ public class GameSession : MonoBehaviour {
             var location = loc.Value;
             if (location.currentOwner != PlayerColor.Neutral){
                 if (location.currentOwner == PlayerColor.Red){
-                    locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveX(180, 0.6f);
+                    locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveY(150, 0.6f);
                     rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
                     rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
                 } else {
-                    locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveX(-180, 0.6f);
+                    locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveY(-150, 0.6f);
                     rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
                     rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
                 }
                 locationFlipper[i].SetSideWithAnim(FlipButton.ActiveSide.front);
             } else {
-                locationFlipper[i].GetComponent<RectTransform>().DOMoveX(0, 0.6f);
+                locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveX(0, 0.6f);
                 rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
                 rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
                 locationFlipper[i].SetSideWithAnim(FlipButton.ActiveSide.back);

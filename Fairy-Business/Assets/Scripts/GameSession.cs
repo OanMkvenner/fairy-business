@@ -99,7 +99,7 @@ public class GameSession : MonoBehaviour {
             locationFlipper[i].BackImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
             locationFlipper[i].FrontImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
             var correctedPos = locationFlipper[i].GetComponent<RectTransform>().position;
-            correctedPos.x = 0;
+            correctedPos.y = 0;
             locationFlipper[i].GetComponent<RectTransform>().position = correctedPos;
         }
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
@@ -207,7 +207,7 @@ public class GameSession : MonoBehaviour {
                 }
                 locationFlipper[i].SetSideWithAnim(FlipButton.ActiveSide.front);
             } else {
-                locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveX(0, 0.6f);
+                locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveY(0, 0.6f);
                 rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
                 rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
                 locationFlipper[i].SetSideWithAnim(FlipButton.ActiveSide.back);

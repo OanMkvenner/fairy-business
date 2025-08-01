@@ -13,6 +13,7 @@ public class FlipButton : MonoBehaviour
         front = 0,
         back = 1,
     }
+    
     public GameObject FrontContent;
     public GameObject BackContent;
     public Image FrontImage;

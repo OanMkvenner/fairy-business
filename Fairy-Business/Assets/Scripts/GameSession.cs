@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using System.Collections;
 using Unity.Mathematics;
 using DG.Tweening;
+using UI;
 
 public enum LocationsType
 {
@@ -35,15 +36,15 @@ public class GameSession : MonoBehaviour {
     public GameObject soundsContainer;
     public Image ScanEffect;
     
-    public List<GameObject> Turns = new List<GameObject>();
-    public List<GameObject> Rounds = new List<GameObject>();
+    /*public List<GameObject> Turns = new List<GameObject>();
+    public List<GameObject> Rounds = new List<GameObject>();*/
     public List<FlipButton> locationTypesFlipper = new List<FlipButton>();
     public List<FlipButton> locationFlipper = new List<FlipButton>();
     public List<Sprite> locationsActive = new List<Sprite>();
     public List<Sprite> locationsInactive = new List<Sprite>();
+    
+    [SerializeField] private  List<TurnRoundUI> turnRoundUIs;
 
-    private void Awake() {
-    }
     private void Start() {
         //cardInput.onStartEvaluation.AddListener(delegate(ScanResult result){
         //    //code here using "result"
@@ -112,7 +113,7 @@ public class GameSession : MonoBehaviour {
         disallowNewCards = false;
         
         HidePower();
-        UniqueNameHash.Get("TurnAndRoundCounter").gameObject.SetActive(true);
+        //UniqueNameHash.Get("TurnAndRoundCounter").gameObject.SetActive(true);
         UniqueNameHash.Get("WinnerTextImageRed").gameObject.SetActive(false);
         UniqueNameHash.Get("WinnerTextImageBlue").gameObject.SetActive(false);
         UniqueNameHash.Get("WinnerText").gameObject.SetActive(false);
@@ -547,16 +548,21 @@ public class GameSession : MonoBehaviour {
     public void NextTurn(){
 
         turnCounter++;
+        
         if (turnCounter >= 5)
         {
+            if(roundCounter > 0) turnRoundUIs[roundCounter-1].FillFinishedRound();
             turnCounter = 1;
             roundCounter++;
         }
+        
         CheckScoringPhase();
+        
         bool gameEnded = CheckEndGame();
+        
         if (!gameEnded)
         {
-            UpdateTurnAndRoundCounters();
+            turnRoundUIs[roundCounter-1].FillTurn(turnCounter-1);
             ResetTurn();
         }
 
@@ -602,17 +608,7 @@ public class GameSession : MonoBehaviour {
     public void HidePower(){
         UniqueNameHash.Get("PointOverview").gameObject.SetActive(false);
     }
-
-    public void UpdateTurnAndRoundCounters(){
-        Rounds[0].SetActive(roundCounter > 0);
-        Rounds[1].SetActive(roundCounter > 1);
-        Rounds[2].SetActive(roundCounter > 2);
-        Rounds[3].SetActive(roundCounter > 3);
-        Turns[0].SetActive(turnCounter > 0);
-        Turns[1].SetActive(turnCounter > 1);
-        Turns[2].SetActive(turnCounter > 2);
-        Turns[3].SetActive(turnCounter > 3);
-    }
+    
     public bool CheckEndGame(){
         if (roundCounter >= 5){
             FinishGameAndShowWinner();

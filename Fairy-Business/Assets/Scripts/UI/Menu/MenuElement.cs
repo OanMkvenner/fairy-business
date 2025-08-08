@@ -6,10 +6,13 @@ namespace UI.Menu
     {
         public MenuIdentifier MenuIdentifier => menuIdentifier;
         
-        protected MenuIdentifier menuIdentifier;
-
         [SerializeField] private MenuManager menuManager;
+        [Space]
+        [SerializeField] private MenuIdentifier menuIdentifier;
+        
+        [Header("UI Elements")]
         [SerializeField] private GameObject menuContent;
+        
         private bool isOpen = false;
 
         private void Awake()

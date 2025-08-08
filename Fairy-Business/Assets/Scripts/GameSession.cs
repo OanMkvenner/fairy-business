@@ -28,20 +28,29 @@ public enum LocationsType
     Below0Gain2VP = 12,
     WeakAttackOnAll = 13,
 }
+
 public class GameSession : MonoBehaviour {
+    
     public bool dynamicInput = false;
     public CardInput cardInput;
 
     public GameObject soundsContainer;
     public Image ScanEffect;
-    
+
+    public List<LocationDefenition> SelectedLocationTypes => selectedLocationTypes;
     public List<FlipButton> locationTypesFlipper = new List<FlipButton>();
     public List<FlipButton> locationFlipper = new List<FlipButton>();
-    
+
     [SerializeField] private Button locationSelectButton;
     [SerializeField] private MenuManager menuManager;
     [SerializeField] private  List<TurnRoundUI> turnRoundUIs;
 
+    private List<LocationDefenition> selectedLocationTypes = new List<LocationDefenition>();
+    private Dictionary<int, Location> locations;
+    private int turnCounter;
+    private int roundCounter;
+    private Dictionary<PlayerColor, int> victoryPointCounters;
+    
     private void Start() {
         //cardInput.onStartEvaluation.AddListener(delegate(ScanResult result){
         //    //code here using "result"
@@ -57,18 +66,14 @@ public class GameSession : MonoBehaviour {
         locationSelectButton.onClick.AddListener(OpenLocationsSelectionsMenu);
         locationSelectButton.gameObject.SetActive(false);
     }
+
     private void IngredientPaused(ScanResult result){
         //IngredientPaused();
     }
+
     private void IngredientPaused(){
         //StopIngredient();
     }
-
-
-
-    List<LocationDefenition> selectedLocationTypes = new List<LocationDefenition>();
-
-    public List<LocationDefenition> SelectedLocationTypes => selectedLocationTypes;
 
     public void ResetSelectedLocationTypes()
     {
@@ -78,12 +83,7 @@ public class GameSession : MonoBehaviour {
             locationTypesFlipper[i].SetSideInstant(FlipButton.ActiveSide.back);
         }
     }
-    
-    Dictionary<int, Location> locations;
-    int turnCounter;
-    int roundCounter;
-    Dictionary<PlayerColor, int> victoryPointCounters;
-    
+
     public void ResetGamesession(){
         
         locations = new Dictionary<int, Location>();
@@ -165,29 +165,39 @@ public class GameSession : MonoBehaviour {
     }
 
     public PlayerColor CheckLocationOwner(LocationsType location){
+        
         PlayerColor currentMarketOwner = PlayerColor.Neutral;
-        foreach (var loc in locations){
+        
+        foreach (KeyValuePair<int, Location> loc in locations){
             if (loc.Value.type == location){
                 currentMarketOwner = loc.Value.currentOwner;
             }
         }
+        
         return currentMarketOwner;
     }
 
     public void ReattributeTerritories(){
         
         foreach (KeyValuePair<int, Location> loc in locations){
+            
             Location location = loc.Value;
             
             if (location.GetPlayerPower(PlayerColor.Red) > location.GetPlayerPower(PlayerColor.Blue)){
+                
                 location.currentOwner = PlayerColor.Red;
+                
             } else if (location.GetPlayerPower(PlayerColor.Red) < location.GetPlayerPower(PlayerColor.Blue)) {
+                
                 location.currentOwner = PlayerColor.Blue;
+                
             } else {
+                
                 location.currentOwner = PlayerColor.Neutral;
                 // on tie, whoever currently owns the special place becomes the new owner! (if its part of the current match, otherwise its Neutral)
                 PlayerColor tieLocationOwner = CheckLocationOwner(LocationsType.WinAllTie);
                 location.currentOwner = tieLocationOwner;
+                
             }
         }
         
@@ -196,39 +206,51 @@ public class GameSession : MonoBehaviour {
 
     Sequence rotationSequence = null;
     public void UpdateLocationVisuals(){
-        if (rotationSequence != null) rotationSequence.Kill();
+        
+        if (rotationSequence != null) 
+            rotationSequence.Kill();
+        
         float initialPauseTime = 0.5f;
         Ease rotationEaseMode = Ease.InOutCubic;
         rotationSequence = DOTween.Sequence();
         
         int i = 0;
+        
         foreach (KeyValuePair<int, Location> loc in locations){
             
             Location location = loc.Value;
             
             if (location.currentOwner != PlayerColor.Neutral){
+                
                 if (location.currentOwner == PlayerColor.Red){
+                    
                     locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveY(150, 0.6f);
                     rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
                     rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
+                    
                 } else {
+                    
                     locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveY(-150, 0.6f);
                     rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
                     rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
+                    
                 }
+                
                 locationFlipper[i].SetSideWithAnim(FlipButton.ActiveSide.front);
+                
             } else {
+                
                 locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveY(0, 0.6f);
                 rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
                 rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
                 locationFlipper[i].SetSideWithAnim(FlipButton.ActiveSide.back);
+                
             }
             
             i++;
         }
     }
-
-
+    
     public void SetupSelectButton(FlipButton flipper){
         SetupSelectLocation(flipper);
     }
@@ -249,7 +271,7 @@ public class GameSession : MonoBehaviour {
         CheckEnoughLocationsSelected();
     }
 
-    public void CheckEnoughLocationsSelected(){
+    private void CheckEnoughLocationsSelected(){
         if (selectedLocationTypes.Count == 3){
             locationSelectButton.gameObject.SetActive(true);
         }
@@ -424,15 +446,16 @@ public class GameSession : MonoBehaviour {
         //TagJK_implement visuals for logged in card
         //TagJK_implement audio for logged in card
     }
-
     
     public void CheckTurnComplete(){
+        
         if (turnActions[PlayerColor.Blue] != null && turnLocations[PlayerColor.Blue] != null && turnActions[PlayerColor.Red] != null && turnLocations[PlayerColor.Red] != null){
             SolveTurn();
         } else {
             // more actions/locations needed for turn to resolve
         }
     }
+    
     PlayerColor[] playerColors= new PlayerColor[]{
         PlayerColor.Red,
         PlayerColor.Blue,
@@ -448,6 +471,7 @@ public class GameSession : MonoBehaviour {
             return PlayerColor.Red;
         }
     }
+    
     int[] allLocationNumbers = new int[]{ 1, 2, 3};
     public void SolveTurn(){
         // politics
@@ -464,13 +488,17 @@ public class GameSession : MonoBehaviour {
         PlayerColor controlCap3Owner = CheckLocationOwner(LocationsType.CantGoBelow3);
         PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsType.WeakAttackOnAll);
         PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsType.Below0Gain2VP);
-        foreach (var actingPlayer in playerColors){
+        
+        foreach (PlayerColor actingPlayer in playerColors){
+            
             if (turnActions[actingPlayer].action == Action.Army){
+                
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 int armyMod = sourceOwner == actingPlayer ? 1 : 0;
                 int minControlNumber = 0;
                 int[] attackedLocationNumbers = new int[] { turnLocations[actingPlayer].locationNumber };
                 int attackValue = turnActions[actingPlayer].value + armyMod;
+                
                 if(WeakAttackOnAllOwner == actingPlayer){
                     attackedLocationNumbers = allLocationNumbers;
                     attackValue /= 2;
@@ -494,8 +522,10 @@ public class GameSession : MonoBehaviour {
             }
         }
         // War
-        foreach (var actingPlayer in playerColors){
+        foreach (PlayerColor actingPlayer in playerColors){
+            
             if (turnActions[actingPlayer].action == Action.War){
+                
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 // if red has same location and the opposite effect, they cancel each other!
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.Peace)
@@ -506,8 +536,11 @@ public class GameSession : MonoBehaviour {
         }
         // Peace
         PlayerColor vp3OnPeaceOwner = CheckLocationOwner(LocationsType.VP3OnPeace);
+        
         foreach (var actingPlayer in playerColors){
+            
             if (turnActions[actingPlayer].action == Action.Peace){
+                
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 // if red has same location and the opposite effect, they cancel each other!
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.War)
@@ -518,13 +551,12 @@ public class GameSession : MonoBehaviour {
                 }
                 // EVERY TIME a peace is played, while the vp3OnPeace location is owned by a player, give that player 3VP
                 if (vp3OnPeaceOwner != PlayerColor.Neutral){
+                    
                     victoryPointCounters[vp3OnPeaceOwner] += 3;
                 }
             }
         }
         
-
-
         // update territory ownership
         ReattributeTerritories();
         // end of turn effects (if any) are applied
@@ -536,12 +568,17 @@ public class GameSession : MonoBehaviour {
 
 
     public void EndOfTurnEffects(){
+        
         foreach (var loc in locations){
-            var location = loc.Value;
+            
+            Location location = loc.Value;
+            
             if (location.type == LocationsType.Stealer){
                 if (location.currentOwner != PlayerColor.Neutral){
-                    var actingPlayer = location.currentOwner;
+                    
+                    PlayerColor actingPlayer = location.currentOwner;
                     PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+                    
                     if (victoryPointCounters[enemyPlayer] > victoryPointCounters[actingPlayer] && victoryPointCounters[enemyPlayer] > 0){
                         victoryPointCounters[enemyPlayer]--;
                         victoryPointCounters[actingPlayer]++;
@@ -549,25 +586,30 @@ public class GameSession : MonoBehaviour {
                 }
             }
             if (location.type == LocationsType.VPPerTurn){
+                
                 if (location.currentOwner != PlayerColor.Neutral){
-                    var actingPlayer = location.currentOwner;
+                    
+                    PlayerColor actingPlayer = location.currentOwner;
                     PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                     victoryPointCounters[actingPlayer]++;
                 }
             }
-
         }
     }
+    
     public void ResetTurn(){
+        
         turnActions[PlayerColor.Blue] = null;
         turnActions[PlayerColor.Red] = null;
         turnLocations[PlayerColor.Blue] = null;
         turnLocations[PlayerColor.Red] = null;
+        
         UniqueNameHash.Get("ActionRedActive1").gameObject.SetActive(false);
         UniqueNameHash.Get("ActionBlueActive1").gameObject.SetActive(false);
         UniqueNameHash.Get("ActionRedActive2").gameObject.SetActive(false);
         UniqueNameHash.Get("ActionBlueActive2").gameObject.SetActive(false);
     }
+    
     public void NextTurn(){
 
         turnCounter++;
@@ -591,11 +633,15 @@ public class GameSession : MonoBehaviour {
 
     }
     public void AddVictoryPointsByPlayer(PlayerColor color, int vp){
+        
         if (color != PlayerColor.Neutral){
             victoryPointCounters[color] += vp;
         }
+        
     }
+    
     public void CheckScoringPhase(){
+        
         if (turnCounter == 1 && roundCounter > 1){
             // apply owned territory points to main score
             
@@ -611,12 +657,15 @@ public class GameSession : MonoBehaviour {
         }
     }
     public void UpdateVictoryPointDisplay(){
+        
         UniqueNameHash.Get("VictoryPointsRed").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColor.Red].ToString();
         UniqueNameHash.Get("VictoryPointsBlue").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColor.Blue].ToString();
     }
     
     public void ShowPower(){
+        
         int i = 0;
+        
         foreach (var loc in locations){
             var location = loc.Value;
             for (int j = 0; j < 2; j++)
@@ -626,37 +675,49 @@ public class GameSession : MonoBehaviour {
             }
             i++;
         }
+        
         UniqueNameHash.Get("PointOverview").gameObject.SetActive(true);
     }
+    
     public void HidePower(){
         UniqueNameHash.Get("PointOverview").gameObject.SetActive(false);
     }
     
     public bool CheckEndGame(){
+        
         if (roundCounter >= 5){
             FinishGameAndShowWinner();
             return true;
         }
+        
         return false;
     }
+    
     public void FinishGameAndShowWinner(){
+        
         disallowNewCards = true;
         UniqueNameHash.Get("TurnAndRoundCounter").gameObject.SetActive(false);
         string winnerText = "Draw!";
+        
         if (victoryPointCounters[PlayerColor.Red] > victoryPointCounters[PlayerColor.Blue]){
+            
             winnerText = "Player Red Won!";
             UniqueNameHash.Get("WinnerTextImageRed").gameObject.SetActive(true);
+            
         } else if (victoryPointCounters[PlayerColor.Red] < victoryPointCounters[PlayerColor.Blue]){
+            
             winnerText = "Player Blue Won!";
             UniqueNameHash.Get("WinnerTextImageBlue").gameObject.SetActive(true);
         }
+        
         UniqueNameHash.Get("WinnerText").GetComponent<TMP_Text>().text = winnerText;
+        
         if (victoryPointCounters[PlayerColor.Red] == victoryPointCounters[PlayerColor.Blue]){
             // currently only used for draw, because i dont have an image there. will probably be used for all text once i have a ttf file though!
             UniqueNameHash.Get("WinnerText").gameObject.SetActive(true); 
         }
+        
         UniqueNameHash.Get("WinnerScreen").gameObject.SetActive(true); 
     }
-
-
+    
 }

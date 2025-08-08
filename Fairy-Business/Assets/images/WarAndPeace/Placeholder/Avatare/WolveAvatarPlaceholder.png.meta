@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      WolveAvatarPlaceholder_0: 4642614891747339433
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

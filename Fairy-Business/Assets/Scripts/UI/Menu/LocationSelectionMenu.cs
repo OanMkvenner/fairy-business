@@ -26,7 +26,7 @@ namespace UI.Menu
             CreateLocationCards(gameSession.SelectedLocationTypes);
         }
 
-        public override void CloseMenu()
+        protected override void CloseMenu()
         {
             base.CloseMenu();
             foreach (Transform child in locationsParent.transform) {

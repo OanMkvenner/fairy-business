@@ -5,35 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuElement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuElement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuIdentifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuIdentifier.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Locations.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/Location.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/Location.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/Avatare/RedridinghoodAvatarPlacholder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/Avatare/RedridinghoodAvatarPlacholder.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/Avatare/WolveAvatarPlaceholder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/Avatare/WolveAvatarPlaceholder.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Background.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/BackgroundRound01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/BackgroundRound01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Finished01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Finished01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Schalter.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Schalter.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Turn01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Turn01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Turn02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Turn02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Turn03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Turn03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Turn04.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/WarAndPeace/Placeholder/RoundTourns/Turn04.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/images/ui/TresorRoundUI.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/images/ui/TresorRoundUI.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CardRecognitionHYBR/LocationDefenition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CardRecognitionHYBR/LocationDefenition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComponentsHYBR/Ui/UiGraphCallback.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComponentsHYBR/Ui/UiGraphCallback.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/MenuElement.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/20a025bba6874f73adca28fec451f63846ae00/e9/7bccc515/IntPtr.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/46/a7ffe7b9/Unmarshal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/7b/07f6b395/Object.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/88/cc565af7/UnsafeUtility.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/90bcab2ccca1442f8c122ac60664c1831dc600/9d/8bc22800/Component.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -47,6 +46,7 @@
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.5005192",
     "git-widget-placeholder": "UI/MenuManager",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -103,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1754057960295</updated>
       <workItem from="1754057962316" duration="3177000" />
-      <workItem from="1754642199247" duration="7109000" />
+      <workItem from="1754642199247" duration="9960000" />
     </task>
     <servers />
   </component>

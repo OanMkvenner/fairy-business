@@ -14,6 +14,7 @@ public class UiGraphCallback : MonoBehaviour
     //    callCustomUiEvent("DefaultCallback");
     //}
     public void callCustomUiEvent(string payload, bool onlyCallIfNodeIsActive = false, bool executeImmideately = false){
+        
         cleanNullReferences();
         UnityEvent onCalled = new UnityEvent();
         // Normalize event call string.
@@ -22,6 +23,7 @@ public class UiGraphCallback : MonoBehaviour
         modifiedPortname = string.Concat(modifiedPortname.Where(c => !char.IsWhiteSpace(c)));
         modifiedPortname = char.ToUpper(modifiedPortname[0]) + modifiedPortname.Substring(1);
         payload = modifiedPortname;
+        
         foreach (var uiStateNode in targetNodes)
         {
             //new UnityAction(uiStateNode.MoveAlongPort)
@@ -31,6 +33,7 @@ public class UiGraphCallback : MonoBehaviour
                 onCalled.AddListener(delegate{uiStateNode.MoveAlongPortSupressingErrors(payload, ignoreActiveState: !onlyCallIfNodeIsActive);});
             }
         }
+        
 		Debug.Log("CustomEventSent: " + payload);
         
         if (!executeImmideately) {

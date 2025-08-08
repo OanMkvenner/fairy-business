@@ -15,9 +15,10 @@ namespace UI.Menu
         
         private bool isOpen = false;
 
-        private void Awake()
+        private void Start()
         {
             menuManager.RegisterMenuElement(this);
+            menuContent.SetActive(false);
         }
 
         public void OpenMenu()

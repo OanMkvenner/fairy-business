@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class LocationDefenition : MonoBehaviour {
+   
     public Sprite imageEnabled;
     public Sprite imageDisabled;
     public string locationText;

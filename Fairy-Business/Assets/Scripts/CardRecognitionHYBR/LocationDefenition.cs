@@ -1,7 +1,6 @@
-using DG.Tweening;
+using UI;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.Events;
+
 
 public class LocationDefenition : MonoBehaviour {
    
@@ -10,19 +9,30 @@ public class LocationDefenition : MonoBehaviour {
     public string locationText;
     public LocationsType locationType;
     public int VPGainedOnScorePhase = 3;
+    private LocationUI currenLocatioUI;
+
+    private void Start() {
+        UpdateFlipButton();
+    }
+
     public void CopyFrom(LocationDefenition locDef){
         imageEnabled = locDef.imageEnabled;
         imageDisabled = locDef.imageDisabled;
         locationText = locDef.locationText;
         locationType = locDef.locationType;
     }
-    private void Start() {
-        UpdateFlipButton();
-    }
+
     public void UpdateFlipButton(){
         GetComponent<FlipButton>().FrontImage.sprite = imageEnabled;
         GetComponent<FlipButton>().BackImage.sprite = imageDisabled;
         GetComponent<FlipButton>().FrontText.text = locationText;
         GetComponent<FlipButton>().BackText.text = locationText;
     }
+
+    public void InitializeLocationUI(LocationUI locationUI)
+    {
+        currenLocatioUI = locationUI;
+        currenLocatioUI.Init(Color.gray, imageEnabled, locationType.ToString(), locationText);
+    }
+    
 }

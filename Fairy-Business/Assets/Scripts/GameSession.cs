@@ -67,6 +67,9 @@ public class GameSession : MonoBehaviour {
 
 
     List<LocationDefenition> selectedLocationTypes = new List<LocationDefenition>();
+
+    public List<LocationDefenition> SelectedLocationTypes => selectedLocationTypes;
+
     public void ResetSelectedLocationTypes()
     {
         selectedLocationTypes = new List<LocationDefenition>();
@@ -119,26 +122,13 @@ public class GameSession : MonoBehaviour {
     public void NewRound()
     {
         ResetGamesession();
-
-        int i = 0;
-        foreach (LocationDefenition tgtLocation in selectedLocationTypes)
-        {
-            // update Location buttons in order
-            FlipButton tgtBtn = locationFlipper[i];
-            i++;
-            // using images from their respective new location
-            var newComp = tgtBtn.gameObject.AddComponent<LocationDefenition>();
-            newComp.CopyFrom(tgtLocation);
-            newComp.UpdateFlipButton();
-            Location newLocation = new Location { type = tgtLocation.locationType, VPGainedOnScorePhase = tgtLocation.VPGainedOnScorePhase };
-            
-            locations.Add(i, newLocation);
-        }
         
         // apply the power setups of 5-3, 4-4 and 3-5 randomly over the locations
         List<int> ints = new List<int>{5,4,3};
         Utilities.ShuffleList(ints);
-        i = 0;
+
+        CreateLocations();
+        int i = 0;
         
         foreach (LocationDefenition loc in selectedLocationTypes)
         {
@@ -153,7 +143,27 @@ public class GameSession : MonoBehaviour {
         // start first turn
         NextTurn(); 
     }
-    
+
+    private void CreateLocations()
+    {
+        locations = new Dictionary<int, Location>();
+        int i = 0;
+
+        foreach (LocationDefenition tgtLocation in selectedLocationTypes)
+        {
+            // update Location buttons in order
+            FlipButton tgtBtn = locationFlipper[i];
+            i++;
+            // using images from their respective new location
+            LocationDefenition newComp = tgtBtn.gameObject.AddComponent<LocationDefenition>();
+            newComp.CopyFrom(tgtLocation);
+            newComp.UpdateFlipButton();
+            Location newLocation = new Location { type = tgtLocation.locationType, VPGainedOnScorePhase = tgtLocation.VPGainedOnScorePhase };
+            
+            locations.Add(i, newLocation);
+        }
+    }
+
     public PlayerColor CheckLocationOwner(LocationsType location){
         PlayerColor currentMarketOwner = PlayerColor.Neutral;
         foreach (var loc in locations){
@@ -181,7 +191,7 @@ public class GameSession : MonoBehaviour {
             }
         }
         
-        UpdateLocationVisuals();
+         UpdateLocationVisuals();
     }
 
     Sequence rotationSequence = null;

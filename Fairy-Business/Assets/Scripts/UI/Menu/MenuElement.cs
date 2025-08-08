@@ -21,13 +21,13 @@ namespace UI.Menu
             menuContent.SetActive(false);
         }
 
-        public void OpenMenu()
+        public virtual void OpenMenu()
         {
             isOpen = true;
             menuContent.SetActive(true);
         }
 
-        protected void CloseMenu()
+        public virtual void CloseMenu()
         {
             isOpen = false;
             menuContent.SetActive(false);

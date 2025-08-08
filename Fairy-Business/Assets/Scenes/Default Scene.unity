@@ -996,7 +996,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (1)
+      value: BtnStealer
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -2434,7 +2434,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (4)
+      value: BtnGainSpyAfterCount
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -4697,7 +4697,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (10)
+      value: BtnWeakAttackOnAll
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -4941,7 +4941,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (9)
+      value: BtnBelow0Gain2VP
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -5654,6 +5654,10 @@ MonoBehaviour:
   closeButton: {fileID: 606012917}
   startGameButton: {fileID: 199928300}
   uiGraphCallback: {fileID: 2108983919}
+  gameSession: {fileID: 2108983916}
+  locationsParent: {fileID: 1371387478}
+  locationUI: {fileID: 961676662541233311, guid: 8e816724298be504ab195c492dacc138,
+    type: 3}
 --- !u!114 &651391617 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1314789218418463752, guid: 1a35719679cadf14a8cb8d9d41316a8d,
@@ -5822,7 +5826,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (8)
+      value: BtnDiscardEnemyAfterCount
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -6543,7 +6547,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (3)
+      value: BtnWinAllTie
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -6787,7 +6791,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (5)
+      value: BtnDrawPeaceAfterCount
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -10833,6 +10837,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316968163}
   m_CullTransparentMesh: 1
+--- !u!1 &1371387477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1371387478}
+  - component: {fileID: 1371387479}
+  m_Layer: 5
+  m_Name: LocationsContent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1371387478
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371387477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2013878328}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -17.695, y: -4.0385}
+  m_SizeDelta: {x: 849.611, y: 410.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1371387479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371387477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!114 &1397470336 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3304644252222342143, guid: 1a35719679cadf14a8cb8d9d41316a8d,
@@ -11367,7 +11433,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (2)
+      value: BtnVPPerTurn
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -13671,7 +13737,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (7)
+      value: BtnVP3OnPeace
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -14705,7 +14771,7 @@ PrefabInstance:
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
-      value: BtnNewLocation (6)
+      value: BtnCantGoBelow3
       objectReference: {fileID: 0}
     - target: {fileID: 7754217160144852714, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
@@ -15502,6 +15568,7 @@ RectTransform:
   - {fileID: 2007894255}
   - {fileID: 606012916}
   - {fileID: 199928299}
+  - {fileID: 1371387478}
   m_Father: {fileID: 647880113}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

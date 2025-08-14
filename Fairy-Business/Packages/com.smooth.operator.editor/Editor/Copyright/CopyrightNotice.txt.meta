@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 68ae0c35c10055e40924432d106e9555
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 271378
+  packageName: Smooth Operator
+  packageVersion: 1.1.1
+  assetPath: Packages/com.smooth.operator.editor/Editor/Copyright/CopyrightNotice.txt
+  uploadId: 683502

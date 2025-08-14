@@ -305,7 +305,14 @@ public class CameraOpencvLib : MonoBehaviour
             await cameraHybr.StartCamera();
         }
     }
-    
+    // helper function for targeting with MethodNode
+    public void _StartScanning(){
+        StartScanning();
+    }
+    // helper function for targeting with MethodNode
+    public void _StopScanning(){
+        StopScanning();
+    }
     static public void StartScanning()
     {
         // if we ordered a camera stop, no point in actually stopping now!

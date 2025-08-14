@@ -285,7 +285,6 @@ MonoBehaviour:
   m_Name: SubGameplay
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 5245944639203993985}
   - {fileID: 4118982572493241412}
   - {fileID: -1327778690725669287}
   - {fileID: 6096576609133860768}
@@ -297,12 +296,11 @@ MonoBehaviour:
   - {fileID: -3577810093390761672}
   - {fileID: -4453781616028307687}
   - {fileID: -1604492382438398534}
-  _startNodes:
-  - {fileID: 5245944639203993985}
+  _startNodes: []
   queuedRepaint: 0
   parentSubgraphNode: {fileID: 6974908193880419190, guid: a7b5c991d3e35c1409739ca87195a515,
     type: 2}
-  previouselySelectedNode: {fileID: -1327778690725669287}
+  previouselySelectedNode: {fileID: 4118982572493241412}
 --- !u!114 &4118982572493241412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,54 +435,6 @@ MonoBehaviour:
   z: 0
   k: 0
   duration: 1
---- !u!114 &5245944639203993985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f238c42057d8f4188bb895a2d6fc64, type: 3}
-  m_Name: Start
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 56, y: -168}
-  ports:
-    keys:
-    - start
-    - enter
-    - passThrough
-    values:
-    - _fieldName: start
-      _node: {fileID: 5245944639203993985}
-      _typeQualifiedName: XNode.UiStateGraph.StartNode+AnyNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: enter
-      _node: {fileID: 5245944639203993985}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passThrough
-      _node: {fileID: 5245944639203993985}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  active: 0
 --- !u!114 &5261368280644089597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,7 +604,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  active: 1
+  active: 0
   drb: {fileID: 0}
   assignedCanvasRef:
     serializedGuid: 9e7ba31f61983e4188d44cb0ab268f18

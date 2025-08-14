@@ -306,7 +306,6 @@ MonoBehaviour:
   m_Name: SubMainMenu
   m_EditorClassIdentifier: 
   nodes:
-  - {fileID: 3428138413394974948}
   - {fileID: -8023959536765369239}
   - {fileID: -7869135170353833271}
   - {fileID: 7934293553796877107}
@@ -315,60 +314,11 @@ MonoBehaviour:
   - {fileID: 8172508746298991724}
   - {fileID: -5914668509843199216}
   - {fileID: -7934788314539571962}
-  _startNodes:
-  - {fileID: 3428138413394974948}
+  _startNodes: []
   queuedRepaint: 0
   parentSubgraphNode: {fileID: -5673435428458028693, guid: a7b5c991d3e35c1409739ca87195a515,
     type: 2}
   previouselySelectedNode: {fileID: -7869135170353833271}
---- !u!114 &3428138413394974948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f238c42057d8f4188bb895a2d6fc64, type: 3}
-  m_Name: Start
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -168, y: -24}
-  ports:
-    keys:
-    - start
-    - enter
-    - passThrough
-    values:
-    - _fieldName: start
-      _node: {fileID: 3428138413394974948}
-      _typeQualifiedName: XNode.UiStateGraph.StartNode+AnyNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: enter
-      _node: {fileID: 3428138413394974948}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passThrough
-      _node: {fileID: 3428138413394974948}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  active: 0
 --- !u!114 &7934293553796877107
 MonoBehaviour:
   m_ObjectHideFlags: 0

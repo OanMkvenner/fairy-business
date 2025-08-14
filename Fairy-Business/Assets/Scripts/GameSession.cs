@@ -235,7 +235,7 @@ public class GameSession : MonoBehaviour {
 
     public void CheckEnoughLocationsSelected(){
         if (selectedLocationTypes.Count == 3){
-            this.GetComponent<UiGraphCallback>().callCustomUiEvent("EnoughLocationsSelected");
+            UiManager.CallbackUiEvent("EnoughLocationsSelected");
         }
     }
 

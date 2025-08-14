@@ -21,20 +21,28 @@ namespace XNodeEditor.UiStateGraph {
             base.OnCreate();
         }
 		public override void OnHeaderGUI() {
+
+            GUILayout.Space(16);
+            GUILayout.BeginHorizontal();
+            NodeEditorGUILayout.PortField(GUIContent.none, node.GetOutputPort("start"), GUILayout.MinWidth(0f));
+            GUILayout.EndHorizontal();
+            GUILayout.Space(-36);
+
 			GUI.color = Color.white;
 			string title = target.name;
 			GUILayout.Label(title, NodeEditorResources.styles.nodeHeader, GUILayout.Height(30));
 		}
 
 		public override void OnBodyGUI() {
+			base.OnBodyGUI();
             // Iterate through serialized properties, search for "start" and draw it like the Inspector (But with ports)
-            SerializedProperty iterator = serializedObject.GetIterator();
-            bool enterChildren = true;
-            while (iterator.NextVisible(enterChildren)) {
-                enterChildren = false;
-				if (iterator.name == "start")
-                	NodeEditorGUILayout.PropertyField(iterator, true);
-            }
+            //SerializedProperty iterator = serializedObject.GetIterator();
+            //bool enterChildren = true;
+            //while (iterator.NextVisible(enterChildren)) {
+            //    enterChildren = false;
+			//	if (iterator.name == "start")
+            //    	NodeEditorGUILayout.PropertyField(iterator, true);
+            //}
 		}
 	}	
 	// overload Inspector

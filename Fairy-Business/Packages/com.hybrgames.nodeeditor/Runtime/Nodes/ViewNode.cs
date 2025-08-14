@@ -265,6 +265,7 @@ namespace XNode.UiStateGraph {
 
 			List<GameObject> allContainedToggleableButtons = new List<GameObject>();
 			List<GameObject> allContainedButtons = new List<GameObject>();
+			List<ViewNodePortConnector> allViewPortConnectors = new();
 			foreach(Transform trans in canvasObject.transform) {
 				if (trans.GetComponent<Button>() != null)
 				{
@@ -283,12 +284,41 @@ namespace XNode.UiStateGraph {
 					allContainedToggleableButtons.Add(trans.gameObject);
 				}
 			}
+			var allChildren = Utilities.GetComponentsInChildrenIncludingDisabled<ViewNodePortConnector>(canvasObject.transform);
+			foreach (var viewNodeConnector in allChildren)
+			{
+				allViewPortConnectors.Add(viewNodeConnector);
+			}
+			
 
 			//WARNING check if this goes deeper than 1! it  shouldnt
 
 			StateGraph stateGraph = graph as StateGraph;
 			bool changedAtLeastOnePort = false;
 			NodePort lastNewlyAddedPort = null;
+			//Add ViewNodePortConnector Ports
+			foreach (var viewPortConnector in allViewPortConnectors)
+			{
+				if (viewPortConnector.dontCreatePortOnResync) continue;
+				List<string> newPortNames = viewPortConnector.GetPortNames();
+				if (newPortNames.Count == 0) newPortNames.Add(viewPortConnector.GetPortBaseName());
+				foreach (var newPortName in newPortNames)
+				{
+					// check if the port already exists
+					bool alreadyExists = false;
+					foreach (NodePort port in Outputs) { 
+						if (port.fieldName == newPortName) {
+							alreadyExists = true;
+							break;
+						}
+					};
+					if (!alreadyExists){
+						// add dynamic output manually if needed
+						lastNewlyAddedPort = this.AddDynamicOutput(typeof(UiStateNode.ButtonNode), fieldName: newPortName);
+						changedAtLeastOnePort = true;
+					}
+				}
+			}
 			//AddButton
 			foreach (var button in allContainedButtons)
 			{
@@ -359,6 +389,19 @@ namespace XNode.UiStateGraph {
 					if (port.fieldName == newPortName) {
 						stillExists = true;
 						break;
+					}
+				}
+				foreach (var viewPortConnector in allViewPortConnectors)
+				{
+					if (viewPortConnector.dontCreatePortOnResync) continue;
+					List<string> newPortNames = viewPortConnector.GetPortNames();
+					if (newPortNames.Count == 0) newPortNames.Add(viewPortConnector.GetPortBaseName());
+					foreach (var newPortName in newPortNames)
+					{
+						if (port.fieldName == newPortName) {
+							stillExists = true;
+							break;
+						}
 					}
 				}
 				foreach (var button in allContainedToggleableButtons)

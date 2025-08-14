@@ -306,14 +306,6 @@ public class CameraOpencvLib : MonoBehaviour
         }
     }
     
-    public void _StoptScanning()
-    {
-        CameraOpencvLib.StopScanning();
-    }
-    public void _StartScanning()
-    {
-        CameraOpencvLib.StartScanning();
-    }
     static public void StartScanning()
     {
         // if we ordered a camera stop, no point in actually stopping now!
@@ -375,6 +367,7 @@ public class CameraOpencvLib : MonoBehaviour
         return result;
     }
     unsafe void OnResultFound(ScanResult result){
+        Debug.Log($"OnResultFound {result.name}");
         receivedScanResult = result;
     }
 

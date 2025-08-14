@@ -7,7 +7,11 @@ using XNode;
 
 namespace XNode.UiStateGraph {
 	public class UiStateNode : Node {
+		[HideInInspector]
+		[Tooltip("enter")]
 		[Input] public EnterNode enter;
+		[HideInInspector]
+		[Tooltip("passThrough")]
 		[Output] public ImmideateExitPort passThrough;
 
 		protected UnityEngine.Object payload = null;
@@ -19,12 +23,16 @@ namespace XNode.UiStateGraph {
 
 		[HideInInspector] public bool active = false;
 
-		protected NodePort enterPort; // just the incoming port for the property "enter"
+		[NonSerialized]
+		public NodePort enterPort; // just the incoming port for the property "enter"
+		[NonSerialized]
+		public NodePort passthroughPort; // just the incoming port for the property "enter"
 
         protected override void Init()
         {
 			base.Init();
 			enterPort = FindInputOfName("enter");
+			passthroughPort = FindOutputOfName("passThrough");
 		}
 		virtual public void OnEnter(UiStateNode originNode, NodePort incomingPort) {
 			// if this isnt a ViewNode, keep references to originating ViewNodes

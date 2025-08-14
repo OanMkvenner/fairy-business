@@ -54,7 +54,7 @@ public class UiManager : MonoBehaviour
         foreach (var graph in cachedConnectedStateGraphs)
         {
             graph.InitGraph();
-            allCallbackNodes.AddRange(graph.GetAllCallbackNods());
+            allCallbackNodes.AddRange(graph.GetAllNodesOfType<WaitForCallbackNode>());
         }
         foreach (var callbackNode in allCallbackNodes)
         {
@@ -69,7 +69,20 @@ public class UiManager : MonoBehaviour
                 }
             }
         }
-		StartCoroutine(CustomCoroutines.OneFrameDelay(DoAllOnStarts)); // delayed, because they should start after above initializations are finished on ALL graphs
+        List<ViewNode> allViewNodes = new();
+        foreach (var graph in cachedConnectedStateGraphs)
+        {
+            allViewNodes.AddRange(graph.GetAllNodesOfType<ViewNode>());
+        }
+        foreach (var viewNode in allViewNodes)
+        {
+            var viewNodeRef = viewNode.assignedCanvasRef.gameObject.GetComponent<ViewNodeReferencer>();
+            if (viewNodeRef == null) viewNodeRef = viewNode.assignedCanvasRef.gameObject.AddComponent<ViewNodeReferencer>();
+            viewNodeRef.AddTargetViewNode(viewNode);
+        }
+        if (Application.isPlaying){
+		    StartCoroutine(CustomCoroutines.OneFrameDelay(DoAllOnStarts)); // delayed, because they should start after above initializations are finished on ALL graphs
+        }
     }
     void DoAllOnStarts(){
         foreach (var graph in cachedConnectedStateGraphs)

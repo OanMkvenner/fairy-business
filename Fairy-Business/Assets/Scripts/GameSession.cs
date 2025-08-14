@@ -11,22 +11,25 @@ using UI.Menu;
 
 public enum LocationsType
 {
+    //some types are not valid anymore
+    //Todo: Marie 14.08 Remove after refactoring locations.
     Invalid = -1,
     Throne = 0,
-    Source = 1,
-    Market = 2,
-    Harbor = 3,
+    PirateShip = 1,
+    EnchantedForest = 2,
+    Castle = 3,
     
     Stealer = 4,
-    VPPerTurn = 5,
-    WinAllTie = 6,
+    DragonCave = 5,
+    GingerbreadHouse = 6,
     GainSpyAfterCount = 7,
     DrawPeaceAfterCount = 8,
     CantGoBelow3 = 9,
     VP3OnPeace = 10,
-    DiscardEnemyAfterCount = 11,
-    Below0Gain2VP = 12,
-    WeakAttackOnAll = 13,
+    HauntedHouse = 11,
+    BottomOfTheSea = 12,
+    ThroughTheMirror = 13,
+    BackFromTheGrave = 14,
 }
 
 public class GameSession : MonoBehaviour {
@@ -194,7 +197,7 @@ public class GameSession : MonoBehaviour {
                 
                 location.currentOwner = PlayerColor.Neutral;
                 // on tie, whoever currently owns the special place becomes the new owner! (if its part of the current match, otherwise its Neutral)
-                PlayerColor tieLocationOwner = CheckLocationOwner(LocationsType.WinAllTie);
+                PlayerColor tieLocationOwner = CheckLocationOwner(LocationsType.GingerbreadHouse);
                 location.currentOwner = tieLocationOwner;
                 
             }
@@ -474,7 +477,7 @@ public class GameSession : MonoBehaviour {
     int[] allLocationNumbers = new int[]{ 1, 2, 3};
     public void SolveTurn(){
         // politics
-        PlayerColor marketOwner = CheckLocationOwner(LocationsType.Market);
+        PlayerColor marketOwner = CheckLocationOwner(LocationsType.EnchantedForest);
         foreach (var actingPlayer in playerColors){
             if (turnActions[actingPlayer].action == Action.Politics){
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
@@ -483,10 +486,10 @@ public class GameSession : MonoBehaviour {
             }
         }
         // Army
-        PlayerColor sourceOwner = CheckLocationOwner(LocationsType.Source);
+        PlayerColor sourceOwner = CheckLocationOwner(LocationsType.PirateShip);
         PlayerColor controlCap3Owner = CheckLocationOwner(LocationsType.CantGoBelow3);
-        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsType.WeakAttackOnAll);
-        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsType.Below0Gain2VP);
+        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsType.ThroughTheMirror);
+        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsType.BottomOfTheSea);
         
         foreach (PlayerColor actingPlayer in playerColors){
             
@@ -584,7 +587,7 @@ public class GameSession : MonoBehaviour {
                     }
                 }
             }
-            if (location.type == LocationsType.VPPerTurn){
+            if (location.type == LocationsType.DragonCave){
                 
                 if (location.currentOwner != PlayerColor.Neutral){
                     

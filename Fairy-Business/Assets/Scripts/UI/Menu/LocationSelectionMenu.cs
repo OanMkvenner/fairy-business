@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Locations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,14 +28,15 @@ namespace UI.Menu
         protected override void CloseMenu()
         {
             base.CloseMenu();
+            
             foreach (Transform child in locationsParent.transform) {
                 GameObject.Destroy(child.gameObject);
             }
         }
 
-        private void CreateLocationCards(List<LocationDefenition> locationDefenitions)
+        private void CreateLocationCards(List<LocationDefinition> locationDefenitions)
         {
-            foreach (LocationDefenition locationDefenition in locationDefenitions)
+            foreach (LocationDefinition locationDefenition in locationDefenitions)
             {
                 LocationUI newLocationUI = Instantiate(locationUI, locationsParent);
                 locationDefenition.InitializeLocationUI(newLocationUI);

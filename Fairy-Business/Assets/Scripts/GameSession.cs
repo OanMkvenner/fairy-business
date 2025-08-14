@@ -37,14 +37,14 @@ public class GameSession : MonoBehaviour {
     public GameObject soundsContainer;
     public Image ScanEffect;
 
-    public List<LocationDefenition> SelectedLocationTypes => selectedLocationTypes;
+    public List<LocationDefinition> SelectedLocationTypes => selectedLocationTypes;
     public List<FlipButton> locationTypesFlipper = new List<FlipButton>();
     public List<FlipButton> locationFlipper = new List<FlipButton>();
 
     [SerializeField] private Button locationSelectButton;
     [SerializeField] private  List<TurnRoundUI> turnRoundUIs;
 
-    private List<LocationDefenition> selectedLocationTypes = new List<LocationDefenition>();
+    private List<LocationDefinition> selectedLocationTypes = new List<LocationDefinition>();
     private Dictionary<int, Location> locations;
     private int turnCounter;
     private int roundCounter;
@@ -76,7 +76,7 @@ public class GameSession : MonoBehaviour {
 
     public void ResetSelectedLocationTypes()
     {
-        selectedLocationTypes = new List<LocationDefenition>();
+        selectedLocationTypes = new List<LocationDefinition>();
         
         for (int i = 0; i < locationTypesFlipper.Count; i++){
             locationTypesFlipper[i].SetSideInstant(FlipButton.ActiveSide.back);
@@ -129,7 +129,7 @@ public class GameSession : MonoBehaviour {
         CreateLocations();
         int i = 0;
         
-        foreach (LocationDefenition loc in selectedLocationTypes)
+        foreach (LocationDefinition loc in selectedLocationTypes)
         {
             int powerRed = ints[i];
             locations[i+1].SetPlayerPower(PlayerColor.Red, powerRed);
@@ -148,13 +148,13 @@ public class GameSession : MonoBehaviour {
         locations = new Dictionary<int, Location>();
         int i = 0;
 
-        foreach (LocationDefenition tgtLocation in selectedLocationTypes)
+        foreach (LocationDefinition tgtLocation in selectedLocationTypes)
         {
             // update Location buttons in order
             FlipButton tgtBtn = locationFlipper[i];
             i++;
             // using images from their respective new location
-            LocationDefenition newComp = tgtBtn.gameObject.AddComponent<LocationDefenition>();
+            LocationDefinition newComp = tgtBtn.gameObject.AddComponent<LocationDefinition>();
             newComp.CopyFrom(tgtLocation);
             newComp.UpdateFlipButton();
             Location newLocation = new Location { type = tgtLocation.locationType, VPGainedOnScorePhase = tgtLocation.VPGainedOnScorePhase };
@@ -256,7 +256,7 @@ public class GameSession : MonoBehaviour {
     
     public void SetupSelectLocation(FlipButton flipper){
         
-        LocationDefenition loc = flipper.gameObject.GetComponent<LocationDefenition>();
+        LocationDefinition loc = flipper.gameObject.GetComponent<LocationDefinition>();
         
         if (selectedLocationTypes.Contains(loc))
         {

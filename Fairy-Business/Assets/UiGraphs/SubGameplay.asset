@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Name: View Controller
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1192, y: 152}
+  position: {x: 1224, y: -56}
   ports:
     keys:
     - enter
@@ -654,7 +654,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  active: 1
+  active: 0
   drb: {fileID: 0}
   assignedCanvasRef:
     serializedGuid: 9e7ba31f61983e4188d44cb0ab268f18
@@ -673,7 +673,7 @@ MonoBehaviour:
   m_Name: View Controller
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1192, y: 280}
+  position: {x: 1240, y: 440}
   ports:
     keys:
     - enter

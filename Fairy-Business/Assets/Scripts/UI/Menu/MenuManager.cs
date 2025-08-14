@@ -6,14 +6,14 @@ namespace UI.Menu
 {
     public class MenuManager : MonoBehaviour
     {
-        private readonly List<MenuElement> menuElements = new List<MenuElement>();
+        private static readonly List<MenuElement> menuElements = new List<MenuElement>();
 
         public void RegisterMenuElement(MenuElement menuElement)
         {
             menuElements.Add(menuElement);
         }
 
-        public void OpenMenu(MenuIdentifier menuIdentifier)
+        public static void OpenMenu(MenuIdentifier menuIdentifier)
         {
             MenuElement menuElement = menuElements.FirstOrDefault(a => a.MenuIdentifier == menuIdentifier);
 

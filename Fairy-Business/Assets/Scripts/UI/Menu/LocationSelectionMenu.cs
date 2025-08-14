@@ -6,7 +6,6 @@ namespace UI.Menu
 {
     public class LocationSelectionMenu : MenuElement
     {
-        [SerializeField] private Button closeButton;
         [SerializeField] private Button startGameButton;
 
         [SerializeField] private UiGraphCallback uiGraphCallback;
@@ -16,7 +15,6 @@ namespace UI.Menu
  
         private void Awake()
         {
-            closeButton.onClick.AddListener(CloseMenu);
             startGameButton.onClick.AddListener(StartNewGame);
         }
 

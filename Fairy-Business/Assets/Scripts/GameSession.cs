@@ -42,7 +42,6 @@ public class GameSession : MonoBehaviour {
     public List<FlipButton> locationFlipper = new List<FlipButton>();
 
     [SerializeField] private Button locationSelectButton;
-    [SerializeField] private MenuManager menuManager;
     [SerializeField] private  List<TurnRoundUI> turnRoundUIs;
 
     private List<LocationDefenition> selectedLocationTypes = new List<LocationDefenition>();
@@ -283,7 +282,7 @@ public class GameSession : MonoBehaviour {
 
     private void OpenLocationsSelectionsMenu()
     {
-        menuManager.OpenMenu(MenuIdentifier.LocationSelectionMenu);
+        MenuManager.OpenMenu(MenuIdentifier.LocationSelectionMenu);
     }
     
     public struct Card

@@ -2,7 +2,8 @@ namespace UI.Menu
 {
     public enum MenuIdentifier
     {
-        LocationSelectionMenu = 0,
-        PauseMenu = 1,
+        None = 0,
+        LocationSelectionMenu = 1,
+        PauseMenu = 2,
     }
 }

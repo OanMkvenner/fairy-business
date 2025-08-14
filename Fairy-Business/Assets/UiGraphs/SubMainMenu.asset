@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Name: Tween Animation
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 696, y: 40}
+  position: {x: 584, y: 72}
   ports:
     keys:
     - cancelAnims
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: View Controller
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 824, y: 8}
+  position: {x: 824, y: -152}
   ports:
     keys:
     - enter
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Name: View Controller
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 824, y: 104}
+  position: {x: 824, y: 264}
   ports:
     keys:
     - enter
@@ -435,7 +435,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  active: 0
+  active: 1
   drb: {fileID: 0}
   assignedCanvasRef:
     serializedGuid: 7a750b0250ffe9458901933126a63340

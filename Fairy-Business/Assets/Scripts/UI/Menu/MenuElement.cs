@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI.Menu
 {
@@ -11,9 +13,15 @@ namespace UI.Menu
         [SerializeField] private MenuIdentifier menuIdentifier;
         
         [Header("UI Elements")]
+        [SerializeField] private Button closeButton;
         [SerializeField] private GameObject menuContent;
         
         private bool isOpen = false;
+
+        private void Awake()
+        {
+            closeButton.onClick.AddListener(CloseMenu);
+        }
 
         private void Start()
         {

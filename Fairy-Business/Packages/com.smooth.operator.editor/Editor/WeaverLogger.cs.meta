@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 50969081e34a483499cfdaa9a13e602c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 271378
+  packageName: Smooth Operator
+  packageVersion: 1.1.1
+  assetPath: Packages/com.smooth.operator.editor/Editor/WeaverLogger.cs
+  uploadId: 683502

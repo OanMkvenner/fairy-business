@@ -19,7 +19,14 @@ namespace XNode.UiStateGraph {
 			if (subGraphNode == null)
 				return;
 			// update portnames because we have a new Entry/Exit Port
-			subGraphNode.UpdateInOutPortnames();
+			subGraphNode.TryUpdateSubgraphPorts();
+		}
+
+		private void OnDestroy() {
+			SubGraphNode subGraphNode = (graph as StateGraph).parentSubgraphNode;
+			if (subGraphNode == null)
+				return;
+			subGraphNode.TryUpdateSubgraphPorts();
 		}
 
 		public void MoveToFirstNode(UiStateNode originNode) {

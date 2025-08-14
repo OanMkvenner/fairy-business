@@ -1,0 +1,22 @@
+{
+    "name": "com.boldbarnacles.ui.Editor",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.hybrgames.nodeeditor",
+            "expression": "1.0.0",
+            "define": "HYBR_NODE_EDITOR"
+        }
+    ],
+    "noEngineReferences": false
+}

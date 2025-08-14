@@ -9,7 +9,6 @@ namespace UI.Menu
     {
         [SerializeField] private Button startGameButton;
 
-        [SerializeField] private UiGraphCallback uiGraphCallback;
         [SerializeField] private GameSession gameSession;
         [SerializeField] private Transform locationsParent;
         [SerializeField] private LocationUI locationUI;
@@ -45,7 +44,7 @@ namespace UI.Menu
 
         private void StartNewGame()
         {
-            uiGraphCallback.callCustomUiEvent("EnoughLocationsSelected");
+            UiManager.CallbackUiEvent("EnoughLocationsSelected");
         }
     }
 }

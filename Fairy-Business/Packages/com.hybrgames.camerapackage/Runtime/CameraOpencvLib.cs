@@ -305,14 +305,13 @@ public class CameraOpencvLib : MonoBehaviour
             await cameraHybr.StartCamera();
         }
     }
-    
-    public void _StoptScanning()
-    {
-        CameraOpencvLib.StopScanning();
+    // helper function for targeting with MethodNode
+    public void _StartScanning(){
+        StartScanning();
     }
-    public void _StartScanning()
-    {
-        CameraOpencvLib.StartScanning();
+    // helper function for targeting with MethodNode
+    public void _StopScanning(){
+        StopScanning();
     }
     static public void StartScanning()
     {
@@ -375,6 +374,7 @@ public class CameraOpencvLib : MonoBehaviour
         return result;
     }
     unsafe void OnResultFound(ScanResult result){
+        Debug.Log($"OnResultFound {result.name}");
         receivedScanResult = result;
     }
 

@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "ai.fxn.fxn3d": {
-      "version": "file:ai.fxn.fxn3d@0.0.4",
+      "version": "file:ai.fxn.fxn3d",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
@@ -9,7 +9,7 @@
       }
     },
     "ai.natml.natml": {
-      "version": "file:ai.natml.natml@1.1.16",
+      "version": "file:ai.natml.natml",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
@@ -17,7 +17,7 @@
       }
     },
     "ai.natml.videokit": {
-      "version": "file:ai.natml.videokit@0.0.18-alpha.2",
+      "version": "file:ai.natml.videokit",
       "depth": 0,
       "source": "embedded",
       "dependencies": {
@@ -25,14 +25,26 @@
         "ai.fxn.fxn3d": "0.0.4"
       }
     },
+    "com.boldbarnacles.ui": {
+      "version": "file:com.boldbarnacles.ui",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.cysharp.unitask": {
-      "version": "file:com.cysharp.unitask@66de0d3a58",
+      "version": "file:com.cysharp.unitask",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "com.dbrizov.naughtyattributes": {
+      "version": "file:com.dbrizov.naughtyattributes",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
     },
     "com.github.siccity.xnode": {
-      "version": "file:com.github.siccity.xnode@82f7887931",
+      "version": "file:com.github.siccity.xnode",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -100,6 +112,14 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "com.smooth.operator.editor": {
+      "version": "file:com.smooth.operator.editor",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.nuget.mono-cecil": "1.10.1"
+      }
+    },
     "com.unity.2d.animation": {
       "version": "10.1.2",
       "depth": 0,
@@ -118,11 +138,11 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
+        "com.unity.burst": "1.8.4",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.mathematics": "1.1.0",
-        "com.unity.modules.uielements": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
-        "com.unity.burst": "1.8.4"
+        "com.unity.modules.uielements": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -154,8 +174,8 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.mathematics": "1.1.0",
         "com.unity.2d.common": "9.0.5",
+        "com.unity.mathematics": "1.1.0",
         "com.unity.modules.physics2d": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -201,8 +221,8 @@
       "source": "registry",
       "dependencies": {
         "com.unity.burst": "1.8.12",
-        "com.unity.nuget.mono-cecil": "1.11.4",
         "com.unity.test-framework": "1.4.3",
+        "com.unity.nuget.mono-cecil": "1.11.4",
         "com.unity.test-framework.performance": "3.0.3"
       },
       "url": "https://packages.unity.com"
@@ -273,7 +293,7 @@
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -300,8 +320,8 @@
       "source": "registry",
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "3.0.2",
-        "com.unity.modules.unitywebrequest": "1.0.0",
-        "com.unity.remote-config-runtime": "4.0.2"
+        "com.unity.remote-config-runtime": "4.0.2",
+        "com.unity.modules.unitywebrequest": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -310,10 +330,10 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.0.2",
-        "com.unity.modules.unitywebrequest": "1.0.0",
-        "com.unity.modules.unityanalytics": "1.0.0",
         "com.unity.services.core": "1.12.5",
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.unity.modules.unityanalytics": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0",
         "com.unity.services.authentication": "2.7.4"
       },
       "url": "https://packages.unity.com"
@@ -324,8 +344,8 @@
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
-        "com.unity.modules.jsonserialize": "1.0.0",
-        "com.unity.services.core": "1.12.5"
+        "com.unity.services.core": "1.12.5",
+        "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -334,10 +354,10 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.unity.ugui": "1.0.0",
         "com.unity.services.core": "1.13.0",
-        "com.unity.modules.unitywebrequest": "1.0.0",
-        "com.unity.ugui": "1.0.0"
+        "com.unity.nuget.newtonsoft-json": "3.2.1",
+        "com.unity.modules.unitywebrequest": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -346,8 +366,8 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.services.authentication": "2.2.0",
-        "com.unity.services.core": "1.4.0"
+        "com.unity.services.core": "1.4.0",
+        "com.unity.services.authentication": "2.2.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -356,9 +376,9 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.androidjni": "1.0.0",
         "com.unity.nuget.newtonsoft-json": "3.2.1",
-        "com.unity.modules.androidjni": "1.0.0"
+        "com.unity.modules.unitywebrequest": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -367,8 +387,8 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.services.deployment.api": "1.0.0",
-        "com.unity.services.core": "1.12.0"
+        "com.unity.services.core": "1.12.0",
+        "com.unity.services.deployment.api": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -405,9 +425,9 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
-        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.com"

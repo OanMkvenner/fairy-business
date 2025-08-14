@@ -6,6 +6,7 @@ using XNodeEditor;
 using XNode;
 using UnityEngine.UI;
 using UnityEditor.Events;
+using System;
 
 namespace XNodeEditor.UiStateGraph {
 	[CustomNodeGraphEditor(typeof(StateGraph))]
@@ -32,6 +33,13 @@ namespace XNodeEditor.UiStateGraph {
 			else if (type == typeof(UiStateNode.TargetNode)) return new Color(0.75f, 0.75f, 0.0f);
 			else return base.GetTypeColor(type);
 		}
+		
+        /// <summary> Override to display custom tooltips </summary>
+        public override string GetPortTooltip(XNode.NodePort port) {
+			
+            Type portType = port.ValueType;
+            return portType.Name;
+        }
 
 		/// <summary> Controls graph noodle colors </summary>
 		//public override Gradient GetNoodleGradient(NodePort output, NodePort input) {
@@ -50,7 +58,7 @@ namespace XNodeEditor.UiStateGraph {
 			for (int i = 0; i < objects.Length; i++)
 			{
 				#if UNITY_EDITOR // in case we get an OnDropObjects event in Android (not sure if that can even happen)
-				Object dropped_obj = objects[i];
+				UnityEngine.Object dropped_obj = objects[i];
 				if (dropped_obj != null && XNodeEditor.NodeEditorWindow.current != null) {
 					StateGraph _stateGraph = XNodeEditor.NodeEditorWindow.current.graph as StateGraph;
 					// drag and drop needs to happen later. Adding it now results in a UI-thread error. Not Good but also not Bad. Buts lets avoid it anyway

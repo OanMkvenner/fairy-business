@@ -45,6 +45,7 @@ namespace XNode.UiStateGraph {
 		}
 
 		override protected void Init(){
+			base.Init();
 			mySequence = DOTween.Sequence();
 		}
 

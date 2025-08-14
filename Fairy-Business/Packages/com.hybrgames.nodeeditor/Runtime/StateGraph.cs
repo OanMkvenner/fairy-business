@@ -66,14 +66,14 @@ namespace XNode.UiStateGraph {
 				item.MoveToFirstNode();
 			}
 		}
-		public List<WaitForCallbackNode> GetAllCallbackNods(){
-			var callbackNodeList = nodes.FindAll(node => node is WaitForCallbackNode);
-			List<WaitForCallbackNode> callbackNodes = new();
-			foreach (var item in callbackNodeList)
+		public List<T> GetAllNodesOfType<T>() where T: UiStateNode {
+			var searchedNodeList = nodes.FindAll(node => node is T);
+			List<T> searchedNodes = new();
+			foreach (var item in searchedNodeList)
 			{
-				callbackNodes.Add(item as WaitForCallbackNode);
+				searchedNodes.Add(item as T);
 			}
-			return callbackNodes;
+			return searchedNodes;
 		}
 
 
@@ -223,8 +223,7 @@ namespace XNode.UiStateGraph {
 					};
 
 					// handle canvas dragging into ViewNode
-					if (dropped_gameobj.GetComponent<CanvasGroup>() != null
-					&& drag_drop_op.hovered_node is ViewNode) {
+					if (drag_drop_op.hovered_node is ViewNode) {
 						AddViewCanvas(dropped_gameobj, drag_drop_op.hovered_node);
 					};
 
@@ -293,17 +292,25 @@ namespace XNode.UiStateGraph {
 			ViewNode view_node = hovered_node as ViewNode;
 			if (view_node == null) return;
 
-			CanvasGroup cnvs = dropped_obj.GetComponent<CanvasGroup>();
 			// handle canvas dragging
-			if (cnvs != null)
-			{
-				GuidComponent guidComp = getGuidComponentSafely(dropped_obj);
-				view_node.AddCanvasReference(new GuidReference(guidComp));
-				// rename node header to canvas name
-				view_node.name = dropped_obj.name;
-
-				view_node.UpdateButtonPorts();
+			if (dropped_obj.GetComponent<CanvasGroup>() == null)
+			{	
+				Debug.LogWarning("GameObject missing CanvasGroup, adding it now...");
+				dropped_obj.AddComponent<CanvasGroup>();
 			}
+			if (dropped_obj.GetComponent<ViewNodeReferencer>() == null)
+			{
+				Debug.LogWarning("GameObject missing ViewNodeReferencer, adding it now...");
+				dropped_obj.AddComponent<ViewNodeReferencer>();
+			}
+			if (Application.isPlaying) dropped_obj.GetComponent<ViewNodeReferencer>().AddTargetViewNode(view_node);
+
+			GuidComponent guidComp = getGuidComponentSafely(dropped_obj);
+			view_node.AddCanvasReference(new GuidReference(guidComp));
+			// rename node header to canvas name
+			view_node.name = dropped_obj.name;
+
+			view_node.UpdateButtonPorts();
 		}
 
 		public void AddButtonPort(GameObject dropped_obj, Node hovered_node, bool addPortAsWell = true){

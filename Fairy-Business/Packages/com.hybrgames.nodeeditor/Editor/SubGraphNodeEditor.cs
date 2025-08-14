@@ -43,8 +43,11 @@ namespace XNodeEditor.UiStateGraph {
 			if (node.oldSubGraph != newGraph) {
 				node.SetSubGraph(newGraph);
 			}
-
+			
+			base.OnBodyGUI();
+/*
 			// manually draw all properties except "enter" and "passThrough" (basically do what base.OnBodyGUI(); does)
+			// NOT NEEDED ANYMORE! we actually hide enter and passThrough by default now.
             string[] excludes = { "m_Script", "graph", "position", "ports", "enter", "passThrough" };
             // Iterate through serialized properties and draw them like the Inspector (But with ports)
             SerializedProperty iterator = serializedObject.GetIterator();
@@ -62,7 +65,7 @@ namespace XNodeEditor.UiStateGraph {
             }
 
             serializedObject.ApplyModifiedProperties();
-
+*/
 			if (subGraph.objectReferenceValue != null){
 				if (GUILayout.Button("Edit SubGraph", GUILayout.Height(23))) {
 					NodeEditorWindow w = NodeEditorWindow.Open(subGraph.objectReferenceValue as XNode.NodeGraph);

@@ -11,6 +11,7 @@ using UnityEngine.InputSystem;
 
 
 
+
 #if (UNITY_EDITOR)
 using UnityEditor;
 #endif
@@ -44,12 +45,26 @@ public class VersionNumber
         return a.major < b.major || a.major == b.major && a.minor < b.minor || a.major == b.major && a.minor == b.minor && a.patch < b.patch;
     }
 }
-
 public static class Utilities
 {
+    public static void Invoke(this MonoBehaviour mb, Action f, float delay)
+    {
+        mb.StartCoroutine(InvokeRoutine(f, delay));
+    }
+
+    private static IEnumerator InvokeRoutine(System.Action f, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        f();
+    }
     [HideInInspector] public static Dictionary<string, bool> inputPolling = new Dictionary<string, bool>();
     public static PlayerInput input = null;
 
+    static public T TryGetData<T>(this Newtonsoft.Json.Linq.JToken jtoken, string effectStat, T defaultValue) {
+        var value = jtoken[effectStat];
+        if (value != null) return value.ToType<T>();
+        else return defaultValue;
+    }
     static private void CheckStartKeyPollingSystem(){
         if (input == null)
         {
@@ -216,14 +231,25 @@ public static class Utilities
             tgtList.Add((T)System.Activator.CreateInstance(typeof(T), srcList[i]));
         }
     }
-    
 
+    
+    public static object ToDynamicType(this JToken jtoken, Type type){
+        object value = jtoken.ToObject(type);// Value<T>();
+        return value;
+    }
+    public static T ToType<T>(this JToken jtoken){
+        T value = jtoken.ToObject<T>();// Value<T>();
+        return value;
+    }
     public static T GetKeyOrDefault<T>(this JObject jObject, string keyName, T defaultValue)
     {
         if (jObject.ContainsKey(keyName))
         {
-            T value = jObject[keyName].ToObject<T>();// Value<T>();
-            return value;
+            try{
+                return jObject[keyName].ToType<T>();
+            } catch(Exception e){
+                Debug.LogError(e.Message);
+            }
         }
         return defaultValue;
     }
@@ -231,8 +257,11 @@ public static class Utilities
     {
         if (jObject.ContainsKey(keyName))
         {
-            object value = jObject[keyName].ToObject(type);// Value<T>();
-            return value;
+            try{
+                return jObject[keyName].ToDynamicType(type);
+            } catch(Exception e){
+                Debug.LogError(e.Message);
+            }
         }
         return null;
     }
@@ -300,18 +329,22 @@ public static class Utilities
         }
         return sorted;
     }
-    
+    // "Fisher–Yates shuffle"
     public static void ShuffleList<T>(List<T> list)
     {
         int n = list.Count;
         while (n > 1)
         {
             n--;
-            int k = RandomizerStatic.RandomInt(n+1);
+            int k = RandomizerStatic.RandomInt(n);
             T value = list[k];
             list[k] = list[n];
             list[n] = value;
         }
+    }
+    public static T GetRandomElementOfList<T>(List<T> list){
+        int k = RandomizerStatic.RandomInt(list.Count - 1);
+        return list[k];
     }
 
     public static JToken GetFromRemoteConfigs(JToken remoteConfig, string keyName){
@@ -327,9 +360,31 @@ public static class Utilities
     }
 
     
+    public static float3 EaseInSquared(float3 difference, float slowdown_range, float easing_speed)
+    {
+        var tgt_vec_length = math.length(difference);
+        if (!(tgt_vec_length == 0))
+        {
+            var slowdownMult = tgt_vec_length / slowdown_range;
+            if (slowdownMult > 1.0f)
+                slowdownMult = 1.0f;
+            var negated_distance = 1.0f - slowdownMult;
+
+            //var tgt_vec = easing_speed * difference / tgt_vec_length;
+            //return tgt_vec * (1.0f - (negated_distance * negated_distance));
+            var movePercent = easing_speed / tgt_vec_length; 
+            var finalMovePercent = movePercent * (1.0f - (negated_distance * negated_distance));
+            finalMovePercent = Math.Clamp(finalMovePercent, 0.0f, 1.0f); // clamp to 1.0f of original difference
+            var tgt_vec = finalMovePercent * difference;
+            return tgt_vec; 
+        }
+        else
+        {
+            return difference;
+        }
+    }
     public static float2 EaseInSquared(float2 difference, float slowdown_range, float easing_speed)
     {
-        
         var tgt_vec_length = math.length(difference);
         if (!(tgt_vec_length == 0))
         {
@@ -360,6 +415,39 @@ public static class Utilities
 
     public static T ParseEnum<T>(string parseString) where T : Enum {
         return (T)System.Enum.Parse( typeof(T), parseString ); 
+    }
+    
+    static public Vector3 GetWorldPosFromScreenRayAtZDepth(Ray ray, float zDepth = 0f, Plane? overridePlane = null){
+        Plane playingFieldPlane = new Plane(new Vector3(0,0,-1), new Vector3(0,0,zDepth));
+        if (overridePlane != null){
+            playingFieldPlane = overridePlane.Value;
+        }
+        Vector3 worldPos = new(0,0,zDepth);
+        if(playingFieldPlane.Raycast(ray, out var enter))
+        {
+            worldPos = ray.GetPoint(enter);
+        }
+        return worldPos;
+    }
+    static public Vector3 GetWorldPosFromScreenPos(Vector2 screenPos){
+        Ray ray = Camera.main.ScreenPointToRay(screenPos);
+        Plane playingFieldPlane = new Plane(new Vector3(0,0,-1), new Vector3(0,0,0));
+        Vector3 worldPos = new(0,0,0);
+        if(playingFieldPlane.Raycast(ray, out var enter))
+        {
+            worldPos = ray.GetPoint(enter);
+        }
+        return worldPos;
+    }
+    static public List<T> FilterListByType<T>(List<T> list, Type contentType){
+        List<T> filteredList = new();
+        foreach (var item in list)
+        {
+            if (item.GetType() == contentType || item.GetType().IsSubclassOf(contentType)){
+                filteredList.Add(item);
+            }
+        }
+        return filteredList;
     }
 }
 
@@ -450,5 +538,34 @@ public static class RectTransformExtensions
         var wordlPos= target.position + target.TransformVector(offset);
         target.pivot = pivot;
         target.position = wordlPos;
+    }
+}
+public abstract class UnitySerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
+{
+	[SerializeField, HideInInspector]
+	private List<TKey> keyData = new List<TKey>();
+	
+	[SerializeField, HideInInspector]
+	private List<TValue> valueData = new List<TValue>();
+
+    void ISerializationCallbackReceiver.OnAfterDeserialize()
+    {
+		this.Clear();
+		for (int i = 0; i < this.keyData.Count && i < this.valueData.Count; i++)
+		{
+			this[this.keyData[i]] = this.valueData[i];
+		}
+    }
+
+    void ISerializationCallbackReceiver.OnBeforeSerialize()
+    {
+		this.keyData.Clear();
+		this.valueData.Clear();
+
+		foreach (var item in this)
+		{
+			this.keyData.Add(item.Key);
+			this.valueData.Add(item.Value);
+		}
     }
 }

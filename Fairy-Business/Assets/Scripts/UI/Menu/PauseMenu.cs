@@ -7,8 +7,7 @@ namespace UI.Menu
     {
         [SerializeField] private Button returnToStartScreen;
         
-        [Header("Script References")]
-        [SerializeField] private UiGraphCallback uiGraphCallback;
+        //[Header("Script References")]
 
         private void Awake()
         {
@@ -17,8 +16,8 @@ namespace UI.Menu
         
         private void ReturnToStartScreen()
         {
-            //Todo: Marie 14.08 Aufruf des Startmenüs
-           // uiGraphCallback.callCustomUiEvent("");
+            //Todo: Marie 14.08 Aufruf des Startmenüs. *comment Jonas: habs schonmal an die neue schreibart angepasst
+            //UiManager.CallbackUiEvent("");
         }
     }
 }

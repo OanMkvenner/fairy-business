@@ -15,6 +15,7 @@ namespace XNodeEditor.UiStateGraph {
             base.OnCreate();
         }
 		public override void OnHeaderGUI() {
+			CustomNodesHelper.DrawEnterExitPorts(node);
 			GUI.color = Color.white;
 			if (node.active) GUI.color = Color.blue;
 			string title = target.name;
@@ -31,6 +32,7 @@ namespace XNodeEditor.UiStateGraph {
 		}
 
 		public override void OnBodyGUI() {
+			//NodeEditorGUILayout.PortPair(node.enterPort, node.passthroughPort);
 			base.OnBodyGUI();
 		}
 

@@ -1,0 +1,14 @@
+{
+  "name": "com.boldbarnacles.ui",
+  "version": "1.0.0",
+  "displayName": "BoldBarnacles UI",
+  "description": "Components for UI",
+  "unity": "2021.1",
+  "dependencies": {
+  },
+  "author": {
+    "name": "Jonas Kopcsek",
+    "email": "j.kopcsek@posteo.de",
+    "url": "https://www.hybr.co"
+  }
+}

@@ -15,6 +15,10 @@ public static class StreamingAssetsExtension
     }
     public static List<string> InternalGetAllRcFilesRecursively(string mainRemoteConfigFolder, string removeInitialFolderString){
         List<string> allRcFiles = new List<string>();
+        if (!Directory.Exists(mainRemoteConfigFolder)){
+            Debug.LogWarning($"Cant find Folder {mainRemoteConfigFolder}");
+            return allRcFiles; 
+        } 
         foreach (string file in Directory.EnumerateFiles(mainRemoteConfigFolder, "*.rc"))
         {
             // add all entries of this folder

@@ -16,6 +16,7 @@ namespace XNodeEditor.UiStateGraph {
             base.OnCreate();
         }
 		public override void OnHeaderGUI() {
+			CustomNodesHelper.DrawEnterExitPorts(node);
 			GUI.color = Color.white;
 			if (node.assignedMethodTarget.gameObject == null)
 				GUI.color = Color.red;

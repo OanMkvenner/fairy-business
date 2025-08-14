@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6e8d686da4f25ba4ebc09c89cbb09233
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 271378
+  packageName: Smooth Operator
+  packageVersion: 1.1.1
+  assetPath: Packages/com.smooth.operator.editor/Editor/PostProcessorAssemblyResolver.cs
+  uploadId: 683502

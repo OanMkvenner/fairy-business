@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: a78ab9bdd6264d841898268ea22a1b89
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 271378
+  packageName: Smooth Operator
+  packageVersion: 1.1.1
+  assetPath: Packages/com.smooth.operator.editor/CHANGELOG.md
+  uploadId: 683502

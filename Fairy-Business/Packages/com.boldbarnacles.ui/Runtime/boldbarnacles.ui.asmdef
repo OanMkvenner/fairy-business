@@ -1,0 +1,35 @@
+{
+    "name": "boldbarnacles.ui",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Mathematics",
+        "UniTask",
+        "Unity.TextMeshPro",
+        "Unity.InputSystem",
+        "FMODUnity",
+        "hybrgames.nodeeditor",
+        "NaughtyAttributes.Core",
+        "Unity.Burst",
+        "hybrgames.utils"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.hybrgames.nodeeditor",
+            "expression": "1.0.0",
+            "define": "HYBR_NODE_EDITOR"
+        },
+        {
+            "name": "com.boldbarnacles.sounds",
+            "expression": "1.0.0",
+            "define": "BARNACLE_SOUNDS"
+        }
+    ],
+    "noEngineReferences": false
+}

@@ -85,6 +85,19 @@ public class AppUser : MonoBehaviour
         }
     }
 
+    public static T ParseJTokenString<T>(string jTokenString, T defaultValue)
+    {
+        if (jTokenString != ""){
+            var jToken = JToken.Parse(jTokenString);
+            try{
+                return jToken.ToType<T>();
+            } catch(Exception e){
+                Debug.LogError(e.Message);
+            }
+        }
+        return defaultValue;
+    }
+
     static public JToken ConvertToJToken<T>(T value){
         if (value == null){
             return JValue.CreateNull();
@@ -127,6 +140,11 @@ public class AppUser : MonoBehaviour
         AppUser.instance.SaveData(progressName, progressObject);
     }
 
+
+    static public bool CheckOptionExists(string optionName){
+        JObject optionsObject = AppUser.instance.GetProgressObject("Options");
+        return optionsObject.ContainsKey(optionName);
+    }
     // CAREFUL with float/integer types! This function takes the required type from the defaultValue 
     // unless specified explicitly. A default value of 0 is always assumed integer without warning!
     // If you need float, set it to 0.0f or state the type explicitly via GetOptionOrDefault<float>()

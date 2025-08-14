@@ -1,0 +1,14 @@
+{
+  "name": "com.smooth.operator.editor",
+  "displayName": "Smooth Operator",
+  "version": "1.1.1",
+  "unity": "2021.3",
+  "description": "Allows the use of null conditional operator (?.) and null coalescing operator (??) on GameObjects",
+  "documentationUrl" : "https://smooth-tools.com/products/smoothoperator",
+  "keywords": [
+    "scripting"
+  ],
+  "dependencies": {
+    "com.unity.nuget.mono-cecil": "1.10.1"
+  }
+}

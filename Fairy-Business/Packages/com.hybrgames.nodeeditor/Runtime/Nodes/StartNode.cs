@@ -9,6 +9,7 @@ namespace XNode.UiStateGraph {
 	//[CreateNodeMenu(null)]
 	[NodeWidth(120), NodeTint(130, 100, 50)]
 	public class StartNode : UiStateNode {
+		[HideInInspector]
 		[Output] public AnyNode start;
 
 		public bool checkExitConnected(){

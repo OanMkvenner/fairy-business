@@ -148,11 +148,13 @@ public class HybrRemoteConfig : MonoBehaviour
                 break;
             case ConfigOrigin.Cached:
                 Debug.LogWarning("Remote Values fetched unsuccessful, Cached values loaded instead");
-                appRemoteConfigs.Merge(RemoteConfigService.Instance.appConfig.config);
+                //appRemoteConfigs.Merge(RemoteConfigService.Instance.appConfig.config);
+                appRemoteConfigs = RemoteConfigService.Instance.appConfig.config;
                 break;
             case ConfigOrigin.Remote:
                 Debug.Log("Remote Values fetched successfully");
-                appRemoteConfigs.Merge(RemoteConfigService.Instance.appConfig.config);
+                //ppRemoteConfigs.Merge(RemoteConfigService.Instance.appConfig.config);
+                appRemoteConfigs = RemoteConfigService.Instance.appConfig.config;
                 break;
         }
         LoadingManager.AddLoadedValue(0.1f, "InitializeRemoteConfig", "ApplyRemoteSettingsAsync Merged");
@@ -161,8 +163,15 @@ public class HybrRemoteConfig : MonoBehaviour
         LoadingManager.RunRemoteConfigFinishedCallbacks(appRemoteConfigs); //indirectly calls Localizer.ApplyAppConfigs(); if Localizer is present and registered itself to LoadingManager
     }
 
-    public static string GetContent(string keyName){
+    public static string GetContentAsString(string keyName){
         return (string)(Utilities.GetFromRemoteConfigs(appRemoteConfigs, keyName)?? "" );
+    }
+    public static JToken GetContentAsJToken(string keyName){
+        return Utilities.GetFromRemoteConfigs(appRemoteConfigs, keyName);
+    }
+    public static T GetContentAsType<T>(string keyName){
+        JToken token = Utilities.GetFromRemoteConfigs(appRemoteConfigs, keyName);
+        return token.ToType<T>();
     }
 
     public static VersionNumber GetVersionNumber(){

@@ -16,8 +16,8 @@ namespace XNodeEditor.UiStateGraph {
             base.OnCreate();
         }
 		public override void OnHeaderGUI() {
+			CustomNodesHelper.DrawEnterExitPorts(node);
 			GUI.color = Color.white;
-			
 			string title = target.name;
 			if (node.controllerMode == ViewControllerNode.ViewControllerMode.DeactivateViews) {
 				title = "View Deactivator";

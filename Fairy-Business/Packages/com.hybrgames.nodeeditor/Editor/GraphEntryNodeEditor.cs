@@ -36,7 +36,6 @@ namespace XNodeEditor.UiStateGraph {
 		}
 
 		public override void OnBodyGUI() {
-			//  dont draw anything yet if no node is assigned
             // Iterate through serialized properties, search for "enter" and draw it like the Inspector (But with ports)
             SerializedProperty iterator = serializedObject.GetIterator();
             bool enterChildren = true;

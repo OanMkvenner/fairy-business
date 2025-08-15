@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Locations;
 using TMPro;
 
 public class FlipButton : MonoBehaviour
@@ -79,7 +80,9 @@ public class FlipButton : MonoBehaviour
     // neeed abstraction for "AddListener(ButtonClicked)" above
     public void ButtonClicked(){
         SetSideWithAnim();
+        LocationManager.instance.SetupSelectButton(this);
     }
+    
     public void SetSideWithAnim(ActiveSide desiredSide = ActiveSide.undefined){
         if (desiredSide == ActiveSide.undefined)
         {

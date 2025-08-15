@@ -4,16 +4,27 @@ using UnityEngine;
 namespace Locations
 {
     public class LocationDefinition : MonoBehaviour {
-   
-        public Sprite imageEnabled;
-        public Sprite imageDisabled;
-        public string locationText;
-        public LocationsType locationType;
-        public int VPGainedOnScorePhase = 3;
+        public LocationsType LocationType => locationType;
+
+        public int VictoryPoints => victoryPoints;
+        
+
+        private Sprite imageEnabled;
+        private Sprite imageDisabled;
+        private string locationText;
+        private LocationsType locationType;
+        private int victoryPoints = 3;
         private LocationUI currenLocatioUI;
 
-        private void Start() {
-            UpdateFlipButton();
+        public void InitializeLocationDefinition(LocationData data)
+        {
+            this.imageEnabled = data.imageEnabled;
+            this.imageDisabled = data.imageDisabled;
+            this.locationText = data.locationDescription;
+            this.locationType = data.locationType;
+            this.victoryPoints = data.VictoryPoints;
+            
+            UpdateVisuals();
         }
 
         public void CopyFrom(LocationDefinition locDef){
@@ -23,7 +34,7 @@ namespace Locations
             locationType = locDef.locationType;
         }
 
-        public void UpdateFlipButton(){
+        public void UpdateVisuals(){
             GetComponent<FlipButton>().FrontImage.sprite = imageEnabled;
             GetComponent<FlipButton>().BackImage.sprite = imageDisabled;
             GetComponent<FlipButton>().FrontText.text = locationText;

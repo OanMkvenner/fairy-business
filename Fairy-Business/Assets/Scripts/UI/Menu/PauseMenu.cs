@@ -7,7 +7,6 @@ namespace UI.Menu
     {
         [SerializeField] private Button returnToStartScreen;
         
-        //[Header("Script References")]
 
         private void Awake()
         {

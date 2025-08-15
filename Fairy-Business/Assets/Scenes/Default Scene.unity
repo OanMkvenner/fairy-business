@@ -8348,6 +8348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08b93d2299d0479a805b836eb24dcabb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  locationDataCollection: []
   flipButtonLocation:
   - {fileID: 1058367211}
   - {fileID: 1245178499}
@@ -11154,6 +11155,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: FlipButton, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 8294882024319606490, guid: 6db7f4253bb6f4241a69bd8efb667866,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 63
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2330440082892960414, guid: 6db7f4253bb6f4241a69bd8efb667866, type: 3}
     m_RemovedGameObjects: []
@@ -13324,7 +13330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.059316423}
   m_AnchorMax: {x: 0.5, y: 0.5301918}
-  m_AnchoredPosition: {x: 0, y: -23}
+  m_AnchoredPosition: {x: 0, y: -22.999992}
   m_SizeDelta: {x: 0, y: 33.740017}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682415737

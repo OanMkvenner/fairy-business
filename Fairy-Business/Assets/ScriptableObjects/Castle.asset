@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
+  m_Name: Castle
+  m_EditorClassIdentifier: 
+  imageEnabled: {fileID: 21300000, guid: 04585451e49643047a4c5d2a46590c87, type: 3}
+  imageDisabled: {fileID: 21300000, guid: af664e94a47fc0a4ba7eb0d1e05a995c, type: 3}
+  locationType: 2
+  VictoryPoints: 2
+  locationDescription: Your (+) cards have 1 extra strength

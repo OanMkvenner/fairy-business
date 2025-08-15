@@ -354,8 +354,9 @@ GameObject:
   - component: {fileID: 6211452029983628482}
   - component: {fileID: 3467053305974746734}
   - component: {fileID: 2330440082892960414}
+  - component: {fileID: 4396691611671439852}
   m_Layer: 5
-  m_Name: FlipButton
+  m_Name: LocationDefinition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +438,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 63
 --- !u!114 &7754217160144852714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,6 +552,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &4396691611671439852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569513929371730598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe21f6907604f6b4e93314f9cd474867, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7140355847162278263
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +709,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 15.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -847,7 +860,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 15.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

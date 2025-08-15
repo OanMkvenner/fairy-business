@@ -9,29 +9,6 @@ using Locations;
 using UI;
 using UI.Menu;
 
-public enum LocationsType
-{
-    //some types are not valid anymore
-    //Todo: Marie 14.08 Remove after refactoring locations.
-    Invalid = -1,
-    Throne = 0,
-    PirateShip = 1,
-    EnchantedForest = 2,
-    Castle = 3,
-    
-    Stealer = 4,
-    DragonCave = 5,
-    GingerbreadHouse = 6,
-    GainSpyAfterCount = 7,
-    DrawPeaceAfterCount = 8,
-    CantGoBelow3 = 9,
-    VP3OnPeace = 10,
-    HauntedHouse = 11,
-    BottomOfTheSea = 12,
-    ThroughTheMirror = 13,
-    BackFromTheGrave = 14,
-}
-
 public class GameSession : MonoBehaviour {
     
     public bool dynamicInput = false;
@@ -39,15 +16,12 @@ public class GameSession : MonoBehaviour {
 
     public GameObject soundsContainer;
     public Image ScanEffect;
-
-    public List<LocationDefinition> SelectedLocationTypes => selectedLocationTypes;
-    public List<FlipButton> locationTypesFlipper = new List<FlipButton>();
+    
     public List<FlipButton> locationFlipper = new List<FlipButton>();
 
     [SerializeField] private Button locationSelectButton;
     [SerializeField] private  List<TurnRoundUI> turnRoundUIs;
-
-    private List<LocationDefinition> selectedLocationTypes = new List<LocationDefinition>();
+    
     private Dictionary<int, Location> locations;
     private int turnCounter;
     private int roundCounter;
@@ -79,11 +53,8 @@ public class GameSession : MonoBehaviour {
 
     public void ResetSelectedLocationTypes()
     {
-        selectedLocationTypes = new List<LocationDefinition>();
-        
-        for (int i = 0; i < locationTypesFlipper.Count; i++){
-            locationTypesFlipper[i].SetSideInstant(FlipButton.ActiveSide.back);
-        }
+        if(LocationManager.instance.SelectedLocations != null)
+            LocationManager.instance.SelectedLocations.Clear();
     }
 
     public void ResetGamesession(){
@@ -132,7 +103,7 @@ public class GameSession : MonoBehaviour {
         CreateLocations();
         int i = 0;
         
-        foreach (LocationDefinition loc in selectedLocationTypes)
+        foreach (LocationDefinition loc in LocationManager.instance.SelectedLocations)
         {
             int powerRed = ints[i];
             locations[i+1].SetPlayerPower(PlayerColor.Red, powerRed);
@@ -151,7 +122,7 @@ public class GameSession : MonoBehaviour {
         locations = new Dictionary<int, Location>();
         int i = 0;
 
-        foreach (LocationDefinition tgtLocation in selectedLocationTypes)
+        foreach (LocationDefinition tgtLocation in LocationManager.instance.SelectedLocations)
         {
             // update Location buttons in order
             FlipButton tgtBtn = locationFlipper[i];
@@ -159,8 +130,8 @@ public class GameSession : MonoBehaviour {
             // using images from their respective new location
             LocationDefinition newComp = tgtBtn.gameObject.AddComponent<LocationDefinition>();
             newComp.CopyFrom(tgtLocation);
-            newComp.UpdateFlipButton();
-            Location newLocation = new Location { type = tgtLocation.locationType, VPGainedOnScorePhase = tgtLocation.VPGainedOnScorePhase };
+            newComp.UpdateVisuals();
+            Location newLocation = new Location { type = tgtLocation.LocationType, VPGainedOnScorePhase = tgtLocation.VictoryPoints };
             
             locations.Add(i, newLocation);
         }
@@ -250,36 +221,6 @@ public class GameSession : MonoBehaviour {
             }
             
             i++;
-        }
-    }
-    
-    public void SetupSelectButton(FlipButton flipper){
-        SetupSelectLocation(flipper);
-    }
-    
-    public void SetupSelectLocation(FlipButton flipper){
-        
-        LocationDefinition loc = flipper.gameObject.GetComponent<LocationDefinition>();
-        
-        if (selectedLocationTypes.Contains(loc))
-        {
-            selectedLocationTypes.Remove(loc);
-            flipper.SetSideWithAnim(FlipButton.ActiveSide.front);
-        } else {
-            selectedLocationTypes.Add(loc);
-            flipper.SetSideWithAnim(FlipButton.ActiveSide.back);
-        }
-        
-        CheckEnoughLocationsSelected();
-    }
-
-    private void CheckEnoughLocationsSelected(){
-        if (selectedLocationTypes.Count == 3){
-            locationSelectButton.gameObject.SetActive(true);
-        }
-        else
-        {
-            locationSelectButton.gameObject.SetActive(false);
         }
     }
 
@@ -418,6 +359,7 @@ public class GameSession : MonoBehaviour {
             CheckTurnComplete();
         }
     }
+    
     public void ShowWhiteFlash(){
         ScanEffect.color = new Color(1,1,1,0);
         ScanEffect.DOFade(0.78f, 0.2f)
@@ -434,6 +376,7 @@ public class GameSession : MonoBehaviour {
         }
         NewCardLoggedIn();
     }
+    
     public void NewLocationLoggedIn(PlayerColor playerColor){
         //TagJK_implement visuals for logged in location
         //TagJK_implement audio for logged in location
@@ -444,6 +387,7 @@ public class GameSession : MonoBehaviour {
         }
         NewCardLoggedIn();
     }
+    
     public void NewCardLoggedIn(){
         //TagJK_implement visuals for logged in card
         //TagJK_implement audio for logged in card
@@ -475,6 +419,7 @@ public class GameSession : MonoBehaviour {
     }
     
     int[] allLocationNumbers = new int[]{ 1, 2, 3};
+    
     public void SolveTurn(){
         // politics
         PlayerColor marketOwner = CheckLocationOwner(LocationsType.EnchantedForest);
@@ -487,7 +432,7 @@ public class GameSession : MonoBehaviour {
         }
         // Army
         PlayerColor sourceOwner = CheckLocationOwner(LocationsType.PirateShip);
-        PlayerColor controlCap3Owner = CheckLocationOwner(LocationsType.CantGoBelow3);
+        //PlayerColor controlCap3Owner = CheckLocationOwner(LocationsType.CantGoBelow3);
         PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsType.ThroughTheMirror);
         PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsType.BottomOfTheSea);
         
@@ -509,10 +454,6 @@ public class GameSession : MonoBehaviour {
                 {
                     Location attackedLocation = locations[attackedLocationNumber];
                     int currentEnemyControlValue = attackedLocation.power[enemyPlayer];
-                    // if the "Cant go below 3 control value" location is owned by your enemy, dont allow him to go lower than 3 (or his current, if its lower than 3)
-                    if (controlCap3Owner == enemyPlayer){
-                        minControlNumber = math.min(3, currentEnemyControlValue);
-                    }
                     // reduce control value (but cap it at 'minControlNumber'; usually at 0)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
                     attackedLocation.power[enemyPlayer] = math.max(newTheoreticalControlValue, minControlNumber);
@@ -536,8 +477,7 @@ public class GameSession : MonoBehaviour {
                 }
             }
         }
-        // Peace
-        PlayerColor vp3OnPeaceOwner = CheckLocationOwner(LocationsType.VP3OnPeace);
+        
         
         foreach (var actingPlayer in playerColors){
             
@@ -550,12 +490,8 @@ public class GameSession : MonoBehaviour {
                     int victoryPoints = locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer];
                     locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] = 0;
                     victoryPointCounters[actingPlayer] += victoryPoints;
-                }
-                // EVERY TIME a peace is played, while the vp3OnPeace location is owned by a player, give that player 3VP
-                if (vp3OnPeaceOwner != PlayerColor.Neutral){
-                    
-                    victoryPointCounters[vp3OnPeaceOwner] += 3;
-                }
+                } 
+                
             }
         }
         
@@ -566,27 +502,13 @@ public class GameSession : MonoBehaviour {
         
         NextTurn();
     }
-
-
-
+    
     public void EndOfTurnEffects(){
         
         foreach (var loc in locations){
             
             Location location = loc.Value;
             
-            if (location.type == LocationsType.Stealer){
-                if (location.currentOwner != PlayerColor.Neutral){
-                    
-                    PlayerColor actingPlayer = location.currentOwner;
-                    PlayerColor enemyPlayer = GetEnemy(actingPlayer);
-                    
-                    if (victoryPointCounters[enemyPlayer] > victoryPointCounters[actingPlayer] && victoryPointCounters[enemyPlayer] > 0){
-                        victoryPointCounters[enemyPlayer]--;
-                        victoryPointCounters[actingPlayer]++;
-                    }
-                }
-            }
             if (location.type == LocationsType.DragonCave){
                 
                 if (location.currentOwner != PlayerColor.Neutral){
@@ -721,5 +643,4 @@ public class GameSession : MonoBehaviour {
         
         UniqueNameHash.Get("WinnerScreen").gameObject.SetActive(true); 
     }
-    
 }

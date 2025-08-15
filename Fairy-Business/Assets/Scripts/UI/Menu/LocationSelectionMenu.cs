@@ -21,7 +21,7 @@ namespace UI.Menu
         public override void OpenMenu()
         {
             base.OpenMenu();
-            CreateLocationCards(gameSession.SelectedLocationTypes);
+            CreateLocationUICards(LocationManager.instance.SelectedLocations);
         }
 
         protected override void CloseMenu()
@@ -33,7 +33,7 @@ namespace UI.Menu
             }
         }
 
-        private void CreateLocationCards(List<LocationDefinition> locationDefenitions)
+        private void CreateLocationUICards(List<LocationDefinition> locationDefenitions)
         {
             foreach (LocationDefinition locationDefenition in locationDefenitions)
             {

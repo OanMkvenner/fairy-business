@@ -275,7 +275,6 @@ public class GameSession : MonoBehaviour {
 
     private void CheckEnoughLocationsSelected(){
         if (selectedLocationTypes.Count == 3){
-            UiManager.CallbackUiEvent("EnoughLocationsSelected");
             locationSelectButton.gameObject.SetActive(true);
         }
         else

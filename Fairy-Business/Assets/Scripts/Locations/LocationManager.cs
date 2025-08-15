@@ -20,6 +20,8 @@ namespace Locations
 
         private void PickRandomLocations()
         {
+            gameSession.SelectedLocationTypes.Clear();
+            
             List<FlipButton> shuffledLocations = new List<FlipButton>(flipButtonLocation);
             
             for (int i = 0; i < shuffledLocations.Count; i++)
@@ -33,7 +35,7 @@ namespace Locations
                 gameSession.SetupSelectLocation(shuffledLocations[i]);
                 
                 //Todo: Marie 14.08 Animation abspielen.
-                //shuffledLocations[i].SetSideWithAnim(FlipButton.ActiveSide.back);
+                shuffledLocations[i].SetSideWithAnim(FlipButton.ActiveSide.front);
             }
         }
     }

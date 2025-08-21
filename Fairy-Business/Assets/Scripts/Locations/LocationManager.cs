@@ -17,14 +17,48 @@ namespace Locations
 
         private readonly List<LocationDefinition> allAvailableLocations = new List<LocationDefinition>();
 
+        private Dictionary<int, Location> locations;
+
+        public Dictionary<int, Location> Locations
+        {
+            get => locations;
+            set => locations = value;
+        }
+
         private void Awake()
         {
             randomLocationButton.onClick.AddListener(PickRandomLocations);
             SetUpLocations();
         }
-        
-        public void SetupSelectButton(FlipButton flipper){
-            //SetupSelectLocation(flipper);
+
+        public void CreateLocations()
+        {
+            locations = new Dictionary<int, Location>();
+            int i = 0;
+
+            foreach (LocationDefinition locationDefinition in SelectedLocations)
+            {
+                GameSession.instance.sceneLocationDefinition[i] = locationDefinition;
+                i++;
+                Location newLocation = new Location { type = locationDefinition.LocationType, VPGainedOnScorePhase = locationDefinition.VictoryPoints };
+            
+                locations.Add(i, newLocation);
+            }
+        }
+
+        public void SetupSelectLocation(LocationDefinition locationDefinition){
+            
+            if (SelectedLocations.Contains(locationDefinition))
+            {
+                SelectedLocations.Remove(locationDefinition);
+                locationDefinition.IsSelected = false;
+                
+            } else {
+                
+                SelectedLocations.Add(locationDefinition);
+                locationDefinition.IsSelected = true;
+            }
+            
             CheckEnoughLocationsSelected();
         }
 
@@ -41,7 +75,7 @@ namespace Locations
         private void PickRandomLocations()
         {
             SelectedLocations.Clear();
-            
+
             List<LocationDefinition> shuffledLocations = new List<LocationDefinition>(allAvailableLocations);
             
             for (int i = 0; i < shuffledLocations.Count; i++)
@@ -53,22 +87,8 @@ namespace Locations
             for (int i = 0; i < 3 && i < shuffledLocations.Count; i++)
             {
                SetupSelectLocation(shuffledLocations[i]);
-                //Todo: Marie 14.08 Animation abspielen.
             }
             
-            CheckEnoughLocationsSelected();
-        }
-
-        private void SetupSelectLocation(LocationDefinition locationDefinition){
-            
-            if (SelectedLocations.Contains(locationDefinition))
-            {
-                SelectedLocations.Remove(locationDefinition);
-                //flipper.SetSideWithAnim(FlipButton.ActiveSide.front);
-            } else {
-                SelectedLocations.Add(locationDefinition);
-                //flipper.SetSideWithAnim(FlipButton.ActiveSide.back);
-            }
         }
 
         private void CheckEnoughLocationsSelected(){

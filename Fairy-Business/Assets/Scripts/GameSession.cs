@@ -8,8 +8,9 @@ using DG.Tweening;
 using Locations;
 using UI;
 using UI.Menu;
+using UnityEngine.Serialization;
 
-public class GameSession : MonoBehaviour {
+public class GameSession : MonobheaviourSingletonCustom<GameSession> {
     
     public bool dynamicInput = false;
     public CardInput cardInput;
@@ -17,12 +18,13 @@ public class GameSession : MonoBehaviour {
     public GameObject soundsContainer;
     public Image ScanEffect;
     
-    public List<FlipButton> locationFlipper = new List<FlipButton>();
+    [Space]
+    public List<LocationDefinition> sceneLocationDefinition = new List<LocationDefinition>();
 
+    [Space]
     [SerializeField] private Button locationSelectButton;
     [SerializeField] private  List<TurnRoundUI> turnRoundUIs;
     
-    private Dictionary<int, Location> locations;
     private int turnCounter;
     private int roundCounter;
     private Dictionary<PlayerColor, int> victoryPointCounters;
@@ -59,16 +61,16 @@ public class GameSession : MonoBehaviour {
 
     public void ResetGamesession(){
         
-        locations = new Dictionary<int, Location>();
+        LocationManager.instance.Locations = new Dictionary<int, Location>();
         
-        for (int i = 0; i < locationFlipper.Count; i++){
+        for (int i = 0; i < sceneLocationDefinition.Count; i++){
             
-            locationFlipper[i].SetSideInstant(FlipButton.ActiveSide.back);
-            locationFlipper[i].BackImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
-            locationFlipper[i].FrontImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
-            Vector3 correctedPos = locationFlipper[i].GetComponent<RectTransform>().position;
+            /*sceneLocationDefinition[i].SetSideInstant(FlipButton.ActiveSide.back);
+            sceneLocationDefinition[i].BackImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
+            sceneLocationDefinition[i].FrontImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));*/
+            Vector3 correctedPos = sceneLocationDefinition[i].GetComponent<RectTransform>().position;
             correctedPos.y = 0;
-            locationFlipper[i].GetComponent<RectTransform>().position = correctedPos;
+            sceneLocationDefinition[i].GetComponent<RectTransform>().position = correctedPos;
         }
         
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
@@ -100,14 +102,14 @@ public class GameSession : MonoBehaviour {
         List<int> ints = new List<int>{5,4,3};
         Utilities.ShuffleList(ints);
 
-        CreateLocations();
+        LocationManager.instance.CreateLocations();
         int i = 0;
         
         foreach (LocationDefinition loc in LocationManager.instance.SelectedLocations)
         {
             int powerRed = ints[i];
-            locations[i+1].SetPlayerPower(PlayerColor.Red, powerRed);
-            locations[i+1].SetPlayerPower(PlayerColor.Blue, (8 - powerRed));
+            LocationManager.instance.Locations[i+1].SetPlayerPower(PlayerColor.Red, powerRed);
+            LocationManager.instance.Locations[i+1].SetPlayerPower(PlayerColor.Blue, (8 - powerRed));
             i++;
         }
         
@@ -117,31 +119,13 @@ public class GameSession : MonoBehaviour {
         NextTurn(); 
     }
 
-    private void CreateLocations()
-    {
-        locations = new Dictionary<int, Location>();
-        int i = 0;
 
-        foreach (LocationDefinition tgtLocation in LocationManager.instance.SelectedLocations)
-        {
-            // update Location buttons in order
-            FlipButton tgtBtn = locationFlipper[i];
-            i++;
-            // using images from their respective new location
-            LocationDefinition newComp = tgtBtn.gameObject.AddComponent<LocationDefinition>();
-            newComp.CopyFrom(tgtLocation);
-            newComp.UpdateVisuals();
-            Location newLocation = new Location { type = tgtLocation.LocationType, VPGainedOnScorePhase = tgtLocation.VictoryPoints };
-            
-            locations.Add(i, newLocation);
-        }
-    }
 
     public PlayerColor CheckLocationOwner(LocationsType location){
         
         PlayerColor currentMarketOwner = PlayerColor.Neutral;
         
-        foreach (KeyValuePair<int, Location> loc in locations){
+        foreach (KeyValuePair<int, Location> loc in LocationManager.instance.Locations){
             if (loc.Value.type == location){
                 currentMarketOwner = loc.Value.currentOwner;
             }
@@ -152,7 +136,7 @@ public class GameSession : MonoBehaviour {
 
     public void ReattributeTerritories(){
         
-        foreach (KeyValuePair<int, Location> loc in locations){
+        foreach (KeyValuePair<int, Location> loc in LocationManager.instance.Locations){
             
             Location location = loc.Value;
             
@@ -189,7 +173,7 @@ public class GameSession : MonoBehaviour {
         
         int i = 0;
         
-        foreach (KeyValuePair<int, Location> loc in locations){
+        foreach (KeyValuePair<int, Location> loc in LocationManager.instance.Locations){
             
             Location location = loc.Value;
             
@@ -197,26 +181,26 @@ public class GameSession : MonoBehaviour {
                 
                 if (location.currentOwner == PlayerColor.Red){
                     
-                    locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveY(150, 0.6f);
-                    rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
-                    rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
+                    sceneLocationDefinition[i].GetComponent<RectTransform>().DOLocalMoveY(150, 0.6f);
+                    //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].BackContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
+                    //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].FrontContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
                     
                 } else {
                     
-                    locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveY(-150, 0.6f);
-                    rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
-                    rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
+                    sceneLocationDefinition[i].GetComponent<RectTransform>().DOLocalMoveY(-150, 0.6f);
+                   // rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].BackContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
+                    //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].FrontContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
                     
                 }
                 
-                locationFlipper[i].SetSideWithAnim(FlipButton.ActiveSide.front);
+                //sceneLocationDefinition[i].SetSideWithAnim(FlipButton.ActiveSide.front);
                 
             } else {
                 
-                locationFlipper[i].GetComponent<RectTransform>().DOLocalMoveY(0, 0.6f);
-                rotationSequence.Insert(initialPauseTime, locationFlipper[i].BackContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
-                rotationSequence.Insert(initialPauseTime, locationFlipper[i].FrontContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
-                locationFlipper[i].SetSideWithAnim(FlipButton.ActiveSide.back);
+                sceneLocationDefinition[i].GetComponent<RectTransform>().DOLocalMoveY(0, 0.6f);
+                //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].BackContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
+                //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].FrontContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
+                //sceneLocationDefinition[i].SetSideWithAnim(FlipButton.ActiveSide.back);
                 
             }
             
@@ -326,7 +310,7 @@ public class GameSession : MonoBehaviour {
                 NewActionLoggedIn(PlayerColor.Blue);
             }
             if (locationFound) {
-                if (!locations.ContainsKey(turnLocation.locationNumber)){
+                if (!LocationManager.instance.Locations.ContainsKey(turnLocation.locationNumber)){
                     // location not found in current match, cancel turn addition!
                     Debug.LogError($"Location {turnLocation.locationNumber} is not part of the current match!");
                     return;
@@ -341,7 +325,7 @@ public class GameSession : MonoBehaviour {
                 NewActionLoggedIn(PlayerColor.Red);
             }
             if (locationFound) {
-                if (!locations.ContainsKey(turnLocation.locationNumber)){
+                if (!LocationManager.instance.Locations.ContainsKey(turnLocation.locationNumber)){
                     // location not found in current match, cancel turn addition!
                     Debug.LogError($"Location {turnLocation.locationNumber} is not part of the current match!");
                     return;
@@ -374,7 +358,6 @@ public class GameSession : MonoBehaviour {
         } else if (playerColor == PlayerColor.Blue){
             UniqueNameHash.Get("ActionBlueActive2").gameObject.SetActive(true);
         }
-        NewCardLoggedIn();
     }
     
     public void NewLocationLoggedIn(PlayerColor playerColor){
@@ -385,12 +368,6 @@ public class GameSession : MonoBehaviour {
         } else if (playerColor == PlayerColor.Blue){
             UniqueNameHash.Get("ActionBlueActive1").gameObject.SetActive(true);
         }
-        NewCardLoggedIn();
-    }
-    
-    public void NewCardLoggedIn(){
-        //TagJK_implement visuals for logged in card
-        //TagJK_implement audio for logged in card
     }
     
     public void CheckTurnComplete(){
@@ -427,7 +404,7 @@ public class GameSession : MonoBehaviour {
             if (turnActions[actingPlayer].action == Action.Politics){
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 int politicsMod = marketOwner == actingPlayer ? 1 : 0;
-                locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] += (turnActions[actingPlayer].value + politicsMod);
+                LocationManager.instance.Locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] += (turnActions[actingPlayer].value + politicsMod);
             }
         }
         // Army
@@ -452,7 +429,7 @@ public class GameSession : MonoBehaviour {
                 }
                 foreach (var attackedLocationNumber in attackedLocationNumbers)
                 {
-                    Location attackedLocation = locations[attackedLocationNumber];
+                    Location attackedLocation = LocationManager.instance.Locations[attackedLocationNumber];
                     int currentEnemyControlValue = attackedLocation.power[enemyPlayer];
                     // reduce control value (but cap it at 'minControlNumber'; usually at 0)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
@@ -473,7 +450,7 @@ public class GameSession : MonoBehaviour {
                 // if red has same location and the opposite effect, they cancel each other!
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.Peace)
                 {
-                    locations[turnLocations[actingPlayer].locationNumber].power[enemyPlayer] = 0;
+                    LocationManager.instance.Locations[turnLocations[actingPlayer].locationNumber].power[enemyPlayer] = 0;
                 }
             }
         }
@@ -487,8 +464,8 @@ public class GameSession : MonoBehaviour {
                 // if red has same location and the opposite effect, they cancel each other!
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.War)
                 {
-                    int victoryPoints = locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer];
-                    locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] = 0;
+                    int victoryPoints = LocationManager.instance.Locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer];
+                    LocationManager.instance.Locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] = 0;
                     victoryPointCounters[actingPlayer] += victoryPoints;
                 } 
                 
@@ -505,7 +482,7 @@ public class GameSession : MonoBehaviour {
     
     public void EndOfTurnEffects(){
         
-        foreach (var loc in locations){
+        foreach (var loc in LocationManager.instance.Locations){
             
             Location location = loc.Value;
             
@@ -569,7 +546,7 @@ public class GameSession : MonoBehaviour {
         if (turnCounter == 1 && roundCounter > 1){
             // apply owned territory points to main score
             
-            foreach (var loc in locations){
+            foreach (var loc in LocationManager.instance.Locations){
                 var location = loc.Value;
                 
                 AddVictoryPointsByPlayer(location.currentOwner, location.VPGainedOnScorePhase);
@@ -590,7 +567,7 @@ public class GameSession : MonoBehaviour {
         
         int i = 0;
         
-        foreach (var loc in locations){
+        foreach (var loc in LocationManager.instance.Locations){
             var location = loc.Value;
             for (int j = 0; j < 2; j++)
             {

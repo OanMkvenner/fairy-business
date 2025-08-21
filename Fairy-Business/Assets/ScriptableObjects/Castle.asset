@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageEnabled: {fileID: 21300000, guid: 04585451e49643047a4c5d2a46590c87, type: 3}
   imageDisabled: {fileID: 21300000, guid: af664e94a47fc0a4ba7eb0d1e05a995c, type: 3}
-  locationType: 2
-  VictoryPoints: 2
-  locationDescription: Your (+) cards have 1 extra strength
+  locationType: 3
+  VictoryPoints: 3
+  locationDescription: 'Solid Office: Increase Handsize by 1'

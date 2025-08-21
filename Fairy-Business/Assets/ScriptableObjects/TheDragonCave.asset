@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
-  m_Name: GingerbreadHouse
+  m_Name: TheDragonCave
   m_EditorClassIdentifier: 
   imageEnabled: {fileID: 21300000, guid: 04585451e49643047a4c5d2a46590c87, type: 3}
   imageDisabled: {fileID: 21300000, guid: af664e94a47fc0a4ba7eb0d1e05a995c, type: 3}
-  locationType: 5
-  VictoryPoints: 3
-  locationDescription: 'Sweet Dreams: You win all ties'
+  locationType: 4
+  VictoryPoints: 1
+  locationDescription: 'Incredible wealth: Gain 1 additional VP each round you hold
+    this location'

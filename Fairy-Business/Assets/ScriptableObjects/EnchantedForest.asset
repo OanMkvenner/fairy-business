@@ -16,4 +16,4 @@ MonoBehaviour:
   imageDisabled: {fileID: 21300000, guid: af664e94a47fc0a4ba7eb0d1e05a995c, type: 3}
   locationType: 2
   VictoryPoints: 2
-  locationDescription: Your (+) cards have 1 extra strength
+  locationDescription: 'Magic Marcet: Your (+) cards have 1 extra strength'

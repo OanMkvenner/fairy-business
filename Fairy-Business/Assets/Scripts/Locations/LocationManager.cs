@@ -31,7 +31,7 @@ namespace Locations
             SetUpLocations();
         }
 
-        public void CreateLocations()
+        public void CreateGameLocations()
         {
             locations = new Dictionary<int, Location>();
             int i = 0;
@@ -39,6 +39,7 @@ namespace Locations
             foreach (LocationDefinition locationDefinition in SelectedLocations)
             {
                 GameSession.instance.sceneLocationDefinition[i] = locationDefinition;
+                GameSession.instance.sceneLocationDefinition[i].IsSelected = true;
                 i++;
                 Location newLocation = new Location { type = locationDefinition.LocationType, VPGainedOnScorePhase = locationDefinition.VictoryPoints };
             

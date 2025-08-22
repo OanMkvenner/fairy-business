@@ -318,7 +318,7 @@ MonoBehaviour:
   queuedRepaint: 0
   parentSubgraphNode: {fileID: -5673435428458028693, guid: a7b5c991d3e35c1409739ca87195a515,
     type: 2}
-  previouselySelectedNode: {fileID: -7869135170353833271}
+  previouselySelectedNode: {fileID: -8023959536765369239}
 --- !u!114 &7934293553796877107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,7 +385,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  active: 1
+  active: 0
   drb: {fileID: 0}
   assignedCanvasRef:
     serializedGuid: 7a750b0250ffe9458901933126a63340

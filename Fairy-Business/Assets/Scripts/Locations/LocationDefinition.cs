@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UI;
 using UnityEngine;
@@ -5,8 +6,8 @@ using UnityEngine.UI;
 
 namespace Locations
 {
-    [RequireComponent(typeof(Button))]
-    public class LocationDefinition : MonoBehaviour {
+    [RequireComponent(typeof(Button),(typeof(RectTransform)))]
+    public class LocationDefinition : MonoBehaviour, IMovementAnimation {
         public LocationsType LocationType => locationType;
 
         public int VictoryPoints => victoryPoints;
@@ -21,6 +22,8 @@ namespace Locations
         private LocationsType locationType;
         private int victoryPoints = 3;
         private LocationUI currenLocatioUI;
+        
+        private RectTransform rectTransform;
 
         private bool isSelected;
 
@@ -29,17 +32,15 @@ namespace Locations
             get => isSelected;
             set
             {
-                if (isSelected != value)
-                {
-                    isSelected = value;
-                    UpdateVisuals();
-                }
+                isSelected = value;
+                UpdateVisuals();
             }
         }
 
         private void Awake()
         {
             selectionButton = GetComponent<Button>();
+            rectTransform = GetComponent<RectTransform>();
             selectionButton.onClick.AddListener(OnButtonClicked);
         }
 
@@ -57,6 +58,21 @@ namespace Locations
         {
             currenLocatioUI = locationUI;
             currenLocatioUI.Init(Color.gray, imageEnabled, locationType.ToString(), locationText);
+        }
+
+        public void MoveY(float y, float duration)
+        {
+            rectTransform.DOLocalMoveY(y, duration);
+        }
+
+        public void MoveX(float x, float duration)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Rotate(float angle)
+        {
+            throw new System.NotImplementedException();
         }
 
         private void OnButtonClicked()

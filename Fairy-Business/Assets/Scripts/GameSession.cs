@@ -102,7 +102,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         List<int> ints = new List<int>{5,4,3};
         Utilities.ShuffleList(ints);
 
-        LocationManager.instance.CreateLocations();
+        LocationManager.instance.CreateGameLocations();
         int i = 0;
         
         foreach (LocationDefinition loc in LocationManager.instance.SelectedLocations)
@@ -162,6 +162,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
     }
 
     Sequence rotationSequence = null;
+    
     public void UpdateLocationVisuals(){
         
         if (rotationSequence != null) 

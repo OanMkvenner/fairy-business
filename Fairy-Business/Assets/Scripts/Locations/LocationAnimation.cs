@@ -18,7 +18,7 @@ namespace Locations
 
             for (int i = 0; i < lines.Length; i++)
             {
-                LocationDefinition location = LocationManager.instance.Locations[i];
+                LocationDefinition location = LocationManager.instance.GameLocations[i];
 
                 if (location.currentOwner == PlayerColor.Neutral)
                 {

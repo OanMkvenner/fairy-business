@@ -62,7 +62,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
     public void ResetGamesession(){
         
-        LocationManager.instance.Locations = new Dictionary<int, LocationDefinition>();
+        LocationManager.instance.ResetLocations();
         
         for (int i = 0; i < sceneLocationDefinition.Count; i++){
             
@@ -106,9 +106,9 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         
         PlayerColor currentMarketOwner = PlayerColor.Neutral;
         
-        foreach (KeyValuePair<int, LocationDefinition> loc in LocationManager.instance.Locations){
-            if (loc.Value.LocationType == location){
-                currentMarketOwner = loc.Value.currentOwner;
+        foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
+            if (loc.LocationType == location){
+                currentMarketOwner = loc.currentOwner;
             }
         }
         
@@ -117,24 +117,22 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
     public void ReattributeTerritories(){
         
-        foreach (KeyValuePair<int, LocationDefinition> loc in LocationManager.instance.Locations){
+        foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
             
-            LocationDefinition location = loc.Value;
-            
-            if (location.GetPlayerPower(PlayerColor.Red) > location.GetPlayerPower(PlayerColor.Blue)){
+            if (loc.GetPlayerPower(PlayerColor.Red) > loc.GetPlayerPower(PlayerColor.Blue)){
                 
-                location.currentOwner = PlayerColor.Red;
+                loc.currentOwner = PlayerColor.Red;
                 
-            } else if (location.GetPlayerPower(PlayerColor.Red) < location.GetPlayerPower(PlayerColor.Blue)) {
+            } else if (loc.GetPlayerPower(PlayerColor.Red) < loc.GetPlayerPower(PlayerColor.Blue)) {
                 
-                location.currentOwner = PlayerColor.Blue;
+                loc.currentOwner = PlayerColor.Blue;
                 
             } else {
                 
-                location.currentOwner = PlayerColor.Neutral;
+                loc.currentOwner = PlayerColor.Neutral;
                 // on tie, whoever currently owns the special place becomes the new owner! (if its part of the current match, otherwise its Neutral)
                 PlayerColor tieLocationOwner = CheckLocationOwner(LocationsType.GingerbreadHouse);
-                location.currentOwner = tieLocationOwner;
+                loc.currentOwner = tieLocationOwner;
                 
             }
         }
@@ -155,9 +153,9 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         
         int i = 0;
         
-        foreach (KeyValuePair<int, LocationDefinition> loc in LocationManager.instance.Locations){
+        foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
             
-            LocationDefinition location = loc.Value;
+            LocationDefinition location = loc;
             
             if (location.currentOwner != PlayerColor.Neutral){
                 
@@ -280,7 +278,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
         if (card.effect == "1" || card.effect == "2" || card.effect == "3") {
             locationFound = true;
-            turnLocation.locationNumber = int.Parse(card.effect);
+            turnLocation.locationNumber = int.Parse(card.effect) -1;
         }
 
         // remember action/location
@@ -290,7 +288,8 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 NewActionLoggedIn(PlayerColor.Blue);
             }
             if (locationFound) {
-                if (!LocationManager.instance.Locations.ContainsKey(turnLocation.locationNumber)){
+                //Todo: Marie Problem hier lösen
+                if (LocationManager.instance.GameLocations[turnLocation.locationNumber] == null){
                     // location not found in current match, cancel turn addition!
                     Debug.LogError($"Location {turnLocation.locationNumber} is not part of the current match!");
                     return;
@@ -305,11 +304,13 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 NewActionLoggedIn(PlayerColor.Red);
             }
             if (locationFound) {
-                if (!LocationManager.instance.Locations.ContainsKey(turnLocation.locationNumber)){
+                //Todo:Problem hier lösen
+                if (LocationManager.instance.GameLocations[turnLocation.locationNumber] == null){
                     // location not found in current match, cancel turn addition!
                     Debug.LogError($"Location {turnLocation.locationNumber} is not part of the current match!");
                     return;
                 }
+                
                 turnLocations[PlayerColor.Red] = turnLocation;
                 NewLocationLoggedIn(PlayerColor.Red);
             }
@@ -375,7 +376,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         }
     }
     
-    int[] allLocationNumbers = new int[]{ 1, 2, 3};
+    int[] allLocationNumbers = new int[]{ 0, 1, 2};
     
     public void SolveTurn(){
         // politics
@@ -384,7 +385,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
             if (turnActions[actingPlayer].action == Action.Politics){
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 int politicsMod = marketOwner == actingPlayer ? 1 : 0;
-                LocationManager.instance.Locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] += (turnActions[actingPlayer].value + politicsMod);
+                LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] += (turnActions[actingPlayer].value + politicsMod);
             }
         }
         // Army
@@ -409,7 +410,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 }
                 foreach (var attackedLocationNumber in attackedLocationNumbers)
                 {
-                    LocationDefinition attackedLocation = LocationManager.instance.Locations[attackedLocationNumber];
+                    LocationDefinition attackedLocation = LocationManager.instance.GameLocations[attackedLocationNumber];
                     int currentEnemyControlValue = attackedLocation.power[enemyPlayer];
                     // reduce control value (but cap it at 'minControlNumber'; usually at 0)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
@@ -430,7 +431,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 // if red has same location and the opposite effect, they cancel each other!
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.Peace)
                 {
-                    LocationManager.instance.Locations[turnLocations[actingPlayer].locationNumber].power[enemyPlayer] = 0;
+                    LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].power[enemyPlayer] = 0;
                 }
             }
         }
@@ -444,8 +445,8 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 // if red has same location and the opposite effect, they cancel each other!
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.War)
                 {
-                    int victoryPoints = LocationManager.instance.Locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer];
-                    LocationManager.instance.Locations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] = 0;
+                    int victoryPoints = LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].power[actingPlayer];
+                    LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] = 0;
                     victoryPointCounters[actingPlayer] += victoryPoints;
                 } 
                 
@@ -462,15 +463,13 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
     
     public void EndOfTurnEffects(){
         
-        foreach (var loc in LocationManager.instance.Locations){
+        foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
             
-            LocationDefinition location = loc.Value;
-            
-            if (location.LocationType == LocationsType.DragonCave){
+            if (loc.LocationType == LocationsType.DragonCave){
                 
-                if (location.currentOwner != PlayerColor.Neutral){
+                if (loc.currentOwner != PlayerColor.Neutral){
                     
-                    PlayerColor actingPlayer = location.currentOwner;
+                    PlayerColor actingPlayer = loc.currentOwner;
                     PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                     victoryPointCounters[actingPlayer]++;
                 }
@@ -515,10 +514,10 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
     }
     public void AddVictoryPointsByPlayer(PlayerColor color, int vp){
         
-        if (color != PlayerColor.Neutral){
-            victoryPointCounters[color] += vp;
-        }
+        if (color != PlayerColor.Neutral)
+            return;
         
+        victoryPointCounters[color] += vp;
     }
     
     public void CheckScoringPhase(){
@@ -526,10 +525,8 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         if (turnCounter == 1 && roundCounter > 1){
             // apply owned territory points to main score
             
-            foreach (KeyValuePair<int, LocationDefinition> loc in LocationManager.instance.Locations){
-                LocationDefinition location = loc.Value;
-                
-                AddVictoryPointsByPlayer(location.currentOwner, location.VictoryPoints);
+            foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
+                AddVictoryPointsByPlayer(loc.currentOwner, loc.VictoryPoints);
             }
             
             UpdateVictoryPointDisplay();
@@ -548,12 +545,12 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         
         int i = 0;
         
-        foreach (var loc in LocationManager.instance.Locations){
-            var location = loc.Value;
+        foreach (var loc in LocationManager.instance.GameLocations){
+            
             for (int j = 0; j < 2; j++)
             {
-                UniqueNameHash.Get($"RedPower{i}_{j}").GetComponent<TMP_Text>().text = location.power[PlayerColor.Red].ToString();
-                UniqueNameHash.Get($"BluePower{i}_{j}").GetComponent<TMP_Text>().text = location.power[PlayerColor.Blue].ToString();
+                UniqueNameHash.Get($"RedPower{i}_{j}").GetComponent<TMP_Text>().text = loc.power[PlayerColor.Red].ToString();
+                UniqueNameHash.Get($"BluePower{i}_{j}").GetComponent<TMP_Text>().text = loc.power[PlayerColor.Blue].ToString();
             }
             i++;
         }

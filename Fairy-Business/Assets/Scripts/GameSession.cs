@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using Unity.Mathematics;
 using DG.Tweening;
 using Locations;
+using Player;
 using UI;
 using UI.Menu;
 using UnityEngine.Serialization;
@@ -88,39 +89,19 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         UniqueNameHash.Get("WinnerText").gameObject.SetActive(false);
         UniqueNameHash.Get("WinnerScreen").gameObject.SetActive(false);
     }
-    public enum PlayerColor
-    {
-        Neutral = 0,
-        Red = 1,
-        Blue = 2,
-    }
+
     public void NewRound()
     {
         ResetGamesession();
         
-        // apply the power setups of 5-3, 4-4 and 3-5 randomly over the locations
-        List<int> ints = new List<int>{5,4,3};
-        Utilities.ShuffleList(ints);
-
         LocationManager.instance.CreateGameLocations();
-        int i = 0;
-        
-        foreach (LocationDefinition loc in LocationManager.instance.SelectedLocations)
-        {
-            int powerRed = ints[i];
-            LocationManager.instance.Locations[i+1].SetPlayerPower(PlayerColor.Red, powerRed);
-            LocationManager.instance.Locations[i+1].SetPlayerPower(PlayerColor.Blue, (8 - powerRed));
-            i++;
-        }
         
         // update Territory owners
         ReattributeTerritories();
         // start first turn
         NextTurn(); 
     }
-
-
-
+    
     public PlayerColor CheckLocationOwner(LocationsType location){
         
         PlayerColor currentMarketOwner = PlayerColor.Neutral;
@@ -193,8 +174,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                     //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].FrontContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
                     
                 }
-                
-                //sceneLocationDefinition[i].SetSideWithAnim(FlipButton.ActiveSide.front);
                 
             } else {
                 

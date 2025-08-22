@@ -7,10 +7,12 @@ using UnityEngine.UI;
 namespace Locations
 {
     [RequireComponent(typeof(Button),(typeof(RectTransform)))]
-    public class LocationDefinition : MonoBehaviour, IMovementAnimation {
+    public class LocationDefinition : MonoBehaviour, ITweenAnimation {
         public LocationsType LocationType => locationType;
 
         public int VictoryPoints => victoryPoints;
+        
+        public LocationData LocationData { get; private set; }
 
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI description;
@@ -46,6 +48,7 @@ namespace Locations
 
         public void InitializeLocationDefinition(LocationData data)
         {
+            this.LocationData = data;
             this.imageEnabled = data.imageEnabled;
             this.imageDisabled = data.imageDisabled;
             this.locationText = data.locationDescription;
@@ -60,19 +63,24 @@ namespace Locations
             currenLocatioUI.Init(Color.gray, imageEnabled, locationType.ToString(), locationText);
         }
 
-        public void MoveY(float y, float duration)
+        public Tween MoveY(float y, float duration)
         {
-            rectTransform.DOLocalMoveY(y, duration);
+            return rectTransform.DOLocalMoveY(y, duration);
         }
 
-        public void MoveX(float x, float duration)
+        public Tween MoveX(float x, float duration)
         {
-            throw new System.NotImplementedException();
+            return rectTransform.DOLocalMoveX(x, duration);
         }
 
-        public void Rotate(float angle)
+        public Tween Rotate(float angle, float duration)
         {
-            throw new System.NotImplementedException();
+            return rectTransform.DORotate(new Vector3(0, 0, angle), duration);
+        }
+
+        public void SetPosition(Vector3 position)
+        {
+            transform.position = position;
         }
 
         private void OnButtonClicked()

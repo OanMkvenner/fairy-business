@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using DG.Tweening;
+using Player;
 using TMPro;
 using UI;
 using UnityEngine;
@@ -13,6 +15,9 @@ namespace Locations
         public int VictoryPoints => victoryPoints;
         
         public LocationData LocationData { get; private set; }
+        
+        public Dictionary<PlayerColor, int> power = new();
+        public PlayerColor currentOwner;
 
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI description;
@@ -62,10 +67,18 @@ namespace Locations
         {
             backgroundColor.color = color;
         }
+        
         public void InitializeLocationUI(LocationUI locationUI)
         {
             currenLocatioUI = locationUI;
             currenLocatioUI.Init(Color.gray, imageEnabled, locationType.ToString(), locationText);
+        }
+        
+        public void SetPlayerPower(PlayerColor playerIdx, int newPower){
+            power[playerIdx] = newPower;
+        }
+        public int GetPlayerPower(PlayerColor playerIdx){
+            return power[playerIdx];
         }
 
         public Tween MoveY(float y, float duration)

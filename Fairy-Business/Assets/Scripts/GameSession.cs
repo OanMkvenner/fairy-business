@@ -62,7 +62,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
     public void ResetGamesession(){
         
-        LocationManager.instance.Locations = new Dictionary<int, Location>();
+        LocationManager.instance.Locations = new Dictionary<int, LocationDefinition>();
         
         for (int i = 0; i < sceneLocationDefinition.Count; i++){
             
@@ -106,8 +106,8 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         
         PlayerColor currentMarketOwner = PlayerColor.Neutral;
         
-        foreach (KeyValuePair<int, Location> loc in LocationManager.instance.Locations){
-            if (loc.Value.type == location){
+        foreach (KeyValuePair<int, LocationDefinition> loc in LocationManager.instance.Locations){
+            if (loc.Value.LocationType == location){
                 currentMarketOwner = loc.Value.currentOwner;
             }
         }
@@ -117,9 +117,9 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
     public void ReattributeTerritories(){
         
-        foreach (KeyValuePair<int, Location> loc in LocationManager.instance.Locations){
+        foreach (KeyValuePair<int, LocationDefinition> loc in LocationManager.instance.Locations){
             
-            Location location = loc.Value;
+            LocationDefinition location = loc.Value;
             
             if (location.GetPlayerPower(PlayerColor.Red) > location.GetPlayerPower(PlayerColor.Blue)){
                 
@@ -155,9 +155,9 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         
         int i = 0;
         
-        foreach (KeyValuePair<int, Location> loc in LocationManager.instance.Locations){
+        foreach (KeyValuePair<int, LocationDefinition> loc in LocationManager.instance.Locations){
             
-            Location location = loc.Value;
+            LocationDefinition location = loc.Value;
             
             if (location.currentOwner != PlayerColor.Neutral){
                 
@@ -409,7 +409,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 }
                 foreach (var attackedLocationNumber in attackedLocationNumbers)
                 {
-                    Location attackedLocation = LocationManager.instance.Locations[attackedLocationNumber];
+                    LocationDefinition attackedLocation = LocationManager.instance.Locations[attackedLocationNumber];
                     int currentEnemyControlValue = attackedLocation.power[enemyPlayer];
                     // reduce control value (but cap it at 'minControlNumber'; usually at 0)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
@@ -464,9 +464,9 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         
         foreach (var loc in LocationManager.instance.Locations){
             
-            Location location = loc.Value;
+            LocationDefinition location = loc.Value;
             
-            if (location.type == LocationsType.DragonCave){
+            if (location.LocationType == LocationsType.DragonCave){
                 
                 if (location.currentOwner != PlayerColor.Neutral){
                     
@@ -526,10 +526,10 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         if (turnCounter == 1 && roundCounter > 1){
             // apply owned territory points to main score
             
-            foreach (var loc in LocationManager.instance.Locations){
-                var location = loc.Value;
+            foreach (KeyValuePair<int, LocationDefinition> loc in LocationManager.instance.Locations){
+                LocationDefinition location = loc.Value;
                 
-                AddVictoryPointsByPlayer(location.currentOwner, location.VPGainedOnScorePhase);
+                AddVictoryPointsByPlayer(location.currentOwner, location.VictoryPoints);
             }
             
             UpdateVictoryPointDisplay();

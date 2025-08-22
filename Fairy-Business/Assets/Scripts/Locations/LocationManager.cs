@@ -5,7 +5,6 @@ using Player;
 using UI.Menu;
 using UnityEngine;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace Locations
 {
@@ -13,11 +12,7 @@ namespace Locations
     {
         public List<LocationDefinition> SelectedLocations { get; private set; } = new List<LocationDefinition>();
 
-        public Dictionary<int, Location> Locations
-        {
-            get => locations;
-            set => locations = value;
-        }
+        public Dictionary<int, LocationDefinition> Locations { get; set; } 
 
         [SerializeField] private List<LocationData> locationDataCollection;
         [SerializeField] private Button randomLocationButton;
@@ -29,19 +24,12 @@ namespace Locations
         [SerializeField] private PlayerLine[] lines = new PlayerLine[3];
         [SerializeField] private List<Color> lineColors = new List<Color>();
 
-        private List<LocationDefinition> gameLocationDefinitions = new List<LocationDefinition>();
-
         /// <summary>
         /// Locations in the Game view, that can be moved around.
         /// </summary>
-        public List<LocationDefinition> GameLocationDefinitions
-        {
-            get => gameLocationDefinitions;
-            set => gameLocationDefinitions = value;
-        }
+        public List<LocationDefinition> GameLocationDefinitions { get; private set; } 
 
         private readonly List<LocationDefinition> allAvailableLocations = new List<LocationDefinition>();
-        private Dictionary<int, Location> locations;
 
         private void Awake()
         {
@@ -51,7 +39,7 @@ namespace Locations
 
         public void CreateGameLocations()
         {
-            locations = new Dictionary<int, Location>();
+            Locations = new Dictionary<int, LocationDefinition>();
             
             // apply the power setups of 5-3, 4-4 and 3-5 randomly over the locations
             List<int> ints = new List<int>{5,4,3};
@@ -66,18 +54,13 @@ namespace Locations
                 gameLocationDefinition.SetPosition(lines[index].neutralPosition.position);
                 gameLocationDefinition.SetBackgroundColor(lineColors[index]);
                 
-                gameLocationDefinitions.Add(gameLocationDefinition);
-
-                Location newLocation = new Location
-                {
-                    type = gameLocationDefinition.LocationType,
-                    VPGainedOnScorePhase = gameLocationDefinition.VictoryPoints
-                };
+                GameLocationDefinitions.Add(gameLocationDefinition);
+                
                 
                 int powerRed = ints[index];
-                newLocation.SetPlayerPower(PlayerColor.Red, powerRed);
-                newLocation.SetPlayerPower(PlayerColor.Blue, (8 - powerRed));
-                locations.Add(index, newLocation);
+                gameLocationDefinition.SetPlayerPower(PlayerColor.Red, powerRed);
+                gameLocationDefinition.SetPlayerPower(PlayerColor.Blue, (8 - powerRed));
+                Locations.Add(index, gameLocationDefinition);
             }
             
         }

@@ -20,17 +20,14 @@ namespace Locations
         }
 
         [SerializeField] private List<LocationData> locationDataCollection;
-
         [SerializeField] private Button randomLocationButton;
-
         [SerializeField] private LocationDefinition locationDefinitionPrefab;
-
         [SerializeField] private Transform locationsParent;
 
         [Header("GameField")]
         [SerializeField] private Transform gameFieldParent;
-
         [SerializeField] private PlayerLine[] lines = new PlayerLine[3];
+        [SerializeField] private List<Color> lineColors = new List<Color>();
 
         private List<LocationDefinition> gameLocationDefinitions = new List<LocationDefinition>();
 
@@ -66,8 +63,10 @@ namespace Locations
                 LocationDefinition gameLocationDefinition = Instantiate(locationDefinitionPrefab, gameFieldParent);
                 gameLocationDefinition.InitializeLocationDefinition(locationDefinition.LocationData);
                 gameLocationDefinition.IsSelected = true;
-                gameLocationDefinitions.Add(gameLocationDefinition);
                 gameLocationDefinition.SetPosition(lines[index].neutralPosition.position);
+                gameLocationDefinition.SetBackgroundColor(lineColors[index]);
+                
+                gameLocationDefinitions.Add(gameLocationDefinition);
 
                 Location newLocation = new Location
                 {
@@ -80,9 +79,6 @@ namespace Locations
                 newLocation.SetPlayerPower(PlayerColor.Blue, (8 - powerRed));
                 locations.Add(index, newLocation);
             }
-
-            List<LocationDefinition> shuffledGameLocations = gameLocationDefinitions.Shuffled();
-            
             
         }
 

@@ -69,9 +69,9 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
             /*sceneLocationDefinition[i].SetSideInstant(FlipButton.ActiveSide.back);
             sceneLocationDefinition[i].BackImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
             sceneLocationDefinition[i].FrontImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));*/
-            Vector3 correctedPos = sceneLocationDefinition[i].GetComponent<RectTransform>().position;
+            /*Vector3 correctedPos = sceneLocationDefinition[i].GetComponent<RectTransform>().position;
             correctedPos.y = 0;
-            sceneLocationDefinition[i].GetComponent<RectTransform>().position = correctedPos;
+            sceneLocationDefinition[i].GetComponent<RectTransform>().position = correctedPos;*/
         }
         
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
@@ -139,7 +139,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
             }
         }
         
-         UpdateLocationVisuals();
+        // UpdateLocationVisuals();
     }
 
     Sequence rotationSequence = null;
@@ -531,6 +531,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 
                 AddVictoryPointsByPlayer(location.currentOwner, location.VPGainedOnScorePhase);
             }
+            
             UpdateVictoryPointDisplay();
 
             // show current power values (until a player starts playing a card? or until turn is played fully?)

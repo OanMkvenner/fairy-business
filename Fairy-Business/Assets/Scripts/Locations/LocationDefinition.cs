@@ -16,6 +16,7 @@ namespace Locations
 
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI description;
+        [SerializeField] private Image backgroundColor;
         
         private Button selectionButton;
         private Sprite imageEnabled;
@@ -56,7 +57,11 @@ namespace Locations
             this.victoryPoints = data.VictoryPoints;
             description.text = locationType.ToString();
         }
-        
+
+        public void SetBackgroundColor(Color color)
+        {
+            backgroundColor.color = color;
+        }
         public void InitializeLocationUI(LocationUI locationUI)
         {
             currenLocatioUI = locationUI;

@@ -344,6 +344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 3669996450382100898}
   description: {fileID: 2458245211491674348}
+  backgroundColor: {fileID: 8266616740479754879}
 --- !u!1 &7140355847162278263
 GameObject:
   m_ObjectHideFlags: 0

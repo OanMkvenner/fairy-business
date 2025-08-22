@@ -25,6 +25,7 @@ namespace Locations
         [SerializeField] private List<Color> lineColors = new List<Color>();
 
         private readonly List<LocationDefinition> allAvailableLocations = new List<LocationDefinition>();
+        private LocationAnimation locationAnimation;
 
         private void Awake()
         {
@@ -46,16 +47,20 @@ namespace Locations
                 LocationDefinition gameLocationDefinition = Instantiate(locationDefinitionPrefab, gameFieldParent);
                 gameLocationDefinition.InitializeLocationDefinition(locationDefinition.LocationData);
                 gameLocationDefinition.IsSelected = true;
-                gameLocationDefinition.SetPosition(lines[index].neutralPosition.position);
-                gameLocationDefinition.SetBackgroundColor(lineColors[index]);
-                
-                
+
                 int powerRed = ints[index];
                 gameLocationDefinition.SetPlayerPower(PlayerColor.Red, powerRed);
                 gameLocationDefinition.SetPlayerPower(PlayerColor.Blue, (8 - powerRed));
                 GameLocations.Add(gameLocationDefinition);
             }
-            
+
+            AssignLocationOwner();
+            AssignBackgroundColorAndPlayerLine();
+
+            foreach (LocationDefinition gameLocation in GameLocations)
+            {
+                gameLocation.SetPosition(gameLocation.PlayerLine.neutralPosition.position);
+            }
         }
 
         public void ResetLocations()
@@ -64,12 +69,6 @@ namespace Locations
                 return;
             
             GameLocations.Clear();
-        }
-
-        public void MoveLocationOnLine(GameObject obj, int lineIndex, float t)
-        {
-            if (lineIndex < 0 || lineIndex >= lines.Length) return;
-            
         }
         
         public void SetupSelectLocation(LocationDefinition locationDefinition){
@@ -86,6 +85,39 @@ namespace Locations
             }
             
             CheckEnoughLocationsSelected();
+        }
+
+        public void UpdateLocationAnimation()
+        {
+            if(locationAnimation == null)
+                locationAnimation = new LocationAnimation();
+            
+            locationAnimation.UpdateLocationAnimation(GameLocations);
+        }
+
+        /// <summary>
+        /// Sets Player Owner at the start of the game and then shuffles the locations.
+        /// </summary>
+        private void AssignLocationOwner()
+        {
+            GameLocations[0].currentOwner = PlayerColor.Blue;
+            GameLocations[1].currentOwner = PlayerColor.Red;
+            GameLocations[2].currentOwner = PlayerColor.Neutral;
+            
+            GameLocations = GameLocations.Shuffled();
+        }
+
+        /// <summary>
+        /// Assigns Background Color and PlayerLine.
+        /// </summary>
+        private void AssignBackgroundColorAndPlayerLine()
+        {
+            GameLocations[0].SetBackgroundColor(lineColors[0]);
+            GameLocations[0].PlayerLine = lines[0];
+            GameLocations[1].SetBackgroundColor(lineColors[1]);
+            GameLocations[1].PlayerLine = lines[1];
+            GameLocations[2].SetBackgroundColor(lineColors[2]);
+            GameLocations[2].PlayerLine = lines[2];
         }
 
         private void SetUpLocations()

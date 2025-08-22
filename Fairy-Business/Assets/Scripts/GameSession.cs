@@ -137,53 +137,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
             }
         }
         
-        // UpdateLocationVisuals();
-    }
-
-    Sequence rotationSequence = null;
-    
-    public void UpdateLocationVisuals(){
-        
-        if (rotationSequence != null) 
-            rotationSequence.Kill();
-        
-        float initialPauseTime = 0.5f;
-        Ease rotationEaseMode = Ease.InOutCubic;
-        rotationSequence = DOTween.Sequence();
-        
-        int i = 0;
-        
-        foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
-            
-            LocationDefinition location = loc;
-            
-            if (location.currentOwner != PlayerColor.Neutral){
-                
-                if (location.currentOwner == PlayerColor.Red){
-                    
-                    sceneLocationDefinition[i].GetComponent<RectTransform>().DOLocalMoveY(150, 0.6f);
-                    //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].BackContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
-                    //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].FrontContent.transform.DORotate(new Vector3(0,0,-180), 0.7f).SetEase(rotationEaseMode));
-                    
-                } else {
-                    
-                    sceneLocationDefinition[i].GetComponent<RectTransform>().DOLocalMoveY(-150, 0.6f);
-                   // rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].BackContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
-                    //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].FrontContent.transform.DORotate(new Vector3(0,0,0), 0.7f).SetEase(rotationEaseMode));
-                    
-                }
-                
-            } else {
-                
-                sceneLocationDefinition[i].GetComponent<RectTransform>().DOLocalMoveY(0, 0.6f);
-                //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].BackContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
-                //rotationSequence.Insert(initialPauseTime, sceneLocationDefinition[i].FrontContent.transform.DORotate(new Vector3(0,0,-90), 0.7f).SetEase(rotationEaseMode));
-                //sceneLocationDefinition[i].SetSideWithAnim(FlipButton.ActiveSide.back);
-                
-            }
-            
-            i++;
-        }
+        LocationManager.instance.UpdateLocationAnimation();
     }
 
     private void OpenLocationsSelectionsMenu()

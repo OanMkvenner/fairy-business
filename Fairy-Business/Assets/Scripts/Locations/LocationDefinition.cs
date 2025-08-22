@@ -16,6 +16,8 @@ namespace Locations
         
         public LocationData LocationData { get; private set; }
         
+        public PlayerLine PlayerLine { get; set; }
+        
         public Dictionary<PlayerColor, int> power = new();
         public PlayerColor currentOwner;
 
@@ -83,7 +85,7 @@ namespace Locations
 
         public Tween MoveY(float y, float duration)
         {
-            return rectTransform.DOLocalMoveY(y, duration);
+            return rectTransform.DOMoveY(y, duration);
         }
 
         public Tween MoveX(float x, float duration)

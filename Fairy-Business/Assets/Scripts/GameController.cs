@@ -1,8 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System;
-using DG.Tweening;
 
 public class GameController : MonoBehaviour
 {

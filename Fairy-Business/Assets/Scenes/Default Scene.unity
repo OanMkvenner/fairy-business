@@ -5716,7 +5716,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1269899576}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3239347718224579117, guid: 1b3fb4f45564de842adaf927ac4478d4,
+          type: 2}
+        m_TargetAssemblyTypeName: XNode.UiStateGraph.UiStateNode, hybrgames.nodeeditor
+        m_MethodName: MoveAlongPort
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: LocationMenuBtn
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1269899576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5775,6 +5788,7 @@ GameObject:
   - component: {fileID: 1311465867}
   - component: {fileID: 1311465876}
   - component: {fileID: 1311465877}
+  - component: {fileID: 1311465878}
   m_Layer: 5
   m_Name: View_Gameplay
   m_TagString: Untagged
@@ -5800,11 +5814,11 @@ RectTransform:
   - {fileID: 866074010}
   - {fileID: 765062751}
   - {fileID: 306720293}
-  - {fileID: 1200557878}
-  - {fileID: 1691917833}
   - {fileID: 1328486560}
   - {fileID: 361907982}
   - {fileID: 1164305875}
+  - {fileID: 1200557878}
+  - {fileID: 1691917833}
   m_Father: {fileID: 10982242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5979,6 +5993,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetViewNodes:
   - {fileID: 6096576609133860768, guid: 1b3fb4f45564de842adaf927ac4478d4, type: 2}
+--- !u!114 &1311465878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311465865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6ff834e6296484591671ab3c55d6fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1316968163
 GameObject:
   m_ObjectHideFlags: 0
@@ -7694,6 +7720,7 @@ GameObject:
   - component: {fileID: 1736882804}
   - component: {fileID: 1736882813}
   - component: {fileID: 1736882814}
+  - component: {fileID: 1736882815}
   m_Layer: 5
   m_Name: View_SelectionMenu
   m_TagString: Untagged
@@ -7894,6 +7921,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetViewNodes:
   - {fileID: 4441277829143299856, guid: e97886c3cb226cf43a8846edfc1fea12, type: 2}
+  - {fileID: -3239347718224579117, guid: 1b3fb4f45564de842adaf927ac4478d4, type: 2}
+--- !u!114 &1736882815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736882802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c6ff834e6296484591671ab3c55d6fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1766597362
 GameObject:
   m_ObjectHideFlags: 0
@@ -9708,7 +9748,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2059871382}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -3239347718224579117, guid: 1b3fb4f45564de842adaf927ac4478d4,
+          type: 2}
+        m_TargetAssemblyTypeName: XNode.UiStateGraph.UiStateNode, hybrgames.nodeeditor
+        m_MethodName: MoveAlongPort
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: RandomLocationBtn
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2059871382
 MonoBehaviour:
   m_ObjectHideFlags: 0

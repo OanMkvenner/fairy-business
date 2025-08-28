@@ -7,7 +7,6 @@ namespace UI.Menu
     {
         public MenuIdentifier MenuIdentifier => menuIdentifier;
         
-        [SerializeField] private MenuManager menuManager;
         [Space]
         [SerializeField] private MenuIdentifier menuIdentifier;
         
@@ -20,7 +19,7 @@ namespace UI.Menu
         
         private void Start()
         {
-            menuManager.RegisterMenuElement(this);
+            MenuManager.instance.RegisterMenuElement(this);
             menuContent.SetActive(false);
         }
 
@@ -28,7 +27,9 @@ namespace UI.Menu
         {
             if (isOpen)
                 return;
-            closeButton.onClick.AddListener(CloseMenu);
+            
+            if(closeButton != null)
+                closeButton.onClick.AddListener(CloseMenu);
             
             isOpen = true;
             menuContent.SetActive(true);

@@ -15,7 +15,6 @@ namespace UI.Menu
         
         private void ReturnToStartScreen()
         {
-            //Todo: Marie 14.08 Aufruf des Startmenüs. *comment Jonas: habs schonmal an die neue schreibart angepasst
             UiManager.CallbackUiEvent("MainMenu");
         }
     }

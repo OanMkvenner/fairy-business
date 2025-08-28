@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UI.Menu
 {
-    public class MenuManager : MonoBehaviour
+    public class MenuManager : MonobheaviourSingletonCustom<MenuManager>
     {
         private static readonly List<MenuElement> menuElements = new List<MenuElement>();
 
@@ -13,7 +13,7 @@ namespace UI.Menu
             menuElements.Add(menuElement);
         }
 
-        public static void OpenMenu(MenuIdentifier menuIdentifier)
+        public void OpenMenu(MenuIdentifier menuIdentifier)
         {
             MenuElement menuElement = menuElements.FirstOrDefault(a => a.MenuIdentifier == menuIdentifier);
 

@@ -18,7 +18,7 @@ namespace UI.Menu
 
         private void OpenMenu()
         {
-            MenuManager.OpenMenu(identifier);
+            MenuManager.instance.OpenMenu(identifier);
         }
     }
 }

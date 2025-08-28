@@ -153,7 +153,7 @@ namespace Locations
 
         private void CheckEnoughLocationsSelected(){
             if (SelectedLocations.Count == 3){
-                MenuManager.OpenMenu(MenuIdentifier.LocationSelectionMenu);
+                MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);
             }
         }
     }

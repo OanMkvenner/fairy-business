@@ -5,5 +5,6 @@ namespace UI.Menu
         None = 0,
         LocationSelectionMenu = 1,
         PauseMenu = 2,
+        WinSceen = 3,
     }
 }

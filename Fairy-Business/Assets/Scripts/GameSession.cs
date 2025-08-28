@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -9,7 +8,7 @@ using Locations;
 using Player;
 using UI;
 using UI.Menu;
-using UnityEngine.Serialization;
+
 
 public class GameSession : MonobheaviourSingletonCustom<GameSession> {
     
@@ -18,25 +17,27 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
     public GameObject soundsContainer;
     public Image ScanEffect;
-    
-    [Space]
-    public List<LocationDefinition> sceneLocationDefinition = new List<LocationDefinition>();
+
+    public Dictionary<PlayerColor, int> VictoryPointCounters
+    {
+        get => victoryPointCounters;
+        set => victoryPointCounters = value;
+    }
+
+    [SerializeField] private int maxRoundCount = 5;
 
     [Space]
     [SerializeField] private Button locationSelectButton;
+
     [SerializeField] private  List<TurnRoundUI> turnRoundUIs;
-    
+
     private int turnCounter;
+
     private int roundCounter;
+
     private Dictionary<PlayerColor, int> victoryPointCounters;
-    
+
     private void Start() {
-        //cardInput.onStartEvaluation.AddListener(delegate(ScanResult result){
-        //    //code here using "result"
-        //});
-        //cardInput.onStartEvaluation.AddListener(delegate{
-        //    //code here without any parameter
-        //});
 
         cardInput.onStartEvaluation.AddListener(NewCard);
         cardInput.onAcceptCardEvaluation.AddListener(IngredientPaused);
@@ -64,16 +65,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         
         LocationManager.instance.ResetGameLocations();
         
-        for (int i = 0; i < sceneLocationDefinition.Count; i++){
-            
-            /*sceneLocationDefinition[i].SetSideInstant(FlipButton.ActiveSide.back);
-            sceneLocationDefinition[i].BackImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));
-            sceneLocationDefinition[i].FrontImage.transform.localRotation = Quaternion.Euler(new Vector3(0,0,0));*/
-            /*Vector3 correctedPos = sceneLocationDefinition[i].GetComponent<RectTransform>().position;
-            correctedPos.y = 0;
-            sceneLocationDefinition[i].GetComponent<RectTransform>().position = correctedPos;*/
-        }
-        
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
         roundCounter = 0; // first "NextTurn" action iterates this up to 1
         victoryPointCounters = new();
@@ -84,10 +75,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         disallowNewCards = false;
         
         HidePower();
-        UniqueNameHash.Get("WinnerTextImageRed").gameObject.SetActive(false);
-        UniqueNameHash.Get("WinnerTextImageBlue").gameObject.SetActive(false);
-        UniqueNameHash.Get("WinnerText").gameObject.SetActive(false);
-        UniqueNameHash.Get("WinnerScreen").gameObject.SetActive(false);
     }
 
     public void NewRound()
@@ -142,7 +129,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
     private void OpenLocationsSelectionsMenu()
     {
-        MenuManager.OpenMenu(MenuIdentifier.LocationSelectionMenu);
+        MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);
     }
     
     public struct Card
@@ -200,7 +187,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
         TurnAction turnAction = new TurnAction();
         TurnLocation turnLocation = new TurnLocation();
-        
 
         if (card.playerColor == "Spy") {
             ShowPower();
@@ -211,6 +197,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
         bool actionFound = false;
         bool locationFound = false;
+        
         if (card.effect == "Politics") {
             actionFound = true;
             turnAction.action = Action.Politics;
@@ -417,16 +404,14 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
     
     public void EndOfTurnEffects(){
         
-        foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
+        foreach (LocationDefinition loc in LocationManager.instance.GameLocations)
+        {
+            if (loc.LocationType != LocationsType.DragonCave) continue;
             
-            if (loc.LocationType == LocationsType.DragonCave){
-                
-                if (loc.currentOwner != PlayerColor.Neutral){
+            if (loc.currentOwner != PlayerColor.Neutral){
                     
-                    PlayerColor actingPlayer = loc.currentOwner;
-                    PlayerColor enemyPlayer = GetEnemy(actingPlayer);
-                    victoryPointCounters[actingPlayer]++;
-                }
+                PlayerColor actingPlayer = loc.currentOwner;
+                victoryPointCounters[actingPlayer]++;
             }
         }
     }
@@ -515,41 +500,20 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
     public void HidePower(){
         UniqueNameHash.Get("PointOverview").gameObject.SetActive(false);
     }
-    
-    public bool CheckEndGame(){
+
+    private bool CheckEndGame(){
         
-        if (roundCounter >= 5){
+        if (roundCounter >= maxRoundCount){
             FinishGameAndShowWinner();
             return true;
         }
         
         return false;
     }
-    
-    public void FinishGameAndShowWinner(){
+
+    private void FinishGameAndShowWinner(){
         
         disallowNewCards = true;
-        UniqueNameHash.Get("TurnAndRoundCounter").gameObject.SetActive(false);
-        string winnerText = "Draw!";
-        
-        if (victoryPointCounters[PlayerColor.Red] > victoryPointCounters[PlayerColor.Blue]){
-            
-            winnerText = "Player Red Won!";
-            UniqueNameHash.Get("WinnerTextImageRed").gameObject.SetActive(true);
-            
-        } else if (victoryPointCounters[PlayerColor.Red] < victoryPointCounters[PlayerColor.Blue]){
-            
-            winnerText = "Player Blue Won!";
-            UniqueNameHash.Get("WinnerTextImageBlue").gameObject.SetActive(true);
-        }
-        
-        UniqueNameHash.Get("WinnerText").GetComponent<TMP_Text>().text = winnerText;
-        
-        if (victoryPointCounters[PlayerColor.Red] == victoryPointCounters[PlayerColor.Blue]){
-            // currently only used for draw, because i dont have an image there. will probably be used for all text once i have a ttf file though!
-            UniqueNameHash.Get("WinnerText").gameObject.SetActive(true); 
-        }
-        
-        UniqueNameHash.Get("WinnerScreen").gameObject.SetActive(true); 
+        MenuManager.instance.OpenMenu(MenuIdentifier.WinSceen);
     }
 }

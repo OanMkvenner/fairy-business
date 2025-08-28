@@ -363,6 +363,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 }
             }
         }
+        
         // War
         foreach (PlayerColor actingPlayer in playerColors){
             
@@ -398,6 +399,8 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         ReattributeTerritories();
         // end of turn effects (if any) are applied
         EndOfTurnEffects();
+
+        CheckEndGame();
         
         NextTurn();
     }
@@ -436,6 +439,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         if (turnCounter >= 5)
         {
             if(roundCounter > 0) turnRoundUIs[roundCounter-1].FillFinishedRound();
+            
             turnCounter = 1;
             roundCounter++;
         }

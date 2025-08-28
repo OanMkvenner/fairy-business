@@ -18,7 +18,7 @@ namespace Locations
         
         public PlayerLine PlayerLine { get; set; }
         
-        public Dictionary<PlayerColor, int> power = new();
+        private Dictionary<PlayerColor, int> power = new();
         public PlayerColor currentOwner;
 
         [SerializeField] private Image image;
@@ -76,9 +76,26 @@ namespace Locations
             currenLocatioUI.Init(Color.gray, imageEnabled, locationType.ToString(), locationText);
         }
         
-        public void SetPlayerPower(PlayerColor playerIdx, int newPower){
-            power[playerIdx] = newPower;
+        public void AddPlayerPower(PlayerColor playerIdx, int newPower)
+        {
+            if (power.ContainsKey(playerIdx))
+            {
+                power[playerIdx] += newPower; // zum bestehenden Wert addieren
+            }
+            else
+            {
+                power[playerIdx] = newPower; // neuen Eintrag anlegen
+            }
+            
+            CheckWinner();
         }
+        
+        public void SetPlayerPower(PlayerColor playerIdx, int newPower)
+        {
+            power[playerIdx] = newPower; // setzt den Wert direkt, egal ob er schon existiert
+            CheckWinner();
+        }
+        
         public int GetPlayerPower(PlayerColor playerIdx){
             return power[playerIdx];
         }
@@ -103,6 +120,27 @@ namespace Locations
             transform.position = position;
         }
 
+        private void CheckWinner()
+        {
+            int blue = power.ContainsKey(PlayerColor.Blue) ? power[PlayerColor.Blue] : 0;
+            int red = power.ContainsKey(PlayerColor.Red) ? power[PlayerColor.Red] : 0;
+            int neutral = power.ContainsKey(PlayerColor.Neutral) ? power[PlayerColor.Neutral] : 0;
+
+            // Falls Neutral nicht vorkommt, wird sein Wert einfach 0 sein.
+
+            if (blue == red)
+            {
+                currentOwner = PlayerColor.Neutral;
+            }
+            else if (red > blue && red > neutral)
+            {
+                currentOwner = PlayerColor.Red;
+            }
+            else if (blue > red && blue > neutral)
+            {
+                currentOwner = PlayerColor.Blue;
+            }
+        }
         private void OnButtonClicked()
         {
             LocationManager.instance.SetupSelectLocation(this);

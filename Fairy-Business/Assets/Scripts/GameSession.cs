@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -10,7 +11,10 @@ using UI;
 using UI.Menu;
 
 
-public class GameSession : MonobheaviourSingletonCustom<GameSession> {
+public class GameSession : MonobheaviourSingletonCustom<GameSession>
+{
+
+    public static event Action<LocationDefinition, int> OnSpyCardPlayed;
     
     public bool dynamicInput = false;
     public CardInput cardInput;
@@ -88,8 +92,8 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         // start first turn
         NextTurn(); 
     }
-    
-    public PlayerColor CheckLocationOwner(LocationsType location){
+
+    private PlayerColor CheckLocationOwner(LocationsType location){
         
         PlayerColor currentMarketOwner = PlayerColor.Neutral;
         
@@ -102,26 +106,18 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         return currentMarketOwner;
     }
 
-    public void ReattributeTerritories(){
+    private void ReattributeTerritories(){
         
-        foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
+        foreach (LocationDefinition loc in LocationManager.instance.GameLocations)
+        {
+
+            if (loc.LocationType != LocationsType.GingerbreadHouse)
+                continue;
             
-            if (loc.GetPlayerPower(PlayerColor.Red) > loc.GetPlayerPower(PlayerColor.Blue)){
-                
-                loc.currentOwner = PlayerColor.Red;
-                
-            } else if (loc.GetPlayerPower(PlayerColor.Red) < loc.GetPlayerPower(PlayerColor.Blue)) {
-                
-                loc.currentOwner = PlayerColor.Blue;
-                
-            } else {
-                
-                loc.currentOwner = PlayerColor.Neutral;
-                // on tie, whoever currently owns the special place becomes the new owner! (if its part of the current match, otherwise its Neutral)
-                PlayerColor tieLocationOwner = CheckLocationOwner(LocationsType.GingerbreadHouse);
-                loc.currentOwner = tieLocationOwner;
-                
-            }
+            // on tie, whoever currently owns the special place becomes the new owner! (if its part of the current match, otherwise its Neutral)
+            PlayerColor tieLocationOwner = CheckLocationOwner(LocationsType.GingerbreadHouse);
+            loc.currentOwner = tieLocationOwner;
+            
         }
         
         LocationManager.instance.UpdateLocationAnimation();
@@ -326,7 +322,10 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
             if (turnActions[actingPlayer].action == Action.Politics){
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 int politicsMod = marketOwner == actingPlayer ? 1 : 0;
-                LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] += (turnActions[actingPlayer].value + politicsMod);
+                LocationManager.instance
+                    .GameLocations[turnLocations[actingPlayer].locationNumber]
+                    .AddPlayerPower(actingPlayer, turnActions[actingPlayer].value + politicsMod);
+
             }
         }
         // Army
@@ -352,10 +351,10 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 foreach (var attackedLocationNumber in attackedLocationNumbers)
                 {
                     LocationDefinition attackedLocation = LocationManager.instance.GameLocations[attackedLocationNumber];
-                    int currentEnemyControlValue = attackedLocation.power[enemyPlayer];
+                    int currentEnemyControlValue = attackedLocation.GetPlayerPower(enemyPlayer);
                     // reduce control value (but cap it at 'minControlNumber'; usually at 0)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
-                    attackedLocation.power[enemyPlayer] = math.max(newTheoreticalControlValue, minControlNumber);
+                    attackedLocation.AddPlayerPower(enemyPlayer, math.max(newTheoreticalControlValue, minControlNumber));
                     // If you own the below0Gain2VP location, EVERY TIME you manage to reduce your enemy below 0 you gain 2VP. Effects that block this loss also block this effect
                     if (below0Gain2VPOwner == actingPlayer && newTheoreticalControlValue < 0 && minControlNumber <= 0){
                         victoryPointCounters[below0Gain2VPOwner] += 2;
@@ -373,11 +372,10 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 // if red has same location and the opposite effect, they cancel each other!
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.Peace)
                 {
-                    LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].power[enemyPlayer] = 0;
+                    LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].SetPlayerPower(enemyPlayer, 0);
                 }
             }
         }
-        
         
         foreach (var actingPlayer in playerColors){
             
@@ -387,8 +385,9 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
                 // if red has same location and the opposite effect, they cancel each other!
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.War)
                 {
-                    int victoryPoints = LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].power[actingPlayer];
-                    LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].power[actingPlayer] = 0;
+                    int victoryPoints = LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].GetPlayerPower(actingPlayer);
+                    LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber]
+                        .SetPlayerPower(actingPlayer, 0);
                     victoryPointCounters[actingPlayer] += victoryPoints;
                 } 
                 
@@ -483,26 +482,20 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
         UniqueNameHash.Get("VictoryPointsRed").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColor.Red].ToString();
         UniqueNameHash.Get("VictoryPointsBlue").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColor.Blue].ToString();
     }
-    
-    public void ShowPower(){
-        
-        int i = 0;
-        
-        foreach (var loc in LocationManager.instance.GameLocations){
-            
-            for (int j = 0; j < 2; j++)
-            {
-                UniqueNameHash.Get($"RedPower{i}_{j}").GetComponent<TMP_Text>().text = loc.power[PlayerColor.Red].ToString();
-                UniqueNameHash.Get($"BluePower{i}_{j}").GetComponent<TMP_Text>().text = loc.power[PlayerColor.Blue].ToString();
-            }
-            i++;
-        }
-        
+
+    private void ShowPower()
+    {
         UniqueNameHash.Get("PointOverview").gameObject.SetActive(true);
+        
+        for (int index = 0; index < LocationManager.instance.GameLocations.Count; index++)
+        {
+            LocationDefinition loc = LocationManager.instance.GameLocations[index];
+            OnSpyCardPlayed?.Invoke(loc, index);
+        }
     }
-    
-    public void HidePower(){
-        UniqueNameHash.Get("PointOverview").gameObject.SetActive(false);
+
+    private void HidePower(){
+       UniqueNameHash.Get("PointOverview").gameObject.SetActive(false);
     }
 
     private bool CheckEndGame(){

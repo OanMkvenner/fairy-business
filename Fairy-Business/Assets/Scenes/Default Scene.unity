@@ -291,7 +291,7 @@ PrefabInstance:
     - target: {fileID: 3658742180197695854, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
       propertyPath: m_Name
-      value: PowerPoints2B
+      value: PowerPoints1B
       objectReference: {fileID: 0}
     - target: {fileID: 4794896034814452937, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
@@ -607,10 +607,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedPower1_1
       objectReference: {fileID: 0}
+    - target: {fileID: 3202020465325476187, guid: 69605e4655f2a5f4ea38064384133d2b,
+        type: 3}
+      propertyPath: line
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3658742180197695854, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
       propertyPath: m_Name
-      value: PowerPoints1B
+      value: PowerPoints2B
       objectReference: {fileID: 0}
     - target: {fileID: 4794896034814452937, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
@@ -1378,10 +1383,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedPower0_1
       objectReference: {fileID: 0}
+    - target: {fileID: 3202020465325476187, guid: 69605e4655f2a5f4ea38064384133d2b,
+        type: 3}
+      propertyPath: line
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3658742180197695854, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
       propertyPath: m_Name
-      value: PowerPoints0B
+      value: PowerPoints3B
       objectReference: {fileID: 0}
     - target: {fileID: 4794896034814452937, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
@@ -2360,7 +2370,7 @@ PrefabInstance:
     - target: {fileID: 3658742180197695854, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
       propertyPath: m_Name
-      value: PowerPoints2R
+      value: PowerPoints1R
       objectReference: {fileID: 0}
     - target: {fileID: 4794896034814452937, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
@@ -5233,12 +5243,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5987268651435471401}
-  - {fileID: 271127901}
-  - {fileID: 1867951871}
-  - {fileID: 62480576}
   - {fileID: 520685144}
   - {fileID: 28693503}
+  - {fileID: 1867951871}
+  - {fileID: 62480576}
+  - {fileID: 5987268651435471401}
+  - {fileID: 271127901}
   m_Father: {fileID: 1311465866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7158,7 +7168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1495608266
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8993,10 +9003,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedPower1_0
       objectReference: {fileID: 0}
+    - target: {fileID: 3202020465325476187, guid: 69605e4655f2a5f4ea38064384133d2b,
+        type: 3}
+      propertyPath: line
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3658742180197695854, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
       propertyPath: m_Name
-      value: PowerPoints1R
+      value: PowerPoints2R
       objectReference: {fileID: 0}
     - target: {fileID: 4794896034814452937, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
@@ -10785,7 +10800,7 @@ MonoBehaviour:
   cardInput: {fileID: 1781368454}
   soundsContainer: {fileID: 200381881}
   ScanEffect: {fileID: 990261458}
-  maxRoundCount: 2
+  maxRoundCount: 5
   locationSelectButton: {fileID: 1269899575}
   turnRoundUIs:
   - {fileID: 1587304210}
@@ -11230,10 +11245,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedPower0_0
       objectReference: {fileID: 0}
+    - target: {fileID: 3202020465325476187, guid: 69605e4655f2a5f4ea38064384133d2b,
+        type: 3}
+      propertyPath: line
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3658742180197695854, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}
       propertyPath: m_Name
-      value: PowerPoints0R
+      value: PowerPoints3R
       objectReference: {fileID: 0}
     - target: {fileID: 4794896034814452937, guid: 69605e4655f2a5f4ea38064384133d2b,
         type: 3}

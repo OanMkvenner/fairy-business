@@ -34,10 +34,6 @@ namespace Locations
         public void CreateGameLocations()
         {
             GameLocations = new List<LocationDefinition>();
-            
-            // apply the power setups of 5-3, 4-4 and 3-5 randomly over the locations
-            List<int> ints = new List<int>{5,4,3};
-            Utilities.ShuffleList(ints);
 
             for (int index = 0; index < SelectedLocations.Count; index++)
             {
@@ -46,9 +42,6 @@ namespace Locations
                 gameLocationDefinition.InitializeLocationDefinition(locationDefinition.LocationData);
                 gameLocationDefinition.IsSelected = true;
 
-                int powerRed = ints[index];
-                gameLocationDefinition.SetPlayerPower(PlayerColor.Red, powerRed);
-                gameLocationDefinition.SetPlayerPower(PlayerColor.Blue, (8 - powerRed));
                 GameLocations.Add(gameLocationDefinition);
             }
 
@@ -117,18 +110,6 @@ namespace Locations
         }
 
         /// <summary>
-        /// Sets Player Owner at the start of the game and then shuffles the locations.
-        /// </summary>
-        private void AssignLocationOwner()
-        {
-            GameLocations[0].currentOwner = PlayerColor.Blue;
-            GameLocations[1].currentOwner = PlayerColor.Red;
-            GameLocations[2].currentOwner = PlayerColor.Neutral;
-            
-            GameLocations = GameLocations.Shuffled();
-        }
-
-        /// <summary>
         /// Assigns Background Color and PlayerLine.
         /// </summary>
         private void AssignBackgroundColorAndPlayerLine()
@@ -139,6 +120,24 @@ namespace Locations
             GameLocations[1].PlayerLine = lines[1];
             GameLocations[2].SetBackgroundColor(lineColors[2]);
             GameLocations[2].PlayerLine = lines[2];
+        }
+        
+        /// <summary>
+        /// Sets Player Owner at the start of the game and then shuffles the locations.
+        /// </summary>
+        private void AssignLocationOwner()
+        {
+            GameLocations[0].currentOwner = PlayerColor.Blue;
+            GameLocations[0].AddPlayerPower(PlayerColor.Blue, 5);
+            GameLocations[0].AddPlayerPower(PlayerColor.Red, 3);
+            
+            GameLocations[1].currentOwner = PlayerColor.Red;
+            GameLocations[1].AddPlayerPower(PlayerColor.Red, 5);
+            GameLocations[1].AddPlayerPower(PlayerColor.Blue, 3);
+            
+            GameLocations[2].currentOwner = PlayerColor.Neutral;
+            GameLocations[2].AddPlayerPower(PlayerColor.Red, 4);
+            GameLocations[2].AddPlayerPower(PlayerColor.Blue, 4);
         }
 
         private void SetUpLocations()

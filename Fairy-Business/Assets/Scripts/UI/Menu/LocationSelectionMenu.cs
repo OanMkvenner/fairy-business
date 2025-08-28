@@ -8,6 +8,7 @@ namespace UI.Menu
     public class LocationSelectionMenu : MenuElement
     {
         [SerializeField] private Button startGameButton;
+        [SerializeField] private Button randomLocationButton;
 
         [SerializeField] private GameSession gameSession;
         [SerializeField] private Transform locationsParent;
@@ -16,6 +17,8 @@ namespace UI.Menu
         private void Awake()
         {
             startGameButton.onClick.AddListener(StartNewGame);
+            randomLocationButton.onClick.AddListener(PickRandomLocations);
+            
         }
 
         public override void OpenMenu()
@@ -27,6 +30,8 @@ namespace UI.Menu
         protected override void CloseMenu()
         {
             base.CloseMenu();
+            
+            LocationManager.instance.ResetSelectedLocations();
             
             foreach (Transform child in locationsParent.transform) {
                 GameObject.Destroy(child.gameObject);
@@ -45,6 +50,12 @@ namespace UI.Menu
         private void StartNewGame()
         {
             UiManager.CallbackUiEvent("EnoughLocationsSelected");
+            CloseMenu();
+        }
+
+        private void PickRandomLocations()
+        {
+            LocationManager.instance.PickRandomLocations();    
         }
     }
 }

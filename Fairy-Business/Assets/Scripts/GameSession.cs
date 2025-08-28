@@ -62,7 +62,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession> {
 
     public void ResetGamesession(){
         
-        LocationManager.instance.ResetLocations();
+        LocationManager.instance.ResetGameLocations();
         
         for (int i = 0; i < sceneLocationDefinition.Count; i++){
             

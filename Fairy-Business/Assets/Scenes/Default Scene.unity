@@ -2813,6 +2813,7 @@ MonoBehaviour:
   menuContent: {fileID: 2013878327}
   closeButton: {fileID: 606012917}
   startGameButton: {fileID: 199928300}
+  randomLocationButton: {fileID: 2059871381}
   gameSession: {fileID: 2108983916}
   locationsParent: {fileID: 1371387478}
   locationUI: {fileID: 961676662541233311, guid: 8e816724298be504ab195c492dacc138,
@@ -4042,7 +4043,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 21de83c733ff84c4e9789fb9f4852964, type: 2}
   - {fileID: 11400000, guid: 2cca2194be151a24483ad5a0f6086582, type: 2}
   - {fileID: 11400000, guid: f7bdecf74d5482a48972cae7f005fcf4, type: 2}
-  randomLocationButton: {fileID: 2059871381}
   locationDefinitionPrefab: {fileID: 4396691611671439852, guid: 6db7f4253bb6f4241a69bd8efb667866,
     type: 3}
   locationsParent: {fileID: 1682415736}

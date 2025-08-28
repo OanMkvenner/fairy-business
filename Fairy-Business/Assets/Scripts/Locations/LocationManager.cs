@@ -15,7 +15,6 @@ namespace Locations
         public List<LocationDefinition> GameLocations { get; set; } 
 
         [SerializeField] private List<LocationData> locationDataCollection;
-        [SerializeField] private Button randomLocationButton;
         [SerializeField] private LocationDefinition locationDefinitionPrefab;
         [SerializeField] private Transform locationsParent;
 
@@ -29,7 +28,6 @@ namespace Locations
 
         private void Awake()
         {
-            randomLocationButton.onClick.AddListener(PickRandomLocations);
             SetUpLocations();
         }
 
@@ -63,12 +61,22 @@ namespace Locations
             }
         }
 
-        public void ResetLocations()
+        public void ResetGameLocations()
         {
             if (GameLocations == null)
                 return;
             
             GameLocations.Clear();
+        }
+
+        public void ResetSelectedLocations()
+        {
+            foreach (LocationDefinition locationDefinition in SelectedLocations)
+            {
+                locationDefinition.IsSelected = false;
+            }
+            
+            SelectedLocations.Clear();
         }
         
         public void SetupSelectLocation(LocationDefinition locationDefinition){
@@ -85,6 +93,19 @@ namespace Locations
             }
             
             CheckEnoughLocationsSelected();
+        }
+
+        public void PickRandomLocations()
+        {
+            SelectedLocations.Clear();
+
+            List<LocationDefinition> shuffledLocations = allAvailableLocations.Shuffled();
+
+            // Nimm die ersten 3 (oder weniger, falls die Liste kürzer ist)
+            for (int i = 0; i < Math.Min(3, shuffledLocations.Count); i++)
+            {
+                SetupSelectLocation(shuffledLocations[i]);
+            }
         }
 
         public void UpdateLocationAnimation()
@@ -127,19 +148,6 @@ namespace Locations
                 LocationDefinition locationDefinition = Instantiate(locationDefinitionPrefab, locationsParent);
                 locationDefinition.InitializeLocationDefinition(locationData);
                 allAvailableLocations.Add(locationDefinition);
-            }
-        }
-
-        private void PickRandomLocations()
-        {
-            SelectedLocations.Clear();
-
-            List<LocationDefinition> shuffledLocations = allAvailableLocations.Shuffled();
-
-            // Nimm die ersten 3 (oder weniger, falls die Liste kürzer ist)
-            for (int i = 0; i < Math.Min(3, shuffledLocations.Count); i++)
-            {
-                SetupSelectLocation(shuffledLocations[i]);
             }
         }
 

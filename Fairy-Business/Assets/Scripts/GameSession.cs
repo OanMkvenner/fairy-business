@@ -31,8 +31,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
     [SerializeField] private int maxRoundCount = 5;
 
     [Space]
-    [SerializeField] private Button locationSelectButton;
-
     [SerializeField] private  List<TurnRoundUI> turnRoundUIs;
 
     private int turnCounter;
@@ -46,9 +44,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         cardInput.onStartEvaluation.AddListener(NewCard);
         cardInput.onAcceptCardEvaluation.AddListener(IngredientPaused);
         cardInput.onCancelCurrentEvaluation.AddListener(IngredientPaused);
-        
-        locationSelectButton.onClick.AddListener(OpenLocationsSelectionsMenu);
-        locationSelectButton.gameObject.SetActive(false);
     }
 
     private void IngredientPaused(ScanResult result){
@@ -127,11 +122,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         
         LocationManager.instance.UpdateLocationAnimation();
     }
-
-    private void OpenLocationsSelectionsMenu()
-    {
-        MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);
-    }
     
     public struct Card
     {
@@ -139,6 +129,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         public string effect;
         public string value;
     }
+    
     private void NewCard(ScanResult result){
         Debug.Log($"New Card: {result.name}");
         string[] labelData = result.name.Split('_');

@@ -230,7 +230,7 @@ MonoBehaviour:
       _dynamic: 0
   active: 0
   assignedTweenAnimationTarget:
-    serializedGuid: 9e7ba31f61983e4188d44cb0ab268f18
+    serializedGuid: 2e7c9f80d3b6c1489861ce14c890c0b4
     cachedName: 
     cachedScene: {fileID: 0}
   tweenMode: 4
@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: Method Caller
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1576, y: 72}
+  position: {x: 1512, y: 56}
   ports:
     keys:
     - enter
@@ -325,6 +325,9 @@ MonoBehaviour:
       connections:
       - fieldName: passThrough
         node: {fileID: -2522003997542046518}
+        reroutePoints: []
+      - fieldName: WinnerText
+        node: {fileID: 6096576609133860768}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -944,6 +947,9 @@ MonoBehaviour:
       connections:
       - fieldName: enter
         node: {fileID: 4121228633968905705}
+        reroutePoints: []
+      - fieldName: enter
+        node: {fileID: -1604492382438398534}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: View_SelectionMenu
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1096, y: 744}
+  position: {x: 424, y: 664}
   ports:
     keys:
     - enter
@@ -122,8 +122,8 @@ MonoBehaviour:
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: passThrough
-        node: {fileID: -2522003997542046518}
+      - fieldName: MainMenu
+        node: {fileID: 4703662983172750088}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -133,7 +133,10 @@ MonoBehaviour:
       _node: {fileID: -3239347718224579117}
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: enter
+        node: {fileID: -2522003997542046518}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -156,7 +159,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
-  active: 1
+  active: 0
   drb: {fileID: 0}
   assignedCanvasRef:
     serializedGuid: 2e7c9f80d3b6c1489861ce14c890c0b4
@@ -175,7 +178,7 @@ MonoBehaviour:
   m_Name: Tween Animation
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 472, y: 648}
+  position: {x: 680, y: 728}
   ports:
     keys:
     - cancelAnims
@@ -206,8 +209,8 @@ MonoBehaviour:
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: MainMenu
-        node: {fileID: 4703662983172750088}
+      - fieldName: passThrough
+        node: {fileID: -3239347718224579117}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -221,12 +224,6 @@ MonoBehaviour:
       - fieldName: enter
         node: {fileID: -1604492382438398534}
         reroutePoints: []
-      - fieldName: enter
-        node: {fileID: -3239347718224579117}
-        reroutePoints: []
-      - fieldName: enter
-        node: {fileID: -2379768960187410302}
-        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -236,10 +233,10 @@ MonoBehaviour:
     serializedGuid: 9e7ba31f61983e4188d44cb0ab268f18
     cachedName: 
     cachedScene: {fileID: 0}
-  tweenMode: 0
-  tweenToFromMode: 0
+  tweenMode: 4
+  tweenToFromMode: 1
   easeMode: 4
-  x: 0
+  x: -1000
   y: 0
   z: 0
   k: 0
@@ -257,7 +254,7 @@ MonoBehaviour:
   m_Name: View Controller
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 696, y: 520}
+  position: {x: 664, y: 504}
   ports:
     keys:
     - enter
@@ -269,8 +266,11 @@ MonoBehaviour:
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: passThrough
+      - fieldName: animFinished
         node: {fileID: -2522003997542046518}
+        reroutePoints: []
+      - fieldName: animFinished
+        node: {fileID: 1922098010654907237}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -506,11 +506,88 @@ MonoBehaviour:
   - {fileID: -2522003997542046518}
   - {fileID: -3239347718224579117}
   - {fileID: -2379768960187410302}
+  - {fileID: 1922098010654907237}
   _startNodes: []
   queuedRepaint: 0
   parentSubgraphNode: {fileID: 6974908193880419190, guid: a7b5c991d3e35c1409739ca87195a515,
     type: 2}
   previouselySelectedNode: {fileID: 4118982572493241412}
+--- !u!114 &1922098010654907237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75a9e2009f060824a9fecbf73b5b220e, type: 3}
+  m_Name: Tween Animation
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: 456}
+  ports:
+    keys:
+    - cancelAnims
+    - animFinished
+    - enter
+    - passThrough
+    values:
+    - _fieldName: cancelAnims
+      _node: {fileID: 1922098010654907237}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+TargetNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: animFinished
+      _node: {fileID: 1922098010654907237}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: -2379768960187410302}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 1922098010654907237}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: MainMenu
+        node: {fileID: 4703662983172750088}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passThrough
+      _node: {fileID: 1922098010654907237}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  active: 0
+  assignedTweenAnimationTarget:
+    serializedGuid: 9e7ba31f61983e4188d44cb0ab268f18
+    cachedName: 
+    cachedScene: {fileID: 0}
+  tweenMode: 5
+  tweenToFromMode: 0
+  easeMode: 4
+  x: 1000
+  y: 0
+  z: 0
+  k: 0
+  duration: 1
 --- !u!114 &4118982572493241412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,7 +766,10 @@ MonoBehaviour:
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: enter
-        node: {fileID: -2522003997542046518}
+        node: {fileID: -3239347718224579117}
+        reroutePoints: []
+      - fieldName: enter
+        node: {fileID: 1922098010654907237}
         reroutePoints: []
       _direction: 1
       _connectionType: 0

@@ -1,10 +1,14 @@
+using JetBrains.Annotations;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.UI;
+using Action = System.Action;
 
 namespace UI.Menu
 {
     public abstract class MenuElement : MonoBehaviour
     {
+        public static event Action OnMenuClosed;
         public MenuIdentifier MenuIdentifier => menuIdentifier;
         
         [Space]
@@ -38,6 +42,7 @@ namespace UI.Menu
         protected virtual void CloseMenu()
         {
             isOpen = false;
+            OnMenuClosed?.Invoke();
             menuContent.SetActive(false);
         }
     }

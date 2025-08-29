@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,6 +7,7 @@ namespace UI.Menu
 {
     public class MenuManager : MonobheaviourSingletonCustom<MenuManager>
     {
+        public static event Action OnMenuOpened;
         private static readonly List<MenuElement> menuElements = new List<MenuElement>();
 
         public void RegisterMenuElement(MenuElement menuElement)
@@ -24,6 +26,7 @@ namespace UI.Menu
             }
             
             menuElement.OpenMenu();
+            OnMenuOpened?.Invoke();
         }
     }
 }

@@ -1,3 +1,4 @@
+using Locations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,8 @@ namespace UI.Menu
         
         private void ReturnToStartScreen()
         {
+            CloseMenu();
+            LocationManager.instance.ResetGameLocations();
             UiManager.CallbackUiEvent("MainMenu");
         }
     }

@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerPowerUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerPowerUI.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PowerPoints0B.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PowerPoints0B.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TurnRoundUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TurnRoundUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomGauge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomGauge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

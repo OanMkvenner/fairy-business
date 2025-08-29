@@ -17,5 +17,15 @@ namespace UI
         {
             finishedRound.SetActive(true);
         }
+
+        public void ResetUI()
+        {
+            foreach (GameObject turn in turns)
+            {
+                turn.SetActive(false);
+            }
+            
+            finishedRound.SetActive(false);
+        }
     }
 }

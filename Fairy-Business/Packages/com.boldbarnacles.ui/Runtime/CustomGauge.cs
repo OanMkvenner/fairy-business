@@ -32,7 +32,10 @@ public class CustomGauge : UIBehaviour, IDataReceiver
     protected CustomGauge(){}
     public virtual void LayoutComplete(){}
     public virtual void GraphicUpdateComplete(){}
+    
+#if UNITY_EDITOR
     override protected void Reset(){} // similar to "awake" but it also executes even if disabled (i think)
+#endif
     public virtual void Rebuild(CanvasUpdate executing)
     {
 #if UNITY_EDITOR

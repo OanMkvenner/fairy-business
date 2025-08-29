@@ -68,6 +68,11 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
     public void ResetGamesession(){
         
         LocationManager.instance.ResetGameLocations();
+
+        foreach (TurnRoundUI turnRoundUI in turnRoundUIs)
+        {
+            turnRoundUI.ResetUI();
+        }
         
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
         roundCounter = 0; // first "NextTurn" action iterates this up to 1

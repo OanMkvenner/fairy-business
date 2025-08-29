@@ -287,9 +287,13 @@ public class CustomButton : UIBehaviour
 		}
 #endif
     }
+    
+#if UNITY_EDITOR
 	override protected void Reset(){
         AssignViewNodePortConnecter();
     }
+    
+#endif
     public enum ViewNodePortVariant
     {
         OnClick = -1,

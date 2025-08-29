@@ -59,6 +59,10 @@ namespace Locations
             if (GameLocations == null)
                 return;
             
+            foreach (Transform child in gameFieldParent.transform) {
+                Destroy(child.gameObject);
+            }
+            
             GameLocations.Clear();
         }
 

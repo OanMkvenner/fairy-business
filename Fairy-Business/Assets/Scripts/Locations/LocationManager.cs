@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using HelperClasses;
 using Player;
+using UI.Buttons;
 using UI.Menu.BaseMenu;
 using UnityEngine;
 
@@ -37,19 +38,18 @@ namespace Locations
             {
                 LocationDefinition locationDefinition = SelectedLocations[index];
                 LocationDefinition gameLocationDefinition = Instantiate(locationDefinitionPrefab, gameFieldParent);
-                gameLocationDefinition.InitializeLocationDefinition(locationDefinition.LocationData);
+                gameLocationDefinition.InitializeLocationDefinition(locationDefinition.LocationData, true);
                 gameLocationDefinition.IsSelected = true;
 
                 GameLocations.Add(gameLocationDefinition);
             }
-
+            
             AssignLocationOwner();
             AssignBackgroundColorAndPlayerLine();
 
             foreach (LocationDefinition gameLocation in GameLocations)
             {
                 gameLocation.SetPosition(gameLocation.PlayerLine.neutralPosition.position);
-                //Remove onclick function
             }
         }
 
@@ -148,7 +148,7 @@ namespace Locations
             foreach (LocationData locationData in locationDataCollection)
             {
                 LocationDefinition locationDefinition = Instantiate(locationDefinitionPrefab, locationsParent);
-                locationDefinition.InitializeLocationDefinition(locationData);
+                locationDefinition.InitializeLocationDefinition(locationData, false);
                 allAvailableLocations.Add(locationDefinition);
             }
         }

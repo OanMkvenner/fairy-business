@@ -5,28 +5,21 @@ using Player;
 using UI.Menu.BaseMenu;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 namespace UI.Buttons
 {
     [RequireComponent(typeof(EventTrigger))]
     public class LocationHoverButton : MonoBehaviour
     {
+        [SerializeField] private bool inGameView;
         [SerializeField] private LocationDefinition locationDefinition;
         [SerializeField] private PlayerColor playerColor;
-        [SerializeField] private bool inGameView;
-
+        
         private LineIdentifier line => locationDefinition.PlayerLine.line;
         private Coroutine longPressCoroutine;
         private bool isLongPressTriggered = false;
         private readonly float longPressedTime = 0.3f;
-
-        private void Awake()
-        {
-            if (!inGameView)
-            {
-                this.gameObject.SetActive(false);
-            }
-        }
 
         public void OnPointerDown(BaseEventData eventData)
         {
@@ -36,7 +29,7 @@ namespace UI.Buttons
         
         public void OnPointerUp(BaseEventData eventData)
         {
-            MenuManager.instance.CloseMenu(MenuIdentifier.SimpleSelectionMenu);
+            MenuManager.instance.CloseMenu(MenuIdentifier.HoverSelectionMenu);
             
             if (longPressCoroutine != null)
             {
@@ -55,7 +48,7 @@ namespace UI.Buttons
             LocationHoverManager.instance.HoveredLocation = locationDefinition;
             LocationHoverManager.instance.CurrentLine = line;
             LocationHoverManager.instance.CurrentPlayerColor = playerColor;
-            MenuManager.instance.OpenMenu(MenuIdentifier.SimpleSelectionMenu);
+            MenuManager.instance.OpenMenu(MenuIdentifier.HoverSelectionMenu);
         }
         
         private IEnumerator LongPressDetection()

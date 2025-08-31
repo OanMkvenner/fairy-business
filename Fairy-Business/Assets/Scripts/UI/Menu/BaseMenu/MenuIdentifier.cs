@@ -6,7 +6,6 @@ namespace UI.Menu.BaseMenu
         LocationSelectionMenu = 1,
         PauseMenu = 2,
         WinScreen = 3,
-        SimpleSelectionMenu = 4,
-        SimpleSelectionGameviewMenu = 5,
+        HoverSelectionMenu = 4,
     }
 }

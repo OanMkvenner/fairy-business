@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using DG.Tweening;
+using NUnit.Framework;
 using Player;
 using TMPro;
 using UI;
+using UI.Buttons;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -21,6 +23,8 @@ namespace Locations
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private Image backgroundColor;
+        [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
+        [SerializeField] private LocationHoverButton locationHoverButton;
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;
@@ -49,7 +53,7 @@ namespace Locations
             rectTransform = GetComponent<RectTransform>();
         }
 
-        public void InitializeLocationDefinition(LocationData data)
+        public void InitializeLocationDefinition(LocationData data, bool isGameView)
         {
             this.LocationData = data;
             this.imageEnabled = data.imageEnabled;
@@ -58,6 +62,18 @@ namespace Locations
             this.locationType = data.locationType;
             this.victoryPoints = data.VictoryPoints;
             description.text = locationType.ToString();
+
+            if (isGameView)
+            {
+                foreach (LocationHoverButton locationHoverButton in locationHoverButtons)
+                {
+                    locationHoverButton.gameObject.SetActive(true);
+                }
+            }
+            else
+            {
+                locationHoverButton.gameObject.SetActive(true);
+            }
         }
 
         public void SetBackgroundColor(Color color)

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Locations;
+using UI.Menu.BaseMenu;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +28,7 @@ namespace UI.Menu
             CreateLocationUICards(LocationManager.instance.SelectedLocations);
         }
 
-        protected override void CloseMenu()
+        public override void CloseMenu()
         {
             base.CloseMenu();
             
@@ -38,9 +39,9 @@ namespace UI.Menu
             }
         }
 
-        private void CreateLocationUICards(List<LocationDefinition> locationDefenitions)
+        private void CreateLocationUICards(List<LocationDefinition> locationDefinitions)
         {
-            foreach (LocationDefinition locationDefenition in locationDefenitions)
+            foreach (LocationDefinition locationDefenition in locationDefinitions)
             {
                 LocationUI newLocationUI = Instantiate(locationUI, locationsParent);
                 locationDefenition.InitializeLocationUI(newLocationUI);

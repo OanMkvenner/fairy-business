@@ -8,33 +8,29 @@ using UnityEngine.UI;
 
 namespace Locations
 {
-    [RequireComponent(typeof(Button),(typeof(RectTransform)))]
+    [RequireComponent((typeof(RectTransform)))]
     public class LocationDefinition : MonoBehaviour, ITweenAnimation {
         public LocationsType LocationType => locationType;
-
         public int VictoryPoints => victoryPoints;
-        
         public LocationData LocationData { get; private set; }
-        
         public PlayerLine PlayerLine { get; set; }
-        
-        private Dictionary<PlayerColor, int> power = new();
+
         public PlayerColor currentOwner;
 
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private Image backgroundColor;
-        
-        private Button selectionButton;
+
         private Sprite imageEnabled;
         private Sprite imageDisabled;
         private string locationText;
         private LocationsType locationType;
         private int victoryPoints = 3;
         private LocationUI currenLocatioUI;
-        
+
         private RectTransform rectTransform;
 
+        private Dictionary<PlayerColor, int> power = new();
         private bool isSelected;
 
         public bool IsSelected
@@ -49,9 +45,7 @@ namespace Locations
 
         private void Awake()
         {
-            selectionButton = GetComponent<Button>();
             rectTransform = GetComponent<RectTransform>();
-            selectionButton.onClick.AddListener(OnButtonClicked);
         }
 
         public void InitializeLocationDefinition(LocationData data)
@@ -141,11 +135,7 @@ namespace Locations
                 currentOwner = PlayerColor.Blue;
             }
         }
-        private void OnButtonClicked()
-        {
-            LocationManager.instance.SetupSelectLocation(this);
-        }
-
+        
         private void UpdateVisuals(){
 
             if (isSelected)

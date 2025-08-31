@@ -48,6 +48,8 @@ namespace Locations
             }
         }
         
+        private void DecoupleButtons(){}
+        
         private Transform GetTargetTransform(PlayerColor owner, PlayerLine playerLine)
         {
             return owner switch

@@ -9,6 +9,7 @@ using Locations;
 using Player;
 using UI;
 using UI.Menu;
+using UI.Menu.BaseMenu;
 
 
 public class GameSession : MonobheaviourSingletonCustom<GameSession>

@@ -1,10 +1,8 @@
-using JetBrains.Annotations;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.UI;
 using Action = System.Action;
 
-namespace UI.Menu
+namespace UI.Menu.BaseMenu
 {
     public abstract class MenuElement : MonoBehaviour
     {
@@ -39,7 +37,7 @@ namespace UI.Menu
             menuContent.SetActive(true);
         }
 
-        protected virtual void CloseMenu()
+        public virtual void CloseMenu()
         {
             isOpen = false;
             OnMenuClosed?.Invoke();

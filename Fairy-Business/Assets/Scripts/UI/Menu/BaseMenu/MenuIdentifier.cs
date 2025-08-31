@@ -1,4 +1,4 @@
-namespace UI.Menu
+namespace UI.Menu.BaseMenu
 {
     public enum MenuIdentifier
     {
@@ -6,5 +6,6 @@ namespace UI.Menu
         LocationSelectionMenu = 1,
         PauseMenu = 2,
         WinSceen = 3,
+        SimpleSelectionMenu = 4,
     }
 }

@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using HelperClasses;
 using Player;
-using UI.Menu;
+using UI.Menu.BaseMenu;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Locations
 {
     public class LocationManager : MonobheaviourSingletonCustom<LocationManager>
     {
         public List<LocationDefinition> SelectedLocations { get; private set; } = new List<LocationDefinition>();
+        public LocationDefinition HoveredLocation { get; set; }
 
         public List<LocationDefinition> GameLocations { get; set; } 
 
@@ -51,6 +51,7 @@ namespace Locations
             foreach (LocationDefinition gameLocation in GameLocations)
             {
                 gameLocation.SetPosition(gameLocation.PlayerLine.neutralPosition.position);
+                //Remove onclick function
             }
         }
 

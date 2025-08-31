@@ -1,7 +1,8 @@
+using UI.Menu.BaseMenu;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Menu
+namespace UI.Menu.Buttons
 {
     [RequireComponent(typeof(Button))]
     public class OpenMenuButton : MonoBehaviour

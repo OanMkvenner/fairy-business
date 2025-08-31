@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace UI.Menu
+namespace UI.Menu.BaseMenu
 {
     public class MenuManager : MonobheaviourSingletonCustom<MenuManager>
     {
@@ -27,6 +27,19 @@ namespace UI.Menu
             
             menuElement.OpenMenu();
             OnMenuOpened?.Invoke();
+        }
+
+        public void CloseMenu(MenuIdentifier menuIdentifier)
+        {
+            MenuElement menuElement = menuElements.FirstOrDefault(a => a.MenuIdentifier == menuIdentifier);
+
+            if (menuElement == null)
+            {
+                Debug.LogError("[MenuManager]Could not find Menu with identifier: " + menuIdentifier);
+                return;
+            }
+            
+            menuElement.CloseMenu();
         }
     }
 }

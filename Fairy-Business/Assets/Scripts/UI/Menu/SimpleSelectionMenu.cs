@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Locations;
 using UI.Menu.BaseMenu;
 using UnityEngine;
@@ -6,19 +7,32 @@ namespace UI.Menu
 {
     public class SimpleSelectionMenu : MenuElement
     {
-        [SerializeField] private Transform selectionParent;
-        [SerializeField] private LocationUI locationUIPrefab;
+        [SerializeField] protected List<Transform> hoverParent;
+        [SerializeField] protected LocationUI locationUIPrefab;
 
         public override void OpenMenu()
         {
             base.OpenMenu();
-            InitializeUI(LocationManager.instance.HoveredLocation);
+            InitializeUI(LocationHoverManager.instance.HoveredLocation);
         }
 
         private void InitializeUI(LocationDefinition locationDefinition)
         {
-            LocationUI locationUI = Instantiate(locationUIPrefab, selectionParent);
+            int index = LocationHoverManager.instance.LineIndex();
+            LocationUI locationUI = Instantiate(locationUIPrefab, hoverParent[index]);
             locationDefinition.InitializeLocationUI(locationUI);
+        }
+
+        public override void CloseMenu()
+        {
+            base.CloseMenu();
+            
+            foreach (Transform parent in hoverParent)
+            {
+                foreach (Transform child in parent.transform) {
+                    Destroy(child.gameObject);
+                }
+            }
         }
     }
 }

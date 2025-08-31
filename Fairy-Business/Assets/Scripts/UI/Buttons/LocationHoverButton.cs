@@ -1,22 +1,31 @@
+using System;
 using System.Collections;
 using Locations;
+using Player;
 using UI.Menu.BaseMenu;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace UI
+namespace UI.Buttons
 {
-    [RequireComponent(typeof(LocationDefinition))]
-    public class LocationButton : MonoBehaviour
+    [RequireComponent(typeof(EventTrigger))]
+    public class LocationHoverButton : MonoBehaviour
     {
+        [SerializeField] private LocationDefinition locationDefinition;
+        [SerializeField] private PlayerColor playerColor;
+        [SerializeField] private bool inGameView;
+
+        private LineIdentifier line => locationDefinition.PlayerLine.line;
         private Coroutine longPressCoroutine;
         private bool isLongPressTriggered = false;
-        private float longPressedTime = 0.3f;
-        private LocationDefinition locationDefinition;
+        private readonly float longPressedTime = 0.3f;
 
         private void Awake()
         {
-            locationDefinition = GetComponent<LocationDefinition>();
+            if (!inGameView)
+            {
+                this.gameObject.SetActive(false);
+            }
         }
 
         public void OnPointerDown(BaseEventData eventData)
@@ -33,12 +42,20 @@ namespace UI
             {
                 StopCoroutine(longPressCoroutine);
                 
-                if (!isLongPressTriggered)
+                if (!isLongPressTriggered && !inGameView)
                 {
                     // Kurz-Druck-Aktion (z. B. einfacher Klick)
                     LocationManager.instance.SetupSelectLocation(locationDefinition);
                 }
             }
+        }
+
+        private void LongPressedAction()
+        {
+            LocationHoverManager.instance.HoveredLocation = locationDefinition;
+            LocationHoverManager.instance.CurrentLine = line;
+            LocationHoverManager.instance.CurrentPlayerColor = playerColor;
+            MenuManager.instance.OpenMenu(MenuIdentifier.SimpleSelectionMenu);
         }
         
         private IEnumerator LongPressDetection()
@@ -46,8 +63,7 @@ namespace UI
             yield return new WaitForSeconds(longPressedTime); // Wartezeit für "Lang-Druck"
             isLongPressTriggered = true;
             // Lang-Druck-Aktion (z. B. spezielles Feature)
-            LocationManager.instance.HoveredLocation = locationDefinition;
-            MenuManager.instance.OpenMenu(MenuIdentifier.SimpleSelectionMenu);
+            LongPressedAction();
         }
     }
 }

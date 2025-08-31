@@ -10,8 +10,6 @@ namespace Locations
     public class LocationManager : MonobheaviourSingletonCustom<LocationManager>
     {
         public List<LocationDefinition> SelectedLocations { get; private set; } = new List<LocationDefinition>();
-        public LocationDefinition HoveredLocation { get; set; }
-
         public List<LocationDefinition> GameLocations { get; set; } 
 
         [SerializeField] private List<LocationData> locationDataCollection;
@@ -132,15 +130,15 @@ namespace Locations
         /// </summary>
         private void AssignLocationOwner()
         {
-            GameLocations[0].currentOwner = PlayerColor.Blue;
+            GameLocations[0].CurrentOwner = PlayerColor.Blue;
             GameLocations[0].AddPlayerPower(PlayerColor.Blue, 5);
             GameLocations[0].AddPlayerPower(PlayerColor.Red, 3);
             
-            GameLocations[1].currentOwner = PlayerColor.Red;
+            GameLocations[1].CurrentOwner = PlayerColor.Red;
             GameLocations[1].AddPlayerPower(PlayerColor.Red, 5);
             GameLocations[1].AddPlayerPower(PlayerColor.Blue, 3);
             
-            GameLocations[2].currentOwner = PlayerColor.Neutral;
+            GameLocations[2].CurrentOwner = PlayerColor.Neutral;
             GameLocations[2].AddPlayerPower(PlayerColor.Red, 4);
             GameLocations[2].AddPlayerPower(PlayerColor.Blue, 4);
         }

@@ -27,11 +27,11 @@ namespace Locations
                     return;
                 }
                 
-                Transform targetPositionTransform = GetTargetTransform(location.currentOwner, location.PlayerLine);
+                Transform targetPositionTransform = GetTargetTransform(location.CurrentOwner, location.PlayerLine);
                 
                 if (targetPositionTransform == null)
                 {
-                    Debug.LogWarning($"Ziel-Transform für {location.currentOwner} ist null!");
+                    Debug.LogWarning($"Ziel-Transform für {location.CurrentOwner} ist null!");
                     continue;
                 }
 

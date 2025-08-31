@@ -4,6 +4,7 @@ using Player;
 using TMPro;
 using UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Locations
@@ -15,7 +16,7 @@ namespace Locations
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }
 
-        public PlayerColor currentOwner;
+        [FormerlySerializedAs("currentOwner")] public PlayerColor CurrentOwner;
 
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI description;
@@ -124,15 +125,15 @@ namespace Locations
 
             if (blue == red)
             {
-                currentOwner = PlayerColor.Neutral;
+                CurrentOwner = PlayerColor.Neutral;
             }
             else if (red > blue && red > neutral)
             {
-                currentOwner = PlayerColor.Red;
+                CurrentOwner = PlayerColor.Red;
             }
             else if (blue > red && blue > neutral)
             {
-                currentOwner = PlayerColor.Blue;
+                CurrentOwner = PlayerColor.Blue;
             }
         }
         

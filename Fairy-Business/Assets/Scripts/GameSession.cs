@@ -100,7 +100,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         
         foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
             if (loc.LocationType == location){
-                currentMarketOwner = loc.currentOwner;
+                currentMarketOwner = loc.CurrentOwner;
             }
         }
         
@@ -117,7 +117,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
             
             // on tie, whoever currently owns the special place becomes the new owner! (if its part of the current match, otherwise its Neutral)
             PlayerColor tieLocationOwner = CheckLocationOwner(LocationsType.GingerbreadHouse);
-            loc.currentOwner = tieLocationOwner;
+            loc.CurrentOwner = tieLocationOwner;
             
         }
         
@@ -407,9 +407,9 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         {
             if (loc.LocationType != LocationsType.DragonCave) continue;
             
-            if (loc.currentOwner != PlayerColor.Neutral){
+            if (loc.CurrentOwner != PlayerColor.Neutral){
                     
-                PlayerColor actingPlayer = loc.currentOwner;
+                PlayerColor actingPlayer = loc.CurrentOwner;
                 victoryPointCounters[actingPlayer]++;
             }
         }
@@ -465,7 +465,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
             // apply owned territory points to main score
             
             foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
-                AddVictoryPointsByPlayer(loc.currentOwner, loc.VictoryPoints);
+                AddVictoryPointsByPlayer(loc.CurrentOwner, loc.VictoryPoints);
             }
             
             UpdateVictoryPointDisplay();
@@ -508,6 +508,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
     private void FinishGameAndShowWinner(){
         
         disallowNewCards = true;
-        MenuManager.instance.OpenMenu(MenuIdentifier.WinSceen);
+        MenuManager.instance.OpenMenu(MenuIdentifier.WinScreen);
     }
 }

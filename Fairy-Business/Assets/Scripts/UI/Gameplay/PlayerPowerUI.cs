@@ -1,10 +1,9 @@
-using System;
 using Locations;
 using Player;
 using TMPro;
 using UnityEngine;
 
-namespace UI
+namespace UI.Gameplay
 {
     public class PlayerPowerUI : MonoBehaviour
     {

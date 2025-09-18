@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace UI
+namespace UI.Gameplay
 {
     public class TurnRoundUI : MonoBehaviour
     {

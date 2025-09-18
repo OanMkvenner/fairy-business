@@ -8,6 +8,7 @@ using DG.Tweening;
 using Locations;
 using Player;
 using UI;
+using UI.Gameplay;
 using UI.Menu;
 using UI.Menu.BaseMenu;
 

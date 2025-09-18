@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 4774db294c0272d448e0c1a3f57f920e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6953496714787091428
+    second: BankingBastionAvatarIcon_0
+  - first:
+      213: -4934621776063469053
+    second: BankingBastionAvatarIcon_1
+  - first:
+      213: 3955401224903349547
+    second: BankingBastionAvatarIcon_2
+  - first:
+      213: 4727371645798473041
+    second: BankingBastionAvatarIcon_3
+  - first:
+      213: -6360072116475710802
+    second: BankingBastionAvatarIcon_4
+  - first:
+      213: -2750630241630984389
+    second: BankingBastionAvatarIcon_5
+  - first:
+      213: -3220663254100251431
+    second: BankingBastionAvatarIcon_6
+  - first:
+      213: -330405391000824327
+    second: BankingBastionAvatarIcon_7
+  - first:
+      213: 5857377949797341703
+    second: BankingBastionAvatarIcon_8
+  - first:
+      213: -8749107917121428527
+    second: BankingBastionAvatarIcon_9
+  - first:
+      213: 4625058796824386957
+    second: BankingBastionAvatarIcon_10
+  - first:
+      213: 4416508831070784646
+    second: BankingBastionAvatarIcon_11
+  - first:
+      213: -506419942463991638
+    second: BankingBastionAvatarIcon_12
+  - first:
+      213: 8024879800475429365
+    second: BankingBastionAvatarIcon_13
+  - first:
+      213: 7990555039328854942
+    second: BankingBastionAvatarIcon_14
+  - first:
+      213: -4038920759405834425
+    second: BankingBastionAvatarIcon_15
+  - first:
+      213: -5110387904310223966
+    second: BankingBastionAvatarIcon_16
+  - first:
+      213: 5514342183344041552
+    second: BankingBastionAvatarIcon_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 296
+        width: 1007
+        height: 432
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3fabfbb68cf7060800000000000000
+      internalID: 6953496714787091428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_1
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 531
+        width: 66
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a64d0b3a3b48bb0800000000000000
+      internalID: -4934621776063469053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_2
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 530
+        width: 81
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25528a157864e630800000000000000
+      internalID: 3955401224903349547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_3
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 533
+        width: 73
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d5215177ffa9140800000000000000
+      internalID: 4727371645798473041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_4
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 531
+        width: 76
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea2399f6b1c7cb7a0800000000000000
+      internalID: -6360072116475710802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_5
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 529
+        width: 25
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3763236e5cc3d9d0800000000000000
+      internalID: -2750630241630984389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_6
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 533
+        width: 72
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc633e85d7ed43d0800000000000000
+      internalID: -3220663254100251431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_7
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 530
+        width: 71
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f595852c0a2a6bf0800000000000000
+      internalID: -330405391000824327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_8
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 528
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a50ec2636994150800000000000000
+      internalID: 5857377949797341703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_9
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 395
+        width: 66
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d36b6244bce49680800000000000000
+      internalID: -8749107917121428527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_10
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 392
+        width: 79
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d530a98728f2040800000000000000
+      internalID: 4625058796824386957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_11
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 394
+        width: 68
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c8957d1679a4d30800000000000000
+      internalID: 4416508831070784646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_12
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 392
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa09246deb5d8f8f0800000000000000
+      internalID: -506419942463991638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_13
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 395
+        width: 66
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f9ab8039a91e5f60800000000000000
+      internalID: 8024879800475429365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_14
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 394
+        width: 26
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e936765f87724ee60800000000000000
+      internalID: 7990555039328854942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_15
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 392
+        width: 67
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f0aabe7fed2f7c0800000000000000
+      internalID: -4038920759405834425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_16
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 393
+        width: 69
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abd22be6414419b0800000000000000
+      internalID: -5110387904310223966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BankingBastionAvatarIcon_17
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 394
+        width: 67
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05e6c20eff0e68c40800000000000000
+      internalID: 5514342183344041552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cccf2de745ee8644e9fa7bffb6846bc2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BankingBastionAvatarIcon_0: 6953496714787091428
+      BankingBastionAvatarIcon_1: -4934621776063469053
+      BankingBastionAvatarIcon_10: 4625058796824386957
+      BankingBastionAvatarIcon_11: 4416508831070784646
+      BankingBastionAvatarIcon_12: -506419942463991638
+      BankingBastionAvatarIcon_13: 8024879800475429365
+      BankingBastionAvatarIcon_14: 7990555039328854942
+      BankingBastionAvatarIcon_15: -4038920759405834425
+      BankingBastionAvatarIcon_16: -5110387904310223966
+      BankingBastionAvatarIcon_17: 5514342183344041552
+      BankingBastionAvatarIcon_2: 3955401224903349547
+      BankingBastionAvatarIcon_3: 4727371645798473041
+      BankingBastionAvatarIcon_4: -6360072116475710802
+      BankingBastionAvatarIcon_5: -2750630241630984389
+      BankingBastionAvatarIcon_6: -3220663254100251431
+      BankingBastionAvatarIcon_7: -330405391000824327
+      BankingBastionAvatarIcon_8: 5857377949797341703
+      BankingBastionAvatarIcon_9: -8749107917121428527
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

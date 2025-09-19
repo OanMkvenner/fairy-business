@@ -435,7 +435,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
             turnRoundUI.FillCurrentTurn(turnCounter-1);
             ResetTurn();
         }
-
     }
 
     private void AddVictoryPointsByPlayer(PlayerColor color, int vp){

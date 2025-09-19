@@ -18,12 +18,12 @@ namespace Locations
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }
 
-        [FormerlySerializedAs("currentOwner")] public PlayerColor CurrentOwner;
+        public PlayerColor CurrentOwner;
 
         [SerializeField] private Image image;
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private Image backgroundColor;
-        [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
+        [SerializeField] public List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
 
         private Sprite imageEnabled;
@@ -130,7 +130,7 @@ namespace Locations
         {
             transform.position = position;
         }
-
+        
         private void CheckWinner()
         {
             int blue = power.ContainsKey(PlayerColor.Blue) ? power[PlayerColor.Blue] : 0;

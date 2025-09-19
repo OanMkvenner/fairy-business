@@ -1,31 +1,58 @@
+using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace UI.Gameplay
 {
     public class TurnRoundUI : MonoBehaviour
     {
-        [SerializeField] private GameObject finishedRound;
-        [SerializeField] private List<GameObject> turns;
+        [SerializeField] private List<TurnWrapper> turns;
+        [SerializeField] private TextMeshProUGUI roundText;
 
-        public void FillTurn(int turnCounter)
-        {
-            turns[turnCounter].gameObject.SetActive(true);
-        }
+        [SerializeField] private List<GameObject> pastRounds;
+        [SerializeField] private List<GameObject> futureRounds;
 
-        public void FillFinishedRound()
+        public void FillCurrentTurn(int turnCounter)
         {
-            finishedRound.SetActive(true);
-        }
+            turns[turnCounter].CurrentTurnOn();
 
-        public void ResetUI()
-        {
-            foreach (GameObject turn in turns)
+            if (turnCounter > 0)
             {
-                turn.SetActive(false);
+                turns[turnCounter - 1].PastTurnOn();
+            }
+        }
+
+        public void SetRoundCount(int count)
+        {
+            roundText.text = count.ToString(); 
+        }
+
+        public void NewRound(int count)
+        {
+            foreach (TurnWrapper turn in turns)
+            {
+                turn.FutureTurnOn();
             }
             
-            finishedRound.SetActive(false);
+            for (int i = 0; i < count; i++)
+            {
+                futureRounds[i].SetActive(false);
+                pastRounds[i].SetActive(true);
+            }
+        }
+
+        public void ResetRoundUI()
+        {
+            foreach (GameObject futureRound in futureRounds)
+            {
+                futureRound.SetActive(true);
+            }
+
+            foreach (GameObject pastRound in pastRounds)
+            {
+                pastRound.SetActive(false);
+            }
         }
     }
 }

@@ -15,8 +15,10 @@ using UI.Menu.BaseMenu;
 
 public class GameSession : MonobheaviourSingletonCustom<GameSession>
 {
-
     public static event Action<LocationDefinition, int> OnSpyCardPlayed;
+    public static event Action OnTurnReset;
+
+    public static event Action<PlayerColor> OnCardScanned;
     
     public bool dynamicInput = false;
     public CardInput cardInput;
@@ -33,7 +35,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
     [SerializeField] private int maxRoundCount = 5;
 
     [Space]
-    [SerializeField] private  List<TurnRoundUI> turnRoundUIs;
+    [SerializeField] private TurnRoundUI turnRoundUI;
 
     private int turnCounter;
 
@@ -62,14 +64,9 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
             LocationManager.instance.SelectedLocations.Clear();
     }
 
-    public void ResetGamesession(){
+    private void ResetGamesession(){
         
         LocationManager.instance.ResetGameLocations();
-
-        foreach (TurnRoundUI turnRoundUI in turnRoundUIs)
-        {
-            turnRoundUI.ResetUI();
-        }
         
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
         roundCounter = 0; // first "NextTurn" action iterates this up to 1
@@ -79,6 +76,8 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
 
         UpdateVictoryPointDisplay();
         disallowNewCards = false;
+        
+        turnRoundUI.ResetRoundUI();
         
         HidePower();
     }
@@ -147,7 +146,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
     
     bool disallowNewCards = false;
     
-    public enum Action
+    public enum CardAction
     {
         Invalid = 0,
 
@@ -163,7 +162,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
     
     class TurnAction
     {
-        public Action action;
+        public CardAction CardAction;
         public int value;
     }
     
@@ -194,21 +193,21 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         
         if (card.effect == "Politics") {
             actionFound = true;
-            turnAction.action = Action.Politics;
+            turnAction.CardAction = CardAction.Politics;
             turnAction.value = int.Parse(card.value);
         }
         if (card.effect == "Army") {
             actionFound = true;
-            turnAction.action = Action.Army;
+            turnAction.CardAction = CardAction.Army;
             turnAction.value = int.Parse(card.value);
         }
         if (card.effect == "Peace") {
             actionFound = true;
-            turnAction.action = Action.Peace;
+            turnAction.CardAction = CardAction.Peace;
         }
         if (card.effect == "War") {
             actionFound = true;
-            turnAction.action = Action.War;
+            turnAction.CardAction = CardAction.War;
         }
 
         if (card.effect == "1" || card.effect == "2" || card.effect == "3") {
@@ -266,27 +265,15 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
             .SetLoops(2, LoopType.Yoyo);
     }
 
-    public void NewActionLoggedIn(PlayerColor playerColor){
-        //TagJK_implement visuals for logged in action
-        //TagJK_implement audio for logged in action
-        if (playerColor == PlayerColor.Red){
-            UniqueNameHash.Get("ActionRedActive2").gameObject.SetActive(true);
-        } else if (playerColor == PlayerColor.Blue){
-            UniqueNameHash.Get("ActionBlueActive2").gameObject.SetActive(true);
-        }
+    private void NewActionLoggedIn(PlayerColor playerColor){
+        OnCardScanned?.Invoke(playerColor);
     }
-    
-    public void NewLocationLoggedIn(PlayerColor playerColor){
-        //TagJK_implement visuals for logged in location
-        //TagJK_implement audio for logged in location
-        if (playerColor == PlayerColor.Red){
-            UniqueNameHash.Get("ActionRedActive1").gameObject.SetActive(true);
-        } else if (playerColor == PlayerColor.Blue){
-            UniqueNameHash.Get("ActionBlueActive1").gameObject.SetActive(true);
-        }
+
+    private void NewLocationLoggedIn(PlayerColor playerColor){
+        OnCardScanned?.Invoke(playerColor);
     }
-    
-    public void CheckTurnComplete(){
+
+    private void CheckTurnComplete(){
         
         if (turnActions[PlayerColor.Blue] != null && turnLocations[PlayerColor.Blue] != null && turnActions[PlayerColor.Red] != null && turnLocations[PlayerColor.Red] != null){
             SolveTurn();
@@ -317,7 +304,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         // politics
         PlayerColor marketOwner = CheckLocationOwner(LocationsType.EnchantedForest);
         foreach (var actingPlayer in playerColors){
-            if (turnActions[actingPlayer].action == Action.Politics){
+            if (turnActions[actingPlayer].CardAction == CardAction.Politics){
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 int politicsMod = marketOwner == actingPlayer ? 1 : 0;
                 LocationManager.instance
@@ -334,7 +321,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         
         foreach (PlayerColor actingPlayer in playerColors){
             
-            if (turnActions[actingPlayer].action == Action.Army){
+            if (turnActions[actingPlayer].CardAction == CardAction.Army){
                 
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 int armyMod = sourceOwner == actingPlayer ? 1 : 0;
@@ -364,11 +351,11 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         // War
         foreach (PlayerColor actingPlayer in playerColors){
             
-            if (turnActions[actingPlayer].action == Action.War){
+            if (turnActions[actingPlayer].CardAction == CardAction.War){
                 
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 // if red has same location and the opposite effect, they cancel each other!
-                if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.Peace)
+                if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].CardAction != CardAction.Peace)
                 {
                     LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].SetPlayerPower(enemyPlayer, 0);
                 }
@@ -377,11 +364,11 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         
         foreach (var actingPlayer in playerColors){
             
-            if (turnActions[actingPlayer].action == Action.Peace){
+            if (turnActions[actingPlayer].CardAction == CardAction.Peace){
                 
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
                 // if red has same location and the opposite effect, they cancel each other!
-                if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].action != Action.War)
+                if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].CardAction != CardAction.War)
                 {
                     int victoryPoints = LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].GetPlayerPower(actingPlayer);
                     LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber]
@@ -401,8 +388,8 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         
         NextTurn();
     }
-    
-    public void EndOfTurnEffects(){
+
+    private void EndOfTurnEffects(){
         
         foreach (LocationDefinition loc in LocationManager.instance.GameLocations)
         {
@@ -415,30 +402,28 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
             }
         }
     }
-    
-    public void ResetTurn(){
+
+    private void ResetTurn(){
         
         turnActions[PlayerColor.Blue] = null;
         turnActions[PlayerColor.Red] = null;
         turnLocations[PlayerColor.Blue] = null;
         turnLocations[PlayerColor.Red] = null;
         
-        UniqueNameHash.Get("ActionRedActive1").gameObject.SetActive(false);
-        UniqueNameHash.Get("ActionBlueActive1").gameObject.SetActive(false);
-        UniqueNameHash.Get("ActionRedActive2").gameObject.SetActive(false);
-        UniqueNameHash.Get("ActionBlueActive2").gameObject.SetActive(false);
+        OnTurnReset?.Invoke();
     }
-    
-    public void NextTurn(){
+
+    private void NextTurn(){
 
         turnCounter++;
         
         if (turnCounter >= 5)
         {
-            if(roundCounter > 0) turnRoundUIs[roundCounter-1].FillFinishedRound();
-            
             turnCounter = 1;
             roundCounter++;
+            
+            turnRoundUI.SetRoundCount(roundCounter);
+            turnRoundUI.NewRound(roundCounter -1 );
         }
         
         CheckScoringPhase();
@@ -447,20 +432,21 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         
         if (!gameEnded)
         {
-            turnRoundUIs[roundCounter-1].FillTurn(turnCounter-1);
+            turnRoundUI.FillCurrentTurn(turnCounter-1);
             ResetTurn();
         }
 
     }
-    public void AddVictoryPointsByPlayer(PlayerColor color, int vp){
+
+    private void AddVictoryPointsByPlayer(PlayerColor color, int vp){
         
         if (color != PlayerColor.Neutral)
             return;
         
         victoryPointCounters[color] += vp;
     }
-    
-    public void CheckScoringPhase(){
+
+    private void CheckScoringPhase(){
         
         if (turnCounter == 1 && roundCounter > 1){
             // apply owned territory points to main score

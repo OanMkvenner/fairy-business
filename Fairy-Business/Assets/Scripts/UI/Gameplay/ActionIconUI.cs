@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,21 @@ namespace UI.Gameplay
         [SerializeField] private Sprite fullSprite;
         [SerializeField] private List<Image> icons;
 
+        [SerializeField] private PlayerColor currentPlayerColor;
+
         private int spriteIndex;
+
+        private void Awake()
+        {
+            GameSession.OnTurnReset += ResetUI;
+            GameSession.OnCardScanned += FillIcon;
+        }
+
+        private void OnDestroy()
+        {
+            GameSession.OnTurnReset -= ResetUI;
+            GameSession.OnCardScanned -= FillIcon;
+        }
 
         private void ResetUI()
         {
@@ -22,8 +37,14 @@ namespace UI.Gameplay
             spriteIndex = 0;
         }
 
-        private void FillIcon()
+        private void FillIcon(PlayerColor playerColor)
         {
+            if (playerColor != currentPlayerColor)
+                return;
+
+            if (spriteIndex >= icons.Count)
+                return;
+            
             icons[spriteIndex].sprite = fullSprite;
             spriteIndex++;
         }

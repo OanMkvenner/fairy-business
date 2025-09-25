@@ -61,14 +61,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BottomWidth: 0.0009
+    - _BottomWidth: 1
     - _BumpScale: 1
+    - _CanvasHeight: 450.07196
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LocalPosY: 195.5
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -78,12 +80,16 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TopWidth: 0
+    - _TopWidth: 0.101
     - _Trapezoid: 0.5
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - _BottomLeft: {r: 0, g: 0, b: 0, a: 0}
+    - _BottomRight: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _TopLeft: {r: 0.01, g: 0, b: 0, a: 0}
+    - _TopRight: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

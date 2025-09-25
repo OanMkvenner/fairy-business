@@ -1,4 +1,4 @@
-Shader "UI/TrapezoidSimple"
+Shader "UI/TrapezoidCanvasAuto"
 {
     Properties
     {
@@ -58,17 +58,22 @@ Shader "UI/TrapezoidSimple"
                 v2f o;
                 float4 pos = v.vertex;
 
-                // Normiertes Y: -0.5 = unten, +0.5 = oben
-                float normY = pos.y + 0.5;
+                // --- Canvas-relative Y ---
+                // pos = lokale UI-Vertex-Position
+                // unity_ObjectToWorld wandelt in Weltkoordinaten
+                float3 worldPos = mul(unity_ObjectToWorld, pos).xyz;
 
-                // Interpolierte Breite zwischen unten und oben
+                // Canvas-Center in Weltkoordinaten
+                float canvasHalfHeight = _ScreenParams.y * 0.5; // Annäherung an Canvas-Höhe in Pixels
+                float canvasCenterY = 0; // Canvas-Mittelpunkt in Weltkoordinaten Y (0 für Screen Space Overlay)
+
+                float normY = (worldPos.y - canvasCenterY + canvasHalfHeight) / (_ScreenParams.y); // 0..1
+
+                // Trapezbreite interpolieren
                 float trapezoid = lerp(_BottomWidth, _TopWidth, normY);
 
-                // Normiertes X: -0.5 links, +0.5 rechts
-                float normX = pos.x;
-
-                // Verschiebung: symmetrisch zur Mitte
-                pos.x += normX * trapezoid;
+                // X-Verzerrung
+                pos.x += pos.x * trapezoid;
 
                 o.vertex = UnityObjectToClipPos(pos);
                 o.uv = TRANSFORM_TEX(v.texcoord, _MainTex);

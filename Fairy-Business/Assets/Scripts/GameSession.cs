@@ -339,7 +339,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
                     int currentEnemyControlValue = attackedLocation.GetPlayerPower(enemyPlayer);
                     // reduce control value (but cap it at 'minControlNumber'; usually at 0)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
-                    attackedLocation.AddPlayerPower(enemyPlayer, math.max(newTheoreticalControlValue, minControlNumber));
+                    attackedLocation.AddPlayerPower(enemyPlayer, -attackValue);
                     // If you own the below0Gain2VP location, EVERY TIME you manage to reduce your enemy below 0 you gain 2VP. Effects that block this loss also block this effect
                     if (below0Gain2VPOwner == actingPlayer && newTheoreticalControlValue < 0 && minControlNumber <= 0){
                         victoryPointCounters[below0Gain2VPOwner] += 2;

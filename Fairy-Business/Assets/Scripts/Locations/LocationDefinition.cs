@@ -1,12 +1,11 @@
+using System;
 using System.Collections.Generic;
 using DG.Tweening;
-using NUnit.Framework;
 using Player;
 using TMPro;
 using UI;
 using UI.Buttons;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Locations
@@ -97,6 +96,8 @@ namespace Locations
             {
                 power[playerIdx] = newPower; // neuen Eintrag anlegen
             }
+            
+            power[playerIdx] = Math.Max(0, power[playerIdx]);
             
             CheckWinner();
         }

@@ -6,6 +6,7 @@ using TMPro;
 using UI;
 using UI.Buttons;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Locations
@@ -19,11 +20,12 @@ namespace Locations
 
         public PlayerColor CurrentOwner;
 
-        [SerializeField] private Image image;
+        [SerializeField] private Image locationImage;
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private Image backgroundColor;
         [SerializeField] public List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
+        [SerializeField] private Image cardFrameImage;
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;
@@ -75,9 +77,10 @@ namespace Locations
             }
         }
 
-        public void SetBackgroundColor(Color color)
+        public void SetCardFrame(Sprite frame)
         {
-            backgroundColor.color = color;
+            cardFrameImage.gameObject.SetActive(true);
+            cardFrameImage.sprite = frame;
         }
         
         public void InitializeLocationUI(LocationUI locationUI)
@@ -158,11 +161,11 @@ namespace Locations
 
             if (isSelected)
             {
-                image.sprite = imageEnabled;
+                locationImage.sprite = imageEnabled;
                 return;
             }
             
-            image.sprite = imageDisabled;
+            locationImage.sprite = imageDisabled;
         }
     }
 }

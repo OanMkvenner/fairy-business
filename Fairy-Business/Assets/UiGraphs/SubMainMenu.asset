@@ -102,10 +102,7 @@ MonoBehaviour:
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: en
-        node: {fileID: 7934293553796877107}
-        reroutePoints: []
-      - fieldName: fr
+      - fieldName: StartGameButton
         node: {fileID: 7934293553796877107}
         reroutePoints: []
       _direction: 0
@@ -153,7 +150,7 @@ MonoBehaviour:
   m_Name: Graph Exit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1448, y: 104}
+  position: {x: 1368, y: 104}
   ports:
     keys:
     - exitGraph
@@ -389,8 +386,7 @@ MonoBehaviour:
     keys:
     - enter
     - passThrough
-    - en
-    - fr
+    - StartGameButton
     values:
     - _fieldName: enter
       _node: {fileID: 7934293553796877107}
@@ -413,19 +409,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-    - _fieldName: en
-      _node: {fileID: 7934293553796877107}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: -7934788314539571962}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: fr
+    - _fieldName: StartGameButton
       _node: {fileID: 7934293553796877107}
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -456,7 +440,7 @@ MonoBehaviour:
   m_Name: View Controller
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1176, y: 88}
+  position: {x: 1096, y: 88}
   ports:
     keys:
     - enter

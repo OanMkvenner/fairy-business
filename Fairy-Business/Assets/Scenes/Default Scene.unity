@@ -4709,9 +4709,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1945251260}
-  - {fileID: 1508649157}
+  m_Children: []
   m_Father: {fileID: 2144098341}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.2724479}
@@ -4873,6 +4871,19 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -2610839178551992558, guid: 1b3fb4f45564de842adaf927ac4478d4,
+          type: 2}
+        m_TargetAssemblyTypeName: XNode.UiStateGraph.UiStateNode, hybrgames.nodeeditor
+        m_MethodName: MoveAlongPort
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PointOverview
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1164305878
@@ -5097,7 +5108,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1200557881}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -2610839178551992558, guid: 1b3fb4f45564de842adaf927ac4478d4,
+          type: 2}
+        m_TargetAssemblyTypeName: XNode.UiStateGraph.UiStateNode, hybrgames.nodeeditor
+        m_MethodName: MoveAlongPort
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: PauseBtn
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1200557881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5769,7 +5793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetViewNodes:
-  - {fileID: 6096576609133860768, guid: 1b3fb4f45564de842adaf927ac4478d4, type: 2}
+  - {fileID: 0}
 --- !u!114 &1311465878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6472,7 +6496,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1147799965}
+    m_TransformParent: {fileID: 2144098341}
     m_Modifications:
     - target: {fileID: 3096802263757712904, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
@@ -6562,12 +6586,12 @@ PrefabInstance:
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -1051.1111
       objectReference: {fileID: 0}
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -580
       objectReference: {fileID: 0}
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
@@ -6607,12 +6631,12 @@ PrefabInstance:
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -147.2333
       objectReference: {fileID: 0}
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
@@ -6730,6 +6754,11 @@ PrefabInstance:
       propertyPath: 'serializedGuid.Array.data[15]'
       value: 197
       objectReference: {fileID: 0}
+    - target: {fileID: 3096802264062384528, guid: 390f902ccec966a4d95e6ac0c73cd543,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 41.100006
+      objectReference: {fileID: 0}
     - target: {fileID: 3096802264062384531, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_Sprite
@@ -6791,6 +6820,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4281611519
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096802264302985073, guid: 390f902ccec966a4d95e6ac0c73cd543,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3499756
       objectReference: {fileID: 0}
     - target: {fileID: 3096802264302985073, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
@@ -6893,6 +6927,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7934293553796877107, guid: a36123d890234fc489997796144891aa,
+          type: 2}
+        m_TargetAssemblyTypeName: XNode.UiStateGraph.UiStateNode, hybrgames.nodeeditor
+        m_MethodName: MoveAlongPort
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: en
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -3239347718224579117, guid: 1b3fb4f45564de842adaf927ac4478d4,
           type: 2}
         m_TargetAssemblyTypeName: XNode.UiStateGraph.UiStateNode, hybrgames.nodeeditor
         m_MethodName: MoveAlongPort
@@ -8628,7 +8675,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1147799965}
+    m_TransformParent: {fileID: 2144098341}
     m_Modifications:
     - target: {fileID: 3096802263757712904, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
@@ -8718,12 +8765,12 @@ PrefabInstance:
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: -1051.1111
       objectReference: {fileID: 0}
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: -580
       objectReference: {fileID: 0}
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
@@ -8763,12 +8810,12 @@ PrefabInstance:
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -147.2333
       objectReference: {fileID: 0}
     - target: {fileID: 3096802263757712907, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
@@ -8886,6 +8933,11 @@ PrefabInstance:
       propertyPath: 'serializedGuid.Array.data[15]'
       value: 197
       objectReference: {fileID: 0}
+    - target: {fileID: 3096802264062384528, guid: 390f902ccec966a4d95e6ac0c73cd543,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 41.100006
+      objectReference: {fileID: 0}
     - target: {fileID: 3096802264062384531, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_Sprite
@@ -8947,6 +8999,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4281611519
+      objectReference: {fileID: 0}
+    - target: {fileID: 3096802264302985073, guid: 390f902ccec966a4d95e6ac0c73cd543,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.3499756
       objectReference: {fileID: 0}
     - target: {fileID: 3096802264302985073, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
@@ -9049,6 +9106,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7934293553796877107, guid: a36123d890234fc489997796144891aa,
+          type: 2}
+        m_TargetAssemblyTypeName: XNode.UiStateGraph.UiStateNode, hybrgames.nodeeditor
+        m_MethodName: MoveAlongPort
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: fr
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: -3239347718224579117, guid: 1b3fb4f45564de842adaf927ac4478d4,
           type: 2}
         m_TargetAssemblyTypeName: XNode.UiStateGraph.UiStateNode, hybrgames.nodeeditor
         m_MethodName: MoveAlongPort
@@ -10427,6 +10497,8 @@ RectTransform:
   - {fileID: 476000316}
   - {fileID: 1976864893}
   - {fileID: 492352243}
+  - {fileID: 1945251260}
+  - {fileID: 1508649157}
   - {fileID: 1147799965}
   m_Father: {fileID: 10982242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UiGraphs/SubGameplay.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UiGraphs/SubGameplay.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UiGraphs/SubMainMenu.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UiGraphs/SubMainMenu.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +115,7 @@
       <workItem from="1758189964340" duration="505000" />
       <workItem from="1758280842957" duration="4328000" />
       <workItem from="1758792234631" duration="2063000" />
-      <workItem from="1758881363739" duration="780000" />
+      <workItem from="1758881363739" duration="1826000" />
     </task>
     <servers />
   </component>

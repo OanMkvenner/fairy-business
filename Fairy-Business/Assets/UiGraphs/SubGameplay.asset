@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Method Caller
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 744, y: 264}
+  position: {x: 1016, y: 232}
   ports:
     keys:
     - enter
@@ -24,8 +24,8 @@ MonoBehaviour:
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: passThrough
-        node: {fileID: 6096576609133860768}
+      - fieldName: timedContinue
+        node: {fileID: 710221570183837975}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -73,7 +73,7 @@ MonoBehaviour:
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: passThrough
-        node: {fileID: 6096576609133860768}
+        node: {fileID: -2610839178551992558}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   methodToCall: NewRound
   methodToCallFullPath: GameSession/NewRound
   targetComponent: GameSession
---- !u!114 &-3239347718224579117
+--- !u!114 &-2610839178551992558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,121 +106,71 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7bcf871a86799e84cbcb7fcdd66f1b78, type: 3}
-  m_Name: View_MainMenu
+  m_Name: View_Gameplay
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 424, y: 664}
+  position: {x: 456, y: 152}
   ports:
     keys:
     - enter
     - passThrough
+    - PointOverview
+    - PauseBtn
     values:
     - _fieldName: enter
-      _node: {fileID: -3239347718224579117}
+      _node: {fileID: -2610839178551992558}
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
-      - fieldName: MainMenu
-        node: {fileID: 4703662983172750088}
+      - fieldName: passThrough
+        node: {fileID: -1010756921634858318}
+        reroutePoints: []
+      - fieldName: viewTargetOverride
+        node: {fileID: -2379768960187410302}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: passThrough
-      _node: {fileID: -3239347718224579117}
+      _node: {fileID: -2610839178551992558}
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: enter
-        node: {fileID: -2522003997542046518}
+        node: {fileID: -3577810093390761672}
+        reroutePoints: []
+      - fieldName: enter
+        node: {fileID: 710221570183837975}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  active: 0
-  drb: {fileID: 0}
-  assignedCanvasRef:
-    serializedGuid: 7a750b0250ffe9458901933126a63340
-    cachedName: 
-    cachedScene: {fileID: 0}
---- !u!114 &-2522003997542046518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75a9e2009f060824a9fecbf73b5b220e, type: 3}
-  m_Name: Tween Animation
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 680, y: 728}
-  ports:
-    keys:
-    - cancelAnims
-    - animFinished
-    - enter
-    - passThrough
-    values:
-    - _fieldName: cancelAnims
-      _node: {fileID: -2522003997542046518}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+TargetNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: animFinished
-      _node: {fileID: -2522003997542046518}
+    - _fieldName: PointOverview
+      _node: {fileID: -2610839178551992558}
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: enter
-      _node: {fileID: -2522003997542046518}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
+      _dynamic: 1
+    - _fieldName: PauseBtn
+      _node: {fileID: -2610839178551992558}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: passThrough
-        node: {fileID: -3239347718224579117}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passThrough
-      _node: {fileID: -2522003997542046518}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: -1604492382438398534}
-        reroutePoints: []
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
-      _dynamic: 0
+      _dynamic: 1
   active: 0
-  assignedTweenAnimationTarget:
-    serializedGuid: 2e7c9f80d3b6c1489861ce14c890c0b4
+  drb: {fileID: 0}
+  assignedCanvasRef:
+    serializedGuid: 9e7ba31f61983e4188d44cb0ab268f18
     cachedName: 
     cachedScene: {fileID: 0}
-  tweenMode: 4
-  tweenToFromMode: 1
-  easeMode: 4
-  x: -1000
-  y: 0
-  z: 0
-  k: 0
-  duration: 1
 --- !u!114 &-2379768960187410302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +197,7 @@ MonoBehaviour:
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: animFinished
-        node: {fileID: -2522003997542046518}
+        node: {fileID: 0}
         reroutePoints: []
       - fieldName: animFinished
         node: {fileID: 1922098010654907237}
@@ -271,7 +221,7 @@ MonoBehaviour:
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: enter
-        node: {fileID: 6096576609133860768}
+        node: {fileID: -2610839178551992558}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -279,58 +229,7 @@ MonoBehaviour:
       _dynamic: 0
   active: 0
   controllerMode: 0
---- !u!114 &-1604492382438398534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d775f37316c7ed41b93db3e33c0cb1d, type: 3}
-  m_Name: Method Caller
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1512, y: 56}
-  ports:
-    keys:
-    - enter
-    - passThrough
-    values:
-    - _fieldName: enter
-      _node: {fileID: -1604492382438398534}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: passThrough
-        node: {fileID: -2522003997542046518}
-        reroutePoints: []
-      - fieldName: WinnerText
-        node: {fileID: 6096576609133860768}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passThrough
-      _node: {fileID: -1604492382438398534}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  active: 0
-  assignedMethodTarget:
-    serializedGuid: f4a6a802ed57c14eba0e979f1c9c5257
-    cachedName: 
-    cachedScene: {fileID: 0}
-  methodToCall: _StopScanning
-  methodToCallFullPath: CameraOpencvLib/_StopScanning
-  targetComponent: CameraOpencvLib
---- !u!114 &-1327778690725669287
+--- !u!114 &-2030041976300913958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,10 +239,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 186107277ca3cb54d87ce11479950726, type: 3}
-  m_Name: Graph Exit
+  m_Name: ReturnToMainMenu
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1576, y: 232}
+  position: {x: 447.59912, y: 708.7882}
   ports:
     keys:
     - exitGraph
@@ -351,22 +250,19 @@ MonoBehaviour:
     - passThrough
     values:
     - _fieldName: exitGraph
-      _node: {fileID: -1327778690725669287}
+      _node: {fileID: -2030041976300913958}
       _typeQualifiedName: XNode.UiStateGraph.GraphExitNode+AnyNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: MainMenu
         node: {fileID: 4703662983172750088}
         reroutePoints: []
-      - fieldName: passThrough
-        node: {fileID: 5261368280644089597}
-        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: enter
-      _node: {fileID: -1327778690725669287}
+      _node: {fileID: -2030041976300913958}
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
@@ -375,7 +271,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
     - _fieldName: passThrough
-      _node: {fileID: -1327778690725669287}
+      _node: {fileID: -2030041976300913958}
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections: []
@@ -384,7 +280,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   active: 0
-  oldName: Graph Exit
+  oldName: ReturnToMainMenu
 --- !u!114 &-1010756921634858318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -442,7 +338,7 @@ MonoBehaviour:
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: enter
-        node: {fileID: 6096576609133860768}
+        node: {fileID: -2610839178551992558}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -475,26 +371,75 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: 4118982572493241412}
-  - {fileID: -1327778690725669287}
-  - {fileID: 6096576609133860768}
-  - {fileID: 6930112329369796455}
-  - {fileID: 5261368280644089597}
-  - {fileID: 5397968549430439593}
-  - {fileID: 4121228633968905705}
   - {fileID: -1010756921634858318}
   - {fileID: -3577810093390761672}
   - {fileID: -4453781616028307687}
-  - {fileID: -1604492382438398534}
   - {fileID: 4703662983172750088}
-  - {fileID: -2522003997542046518}
-  - {fileID: -3239347718224579117}
   - {fileID: -2379768960187410302}
   - {fileID: 1922098010654907237}
+  - {fileID: -2610839178551992558}
+  - {fileID: -2030041976300913958}
+  - {fileID: 710221570183837975}
   _startNodes: []
   queuedRepaint: 0
   parentSubgraphNode: {fileID: 6974908193880419190, guid: a7b5c991d3e35c1409739ca87195a515,
     type: 2}
-  previouselySelectedNode: {fileID: -1327778690725669287}
+  previouselySelectedNode: {fileID: -2030041976300913958}
+--- !u!114 &710221570183837975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8ac2b9835296245a622effcad40a1e, type: 3}
+  m_Name: Timer
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 731.57074, y: 247.59706}
+  ports:
+    keys:
+    - timedContinue
+    - enter
+    - passThrough
+    values:
+    - _fieldName: timedContinue
+      _node: {fileID: 710221570183837975}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: enter
+        node: {fileID: -4453781616028307687}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: 710221570183837975}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: passThrough
+        node: {fileID: -2610839178551992558}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passThrough
+      _node: {fileID: 710221570183837975}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  active: 0
+  seconds: 2
 --- !u!114 &1922098010654907237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,88 +568,6 @@ MonoBehaviour:
       _dynamic: 0
   active: 0
   oldName: Graph Entry
---- !u!114 &4121228633968905705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75a9e2009f060824a9fecbf73b5b220e, type: 3}
-  m_Name: Tween Animation
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1064, y: 200}
-  ports:
-    keys:
-    - cancelAnims
-    - animFinished
-    - enter
-    - passThrough
-    values:
-    - _fieldName: cancelAnims
-      _node: {fileID: 4121228633968905705}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+TargetNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: animFinished
-      _node: {fileID: 4121228633968905705}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: 6930112329369796455}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: enter
-      _node: {fileID: 4121228633968905705}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: WinnerText
-        node: {fileID: 6096576609133860768}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passThrough
-      _node: {fileID: 4121228633968905705}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: 5261368280644089597}
-        reroutePoints: []
-      - fieldName: enter
-        node: {fileID: 5397968549430439593}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  active: 0
-  assignedTweenAnimationTarget:
-    serializedGuid: 9e7ba31f61983e4188d44cb0ab268f18
-    cachedName: 
-    cachedScene: {fileID: 0}
-  tweenMode: 0
-  tweenToFromMode: 0
-  easeMode: 9
-  x: -500
-  y: 0
-  z: 0
-  k: 0
-  duration: 1
 --- !u!114 &4703662983172750088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,10 +612,10 @@ MonoBehaviour:
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: enter
-        node: {fileID: -3239347718224579117}
-        reroutePoints: []
-      - fieldName: enter
         node: {fileID: 1922098010654907237}
+        reroutePoints: []
+      - fieldName: exitGraph
+        node: {fileID: -2030041976300913958}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -760,236 +623,3 @@ MonoBehaviour:
       _dynamic: 1
   active: 0
   newPort: NewPortName
---- !u!114 &5261368280644089597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193cd32b0cc24dd4bbaf83e60211a4fd, type: 3}
-  m_Name: View Controller
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1256, y: 216}
-  ports:
-    keys:
-    - enter
-    - passThrough
-    - viewTargetOverride
-    values:
-    - _fieldName: enter
-      _node: {fileID: 5261368280644089597}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: passThrough
-        node: {fileID: 4121228633968905705}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passThrough
-      _node: {fileID: 5261368280644089597}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: exitGraph
-        node: {fileID: -1327778690725669287}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: viewTargetOverride
-      _node: {fileID: 5261368280644089597}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  active: 0
-  controllerMode: 1
---- !u!114 &5397968549430439593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193cd32b0cc24dd4bbaf83e60211a4fd, type: 3}
-  m_Name: View Controller
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1224, y: -56}
-  ports:
-    keys:
-    - enter
-    - passThrough
-    - viewTargetOverride
-    values:
-    - _fieldName: enter
-      _node: {fileID: 5397968549430439593}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: passThrough
-        node: {fileID: 4121228633968905705}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passThrough
-      _node: {fileID: 5397968549430439593}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: viewTargetOverride
-      _node: {fileID: 5397968549430439593}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  active: 0
-  controllerMode: 2
---- !u!114 &6096576609133860768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bcf871a86799e84cbcb7fcdd66f1b78, type: 3}
-  m_Name: View_Gameplay
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 472, y: 152}
-  ports:
-    keys:
-    - enter
-    - passThrough
-    - WinnerText
-    values:
-    - _fieldName: enter
-      _node: {fileID: 6096576609133860768}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: passThrough
-        node: {fileID: -2522003997542046518}
-        reroutePoints: []
-      - fieldName: passThrough
-        node: {fileID: -1010756921634858318}
-        reroutePoints: []
-      - fieldName: viewTargetOverride
-        node: {fileID: -2379768960187410302}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passThrough
-      _node: {fileID: 6096576609133860768}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: -3577810093390761672}
-        reroutePoints: []
-      - fieldName: enter
-        node: {fileID: -4453781616028307687}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: WinnerText
-      _node: {fileID: 6096576609133860768}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: 4121228633968905705}
-        reroutePoints: []
-      - fieldName: enter
-        node: {fileID: -1604492382438398534}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-  active: 0
-  drb: {fileID: 0}
-  assignedCanvasRef:
-    serializedGuid: 9e7ba31f61983e4188d44cb0ab268f18
-    cachedName: 
-    cachedScene: {fileID: 0}
---- !u!114 &6930112329369796455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193cd32b0cc24dd4bbaf83e60211a4fd, type: 3}
-  m_Name: View Controller
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 1240, y: 440}
-  ports:
-    keys:
-    - enter
-    - passThrough
-    - viewTargetOverride
-    values:
-    - _fieldName: enter
-      _node: {fileID: 6930112329369796455}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: animFinished
-        node: {fileID: 4121228633968905705}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: passThrough
-      _node: {fileID: 6930112329369796455}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: viewTargetOverride
-      _node: {fileID: 6930112329369796455}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  active: 0
-  controllerMode: 0

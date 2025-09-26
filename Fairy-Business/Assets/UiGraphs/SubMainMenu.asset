@@ -98,13 +98,7 @@ MonoBehaviour:
       _node: {fileID: -7934788314539571962}
       _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: En
-        node: {fileID: 7934293553796877107}
-        reroutePoints: []
-      - fieldName: Fr
-        node: {fileID: 7934293553796877107}
-        reroutePoints: []
+      connections: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -337,8 +331,6 @@ MonoBehaviour:
     keys:
     - enter
     - passThrough
-    - Fr
-    - En
     values:
     - _fieldName: enter
       _node: {fileID: 7934293553796877107}
@@ -361,30 +353,6 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-    - _fieldName: Fr
-      _node: {fileID: 7934293553796877107}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: -7934788314539571962}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-    - _fieldName: En
-      _node: {fileID: 7934293553796877107}
-      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, Assembly-CSharp,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: enter
-        node: {fileID: -7934788314539571962}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
   active: 0
   drb: {fileID: 0}
   assignedCanvasRef:

@@ -494,7 +494,7 @@ MonoBehaviour:
   queuedRepaint: 0
   parentSubgraphNode: {fileID: 6974908193880419190, guid: a7b5c991d3e35c1409739ca87195a515,
     type: 2}
-  previouselySelectedNode: {fileID: 4118982572493241412}
+  previouselySelectedNode: {fileID: -1327778690725669287}
 --- !u!114 &1922098010654907237
 MonoBehaviour:
   m_ObjectHideFlags: 0

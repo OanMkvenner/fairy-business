@@ -42,18 +42,18 @@ namespace Locations
                 Tween rotateTween = location.Rotate(targetPositionTransform.localEulerAngles.z, duration)
                     .SetEase(roationEaseMode);
                 
-                Tween rotateFirstHoverButton = location.locationHoverButtons[0].transform.parent.GetComponent<RectTransform>()
+                Tween rotateHoverButton = location.LocationHoverButtons[0].transform.parent.GetComponent<RectTransform>()
                     .DORotate(new Vector3(0, 0, 0), duration);
 
+                location.SkrewImageBottom();
+                
                 // Tweens zur Sequenz hinzufügen (parallel abspielen)
                 sequence.Join(moveTween);
                 sequence.Join(rotateTween);
-                sequence.Join(rotateFirstHoverButton);
+                sequence.Join(rotateHoverButton);
             }
         }
-        
-        private void DecoupleButtons(){}
-        
+    
         private Transform GetTargetTransform(PlayerColor owner, PlayerLine playerLine)
         {
             return owner switch

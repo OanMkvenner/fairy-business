@@ -5,9 +5,8 @@ using Player;
 using TMPro;
 using UI;
 using UI.Buttons;
+using UIExtensions;
 using UnityEngine;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 namespace Locations
 {
@@ -19,13 +18,13 @@ namespace Locations
         public PlayerLine PlayerLine { get; set; }
 
         public PlayerColor CurrentOwner;
+        public List<LocationHoverButton> LocationHoverButtons => locationHoverButtons;
 
-        [SerializeField] private Image locationImage;
         [SerializeField] private TextMeshProUGUI description;
-        [SerializeField] private Image backgroundColor;
-        [SerializeField] public List<LocationHoverButton> locationHoverButtons = new();
+        [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
-        [SerializeField] private Image cardFrameImage;
+        [SerializeField] private SkewedImage locationImage;
+        [SerializeField] private SkewedImage cardFrameImage;
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;
@@ -115,6 +114,8 @@ namespace Locations
             return power[playerIdx];
         }
 
+        #region IAnimation
+
         public Tween MoveY(float y, float duration)
         {
             return rectTransform.DOMoveY(y, duration);
@@ -129,6 +130,25 @@ namespace Locations
         {
             return rectTransform.DORotate(new Vector3(0, 0, angle), duration);
         }
+
+        public void SkrewImageBottom()
+        {
+            if (CurrentOwner != PlayerColor.Neutral)
+            {
+                locationImage.TrapezSkewTop = 0.9f;
+                cardFrameImage.TrapezSkewTop = 0.9f;
+                
+                locationImage.TrapezSkewBottom = 1.1f;
+                cardFrameImage.TrapezSkewBottom = 1.1f;
+            }
+            else
+            {
+                locationImage.TrapezSkewTop = 1f;
+                cardFrameImage.TrapezSkewTop = 1f;
+            }
+        }
+
+        #endregion
 
         public void SetPosition(Vector3 position)
         {

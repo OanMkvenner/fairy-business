@@ -41,7 +41,7 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "XThreadsFramesViewSplitterKey": "0.5005192",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Bugfix/IssueNoNextRound",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,6 +111,7 @@
       <workItem from="1758280842957" duration="4328000" />
       <workItem from="1758792234631" duration="2063000" />
       <workItem from="1758881363739" duration="4310000" />
+      <workItem from="1759490565197" duration="454000" />
     </task>
     <servers />
   </component>

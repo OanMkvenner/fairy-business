@@ -439,7 +439,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
 
     private void AddVictoryPointsByPlayer(PlayerColor color, int vp){
         
-        if (color != PlayerColor.Neutral)
+        if (color == PlayerColor.Neutral)
             return;
         
         victoryPointCounters[color] += vp;

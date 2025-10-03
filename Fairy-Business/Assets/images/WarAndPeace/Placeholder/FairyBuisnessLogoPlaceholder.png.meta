@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FairyBuisnessLogoPlaceholder_0: -7147927048744924264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

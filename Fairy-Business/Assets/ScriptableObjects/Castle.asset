@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: Castle
   m_EditorClassIdentifier: 
-  imageEnabled: {fileID: 21300000, guid: 04585451e49643047a4c5d2a46590c87, type: 3}
-  imageDisabled: {fileID: 21300000, guid: af664e94a47fc0a4ba7eb0d1e05a995c, type: 3}
+  imageEnabled: {fileID: -5119980863986964875, guid: 76f9b3c8e3177dd49890c8fb8f269f36,
+    type: 3}
+  imageDisabled: {fileID: -7603078470868985032, guid: 379f5daf8f31a754c8c90057d6faad57,
+    type: 3}
   locationType: 3
   VictoryPoints: 3
   locationDescription: 'Solid Office: Increase Handsize by 1'

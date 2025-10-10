@@ -12,13 +12,19 @@ using UI.Gameplay;
 using UI.Menu;
 using UI.Menu.BaseMenu;
 
-
+public enum ScanAction
+{
+    None = 0,
+    CreditCard = 1,
+    ControlCard = 2,
+}
 public class GameSession : MonobheaviourSingletonCustom<GameSession>
 {
+    public int MaxRoundCount => maxRoundCount;
     public static event Action<LocationDefinition, int> OnSpyCardPlayed;
     public static event Action OnTurnReset;
 
-    public static event Action<PlayerColor> OnCardScanned;
+    public static event Action<PlayerColor, ScanAction> OnCardScanned;
     
     public bool dynamicInput = false;
     public CardInput cardInput;
@@ -32,7 +38,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         set => victoryPointCounters = value;
     }
 
-    [SerializeField] private int maxRoundCount = 5;
+    [SerializeField] private int maxRoundCount;
 
     [Space]
     [SerializeField] private TurnRoundUI turnRoundUI;
@@ -253,7 +259,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         if (locationFound || actionFound)
         {
             soundsContainer.GetComponent<Sounds>().Play("ConfirmCard");
-            ShowWhiteFlash();
+            //ShowWhiteFlash();
             HidePower(); // hide power as soon as any card was played!?
             CheckTurnComplete();
         }
@@ -266,11 +272,11 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
     }
 
     private void NewActionLoggedIn(PlayerColor playerColor){
-        OnCardScanned?.Invoke(playerColor);
+        OnCardScanned?.Invoke(playerColor, ScanAction.ControlCard);
     }
 
     private void NewLocationLoggedIn(PlayerColor playerColor){
-        OnCardScanned?.Invoke(playerColor);
+        OnCardScanned?.Invoke(playerColor, ScanAction.CreditCard);
     }
 
     private void CheckTurnComplete(){
@@ -423,7 +429,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
             roundCounter++;
             
             turnRoundUI.SetRoundCount(roundCounter);
-            turnRoundUI.NewRound(roundCounter -1 );
+            turnRoundUI.NewRound(roundCounter);
         }
         
         CheckScoringPhase();

@@ -29,6 +29,11 @@ namespace UI.Gameplay
 
         public void NewRound(int count)
         {
+            if(count == GameSession.instance.MaxRoundCount)
+                return;
+            
+            count--;
+            
             foreach (TurnWrapper turn in turns)
             {
                 turn.FutureTurnOn();

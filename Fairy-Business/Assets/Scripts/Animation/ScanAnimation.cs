@@ -1,32 +1,53 @@
+using System.Collections;
 using DG.Tweening;
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace Animation
 {
     public class ScanAnimation : MonoBehaviour
     {
-        [SerializeField] private Button _button;
+        public Sequence Sequence => sequence;
+        
+        [SerializeField] private PlayerColor playerColor;
+        [SerializeField] private ScanAction scanAction;
+
+        [Space]
         [SerializeField] private Transform startPosition;
+
+        [SerializeField] private Transform endPosition;
         [SerializeField] private Sprite activeSprite;
         [SerializeField] private Sprite inactiveSprite;
         [SerializeField] private GameObject playerObject;
         [SerializeField] private GameObject scanObject;
 
         private Sequence sequence;
-
+        
         private void Awake()
         {
-            _button.onClick.AddListener(AnimateScannedCard);
+            GameSession.OnCardScanned += AnimateScannedCard;
         }
 
         private void OnDestroy()
         {
-            _button.onClick.RemoveAllListeners();
+            GameSession.OnCardScanned -= AnimateScannedCard;
         }
 
-        private void AnimateScannedCard()
+        public void ResetUI()
         {
+            playerObject.GetComponent<Image>().sprite = inactiveSprite;
+        }
+
+        private void AnimateScannedCard(PlayerColor playerColor, ScanAction scanAction)
+        {
+            if (playerColor != this.playerColor )
+                return;
+            
+            if (scanAction != this.scanAction)
+                return;
+            
             sequence.Kill();
             
             scanObject.transform.position = startPosition.position;
@@ -37,10 +58,8 @@ namespace Animation
             playerObject.GetComponent<Image>().sprite = inactiveSprite;
             
             sequence = DOTween.Sequence();
-            
-            Vector2 center = new Vector2(Screen.width / 2f, Screen.height / 2f);
 
-            Tween moveToMiddleTween = scanObject.transform.DOMoveY(center.y, 0.5f).SetEase(Ease.OutExpo);
+            Tween moveToMiddleTween = scanObject.transform.DOMoveY(endPosition.position.y, 0.5f).SetEase(Ease.OutExpo);
             
             Tween shake = scanObject.transform.DOShakeScale(0.2f, 0.5f, 1, 90f, true, ShakeRandomnessMode.Harmonic);
             
@@ -59,7 +78,6 @@ namespace Animation
             sequence.Append(rotate);
             sequence.Join(scale);
             sequence.Insert(sequence.Duration() - 0.5f, shakePlayerObject);
-            
         }
     }
 }

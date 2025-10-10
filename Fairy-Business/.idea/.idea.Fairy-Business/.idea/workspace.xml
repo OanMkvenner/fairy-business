@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/ScanAnimation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/ScanAnimation.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/BottomOfTheSea.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/BottomOfTheSea.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Castle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Castle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/EnchantedForest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/EnchantedForest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GingerbreadHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/GingerbreadHouse.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/HauntedHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/HauntedHouse.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/MagicLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/MagicLibrary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/PirateShip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/PirateShip.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/TheDragonCave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/TheDragonCave.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/ThroughTheMirror.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/ThroughTheMirror.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UITest.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UITest.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationAnimation.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +119,7 @@
       <workItem from="1758792234631" duration="2063000" />
       <workItem from="1758881363739" duration="4310000" />
       <workItem from="1759490565197" duration="2940000" />
-      <workItem from="1760088979114" duration="1443000" />
+      <workItem from="1760088979114" duration="8748000" />
     </task>
     <servers />
   </component>

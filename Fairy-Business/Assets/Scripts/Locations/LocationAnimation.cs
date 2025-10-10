@@ -31,11 +31,10 @@ namespace Locations
                 
                 if (targetPositionTransform == null)
                 {
-                    Debug.LogWarning($"Ziel-Transform für {location.CurrentOwner} ist null!");
+                    Debug.LogWarning($"Target-Transform for {location.CurrentOwner} is null!");
                     continue;
                 }
-
-                // Animationen starten
+                
                 Tween moveTween = location.MoveY(targetPositionTransform.position.y, duration)
                     .SetEase(roationEaseMode);
 
@@ -47,7 +46,6 @@ namespace Locations
 
                 location.SkrewImageBottom();
                 
-                // Tweens zur Sequenz hinzufügen (parallel abspielen)
                 sequence.Join(moveTween);
                 sequence.Join(rotateTween);
                 sequence.Join(rotateHoverButton);

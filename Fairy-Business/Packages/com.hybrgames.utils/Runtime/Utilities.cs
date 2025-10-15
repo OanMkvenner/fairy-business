@@ -336,14 +336,14 @@ public static class Utilities
         while (n > 1)
         {
             n--;
-            int k = RandomizerStatic.RandomInt(n);
+            int k = RandomizerUtil.global.RandomInt(n);
             T value = list[k];
             list[k] = list[n];
             list[n] = value;
         }
     }
     public static T GetRandomElementOfList<T>(List<T> list){
-        int k = RandomizerStatic.RandomInt(list.Count - 1);
+        int k = RandomizerUtil.global.RandomInt(list.Count - 1);
         return list[k];
     }
 

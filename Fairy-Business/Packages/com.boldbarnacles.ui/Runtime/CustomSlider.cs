@@ -10,6 +10,12 @@ using Unity.Mathematics;
 using DG.Tweening;
 
 
+#if UNITY_EDITOR
+using UnityEditor;
+using UnityEditor.SceneManagement;
+#endif
+
+
 [AddComponentMenu("Custom UI/Custom Slider", 30)]
 [RequireComponent(typeof(RectTransform), typeof(UiElementSounds))]
 /// <summary>
@@ -34,8 +40,19 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
 	[FoldoutGroup("Setup")]
     [OnValueChanged("UpdateChangedParemeters")]
     public RectTransform interactionHandle; // REQUIRED! can be the same as one of the images, can be itself, OR can be any different RectTransform gameobject
+    [FoldoutGroup("Setup")]
+    [OnValueChanged("UpdateChangedParemeters")]
+    public RectTransform interactionArea; // OPTIONAL! Alternate way of interaction. can be an area that overlays everything to intercept any touches
 	[FoldoutGroup("Setup")]
     public RectTransform fillingRect;
+    [SerializeField]
+    [ShowIf("@fillingRect?.GetComponent<UnityEngine.UI.Image>() != null")]
+    [OnValueChanged("ChangeBarColor")]
+	[FoldoutGroup("Setup")]
+    public Color barColor;
+    [FoldoutGroup("Setup")]
+    [Tooltip("Catching the mouse allows this slider to use forces to 'push against' your input and uses relative mousemovement instead of absolute mouse positions.")]
+    public bool catchMouse = false;
 	[FoldoutGroup("Setup")]
     public bool rotateableLever = false;
 	[FoldoutGroup("Setup")]
@@ -48,19 +65,18 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
     [ShowIf("rotateableLever")]
     public float3 maxRotation = new float3 (0, 150, 0);
 
+
 	[FoldoutGroup("Setup")]
+    [ShowIf("catchMouse")]
     [Tooltip("The higher this is, the harder it is to move the lever in general. default value: 200")]
     [Range(10, 2000)]
     public float inputDampener = 200f; //  default: 200f
 
 
-    [SerializeField]
-    [ShowIf("@fillingRect?.GetComponent<UnityEngine.UI.Image>() != null")]
-    [OnValueChanged("ChangeBarColor")]
-    public Color barColor;
-
+    
     [SerializeField]
     [OnValueChanged("UpdateVisuals")]
+	[FoldoutGroup("Values")]
     protected float m_Value;
     public virtual float value
     {
@@ -74,11 +90,13 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
         }
     }
     [HorizontalGroup(LabelWidth = 100)]
+	[FoldoutGroup("Setup")]
     public bool useOffset = false;
     [SerializeField]
     [OnValueChanged("UpdateVisuals")]
     [ShowIf("useOffset")]
     [HorizontalGroup]
+	[FoldoutGroup("Setup")]
     protected float m_OffsetValue;
     public virtual float offsetValue
     {
@@ -94,16 +112,61 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
 
 
     [SerializeField]
+	[FoldoutGroup("Values")]
     private float m_MinValue = 0;
     public float minValue { get { return m_MinValue; } set { if (UtilitiesUi.SetPropertyUtility.SetStruct(ref m_MinValue, value)) { Set(m_Value); UpdateVisuals(); } } }
 
     [SerializeField]
+	[FoldoutGroup("Values")]
     private float m_MaxValue = 1;
     public float maxValue { get { return m_MaxValue; } set { if (UtilitiesUi.SetPropertyUtility.SetStruct(ref m_MaxValue, value)) { Set(m_Value); UpdateVisuals(); } } }
 
 
+	[FoldoutGroup("Values")]
+    [OnValueChanged("UpdateChangedParemeters")]
+    public bool limitRange = false;
+	[FoldoutGroup("Values")]
+    [OnValueChanged("UpdateChangedParemeters")]
+    [ShowIf("limitRange")]
+    public float2 rangeLimit = new float2(float.MinValue, float.MaxValue);
+	[FoldoutGroup("Values")]
+    [Tooltip("If any steps exist, snaps the slider to the closest step (normalized 0.0f-1.0f). Currently only works if 'CatchMouse == false'")]
+    public List<float> steps = new();
+
+
+    public void ValidateLimits(){
+        if (maxValue < rangeLimit.x) rangeLimit.x = maxValue;
+        if (minValue > rangeLimit.y) rangeLimit.y = minValue;
+        
+        if (rangeLimit.x > rangeLimit.y) rangeLimit.y = rangeLimit.x;
+
+        if (limitRange && (rangeLimit.x == float.MinValue || rangeLimit.y == float.MaxValue)){
+            SetLimits(minValue, maxValue);
+        }
+        if (!limitRange && (rangeLimit.x != float.MinValue || rangeLimit.y != float.MaxValue)){
+            SetLimits(float.MinValue, float.MaxValue);
+        }
+    }
+
+    public void SetLimits(float limitMin, float limitMax){
+        bool needsUpdate = false;
+        if (rangeLimit.x != limitMin){
+            rangeLimit.x = limitMin;
+            needsUpdate = true;
+        }
+        if (rangeLimit.y != limitMax){
+            rangeLimit.y = limitMax;
+            needsUpdate = true;
+        }
+        if (needsUpdate) UpdateChangedParemeters();
+    }
+    public void ResetLimits(){
+        limitRange = false;
+        ValidateLimits();
+    }
 
     public void UpdateChangedParemeters(){
+        ValidateLimits();
         UpdateCachedReferences();
         Set(m_Value);
         UpdateVisuals();
@@ -151,11 +214,6 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
 
     // The offset from handle position to mouse down position
     private Vector2 m_Offset = Vector2.zero;
-
-    // field is never assigned warning
-    #pragma warning disable 649
-    private DrivenRectTransformTracker m_Tracker;
-    #pragma warning restore 649
 
     // This "delayed" mechanism is required for case 1037681.
     private bool m_DelayedUpdateVisuals = false;
@@ -212,7 +270,6 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
 
     protected override void OnDisable()
     {
-        m_Tracker.Clear();
         base.OnDisable();
     }
     private UiElementSounds sounds;
@@ -224,23 +281,43 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
             return;
         }
         sounds = GetComponent<UiElementSounds>();
-        var interactionComponent = interactionHandle.GetComponent<CustomUiInteractionHandler>();
-        if (interactionComponent == null)
         {
-            interactionHandle.gameObject.AddComponent<CustomUiInteractionHandler>();
+            var interactionComponent = interactionHandle.GetComponent<CustomUiInteractionHandler>();
+            if (interactionComponent == null)
+            {
+                interactionComponent = interactionHandle.gameObject.AddComponent<CustomUiInteractionHandler>();
+            }
+            interactionComponent.onPointerDownEvent.AddListener(PointerDown);
+            interactionComponent.onPointerUpEvent.AddListener(PointerUp);
+            interactionComponent.onOnInitializePotentialDragEvent.AddListener(OnInitializePotentialDrag);
+            interactionComponent.onDragEvent.AddListener(OnDrag);
+            interactionComponent.onEndDragEvent.AddListener(OnEndDrag);
         }
-        interactionComponent = interactionHandle.GetComponent<CustomUiInteractionHandler>();
-        interactionComponent.onPointerDownEvent.AddListener(PointerDown);
-        interactionComponent.onPointerUpEvent.AddListener(PointerUp);
-        interactionComponent.onOnInitializePotentialDragEvent.AddListener(OnInitializePotentialDrag);
-        interactionComponent.onDragEvent.AddListener(OnDrag);
-        interactionComponent.onEndDragEvent.AddListener(OnEndDrag);
+        
+        if (interactionArea != null)
+        {
+            var interactionAreaComponent = interactionArea.GetComponent<CustomUiInteractionHandler>();
+            if (interactionAreaComponent == null)
+            {
+                interactionAreaComponent = interactionArea.gameObject.AddComponent<CustomUiInteractionHandler>();
+            }
+            interactionAreaComponent.onPointerDownEvent.AddListener(PointerDown);
+            interactionAreaComponent.onPointerUpEvent.AddListener(PointerUp);
+            interactionAreaComponent.onOnInitializePotentialDragEvent.AddListener(OnInitializePotentialDrag);
+            interactionAreaComponent.onDragEvent.AddListener(OnDrag);
+            interactionAreaComponent.onEndDragEvent.AddListener(OnEndDrag);
+        }
     }
 
     private void ChangeBarColor()
     {
         var fillRectImage = fillingRect?.GetComponent<Image>();
-        if (fillRectImage) fillRectImage.color = barColor;
+        if (fillRectImage) {
+#if UNITY_EDITOR
+        Undo.RecordObject(fillRectImage, "ChangeBarColor");
+#endif
+            fillRectImage.color = barColor;
+        }
     }
 
     public void TakeNewData(float newValue){
@@ -303,7 +380,7 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
 
     float ClampValue(float input)
     {
-        float newValue = Mathf.Clamp(input, minValue, maxValue);
+        float newValue = Mathf.Clamp(input, Mathf.Max(minValue, rangeLimit.x), Mathf.Min(maxValue, rangeLimit.y));
         return newValue;
     }
 
@@ -381,13 +458,22 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
     // Force-update the slider. Useful if you've changed the properties and want it to update visually.
     private void UpdateVisuals()
     {
+        bool inEditor = false;
 #if UNITY_EDITOR
-        if (!Application.isPlaying)
-            UpdateCachedReferences();
+        if (!Application.isPlaying) inEditor = true;
 #endif
+        if (!inEditor){
+            ExecuteUpdateVisuals();
+        } else {
+            // check if any connections where changed in editor
+            UpdateCachedReferences();
+            // in the non-playing editorcase we delay execution of visual updates by 1 frame, because 
+            // doing it WHILE making changes in the inspector just never updated the scene correctly
+            Invoke("ExecuteUpdateVisuals", 0.0f);
+        }
+    }
 
-        m_Tracker.Clear();
-
+    private void ExecuteUpdateVisuals(){
         var normalizedVal = normalizedValue;
         var normalizedOffsetVal = normalizedOffsetValue;
         if (rotateableLever && leverArm != null){
@@ -424,7 +510,7 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
     void UpdateNotDraggin(){
         bool isInFinalPosition = false; // dont do anything if we have reached any stable position
         if (normalizedValue <= 0 || normalizedValue >= 1.0f) isInFinalPosition = true;
-        if (!currentlyDraggin && !isInFinalPosition && hasActiveResistanceForces){
+        if (!currentlyDraggin && !isInFinalPosition && hasActiveResistanceForces && catchMouse){
             float dt = Time.deltaTime;
             var frameGravity = gravityStrength * dt;
             float directionModifier = 1f;
@@ -463,72 +549,112 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
             Vector2 position = Vector2.zero;
             if (!UtilitiesUi.MultipleDisplayUtilities.GetRelativeMousePositionForDrag(eventData, ref position))
                 return;
-            // and remove the warp-offset from our last mousewarp (we dont want to re-input that into our calculations)
-            //position -= warpOffset;
-            var positionDelta = eventData.delta - warpOffset;
-            var modifiedWorldPos = interactionHandle.TransformPoint(new Vector3(m_Offset.x, m_Offset.y, 0));
-            var handleScreenPos = RectTransformUtility.WorldToScreenPoint(cam, modifiedWorldPos);
-            
-            var testPosition = handleScreenPos + positionDelta;
 
-            // find mouse-position relative to interaction-handle. if dragging is performed into corre
-            Vector2 localCursor;
-            if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(clickRect, testPosition, cam, out localCursor))
-                return;
-            localCursor -= m_Offset;
-            float mouseMoveValue = localCursor.x;
+            // handle relative mousemovement when mouse it cought by slider
+            if (catchMouse) {
+                // and remove the warp-offset from our last mousewarp (we dont want to re-input that into our calculations)
+                //position -= warpOffset;
+                var positionDelta = eventData.delta - warpOffset;
+                var modifiedWorldPos = interactionHandle.TransformPoint(new Vector3(m_Offset.x, m_Offset.y, 0));
+                var handleScreenPos = RectTransformUtility.WorldToScreenPoint(cam, modifiedWorldPos);
+                
+                var testPosition = handleScreenPos + positionDelta;
 
-            // use mouseMoveValue and several modifyers to decide how far you managed to move the slider, relative to all forces
-            // localCursor.x is basically already per deltaTime
-            float dt = Time.deltaTime;
-            //float directionModifier = 1f;
-            //if (normalizedValue < gravityMidpoint) directionModifier = -1f;
+                // find mouse-position relative to interaction-handle. if dragging is performed into corre
+                Vector2 localCursor;
+                if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(clickRect, testPosition, cam, out localCursor))
+                    return; // this only happens when the test ray goes parallel to the plane of the rect
+                localCursor -= m_Offset;
+                float mouseMoveValue = localCursor.x;
 
-            float finalDampening = inputDampener;
-            if (hasResistanceForces){
-                // if normalizedValue is within range of gravityMidpoint forces. calculations taken from a selfmade custom function https://www.desmos.com/calculator/4vzpheiqjk
-                var gravforceMult = 0f;
-                if (normalizedValue - 0.45482f < gravityMidpoint && normalizedValue + 0.45482f > gravityMidpoint){
-                    var justX = normalizedValue - gravityMidpoint;
-                    var funcX = 5f * (normalizedValue - gravityMidpoint);
-                    gravforceMult = 5.73f * (1f/(1f+math.pow(7f,-funcX))-0.5f)/(math.square(funcX)+1f)-justX;
-                };
+                // use mouseMoveValue and several modifiers to decide how far you managed to move the slider, relative to all forces
+                // localCursor.x is basically already per deltaTime
+                float dt = Time.deltaTime;
+                //float directionModifier = 1f;
+                //if (normalizedValue < gravityMidpoint) directionModifier = -1f;
 
-                if (gravforceMult != 0){
-                    // if mouse move direction is the same as the gravBasedForce is pushing
-                    if (mouseMoveValue * gravforceMult > 0f){
-                        // make moving easier by reducing inputDampener down to 0.5x
-                        finalDampening = inputDampener * math.lerp(1.0f, 0.5f, math.abs(gravforceMult));
-                    } else {
-                        // otherwise make moving harder by adding up to gravityStrength to the inputDampener
-                        finalDampening = inputDampener + math.lerp(0f, gravityStrength, math.abs(gravforceMult));
+                float finalDampening = inputDampener;
+                if (hasResistanceForces){
+                    // if normalizedValue is within range of gravityMidpoint forces. calculations taken from a selfmade custom function https://www.desmos.com/calculator/4vzpheiqjk
+                    var gravforceMult = 0f;
+                    if (normalizedValue - 0.45482f < gravityMidpoint && normalizedValue + 0.45482f > gravityMidpoint){
+                        var justX = normalizedValue - gravityMidpoint;
+                        var funcX = 5f * (normalizedValue - gravityMidpoint);
+                        gravforceMult = 5.73f * (1f/(1f+math.pow(7f,-funcX))-0.5f)/(math.square(funcX)+1f)-justX;
+                    };
+
+                    if (gravforceMult != 0){
+                        // if mouse move direction is the same as the gravBasedForce is pushing
+                        if (mouseMoveValue * gravforceMult > 0f){
+                            // make moving easier by reducing inputDampener down to 0.5x
+                            finalDampening = inputDampener * math.lerp(1.0f, 0.5f, math.abs(gravforceMult));
+                        } else {
+                            // otherwise make moving harder by adding up to gravityStrength to the inputDampener
+                            finalDampening = inputDampener + math.lerp(0f, gravityStrength, math.abs(gravforceMult));
+                        }
                     }
                 }
+                //Debug.LogError(finalDampening);
+                // by adding the original dampening 
+                float val = mouseMoveValue / finalDampening + normalizedValue;
+
+                normalizedValue = val; // assigning value (and thus, updating visuals automatically right here)
+
+                // old way of doing DIRECT input depending on where you had your mousepointer. I might still implement a variant of this as an option for CustomSlider (to allow the old behaviour again)
+                //var unmodifiedLocalCursor = localCursor;
+                //localCursor -= clickRect.rect.position;
+                //float val = Mathf.Clamp01((localCursor - m_Offset)[0] / clickRect.rect.size[0]);
+                //unmodifiedLocalCursor.y = 0;
+                //unmodifiedLocalCursor.x = Mathf.Clamp(unmodifiedLocalCursor.x, m_Offset.x - clickRect.rect.size.x / 2, m_Offset.x + clickRect.rect.size.x / 2);
+                //var modifiedWorldPos = clickRect.TransformPoint(unmodifiedLocalCursor);
+
+                // jump the cursor back to the origin of the handle (it is hidden already, but if the hidden cursor hovers over a highlightable, it lights up, which looks 
+                // like a bug and is distracting) need to round values BEFORE calculating warpOffset, because WarpCursorPosition() rounds them later, but without notifying us.
+                handleScreenPos.x = Mathf.FloorToInt(handleScreenPos.x);
+                handleScreenPos.y = Mathf.FloorToInt(handleScreenPos.y);
+
+                // warpOffset will get calculated out of next drag-operation mouse-move
+                warpOffset = handleScreenPos - position;
+                // JUMP!
+                Mouse.current.WarpCursorPosition(handleScreenPos);
             }
-            //Debug.LogError(finalDampening);
-            // by adding the original dampening 
-            float val = mouseMoveValue / finalDampening + normalizedValue;
+            
+            //handle new mouse position if mouse is NOT cought by slider
+            if (!catchMouse) {
+                Vector2 localCursor;
+                var handleSliderArea = clickRect.parent.GetComponent<RectTransform>();
+                
+                if (!RectTransformUtility.ScreenPointToLocalPointInRectangle(handleSliderArea, position, cam, out localCursor))
+                    return; // this only happens when the test ray goes parallel to the plane of the rect
+                
+                float positionOnRect = localCursor.x;
+                float normalizedX = positionOnRect / handleSliderArea.rect.width + 0.5f;
 
-            normalizedValue = val; // assigning value (and thus, updating visuals automatically right here)
+                if (steps.Count == 0){
+                    normalizedValue = normalizedX;
+                } else {
+                    int stepIdx = FindClosestStep(normalizedX);
+                    normalizedValue = steps[stepIdx];
+                }
 
-            // old way of doing DIRECT input depending on where you had your mousepointer. I might still implement a variant of this as an option for CustomSlider (to allow the old behaviour again)
-            //var unmodifiedLocalCursor = localCursor;
-            //localCursor -= clickRect.rect.position;
-            //float val = Mathf.Clamp01((localCursor - m_Offset)[0] / clickRect.rect.size[0]);
-            //unmodifiedLocalCursor.y = 0;
-            //unmodifiedLocalCursor.x = Mathf.Clamp(unmodifiedLocalCursor.x, m_Offset.x - clickRect.rect.size.x / 2, m_Offset.x + clickRect.rect.size.x / 2);
-            //var modifiedWorldPos = clickRect.TransformPoint(unmodifiedLocalCursor);
-
-            // jump the cursor back to the origin of the handle (it is hidden already, but if the hidden cursor hovers over a highlightable, it lights up, which looks 
-            // like a bug and is distracting) need to round values BEFORE calculating warpOffset, because WarpCursorPosition() rounds them later, but without notifying us.
-            handleScreenPos.x = Mathf.FloorToInt(handleScreenPos.x);
-            handleScreenPos.y = Mathf.FloorToInt(handleScreenPos.y);
-
-            // warpOffset will get calculated out of next drag-operation mouse-move
-            warpOffset = handleScreenPos - position;
-            // JUMP!
-            Mouse.current.WarpCursorPosition(handleScreenPos);
+                //Debug.LogError(positionOnRect);
+            }
         }
+    }
+
+    private int FindClosestStep(float normalizedX)
+    {
+        float distance = float.MaxValue;
+        int result = -1;
+        for (int i = 0; i < steps.Count; i++)
+        {
+            float newDist = Mathf.Abs(steps[i] - normalizedX);
+            if (newDist < distance) {
+                distance = newDist;
+                result = i;
+            }
+        }
+        return result;
     }
 
     private bool MayDrag(PointerEventData eventData)
@@ -542,7 +668,7 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
         if (!MayDrag(eventData))
             return;
 
-        if (m_HandleContainerRect != null && RectTransformUtility.RectangleContainsScreenPoint(interactionHandle, eventData.pointerPressRaycast.screenPosition, eventData.enterEventCamera))
+        if (m_HandleContainerRect != null && catchMouse)//RectTransformUtility.RectangleContainsScreenPoint(interactionHandle, eventData.pointerPressRaycast.screenPosition, eventData.enterEventCamera))
         {
             StartDragging(eventData);
         }
@@ -556,7 +682,9 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
         m_Offset = Vector2.zero;
         currentlyDraggin = true;
         //UnityEngine.Cursor.lockState = UnityEngine.CursorLockMode.Locked;
-        UnityEngine.Cursor.visible = false; //hide cursor
+        if (catchMouse) {
+            UnityEngine.Cursor.visible = false; //hide cursor
+        }
 
         Vector2 localMousePos;
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(interactionHandle, eventData.pointerPressRaycast.screenPosition, eventData.pressEventCamera, out localMousePos)){
@@ -568,10 +696,12 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
     {
         if (currentlyDraggin){
             currentlyDraggin = false;
-            var modifiedWorldPos = interactionHandle.TransformPoint(new Vector3(m_Offset.x, m_Offset.y,0));
-            var newScreenPos = RectTransformUtility.WorldToScreenPoint(eventData.pressEventCamera, modifiedWorldPos);
-            Mouse.current.WarpCursorPosition(newScreenPos);
-            UnityEngine.Cursor.visible = true; //show cursor
+            if (catchMouse) {
+                var modifiedWorldPos = interactionHandle.TransformPoint(new Vector3(m_Offset.x, m_Offset.y,0));
+                var newScreenPos = RectTransformUtility.WorldToScreenPoint(eventData.pressEventCamera, modifiedWorldPos);
+                Mouse.current.WarpCursorPosition(newScreenPos);
+                UnityEngine.Cursor.visible = true; //show cursor
+            }
         }
     }
     public void PointerUp(PointerEventData eventData)

@@ -5,33 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Haunt_grey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/Haunt_grey.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Magic_grey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/Magic_grey.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Mirror_grey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/Mirror_grey.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Sweets_grey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/Sweets_grey.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/bank.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/bank.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/banke_grey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/banke_grey.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/castle.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/castle.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/castle_grey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/castle_grey.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/forest.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/forest.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/forest_grey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/forest_grey.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/haunt.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/haunt.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/magic.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/magic.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/mirror.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/mirror.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/ocean.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/ocean.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/ocean_grey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/ocean_grey.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/pirate.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/pirate.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/pirate_grey.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/pirate_grey.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/sweets.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/sweets.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ActionAnimation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ActionAnimation.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/ScanAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/ScanAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.services.core/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.services.core/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/Player.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +101,7 @@
       <workItem from="1758881363739" duration="4310000" />
       <workItem from="1759490565197" duration="2940000" />
       <workItem from="1760088979114" duration="15530000" />
-      <workItem from="1760627036176" duration="1818000" />
+      <workItem from="1760627036176" duration="2237000" />
     </task>
     <servers />
   </component>
@@ -143,23 +118,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Animation/SequenceTracker.cs</url>
-          <line>48</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Animation\SequenceTracker.cs" containingFunctionPresentation="Method 'ResetAllUI'" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Animation/SequenceTracker.cs</url>
-          <line>39</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Animation\SequenceTracker.cs" containingFunctionPresentation="Lambda expression inside Method 'ResetAllUI'" />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

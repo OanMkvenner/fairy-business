@@ -42,7 +42,8 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -680,6 +681,7 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+  m_ScrollDeltaPerTick: 6
 --- !u!114 &1466291165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +937,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ScannedCard
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572821430815929702, guid: ce38e1484d946e047bee8e1d762c864b,
+        type: 3}
+      propertyPath: scanAction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2572821430815929702, guid: ce38e1484d946e047bee8e1d762c864b,
+        type: 3}
+      propertyPath: debugButton
+      value: 
+      objectReference: {fileID: 192110972}
+    - target: {fileID: 2572821430815929702, guid: ce38e1484d946e047bee8e1d762c864b,
+        type: 3}
+      propertyPath: playerColor
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7429257177073462853, guid: ce38e1484d946e047bee8e1d762c864b,
         type: 3}

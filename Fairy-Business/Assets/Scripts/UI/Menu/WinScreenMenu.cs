@@ -26,6 +26,7 @@ namespace UI.Menu
         public override void OpenMenu()
         {
             base.OpenMenu();
+            Sounds.instance.Play("WinScreen");
             InitializeUI();
         }
 

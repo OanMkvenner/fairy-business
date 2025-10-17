@@ -1,15 +1,8 @@
-using System.Collections;
 using UnityEngine;
 
 
-public class Sounds : MonoBehaviour
-{
-    public static Sounds instance { get; private set; }
-
-    private void Awake() {
-        instance = this;
-    }
-
+public class Sounds : MonobheaviourSingletonCustom<Sounds>
+{ 
     public bool IsPlaying(string name)
     {
         var soundItem =  gameObject.transform.Find(name);

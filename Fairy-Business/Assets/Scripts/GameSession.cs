@@ -23,13 +23,10 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
     public int MaxRoundCount => maxRoundCount;
     public static event Action<LocationDefinition, int> OnSpyCardPlayed;
     public static event Action OnTurnReset;
-
     public static event Action<PlayerColor, ScanAction> OnCardScanned;
     
     public bool dynamicInput = false;
     public CardInput cardInput;
-
-    public GameObject soundsContainer;
     public Image ScanEffect;
 
     public Dictionary<PlayerColor, int> VictoryPointCounters
@@ -189,7 +186,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
 
         if (card.playerColor == "Spy") {
             ShowPower();
-            soundsContainer.GetComponent<Sounds>().Play("ConfirmCard");
             ShowWhiteFlash();
             return;
         }
@@ -258,14 +254,13 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         
         if (locationFound || actionFound)
         {
-            soundsContainer.GetComponent<Sounds>().Play("ConfirmCard");
-            //ShowWhiteFlash();
-            HidePower(); // hide power as soon as any card was played!?
+            HidePower();
             CheckTurnComplete();
         }
     }
     
-    public void ShowWhiteFlash(){
+    private void ShowWhiteFlash(){
+        Sounds.instance.Play("ConfirmSpyCard");
         ScanEffect.color = new Color(1,1,1,0);
         ScanEffect.DOFade(0.78f, 0.2f)
             .SetLoops(2, LoopType.Yoyo);
@@ -273,10 +268,12 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
 
     private void NewActionLoggedIn(PlayerColor playerColor){
         OnCardScanned?.Invoke(playerColor, ScanAction.ControlCard);
+        Sounds.instance.Play("ConfirmScannedCard");
     }
 
     private void NewLocationLoggedIn(PlayerColor playerColor){
         OnCardScanned?.Invoke(playerColor, ScanAction.CreditCard);
+        Sounds.instance.Play("ConfirmScannedCard");
     }
 
     private void CheckTurnComplete(){
@@ -417,6 +414,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         turnLocations[PlayerColor.Red] = null;
         
         OnTurnReset?.Invoke();
+        Sounds.instance.Play("NewTurn");
     }
 
     private void NextTurn(){
@@ -466,7 +464,7 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
             ShowPower();
         }
     }
-    public void UpdateVictoryPointDisplay(){
+    private void UpdateVictoryPointDisplay(){
         
         UniqueNameHash.Get("VictoryPointsRed").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColor.Red].ToString();
         UniqueNameHash.Get("VictoryPointsBlue").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColor.Blue].ToString();

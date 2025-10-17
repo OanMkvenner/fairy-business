@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd3463d342f44f59b520704b6697db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  futureTurnColor: {r: 0.69411767, g: 0.69411767, b: 0.69411767, a: 1}
+  futureTurnColor: {r: 0.5, g: 0.49292454, b: 0.49292454, a: 1}
   currentTurnColor: {r: 1, g: 0.40392157, b: 0, a: 1}
 --- !u!1 &958641273745248619
 GameObject:
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd3463d342f44f59b520704b6697db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  futureTurnColor: {r: 0.69411767, g: 0.69411767, b: 0.69411767, a: 1}
+  futureTurnColor: {r: 0.5, g: 0.49292454, b: 0.49292454, a: 1}
   currentTurnColor: {r: 1, g: 0.40392157, b: 0, a: 1}
 --- !u!1 &2603562120438899197
 GameObject:
@@ -743,7 +743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd3463d342f44f59b520704b6697db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  futureTurnColor: {r: 0.69411767, g: 0.69411767, b: 0.69411767, a: 1}
+  futureTurnColor: {r: 0.5, g: 0.49292454, b: 0.49292454, a: 1}
   currentTurnColor: {r: 1, g: 0.40392157, b: 0, a: 1}
 --- !u!1 &4239540768027936101
 GameObject:
@@ -986,7 +986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd3463d342f44f59b520704b6697db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  futureTurnColor: {r: 0.69411767, g: 0.69411767, b: 0.69411767, a: 1}
+  futureTurnColor: {r: 0.5, g: 0.49292454, b: 0.49292454, a: 1}
   currentTurnColor: {r: 1, g: 0.40135306, b: 0, a: 1}
 --- !u!1 &7153777485072783323
 GameObject:

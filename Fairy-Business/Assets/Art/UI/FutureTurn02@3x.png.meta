@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3d2700464f5e7c84999cb51012705fd1
+guid: d4fff867261996b408028f4fee936cc4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 261852055278624000
-    second: FinishedTurn04_0
+      213: -1188787714695531395
+    second: FutureTurn02@3x_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,43 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FinishedTurn04_0
+      name: FutureTurn02@3x_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 963
-        height: 429
+        width: 467
+        height: 947
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00d96929e0942a300800000000000000
-      internalID: 261852055278624000
+      spriteID: d7479383fd3908fe0800000000000000
+      internalID: -1188787714695531395
       vertices: []
       indices: 
       edges: []
@@ -161,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FinishedTurn04_0: 261852055278624000
+      FutureTurn02@3x_0: -1188787714695531395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,11 +15,6 @@ namespace UI.Gameplay
         public void FillCurrentTurn(int turnCounter)
         {
             turns[turnCounter].CurrentTurnOn();
-
-            if (turnCounter > 0)
-            {
-                turns[turnCounter - 1].PastTurnOn();
-            }
         }
 
         public void SetRoundCount(int count)

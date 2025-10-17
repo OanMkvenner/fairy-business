@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 43641c8f5aab6f44ca2db2cafaa540af
+guid: 6b079f75f7799ba469a756b4215a06f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3302797432991027371
-    second: CurrentTurn03_0
+      213: -5546204462120256053
+    second: FutureTurn03Blank_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,37 +96,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CurrentTurn03_0
+      name: FutureTurn03Blank_0
       rect:
         serializedVersion: 2
         x: 1
@@ -141,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55f6f71db3b1a22d0800000000000000
-      internalID: -3302797432991027371
+      spriteID: bcdb2af3d6ce703b0800000000000000
+      internalID: -5546204462120256053
       vertices: []
       indices: 
       edges: []
@@ -161,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CurrentTurn03_0: -3302797432991027371
+      FutureTurn03Blank_0: -5546204462120256053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

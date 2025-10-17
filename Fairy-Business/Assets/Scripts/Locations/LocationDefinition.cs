@@ -61,7 +61,7 @@ namespace Locations
             this.locationText = data.locationDescription;
             this.locationType = data.locationType;
             this.victoryPoints = data.VictoryPoints;
-            description.text = locationType.ToString();
+            //description.text = locationType.ToString();
             
             UpdateVisuals();
 

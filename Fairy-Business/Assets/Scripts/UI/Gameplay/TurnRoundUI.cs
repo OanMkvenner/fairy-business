@@ -24,6 +24,9 @@ namespace UI.Gameplay
 
         public void SetRoundCount(int count)
         {
+            if(count == GameSession.instance.MaxRoundCount)
+                return;
+            
             roundText.text = count.ToString(); 
         }
 

@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   futureTurnColor: {r: 0.5, g: 0.49292454, b: 0.49292454, a: 1}
-  currentTurnColor: {r: 1, g: 0.40392157, b: 0, a: 1}
+  currentTurnColor: {r: 0.4, g: 0.9254902, b: 0.32941177, a: 1}
 --- !u!1 &958641273745248619
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   futureTurnColor: {r: 0.5, g: 0.49292454, b: 0.49292454, a: 1}
-  currentTurnColor: {r: 1, g: 0.40392157, b: 0, a: 1}
+  currentTurnColor: {r: 0.4, g: 0.9254902, b: 0.32941177, a: 1}
 --- !u!1 &2603562120438899197
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   futureTurnColor: {r: 0.5, g: 0.49292454, b: 0.49292454, a: 1}
-  currentTurnColor: {r: 1, g: 0.40392157, b: 0, a: 1}
+  currentTurnColor: {r: 0.4, g: 0.9254902, b: 0.32941177, a: 1}
 --- !u!1 &4239540768027936101
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,7 +987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   futureTurnColor: {r: 0.5, g: 0.49292454, b: 0.49292454, a: 1}
-  currentTurnColor: {r: 1, g: 0.40135306, b: 0, a: 1}
+  currentTurnColor: {r: 0.4, g: 0.9254902, b: 0.32941177, a: 1}
 --- !u!1 &7153777485072783323
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using DG.Tweening;
 using Player;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -9,75 +10,78 @@ namespace Animation
     public class ScanAnimation : MonoBehaviour
     {
         public Sequence Sequence => sequence;
-
+        
         [SerializeField] private PlayerColor playerColor;
         [SerializeField] private ScanAction scanAction;
 
-        [Space]
-        [SerializeField] private Transform startPosition;
-        [SerializeField] private Transform endPosition;
+        [SerializeField] private Transform middleScreenPosition;
+        [SerializeField] private Transform defaultPosition;
+        
+        [Header("Sprites")] 
         [SerializeField] private Sprite activeSprite;
         [SerializeField] private Sprite inactiveSprite;
-        [SerializeField] private GameObject playerObject;
-        [SerializeField] private GameObject scanObject;
 
-        [SerializeField] private Button debugButton;
+        [Header("Objects to Animate")] 
+        [SerializeField] private GameObject creditCard;
 
         private Sequence sequence;
-        
+        private Image cardImage;
+        private RectTransform cardTransform;
+
+        private const float InitialScale = 0.4f;
+        private const float EnlargedScale = 1.5f;
+
         private void Awake()
         {
-            GameSession.OnCardScanned += AnimateScannedCard;
-            debugButton.onClick.AddListener(()=> AnimateScannedCard(PlayerColor.Blue, ScanAction.CreditCard));
+            GameSession.OnCardScanned += OnCardScanned;
+            CacheComponents();
+            InitializeCard();
         }
 
         private void OnDestroy()
         {
-            GameSession.OnCardScanned -= AnimateScannedCard;
-            debugButton.onClick.RemoveAllListeners();
+            GameSession.OnCardScanned -= OnCardScanned;
         }
 
         public void ResetUI()
         {
-            playerObject.GetComponent<Image>().sprite = inactiveSprite;
+            cardImage.sprite = inactiveSprite;
         }
 
-        private void AnimateScannedCard(PlayerColor playerColor, ScanAction scanAction)
+        private void CacheComponents()
         {
-            if (playerColor != this.playerColor )
+            cardTransform = creditCard.GetComponent<RectTransform>();
+            cardImage = creditCard.GetComponent<Image>();
+        }
+
+        private void InitializeCard()
+        {
+            creditCard.transform.position = defaultPosition.position;
+            creditCard.transform.localScale = Vector3.one * InitialScale;
+            cardImage.sprite = inactiveSprite;
+        }
+
+        private void OnCardScanned(PlayerColor playerColor, ScanAction scanAction)
+        {
+            if (playerColor != this.playerColor || scanAction != this.scanAction)
                 return;
-            
-            if (scanAction != this.scanAction)
-                return;
-            
-            sequence.Kill();
-            
-            scanObject.transform.position = startPosition.position;
-            scanObject.transform.localScale = new Vector3(1, 1, 1);
-            int randAngle = Random.Range(0, 360);
-            scanObject.GetComponent<RectTransform>().rotation = Quaternion.Euler(0, 0, randAngle);
-            scanObject.SetActive(true);
-            playerObject.GetComponent<Image>().sprite = inactiveSprite;
-            
-            sequence = DOTween.Sequence();
 
-            Tween moveToMiddleTween = scanObject.transform.DOMoveY(endPosition.position.y, 0.5f).SetEase(Ease.OutExpo);
-            
-            Tween shake = scanObject.transform.DOShakeScale(0.2f, 0.5f, 1, 90f, true, ShakeRandomnessMode.Harmonic);
+            PlayScanAnimation();
+        }
 
-            Vector3 newScale = new Vector3(playerObject.transform.localScale.x, playerObject.transform.localScale.y,
-                playerObject.transform.localScale.z);
-            
-            Tween fly = scanObject.transform.DOMove(playerObject.transform.position, 0.9f);
-            Tween rotate = scanObject.transform.DORotate(playerObject.transform.eulerAngles, 0.9f);
-            
-            Tween scaleDown = scanObject.transform.DOScale(newScale, 0.9f);
+        private void PlayScanAnimation()
+        {
+            sequence?.Kill();
 
-            sequence.Join(moveToMiddleTween);
-            sequence.Append(shake);
-            sequence.Append(fly);
-            sequence.Join(rotate);
-            sequence.Join(scaleDown);
+            cardTransform.localScale = Vector3.one * EnlargedScale;
+            cardImage.sprite = activeSprite;
+
+            sequence = DOTween.Sequence()
+                .Append(cardTransform.DOLocalMove(middleScreenPosition.position, 0.5f).SetEase(Ease.OutExpo))
+                .Append(cardTransform.DOShakeScale(0.2f, 0.5f, 1, 90f, true, ShakeRandomnessMode.Harmonic))
+                .Append(cardTransform.DOMove(defaultPosition.position, 0.9f))
+                .Join(cardTransform.DORotate(defaultPosition.eulerAngles, 0.9f))
+                .Join(cardTransform.DOScale(Vector3.one * InitialScale, 0.9f));
         }
     }
 }

@@ -1,60 +1,62 @@
 using System.Collections.Generic;
-using Animation;
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 
-public class SequenceTracker : MonoBehaviour
+namespace Animation
 {
-    [SerializeField] private List<ScanAnimation> allObjects;
-
-    private void Awake()
+    public class SequenceTracker : MonoBehaviour
     {
-        GameSession.OnTurnReset += ResetAllUI;
-    }
+        [SerializeField] private List<ScanAnimation> allObjects;
 
-    private void OnDestroy()
-    {
-        GameSession.OnTurnReset -= ResetAllUI;
-    }
-    
-    private void ResetAllUI()
-    {
-        int sequencesToWait = 0;
-        int sequencesCompleted = 0;
-
-        // Prüfe alle Objekte, wie viele Animations-Sequences aktiv sind
-        foreach (ScanAnimation scanAnimation in allObjects)
+        private void Awake()
         {
-            if (scanAnimation.Sequence != null && scanAnimation.Sequence.IsActive())
+            GameSession.OnTurnReset += ResetAllUI;
+        }
+
+        private void OnDestroy()
+        {
+            GameSession.OnTurnReset -= ResetAllUI;
+        }
+    
+        private void ResetAllUI()
+        {
+            int sequencesToWait = 0;
+            int sequencesCompleted = 0;
+
+            // Prüfe alle Objekte, wie viele Animations-Sequences aktiv sind
+            foreach (ScanAnimation scanAnimation in allObjects)
             {
-                sequencesToWait++;
-
-                // Registriere OnComplete Callback
-                scanAnimation.Sequence.OnComplete(() =>
+                if (scanAnimation.Sequence != null && scanAnimation.Sequence.IsActive())
                 {
-                    sequencesCompleted++;
+                    sequencesToWait++;
 
-                    // Wenn alle fertig sind, setze alle Sprites
-                    if (sequencesCompleted >= sequencesToWait)
+                    // Registriere OnComplete Callback
+                    scanAnimation.Sequence.OnComplete(() =>
                     {
-                        SetAllInactive();
-                    }
-                });
+                        sequencesCompleted++;
+
+                        // Wenn alle fertig sind, setze alle Sprites
+                        if (sequencesCompleted >= sequencesToWait)
+                        {
+                            SetAllInactive();
+                        }
+                    });
+                }
+            }
+
+            // Wenn keine Sequence aktiv war, direkt setzen
+            if (sequencesToWait == 0)
+            {
+                SetAllInactive();
             }
         }
 
-        // Wenn keine Sequence aktiv war, direkt setzen
-        if (sequencesToWait == 0)
+        private void SetAllInactive()
         {
-            SetAllInactive();
-        }
-    }
-
-    private void SetAllInactive()
-    {
-        foreach (ScanAnimation scanAnimation in allObjects)
-        {
-            scanAnimation.ResetUI();
+            foreach (ScanAnimation scanAnimation in allObjects)
+            {
+                scanAnimation.ResetUI();
+            }
         }
     }
 }

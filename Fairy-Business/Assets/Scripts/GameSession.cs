@@ -414,7 +414,6 @@ public class GameSession : MonobheaviourSingletonCustom<GameSession>
         turnLocations[PlayerColor.Red] = null;
         
         OnTurnReset?.Invoke();
-        Sounds.instance.Play("NewTurn");
     }
 
     private void NextTurn(){

@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class Sounds : MonobheaviourSingletonCustom<Sounds>
 { 
     public bool IsPlaying(string name)

@@ -1,9 +1,7 @@
 using DG.Tweening;
 using Player;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;
 
 namespace Animation
 {
@@ -47,7 +45,7 @@ namespace Animation
         {
             cardImage.sprite = inactiveSprite;
         }
-
+        
         private void CacheComponents()
         {
             cardTransform = creditCard.GetComponent<RectTransform>();

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f3e53e1e70efc4746935013be15125b7
+guid: 6effa03503ac9bf4ab913d9d47d943cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1592068955613653029
-    second: FutureTurn04@3x_0
+      213: -5434097955531054915
+    second: NewTurn1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FutureTurn04@3x_0
+      name: NewTurn1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 963
-        height: 429
+        width: 2135
+        height: 2435
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 528674da74a281610800000000000000
-      internalID: 1592068955613653029
+      spriteID: db025e553b43694b0800000000000000
+      internalID: -5434097955531054915
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FutureTurn04@3x_0: 1592068955613653029
+      NewTurn1_0: -5434097955531054915
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

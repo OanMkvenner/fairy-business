@@ -6,7 +6,8 @@ namespace Animation
 {
     public class SequenceTracker : MonoBehaviour
     {
-        [SerializeField] private List<ScanAnimation> allObjects;
+        [SerializeField] private List<ScanAnimation> scannedAnimations;
+        [SerializeField] private List<NewTurnAnimation> newTurnAnimations;
 
         private void Awake()
         {
@@ -24,7 +25,7 @@ namespace Animation
             int sequencesCompleted = 0;
 
             // Prüfe alle Objekte, wie viele Animations-Sequences aktiv sind
-            foreach (ScanAnimation scanAnimation in allObjects)
+            foreach (ScanAnimation scanAnimation in scannedAnimations)
             {
                 if (scanAnimation.Sequence != null && scanAnimation.Sequence.IsActive())
                 {
@@ -53,9 +54,16 @@ namespace Animation
 
         private void SetAllInactive()
         {
-            foreach (ScanAnimation scanAnimation in allObjects)
+            Sounds.instance.Play("NewTurn");
+            
+            foreach (ScanAnimation scanAnimation in scannedAnimations)
             {
                 scanAnimation.ResetUI();
+            }
+            
+            foreach (NewTurnAnimation newTurnAnimation in newTurnAnimations)
+            {
+                newTurnAnimation.StartAnimation();
             }
         }
     }

@@ -287,6 +287,12 @@ MonoBehaviour:
     - line: '|   - {instanceID: 0}'
     - line: '|   - {instanceID: 0}'
     - line: '|   - {instanceID: 0}'
+    - line: '|   - {fileID: 11400000, guid: ca43d743980d07649973c3ee821f8521, type:
+        2}'
+    - line: '|   - {fileID: 11400000, guid: eba4a4578d7848045a4c22799a44240f, type:
+        2}'
+    - line: '|   - {fileID: 11400000, guid: babdd18e559ed7d418d607c3119fffb3, type:
+        2}'
     - line: '|   metroInputSource: 0'
     - line: '|   wsaTransparentSwapchain: 0'
     - line: '|   m_HolographicPauseOnTrackingLoss: 1'

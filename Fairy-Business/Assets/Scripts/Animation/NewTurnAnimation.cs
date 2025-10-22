@@ -7,7 +7,6 @@ namespace Animation
     [RequireComponent(typeof(RectTransform))]
     public class NewTurnAnimation : MonoBehaviour
     {
-        [SerializeField] private Button startAnimation;
         [SerializeField] private float duration = 0.6f;
         [SerializeField] private Transform targetPosition;
         

@@ -1,28 +1,34 @@
 using UnityEditor;
 using UnityEditor.Build;
 using UnityEditor.Build.Reporting;
+using UnityEngine;
 
-namespace Editor
+public class TextureSizeBuildPreprocessor : IPreprocessBuildWithReport
 {
-    public class TextureSizeBuildPreprocessor : IPreprocessBuildWithReport
-    {
-        public int callbackOrder => 0;
-        
-        private const int MaxResolution = 512;
+    public int callbackOrder => 0;
 
-        public void OnPreprocessBuild(BuildReport report)
+    public void OnPreprocessBuild(BuildReport report)
+    {
+        string[] guids = AssetDatabase.FindAssets("t:Texture2D");
+        int changedCount = 0;
+
+        foreach (string guid in guids)
         {
-            string[] guids = AssetDatabase.FindAssets("t:Texture2D");
-            foreach (string guid in guids)
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            AssetImporter importerBase = AssetImporter.GetAtPath(path);
+
+            // Nur verarbeiten, wenn der Importer wirklich ein TextureImporter ist
+            if (importerBase is TextureImporter importer)
             {
-                string path = AssetDatabase.GUIDToAssetPath(guid);
-                TextureImporter importer = (TextureImporter)AssetImporter.GetAtPath(path);
-                if (importer != null && importer.maxTextureSize > MaxResolution)
+                if (importer.maxTextureSize > 512)
                 {
-                    importer.maxTextureSize = MaxResolution;
+                    importer.maxTextureSize = 512;
                     importer.SaveAndReimport();
+                    changedCount++;
                 }
             }
         }
+
+        Debug.Log($"Texturen beim Build auf 512 limitiert. ({changedCount} geändert)");
     }
 }

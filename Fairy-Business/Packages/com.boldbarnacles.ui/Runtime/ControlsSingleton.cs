@@ -14,15 +14,24 @@ public class ControlsSingleton : MonobheaviourSingletonCustom<PlayerInput> {
         return ControlsSingleton.instance.actions["Point"].ReadValue<Vector2>();
     }
 
+    static public Vector3 GetMousePosLocalOfUiElement(RectTransform rect, Vector2 screenPoint){
+        Debug.LogError("Warning: This function is untested!");
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(rect, screenPoint, null, out Vector2 result);
+        return new Vector3(result.x, result.y, 0);
+    }
+
     //[BurstCompile]
     static public float3 GetMousePositionExact3D(){
         return GetMousePositionExact3D(out var _);
     }
+    static public Ray GetMouseRay(){
+        var mouseScreenPosition = GetMouseScreenPosition();
+        return Camera.main.ScreenPointToRay(mouseScreenPosition);
+    }
     //[BurstCompile]
     static public float3 GetMousePositionExact3D(out Ray mouseRay, float zDepth = 0f, Plane? overridePlane = null){
         //var camSystem = GameController.ClientWorld.GetExistingSystemManaged<CameraSystem>();
-        var mouseScreenPosition = GetMouseScreenPosition();
-        mouseRay = Camera.main.ScreenPointToRay(mouseScreenPosition);
+        mouseRay = GetMouseRay();
         var mouseWorldPosition = Utilities.GetWorldPosFromScreenRayAtZDepth(mouseRay, zDepth, overridePlane);
         return mouseWorldPosition;
     }

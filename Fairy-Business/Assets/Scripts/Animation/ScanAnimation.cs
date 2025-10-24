@@ -1,4 +1,3 @@
-using System;
 using DG.Tweening;
 using Player;
 using UnityEngine;
@@ -28,7 +27,7 @@ namespace Animation
         private RectTransform cardTransform;
 
         private const float InitialScale = 1f;
-        private const float EnlargedScale = 1.5f;
+        private const float EnlargedScale = 4.5f;
 
         private void Awake()
         {

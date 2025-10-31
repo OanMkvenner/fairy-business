@@ -44,11 +44,18 @@ namespace Locations
                 Tween rotateHoverButton = location.LocationHoverButtons[0].transform.parent.GetComponent<RectTransform>()
                     .DORotate(new Vector3(0, 0, 0), duration);
 
-                location.SkrewImageBottom();
+                //location.SkrewImageBottom();
                 
                 sequence.Join(moveTween);
                 sequence.Join(rotateTween);
                 sequence.Join(rotateHoverButton);
+                
+                //Set the scale and size of parent
+                location.transform.SetParent(targetPositionTransform);
+                location.RectTransform.anchorMin = Vector2.zero;
+                location.RectTransform.anchorMax = Vector2.one;
+                location.RectTransform.offsetMin = Vector2.zero;
+                location.RectTransform.offsetMax = Vector2.zero;
             }
         }
     

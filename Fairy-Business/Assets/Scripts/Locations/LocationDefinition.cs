@@ -32,8 +32,9 @@ namespace Locations
         private LocationsType locationType;
         private int victoryPoints = 3;
         private LocationUI currenLocatioUI;
+        
 
-        private RectTransform rectTransform;
+        public RectTransform RectTransform { get; private set; }
 
         private Dictionary<PlayerColor, int> power = new();
         private bool isSelected;
@@ -50,7 +51,7 @@ namespace Locations
 
         private void Awake()
         {
-            rectTransform = GetComponent<RectTransform>();
+            RectTransform = GetComponent<RectTransform>();
         }
 
         public void InitializeLocationDefinition(LocationData data, bool isGameView)
@@ -120,17 +121,17 @@ namespace Locations
 
         public Tween MoveY(float y, float duration)
         {
-            return rectTransform.DOMoveY(y, duration);
+            return RectTransform.DOMoveY(y, duration);
         }
 
         public Tween MoveX(float x, float duration)
         {
-            return rectTransform.DOLocalMoveX(x, duration);
+            return RectTransform.DOLocalMoveX(x, duration);
         }
 
         public Tween Rotate(float angle, float duration)
         {
-            return rectTransform.DORotate(new Vector3(0, 0, angle), duration);
+            return RectTransform.DORotate(new Vector3(0, 0, angle), duration);
         }
 
         public void SkrewImageBottom()

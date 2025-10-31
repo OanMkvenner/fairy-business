@@ -1339,7 +1339,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 580}
+  m_SizeDelta: {x: 0, y: 615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &142681418
 MonoBehaviour:
@@ -1357,7 +1357,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 580
+  m_PreferredHeight: 615
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -1387,11 +1387,11 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 40
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 0
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -1541,7 +1541,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 580}
+  m_SizeDelta: {x: 0, y: 615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180938596
 MonoBehaviour:
@@ -1559,7 +1559,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 580
+  m_PreferredHeight: 615
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -1589,7 +1589,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 40
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -2374,10 +2374,10 @@ RectTransform:
   - {fileID: 645634082}
   m_Father: {fileID: 1311465866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.20929687, y: 0.03757345}
-  m_AnchorMax: {x: 0.75300395, y: 0.9436391}
+  m_AnchorMin: {x: 0.19559473, y: 0.019139843}
+  m_AnchorMax: {x: 0.75300395, y: 0.97913516}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: -0.0000019073486}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &361907983
 MonoBehaviour:
@@ -2415,6 +2415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 386069577}
   - component: {fileID: 386069578}
+  - component: {fileID: 386069579}
   m_Layer: 5
   m_Name: BlueLine
   m_TagString: Untagged
@@ -2438,8 +2439,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 153.90816, y: 0}
-  m_SizeDelta: {x: 166.66667, y: 0}
+  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386069578
 MonoBehaviour:
@@ -2455,6 +2456,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &386069579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386069576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
 --- !u!1 &421488921
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,6 +2953,7 @@ GameObject:
   m_Component:
   - component: {fileID: 508358500}
   - component: {fileID: 508358501}
+  - component: {fileID: 508358502}
   m_Layer: 5
   m_Name: RedLine
   m_TagString: Untagged
@@ -2963,8 +2977,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 153.90816, y: 0}
-  m_SizeDelta: {x: 166.66667, y: 166.66667}
+  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508358501
 MonoBehaviour:
@@ -2980,6 +2994,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &508358502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508358499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
 --- !u!1001 &520685143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3261,7 +3287,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 580}
+  m_SizeDelta: {x: 0, y: 615}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &645634083
 MonoBehaviour:
@@ -3279,7 +3305,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: -1
-  m_PreferredHeight: 580
+  m_PreferredHeight: 615
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -3300,8 +3326,8 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 40
+  m_ChildAlignment: 1
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -3915,7 +3941,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 64.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4880,9 +4906,9 @@ MonoBehaviour:
   gameFieldParent: {fileID: 361907982}
   lines:
   - line: 0
-    redPosition: {fileID: 0}
-    neutralPosition: {fileID: 0}
-    bluePosition: {fileID: 0}
+    redPosition: {fileID: 508358500}
+    neutralPosition: {fileID: 1360688553}
+    bluePosition: {fileID: 1530728292}
   - line: 1
     redPosition: {fileID: 1088792335}
     neutralPosition: {fileID: 1346613380}
@@ -5241,6 +5267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1088792335}
   - component: {fileID: 1088792336}
+  - component: {fileID: 1088792337}
   m_Layer: 5
   m_Name: RedLine
   m_TagString: Untagged
@@ -5264,8 +5291,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 153.90816, y: 0}
-  m_SizeDelta: {x: 166.66667, y: 0}
+  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088792336
 MonoBehaviour:
@@ -5281,6 +5308,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1088792337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088792334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
 --- !u!1 &1094412103
 GameObject:
   m_ObjectHideFlags: 0
@@ -7649,6 +7688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1346613380}
   - component: {fileID: 1346613381}
+  - component: {fileID: 1346613382}
   m_Layer: 5
   m_Name: Neutral
   m_TagString: Untagged
@@ -7672,8 +7712,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 153.90816, y: 0}
-  m_SizeDelta: {x: 166.66667, y: 0}
+  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346613381
 MonoBehaviour:
@@ -7689,6 +7729,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1346613382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346613379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
 --- !u!1 &1349237211
 GameObject:
   m_ObjectHideFlags: 0
@@ -7774,6 +7826,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1360688553}
   - component: {fileID: 1360688554}
+  - component: {fileID: 1360688555}
   m_Layer: 5
   m_Name: Neutral
   m_TagString: Untagged
@@ -7797,8 +7850,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 153.90816, y: 0}
-  m_SizeDelta: {x: 166.66667, y: 166.66667}
+  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360688554
 MonoBehaviour:
@@ -7814,6 +7867,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1360688555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360688552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
 --- !u!1 &1371387477
 GameObject:
   m_ObjectHideFlags: 0
@@ -8901,6 +8966,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1530728292}
   - component: {fileID: 1530728293}
+  - component: {fileID: 1530728294}
   m_Layer: 5
   m_Name: BlueLine
   m_TagString: Untagged
@@ -8924,8 +8990,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 153.90816, y: 0}
-  m_SizeDelta: {x: 166.66667, y: 166.66667}
+  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530728293
 MonoBehaviour:
@@ -8941,6 +9007,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1530728294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530728291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
 --- !u!1 &1560110618
 GameObject:
   m_ObjectHideFlags: 0
@@ -10223,6 +10301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1794067263}
   - component: {fileID: 1794067264}
+  - component: {fileID: 1794067265}
   m_Layer: 5
   m_Name: Neutral
   m_TagString: Untagged
@@ -10246,8 +10325,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 153.90816, y: 0}
-  m_SizeDelta: {x: 166.66667, y: 0}
+  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794067264
 MonoBehaviour:
@@ -10263,6 +10342,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1794067265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794067262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
 --- !u!1 &1799719035
 GameObject:
   m_ObjectHideFlags: 0
@@ -10273,6 +10364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799719036}
   - component: {fileID: 1799719037}
+  - component: {fileID: 1799719038}
   m_Layer: 5
   m_Name: BlueLine
   m_TagString: Untagged
@@ -10296,8 +10388,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 153.90816, y: 0}
-  m_SizeDelta: {x: 166.66667, y: 0}
+  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799719037
 MonoBehaviour:
@@ -10313,6 +10405,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1799719038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799719035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
 --- !u!1 &1812089646
 GameObject:
   m_ObjectHideFlags: 0
@@ -10399,6 +10503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1841480514}
   - component: {fileID: 1841480515}
+  - component: {fileID: 1841480516}
   m_Layer: 5
   m_Name: RedLine
   m_TagString: Untagged
@@ -10422,8 +10527,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 153.90816, y: 0}
-  m_SizeDelta: {x: 166.66667, y: 0}
+  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841480515
 MonoBehaviour:
@@ -10439,6 +10544,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &1841480516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841480513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
 --- !u!1001 &1867951870
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,10 +3,10 @@ using UnityEngine;
 
 namespace Animation
 {
-    [RequireComponent(typeof(RectTransform))]
+    [RequireComponent(typeof(RectTransform), typeof(AnimationFlow))]
     public abstract class BaseAnimation : MonoBehaviour, IUIAnimation
     {
-        [field: SerializeField] protected AnimationSettings AnimationSettings {get; set;}
+        [field: SerializeField] public AnimationSettings AnimationSettings {get; private set;}
         
         protected RectTransform RectTransform;
         

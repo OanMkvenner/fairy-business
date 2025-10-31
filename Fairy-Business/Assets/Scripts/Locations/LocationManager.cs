@@ -10,7 +10,7 @@ namespace Locations
     public class LocationManager : MonobheaviourSingletonCustom<LocationManager>
     {
         public List<LocationDefinition> SelectedLocations { get; private set; } = new List<LocationDefinition>();
-        public List<LocationDefinition> GameLocations { get; set; } 
+        public List<LocationDefinition> GameLocations { get; private set; } 
 
         [SerializeField] private List<LocationData> locationDataCollection;
         [SerializeField] private LocationDefinition locationDefinitionPrefab;
@@ -33,9 +33,8 @@ namespace Locations
         {
             GameLocations = new List<LocationDefinition>();
 
-            for (int index = 0; index < SelectedLocations.Count; index++)
+            foreach (var locationDefinition in SelectedLocations)
             {
-                LocationDefinition locationDefinition = SelectedLocations[index];
                 LocationDefinition gameLocationDefinition = Instantiate(locationDefinitionPrefab, gameFieldParent);
                 gameLocationDefinition.InitializeLocationDefinition(locationDefinition.LocationData, true);
                 gameLocationDefinition.IsSelected = true;

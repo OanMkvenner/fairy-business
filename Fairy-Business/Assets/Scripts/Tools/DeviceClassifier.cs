@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Tools
 {
-    public class DeviceClassifier
+    public static class DeviceClassifier
     {
         public static bool IsTablet()
         {

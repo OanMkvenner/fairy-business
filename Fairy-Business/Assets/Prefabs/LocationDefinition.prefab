@@ -355,7 +355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1571817078031080772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -605,7 +605,7 @@ MonoBehaviour:
   - {fileID: 2914450066627210585}
   locationHoverButton: {fileID: 8924685322071473361}
   locationImage: {fileID: 7300563151681373825}
-  cardFrameImage: {fileID: 6673066322268963279}
+  <CardFrameImage>k__BackingField: {fileID: 6673066322268963279}
 --- !u!1 &6772197843432579951
 GameObject:
   m_ObjectHideFlags: 0

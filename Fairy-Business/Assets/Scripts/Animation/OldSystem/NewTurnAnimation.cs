@@ -1,8 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 
-namespace Animation
+namespace Animation.OldSystem
 {
     [RequireComponent(typeof(RectTransform))]
     public class NewTurnAnimation : MonoBehaviour

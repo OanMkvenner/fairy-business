@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Animation.OldSystem;
 using DG.Tweening;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ namespace Animation
     {
         [SerializeField] private List<ScanAnimation> scannedAnimations;
         [SerializeField] private List<NewTurnAnimation> newTurnAnimations;
+        [SerializeField] private BaseAnimationActivator baseAnimationAktivator;
 
         private void Awake()
         {
@@ -61,10 +63,7 @@ namespace Animation
                 scanAnimation.ResetUI();
             }
             
-            foreach (NewTurnAnimation newTurnAnimation in newTurnAnimations)
-            {
-                newTurnAnimation.StartAnimation();
-            }
+            baseAnimationAktivator.ActivateAnimations();
         }
     }
 }

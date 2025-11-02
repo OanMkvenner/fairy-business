@@ -7,7 +7,7 @@ namespace Animation
     public abstract class BaseAnimation : MonoBehaviour, IUIAnimation
     {
         [field: SerializeField] public AnimationSettings AnimationSettings {get; private set;}
-        
+
         protected RectTransform RectTransform;
         
         private void Awake()

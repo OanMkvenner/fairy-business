@@ -1091,13 +1091,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Animation.ScanAnimation
   playerColor: 1
   scanAction: 2
-  middleScreenPosition: {fileID: 1495417005}
-  defaultPosition: {fileID: 174327054}
+  middleScreenPosition: {fileID: 0}
+  defaultPosition: {fileID: 0}
   activeSprite: {fileID: 9212414535637183403, guid: 684ce206a591c864380ef8e5cf879861,
     type: 3}
   inactiveSprite: {fileID: 7332283720690961323, guid: 908c81ad31623e148942d56b97a365d1,
     type: 3}
-  creditCard: {fileID: 102394070}
+  creditCard: {fileID: 0}
 --- !u!224 &102394072
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1200,16 +1200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b8ccf0bfdf4cd59b681df06dd5999e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scannedAnimations:
-  - {fileID: 1320983088}
-  - {fileID: 102394071}
-  - {fileID: 1237657063}
-  - {fileID: 1732707342}
-  newTurnAnimations:
-  - {fileID: 1079602144}
-  - {fileID: 1333872673}
-  - {fileID: 1122342589}
-  - {fileID: 1122644145}
+  scannedAnimations: []
+  newTurnAnimations: []
+  baseAnimationAktivator: {fileID: 1560110620}
 --- !u!1 &125891050
 GameObject:
   m_ObjectHideFlags: 0
@@ -4724,9 +4717,11 @@ GameObject:
   - component: {fileID: 1079602143}
   - component: {fileID: 1079602146}
   - component: {fileID: 1079602145}
-  - component: {fileID: 1079602144}
+  - component: {fileID: 1079602149}
+  - component: {fileID: 1079602148}
+  - component: {fileID: 1079602147}
   m_Layer: 5
-  m_Name: Image
+  m_Name: MiddleImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4751,20 +4746,6 @@ RectTransform:
   m_AnchoredPosition: {x: 900, y: 900}
   m_SizeDelta: {x: 842.33, y: 952.04}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1079602144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1079602142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7bdbf7626334b06b70b8a5e543fc5ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.NewTurnAnimation
-  duration: 0.8
-  targetPosition: {fileID: 959896615}
 --- !u!114 &1079602145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4804,6 +4785,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079602142}
   m_CullTransparentMesh: 1
+--- !u!114 &1079602147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079602142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.8
+    <Ease>k__BackingField: 15
+    <VectorValue>k__BackingField: {x: 900, y: 900, z: 0}
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+--- !u!114 &1079602148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079602142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.8
+    <Ease>k__BackingField: 28
+    <VectorValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <AppendInterval>k__BackingField: 1
+    <AppendIntervalTime>k__BackingField: 4
+    <SequenceInsertType>k__BackingField: 2
+--- !u!114 &1079602149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079602142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa846191253471d9b8514d261da8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
+  playOnEnable: 0
 --- !u!1 &1083945983
 GameObject:
   m_ObjectHideFlags: 0
@@ -5238,9 +5270,11 @@ GameObject:
   - component: {fileID: 1122342588}
   - component: {fileID: 1122342591}
   - component: {fileID: 1122342590}
-  - component: {fileID: 1122342589}
+  - component: {fileID: 1122342594}
+  - component: {fileID: 1122342593}
+  - component: {fileID: 1122342592}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: RightImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5265,20 +5299,6 @@ RectTransform:
   m_AnchoredPosition: {x: -562, y: -878}
   m_SizeDelta: {x: 842.33, y: 952.04}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1122342589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122342587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7bdbf7626334b06b70b8a5e543fc5ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.NewTurnAnimation
-  duration: 0.6
-  targetPosition: {fileID: 125891051}
 --- !u!114 &1122342590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5318,6 +5338,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122342587}
   m_CullTransparentMesh: 1
+--- !u!114 &1122342592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122342587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.6
+    <Ease>k__BackingField: 15
+    <VectorValue>k__BackingField: {x: -562, y: -878, z: 0}
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+--- !u!114 &1122342593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122342587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.6
+    <Ease>k__BackingField: 28
+    <VectorValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <AppendInterval>k__BackingField: 1
+    <AppendIntervalTime>k__BackingField: 4
+    <SequenceInsertType>k__BackingField: 2
+--- !u!114 &1122342594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122342587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa846191253471d9b8514d261da8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
+  playOnEnable: 0
 --- !u!1 &1122644141
 GameObject:
   m_ObjectHideFlags: 0
@@ -5329,6 +5400,8 @@ GameObject:
   - component: {fileID: 1122644142}
   - component: {fileID: 1122644144}
   - component: {fileID: 1122644143}
+  - component: {fileID: 1122644147}
+  - component: {fileID: 1122644146}
   - component: {fileID: 1122644145}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -5465,11 +5538,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 1122644141}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7bdbf7626334b06b70b8a5e543fc5ae, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.NewTurnAnimation
-  duration: 0.8
-  targetPosition: {fileID: 959896615}
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.8
+    <Ease>k__BackingField: 15
+    <VectorValue>k__BackingField: {x: -771, y: -878, z: 0}
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+--- !u!114 &1122644146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122644141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.8
+    <Ease>k__BackingField: 28
+    <VectorValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 1
+    <SequenceInsertType>k__BackingField: 2
+--- !u!114 &1122644147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122644141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa846191253471d9b8514d261da8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
+  playOnEnable: 0
 --- !u!1 &1127646724
 GameObject:
   m_ObjectHideFlags: 0
@@ -6155,13 +6265,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Animation.ScanAnimation
   playerColor: 2
   scanAction: 1
-  middleScreenPosition: {fileID: 1468454645}
-  defaultPosition: {fileID: 1270835874}
+  middleScreenPosition: {fileID: 0}
+  defaultPosition: {fileID: 0}
   activeSprite: {fileID: -6966834627183813899, guid: fefd7b61bce05754d92a80e94c0c0dc5,
     type: 3}
   inactiveSprite: {fileID: 325808456137919712, guid: 48810de360b286b4483ca8bc9d76af48,
     type: 3}
-  creditCard: {fileID: 1237657059}
+  creditCard: {fileID: 0}
 --- !u!1 &1241163019
 GameObject:
   m_ObjectHideFlags: 0
@@ -7103,13 +7213,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Animation.ScanAnimation
   playerColor: 2
   scanAction: 2
-  middleScreenPosition: {fileID: 1468454645}
-  defaultPosition: {fileID: 13919638}
+  middleScreenPosition: {fileID: 0}
+  defaultPosition: {fileID: 0}
   activeSprite: {fileID: 9212414535637183403, guid: 684ce206a591c864380ef8e5cf879861,
     type: 3}
   inactiveSprite: {fileID: 7332283720690961323, guid: 908c81ad31623e148942d56b97a365d1,
     type: 3}
-  creditCard: {fileID: 1320983084}
+  creditCard: {fileID: 0}
 --- !u!1 &1328486559
 GameObject:
   m_ObjectHideFlags: 0
@@ -7156,9 +7266,11 @@ GameObject:
   - component: {fileID: 1333872672}
   - component: {fileID: 1333872675}
   - component: {fileID: 1333872674}
-  - component: {fileID: 1333872673}
+  - component: {fileID: 1333872678}
+  - component: {fileID: 1333872677}
+  - component: {fileID: 1333872676}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: LeftImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7183,20 +7295,6 @@ RectTransform:
   m_AnchoredPosition: {x: -985, y: -878}
   m_SizeDelta: {x: 842.33, y: 952.04}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1333872673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1333872671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7bdbf7626334b06b70b8a5e543fc5ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.NewTurnAnimation
-  duration: 0.6
-  targetPosition: {fileID: 148986867}
 --- !u!114 &1333872674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7236,6 +7334,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333872671}
   m_CullTransparentMesh: 1
+--- !u!114 &1333872676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333872671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.6
+    <Ease>k__BackingField: 15
+    <VectorValue>k__BackingField: {x: -985, y: -878, z: 0}
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+--- !u!114 &1333872677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333872671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.6
+    <Ease>k__BackingField: 28
+    <VectorValue>k__BackingField: {x: -214, y: 0, z: 0}
+    <AppendInterval>k__BackingField: 1
+    <AppendIntervalTime>k__BackingField: 4
+    <SequenceInsertType>k__BackingField: 2
+--- !u!114 &1333872678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333872671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa846191253471d9b8514d261da8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
+  playOnEnable: 0
 --- !u!1 &1346613379
 GameObject:
   m_ObjectHideFlags: 0
@@ -8467,6 +8616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1560110619}
+  - component: {fileID: 1560110620}
   m_Layer: 5
   m_Name: NewTurnAnimation
   m_TagString: Untagged
@@ -8486,10 +8636,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1122644142}
   - {fileID: 1333872672}
   - {fileID: 1079602143}
   - {fileID: 1122342588}
-  - {fileID: 1122644142}
   - {fileID: 959896615}
   - {fileID: 148986867}
   - {fileID: 125891051}
@@ -8500,6 +8650,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1560110620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560110618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d2bf0ee68c41ffa4f72ddaea707033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.BaseAnimationActivator
 --- !u!1 &1608635213 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2097885715196068126, guid: ffe8db6b59f466147a4c0e0bd373bbc1,
@@ -9313,13 +9475,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Animation.ScanAnimation
   playerColor: 1
   scanAction: 1
-  middleScreenPosition: {fileID: 1495417005}
-  defaultPosition: {fileID: 259901716}
+  middleScreenPosition: {fileID: 0}
+  defaultPosition: {fileID: 0}
   activeSprite: {fileID: -6966834627183813899, guid: fefd7b61bce05754d92a80e94c0c0dc5,
     type: 3}
   inactiveSprite: {fileID: 325808456137919712, guid: 48810de360b286b4483ca8bc9d76af48,
     type: 3}
-  creditCard: {fileID: 1732707338}
+  creditCard: {fileID: 0}
 --- !u!1 &1736882802
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ namespace Animation
     {
         protected override Tween PlayAnimation()
         {
-            return RectTransform.DOMoveY(AnimationSettings.VectorValue.y, AnimationSettings.Duration).SetEase(AnimationSettings.Ease);
+            return RectTransform.DOMoveY(AnimationSettings.UIEndPosition.GetUIPosition(Canvas).y, AnimationSettings.Duration).SetEase(AnimationSettings.Ease);
         }
     }
 }

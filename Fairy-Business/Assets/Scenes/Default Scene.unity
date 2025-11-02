@@ -1203,41 +1203,6 @@ MonoBehaviour:
   scannedAnimations: []
   newTurnAnimations: []
   baseAnimationAktivator: {fileID: 1560110620}
---- !u!1 &125891050
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 125891051}
-  m_Layer: 5
-  m_Name: Right
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &125891051
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125891050}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1560110619}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 209, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &142681416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,41 +1240,6 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 224, y: 0}
   m_SizeDelta: {x: 100, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &148986866
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 148986867}
-  m_Layer: 5
-  m_Name: Left
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &148986867
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 148986866}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1560110619}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -214, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &168188767
 GameObject:
@@ -4211,41 +4141,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 919811957}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &959896614
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 959896615}
-  m_Layer: 5
-  m_Name: Middle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &959896615
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959896614}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1560110619}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &966598912
 GameObject:
   m_ObjectHideFlags: 0
@@ -4798,9 +4693,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
   <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0.8
+    <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
-    <VectorValue>k__BackingField: {x: 900, y: 900, z: 0}
+    <UIEndPosition>k__BackingField:
+      startingPivot: 2
+      xOffset: 50
+      yOffset: 50
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
     <SequenceInsertType>k__BackingField: 2
@@ -4819,7 +4717,10 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.8
     <Ease>k__BackingField: 28
-    <VectorValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <UIEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 4
     <SequenceInsertType>k__BackingField: 2
@@ -5351,9 +5252,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
   <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0.6
+    <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
-    <VectorValue>k__BackingField: {x: -562, y: -878, z: 0}
+    <UIEndPosition>k__BackingField:
+      startingPivot: 1
+      xOffset: -50
+      yOffset: -50
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
     <SequenceInsertType>k__BackingField: 2
@@ -5372,7 +5276,10 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.6
     <Ease>k__BackingField: 28
-    <VectorValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <UIEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 60
+      yOffset: 0
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 4
     <SequenceInsertType>k__BackingField: 2
@@ -5542,9 +5449,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
   <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0.8
+    <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
-    <VectorValue>k__BackingField: {x: -771, y: -878, z: 0}
+    <UIEndPosition>k__BackingField:
+      startingPivot: 1
+      xOffset: -50
+      yOffset: -50
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
     <SequenceInsertType>k__BackingField: 2
@@ -5563,7 +5473,10 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.8
     <Ease>k__BackingField: 28
-    <VectorValue>k__BackingField: {x: 0, y: 0, z: 0}
+    <UIEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 1
     <SequenceInsertType>k__BackingField: 2
@@ -7347,9 +7260,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
   <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0.6
+    <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
-    <VectorValue>k__BackingField: {x: -985, y: -878, z: 0}
+    <UIEndPosition>k__BackingField:
+      startingPivot: 1
+      xOffset: -50
+      yOffset: -50
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
     <SequenceInsertType>k__BackingField: 2
@@ -7368,7 +7284,10 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.6
     <Ease>k__BackingField: 28
-    <VectorValue>k__BackingField: {x: -214, y: 0, z: 0}
+    <UIEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: -60
+      yOffset: 0
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 4
     <SequenceInsertType>k__BackingField: 2
@@ -8640,9 +8559,6 @@ RectTransform:
   - {fileID: 1333872672}
   - {fileID: 1079602143}
   - {fileID: 1122342588}
-  - {fileID: 959896615}
-  - {fileID: 148986867}
-  - {fileID: 125891051}
   m_Father: {fileID: 1311465866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

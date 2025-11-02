@@ -9,10 +9,13 @@ namespace Animation
         [field: SerializeField] public AnimationSettings AnimationSettings {get; private set;}
 
         protected RectTransform RectTransform;
+
+        protected Canvas Canvas;
         
         private void Awake()
         {
             RectTransform = GetComponent<RectTransform>();
+            Canvas = GetComponentInParent<Canvas>();
         }
 
         protected abstract Tween PlayAnimation();

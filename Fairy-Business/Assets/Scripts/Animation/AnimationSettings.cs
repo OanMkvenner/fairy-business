@@ -1,4 +1,5 @@
 using System;
+using Animation.Position;
 using DG.Tweening;
 using UnityEngine;
 
@@ -17,16 +18,16 @@ namespace Animation
     {
         [field: SerializeField] public float Duration { get; set; }
         [field: SerializeField] public Ease Ease { get; set; }
-        [field: SerializeField] public Vector3 VectorValue { get; set; }
+        [field: SerializeField] public UIPosition UIEndPosition { get; set; }
         [field: SerializeField] public bool AppendInterval { get; set; }
         [field: SerializeField] public float AppendIntervalTime { get; set; }
         [field: SerializeField] public SequenceInsertType SequenceInsertType { get; set; }
 
-        public AnimationSettings(float duration, Ease ease, Vector3 vectorValue, SequenceInsertType sequenceInsertType)
+        public AnimationSettings(float duration, Ease ease, UIPosition uiEndPosition, SequenceInsertType sequenceInsertType)
         {
             Duration = duration;
             Ease = ease;
-            VectorValue = vectorValue;
+            UIEndPosition = uiEndPosition;
             SequenceInsertType = sequenceInsertType;
         }
     }

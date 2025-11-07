@@ -172,7 +172,7 @@ MonoBehaviour:
       startingPivot: 0
       xOffset: 0
       yOffset: 0
-    <AppendInterval>k__BackingField: 0
+    <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 1
     <SequenceInsertType>k__BackingField: 2
 --- !u!114 &9174156196844638930
@@ -309,7 +309,7 @@ MonoBehaviour:
       xOffset: -60
       yOffset: 0
     <AppendInterval>k__BackingField: 1
-    <AppendIntervalTime>k__BackingField: 4
+    <AppendIntervalTime>k__BackingField: 1
     <SequenceInsertType>k__BackingField: 2
 --- !u!114 &6305310557606031476
 MonoBehaviour:
@@ -445,7 +445,7 @@ MonoBehaviour:
       xOffset: 0
       yOffset: 0
     <AppendInterval>k__BackingField: 1
-    <AppendIntervalTime>k__BackingField: 4
+    <AppendIntervalTime>k__BackingField: 1
     <SequenceInsertType>k__BackingField: 2
 --- !u!114 &8829696214111503586
 MonoBehaviour:
@@ -581,7 +581,7 @@ MonoBehaviour:
       xOffset: 60
       yOffset: 0
     <AppendInterval>k__BackingField: 1
-    <AppendIntervalTime>k__BackingField: 4
+    <AppendIntervalTime>k__BackingField: 1
     <SequenceInsertType>k__BackingField: 2
 --- !u!114 &6081498935359398356
 MonoBehaviour:
@@ -634,10 +634,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9123577331521030486}
   - {fileID: 6724146005231511376}
   - {fileID: 1374963441246337265}
   - {fileID: 2820342043126010743}
+  - {fileID: 9123577331521030486}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

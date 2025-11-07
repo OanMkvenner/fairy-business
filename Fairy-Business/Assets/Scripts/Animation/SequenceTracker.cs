@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Animation.OldSystem;
+using Animation.AnimationController;
 using DG.Tweening;
 using UnityEngine;
 
@@ -8,8 +8,7 @@ namespace Animation
     public class SequenceTracker : MonoBehaviour
     {
         [SerializeField] private List<ScanAnimation> scannedAnimations;
-        [SerializeField] private List<NewTurnAnimation> newTurnAnimations;
-        //[SerializeField] private BaseAnimationController baseAnimationAktivator;
+        [SerializeField] private NewTurnAnimationController newTurnAnimationController;
 
         private void Awake()
         {
@@ -63,7 +62,7 @@ namespace Animation
                 scanAnimation.ResetUI();
             }
             
-            //baseAnimationAktivator.ActivateAnimations();
+            newTurnAnimationController.StartAnimations();
         }
     }
 }

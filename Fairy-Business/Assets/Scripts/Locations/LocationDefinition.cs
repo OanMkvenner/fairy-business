@@ -24,7 +24,7 @@ namespace Locations
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
         [SerializeField] private SkewedImage locationImage;
-        [SerializeField] private SkewedImage cardFrameImage;
+        [field:SerializeField] public SkewedImage CardFrameImage { get; private set; }
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;
@@ -32,8 +32,9 @@ namespace Locations
         private LocationsType locationType;
         private int victoryPoints = 3;
         private LocationUI currenLocatioUI;
+        
 
-        private RectTransform rectTransform;
+        public RectTransform RectTransform { get; private set; }
 
         private Dictionary<PlayerColor, int> power = new();
         private bool isSelected;
@@ -50,7 +51,7 @@ namespace Locations
 
         private void Awake()
         {
-            rectTransform = GetComponent<RectTransform>();
+            RectTransform = GetComponent<RectTransform>();
         }
 
         public void InitializeLocationDefinition(LocationData data, bool isGameView)
@@ -80,8 +81,8 @@ namespace Locations
 
         public void SetCardFrame(Sprite frame)
         {
-            cardFrameImage.gameObject.SetActive(true);
-            cardFrameImage.sprite = frame;
+            CardFrameImage.gameObject.SetActive(true);
+            CardFrameImage.sprite = frame;
         }
         
         public void InitializeLocationUI(LocationUI locationUI)
@@ -120,33 +121,37 @@ namespace Locations
 
         public Tween MoveY(float y, float duration)
         {
-            return rectTransform.DOMoveY(y, duration);
+            return RectTransform.DOMoveY(y, duration);
         }
 
         public Tween MoveX(float x, float duration)
         {
-            return rectTransform.DOLocalMoveX(x, duration);
+            return RectTransform.DOLocalMoveX(x, duration);
         }
 
         public Tween Rotate(float angle, float duration)
         {
-            return rectTransform.DORotate(new Vector3(0, 0, angle), duration);
+            return RectTransform.DORotate(new Vector3(0, 0, angle), duration);
         }
 
-        public void SkrewImageBottom()
+        public void SkrewImageBottom(float percent = 0.1f)
         {
             if (CurrentOwner != PlayerColor.Neutral)
             {
-                locationImage.TrapezSkewTop = 0.9f;
-                cardFrameImage.TrapezSkewTop = 0.9f;
-                
-                locationImage.TrapezSkewBottom = 1.1f;
-                cardFrameImage.TrapezSkewBottom = 1.1f;
+                // Prozentual anpassen (z. B. +10 % unten, -10 % oben)
+                locationImage.TrapezSkewTop *= 1f - percent;
+                CardFrameImage.TrapezSkewTop *= 1f - percent;
+        
+                locationImage.TrapezSkewBottom *= 1f + percent;
+                CardFrameImage.TrapezSkewBottom *= 1f + percent;
             }
             else
             {
+                // Werte zurücksetzen (neutral)
                 locationImage.TrapezSkewTop = 1f;
-                cardFrameImage.TrapezSkewTop = 1f;
+                CardFrameImage.TrapezSkewTop = 1f;
+                locationImage.TrapezSkewBottom = 1f;
+                CardFrameImage.TrapezSkewBottom = 1f;
             }
         }
 

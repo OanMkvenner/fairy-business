@@ -42,6 +42,12 @@ public class RandomizerUtil
 		UpdateRndState();
 		return maxValInclusive * RandomSquirrel.Get1dNoiseZeroToOne(rndState, seed);
 	}
+	public float RandomFloatRange(float minValInclusive, float maxValInclusive){
+		if (maxValInclusive < minValInclusive) return minValInclusive;
+		maxValInclusive -= minValInclusive;
+		if (maxValInclusive == 0) return minValInclusive + 0;
+		return minValInclusive + RandomFloat(maxValInclusive);
+	}
 	public int RandomIntRange(int minValInclusive, int maxValInclusive){
 		if (maxValInclusive < minValInclusive) return minValInclusive;
 		UpdateRndState();

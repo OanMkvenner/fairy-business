@@ -268,7 +268,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03653ade6831b24d80ce4ad54f5942e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundSet: {fileID: 0}
 --- !u!114 &1719788004214031756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,7 +281,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactionHandle: {fileID: 8490029337751185672}
+  interactionArea: {fileID: 0}
   fillingRect: {fileID: 5892813374491812356}
+  barColor: {r: 0, g: 0, b: 0, a: 0}
+  catchMouse: 0
   rotateableLever: 0
   leverArm: {fileID: 0}
   minRotation:
@@ -295,8 +297,15 @@ MonoBehaviour:
     z: 0
   inputDampener: 50
   m_Value: 0
+  useOffset: 0
+  m_OffsetValue: 0
   m_MinValue: 0
   m_MaxValue: 1
+  limitRange: 0
+  rangeLimit:
+    x: -3.4028235e+38
+    y: 3.4028235e+38
+  steps: []
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -304,7 +313,6 @@ MonoBehaviour:
   hasActiveResistanceForces: 0
   gravityMidpoint: 0.3
   gravityStrength: 10
-  warpOffset: {x: 0, y: 0}
 --- !u!1 &6707938303800505073
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +473,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5892813374491812356}
   - component: {fileID: 2515920122192244450}
-  - component: {fileID: 1155301609549858255}
   - component: {fileID: 360176450916026699}
   m_Layer: 0
   m_Name: Fill
@@ -501,23 +508,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8468927347774948088}
   m_CullTransparentMesh: 1
---- !u!114 &1155301609549858255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8468927347774948088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 470308805, guid: 42c3f40ad0520e442aa80842ab9748a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsEditable: 0
-  TextInfo: Anchor MinX is a negative value, because this (together with the FillAreaMask)
-    )allows to avoid the weird compression effect when the fill-area gets close to
-    0.
-  MessageTypeAsInt: 0
 --- !u!114 &360176450916026699
 MonoBehaviour:
   m_ObjectHideFlags: 0

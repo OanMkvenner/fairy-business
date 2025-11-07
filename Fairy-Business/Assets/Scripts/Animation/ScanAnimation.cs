@@ -26,13 +26,17 @@ namespace Animation
         private Image cardImage;
         private RectTransform cardTransform;
 
-        private const float InitialScale = 0.4f;
-        private const float EnlargedScale = 1.5f;
+        private const float InitialScale = 1f;
+        private const float EnlargedScale = 4.5f;
 
         private void Awake()
         {
             GameSession.OnCardScanned += OnCardScanned;
             CacheComponents();
+        }
+
+        private void Start()
+        {
             InitializeCard();
         }
 
@@ -75,7 +79,7 @@ namespace Animation
             cardImage.sprite = activeSprite;
 
             sequence = DOTween.Sequence()
-                .Append(cardTransform.DOLocalMove(middleScreenPosition.position, 0.5f).SetEase(Ease.OutExpo))
+                .Append(cardTransform.DOMove(middleScreenPosition.position, 0.5f).SetEase(Ease.OutExpo))
                 .Append(cardTransform.DOShakeScale(0.2f, 0.5f, 1, 90f, true, ShakeRandomnessMode.Harmonic))
                 .Append(cardTransform.DOMove(defaultPosition.position, 0.9f))
                 .Join(cardTransform.DORotate(defaultPosition.eulerAngles, 0.9f))

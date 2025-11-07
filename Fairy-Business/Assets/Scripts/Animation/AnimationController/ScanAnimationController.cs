@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Animation.AnimationController
 {
-    public class PlayerScanAnimationController : BaseAnimationController<PlayerScanAnimationController>
+    public class ScanAnimationController : BaseAnimationController<ScanAnimationController>
     {
         [SerializeField] private PlayerColor playerColor;
         [SerializeField] private ScanAction scanAction;

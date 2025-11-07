@@ -1,3 +1,4 @@
+using Animation.Position;
 using Player;
 using UnityEngine;
 
@@ -7,10 +8,16 @@ namespace Animation.AnimationController
     {
         [SerializeField] private PlayerColor playerColor;
         [SerializeField] private ScanAction scanAction;
-        
+        [SerializeField] private  UIOffScreenPosition offScreenPosition;
+        [SerializeField] private GameObject animatedObject;
+
+        private Canvas canvas;
+
         protected override void Awake()
         {
             base.Awake();
+
+            canvas = GetComponent<Canvas>();
             
             GameSession.OnCardScanned += OnCardScanned;
         }
@@ -24,6 +31,9 @@ namespace Animation.AnimationController
         {
             if (playerColor != this.playerColor || scanAction != this.scanAction)
                 return;
+
+            //Set Off Screen position
+            animatedObject.transform.localPosition = offScreenPosition.GetOffScreenPosition(canvas);
             
             StartAnimations();
         }

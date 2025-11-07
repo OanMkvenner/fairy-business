@@ -21,20 +21,19 @@ namespace Animation
         [field: SerializeField] public bool AppendInterval { get; set; }
         [field: SerializeField] public float AppendIntervalTime { get; set; }
         [field: SerializeField] public SequenceInsertType SequenceInsertType { get; set; }
-        
-        private UIPosition uiEndPosition;
+        [field: SerializeField] public UIPosition UiEndPosition { get; set; }
 
         public AnimationSettings(float duration, Ease ease, UIPosition uiEndPosition, SequenceInsertType sequenceInsertType)
         {
             Duration = duration;
             Ease = ease;
-            uiEndPosition = uiEndPosition;
+            UiEndPosition = uiEndPosition;
             SequenceInsertType = sequenceInsertType;
         }
 
         public Vector2 GetUIPosition(Canvas canvas)
         {
-            return uiEndPosition.GetUIPosition(canvas);
+            return UiEndPosition.GetUIPosition(canvas);
         } 
     }
 }

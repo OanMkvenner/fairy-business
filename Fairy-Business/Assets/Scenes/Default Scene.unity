@@ -297,6 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 13919638}
   - component: {fileID: 13919639}
+  - component: {fileID: 13919640}
   m_Layer: 5
   m_Name: DefaultControlPosition
   m_TagString: Untagged
@@ -332,6 +333,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13919637}
   m_CullTransparentMesh: 1
+--- !u!114 &13919640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13919637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d9551798aa43078ce6938c2fca9d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.ScanAnimationController
+  playerColor: 2
+  scanAction: 2
+  offScreenPosition:
+    side: 1
+  animatedObject: {fileID: 1320983084}
 --- !u!1 &18315866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,9 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scannedAnimations:
-  - {fileID: 1320983088}
   - {fileID: 102394071}
-  - {fileID: 1237657063}
   - {fileID: 1732707342}
   newTurnAnimationController: {fileID: 811236982}
 --- !u!1 &142681416
@@ -6088,8 +6104,15 @@ GameObject:
   - component: {fileID: 1237657060}
   - component: {fileID: 1237657062}
   - component: {fileID: 1237657061}
-  - component: {fileID: 1237657063}
   - component: {fileID: 1237657064}
+  - component: {fileID: 1237657072}
+  - component: {fileID: 1237657071}
+  - component: {fileID: 1237657070}
+  - component: {fileID: 1237657069}
+  - component: {fileID: 1237657068}
+  - component: {fileID: 1237657067}
+  - component: {fileID: 1237657066}
+  - component: {fileID: 1237657065}
   m_Layer: 5
   m_Name: CreditCard
   m_TagString: Untagged
@@ -6104,7 +6127,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237657059}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6154,27 +6177,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237657059}
   m_CullTransparentMesh: 1
---- !u!114 &1237657063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237657059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850098ac40fb4d6399d9ac5637861d4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.ScanAnimation
-  playerColor: 2
-  scanAction: 1
-  middleScreenPosition: {fileID: 1468454645}
-  defaultPosition: {fileID: 1270835874}
-  activeSprite: {fileID: -6966834627183813899, guid: fefd7b61bce05754d92a80e94c0c0dc5,
-    type: 3}
-  inactiveSprite: {fileID: 325808456137919712, guid: 48810de360b286b4483ca8bc9d76af48,
-    type: 3}
-  creditCard: {fileID: 1237657059}
 --- !u!114 &1237657064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6189,6 +6191,181 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
   m_AspectRatio: 0.6666667
+--- !u!114 &1237657065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 0
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  scaleFactor: 1
+--- !u!114 &1237657066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3acccdcdc234b51bca0473fd1198b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.RotationTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 1
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  rotationValue: 0
+--- !u!114 &1237657067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 2
+      xOffset: -50
+      yOffset: 0
+--- !u!114 &1237657068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d3919bd175486ebddd453415647c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ShakeScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.2
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  strength: 0.5
+  vibrato: 1
+  randomness: 90
+  fadeOut: 1
+  shakeRandomnessMode: 1
+--- !u!114 &1237657069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.5
+    <Ease>k__BackingField: 18
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+--- !u!114 &1237657070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 1
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  scaleFactor: 4.5
+--- !u!114 &1237657071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 0
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+--- !u!114 &1237657072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa846191253471d9b8514d261da8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
+  playOnEnable: 0
 --- !u!1 &1241163019
 GameObject:
   m_ObjectHideFlags: 0
@@ -6686,6 +6863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270835874}
   - component: {fileID: 1270835875}
+  - component: {fileID: 1270835876}
   m_Layer: 5
   m_Name: DefaultCreditPosition
   m_TagString: Untagged
@@ -6721,6 +6899,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270835873}
   m_CullTransparentMesh: 1
+--- !u!114 &1270835876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270835873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d9551798aa43078ce6938c2fca9d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.ScanAnimationController
+  playerColor: 2
+  scanAction: 1
+  offScreenPosition:
+    side: 1
+  animatedObject: {fileID: 1237657059}
 --- !u!1 &1311465865
 GameObject:
   m_ObjectHideFlags: 0
@@ -7060,8 +7255,15 @@ GameObject:
   - component: {fileID: 1320983085}
   - component: {fileID: 1320983087}
   - component: {fileID: 1320983086}
-  - component: {fileID: 1320983088}
   - component: {fileID: 1320983089}
+  - component: {fileID: 1320983097}
+  - component: {fileID: 1320983096}
+  - component: {fileID: 1320983095}
+  - component: {fileID: 1320983094}
+  - component: {fileID: 1320983093}
+  - component: {fileID: 1320983092}
+  - component: {fileID: 1320983091}
+  - component: {fileID: 1320983090}
   m_Layer: 5
   m_Name: ControlCard
   m_TagString: Untagged
@@ -7127,27 +7329,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1320983084}
   m_CullTransparentMesh: 1
---- !u!114 &1320983088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1320983084}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 850098ac40fb4d6399d9ac5637861d4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.ScanAnimation
-  playerColor: 2
-  scanAction: 2
-  middleScreenPosition: {fileID: 1468454645}
-  defaultPosition: {fileID: 13919638}
-  activeSprite: {fileID: 9212414535637183403, guid: 684ce206a591c864380ef8e5cf879861,
-    type: 3}
-  inactiveSprite: {fileID: 7332283720690961323, guid: 908c81ad31623e148942d56b97a365d1,
-    type: 3}
-  creditCard: {fileID: 1320983084}
 --- !u!114 &1320983089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7162,6 +7343,181 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
   m_AspectRatio: 0.6666667
+--- !u!114 &1320983090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 0
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  scaleFactor: 1
+--- !u!114 &1320983091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3acccdcdc234b51bca0473fd1198b34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.RotationTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 1
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  rotationValue: 0
+--- !u!114 &1320983092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 2
+      xOffset: -20
+      yOffset: 0
+--- !u!114 &1320983093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d3919bd175486ebddd453415647c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ShakeScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.2
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  strength: 0.5
+  vibrato: 1
+  randomness: 90
+  fadeOut: 1
+  shakeRandomnessMode: 1
+--- !u!114 &1320983094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.5
+    <Ease>k__BackingField: 18
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+--- !u!114 &1320983095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 1
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  scaleFactor: 4.5
+--- !u!114 &1320983096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 0
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+--- !u!114 &1320983097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa846191253471d9b8514d261da8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
+  playOnEnable: 0
 --- !u!1 &1346613379
 GameObject:
   m_ObjectHideFlags: 0

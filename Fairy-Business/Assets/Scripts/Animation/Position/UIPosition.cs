@@ -7,9 +7,10 @@ namespace Animation.Position
     {
         Middle,
         BottomLeft,
+        BottomRight,
         TopRight,
     }
-    
+
     [Serializable]
     public class UIPosition
     {
@@ -31,14 +32,16 @@ namespace Animation.Position
                 Pivot.Middle     => CalculateMiddleScreenPosition(canvas),
                 Pivot.BottomLeft => CalculateBottomLeftScreenPosition(canvas),
                 Pivot.TopRight   => CalculateTopRightScreenPosition(canvas),
+                Pivot.BottomRight => CalculateBottomRightScreenPosition(canvas),
                 _                => Vector2.zero
             };
         }
 
+        #region OnScreenPositions
+
         private Vector2 CalculateMiddleScreenPosition(Canvas canvas)
         {
             Vector2 screenCenter = new Vector2((Screen.width / 2f) + xOffset, (Screen.height / 2f) + yOffset);
-            Debug.Log(Screen.width + ", " + Screen.height + " huhu");
             return ScreenPointToLocalPoint(canvas, screenCenter);
         }
 
@@ -47,12 +50,20 @@ namespace Animation.Position
             Vector2 screenPosition = new Vector2(xOffset, yOffset);
             return ScreenPointToLocalPoint(canvas, screenPosition);
         }
+
+        private Vector2 CalculateBottomRightScreenPosition(Canvas canvas)
+        {
+            Vector2 screenPosition = new Vector2(Screen.width + xOffset, yOffset);
+            return ScreenPointToLocalPoint(canvas, screenPosition);
+        }
         
         private Vector2 CalculateTopRightScreenPosition(Canvas canvas)
         {
             Vector2 screenPosition = new Vector2(Screen.width + xOffset, Screen.height + yOffset);
             return ScreenPointToLocalPoint(canvas, screenPosition);
         }
+
+        #endregion
 
         private Vector2 ScreenPointToLocalPoint(Canvas canvas, Vector2 screenPoint)
         {

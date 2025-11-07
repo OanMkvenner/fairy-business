@@ -347,8 +347,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.ScanAnimationController
   playerColor: 2
   scanAction: 2
-  offScreenPosition:
-    side: 1
   animatedObject: {fileID: 1320983084}
 --- !u!1 &18315866
 GameObject:
@@ -6106,6 +6104,7 @@ GameObject:
   - component: {fileID: 1237657061}
   - component: {fileID: 1237657064}
   - component: {fileID: 1237657072}
+  - component: {fileID: 1237657073}
   - component: {fileID: 1237657071}
   - component: {fileID: 1237657070}
   - component: {fileID: 1237657069}
@@ -6366,6 +6365,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
   playOnEnable: 0
+--- !u!114 &1237657073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fde4de7abf94d7db086c01721b2deb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  uiOffScreenPosition:
+    side: 1
+    xOffset: 0
+    yOffset: 0
 --- !u!1 &1241163019
 GameObject:
   m_ObjectHideFlags: 0
@@ -6913,8 +6938,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.ScanAnimationController
   playerColor: 2
   scanAction: 1
-  offScreenPosition:
-    side: 1
   animatedObject: {fileID: 1237657059}
 --- !u!1 &1311465865
 GameObject:
@@ -7257,6 +7280,7 @@ GameObject:
   - component: {fileID: 1320983086}
   - component: {fileID: 1320983089}
   - component: {fileID: 1320983097}
+  - component: {fileID: 1320983098}
   - component: {fileID: 1320983096}
   - component: {fileID: 1320983095}
   - component: {fileID: 1320983094}
@@ -7518,6 +7542,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
   playOnEnable: 0
+--- !u!114 &1320983098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fde4de7abf94d7db086c01721b2deb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  uiOffScreenPosition:
+    side: 1
+    xOffset: 0
+    yOffset: 0
 --- !u!1 &1346613379
 GameObject:
   m_ObjectHideFlags: 0

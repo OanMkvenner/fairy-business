@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 73503166064742258}
   - component: {fileID: 7973012410384347356}
   - component: {fileID: 8540409823392476289}
-  - component: {fileID: 9174156196844638930}
+  - component: {fileID: 8994537345030242846}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -168,14 +168,14 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.8
     <Ease>k__BackingField: 28
-    <UIEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 1
     <SequenceInsertType>k__BackingField: 2
---- !u!114 &9174156196844638930
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+--- !u!114 &8994537345030242846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,19 +184,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1151094116190615909}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fde4de7abf94d7db086c01721b2deb3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
-    <UIEndPosition>k__BackingField:
-      startingPivot: 1
-      xOffset: -50
-      yOffset: -50
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
     <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  uiOffScreenPosition:
+    side: 6
+    xOffset: 0
+    yOffset: 0
 --- !u!1 &1227886983356090032
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +214,7 @@ GameObject:
   - component: {fileID: 8721882180399789303}
   - component: {fileID: 6374555803352734516}
   - component: {fileID: 1788522460725672466}
-  - component: {fileID: 6305310557606031476}
+  - component: {fileID: 793518627966001456}
   m_Layer: 5
   m_Name: LeftImage
   m_TagString: Untagged
@@ -304,14 +308,14 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.6
     <Ease>k__BackingField: 28
-    <UIEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: -60
-      yOffset: 0
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 1
     <SequenceInsertType>k__BackingField: 2
---- !u!114 &6305310557606031476
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: -60
+      yOffset: 0
+--- !u!114 &793518627966001456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,19 +324,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1227886983356090032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fde4de7abf94d7db086c01721b2deb3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
-    <UIEndPosition>k__BackingField:
-      startingPivot: 1
-      xOffset: -50
-      yOffset: -50
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
     <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  uiOffScreenPosition:
+    side: 6
+    xOffset: -60
+    yOffset: 0
 --- !u!1 &1740410703274068908
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +354,7 @@ GameObject:
   - component: {fileID: 6004468079539529740}
   - component: {fileID: 6160681609155194864}
   - component: {fileID: 1577201016472894735}
-  - component: {fileID: 8829696214111503586}
+  - component: {fileID: 2243032076521649287}
   m_Layer: 5
   m_Name: MiddleImage
   m_TagString: Untagged
@@ -440,14 +448,14 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.8
     <Ease>k__BackingField: 28
-    <UIEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 1
     <SequenceInsertType>k__BackingField: 2
---- !u!114 &8829696214111503586
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+--- !u!114 &2243032076521649287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -456,19 +464,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1740410703274068908}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fde4de7abf94d7db086c01721b2deb3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
-    <UIEndPosition>k__BackingField:
-      startingPivot: 2
-      xOffset: 50
-      yOffset: 50
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
+    <SequenceInsertType>k__BackingField: 0
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  uiOffScreenPosition:
+    side: 5
+    xOffset: 0
+    yOffset: 0
 --- !u!1 &4893704622412421914
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +494,7 @@ GameObject:
   - component: {fileID: 4081947316261972669}
   - component: {fileID: 311260100107236045}
   - component: {fileID: 7277227218797173561}
-  - component: {fileID: 6081498935359398356}
+  - component: {fileID: 1033531188681408504}
   m_Layer: 5
   m_Name: RightImage
   m_TagString: Untagged
@@ -576,14 +588,14 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.6
     <Ease>k__BackingField: 28
-    <UIEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 60
-      yOffset: 0
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 1
     <SequenceInsertType>k__BackingField: 2
---- !u!114 &6081498935359398356
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 60
+      yOffset: 0
+--- !u!114 &1033531188681408504
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -592,19 +604,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4893704622412421914}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fde4de7abf94d7db086c01721b2deb3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.MoveAnimation
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
-    <UIEndPosition>k__BackingField:
-      startingPivot: 1
-      xOffset: -50
-      yOffset: -50
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
     <SequenceInsertType>k__BackingField: 2
+    <UiEndPosition>k__BackingField:
+      startingPivot: 0
+      xOffset: 0
+      yOffset: 0
+  uiOffScreenPosition:
+    side: 6
+    xOffset: 60
+    yOffset: 0
 --- !u!1 &7993479406436130851
 GameObject:
   m_ObjectHideFlags: 0

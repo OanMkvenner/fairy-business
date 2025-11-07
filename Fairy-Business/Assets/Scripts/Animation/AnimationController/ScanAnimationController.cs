@@ -8,7 +8,6 @@ namespace Animation.AnimationController
     {
         [SerializeField] private PlayerColor playerColor;
         [SerializeField] private ScanAction scanAction;
-        [SerializeField] private  UIOffScreenPosition offScreenPosition;
         [SerializeField] private GameObject animatedObject;
 
         private Canvas canvas;
@@ -32,9 +31,6 @@ namespace Animation.AnimationController
             if (playerColor != this.playerColor || scanAction != this.scanAction)
                 return;
 
-            //Set Off Screen position
-            animatedObject.transform.localPosition = offScreenPosition.GetOffScreenPosition(canvas);
-            
             StartAnimations();
         }
     }

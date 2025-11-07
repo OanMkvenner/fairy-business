@@ -1202,7 +1202,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scannedAnimations: []
   newTurnAnimations: []
-  baseAnimationAktivator: {fileID: 1560110620}
 --- !u!1 &142681416
 GameObject:
   m_ObjectHideFlags: 0
@@ -7182,6 +7181,7 @@ GameObject:
   - component: {fileID: 1333872678}
   - component: {fileID: 1333872677}
   - component: {fileID: 1333872676}
+  - component: {fileID: 1333872679}
   m_Layer: 5
   m_Name: LeftImage
   m_TagString: Untagged
@@ -7304,6 +7304,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
   playOnEnable: 0
+--- !u!114 &1333872679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333872671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b2f007890bf4d629b8635d1725eee4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlows.NewTurnAnimationFlow
+  playOnEnable: 0
+  animations: []
 --- !u!1 &1346613379
 GameObject:
   m_ObjectHideFlags: 0
@@ -8575,9 +8589,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1560110618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37d2bf0ee68c41ffa4f72ddaea707033, type: 3}
+  m_Script: {fileID: 11500000, guid: 89483896686a420281feb6c1b5ad9509, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.BaseAnimationActivator
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.NewTurnAnimationController
 --- !u!1 &1608635213 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2097885715196068126, guid: ffe8db6b59f466147a4c0e0bd373bbc1,

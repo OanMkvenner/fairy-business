@@ -1,7 +1,7 @@
 using DG.Tweening;
 using UnityEngine;
 
-namespace Animation
+namespace Animation.Tweens
 {
     [RequireComponent(typeof(RectTransform), typeof(AnimationFlow))]
     public abstract class BaseAnimation : MonoBehaviour, IUIAnimation

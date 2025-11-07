@@ -9,7 +9,7 @@ namespace Animation
     {
         [SerializeField] private List<ScanAnimation> scannedAnimations;
         [SerializeField] private List<NewTurnAnimation> newTurnAnimations;
-        [SerializeField] private BaseAnimationActivator baseAnimationAktivator;
+        //[SerializeField] private BaseAnimationController baseAnimationAktivator;
 
         private void Awake()
         {
@@ -41,7 +41,7 @@ namespace Animation
                         // Wenn alle fertig sind, setze alle Sprites
                         if (sequencesCompleted >= sequencesToWait)
                         {
-                            SetAllInactive();
+                            StartNewTurnAnimation();
                         }
                     });
                 }
@@ -50,11 +50,11 @@ namespace Animation
             // Wenn keine Sequence aktiv war, direkt setzen
             if (sequencesToWait == 0)
             {
-                SetAllInactive();
+                StartNewTurnAnimation();
             }
         }
 
-        private void SetAllInactive()
+        private void StartNewTurnAnimation()
         {
             Sounds.instance.Play("NewTurn");
             
@@ -63,7 +63,7 @@ namespace Animation
                 scanAnimation.ResetUI();
             }
             
-            baseAnimationAktivator.ActivateAnimations();
+            //baseAnimationAktivator.ActivateAnimations();
         }
     }
 }

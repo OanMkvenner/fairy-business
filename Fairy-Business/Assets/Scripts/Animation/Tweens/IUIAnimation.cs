@@ -1,6 +1,6 @@
 using DG.Tweening;
 
-namespace Animation
+namespace Animation.Tweens
 {
     public interface IUIAnimation
     {

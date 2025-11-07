@@ -10,11 +10,11 @@ namespace Animation
         public Sequence Sequence { get; private set; }
 
         [SerializeField] private bool playOnEnable;
-        private BaseAnimation[] animations;
+        private BaseTweenAnimation[] animations;
 
         private void Awake()
         {
-            animations = GetComponents<BaseAnimation>();
+            animations = GetComponents<BaseTweenAnimation>();
         }
 
         private void OnEnable()
@@ -31,7 +31,7 @@ namespace Animation
             
             Sequence = DOTween.Sequence();
 
-            foreach (BaseAnimation animation in animations)
+            foreach (BaseTweenAnimation animation in animations)
             {
                 Tween tween = animation.Play();
                 

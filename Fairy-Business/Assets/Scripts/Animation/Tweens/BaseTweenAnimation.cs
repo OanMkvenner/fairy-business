@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Animation.Tweens
 {
     [RequireComponent(typeof(RectTransform), typeof(AnimationFlow))]
-    public abstract class BaseAnimation : MonoBehaviour, IUIAnimation
+    public abstract class BaseTweenAnimation : MonoBehaviour, IUIAnimation
     {
         [field: SerializeField] public AnimationSettings AnimationSettings {get; private set;}
 

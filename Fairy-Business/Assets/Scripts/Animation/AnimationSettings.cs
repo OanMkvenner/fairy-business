@@ -18,17 +18,23 @@ namespace Animation
     {
         [field: SerializeField] public float Duration { get; set; }
         [field: SerializeField] public Ease Ease { get; set; }
-        [field: SerializeField] public UIPosition UIEndPosition { get; set; }
         [field: SerializeField] public bool AppendInterval { get; set; }
         [field: SerializeField] public float AppendIntervalTime { get; set; }
         [field: SerializeField] public SequenceInsertType SequenceInsertType { get; set; }
+        
+        private UIPosition uiEndPosition;
 
         public AnimationSettings(float duration, Ease ease, UIPosition uiEndPosition, SequenceInsertType sequenceInsertType)
         {
             Duration = duration;
             Ease = ease;
-            UIEndPosition = uiEndPosition;
+            uiEndPosition = uiEndPosition;
             SequenceInsertType = sequenceInsertType;
         }
+
+        public Vector2 GetUIPosition(Canvas canvas)
+        {
+            return uiEndPosition.GetUIPosition(canvas);
+        } 
     }
 }

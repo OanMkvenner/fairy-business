@@ -9,12 +9,12 @@ namespace Animation.AnimationController
         public static event Action AllSequencesCompletedEvent;
         private AnimationFlow[] animationFlows;
         
-        private void Awake()
+        protected virtual void Awake()
         {
             animationFlows = GetComponentsInChildren<AnimationFlow>();
         }
 
-        public void ActivateAnimations()
+        public void StartAnimations()
         {
             foreach (AnimationFlow animationeFlow in animationFlows)
             {

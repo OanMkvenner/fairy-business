@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationEffects.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationEffects/BaseAnimationEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationEffects/BaseAnimationEffect.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationEffects/ChangeImageAnimationEffect.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationEffects/ChangeImageAnimationEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/CanvasReferencer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/CanvasReferencer.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/Position/UIPosition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/Position/UIPosition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/BaseTweenAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/BaseTweenAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/MoveOffScreenTweenAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/MoveOffScreenTweenAnimation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/MoveTweenAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/MoveTweenAnimation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/MoveYTweenAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/MoveYTweenAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/RotationTweenAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/RotationTweenAnimation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/ScaleTweenAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/ScaleTweenAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/MainCanvasReferencer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/MainCanvasReferencer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/hybrgames.tweenanimator.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/hybrgames.tweenanimator.asmdef" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

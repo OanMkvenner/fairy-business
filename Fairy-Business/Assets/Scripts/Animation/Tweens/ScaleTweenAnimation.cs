@@ -6,11 +6,11 @@ namespace Animation.Tweens
     public class ScaleTweenAnimation : BaseTweenAnimation
     {
         [Header("Scale Settings")]
-        [SerializeField] private float scaleFactor;
+        [SerializeField] private Vector3 scale;
 
         protected override Tween PlayAnimation()
         {
-            Tween tween = RectTransform.DOScale(RectTransform.localScale * scaleFactor, AnimationSettings.Duration
+            Tween tween = RectTransform.DOScale(scale, AnimationSettings.Duration
             ).SetEase(AnimationSettings.Ease);
 
             ApplyEffect(tween);

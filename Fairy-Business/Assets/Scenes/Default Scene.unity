@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 10982239}
   - component: {fileID: 10982244}
   - component: {fileID: 10982245}
+  - component: {fileID: 10982246}
   m_Layer: 5
   m_Name: MainCanvas
   m_TagString: Untagged
@@ -287,6 +288,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b12a57202251c4d9bc5f56602df3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &10982246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10982238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7773d1d48a64588b71aa89b196369ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Utility.CanvasReferencer
 --- !u!1 &13919637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,7 +1124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.753, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.005005, y: -100}
+  m_AnchoredPosition: {x: -9.004883, y: -100}
   m_SizeDelta: {x: 18.01, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &102394070
@@ -1126,6 +1139,14 @@ GameObject:
   - component: {fileID: 102394074}
   - component: {fileID: 102394073}
   - component: {fileID: 102394075}
+  - component: {fileID: 102394083}
+  - component: {fileID: 102394082}
+  - component: {fileID: 102394081}
+  - component: {fileID: 102394080}
+  - component: {fileID: 102394079}
+  - component: {fileID: 102394078}
+  - component: {fileID: 102394077}
+  - component: {fileID: 102394076}
   m_Layer: 5
   m_Name: ControlCard
   m_TagString: Untagged
@@ -1205,6 +1226,163 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
   m_AspectRatio: 0.6666667
+--- !u!114 &102394076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102394070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 1
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+  scale: {x: 1, y: 1, z: 1}
+--- !u!114 &102394077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102394070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 174327054}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+--- !u!114 &102394078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102394070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d3919bd175486ebddd453415647c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ShakeScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+  strength: 0.5
+  vibrato: 1
+  randomness: 90
+  fadeOut: 0
+  shakeRandomnessMode: 1
+--- !u!114 &102394079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102394070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.5
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 752129504}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+--- !u!114 &102394080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102394070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 102394082}
+  scale: {x: 4.5, y: 4.5, z: 4.5}
+--- !u!114 &102394081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102394070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fde4de7abf94d7db086c01721b2deb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.5
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+  uiOffScreenPosition:
+    side: 0
+    xOffset: 0
+    yOffset: 0
+--- !u!114 &102394082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102394070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
+  sprite: {fileID: 9212414535637183403, guid: 684ce206a591c864380ef8e5cf879861, type: 3}
+--- !u!114 &102394083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102394070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa846191253471d9b8514d261da8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
+  playOnEnable: 0
 --- !u!1 &119740680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scannedAnimations: []
-  newTurnAnimationController: {fileID: 811236982}
+  newTurnAnimationController: {fileID: 0}
 --- !u!1 &142681416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1569,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 174327054}
+  - component: {fileID: 174327055}
   m_Layer: 5
   m_Name: DefaultControlPosition
   m_TagString: Untagged
@@ -1418,6 +1597,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &174327055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174327053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d9551798aa43078ce6938c2fca9d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.ScanAnimationController
+  playerColor: 1
+  scanAction: 2
+  animatedObject: {fileID: 102394070}
 --- !u!1 &180938594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,6 +2086,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223187229}
   m_CullTransparentMesh: 1
+--- !u!1 &250363798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 250363799}
+  m_Layer: 5
+  m_Name: ScreenPositions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &250363799
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250363798}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 752129504}
+  - {fileID: 1915383399}
+  - {fileID: 1366729042}
+  m_Father: {fileID: 1311465866}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &259901715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,6 +2133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 259901716}
+  - component: {fileID: 259901717}
   m_Layer: 5
   m_Name: DefaultCreditPosition
   m_TagString: Untagged
@@ -1928,6 +2161,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &259901717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259901715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d9551798aa43078ce6938c2fca9d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.ScanAnimationController
+  playerColor: 1
+  scanAction: 1
+  animatedObject: {fileID: 1732707338}
 --- !u!1001 &271127900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2355,7 +2603,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386069578
@@ -2893,7 +3141,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508358501
@@ -3751,6 +3999,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializedGuid: bfd41011f73c1f47a0a58ebb7cad2576
+--- !u!1 &752129503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 752129504}
+  m_Layer: 5
+  m_Name: Middle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &752129504
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752129503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 250363799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &772650122 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 531084047234978102, guid: 69605e4655f2a5f4ea38064384133d2b,
@@ -3857,7 +4140,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.1
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3927,18 +4210,6 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1836822001}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &811236982 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 427894286109806771, guid: 582120ca452454e68ace62b77f7114f3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1836822001}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89483896686a420281feb6c1b5ad9509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.NewTurnAnimationController
 --- !u!1 &812055278
 GameObject:
   m_ObjectHideFlags: 0
@@ -5099,7 +5370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088792336
@@ -5707,7 +5978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.15991211, y: 0}
+  m_AnchoredPosition: {x: 0.15917969, y: 0}
   m_SizeDelta: {x: -611.4898, y: -201.232}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164305876
@@ -6080,13 +6351,12 @@ GameObject:
   - component: {fileID: 1237657061}
   - component: {fileID: 1237657064}
   - component: {fileID: 1237657072}
+  - component: {fileID: 1237657075}
   - component: {fileID: 1237657073}
-  - component: {fileID: 1237657071}
   - component: {fileID: 1237657070}
-  - component: {fileID: 1237657069}
+  - component: {fileID: 1237657071}
   - component: {fileID: 1237657068}
   - component: {fileID: 1237657067}
-  - component: {fileID: 1237657066}
   - component: {fileID: 1237657065}
   m_Layer: 5
   m_Name: CreditCard
@@ -6181,37 +6451,12 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.9
     <Ease>k__BackingField: 0
-    <AppendInterval>k__BackingField: 0
-    <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 0
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
-  scaleFactor: 1
---- !u!114 &1237657066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237657059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3acccdcdc234b51bca0473fd1198b34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.RotationTweenAnimation
-  <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0.9
-    <Ease>k__BackingField: 0
-    <AppendInterval>k__BackingField: 0
-    <AppendIntervalTime>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
     <SequenceInsertType>k__BackingField: 1
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
-  rotationValue: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+  scale: {x: 1, y: 1, z: 1}
 --- !u!114 &1237657067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6227,13 +6472,11 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.9
     <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 1270835874}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 2
-      xOffset: -50
-      yOffset: 0
+  animationEffect: {fileID: 0}
 --- !u!114 &1237657068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6247,42 +6490,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ShakeScaleTweenAnimation
   <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0.2
+    <Duration>k__BackingField: 0.9
     <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
   strength: 0.5
   vibrato: 1
   randomness: 90
   fadeOut: 1
   shakeRandomnessMode: 1
---- !u!114 &1237657069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237657059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
-  <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0.5
-    <Ease>k__BackingField: 18
-    <AppendInterval>k__BackingField: 0
-    <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
 --- !u!114 &1237657070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6298,14 +6517,12 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0
     <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 1
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
-  scaleFactor: 4.5
+  animationEffect: {fileID: 1237657075}
+  scale: {x: 4.5, y: 4.5, z: 4.5}
 --- !u!114 &1237657071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6319,15 +6536,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
   <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0
+    <Duration>k__BackingField: 0.5
     <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 752129504}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 1
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
 --- !u!114 &1237657072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6354,19 +6569,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
   <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0
+    <Duration>k__BackingField: 0.5
     <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
   uiOffScreenPosition:
     side: 1
     xOffset: 0
     yOffset: 0
+--- !u!114 &1237657075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237657059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
+  sprite: {fileID: -6966834627183813899, guid: fefd7b61bce05754d92a80e94c0c0dc5, type: 3}
 --- !u!1 &1241163019
 GameObject:
   m_ObjectHideFlags: 0
@@ -6956,6 +7182,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1316968164}
+  - {fileID: 250363799}
   - {fileID: 990261457}
   - {fileID: 5512921}
   - {fileID: 361907982}
@@ -7256,8 +7483,13 @@ GameObject:
   - component: {fileID: 1320983086}
   - component: {fileID: 1320983089}
   - component: {fileID: 1320983097}
+  - component: {fileID: 1320983101}
   - component: {fileID: 1320983099}
+  - component: {fileID: 1320983100}
   - component: {fileID: 1320983098}
+  - component: {fileID: 1320983102}
+  - component: {fileID: 1320983104}
+  - component: {fileID: 1320983105}
   m_Layer: 5
   m_Name: ControlCard
   m_TagString: Untagged
@@ -7363,15 +7595,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
   <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0.9
+    <Duration>k__BackingField: 0.5
     <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 752129504}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
 --- !u!114 &1320983099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7385,19 +7615,117 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
   <AnimationSettings>k__BackingField:
-    <Duration>k__BackingField: 0
+    <Duration>k__BackingField: 0.5
     <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
   uiOffScreenPosition:
     side: 1
     xOffset: 0
     yOffset: 0
+--- !u!114 &1320983100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 752129504}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 1320983101}
+  scale: {x: 4.5, y: 4.5, z: 4.5}
+--- !u!114 &1320983101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
+  sprite: {fileID: 9212414535637183403, guid: 684ce206a591c864380ef8e5cf879861, type: 3}
+--- !u!114 &1320983102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d3919bd175486ebddd453415647c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ShakeScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+  strength: 0.5
+  vibrato: 1
+  randomness: 90
+  fadeOut: 1
+  shakeRandomnessMode: 1
+--- !u!114 &1320983104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 13919638}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+--- !u!114 &1320983105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320983084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 1
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+  scale: {x: 1, y: 1, z: 1}
 --- !u!1 &1346613379
 GameObject:
   m_ObjectHideFlags: 0
@@ -7432,7 +7760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346613381
@@ -7570,7 +7898,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360688554
@@ -7599,6 +7927,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b2d0216ee4746d6bc409f94f26740c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tools.SetAspectRatio
+--- !u!1 &1366729041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1366729042}
+  m_Layer: 5
+  m_Name: RightMiddleOffset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1366729042
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366729041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 250363799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 250, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1371387477
 GameObject:
   m_ObjectHideFlags: 0
@@ -8710,7 +9073,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530728293
@@ -9469,6 +9832,14 @@ GameObject:
   - component: {fileID: 1732707341}
   - component: {fileID: 1732707340}
   - component: {fileID: 1732707343}
+  - component: {fileID: 1732707351}
+  - component: {fileID: 1732707350}
+  - component: {fileID: 1732707349}
+  - component: {fileID: 1732707348}
+  - component: {fileID: 1732707347}
+  - component: {fileID: 1732707346}
+  - component: {fileID: 1732707345}
+  - component: {fileID: 1732707344}
   m_Layer: 5
   m_Name: CreditCard
   m_TagString: Untagged
@@ -9547,6 +9918,163 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
   m_AspectRatio: 0.6666667
+--- !u!114 &1732707344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732707338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 1
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+  scale: {x: 1, y: 1, z: 1}
+--- !u!114 &1732707345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732707338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 259901716}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+--- !u!114 &1732707346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732707338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d3919bd175486ebddd453415647c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ShakeScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.9
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+  strength: 0.5
+  vibrato: 1
+  randomness: 90
+  fadeOut: 0
+  shakeRandomnessMode: 1
+--- !u!114 &1732707347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732707338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f85dcb2344643b08cee094da8d9803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.5
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 752129504}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+--- !u!114 &1732707348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732707338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 234e847abd594a469f9a2f8360728548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 1732707350}
+  scale: {x: 4.5, y: 4.5, z: 4.5}
+--- !u!114 &1732707349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732707338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fde4de7abf94d7db086c01721b2deb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.MoveOffScreenTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0.5
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 0}
+  uiOffScreenPosition:
+    side: 0
+    xOffset: 0
+    yOffset: 0
+--- !u!114 &1732707350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732707338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
+  sprite: {fileID: -6966834627183813899, guid: fefd7b61bce05754d92a80e94c0c0dc5, type: 3}
+--- !u!114 &1732707351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732707338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa846191253471d9b8514d261da8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
+  playOnEnable: 0
 --- !u!1 &1736882802
 GameObject:
   m_ObjectHideFlags: 0
@@ -9976,7 +10504,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794067264
@@ -10039,7 +10567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799719037
@@ -10152,6 +10680,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1311465866}
     m_Modifications:
+    - target: {fileID: 1577201016472894735, guid: 582120ca452454e68ace62b77f7114f3,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
+      value: 
+      objectReference: {fileID: 752129504}
+    - target: {fileID: 1788522460725672466, guid: 582120ca452454e68ace62b77f7114f3,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
+      value: 
+      objectReference: {fileID: 1915383399}
     - target: {fileID: 3956038746316298389, guid: 582120ca452454e68ace62b77f7114f3,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10252,11 +10790,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7277227218797173561, guid: 582120ca452454e68ace62b77f7114f3,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
+      value: 
+      objectReference: {fileID: 1366729042}
     - target: {fileID: 7993479406436130851, guid: 582120ca452454e68ace62b77f7114f3,
         type: 3}
       propertyPath: m_Name
       value: NewTurnAnimation
       objectReference: {fileID: 0}
+    - target: {fileID: 8540409823392476289, guid: 582120ca452454e68ace62b77f7114f3,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
+      value: 
+      objectReference: {fileID: 752129504}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10296,7 +10844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72.609314, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841480515
@@ -10665,6 +11213,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879886344}
   m_CullTransparentMesh: 1
+--- !u!1 &1915383398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1915383399}
+  m_Layer: 5
+  m_Name: LeftMiddleOffset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1915383399
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915383398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 250363799}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -250, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1959377931
 GameObject:
   m_ObjectHideFlags: 0

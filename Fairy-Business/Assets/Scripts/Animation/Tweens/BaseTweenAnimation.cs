@@ -1,6 +1,8 @@
+using System;
 using Animation.AnimationEffects;
 using DG.Tweening;
 using UnityEngine;
+using Utility;
 
 namespace Animation.Tweens
 {
@@ -18,7 +20,12 @@ namespace Animation.Tweens
         private void Awake()
         {
             RectTransform = GetComponent<RectTransform>();
-            Canvas = MainCanvasReferencer.instance.Canvas;
+            
+        }
+
+        private void Start()
+        {
+            Canvas = CanvasReferencer.instance.Canvas;
         }
 
         protected void ApplyEffect(Tween tween)

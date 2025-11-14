@@ -41,20 +41,29 @@ namespace Animation.Position
 
         private Vector2 CalculateMiddleScreenPosition(Canvas canvas)
         {
-            Vector2 screenCenter = new Vector2((Screen.width / 2f) + xOffset, (Screen.height / 2f) + yOffset);
+            Vector2 screenCenter = new Vector2(xOffset, yOffset);
             return ScreenPointToLocalPoint(canvas, screenCenter);
         }
 
         private Vector2 CalculateBottomLeftScreenPosition(Canvas canvas)
         {
+            var rectTransform = canvas.transform as RectTransform;
+            float width = rectTransform.rect.width;
+            float height = rectTransform.rect.height;
+            
             Vector2 screenPosition = new Vector2(xOffset, yOffset);
             return ScreenPointToLocalPoint(canvas, screenPosition);
         }
 
         private Vector2 CalculateBottomRightScreenPosition(Canvas canvas)
         {
-            Vector2 screenPosition = new Vector2(Screen.width + xOffset, yOffset);
-            return ScreenPointToLocalPoint(canvas, screenPosition);
+            RectTransform rect = canvas.transform as RectTransform;
+
+            float w = rect.rect.width;
+            float h = rect.rect.height;
+
+            // BottomRight-Pivot = ( w/2, -h/2 )
+            return new Vector2(w / 2f + xOffset, -h / 2f + yOffset);
         }
         
         private Vector2 CalculateTopRightScreenPosition(Canvas canvas)

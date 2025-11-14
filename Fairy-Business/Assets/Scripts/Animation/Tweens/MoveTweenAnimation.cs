@@ -6,7 +6,7 @@ namespace Animation.Tweens
     {
         protected override Tween PlayAnimation()
         {
-            Tween tween = RectTransform.DOMove(AnimationSettings.GetUIPosition(Canvas), 
+            Tween tween = RectTransform.DOMove(AnimationSettings.UiEndPosition.position, 
                 AnimationSettings.Duration).SetEase(AnimationSettings.Ease);
             
             ApplyEffect(tween);

@@ -6,8 +6,12 @@ namespace Animation.Tweens
     {
         protected override Tween PlayAnimation()
         {
-            return RectTransform.DOMoveY(AnimationSettings.GetUIPosition(Canvas).y, 
+            Tween tween = RectTransform.DOMoveY(AnimationSettings.GetUIPosition(Canvas).y, 
                 AnimationSettings.Duration).SetEase(AnimationSettings.Ease);
+            
+            ApplyEffect(tween);
+            
+            return tween;
         }
     }
 }

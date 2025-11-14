@@ -10,8 +10,12 @@ namespace Animation.Tweens
         
         protected override Tween PlayAnimation()
         {
-            return RectTransform.DOMove(uiOffScreenPosition.GetOffScreenPosition(Canvas), AnimationSettings.Duration)
-                .SetEase(AnimationSettings.Ease);
+            Tween tween = RectTransform.DOMove(uiOffScreenPosition.GetOffScreenPosition(Canvas), 
+                    AnimationSettings.Duration).SetEase(AnimationSettings.Ease);
+            
+            ApplyEffect(tween);
+            
+            return tween;
         }
     }
 }

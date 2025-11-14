@@ -7,10 +7,15 @@ namespace Animation.Tweens
     {
         [Header("Scale Settings")]
         [SerializeField] private float scaleFactor;
+
         protected override Tween PlayAnimation()
         {
-            return RectTransform.DOScale(Vector3.zero * scaleFactor, 
-                AnimationSettings.Duration).SetEase(AnimationSettings.Ease);
+            Tween tween = RectTransform.DOScale(RectTransform.localScale * scaleFactor, AnimationSettings.Duration
+            ).SetEase(AnimationSettings.Ease);
+
+            ApplyEffect(tween);
+
+            return tween;
         }
     }
 }

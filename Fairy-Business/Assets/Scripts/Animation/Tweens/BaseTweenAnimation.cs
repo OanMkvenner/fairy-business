@@ -1,3 +1,4 @@
+using Animation.AnimationEffects;
 using DG.Tweening;
 using UnityEngine;
 
@@ -8,16 +9,26 @@ namespace Animation.Tweens
     {
         [field: SerializeField] public AnimationSettings AnimationSettings {get; private set;}
 
+        [Space]
+        [SerializeField] protected BaseAnimationEffect animationEffect;
+        
         protected RectTransform RectTransform;
-
         protected Canvas Canvas;
         
         private void Awake()
         {
             RectTransform = GetComponent<RectTransform>();
-            Canvas = GetComponentInParent<Canvas>();
+            Canvas = MainCanvasReferencer.instance.Canvas;
         }
 
+        protected void ApplyEffect(Tween tween)
+        {
+            if (animationEffect != null)
+            {
+                tween.OnComplete(() => animationEffect.ApplyEffect());
+            }
+        }
+        
         protected abstract Tween PlayAnimation();
 
         #region IUIAnimation

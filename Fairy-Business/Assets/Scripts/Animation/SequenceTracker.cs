@@ -25,6 +25,9 @@ namespace Animation
             int sequencesToWait = 0;
             int sequencesCompleted = 0;
 
+            if (scannedAnimations.Count <= 0)
+                return;
+            
             // Prüfe alle Objekte, wie viele Animations-Sequences aktiv sind
             foreach (ScanAnimation scanAnimation in scannedAnimations)
             {

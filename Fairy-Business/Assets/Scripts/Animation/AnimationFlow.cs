@@ -8,9 +8,12 @@ namespace Animation
     public class AnimationFlow : MonoBehaviour
     {
         public Sequence Sequence { get; private set; }
+        public bool isPlaying { get; private set; }
 
         [SerializeField] private bool playOnEnable;
+        
         private BaseTweenAnimation[] animations;
+        
 
         private void Awake()
         {
@@ -54,6 +57,9 @@ namespace Animation
             }
             
             Sequence.Play();
+            isPlaying = true;
+
+            Sequence.OnComplete(() => isPlaying = false);
         }
 
         private Action<Sequence, Tween> GetSequenceType(SequenceInsertType sequenceInsertType)

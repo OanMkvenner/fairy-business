@@ -3,20 +3,15 @@ using UnityEngine;
 
 namespace Animation.AnimationController
 {
-    public class ScanAnimationController : BaseAnimationController<ScanAnimationController>
+    public class ScanAnimationController : BaseAnimationController
     {
         [SerializeField] private PlayerColor playerColor;
         [SerializeField] private ScanAction scanAction;
-        [SerializeField] private GameObject animatedObject;
-
-        private Canvas canvas;
 
         protected override void Awake()
         {
             base.Awake();
 
-            canvas = GetComponent<Canvas>();
-            
             GameSession.OnCardScanned += OnCardScanned;
         }
 

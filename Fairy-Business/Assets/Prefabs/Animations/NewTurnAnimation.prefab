@@ -168,13 +168,11 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.8
     <Ease>k__BackingField: 28
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 1
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
 --- !u!114 &8994537345030242846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,13 +188,11 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
   uiOffScreenPosition:
     side: 6
     xOffset: 0
@@ -308,13 +304,11 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.6
     <Ease>k__BackingField: 28
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 1
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: -60
-      yOffset: 0
+  animationEffect: {fileID: 0}
 --- !u!114 &793518627966001456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,13 +324,11 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
   uiOffScreenPosition:
     side: 6
     xOffset: -60
@@ -448,13 +440,11 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.8
     <Ease>k__BackingField: 28
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 1
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
 --- !u!114 &2243032076521649287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,13 +460,11 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 0
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 0
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
   uiOffScreenPosition:
     side: 5
     xOffset: 0
@@ -588,13 +576,11 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 0.6
     <Ease>k__BackingField: 28
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 1
     <AppendIntervalTime>k__BackingField: 1
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 60
-      yOffset: 0
+  animationEffect: {fileID: 0}
 --- !u!114 &1033531188681408504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,13 +596,11 @@ MonoBehaviour:
   <AnimationSettings>k__BackingField:
     <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-    <SequenceInsertType>k__BackingField: 2
-    <UiEndPosition>k__BackingField:
-      startingPivot: 0
-      xOffset: 0
-      yOffset: 0
+  animationEffect: {fileID: 0}
   uiOffScreenPosition:
     side: 6
     xOffset: 60
@@ -673,3 +657,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89483896686a420281feb6c1b5ad9509, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.NewTurnAnimationController
+  priority: 1

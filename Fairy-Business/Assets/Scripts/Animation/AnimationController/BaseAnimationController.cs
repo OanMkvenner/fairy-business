@@ -1,45 +1,21 @@
-using System;
-using DG.Tweening;
 using UnityEngine;
 
 namespace Animation.AnimationController
 {
-    public abstract class BaseAnimationController<T> : MonoBehaviour
+    public abstract class BaseAnimationController : MonoBehaviour
     {
-        public static event Action AllSequencesCompletedEvent;
-        private AnimationFlow[] animationFlows;
+        [SerializeField] private int priority;
+        
+        private AnimationFlow animationFlow;
         
         protected virtual void Awake()
         {
-            animationFlows = GetComponentsInChildren<AnimationFlow>();
+            animationFlow = GetComponentInChildren<AnimationFlow>();
         }
 
         public void StartAnimations()
         {
-            foreach (AnimationFlow animationeFlow in animationFlows)
-            {
-                animationeFlow.StartAnimation();
-            }
-            
-            int sequencesToWait = 0;
-            int sequencesCompleted = 0;
-            
-            foreach (AnimationFlow animationFlow in animationFlows)
-            {
-                if (animationFlow.Sequence != null && animationFlow.Sequence.IsActive())
-                {
-                    sequencesToWait++;
-                    
-                    animationFlow.Sequence.OnComplete(() =>
-                    {
-                        sequencesCompleted++;
-
-                        if (sequencesCompleted < sequencesToWait) return;
-                        
-                        AllSequencesCompletedEvent?.Invoke();
-                    });
-                }
-            }
+            AnimationScheduler.instance.AddJob(new AnimationJob(animationFlow, priority));
         }
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 400572960de4abb46ba989f691cd8bdf
+guid: 21a8107fb629de540b8bda177707c28c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7059525709704266276
-    second: background_fairy_business_0
+      213: 346974578979141475
+    second: victory_point_greyscale_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: background_fairy_business_0
+      name: victory_point_greyscale_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1920
-        height: 1080
+        width: 6470
+        height: 5857
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 42209a1ea3978f160800000000000000
-      internalID: 7059525709704266276
+      spriteID: 367742e8a83b0d400800000000000000
+      internalID: 346974578979141475
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      background_fairy_business_0: 7059525709704266276
+      victory_point_greyscale_0: 346974578979141475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

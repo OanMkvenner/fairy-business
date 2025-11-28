@@ -19,7 +19,6 @@ namespace Locations
         [Header("GameField")]
         [SerializeField] private Transform gameFieldParent;
         [SerializeField] private PlayerLine[] lines = new PlayerLine[3];
-        [SerializeField] private List<Sprite> cradFrames = new List<Sprite>();
 
         private readonly List<LocationDefinition> allAvailableLocations = new List<LocationDefinition>();
         private LocationAnimation locationAnimation;
@@ -115,11 +114,8 @@ namespace Locations
         /// </summary>
         private void AssignBackgroundColorAndPlayerLine()
         {
-            GameLocations[0].SetCardFrame(cradFrames[0]);
             GameLocations[0].PlayerLine = lines[0];
-            GameLocations[1].SetCardFrame(cradFrames[1]);
             GameLocations[1].PlayerLine = lines[1];
-            GameLocations[2].SetCardFrame(cradFrames[2]);
             GameLocations[2].PlayerLine = lines[2];
         }
         

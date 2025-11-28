@@ -11,5 +11,4 @@ namespace Locations
         public int VictoryPoints;
         public string locationDescription;
     }
-
 }

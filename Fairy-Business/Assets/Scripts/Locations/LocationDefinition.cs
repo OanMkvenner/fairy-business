@@ -7,6 +7,7 @@ using UI;
 using UI.Buttons;
 using UIExtensions;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Locations
 {
@@ -17,14 +18,22 @@ namespace Locations
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }
 
-        public PlayerColor CurrentOwner;
+        public PlayerColor CurrentOwner
+        {
+            get => currentOwner;
+            set
+            {
+                currentOwner = value;
+                locationImage.sprite = CurrentOwner == PlayerColor.Neutral ? imageDisabled : imageEnabled;
+            }
+        }
+
         public List<LocationHoverButton> LocationHoverButtons => locationHoverButtons;
 
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
-        [SerializeField] private SkewedImage locationImage;
-        [field:SerializeField] public SkewedImage CardFrameImage { get; private set; }
+        [SerializeField] private Image locationImage;
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;
@@ -32,7 +41,7 @@ namespace Locations
         private LocationsType locationType;
         private int victoryPoints = 3;
         private LocationUI currenLocatioUI;
-        
+        private PlayerColor currentOwner = PlayerColor.Neutral;
 
         public RectTransform RectTransform { get; private set; }
 
@@ -61,8 +70,6 @@ namespace Locations
             this.imageDisabled = data.imageDisabled;
             this.locationText = data.locationDescription;
             this.locationType = data.locationType;
-            this.victoryPoints = data.VictoryPoints;
-            //description.text = locationType.ToString();
             
             UpdateVisuals();
 
@@ -77,12 +84,6 @@ namespace Locations
             {
                 locationHoverButton.gameObject.SetActive(true);
             }
-        }
-
-        public void SetCardFrame(Sprite frame)
-        {
-            CardFrameImage.gameObject.SetActive(true);
-            CardFrameImage.sprite = frame;
         }
         
         public void InitializeLocationUI(LocationUI locationUI)
@@ -132,27 +133,6 @@ namespace Locations
         public Tween Rotate(float angle, float duration)
         {
             return RectTransform.DORotate(new Vector3(0, 0, angle), duration);
-        }
-
-        public void SkrewImageBottom(float percent = 0.1f)
-        {
-            if (CurrentOwner != PlayerColor.Neutral)
-            {
-                // Prozentual anpassen (z. B. +10 % unten, -10 % oben)
-                locationImage.TrapezSkewTop *= 1f - percent;
-                CardFrameImage.TrapezSkewTop *= 1f - percent;
-        
-                locationImage.TrapezSkewBottom *= 1f + percent;
-                CardFrameImage.TrapezSkewBottom *= 1f + percent;
-            }
-            else
-            {
-                // Werte zurücksetzen (neutral)
-                locationImage.TrapezSkewTop = 1f;
-                CardFrameImage.TrapezSkewTop = 1f;
-                locationImage.TrapezSkewBottom = 1f;
-                CardFrameImage.TrapezSkewBottom = 1f;
-            }
         }
 
         #endregion

@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/MoveTweenAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/LocalMoveTweenAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/MoveTweenAnimation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/Tweens/LocalMoveTweenAnimation.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationAnimation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,18 +57,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Animation/NewAnimationSystem&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "git-widget-placeholder": "UI/UIPlaceholder",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/UnityBuild/WarAndPeace\WarAndPeace.exe" />
@@ -147,7 +151,7 @@
       <workItem from="1763644414988" duration="4941000" />
       <workItem from="1764333282825" duration="115000" />
       <workItem from="1764342701595" duration="589000" />
-      <workItem from="1764343306468" duration="2384000" />
+      <workItem from="1764343306468" duration="3124000" />
     </task>
     <servers />
   </component>

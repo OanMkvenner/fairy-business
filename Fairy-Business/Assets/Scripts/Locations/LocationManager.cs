@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Locations
 {
-    public class LocationManager : MonobheaviourSingletonCustom<LocationManager>
+    public class LocationManager : MonobehaviourSingletonCustom<LocationManager>
     {
         public List<LocationDefinition> SelectedLocations { get; private set; } = new List<LocationDefinition>();
         public List<LocationDefinition> GameLocations { get; private set; } 

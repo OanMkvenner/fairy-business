@@ -18,7 +18,7 @@ public enum ScanAction
     CreditCard = 1,
     ControlCard = 2,
 }
-public class GameSession : MonobheaviourSingletonCustom<GameSession>
+public class GameSession : MonobehaviourSingletonCustom<GameSession>
 {
     public int MaxRoundCount => maxRoundCount;
     public static event Action<LocationDefinition, int> OnSpyCardPlayed;

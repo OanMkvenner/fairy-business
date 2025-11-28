@@ -2557,7 +2557,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.15682, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386069578
@@ -3095,7 +3095,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.15682, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508358501
@@ -4555,8 +4555,53 @@ Transform:
   - {fileID: 491282519}
   - {fileID: 1011743206}
   - {fileID: 1270468880}
+  - {fileID: 888875254}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &888875253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 888875254}
+  - component: {fileID: 888875255}
+  m_Layer: 0
+  m_Name: AnimationScheduler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &888875254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888875253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 873697048}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &888875255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888875253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f180ab2ce448f5ad81aeacb3143d39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.AnimationScheduler
 --- !u!1 &891816621
 GameObject:
   m_ObjectHideFlags: 0
@@ -5323,7 +5368,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.15682, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088792336
@@ -7713,7 +7758,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.15682, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346613381
@@ -7851,7 +7896,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.15682, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360688554
@@ -9026,7 +9071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.15682, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530728293
@@ -10457,7 +10502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.15682, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794067264
@@ -10520,7 +10565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.15682, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799719037
@@ -10633,6 +10678,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1311465866}
     m_Modifications:
+    - target: {fileID: 1033531188681408504, guid: 582120ca452454e68ace62b77f7114f3,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<SequenceInsertType>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1577201016472894735, guid: 582120ca452454e68ace62b77f7114f3,
         type: 3}
       propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
@@ -10643,6 +10693,11 @@ PrefabInstance:
       propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
       value: 
       objectReference: {fileID: 1915383399}
+    - target: {fileID: 2243032076521649287, guid: 582120ca452454e68ace62b77f7114f3,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<SequenceInsertType>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3956038746316298389, guid: 582120ca452454e68ace62b77f7114f3,
         type: 3}
       propertyPath: m_Pivot.x
@@ -10758,6 +10813,11 @@ PrefabInstance:
       propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
       value: 
       objectReference: {fileID: 752129504}
+    - target: {fileID: 8994537345030242846, guid: 582120ca452454e68ace62b77f7114f3,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<SequenceInsertType>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10797,7 +10857,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 122.15682, y: 0}
+  m_AnchoredPosition: {x: 124.13871, y: 0}
   m_SizeDelta: {x: 205, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841480515

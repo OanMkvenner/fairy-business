@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 using static UnityEngine.InputSystem.InputAction;
 
 [BurstCompile]
-public class ControlsSingleton : MonobheaviourSingletonCustom<PlayerInput> {
+public class ControlsSingleton : MonobehaviourSingletonCustom<PlayerInput> {
     // instance in this case will return the (first?) instance of PlayerInput
     static public Vector2 GetMouseScreenPosition(){
         return ControlsSingleton.instance.actions["Point"].ReadValue<Vector2>();

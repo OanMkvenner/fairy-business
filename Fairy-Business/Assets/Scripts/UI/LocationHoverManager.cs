@@ -3,7 +3,7 @@ using Player;
 
 namespace UI
 {
-    public class LocationHoverManager : MonobheaviourSingletonCustom<LocationHoverManager>
+    public class LocationHoverManager : MonobehaviourSingletonCustom<LocationHoverManager>
     {
         public PlayerColor CurrentPlayerColor { get; set; }
         public LineIdentifier CurrentLine { get; set; }

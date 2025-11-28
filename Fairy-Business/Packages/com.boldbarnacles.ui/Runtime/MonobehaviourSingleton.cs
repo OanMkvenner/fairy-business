@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MonobheaviourSingletonCustom<T> : MonoBehaviour where T : MonoBehaviour  {
+public class MonobehaviourSingletonCustom<T> : MonoBehaviour where T : MonoBehaviour  {
     private static T inst = null;
     public static T instance {
         get {

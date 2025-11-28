@@ -6,16 +6,19 @@ namespace Animation.AnimationController
     {
         [SerializeField] private int priority;
         
-        private AnimationFlow animationFlow;
+        private AnimationFlow[] animationFlows;
         
         protected virtual void Awake()
         {
-            animationFlow = GetComponentInChildren<AnimationFlow>();
+            animationFlows = GetComponentsInChildren<AnimationFlow>();
         }
 
         public void StartAnimations()
         {
-            AnimationScheduler.instance.AddJob(new AnimationJob(animationFlow, priority));
+            foreach (AnimationFlow animationFlow in animationFlows)
+            {
+                AnimationScheduler.instance.AddJob(new AnimationJob(animationFlow, priority));
+            }
         }
     }
 }

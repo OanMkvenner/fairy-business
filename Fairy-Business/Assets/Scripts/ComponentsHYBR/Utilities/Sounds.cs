@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Sounds : MonobheaviourSingletonCustom<Sounds>
+public class Sounds : MonobehaviourSingletonCustom<Sounds>
 { 
     public bool IsPlaying(string name)
     {

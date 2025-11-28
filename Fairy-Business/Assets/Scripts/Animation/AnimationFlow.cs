@@ -14,7 +14,6 @@ namespace Animation
         
         private BaseTweenAnimation[] animations;
         
-
         private void Awake()
         {
             animations = GetComponents<BaseTweenAnimation>();

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Utility
 {
-    public class CanvasReferencer : MonobheaviourSingletonCustom<CanvasReferencer>
+    public class CanvasReferencer : MonobehaviourSingletonCustom<CanvasReferencer>
     {
         public Canvas Canvas { get; private set; }
         

@@ -2,25 +2,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DG.Tweening;
+using UnityEngine;
 
 namespace Animation.AnimationController
 {
-    public class AnimationJob
-    {
-        public int Priority { get; }
-        public AnimationFlow AnimationFlow { get; }
-
-        public AnimationJob(AnimationFlow animationFlow, int priority)
-        {
-            Priority = priority;
-            AnimationFlow = animationFlow;
-        }
-    }
-
-    public class AnimationScheduler : MonobheaviourSingletonCustom<AnimationScheduler>
+    public class AnimationScheduler : MonobehaviourSingletonCustom<AnimationScheduler>
     {
         private readonly List<AnimationJob> jobs = new();
-        private bool isRunning;
 
         public void AddJob(AnimationJob job)
         {
@@ -30,10 +18,6 @@ namespace Animation.AnimationController
 
         private async void TryRun()
         {
-            if (isRunning) return; 
-            
-            isRunning = true;
-            
             while (jobs.Count > 0)
             {
                 int highestPriority = jobs.Max(j => j.Priority);
@@ -44,6 +28,7 @@ namespace Animation.AnimationController
                 // StartAnimation aufrufen
                 foreach (AnimationJob job in samePriorityJobs)
                 {
+                    Debug.Log($"Starting job with priority {job.Priority}");
                     job.AnimationFlow.StartAnimation();
                 }
 
@@ -56,8 +41,6 @@ namespace Animation.AnimationController
                 foreach (var job in samePriorityJobs)
                     jobs.Remove(job);
             }
-            
-            isRunning = false;
         }
     }
 }

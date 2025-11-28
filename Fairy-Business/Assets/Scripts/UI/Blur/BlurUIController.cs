@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 namespace UI.Blur
 {
-    public class BlurUIController : MonobheaviourSingletonCustom<BlurUIController>
+    public class BlurUIController : MonobehaviourSingletonCustom<BlurUIController>
     {
         [SerializeField] private Material blurMaterial;
         private readonly List<Image> blurImages = new List<Image>();

@@ -461,7 +461,7 @@ MonoBehaviour:
     <Duration>k__BackingField: 1
     <Ease>k__BackingField: 15
     <UiEndPosition>k__BackingField: {fileID: 0}
-    <SequenceInsertType>k__BackingField: 0
+    <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
   animationEffect: {fileID: 0}

@@ -5,15 +5,15 @@ namespace Animation.AnimationController
         protected override void Awake()
         {
             base.Awake();
-            GameSession.OnTurnReset += Fodd;
+            GameSession.OnTurnReset += StartTurnAnimation;
         }
 
         private void OnDestroy()
         {
-            GameSession.OnTurnReset -= Fodd;
+            GameSession.OnTurnReset -= StartTurnAnimation;
         }
 
-        private void Fodd()
+        private void StartTurnAnimation()
         {
             Sounds.instance.Play("NewTurn");
             StartAnimations();

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace UI.Menu.BaseMenu
 {
-    public class MenuManager : MonobheaviourSingletonCustom<MenuManager>
+    public class MenuManager : MonobehaviourSingletonCustom<MenuManager>
     {
         public static event Action OnMenuOpened;
         private static readonly List<MenuElement> menuElements = new List<MenuElement>();

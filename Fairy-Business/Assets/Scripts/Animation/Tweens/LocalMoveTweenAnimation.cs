@@ -2,11 +2,11 @@ using DG.Tweening;
 
 namespace Animation.Tweens
 {
-    public class MoveTweenAnimation : BaseTweenAnimation
+    public class LocalMoveTweenAnimation : BaseTweenAnimation
     {
         protected override Tween PlayAnimation()
         {
-            Tween tween = RectTransform.DOMove(AnimationSettings.UiEndPosition.position, 
+            Tween tween = RectTransform.DOLocalMove(AnimationSettings.UiEndPosition.position, 
                 AnimationSettings.Duration).SetEase(AnimationSettings.Ease);
             
             ApplyEffect(tween);

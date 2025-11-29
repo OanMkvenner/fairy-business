@@ -1,4 +1,3 @@
-using System;
 using Animation.AnimationEffects;
 using DG.Tweening;
 using UnityEngine;
@@ -11,7 +10,7 @@ namespace Animation.Tweens
     {
         [field: SerializeField] public AnimationSettings AnimationSettings {get; private set;}
 
-        [Space]
+        [Space] [Tooltip("Effect is applied at the end of tween.")]
         [SerializeField] protected BaseAnimationEffect animationEffect;
         
         protected RectTransform RectTransform;

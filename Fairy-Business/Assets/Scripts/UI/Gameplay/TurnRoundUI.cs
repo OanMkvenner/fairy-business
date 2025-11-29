@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace UI.Gameplay
 {
@@ -19,6 +17,8 @@ namespace UI.Gameplay
 
         public void FillCurrentTurn(int turnCounter)
         {
+            turnCounter--;
+            
             turns[turnCounter].SetActive(true);
 
             if (turnCounter <= 0)

@@ -6,14 +6,20 @@ namespace Animation.AnimationController
     {
         [SerializeField] private int priority;
         
-        private AnimationFlow[] animationFlows;
+        [SerializeField] private AnimationFlow[] animationFlows;
         
         protected virtual void Awake()
         {
-            animationFlows = GetComponentsInChildren<AnimationFlow>();
+            if(animationFlows.Length == 0)
+                animationFlows = GetComponentsInChildren<AnimationFlow>();
+
+            if (animationFlows.Length == 0)
+            {
+                Debug.LogError($"No animation flow for animation controller found {this.name}");
+            }
         }
 
-        public void StartAnimations()
+        protected void StartAnimations()
         {
             foreach (AnimationFlow animationFlow in animationFlows)
             {

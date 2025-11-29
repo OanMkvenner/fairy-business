@@ -25,7 +25,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     public static event Action OnTurnReset;
     public static event Action<PlayerColor, ScanAction> OnCardScanned;
     
-    public bool dynamicInput = false;
     public CardInput cardInput;
     public Image ScanEffect;
 
@@ -432,7 +431,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         
         if (!gameEnded)
         {
-            turnRoundUI.FillCurrentTurn(turnCounter-1);
+            turnRoundUI.FillCurrentTurn(turnCounter);
             ResetTurn();
         }
     }

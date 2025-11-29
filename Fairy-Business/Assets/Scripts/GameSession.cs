@@ -80,8 +80,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         UpdateVictoryPointDisplay();
         disallowNewCards = false;
         
-        turnRoundUI.ResetRoundUI();
-        
         HidePower();
     }
 
@@ -425,8 +423,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             turnCounter = 1;
             roundCounter++;
             
-            turnRoundUI.SetRoundCount(roundCounter);
-            turnRoundUI.NewRound(roundCounter);
+            turnRoundUI.UpdateRoundCount(roundCounter);
         }
         
         CheckScoringPhase();

@@ -1,60 +1,38 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace UI.Gameplay
 {
     public class TurnRoundUI : MonoBehaviour
     {
-        [SerializeField] private List<TurnWrapper> turns;
         [SerializeField] private TextMeshProUGUI roundText;
+        [SerializeField] private TextMeshProUGUI maxCount;
+        [SerializeField] private List<GameObject> turns;
 
-        [SerializeField] private List<GameObject> pastRounds;
-        [SerializeField] private List<GameObject> futureRounds;
+        private void Awake()
+        {
+            maxCount.text = GameSession.instance.MaxRoundCount.ToString();
+        }
 
         public void FillCurrentTurn(int turnCounter)
         {
-            turns[turnCounter].CurrentTurnOn();
+            turns[turnCounter].SetActive(true);
+
+            if (turnCounter <= 0)
+                return;
+            
+            turns[turnCounter - 1].SetActive(false);
         }
 
-        public void SetRoundCount(int count)
+        public void UpdateRoundCount(int count)
         {
             if(count == GameSession.instance.MaxRoundCount)
                 return;
             
             roundText.text = count.ToString(); 
-        }
-
-        public void NewRound(int count)
-        {
-            if(count == GameSession.instance.MaxRoundCount)
-                return;
-            
-            count--;
-            
-            foreach (TurnWrapper turn in turns)
-            {
-                turn.FutureTurnOn();
-            }
-            
-            for (int i = 0; i < count; i++)
-            {
-                futureRounds[i].SetActive(false);
-                pastRounds[i].SetActive(true);
-            }
-        }
-
-        public void ResetRoundUI()
-        {
-            foreach (GameObject futureRound in futureRounds)
-            {
-                futureRound.SetActive(true);
-            }
-
-            foreach (GameObject pastRound in pastRounds)
-            {
-                pastRound.SetActive(false);
-            }
         }
     }
 }

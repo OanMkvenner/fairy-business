@@ -8,39 +8,55 @@ namespace Animation.AnimationController
 {
     public class AnimationScheduler : MonobehaviourSingletonCustom<AnimationScheduler>
     {
-        private readonly List<AnimationJob> jobs = new();
+        private readonly List<AnimationJob> jobBuffer = new();
+        private bool isRunning;
 
-        public void AddJob(AnimationJob job)
+        public void Enqueue(AnimationJob job)
         {
-            jobs.Add(job);
+            jobBuffer.Add(job);
             TryRun();
         }
 
         private async void TryRun()
         {
-            while (jobs.Count > 0)
+            if (isRunning)
+                return;
+
+            isRunning = true;
+
+            while (jobBuffer.Count > 0)
             {
-                int highestPriority = jobs.Max(j => j.Priority);
+                // höchste aktuelle Priorität finden
+                int highest = jobBuffer.Max(j => j.Priority);
 
-                // alle Jobs mit gleicher Priorität
-                List<AnimationJob> samePriorityJobs = jobs.Where(j => j.Priority == highestPriority).ToList();
+                // alle Jobs mit dieser Priorität sammeln
+                List<AnimationJob> batch = jobBuffer
+                    .Where(j => j.Priority == highest)
+                    .ToList();
 
-                // StartAnimation aufrufen
-                foreach (AnimationJob job in samePriorityJobs)
+                Debug.Log($"Starting batch with priority {highest}, count {batch.Count}");
+
+                // Animationen starten
+                foreach (var job in batch)
                 {
-                    Debug.Log($"Starting job with priority {job.Priority}");
                     job.AnimationFlow.StartAnimation();
                 }
 
-                // Dann auf alle Sequenzen warten
-                Task[] tasks = samePriorityJobs.Select(job => job.AnimationFlow.Sequence.AsyncWaitForCompletion()).ToArray();
+                // auf alle Sequenzen warten (parallel)
+                Task[] tasks = batch
+                    .Select(j => j.AnimationFlow.Sequence.AsyncWaitForCompletion())
+                    .ToArray();
 
                 await Task.WhenAll(tasks);
-                
-                // Fertige Jobs aus der Liste entfernen
-                foreach (var job in samePriorityJobs)
-                    jobs.Remove(job);
+
+                Debug.Log($"Finished batch with priority {highest}");
+
+                // fertige Jobs entfernen
+                foreach (var job in batch)
+                    jobBuffer.Remove(job);
             }
+
+            isRunning = false;
         }
     }
 }

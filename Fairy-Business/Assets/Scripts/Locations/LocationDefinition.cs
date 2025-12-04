@@ -5,14 +5,15 @@ using Player;
 using TMPro;
 using UI;
 using UI.Buttons;
-using UIExtensions;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Locations
 {
     [RequireComponent((typeof(RectTransform)))]
-    public class LocationDefinition : MonoBehaviour, ITweenAnimation {
+    public class LocationDefinition : MonoBehaviour, ITweenAnimation
+    {
+        public static event Action<PlayerColor, LocationDefinition> OnNewPowerAddedEvent;
         public LocationsType LocationType => locationType;
         public int VictoryPoints => victoryPoints;
         public LocationData LocationData { get; private set; }
@@ -105,12 +106,20 @@ namespace Locations
             
             power[playerIdx] = Math.Max(0, power[playerIdx]);
             
+            OnNewPowerAddedEvent?.Invoke(playerIdx, this);
+            
             CheckWinner();
         }
         
+        /// <summary>
+        /// Use this method only, if you want to overwrite existing power.
+        /// </summary>
+        /// <param name="playerIdx"></param>
+        /// <param name="newPower"></param>
         public void SetPlayerPower(PlayerColor playerIdx, int newPower)
         {
             power[playerIdx] = newPower; // setzt den Wert direkt, egal ob er schon existiert
+            OnNewPowerAddedEvent?.Invoke(playerIdx, this);
             CheckWinner();
         }
         

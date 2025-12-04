@@ -111,7 +111,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         
         foreach (LocationDefinition loc in LocationManager.instance.GameLocations)
         {
-
             if (loc.LocationType != LocationsType.GingerbreadHouse)
                 continue;
             

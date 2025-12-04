@@ -1,34 +1,43 @@
 using Locations;
 using Player;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 namespace UI.Gameplay
 {
+    [RequireComponent(typeof(TextMeshProUGUI))]
     public class PlayerPowerUI : MonoBehaviour
     {
-        [SerializeField] private int line;
-        [SerializeField] private TextMeshProUGUI redPower;
-        [SerializeField] private TextMeshProUGUI bluePower;
+        [SerializeField] private LineIdentifier line;
+        [SerializeField] private PlayerColor playerColor;
+        private TextMeshProUGUI text;
 
         private void Awake()
         {
-            GameSession.OnSpyCardPlayed += SetPower;
+            text = GetComponent<TextMeshProUGUI>();
+
+            LocationDefinition.OnNewPowerAddedEvent += SetTurnPoints;
         }
 
         private void OnDestroy()
         {
-            GameSession.OnSpyCardPlayed -= SetPower;
+            LocationDefinition.OnNewPowerAddedEvent -= SetTurnPoints;
         }
 
-        private void SetPower(LocationDefinition locationDefinition, int currentLine)
+        private void SetTurnPoints(PlayerColor currentPlayerColor, LocationDefinition locationDefinition)
         {
-            if (line != currentLine)
+            
+            if (playerColor != currentPlayerColor)
                 return;
             
-            redPower.text = locationDefinition.GetPlayerPower(PlayerColor.Red).ToString();
-            bluePower.text = locationDefinition.GetPlayerPower(PlayerColor.Blue).ToString();
+            if (locationDefinition.PlayerLine.line != this.line)
+                return;
+            
+            int power = locationDefinition.GetPlayerPower(currentPlayerColor);
+            text.text = power.ToString();
+            
+            Debug.Log($"{currentPlayerColor} {locationDefinition.PlayerLine.line} {power}");
         }
-
     }
 }

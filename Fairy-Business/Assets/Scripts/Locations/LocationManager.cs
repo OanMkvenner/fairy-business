@@ -40,9 +40,9 @@ namespace Locations
 
                 GameLocations.Add(gameLocationDefinition);
             }
-            
+
+            AssignCreditCardAndPlayerLine();
             AssignLocationOwner();
-            AssignBackgroundColorAndPlayerLine();
 
             foreach (LocationDefinition gameLocation in GameLocations)
             {
@@ -112,7 +112,7 @@ namespace Locations
         /// <summary>
         /// Assigns Background Color and PlayerLine.
         /// </summary>
-        private void AssignBackgroundColorAndPlayerLine()
+        private void AssignCreditCardAndPlayerLine()
         {
             GameLocations[0].PlayerLine = lines[0];
             GameLocations[1].PlayerLine = lines[1];
@@ -120,7 +120,7 @@ namespace Locations
         }
         
         /// <summary>
-        /// Sets Player Owner at the start of the game and then shuffles the locations.
+        /// Sets Player Owner at the start of the game.
         /// </summary>
         private void AssignLocationOwner()
         {

@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 7467250463271990309}
   - component: {fileID: 4856669030599699911}
   - component: {fileID: 9101998346398620255}
+  - component: {fileID: 6691056127754199841}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -644,6 +645,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 3
   m_AspectRatio: 0.7
+--- !u!114 &6691056127754199841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5212000952467259164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcde611050d347b98107748ee0d7700a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Gameplay.PlayerPowerUI
+  line: 0
+  playerColor: 0
 --- !u!1 &8945500358153507694
 GameObject:
   m_ObjectHideFlags: 0

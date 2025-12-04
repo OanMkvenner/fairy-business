@@ -23,13 +23,13 @@ namespace Animation.AnimationController
                 List<AnimationJob> highestPriorityJobs =
                     jobs.Where(job => job.Priority == highestPriority).ToList();
 
-                // Animationen starten + Tasks sammeln
+                // Start animations + collect tasks
                 List<Task> tasks = highestPriorityJobs.Select(job => job.AnimationFlow.PlayAsync()).ToList();
 
-                // warten, bis *alle* fertig sind
+                // wait for them to finish
                 await Task.WhenAll(tasks);
 
-                // danach löschen
+                // remove jobs
                 foreach (AnimationJob job in highestPriorityJobs)
                 {
                     jobs.Remove(job);

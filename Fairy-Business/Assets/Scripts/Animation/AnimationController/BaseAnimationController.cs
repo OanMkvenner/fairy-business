@@ -6,14 +6,11 @@ namespace Animation.AnimationController
     {
         [SerializeField] private int priority;
         
-        [SerializeField] private AnimationFlow[] animationFlows;
+        [SerializeField] private AnimationFlow[] defaultAnimationFlows;
         
         protected virtual void Awake()
         {
-            if(animationFlows.Length == 0)
-                animationFlows = GetComponentsInChildren<AnimationFlow>();
-
-            if (animationFlows.Length == 0)
+            if (defaultAnimationFlows.Length == 0)
             {
                 Debug.LogError($"No animation flow for animation controller found {this.name}");
             }
@@ -21,7 +18,7 @@ namespace Animation.AnimationController
 
         protected void StartAnimations()
         {
-            foreach (AnimationFlow animationFlow in animationFlows)
+            foreach (AnimationFlow animationFlow in defaultAnimationFlows)
             {
                 AnimationScheduler.instance.AddAnimationJob(new AnimationJob(animationFlow, priority));
             }

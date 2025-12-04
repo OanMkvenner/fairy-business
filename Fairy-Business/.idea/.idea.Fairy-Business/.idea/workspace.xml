@@ -5,10 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/artefact_crystall.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/artefact_crystall.PNG.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/artifact_book.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/artifact_book.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/coins_creditcard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/coins_creditcard.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/kingdom_creditcard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/kingdom_creditcard.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/visea_creditcard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Placeholder/visea_creditcard.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/PlayerInfoBlue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/PlayerInfoBlue.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/PlayerInfoRed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/PlayerInfoRed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/AnimationSchedular.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/AnimationSchedular.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/BaseAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/BaseAnimationController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationFlow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationFlow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/ScanAnimation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/ScanAnimation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerPowerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerInfoUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerPowerUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerInfoUI.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +48,12 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b8172fcdd864e17924794813da717121f5e00/16/ee0cfc15/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7b8172fcdd864e17924794813da717121f5e00/71/6d1b0501/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/TextureSizeBuildPreprocessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/BaseAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationEffects/ChangeImageAnimationEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerPowerUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@e375ff18e90f/Editor/UGUI/UI/GraphicEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/UGUI/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -102,10 +119,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="23056">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22668">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="23056" />
+      <option name="pid" value="22668" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -151,7 +168,9 @@
       <workItem from="1764342701595" duration="589000" />
       <workItem from="1764343306468" duration="5355000" />
       <workItem from="1764419785108" duration="6899000" />
-      <workItem from="1764840067967" duration="4973000" />
+      <workItem from="1764840067967" duration="8243000" />
+      <workItem from="1764848623553" duration="644000" />
+      <workItem from="1764855218880" duration="484000" />
     </task>
     <servers />
   </component>
@@ -184,30 +203,30 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerPowerUI.cs</url>
-          <line>30</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Gameplay\PlayerPowerUI.cs" containingFunctionPresentation="Method 'SetTurnPoints'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/ScanAnimationController.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Animation\AnimationController\ScanAnimationController.cs" containingFunctionPresentation="Method 'OnCardScanned'">
             <startOffsets>
-              <option value="797" />
+              <option value="1116" />
             </startOffsets>
             <endOffsets>
-              <option value="835" />
+              <option value="1134" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="3" />
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerPowerUI.cs</url>
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/ScanAnimationController.cs</url>
           <line>33</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Gameplay\PlayerPowerUI.cs" containingFunctionPresentation="Method 'SetTurnPoints'">
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Animation\AnimationController\ScanAnimationController.cs" containingFunctionPresentation="Method 'OnCardScanned'">
             <startOffsets>
-              <option value="885" />
+              <option value="1009" />
             </startOffsets>
             <endOffsets>
-              <option value="937" />
+              <option value="1078" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

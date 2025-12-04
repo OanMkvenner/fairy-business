@@ -1,22 +1,19 @@
 using Locations;
 using Player;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 
 namespace UI.Gameplay
 {
-    [RequireComponent(typeof(TextMeshProUGUI))]
-    public class PlayerPowerUI : MonoBehaviour
+    public class PlayerInfoUI : MonoBehaviour
     {
         [SerializeField] private LineIdentifier line;
         [SerializeField] private PlayerColor playerColor;
-        private TextMeshProUGUI text;
+        [SerializeField] private TextMeshProUGUI power;
+        [SerializeField] private TextMeshProUGUI description;
 
         private void Awake()
         {
-            text = GetComponent<TextMeshProUGUI>();
-
             LocationDefinition.OnNewPowerAddedEvent += SetTurnPoints;
         }
 
@@ -25,9 +22,13 @@ namespace UI.Gameplay
             LocationDefinition.OnNewPowerAddedEvent -= SetTurnPoints;
         }
 
+        private void AssignLocationKeyword(LocationDefinition locationDefinition)
+        {
+            description.text = locationDefinition.LocationData.locationDescription;
+        }
+        
         private void SetTurnPoints(PlayerColor currentPlayerColor, LocationDefinition locationDefinition)
         {
-            
             if (playerColor != currentPlayerColor)
                 return;
             
@@ -35,9 +36,7 @@ namespace UI.Gameplay
                 return;
             
             int power = locationDefinition.GetPlayerPower(currentPlayerColor);
-            text.text = power.ToString();
-            
-            Debug.Log($"{currentPlayerColor} {locationDefinition.PlayerLine.line} {power}");
+            this.power.text = power.ToString();
         }
     }
 }

@@ -14,6 +14,7 @@ namespace Locations
     public class LocationDefinition : MonoBehaviour, ITweenAnimation
     {
         public static event Action<PlayerColor, LocationDefinition> OnNewPowerAddedEvent;
+        public static event Action<PlayerColor> OnCurrentOwnerChangedEvent;
         public LocationsType LocationType => locationType;
         public int VictoryPoints => victoryPoints;
         public LocationData LocationData { get; private set; }
@@ -24,8 +25,14 @@ namespace Locations
             get => currentOwner;
             set
             {
+                if (currentOwner == value)
+                    return;
+
                 currentOwner = value;
-                locationImage.sprite = CurrentOwner == PlayerColor.Neutral ? imageDisabled : imageEnabled;
+                
+                locationImage.sprite = currentOwner == PlayerColor.Neutral ? imageDisabled : imageEnabled;
+
+                OnCurrentOwnerChangedEvent?.Invoke(currentOwner);
             }
         }
 

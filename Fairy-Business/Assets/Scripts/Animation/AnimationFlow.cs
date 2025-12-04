@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Animation.Tweens;
 using DG.Tweening;
 using UnityEngine;
@@ -7,13 +8,13 @@ namespace Animation
 {
     public class AnimationFlow : MonoBehaviour
     {
-        public Sequence Sequence { get; private set; }
-        public bool isPlaying { get; private set; }
+        public bool IsPlaying { get; private set; }
 
         [SerializeField] private bool playOnEnable;
-        
+
         private BaseTweenAnimation[] animations;
-        
+        private Sequence Sequence { get; set; }
+
         private void Awake()
         {
             animations = GetComponents<BaseTweenAnimation>();
@@ -24,41 +25,38 @@ namespace Animation
             if (!playOnEnable)
                 return;
             
-            StartAnimation();
+            PlayAsync();
         }
         
-        public void StartAnimation()
+        public Task PlayAsync()
         {
+            var tcs = new TaskCompletionSource<bool>();
+
             Sequence?.Kill();
-            
             Sequence = DOTween.Sequence();
 
             foreach (BaseTweenAnimation animation in animations)
             {
                 Tween tween = animation.Play();
-                
                 AnimationSettings settings = animation.AnimationSettings;
-                
+
                 Action<Sequence, Tween> insertAction = GetSequenceType(settings.SequenceInsertType);
-
                 insertAction(Sequence, tween);
-                
-                if (!settings.AppendInterval)
-                    continue;
 
-                if (settings.AppendIntervalTime <= 0)
-                {
-                    Debug.LogError($"The Append Interval Time is {settings.AppendIntervalTime}, therefore now Interval is added to the sequence");
-                    continue;
-                }
-
-                Sequence.AppendInterval(settings.AppendIntervalTime);
+                if (settings.AppendInterval && settings.AppendIntervalTime > 0)
+                    Sequence.AppendInterval(settings.AppendIntervalTime);
             }
-            
-            Sequence.Play();
-            isPlaying = true;
 
-            Sequence.OnComplete(() => isPlaying = false);
+            IsPlaying = true;
+
+            Sequence.OnComplete(() =>
+            {
+                IsPlaying = false;
+                tcs.TrySetResult(true);
+            });
+
+            Sequence.Play();
+            return tcs.Task;
         }
 
         private Action<Sequence, Tween> GetSequenceType(SequenceInsertType sequenceInsertType)

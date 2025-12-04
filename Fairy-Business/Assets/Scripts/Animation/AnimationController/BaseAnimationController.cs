@@ -23,7 +23,7 @@ namespace Animation.AnimationController
         {
             foreach (AnimationFlow animationFlow in animationFlows)
             {
-                AnimationScheduler.instance.Enqueue(new AnimationJob(animationFlow, priority));
+                AnimationScheduler.instance.AddAnimationJob(new AnimationJob(animationFlow, priority));
             }
         }
     }

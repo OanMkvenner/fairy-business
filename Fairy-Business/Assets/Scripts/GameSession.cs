@@ -312,6 +312,9 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 LocationManager.instance
                     .GameLocations[turnLocations[actingPlayer].locationNumber]
                     .AddPlayerPower(actingPlayer, turnActions[actingPlayer].value + politicsMod);
+                LocationManager.instance
+                    .GameLocations[turnLocations[actingPlayer].locationNumber]
+                    .FinalizePowerAndDetermineWinner();
 
             }
         }
@@ -342,6 +345,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     // reduce control value (but cap it at 'minControlNumber'; usually at 0)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
                     attackedLocation.AddPlayerPower(enemyPlayer, -attackValue);
+                    attackedLocation.FinalizePowerAndDetermineWinner();
                     // If you own the below0Gain2VP location, EVERY TIME you manage to reduce your enemy below 0 you gain 2VP. Effects that block this loss also block this effect
                     if (below0Gain2VPOwner == actingPlayer && newTheoreticalControlValue < 0 && minControlNumber <= 0){
                         victoryPointCounters[below0Gain2VPOwner] += 2;

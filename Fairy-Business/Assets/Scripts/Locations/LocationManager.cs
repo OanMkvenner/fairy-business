@@ -128,12 +128,15 @@ namespace Locations
         {
             GameLocations[0].AddPlayerPower(PlayerColor.Blue, 5);
             GameLocations[0].AddPlayerPower(PlayerColor.Red, 3);
+            GameLocations[0].FinalizePowerAndDetermineWinner();
             
             GameLocations[1].AddPlayerPower(PlayerColor.Red, 5);
             GameLocations[1].AddPlayerPower(PlayerColor.Blue, 3);
+            GameLocations[1].FinalizePowerAndDetermineWinner();
 
             GameLocations[2].AddPlayerPower(PlayerColor.Blue, 4);
             GameLocations[2].AddPlayerPower(PlayerColor.Red, 4);
+            GameLocations[2].FinalizePowerAndDetermineWinner();
         }
 
         private void SetUpLocations()

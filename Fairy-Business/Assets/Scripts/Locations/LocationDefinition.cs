@@ -103,32 +103,41 @@ namespace Locations
         public void AddPlayerPower(PlayerColor playerIdx, int newPower)
         {
             if (power.ContainsKey(playerIdx))
-            {
-                power[playerIdx] += newPower; // zum bestehenden Wert addieren
-            }
+                power[playerIdx] += newPower;
             else
-            {
-                power[playerIdx] = newPower; // neuen Eintrag anlegen
-            }
-            
+                power[playerIdx] = newPower;
+
             power[playerIdx] = Math.Max(0, power[playerIdx]);
-            
-            OnNewPowerAddedEvent?.Invoke(playerIdx, this);
-            
-            CheckWinner();
         }
-        
-        /// <summary>
-        /// Use this method only, if you want to overwrite existing power.
-        /// </summary>
-        /// <param name="playerIdx"></param>
-        /// <param name="newPower"></param>
+
         public void SetPlayerPower(PlayerColor playerIdx, int newPower)
         {
-            power[playerIdx] = newPower; // setzt den Wert direkt, egal ob er schon existiert
-            OnNewPowerAddedEvent?.Invoke(playerIdx, this);
-            CheckWinner();
+            power[playerIdx] = Math.Max(0, newPower);
         }
+
+        /// <summary>
+        /// Call this once after all power values were assigned.
+        /// </summary>
+        public void FinalizePowerAndDetermineWinner()
+        {
+            int blue = power.ContainsKey(PlayerColor.Blue) ? power[PlayerColor.Blue] : 0;
+            int red = power.ContainsKey(PlayerColor.Red) ? power[PlayerColor.Red] : 0;
+            int neutral = power.ContainsKey(PlayerColor.Neutral) ? power[PlayerColor.Neutral] : 0;
+
+            PlayerColor winner;
+
+            if (blue == red)
+                winner = PlayerColor.Neutral;
+            else if (red > blue && red > neutral)
+                winner = PlayerColor.Red;
+            else if (blue > red && blue > neutral)
+                winner = PlayerColor.Blue;
+            else
+                winner = PlayerColor.Neutral;
+
+            CurrentOwner = winner;
+        }
+
         
         public int GetPlayerPower(PlayerColor playerIdx){
             return power[playerIdx];
@@ -156,30 +165,6 @@ namespace Locations
         public void SetPosition(Vector3 position)
         {
             transform.position = position;
-        }
-        
-        private void CheckWinner()
-        {
-            int blue = power.ContainsKey(PlayerColor.Blue) ? power[PlayerColor.Blue] : 0;
-            int red = power.ContainsKey(PlayerColor.Red) ? power[PlayerColor.Red] : 0;
-            int neutral = power.ContainsKey(PlayerColor.Neutral) ? power[PlayerColor.Neutral] : 0;
-
-            // Falls Neutral nicht vorkommt, wird sein Wert einfach 0 sein.
-
-            if (blue == red)
-            {
-                CurrentOwner = PlayerColor.Neutral;
-            }
-            else if (red > blue && red > neutral)
-            {
-                CurrentOwner = PlayerColor.Red;
-            }
-            else if (blue > red && blue > neutral)
-            {
-                CurrentOwner = PlayerColor.Blue;
-            }
-
-            Debug.Log($"{LocationData.locationType}+{CurrentOwner}");
         }
         
         private void UpdateVisuals(){

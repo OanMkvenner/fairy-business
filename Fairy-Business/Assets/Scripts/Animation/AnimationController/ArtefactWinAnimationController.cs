@@ -27,14 +27,12 @@ namespace Animation.AnimationController
             if (locationDefinition.PlayerLine.line != line)
                 return;
             
-            if (locationDefinition.CurrentOwner != playerColor)
+            if (locationDefinition.CurrentOwner != playerColor || locationDefinition.CurrentOwner == PlayerColor.Neutral)
             {
                 rectTransform.localScale = Vector3.zero;
                 return;
             }
-
-            Debug.Log($"StartAnimation Triggered: {locationDefinition.LocationData.locationType} Owner={locationDefinition.CurrentOwner} ControllerColor={playerColor}");
-
+            
             StartAnimations();
         }
     }

@@ -2054,7 +2054,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 103.63256}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &344094603
 MonoBehaviour:
@@ -2170,7 +2170,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 185.22069, y: 0}
-  m_SizeDelta: {x: 205, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &386069578
 MonoBehaviour:
@@ -2357,6 +2357,9 @@ MonoBehaviour:
   - {fileID: 782154037}
   playerColor: 1
   scanAction: 1
+  changeColorEffect: {fileID: 782154035}
+  color: {r: 0.5803922, g: 0.050980393, b: 0.07058824, a: 1}
+  image: {fileID: 782154033}
 --- !u!114 &415821711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2374,6 +2377,9 @@ MonoBehaviour:
   - {fileID: 1675409453}
   playerColor: 1
   scanAction: 2
+  changeColorEffect: {fileID: 1675409451}
+  color: {r: 0.5803922, g: 0.050980397, b: 0.07058824, a: 1}
+  image: {fileID: 1675409449}
 --- !u!1 &418789315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,7 +2540,6 @@ GameObject:
   - component: {fileID: 436877197}
   - component: {fileID: 436877196}
   - component: {fileID: 436877199}
-  - component: {fileID: 436877200}
   m_Layer: 5
   m_Name: ActionCard
   m_TagString: Untagged
@@ -2700,23 +2705,8 @@ MonoBehaviour:
     <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-  animationEffect: {fileID: 436877200}
+  animationEffect: {fileID: 0}
   scale: {x: 1, y: 1, z: 1}
---- !u!114 &436877200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 436877190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e4d632ea4a946df9656138339b7f992, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ResetImageAnimationEffect
-  color: {r: 0.0627451, g: 0.24705884, b: 0.9058824, a: 1}
-  image: {fileID: 436877194}
-  scanningController: {fileID: 1201486864}
 --- !u!1 &450824491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2824,7 +2814,6 @@ GameObject:
   - component: {fileID: 470919545}
   - component: {fileID: 470919544}
   - component: {fileID: 470919547}
-  - component: {fileID: 470919548}
   m_Layer: 5
   m_Name: CreditCrad
   m_TagString: Untagged
@@ -2990,23 +2979,8 @@ MonoBehaviour:
     <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-  animationEffect: {fileID: 470919548}
+  animationEffect: {fileID: 0}
   scale: {x: 1, y: 1, z: 1}
---- !u!114 &470919548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 470919538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e4d632ea4a946df9656138339b7f992, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ResetImageAnimationEffect
-  color: {r: 0.08627451, g: 0.25882354, b: 0.87843144, a: 1}
-  image: {fileID: 470919542}
-  scanningController: {fileID: 1201486864}
 --- !u!1 &491282518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,7 +3196,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 103.63256}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &496597909
 MonoBehaviour:
@@ -3402,7 +3376,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 185.22069, y: 0}
-  m_SizeDelta: {x: 205, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &508358501
 MonoBehaviour:
@@ -3854,7 +3828,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 51.81628, y: 0}
-  m_SizeDelta: {x: 161.42853, y: 161.42853}
+  m_SizeDelta: {x: 0, y: 161.42853}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &660343039
 MonoBehaviour:
@@ -6572,7 +6546,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 185.22069, y: 0}
-  m_SizeDelta: {x: 205, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088792336
 MonoBehaviour:
@@ -7776,6 +7750,9 @@ MonoBehaviour:
   - {fileID: 436877198}
   playerColor: 2
   scanAction: 2
+  changeColorEffect: {fileID: 436877196}
+  color: {r: 0.0627451, g: 0.24313726, b: 0.8980392, a: 1}
+  image: {fileID: 436877194}
 --- !u!114 &1201486864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7793,6 +7770,9 @@ MonoBehaviour:
   - {fileID: 470919546}
   playerColor: 2
   scanAction: 1
+  changeColorEffect: {fileID: 470919544}
+  color: {r: 0.0627451, g: 0.24313727, b: 0.8980393, a: 1}
+  image: {fileID: 470919542}
 --- !u!1 &1241163019
 GameObject:
   m_ObjectHideFlags: 0
@@ -8644,7 +8624,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 185.22069, y: 0}
-  m_SizeDelta: {x: 205, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1346613381
 MonoBehaviour:
@@ -8782,7 +8762,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 185.22069, y: 0}
-  m_SizeDelta: {x: 205, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1360688554
 MonoBehaviour:
@@ -9997,7 +9977,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 185.22069, y: 0}
-  m_SizeDelta: {x: 205, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1530728293
 MonoBehaviour:
@@ -11551,7 +11531,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 185.22069, y: 0}
-  m_SizeDelta: {x: 205, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1794067264
 MonoBehaviour:
@@ -11614,7 +11594,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 185.22069, y: 0}
-  m_SizeDelta: {x: 205, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1799719037
 MonoBehaviour:
@@ -12173,7 +12153,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 185.22069, y: 0}
-  m_SizeDelta: {x: 205, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841480515
 MonoBehaviour:

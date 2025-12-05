@@ -658,3 +658,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.NewTurnAnimationController
   priority: 1
+  defaultAnimationFlows:
+  - {fileID: 6374555803352734516}
+  - {fileID: 6160681609155194864}
+  - {fileID: 311260100107236045}
+  - {fileID: 7973012410384347356}

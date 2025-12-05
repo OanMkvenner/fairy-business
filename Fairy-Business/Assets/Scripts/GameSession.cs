@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -44,6 +45,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     private int roundCounter;
 
     private Dictionary<PlayerColor, int> victoryPointCounters;
+    
+    private Coroutine sendEventCoroutine;
 
     private void Start() {
 
@@ -408,8 +411,15 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         turnActions[PlayerColor.Red] = null;
         turnLocations[PlayerColor.Blue] = null;
         turnLocations[PlayerColor.Red] = null;
-        
+
+        sendEventCoroutine = StartCoroutine(SendEvent());
+    }
+
+    private IEnumerator SendEvent()
+    {
+        yield return new WaitForSeconds(2f);
         OnTurnReset?.Invoke();
+        sendEventCoroutine = null;
     }
 
     private void NextTurn(){

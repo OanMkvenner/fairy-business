@@ -18,5 +18,6 @@ MonoBehaviour:
     type: 3}
   locationType: 4
   VictoryPoints: 1
+  keyword: Victory per Point Bonus
   locationDescription: 'Incredible wealth: Gain 1 additional VP each round you hold
     this location'

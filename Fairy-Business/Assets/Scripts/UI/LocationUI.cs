@@ -9,15 +9,14 @@ namespace UI
         [SerializeField] private Image background;
         [SerializeField] private Image locationImage;
         [SerializeField] private TextMeshProUGUI locationTitle;
-        [SerializeField] private TextMeshProUGUI locationDescription;
+        [SerializeField] private TextMeshProUGUI description;
 
-        public void Init(Color backgroundColor, Sprite locationImage, string locationTitle, string locationDescription)
+        public void Init(Color backgroundColor, Sprite locationImage, string locationTitle, string description)
         {
             this.background.color = backgroundColor;
             this.locationImage.sprite = locationImage;
             this.locationTitle.text = locationTitle;
-            this.locationDescription.text = locationDescription;
+            this.description.text = description;
         }
-
     }
 }

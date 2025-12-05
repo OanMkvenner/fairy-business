@@ -568,4 +568,4 @@ MonoBehaviour:
   background: {fileID: 6351065163982045465}
   locationImage: {fileID: 1139499865601389262}
   locationTitle: {fileID: 2319961264837910495}
-  locationDescription: {fileID: 6426761157692951729}
+  description: {fileID: 6426761157692951729}

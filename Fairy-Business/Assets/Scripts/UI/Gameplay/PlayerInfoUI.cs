@@ -2,6 +2,7 @@ using Locations;
 using Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace UI.Gameplay
 {
@@ -10,21 +11,26 @@ namespace UI.Gameplay
         [SerializeField] private LineIdentifier line;
         [SerializeField] private PlayerColor playerColor;
         [SerializeField] private TextMeshProUGUI power;
-        [SerializeField] private TextMeshProUGUI description;
+        [SerializeField] private TextMeshProUGUI keyword;
 
         private void Awake()
         {
             LocationDefinition.OnNewPowerAddedEvent += SetTurnPoints;
+            LocationManager.OnNewLocationCreatedEvent += AssignLocationKeyword;
         }
 
         private void OnDestroy()
         {
             LocationDefinition.OnNewPowerAddedEvent -= SetTurnPoints;
+            LocationManager.OnNewLocationCreatedEvent -= AssignLocationKeyword;
         }
 
         private void AssignLocationKeyword(LocationDefinition locationDefinition)
         {
-            description.text = locationDefinition.LocationData.locationDescription;
+            if (locationDefinition.PlayerLine.line != line)
+                return;
+            
+            keyword.text = locationDefinition.LocationData.keyword;
         }
         
         private void SetTurnPoints(PlayerColor currentPlayerColor, LocationDefinition locationDefinition)

@@ -9,6 +9,7 @@ namespace Locations
 {
     public class LocationManager : MonobehaviourSingletonCustom<LocationManager>
     {
+        public static event Action<LocationDefinition> OnNewLocationCreatedEvent; 
         public List<LocationDefinition> SelectedLocations { get; private set; } = new List<LocationDefinition>();
         public List<LocationDefinition> GameLocations { get; private set; } 
 
@@ -47,6 +48,7 @@ namespace Locations
             foreach (LocationDefinition gameLocation in GameLocations)
             {
                 gameLocation.SetPosition(gameLocation.PlayerLine.neutralPosition.position);
+                OnNewLocationCreatedEvent?.Invoke(gameLocation);
             }
         }
 
@@ -124,15 +126,12 @@ namespace Locations
         /// </summary>
         private void AssignLocationOwner()
         {
-            GameLocations[0].CurrentOwner = PlayerColor.Blue;
             GameLocations[0].AddPlayerPower(PlayerColor.Blue, 5);
             GameLocations[0].AddPlayerPower(PlayerColor.Red, 3);
             
-            GameLocations[1].CurrentOwner = PlayerColor.Red;
             GameLocations[1].AddPlayerPower(PlayerColor.Red, 5);
             GameLocations[1].AddPlayerPower(PlayerColor.Blue, 3);
-            
-            GameLocations[2].CurrentOwner = PlayerColor.Neutral;
+    
             GameLocations[2].AddPlayerPower(PlayerColor.Red, 4);
             GameLocations[2].AddPlayerPower(PlayerColor.Blue, 4);
         }

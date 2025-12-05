@@ -18,4 +18,5 @@ MonoBehaviour:
     type: 3}
   locationType: 2
   VictoryPoints: 2
-  locationDescription: 'Magic Marcet: Your (+) cards have 1 extra strength'
+  keyword: (+) Card Bonus
+  locationDescription: Your (+) cards have 1 extra strength

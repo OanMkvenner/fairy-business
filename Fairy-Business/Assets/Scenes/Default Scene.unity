@@ -2357,6 +2357,9 @@ MonoBehaviour:
   - {fileID: 782154037}
   playerColor: 1
   scanAction: 1
+  changeColorEffect: {fileID: 0}
+  color: {r: 0.7058824, g: 0.023529414, b: 0.023529414, a: 1}
+  image: {fileID: 782154033}
 --- !u!114 &415821711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2374,6 +2377,9 @@ MonoBehaviour:
   - {fileID: 1675409453}
   playerColor: 1
   scanAction: 2
+  changeColorEffect: {fileID: 0}
+  color: {r: 0.7019608, g: 0.023529414, b: 0.023529414, a: 1}
+  image: {fileID: 1675409449}
 --- !u!1 &418789315
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,7 +2706,7 @@ MonoBehaviour:
     <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-  animationEffect: {fileID: 436877200}
+  animationEffect: {fileID: 0}
   scale: {x: 1, y: 1, z: 1}
 --- !u!114 &436877200
 MonoBehaviour:
@@ -2714,7 +2720,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4d632ea4a946df9656138339b7f992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ResetImageAnimationEffect
-  color: {r: 0.0627451, g: 0.24705884, b: 0.9058824, a: 1}
+  color:
+    r: 0.0627451
+    g: 0.24705884
+    b: 0.9058824
+    a: 1
   image: {fileID: 436877194}
   scanningController: {fileID: 1201486864}
 --- !u!1 &450824491
@@ -2990,7 +3000,7 @@ MonoBehaviour:
     <SequenceInsertType>k__BackingField: 2
     <AppendInterval>k__BackingField: 0
     <AppendIntervalTime>k__BackingField: 0
-  animationEffect: {fileID: 470919548}
+  animationEffect: {fileID: 0}
   scale: {x: 1, y: 1, z: 1}
 --- !u!114 &470919548
 MonoBehaviour:
@@ -3004,7 +3014,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4d632ea4a946df9656138339b7f992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ResetImageAnimationEffect
-  color: {r: 0.08627451, g: 0.25882354, b: 0.87843144, a: 1}
+  color:
+    r: 0.08627451
+    g: 0.25882354
+    b: 0.87843144
+    a: 1
   image: {fileID: 470919542}
   scanningController: {fileID: 1201486864}
 --- !u!1 &491282518
@@ -5047,7 +5061,7 @@ PrefabInstance:
     - target: {fileID: 432076932395929997, guid: ddd1e19ed83e09749a6996ccd0ec4125,
         type: 3}
       propertyPath: m_fontSize
-      value: 65.3
+      value: 37.35
       objectReference: {fileID: 0}
     - target: {fileID: 1691120182755348705, guid: ddd1e19ed83e09749a6996ccd0ec4125,
         type: 3}
@@ -5059,6 +5073,12 @@ PrefabInstance:
       propertyPath: playerColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3708984040949405857, guid: ddd1e19ed83e09749a6996ccd0ec4125,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9114616584026453734, guid: 220a7d8c2a2aedb4c93c3f3bd5649006,
+        type: 3}
     - target: {fileID: 3953222296115079371, guid: ddd1e19ed83e09749a6996ccd0ec4125,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6147,6 +6167,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 432076932395929997, guid: ddd1e19ed83e09749a6996ccd0ec4125,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 37.35
+      objectReference: {fileID: 0}
     - target: {fileID: 1691120182755348705, guid: ddd1e19ed83e09749a6996ccd0ec4125,
         type: 3}
       propertyPath: line
@@ -6157,6 +6182,12 @@ PrefabInstance:
       propertyPath: playerColor
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3708984040949405857, guid: ddd1e19ed83e09749a6996ccd0ec4125,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
+        type: 3}
     - target: {fileID: 3953222296115079371, guid: ddd1e19ed83e09749a6996ccd0ec4125,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -7776,6 +7807,9 @@ MonoBehaviour:
   - {fileID: 436877198}
   playerColor: 2
   scanAction: 2
+  changeColorEffect: {fileID: 0}
+  color: {r: 0.0627451, g: 0.24313727, b: 0.8941177, a: 1}
+  image: {fileID: 436877194}
 --- !u!114 &1201486864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7793,6 +7827,9 @@ MonoBehaviour:
   - {fileID: 470919546}
   playerColor: 2
   scanAction: 1
+  changeColorEffect: {fileID: 0}
+  color: {r: 0.0627451, g: 0.24705884, b: 0.8980393, a: 1}
+  image: {fileID: 470919542}
 --- !u!1 &1241163019
 GameObject:
   m_ObjectHideFlags: 0
@@ -8251,9 +8288,9 @@ RectTransform:
   - {fileID: 361907982}
   - {fileID: 1164305875}
   - {fileID: 1200557878}
-  - {fileID: 811236981}
   - {fileID: 335653845}
   - {fileID: 301225665}
+  - {fileID: 811236981}
   m_Father: {fileID: 1083945984}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -13874,6 +13911,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 443733192302380954, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 569912504463680352, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_Name
@@ -13990,6 +14032,12 @@ PrefabInstance:
       value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 1102985987923870018, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
+        type: 3}
+    - target: {fileID: 1117704139952065905, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_Sprite
       value: 
@@ -14864,6 +14912,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 7808218224013073969, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210566394819447453, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90,
+        type: 3}
     - target: {fileID: 8350078065173565655, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: playerColor
@@ -15206,6 +15265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 432076932395929997, guid: ddd1e19ed83e09749a6996ccd0ec4125,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 37.35
       objectReference: {fileID: 0}
     - target: {fileID: 1691120182755348705, guid: ddd1e19ed83e09749a6996ccd0ec4125,
         type: 3}

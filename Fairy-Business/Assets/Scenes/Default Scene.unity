@@ -1061,9 +1061,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 508358500}
-  - {fileID: 1360688553}
   - {fileID: 1530728292}
+  - {fileID: 1360688553}
+  - {fileID: 508358500}
   m_Father: {fileID: 361907982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1156,9 +1156,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1088792335}
-  - {fileID: 1346613380}
   - {fileID: 386069577}
+  - {fileID: 1346613380}
+  - {fileID: 1088792335}
   m_Father: {fileID: 361907982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2720,13 +2720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4d632ea4a946df9656138339b7f992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ResetImageAnimationEffect
-  color:
-    r: 0.0627451
-    g: 0.24705884
-    b: 0.9058824
-    a: 1
-  image: {fileID: 436877194}
-  scanningController: {fileID: 1201486864}
 --- !u!1 &450824491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3014,13 +3007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e4d632ea4a946df9656138339b7f992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ResetImageAnimationEffect
-  color:
-    r: 0.08627451
-    g: 0.25882354
-    b: 0.87843144
-    a: 1
-  image: {fileID: 470919542}
-  scanningController: {fileID: 1201486864}
 --- !u!1 &491282518
 GameObject:
   m_ObjectHideFlags: 0
@@ -3717,9 +3703,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1841480514}
-  - {fileID: 1794067263}
   - {fileID: 1799719036}
+  - {fileID: 1794067263}
+  - {fileID: 1841480514}
   m_Father: {fileID: 361907982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5269,6 +5255,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7229522113762442743, guid: ddd1e19ed83e09749a6996ccd0ec4125,
+        type: 3}
+      propertyPath: line
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7893872230693881394, guid: ddd1e19ed83e09749a6996ccd0ec4125,
         type: 3}
       propertyPath: m_Sprite
@@ -6377,6 +6368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7229522113762442743, guid: ddd1e19ed83e09749a6996ccd0ec4125,
+        type: 3}
+      propertyPath: line
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7893872230693881394, guid: ddd1e19ed83e09749a6996ccd0ec4125,
         type: 3}
@@ -13911,6 +13907,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 348385931733860727, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90,
+        type: 3}
     - target: {fileID: 443733192302380954, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_fontSize
@@ -13940,6 +13942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 698886562049726015, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: line
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 777100645365640818, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
@@ -14153,12 +14160,22 @@ PrefabInstance:
       propertyPath: playerColor
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1944060577579459420, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
+      value: 
+      objectReference: {fileID: 1360688553}
     - target: {fileID: 1966266898210955013, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -9114616584026453734, guid: 220a7d8c2a2aedb4c93c3f3bd5649006,
         type: 3}
+    - target: {fileID: 2140884491253713016, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: line
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2147238958550193761, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -14882,6 +14899,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7244492551436919984, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
+      value: 
+      objectReference: {fileID: 1794067263}
     - target: {fileID: 7627959423352391484, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -14917,6 +14939,11 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8110588400467901175, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: <AnimationSettings>k__BackingField.<UiEndPosition>k__BackingField
+      value: 
+      objectReference: {fileID: 1346613380}
     - target: {fileID: 8210566394819447453, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_Sprite
@@ -14973,6 +15000,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 8837923343468791451, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
+        type: 3}
     - target: {fileID: 8985430468265194353, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_AnchorMax.y

@@ -131,9 +131,9 @@ namespace Locations
             
             GameLocations[1].AddPlayerPower(PlayerColor.Red, 5);
             GameLocations[1].AddPlayerPower(PlayerColor.Blue, 3);
-    
-            GameLocations[2].AddPlayerPower(PlayerColor.Red, 4);
+
             GameLocations[2].AddPlayerPower(PlayerColor.Blue, 4);
+            GameLocations[2].AddPlayerPower(PlayerColor.Red, 4);
         }
 
         private void SetUpLocations()

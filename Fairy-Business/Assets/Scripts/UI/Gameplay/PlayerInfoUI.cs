@@ -2,7 +2,6 @@ using Locations;
 using Player;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace UI.Gameplay
 {

@@ -5,5 +5,6 @@ namespace Player
         Neutral = 0,
         Red = 1,
         Blue = 2,
+        None = 3,
     }
 }

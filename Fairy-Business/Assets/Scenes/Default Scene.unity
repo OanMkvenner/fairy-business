@@ -10768,7 +10768,7 @@ MonoBehaviour:
   fitType: 2
   rows: 0
   columns: 3
-  stretchFill: 1
+  stretchFill: 0
   centered: 1
   OverstretchLastRowOrColumn: 1
   fitLayoutSizeToContent: 0

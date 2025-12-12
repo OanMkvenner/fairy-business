@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Android™.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Build Profiles/Android™.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +158,7 @@
       <workItem from="1764855218880" duration="484000" />
       <workItem from="1764934097551" duration="4005000" />
       <workItem from="1764938151021" duration="9352000" />
-      <workItem from="1765532706855" duration="744000" />
+      <workItem from="1765532706855" duration="2962000" />
     </task>
     <servers />
   </component>
@@ -192,56 +191,30 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs</url>
-          <line>44</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationManager.cs" containingFunctionPresentation="Method 'CreateGameLocations'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerInfoUI.cs</url>
+          <line>42</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Gameplay\PlayerInfoUI.cs" containingFunctionPresentation="Method 'SetTurnPoints'">
             <startOffsets>
-              <option value="1692" />
+              <option value="1365" />
             </startOffsets>
             <endOffsets>
-              <option value="1731" />
+              <option value="1431" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs</url>
-          <line>45</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationManager.cs" containingFunctionPresentation="Method 'CreateGameLocations'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerInfoUI.cs</url>
+          <line>43</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Gameplay\PlayerInfoUI.cs" containingFunctionPresentation="Method 'SetTurnPoints'">
             <startOffsets>
-              <option value="1744" />
+              <option value="1444" />
             </startOffsets>
             <endOffsets>
-              <option value="1783" />
+              <option value="1479" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs</url>
-          <line>46</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationManager.cs" containingFunctionPresentation="Method 'CreateGameLocations'">
-            <startOffsets>
-              <option value="1796" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1835" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs</url>
-          <line>52</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationManager.cs" containingFunctionPresentation="Method 'CreateGameLocations'">
-            <startOffsets>
-              <option value="1986" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2061" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

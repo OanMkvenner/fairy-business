@@ -349,6 +349,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     // If you own the below0Gain2VP location, EVERY TIME you manage to reduce your enemy below 0 you gain 2VP. Effects that block this loss also block this effect
                     if (below0Gain2VPOwner == actingPlayer && newTheoreticalControlValue < 0 && minControlNumber <= 0){
                         victoryPointCounters[below0Gain2VPOwner] += 2;
+                        UpdateVictoryPointDisplay();
                     }
                 }
             }

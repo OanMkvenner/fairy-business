@@ -108,6 +108,8 @@ namespace Locations
                 power[playerIdx] = newPower;
 
             power[playerIdx] = Math.Max(0, power[playerIdx]);
+            
+            OnNewPowerAddedEvent?.Invoke(playerIdx, this);
         }
 
         public void SetPlayerPower(PlayerColor playerIdx, int newPower)

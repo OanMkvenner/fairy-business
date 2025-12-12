@@ -42,7 +42,10 @@ namespace Locations
                 GameLocations.Add(gameLocationDefinition);
             }
 
-            AssignCreditCardAndPlayerLine();
+            GameLocations[0].PlayerLine = lines[0];
+            GameLocations[1].PlayerLine = lines[1];
+            GameLocations[2].PlayerLine = lines[2];
+            
             AssignLocationOwner();
 
             foreach (LocationDefinition gameLocation in GameLocations)
@@ -57,7 +60,7 @@ namespace Locations
             if (GameLocations == null)
                 return;
             
-            foreach (Transform child in gameFieldParent.transform) {
+            foreach (LocationDefinition child in GameLocations) {
                 Destroy(child.gameObject);
             }
             
@@ -109,16 +112,6 @@ namespace Locations
                 locationAnimation = new LocationAnimation();
             
             locationAnimation.UpdateLocationAnimation(GameLocations);
-        }
-
-        /// <summary>
-        /// Assigns Background Color and PlayerLine.
-        /// </summary>
-        private void AssignCreditCardAndPlayerLine()
-        {
-            GameLocations[0].PlayerLine = lines[0];
-            GameLocations[1].PlayerLine = lines[1];
-            GameLocations[2].PlayerLine = lines[2];
         }
         
         /// <summary>

@@ -223,7 +223,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 NewActionLoggedIn(PlayerColor.Blue);
             }
             if (locationFound) {
-                //Todo: Marie Problem hier lösen
                 if (LocationManager.instance.GameLocations[turnLocation.locationNumber] == null){
                     // location not found in current match, cancel turn addition!
                     Debug.LogError($"Location {turnLocation.locationNumber} is not part of the current match!");
@@ -239,7 +238,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 NewActionLoggedIn(PlayerColor.Red);
             }
             if (locationFound) {
-                //Todo:Problem hier lösen
                 if (LocationManager.instance.GameLocations[turnLocation.locationNumber] == null){
                     // location not found in current match, cancel turn addition!
                     Debug.LogError($"Location {turnLocation.locationNumber} is not part of the current match!");
@@ -288,113 +286,183 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         PlayerColor.Red,
         PlayerColor.Blue,
     };
-    
-    public PlayerColor GetEnemy(PlayerColor firstPlayer){
-        if (firstPlayer == PlayerColor.Red){
-            return PlayerColor.Blue;
-        } else if (firstPlayer == PlayerColor.Blue){
-            return PlayerColor.Red;
-        } else {
-            Debug.LogError("invalid color provided");
-            return PlayerColor.Red;
+
+    private PlayerColor GetEnemy(PlayerColor firstPlayer)
+    {
+        switch (firstPlayer)
+        {
+            case PlayerColor.Red:
+                return PlayerColor.Blue;
+            case PlayerColor.Blue:
+                return PlayerColor.Red;
+            default:
+                Debug.LogError("invalid color provided");
+                return PlayerColor.Red;
         }
     }
-    
-    int[] allLocationNumbers = new int[]{ 0, 1, 2};
-    
-    public void SolveTurn(){
-        // politics
+
+    readonly int[] allLocationNumbers = new int[]{ 0, 1, 2};
+
+    /// <summary>
+    /// Resolves all player actions for the current turn. Processes card actions in the following order: Politics,
+    /// Army, War, and Peace. Applies location modifiers, updates control values, awards victory points,
+    /// resolves territory ownership, triggers end-of-turn effects, checks end game conditions, and advances to the next turn.
+    /// </summary>
+    private void SolveTurn()
+    {
+        // ---------- POLITICS ----------
+        // Check who owns the Enchanted Forest (politics modifier location)
         PlayerColor marketOwner = CheckLocationOwner(LocationsType.EnchantedForest);
-        foreach (var actingPlayer in playerColors){
-            if (turnActions[actingPlayer].CardAction == CardAction.Politics){
+
+        foreach (var actingPlayer in playerColors)
+        {
+            // Only resolve players who played a Politics card
+            if (turnActions[actingPlayer].CardAction == CardAction.Politics)
+            {
+                // Get the opposing player
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+
+                // Gain +1 power if the acting player owns the Enchanted Forest
                 int politicsMod = marketOwner == actingPlayer ? 1 : 0;
+
+                // Add power to the targeted location
                 LocationManager.instance
                     .GameLocations[turnLocations[actingPlayer].locationNumber]
                     .AddPlayerPower(actingPlayer, turnActions[actingPlayer].value + politicsMod);
+
+                // Recalculate control and determine the new winner of the location
                 LocationManager.instance
                     .GameLocations[turnLocations[actingPlayer].locationNumber]
                     .FinalizePowerAndDetermineWinner();
-
             }
         }
-        // Army
-        PlayerColor sourceOwner = CheckLocationOwner(LocationsType.PirateShip);
-        //PlayerColor controlCap3Owner = CheckLocationOwner(LocationsType.CantGoBelow3);
-        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsType.ThroughTheMirror);
-        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsType.BottomOfTheSea);
-        
-        foreach (PlayerColor actingPlayer in playerColors){
-            
-            if (turnActions[actingPlayer].CardAction == CardAction.Army){
-                
+
+        // ---------- ARMY ----------
+        // Location-based modifiers for Army actions
+        PlayerColor sourceOwner = CheckLocationOwner(LocationsType.PirateShip);          // +1 attack
+        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsType.ThroughTheMirror); // Attack all locations at half strength
+        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsType.BottomOfTheSea);      // Gain VP when enemy drops below 0
+
+        foreach (PlayerColor actingPlayer in playerColors)
+        {
+            // Only resolve players who played an Army card
+            if (turnActions[actingPlayer].CardAction == CardAction.Army)
+            {
+                // Get the opposing player
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+
+                // Gain +1 attack if the acting player owns the Pirate Ship
                 int armyMod = sourceOwner == actingPlayer ? 1 : 0;
+
+                // Minimum allowed control value (usually 0)
                 int minControlNumber = 0;
+
+                // Default: attack only the selected location
                 int[] attackedLocationNumbers = new int[] { turnLocations[actingPlayer].locationNumber };
+
+                // Base attack value including modifiers
                 int attackValue = turnActions[actingPlayer].value + armyMod;
-                
-                if(WeakAttackOnAllOwner == actingPlayer){
+
+                // If the player owns Through the Mirror, attack all locations at half strength
+                if (WeakAttackOnAllOwner == actingPlayer)
+                {
                     attackedLocationNumbers = allLocationNumbers;
                     attackValue /= 2;
                 }
-                foreach (var attackedLocationNumber in attackedLocationNumbers)
+
+                // Apply the attack to each affected location
+                foreach (int attackedLocationNumber in attackedLocationNumbers)
                 {
-                    LocationDefinition attackedLocation = LocationManager.instance.GameLocations[attackedLocationNumber];
+                    LocationDefinition attackedLocation =
+                        LocationManager.instance.GameLocations[attackedLocationNumber];
+
+                    // Current enemy control before the attack
                     int currentEnemyControlValue = attackedLocation.GetPlayerPower(enemyPlayer);
-                    // reduce control value (but cap it at 'minControlNumber'; usually at 0)
+
+                    // Theoretical control value after the attack (before clamping)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
+
+                    // Reduce enemy power at the location
                     attackedLocation.AddPlayerPower(enemyPlayer, -attackValue);
+
+                    // Recalculate control and determine the new winner
                     attackedLocation.FinalizePowerAndDetermineWinner();
-                    // If you own the below0Gain2VP location, EVERY TIME you manage to reduce your enemy below 0 you gain 2VP. Effects that block this loss also block this effect
-                    if (below0Gain2VPOwner == actingPlayer && newTheoreticalControlValue < 0 && minControlNumber <= 0){
+
+                    // If the enemy drops below 0 control and the player owns Bottom of the Sea,
+                    // award 2 victory points (unless the loss was blocked)
+                    if (below0Gain2VPOwner == actingPlayer &&
+                        newTheoreticalControlValue < 0 &&
+                        minControlNumber <= 0)
+                    {
                         victoryPointCounters[below0Gain2VPOwner] += 2;
                         UpdateVictoryPointDisplay();
                     }
                 }
             }
         }
-        
-        // War
-        foreach (PlayerColor actingPlayer in playerColors){
-            
-            if (turnActions[actingPlayer].CardAction == CardAction.War){
-                
+
+        // ---------- WAR ----------
+        foreach (PlayerColor actingPlayer in playerColors)
+        {
+            // Only resolve players who played a War card
+            if (turnActions[actingPlayer].CardAction == CardAction.War)
+            {
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
-                // if red has same location and the opposite effect, they cancel each other!
-                if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].CardAction != CardAction.Peace)
+
+                // War is cancelled if the enemy played Peace at the same location
+                if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber ||
+                    turnActions[enemyPlayer].CardAction != CardAction.Peace)
                 {
-                    LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].SetPlayerPower(enemyPlayer, 0);
+                    // Remove all enemy power from the targeted location
+                    LocationManager.instance
+                        .GameLocations[turnLocations[actingPlayer].locationNumber]
+                        .SetPlayerPower(enemyPlayer, 0);
                 }
             }
         }
-        
-        foreach (var actingPlayer in playerColors){
-            
-            if (turnActions[actingPlayer].CardAction == CardAction.Peace){
-                
-                PlayerColor enemyPlayer = GetEnemy(actingPlayer);
-                // if red has same location and the opposite effect, they cancel each other!
-                if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber || turnActions[enemyPlayer].CardAction != CardAction.War)
-                {
-                    int victoryPoints = LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber].GetPlayerPower(actingPlayer);
-                    LocationManager.instance.GameLocations[turnLocations[actingPlayer].locationNumber]
-                        .SetPlayerPower(actingPlayer, 0);
-                    victoryPointCounters[actingPlayer] += victoryPoints;
-                } 
-                
+
+        // ---------- PEACE ----------
+        foreach (PlayerColor actingPlayer in playerColors)
+        {
+            // Skip players who did not play Peace
+            if (turnActions[actingPlayer].CardAction != CardAction.Peace)
+                continue;
+
+            PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+
+            // Peace is cancelled if the enemy played War at the same location
+            if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber ||
+                turnActions[enemyPlayer].CardAction != CardAction.War)
+            {
+                // Convert current control at the location into victory points
+                int victoryPoints = LocationManager.instance
+                    .GameLocations[turnLocations[actingPlayer].locationNumber]
+                    .GetPlayerPower(actingPlayer);
+
+                // Remove the player's power from the location
+                LocationManager.instance
+                    .GameLocations[turnLocations[actingPlayer].locationNumber]
+                    .SetPlayerPower(actingPlayer, 0);
+
+                // Award victory points to the acting player
+                victoryPointCounters[actingPlayer] += victoryPoints;
             }
         }
-        
-        // update territory ownership
+
+        // ---------- END OF TURN ----------
+        // Update territory ownership based on final control values
         ReattributeTerritories();
-        // end of turn effects (if any) are applied
+
+        // Apply any end-of-turn effects
         EndOfTurnEffects();
 
+        // Check if end-game conditions are met
         CheckEndGame();
-        
+
+        // Advance to the next turn
         NextTurn();
     }
+
 
     private void EndOfTurnEffects(){
         

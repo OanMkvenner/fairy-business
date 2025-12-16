@@ -11,6 +11,8 @@ namespace UI.Menu.BaseMenu
         
         [Space]
         [SerializeField] private MenuIdentifier menuIdentifier;
+
+        [SerializeField] private bool stopTime;
         
         [Header("UI Elements")]
         [SerializeField] private GameObject menuContent;
@@ -35,6 +37,12 @@ namespace UI.Menu.BaseMenu
             
             isOpen = true;
             menuContent.SetActive(true);
+
+            if (!stopTime)
+                return;
+
+            Time.timeScale = 0;
+
         }
 
         public virtual void CloseMenu()
@@ -42,6 +50,11 @@ namespace UI.Menu.BaseMenu
             isOpen = false;
             OnMenuClosed?.Invoke();
             menuContent.SetActive(false);
+            
+            if (!stopTime)
+                return;
+
+            Time.timeScale = 1;
         }
     }
 }

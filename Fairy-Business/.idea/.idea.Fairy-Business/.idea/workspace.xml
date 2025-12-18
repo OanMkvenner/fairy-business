@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/LocalizedText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/LocalizedText.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +148,7 @@
       <workItem from="1764938151021" duration="9352000" />
       <workItem from="1765532706855" duration="5472000" />
       <workItem from="1765876024867" duration="1624000" />
-      <workItem from="1766054561998" duration="6357000" />
+      <workItem from="1766054561998" duration="7819000" />
     </task>
     <servers />
   </component>

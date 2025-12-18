@@ -10,8 +10,7 @@ namespace Locations
         public LocationsType locationType;
         public int VictoryPoints;
         public string keyword;
-        public string locationDescription;
-        
+
         //Localized Strings
         public string localizationDescriptionText;
         public string localizationTitleText;

@@ -15,10 +15,11 @@ namespace Locations
     {
         public static event Action<PlayerColor, LocationDefinition> OnNewPowerAddedEvent;
         public static event Action<LocationDefinition> OnCurrentOwnerChangedEvent;
-        public LocationsType LocationType => locationType;
-        public int VictoryPoints => victoryPoints;
+        public LocationsType LocationType => LocationData.locationType;
+        public int VictoryPoints => LocationData.VictoryPoints;
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }
+        public RectTransform RectTransform { get; private set; }
 
         public PlayerColor CurrentOwner
         {
@@ -45,14 +46,8 @@ namespace Locations
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;
-        private string locationText;
-        private LocationsType locationType;
-        private int victoryPoints = 3;
         private LocationUI currenLocatioUI;
         private PlayerColor currentOwner = PlayerColor.None;
-
-        public RectTransform RectTransform { get; private set; }
-
         private Dictionary<PlayerColor, int> power = new();
         private bool isSelected;
 
@@ -76,9 +71,7 @@ namespace Locations
             this.LocationData = data;
             this.imageEnabled = data.imageEnabled;
             this.imageDisabled = data.imageDisabled;
-            this.locationText = data.locationDescription;
-            this.locationType = data.locationType;
-            
+
             UpdateVisuals();
 
             if (isGameView)
@@ -97,7 +90,15 @@ namespace Locations
         public void InitializeLocationUI(LocationUI locationUI)
         {
             currenLocatioUI = locationUI;
-            currenLocatioUI.Init(Color.gray, imageEnabled, locationType.ToString(), locationText);
+            
+            string activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
+            string locationTitle = Localizer.instance.TranslateToSpecificLanguage(LocationData.localizationTitleText, 
+                activeLanguageCode);
+            
+            string locationDescription = Localizer.instance.TranslateToSpecificLanguage(LocationData.localizationDescriptionText, 
+                activeLanguageCode);
+            
+            currenLocatioUI.Init(Color.gray, imageEnabled, locationTitle, locationDescription);
         }
         
         public void AddPlayerPower(PlayerColor playerIdx, int newPower)

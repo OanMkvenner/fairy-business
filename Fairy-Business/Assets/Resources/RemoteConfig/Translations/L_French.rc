@@ -16,9 +16,38 @@
       "pickRandom": "Wähle zufällig",
       "newTurn": "Neue Runde",
       "languageGE": "deutsch",
-      "returnStart": "Zurück zum Startbildschirm"
+      "returnStart": "Zurück zum Startbildschirm",
+      "victoryPoints": ""
+     
+      "locationTitle_EnchantedForest":"",
+      "locationTitle_Caste":"",
+      "locationTitle_PirateShip":"",
+      "locationTitle_GingerbreadHouse":"",
+      "locationTitle_BottomOfTheSea":"",
+      "locationTitle_HauntedHouse":"",
+      "locationTitle_ThroughTheMirror":"",
+      "locationTitle_DragonCave":"",
+      "locationTitle_MagicLibrary":"",
       
-        
+      "locationDescription_EnchantedForest":"",
+      "locationDescription_Caste":"",
+      "locationDescription_PirateShip":"",
+      "locationDescription_GingerbreadHouse":"",
+      "locationDescription_BottomOfTheSea":"",
+      "locationDescription_HauntedHouse":"",
+      "locationDescription_ThroughTheMirror":"",
+      "locationDescription_DragonCave":"",
+      "locationDescription_MagicLibrary":"",
+      
+      "locationKeyword_EnchantedForest":"",
+      "locationKeyword_Caste":"",
+      "locationKeyword_PirateShip":"",
+      "locationKeyword_GingerbreadHouse":"",
+      "locationKeyword_BottomOfTheSea":"",
+      "locationKeyword_HauntedHouse":"",
+      "locationKeyword_ThroughTheMirror":"",
+      "locationKeyword_DragonCave":"",
+      "locationKeyword_MagicLibrary":"",
       
     }
   },

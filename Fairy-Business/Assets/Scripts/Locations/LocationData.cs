@@ -11,5 +11,10 @@ namespace Locations
         public int VictoryPoints;
         public string keyword;
         public string locationDescription;
+        
+        //Localized Strings
+        public string localizationDescriptionText;
+        public string localizationTitleText;
+        public string localizationKeywordText;
     }
 }

@@ -3,7 +3,9 @@
   "entries": {
     "translation_fr":{
       "emergencyMessage": "",
-      
+      "buttonFont": "Georgia SDF",
+      "textFieldFont": "Georgia SDF",
+              
       "gameName": "Fairy Business",
       "language": "Sprache",
       "chooseLanguage": "Wähle eine Sprache",

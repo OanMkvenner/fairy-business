@@ -1,12 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
-using System.IO;
-using System.Linq;
 using TMPro;
-using Unity.Mathematics;
-using DG.Tweening;
-using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine.Events;
 
@@ -242,12 +237,16 @@ public class Localizer : MonoBehaviour
             Debug.LogError($"No LanguageSetting found for languageCode '{languageCode}'");
             return null;
         }
+
         foreach (var font in availableFonts)
         {
             if (font == null) {
                 Debug.LogError("found null-font in available fonts List, ignoring");
                 continue;
             }
+
+            Debug.Log(font.name);
+            
             if (font.name == settings.buttonFont)
             {
                 return font;

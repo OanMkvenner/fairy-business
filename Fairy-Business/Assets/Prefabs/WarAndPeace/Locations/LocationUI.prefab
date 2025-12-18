@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 51558052364201673}
   - component: {fileID: 2319961264837910495}
   - component: {fileID: 2944912480593794163}
+  - component: {fileID: 7419170350402075774}
   m_Layer: 5
   m_Name: LocationTitle
   m_TagString: Untagged
@@ -157,6 +158,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
+--- !u!114 &7419170350402075774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539824506652026069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
+  localizationString: 
 --- !u!1 &1582706425385869053
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,6 +289,7 @@ GameObject:
   - component: {fileID: 7812274424985058000}
   - component: {fileID: 6426761157692951729}
   - component: {fileID: 6781990109439229234}
+  - component: {fileID: 6244739039806839852}
   m_Layer: 5
   m_Name: LocationDescription
   m_TagString: Untagged
@@ -420,6 +435,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &6244739039806839852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3604212758332657671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
+  localizationString: 
 --- !u!1 &3622949803402008638
 GameObject:
   m_ObjectHideFlags: 0

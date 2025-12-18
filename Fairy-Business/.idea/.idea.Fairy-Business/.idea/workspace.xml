@@ -5,8 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/projectSettingsUpdater.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureRound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureRound.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureTurn01Blank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureTurn01Blank.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureTurn02Blank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureTurn02Blank.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureTurn03Blank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureTurn03Blank.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureTurn04Blank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/FutureTurn04Blank.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/NewTurn1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/NewTurn1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/NewTurn2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/NewTurn2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/NewTurn3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/NewTurn3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/PastRound.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/PastRound.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/RoundBackground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/RoundTurn/RoundBackground.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/victory_point.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/victory_point.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +170,7 @@
       <workItem from="1764938151021" duration="9352000" />
       <workItem from="1765532706855" duration="5472000" />
       <workItem from="1765876024867" duration="1624000" />
+      <workItem from="1766054561998" duration="783000" />
     </task>
     <servers />
   </component>

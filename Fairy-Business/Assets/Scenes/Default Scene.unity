@@ -1066,7 +1066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 185.26552, y: -68.818504}
+  m_AnchoredPosition: {x: 185.26552, y: -68.8185}
   m_SizeDelta: {x: 297.447, y: 82.855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70256997
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: 
+  localizationString: locationSelection
 --- !u!1 &246354423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4248,7 +4248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: 
+  localizationString: winGame
 --- !u!1 &698131801
 GameObject:
   m_ObjectHideFlags: 0
@@ -5854,7 +5854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: 
+  localizationString: returnStart
 --- !u!1 &901912127
 GameObject:
   m_ObjectHideFlags: 0
@@ -7705,7 +7705,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: 
+  localizationString: languageGE
 --- !u!1 &1200557877
 GameObject:
   m_ObjectHideFlags: 0
@@ -9659,7 +9659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: 
+  localizationString: pickRandom
 --- !u!1 &1495608265
 GameObject:
   m_ObjectHideFlags: 0
@@ -9988,6 +9988,11 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3096802264302985072, guid: 390f902ccec966a4d95e6ac0c73cd543,
+        type: 3}
+      propertyPath: m_text
+      value: Play
+      objectReference: {fileID: 0}
     - target: {fileID: 3096802264302985073, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -10165,7 +10170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: 
+  localizationString: playGame
 --- !u!1 &1530728291
 GameObject:
   m_ObjectHideFlags: 0
@@ -10706,7 +10711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: 
+  localizationString: winGame
 --- !u!1 &1675409445
 GameObject:
   m_ObjectHideFlags: 0
@@ -11015,7 +11020,7 @@ MonoBehaviour:
   menuContent: {fileID: 901912127}
   closeButton: {fileID: 1241163021}
   returnToStartScreen: {fileID: 1879886346}
-  languageButton: {fileID: 0}
+  languageButton: {fileID: 70256997}
 --- !u!1 &1700238556
 GameObject:
   m_ObjectHideFlags: 0
@@ -12374,7 +12379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: 
+  localizationString: newTurn
 --- !u!1 &1841480513
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,9 +24,9 @@ namespace UI.Menu
             languageButton.onClick.RemoveAllListeners();
         }
 
-        public void OnLanguageButtonClicked()
+        private void OnLanguageButtonClicked()
         {
-            string languageCode = "de";
+            string languageCode = "fr";
             Localizer.instance.SetLanguage(languageCode);
             AppUser.SaveOption("currentLanguageCode", languageCode);
         }

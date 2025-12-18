@@ -4,10 +4,19 @@
     "translation_en":{
       "emergencyMessage": "",
 
-      "gameName": "Finding Atlantis",
+      "gameName": "Fairy Business",
       "language": "language",
       "chooseLanguage": "Choose Language",
-      "playGame": "Play"
+      "playGame": "Play",
+      "winGame": "Won",
+      "looseGame": "Lost",
+      "locationSelection": "Select 3 Locations",
+      "pickRandom": "Pick random",
+      "newTurn": "New Turn",
+      "languageGE": "German",
+      "returnStart": "Return to Start"
+      
+      
     }
   },
 

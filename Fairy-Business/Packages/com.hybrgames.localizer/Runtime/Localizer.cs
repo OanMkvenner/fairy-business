@@ -16,8 +16,8 @@ public class LanguageSetting
     public string unitySystemLanguage = "English";
     public string translatedLanguageName = "English";
     public bool enabled = false;
-    public string buttonFont = "BDCartoonShout";
-    public string textFieldFont = "Arvo-Bold";
+    public string buttonFont = "Georgia SDF";
+    public string textFieldFont = "Georgia SDF";
 }
 
 public class Localizer : MonoBehaviour
@@ -234,7 +234,14 @@ public class Localizer : MonoBehaviour
         return languageSettings.Find(setting => setting.unitySystemLanguage == unitySystemLanguage);
     }
     public TMP_FontAsset GetFontForButtonsByLanguageCode(string languageCode){
-        var settings = GetSettingByLanguageCode(languageCode);
+        
+        LanguageSetting settings = GetSettingByLanguageCode(languageCode);
+        
+        if (settings == null)
+        {
+            Debug.LogError($"No LanguageSetting found for languageCode '{languageCode}'");
+            return null;
+        }
         foreach (var font in availableFonts)
         {
             if (font == null) {

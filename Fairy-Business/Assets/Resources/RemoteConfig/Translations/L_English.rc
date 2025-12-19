@@ -12,8 +12,10 @@
       "languageEN": "english",
       "chooseLanguage": "Choose a language",
       "playGame": "Play",
+      
       "winGame": "Won",
       "looseGame": "Lost",
+      
       "locationSelection": "Select 3 locations",
       "pickRandom": "Pick random",
       "newTurn": "New Turn",

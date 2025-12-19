@@ -23,6 +23,7 @@
       "menuSelection_locationSelection": "Select 3 locations",
       "menuSelection_pickRandom": "Pick random",
       "menuTitle_MenuSettings": "Settings",
+      "menuSettings_Sound" : "Sound",
       "menuTitle_MenuPause": "Pause",
       "menuPause_returnStart": "Return to start",
     

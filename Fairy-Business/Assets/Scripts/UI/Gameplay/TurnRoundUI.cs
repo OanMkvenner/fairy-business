@@ -33,6 +33,7 @@ namespace UI.Gameplay
                 return;
             
             roundText.text = count.ToString(); 
+            turns[^1].SetActive(false);
         }
     }
 }

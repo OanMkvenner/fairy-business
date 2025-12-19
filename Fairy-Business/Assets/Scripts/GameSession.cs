@@ -536,9 +536,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             }
             
             UpdateVictoryPointDisplay();
-
-            // show current power values (until a player starts playing a card? or until turn is played fully?)
-            ShowPower();
         }
     }
     private void UpdateVictoryPointDisplay(){

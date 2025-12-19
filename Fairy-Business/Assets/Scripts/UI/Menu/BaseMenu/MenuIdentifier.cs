@@ -7,5 +7,6 @@ namespace UI.Menu.BaseMenu
         PauseMenu = 2,
         WinScreen = 3,
         HoverSelectionMenu = 4,
+        SettingsMenu = 5,
     }
 }

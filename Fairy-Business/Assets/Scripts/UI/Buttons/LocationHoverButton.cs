@@ -1,11 +1,9 @@
-using System;
 using System.Collections;
 using Locations;
 using Player;
 using UI.Menu.BaseMenu;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 
 namespace UI.Buttons
 {

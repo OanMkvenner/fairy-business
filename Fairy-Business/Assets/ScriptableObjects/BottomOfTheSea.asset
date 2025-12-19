@@ -19,5 +19,6 @@ MonoBehaviour:
   locationType: 7
   VictoryPoints: 2
   keyword: Below 0 Bonus
-  locationDescription: 'Under the sea: Each time you should reduce opponent control
-    below 0 gain 2 VP'
+  localizationDescriptionText: locationDescription_BottomOfTheSea
+  localizationTitleText: locationTitle_BottomOfTheSea
+  localizationKeywordText: locationKeyword_BottomOfTheSea

@@ -19,4 +19,6 @@ MonoBehaviour:
   locationType: 1
   VictoryPoints: 2
   keyword: (-) Card Bonus
-  locationDescription: 'Aggessive tactics: yout (-) cards have 1 extra strength'
+  localizationDescriptionText: locationDescription_PirateShip
+  localizationTitleText: locationTitle_PirateShip
+  localizationKeywordText: locationKeyword_PirateShip

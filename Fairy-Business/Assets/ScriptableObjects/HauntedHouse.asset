@@ -19,5 +19,6 @@ MonoBehaviour:
   locationType: 6
   VictoryPoints: 2
   keyword: Discard Bonus
-  locationDescription: Scary documents! After counting phase opponents discards a
-    random card from hand
+  localizationDescriptionText: locationDescription_HauntedHouse
+  localizationTitleText: locationTitle_HauntedHouse
+  localizationKeywordText: locationKeyword_HauntedHouse

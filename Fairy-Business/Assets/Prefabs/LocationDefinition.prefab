@@ -516,7 +516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe21f6907604f6b4e93314f9cd474867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentOwner: 0
   description: {fileID: 2458245211491674348}
   locationHoverButtons:
   - {fileID: 4997785977417539323}

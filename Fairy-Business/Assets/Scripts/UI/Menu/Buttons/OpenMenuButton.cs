@@ -1,3 +1,4 @@
+using System;
 using UI.Menu.BaseMenu;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +16,11 @@ namespace UI.Menu.Buttons
             button = GetComponent<Button>();
             
             button.onClick.AddListener(OpenMenu);
+        }
+
+        private void OnDestroy()
+        {
+            button.onClick.RemoveAllListeners();
         }
 
         private void OpenMenu()

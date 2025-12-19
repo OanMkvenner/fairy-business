@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using Action = System.Action;
 
 namespace UI.Menu.BaseMenu
@@ -17,8 +16,6 @@ namespace UI.Menu.BaseMenu
         [Header("UI Elements")]
         [SerializeField] private GameObject menuContent;
         
-        [SerializeField] private Button closeButton;
-        
         private bool isOpen = false;
         
         private void Start()
@@ -31,9 +28,6 @@ namespace UI.Menu.BaseMenu
         {
             if (isOpen)
                 return;
-            
-            if(closeButton != null)
-                closeButton.onClick.AddListener(CloseMenu);
             
             isOpen = true;
             menuContent.SetActive(true);

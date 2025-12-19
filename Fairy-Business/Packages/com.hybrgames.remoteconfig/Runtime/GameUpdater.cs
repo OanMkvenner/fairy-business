@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class GameUpdater : MonoBehaviour
@@ -24,15 +21,16 @@ public class GameUpdater : MonoBehaviour
         storeLink = HybrRemoteConfig.GetStoreLink();
         VersionNumber currentVersion = Utilities.GetGameVersion();
         VersionNumber highestVersion = HybrRemoteConfig.GetVersionNumber();
-        //Debug.LogError(currentVersion.major + " " + currentVersion.minor+ " " + currentVersion.patch);
-        //Debug.LogError(highestVersion.major + " " + highestVersion.minor+ " " + highestVersion.patch);
+        
         if (highestVersion > currentVersion){
             // show warning and send to shop, if desired
             if (inst.openStorePopup) inst.openStorePopup.SetActive(true);
         }
         if (inst.textVersionNumber){
             inst.textVersionNumber.text = "" + currentVersion.major + "." + currentVersion.minor + "." + currentVersion.patch;
-            //UniqueNameHash.Get("TextVersionNumber").GetComponent<TMPro.TMP_Text>().text = "" + currentVersion.major + "." + currentVersion.minor + "." + currentVersion.patch;
+            
+            //Todo: Marie check if null
+            UniqueNameHash.Get("TextVersionNumber").GetComponent<TMPro.TMP_Text>().text = "" + currentVersion.major + "." + currentVersion.minor + "." + currentVersion.patch;
         }
         Debug.Log("Version Check complete");
     }

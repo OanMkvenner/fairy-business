@@ -9,16 +9,16 @@
         "enabled": "yes",
         "buttonFont": "Georgia SDF",
         "textFieldFont": "Georgia SDF",
-        "description": "english language settings"
+        "description": "english language settings",
       },
       "fr" : {
         "languageCode": "fr",
         "unitySystemLanguage": "French",
-        "translatedLanguageName": "Français"
+        "translatedLanguageName": "Français",
         "enabled": "yes",
         "buttonFont": "Georgia SDF",
         "textFieldFont": "Georgia SDF",
-        "description": "french language settings"
+        "description": "french language settings",
       }
     }
   },

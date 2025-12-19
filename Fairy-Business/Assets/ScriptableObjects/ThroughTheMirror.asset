@@ -19,5 +19,6 @@ MonoBehaviour:
   locationType: 8
   VictoryPoints: 2
   keyword: (-) target all Bonus
-  locationDescription: 'We see you: Your (-) cards have half value (round-up) but
-    target all locations'
+  localizationDescriptionText: locationDescription_ThroughTheMirror
+  localizationTitleText: locationTitle_ThroughTheMirror
+  localizationKeywordText: locationKeyword_ThroughTheMirror

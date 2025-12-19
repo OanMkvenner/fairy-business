@@ -19,4 +19,6 @@ MonoBehaviour:
   locationType: 5
   VictoryPoints: 3
   keyword: Win Tie Bonus
-  locationDescription: 'Sweet Dreams: You win all ties'
+  localizationDescriptionText: locationDescription_GingerbreadHouse
+  localizationTitleText: locationTitle_GingerbreadHouse
+  localizationKeywordText: locationKeyword_GingerbreadHouse

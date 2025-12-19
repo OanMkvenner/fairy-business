@@ -19,5 +19,6 @@ MonoBehaviour:
   locationType: 9
   VictoryPoints: 3
   keyword: Draw from discard Bonus
-  locationDescription: 'Back from the grave: After counting phase draw back a card
-    from your discard'
+  localizationDescriptionText: locationDescription_MagicLibrary
+  localizationTitleText: locationTitle_MagicLibrary
+  localizationKeywordText: locationKeyword_MagicLibrary

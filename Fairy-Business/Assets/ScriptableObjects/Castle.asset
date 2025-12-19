@@ -19,4 +19,6 @@ MonoBehaviour:
   locationType: 3
   VictoryPoints: 3
   keyword: Handsize Bonus
-  locationDescription: 'Solid Office: Increase Handsize by 1'
+  localizationDescriptionText: locationDescription_Castle
+  localizationTitleText: locationTitle_Castle
+  localizationKeywordText: locationKeyword_Castle

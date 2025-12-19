@@ -19,4 +19,6 @@ MonoBehaviour:
   locationType: 2
   VictoryPoints: 2
   keyword: (+) Card Bonus
-  locationDescription: Your (+) cards have 1 extra strength
+  localizationDescriptionText: locationDescription_EnchantedForest
+  localizationTitleText: locationTitle_EnchantedForest
+  localizationKeywordText: locationKeyword_EnchantedForest

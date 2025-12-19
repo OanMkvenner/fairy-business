@@ -9,7 +9,6 @@ namespace Locations
         public Sprite imageDisabled;
         public LocationsType locationType;
         public int VictoryPoints;
-        public string keyword;
 
         //Localized Strings
         public string localizationDescriptionText;

@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: locationSelection
+  localizationString: menuSelection_locationSelection
 --- !u!1 &246354423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4120,7 +4120,6 @@ GameObject:
   - component: {fileID: 671185737}
   - component: {fileID: 671185739}
   - component: {fileID: 671185738}
-  - component: {fileID: 671185740}
   m_Layer: 5
   m_Name: GameStateText
   m_TagString: Untagged
@@ -4247,19 +4246,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671185736}
   m_CullTransparentMesh: 1
---- !u!114 &671185740
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671185736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: winGame
 --- !u!1 &698131801
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,7 +5986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: returnStart
+  localizationString: menuPause_returnStart
 --- !u!1 &901912127
 GameObject:
   m_ObjectHideFlags: 0
@@ -7266,7 +7252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1127646725
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8217,6 +8203,7 @@ GameObject:
   - component: {fileID: 1241163023}
   - component: {fileID: 1241163022}
   - component: {fileID: 1241163021}
+  - component: {fileID: 1241163024}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -8326,6 +8313,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241163019}
   m_CullTransparentMesh: 1
+--- !u!114 &1241163024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241163019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4aa444ae4734faf869a3daa945dd6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Buttons.CloseMenuButton
+  menuIdentifier: 2
 --- !u!1 &1250713716
 GameObject:
   m_ObjectHideFlags: 0
@@ -8412,6 +8412,7 @@ GameObject:
   - component: {fileID: 1254347826}
   - component: {fileID: 1254347828}
   - component: {fileID: 1254347827}
+  - component: {fileID: 1254347829}
   m_Layer: 5
   m_Name: VictoryPoints
   m_TagString: Untagged
@@ -8538,6 +8539,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254347825}
   m_CullTransparentMesh: 1
+--- !u!114 &1254347829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254347825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
+  localizationString: victoryPoints
 --- !u!1 &1260643643
 GameObject:
   m_ObjectHideFlags: 0
@@ -9980,7 +9994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: pickRandom
+  localizationString: menuSelection_pickRandom
 --- !u!1 &1495608265
 GameObject:
   m_ObjectHideFlags: 0
@@ -10893,7 +10907,6 @@ GameObject:
   - component: {fileID: 1642459681}
   - component: {fileID: 1642459683}
   - component: {fileID: 1642459682}
-  - component: {fileID: 1642459684}
   m_Layer: 5
   m_Name: GameStateText
   m_TagString: Untagged
@@ -11020,19 +11033,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642459680}
   m_CullTransparentMesh: 1
---- !u!114 &1642459684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642459680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: winGame
 --- !u!1 &1675409445
 GameObject:
   m_ObjectHideFlags: 0
@@ -11298,6 +11298,7 @@ GameObject:
   - component: {fileID: 1684077564}
   - component: {fileID: 1684077566}
   - component: {fileID: 1684077565}
+  - component: {fileID: 1684077567}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -11423,6 +11424,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684077563}
   m_CullTransparentMesh: 1
+--- !u!114 &1684077567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684077563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
+  localizationString: menuTitle_MenuSettings
 --- !u!1 &1691917832
 GameObject:
   m_ObjectHideFlags: 0
@@ -11675,6 +11689,7 @@ GameObject:
   - component: {fileID: 1723588942}
   - component: {fileID: 1723588944}
   - component: {fileID: 1723588943}
+  - component: {fileID: 1723588945}
   m_Layer: 5
   m_Name: VictoryPoints
   m_TagString: Untagged
@@ -11801,6 +11816,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723588941}
   m_CullTransparentMesh: 1
+--- !u!114 &1723588945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723588941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
+  localizationString: victoryPoints
 --- !u!1 &1736882802
 GameObject:
   m_ObjectHideFlags: 0
@@ -13452,7 +13480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
-  localizationString: menuTitle_Settings
+  localizationString: menuTitle_MenuSettings
 --- !u!114 &1929862766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13697,6 +13725,7 @@ GameObject:
   - component: {fileID: 2007894255}
   - component: {fileID: 2007894257}
   - component: {fileID: 2007894256}
+  - component: {fileID: 2007894258}
   m_Layer: 5
   m_Name: MenuTitle
   m_TagString: Untagged
@@ -13823,6 +13852,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007894254}
   m_CullTransparentMesh: 1
+--- !u!114 &2007894258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007894254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc987c734fb3a074e8476a5ac0f1677d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: hybrgames.localizer::LocalizedText
+  localizationString: menuTitle_MenuSelection
 --- !u!1 &2013878327
 GameObject:
   m_ObjectHideFlags: 0

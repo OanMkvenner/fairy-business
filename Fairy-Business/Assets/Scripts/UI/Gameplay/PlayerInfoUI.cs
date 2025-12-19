@@ -29,7 +29,11 @@ namespace UI.Gameplay
             if (locationDefinition.PlayerLine.line != line)
                 return;
             
-            keyword.text = locationDefinition.LocationData.keyword;
+            string activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
+            string localizedKeyword = Localizer.instance.TranslateToSpecificLanguage(locationDefinition.LocationData.localizationKeywordText, 
+                activeLanguageCode);
+            
+            keyword.text = localizedKeyword;
         }
         
         private void SetTurnPoints(PlayerColor currentPlayerColor, LocationDefinition locationDefinition)

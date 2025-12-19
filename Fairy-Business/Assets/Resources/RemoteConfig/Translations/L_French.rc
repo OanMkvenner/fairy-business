@@ -13,15 +13,20 @@
       "chooseLanguage": "Choose a language",
       "playGame": "Play",
       
-      "winGame": "Won",
-      "looseGame": "Lost",
-      
-      "locationSelection": "Select 3 locations",
-      "pickRandom": "Pick random",
-      "newTurn": "New Turn",
-      "returnStart": "Return to start",
+      "winGame": "Won!",
+      "looseGame": "Lost!",
       "victoryPoints": "Victory points",
-       
+     
+      "newTurn": "New Turn",
+      
+      "menuTitle_MenuSelection": "Selected Locations",
+      "menuSelection_locationSelection": "Select 3 locations",
+      "menuSelection_pickRandom": "Pick random",
+      "menuTitle_MenuSettings": "Settings",
+      "menuTitle_MenuPause": "Pause",
+      "menuPause_returnStart": "Return to start",
+    
+     
       "locationTitle_EnchantedForest":"Enchanted Forest",
       "locationTitle_Caste":"Castle",
       "locationTitle_PirateShip":"Pirate Ship",
@@ -31,7 +36,7 @@
       "locationTitle_ThroughTheMirror":"Through the mirror",
       "locationTitle_DragonCave":"Dragon Cave",
       "locationTitle_MagicLibrary":"Magic Library",
-        
+      
       "locationDescription_EnchantedForest":"Magic Market: Your (+) cards have 1 extra strength.",
       "locationDescription_Caste":"Solid Office: Increase hand size by 1.",
       "locationDescription_PirateShip":"Aggressive tactics: your (-) cards have 1 extra strength.",
@@ -41,7 +46,7 @@
       "locationDescription_ThroughTheMirror":"We see you: Your (-) cards have half value (round-up) but target all locations.",
       "locationDescription_DragonCave":"Incredible wealth: gain 1 additional VP each round you hold this location.",
       "locationDescription_MagicLibrary":"Back from the grave: after counting phase draw back a card from your discard.",
-        
+      
       "locationKeyword_EnchantedForest":"(+) cards bonus",
       "locationKeyword_Caste":"hand size bonus",
       "locationKeyword_PirateShip":"(-) card bonus",

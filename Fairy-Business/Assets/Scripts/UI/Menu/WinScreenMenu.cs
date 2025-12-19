@@ -34,19 +34,28 @@ namespace UI.Menu
         {
             Dictionary<PlayerColor, int> victoryPoints = GameSession.instance.VictoryPointCounters;
 
+            string activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
+            string win = Localizer.instance.TranslateToSpecificLanguage("winGame", 
+                activeLanguageCode);
+            string lost = Localizer.instance.TranslateToSpecificLanguage("looseGame", 
+                activeLanguageCode);
+            
             if (victoryPoints[PlayerColor.Red] > victoryPoints[PlayerColor.Blue]){
             
-                gameStateTextPlayerRed.text = "Won!";
-                gameStateTextPlayerBlue.text = "Lost!";
+                gameStateTextPlayerRed.text = win;
+                gameStateTextPlayerBlue.text = lost;
             
             } else if (victoryPoints[PlayerColor.Red] < victoryPoints[PlayerColor.Blue]){
             
-                gameStateTextPlayerRed.text = "Lost!";
-                gameStateTextPlayerBlue.text = "Won!";
+                gameStateTextPlayerRed.text = lost;
+                gameStateTextPlayerBlue.text = win;
             }
+            
+            string locationVictoryPoint = Localizer.instance.TranslateToSpecificLanguage("victoryPoints", 
+                activeLanguageCode);
 
-            victoryPointsPlayerBlue.text = $"Victory Points: {victoryPoints[PlayerColor.Blue]}";
-            victoryPointsPlayerRed.text = $"Victory Points: {victoryPoints[PlayerColor.Red]}";
+            victoryPointsPlayerBlue.text = $"{locationVictoryPoint}: {victoryPoints[PlayerColor.Blue]}";
+            victoryPointsPlayerRed.text = $"{locationVictoryPoint}: {victoryPoints[PlayerColor.Red]}";
         }
 
         private void ReturnToStartButton()

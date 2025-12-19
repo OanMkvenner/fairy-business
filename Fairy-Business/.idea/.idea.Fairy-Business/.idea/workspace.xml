@@ -7,6 +7,10 @@
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerInfoUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerInfoUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/WinScreenMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/WinScreenMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +60,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Localization",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -100,10 +104,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="44512">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="44512" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -160,7 +164,7 @@
       <workItem from="1766140026624" duration="2058000" />
       <workItem from="1766142117703" duration="89000" />
       <workItem from="1766142224287" duration="200000" />
-      <workItem from="1766142434772" duration="3002000" />
+      <workItem from="1766142434772" duration="4772000" />
     </task>
     <servers />
   </component>
@@ -188,76 +192,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerInfoUI.cs</url>
-          <line>42</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Gameplay\PlayerInfoUI.cs" containingFunctionPresentation="Method 'SetTurnPoints'">
-            <startOffsets>
-              <option value="1365" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1431" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/PlayerInfoUI.cs</url>
-          <line>43</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Gameplay\PlayerInfoUI.cs" containingFunctionPresentation="Method 'SetTurnPoints'">
-            <startOffsets>
-              <option value="1444" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1479" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs</url>
-          <line>93</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationDefinition.cs" containingFunctionPresentation="Method 'InitializeLocationUI'">
-            <startOffsets>
-              <option value="2963" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3036" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs</url>
-          <line>94</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationDefinition.cs" containingFunctionPresentation="Method 'InitializeLocationUI'">
-            <startOffsets>
-              <option value="3049" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3192" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs</url>
-          <line>97</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationDefinition.cs" containingFunctionPresentation="Method 'InitializeLocationUI'">
-            <startOffsets>
-              <option value="3218" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3373" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

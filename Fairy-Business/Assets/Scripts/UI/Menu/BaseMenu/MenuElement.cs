@@ -30,6 +30,9 @@ namespace UI.Menu.BaseMenu
             
             isOpen = true;
             menuContent.SetActive(true);
+
+            if (menuIdentifier == MenuIdentifier.HoverSelectionMenu)
+                return;
             
             Sounds.instance.Play("MenuOpening");
         }
@@ -39,6 +42,9 @@ namespace UI.Menu.BaseMenu
             isOpen = false;
             OnMenuClosed?.Invoke();
             menuContent.SetActive(false);
+            
+            if (menuIdentifier == MenuIdentifier.HoverSelectionMenu)
+                return;
             
             Sounds.instance.Play("MenuClosing");
         }

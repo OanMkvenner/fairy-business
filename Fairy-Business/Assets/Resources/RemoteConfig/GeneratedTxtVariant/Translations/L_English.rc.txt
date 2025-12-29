@@ -25,7 +25,7 @@
       "menuTitle_MenuSettings": "Settings",
       "menuSettings_Sound" : "Sound",
       "menuTitle_MenuPause": "Pause",
-      "menuPause_returnStart": "Return to start",
+      "menuPause_returnStart": "Return",
     
      
       "locationTitle_EnchantedForest":"Enchanted Forest",

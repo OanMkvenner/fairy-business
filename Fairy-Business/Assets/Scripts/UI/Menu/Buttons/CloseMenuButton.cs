@@ -2,7 +2,7 @@ using UI.Menu.BaseMenu;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UI.Buttons
+namespace UI.Menu.Buttons
 {
     [RequireComponent(typeof(Button))]
     public class CloseMenuButton : MonoBehaviour

@@ -51,9 +51,8 @@ namespace UI.Buttons
         
         private IEnumerator LongPressDetection()
         {
-            yield return new WaitForSeconds(longPressedTime); // Wartezeit für "Lang-Druck"
+            yield return new WaitForSeconds(longPressedTime);
             isLongPressTriggered = true;
-            // Lang-Druck-Aktion (z. B. spezielles Feature)
             LongPressedAction();
         }
     }

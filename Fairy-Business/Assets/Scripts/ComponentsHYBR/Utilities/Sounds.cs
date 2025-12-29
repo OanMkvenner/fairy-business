@@ -7,7 +7,7 @@ namespace ComponentsHYBR.Utilities
     {
         [SerializeField] private AudioSource[] sources;
         
-        private float volume;
+        private float volume = 1f;
 
         private void Awake()
         {
@@ -34,7 +34,6 @@ namespace ComponentsHYBR.Utilities
 
         public void Play(string soundName)
         {
-            Debug.Log(Time.timeScale + " timescale");
             foreach (AudioSource audioSource in sources)
             {
                 if (audioSource.name == soundName)

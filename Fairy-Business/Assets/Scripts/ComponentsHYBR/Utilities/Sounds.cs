@@ -1,3 +1,4 @@
+using Settings;
 using UnityEngine;
 
 namespace ComponentsHYBR.Utilities
@@ -11,11 +12,12 @@ namespace ComponentsHYBR.Utilities
         private void Awake()
         {
             sources = GetComponentsInChildren<AudioSource>();
+            GameSettings.OnSoundSettingChanged += SetVolumeToggle;
         }
 
-        public void SetVolume(float volume)
+        private void OnDestroy()
         {
-            this.volume = volume;
+            GameSettings.OnSoundSettingChanged -= SetVolumeToggle;
         }
 
         public bool IsPlaying(string name)
@@ -71,5 +73,12 @@ namespace ComponentsHYBR.Utilities
             }
         }
 
+        private void SetVolumeToggle(bool isOn)
+        {
+            foreach (AudioSource source in sources)
+            {
+                source.volume = isOn ? volume : 0;
+            }
+        }
     }
 }

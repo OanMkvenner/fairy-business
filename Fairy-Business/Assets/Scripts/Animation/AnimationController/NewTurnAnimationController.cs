@@ -1,3 +1,5 @@
+using ComponentsHYBR.Utilities;
+
 namespace Animation.AnimationController
 {
     public class NewTurnAnimationController : BaseAnimationController

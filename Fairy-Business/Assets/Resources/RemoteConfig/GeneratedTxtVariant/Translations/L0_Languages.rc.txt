@@ -7,18 +7,18 @@
         "unitySystemLanguage": "English",
         "translatedLanguageName": "English",
         "enabled": "yes",
-        "buttonFont": "atlantic-cruiseSDF",
-        "textFieldFont": "Arvo-Regular",
-        "description": "english language settings"
+        "buttonFont": "Georgia SDF",
+        "textFieldFont": "Georgia SDF",
+        "description": "english language settings",
       },
-      "de" : {
+      "fr" : {
         "languageCode": "fr",
         "unitySystemLanguage": "French",
-        "translatedLanguageName": "lol",
+        "translatedLanguageName": "Français",
         "enabled": "yes",
-        "buttonFont": "atlantic-cruiseSDF",
-        "textFieldFont": "Arvo-Regular",
-        "description": "french language settings"
+        "buttonFont": "Georgia SDF",
+        "textFieldFont": "Georgia SDF",
+        "description": "french language settings",
       }
     }
   },

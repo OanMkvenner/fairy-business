@@ -1,4 +1,3 @@
-using System;
 using UI.Menu.BaseMenu;
 using UnityEngine;
 using UnityEngine.UI;

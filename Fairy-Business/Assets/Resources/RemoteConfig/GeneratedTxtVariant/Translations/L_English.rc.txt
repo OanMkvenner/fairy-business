@@ -3,11 +3,62 @@
   "entries": {
     "translation_en":{
       "emergencyMessage": "",
+      "buttonFont": "Georgia SDF",
+      "textFieldFont": "Georgia SDF",
 
-      "gameName": "Finding Atlantis",
-      "language": "language",
-      "chooseLanguage": "Choose Language",
-      "playGame": "Play"
+      "gameName": "Fairy Business",
+      "language": "Language",
+      "languageFR": "french",
+      "languageEN": "english",
+      "chooseLanguage": "Choose a language",
+      "playGame": "Play",
+      
+      "winGame": "Won!",
+      "looseGame": "Lost!",
+      "victoryPoints": "Victory points",
+     
+      "newTurn": "New Turn",
+      
+      "menuTitle_MenuSelection": "Selected Locations",
+      "menuSelection_locationSelection": "Select 3 locations",
+      "menuSelection_pickRandom": "Pick random",
+      "menuTitle_MenuSettings": "Settings",
+      "menuSettings_Sound" : "Sound",
+      "menuTitle_MenuPause": "Pause",
+      "menuPause_returnStart": "Return to start",
+    
+     
+      "locationTitle_EnchantedForest":"Enchanted Forest",
+      "locationTitle_Caste":"Castle",
+      "locationTitle_PirateShip":"Pirate Ship",
+      "locationTitle_GingerbreadHouse":"Gingerbread House",
+      "locationTitle_BottomOfTheSea":"Bottom of the sea",
+      "locationTitle_HauntedHouse":"Haunted House",
+      "locationTitle_ThroughTheMirror":"Through the mirror",
+      "locationTitle_DragonCave":"Dragon Cave",
+      "locationTitle_MagicLibrary":"Magic Library",
+      
+      "locationDescription_EnchantedForest":"Magic Market: Your (+) cards have 1 extra strength.",
+      "locationDescription_Caste":"Solid Office: Increase hand size by 1.",
+      "locationDescription_PirateShip":"Aggressive tactics: your (-) cards have 1 extra strength.",
+      "locationDescription_GingerbreadHouse":"Sweet dreams: You win all ties.",
+      "locationDescription_BottomOfTheSea":"Under the sea: Each time you should reduce opponent control below 0 gain 2 VP.",
+      "locationDescription_HauntedHouse":"Scary documents! After counting phase opponents discards a random card from hand.",
+      "locationDescription_ThroughTheMirror":"We see you: Your (-) cards have half value (round-up) but target all locations.",
+      "locationDescription_DragonCave":"Incredible wealth: gain 1 additional VP each round you hold this location.",
+      "locationDescription_MagicLibrary":"Back from the grave: after counting phase draw back a card from your discard.",
+      
+      "locationKeyword_EnchantedForest":"(+) cards bonus",
+      "locationKeyword_Caste":"hand size bonus",
+      "locationKeyword_PirateShip":"(-) card bonus",
+      "locationKeyword_GingerbreadHouse":"Win Tie",
+      "locationKeyword_BottomOfTheSea":"Below 0 bonus",
+      "locationKeyword_HauntedHouse":"Discard",
+      "locationKeyword_ThroughTheMirror":"(-) card target all",
+      "locationKeyword_DragonCave":"Victory per round",
+      "locationKeyword_MagicLibrary":"Draw from discard",
+     
+      
     }
   },
 

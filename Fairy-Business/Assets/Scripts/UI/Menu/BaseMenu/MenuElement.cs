@@ -1,3 +1,4 @@
+using ComponentsHYBR.Utilities;
 using UnityEngine;
 using Action = System.Action;
 
@@ -31,6 +32,8 @@ namespace UI.Menu.BaseMenu
             
             isOpen = true;
             menuContent.SetActive(true);
+            
+            Sounds.instance.Play("MenuOpening");
 
             if (!stopTime)
                 return;
@@ -44,6 +47,8 @@ namespace UI.Menu.BaseMenu
             isOpen = false;
             OnMenuClosed?.Invoke();
             menuContent.SetActive(false);
+            
+            Sounds.instance.Play("MenuClosing");
             
             if (!stopTime)
                 return;

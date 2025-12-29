@@ -5,7 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/ButtonSound.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/ButtonSound.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/SettingsIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/SettingsIcon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/SoundIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/SoundIcon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/soundicon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/soundicon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/GeneratedTxtVariant/GameValues/AppValues.rc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/GeneratedTxtVariant/GameValues/AppValues.rc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/GeneratedTxtVariant/Translations/L0_Languages.rc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/GeneratedTxtVariant/Translations/L0_Languages.rc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/GeneratedTxtVariant/Translations/L_English.rc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/GeneratedTxtVariant/Translations/L_English.rc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/GeneratedTxtVariant/Translations/L_French.rc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/GeneratedTxtVariant/Translations/L_French.rc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/NewTurnAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/NewTurnAnimationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ComponentsHYBR/Utilities/Sounds.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ComponentsHYBR/Utilities/Sounds.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/BaseMenu/MenuElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/BaseMenu/MenuElement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/OpenMenuButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/OpenMenuButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/SettingsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/SettingsMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/WinScreenMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/WinScreenMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/WarAndPeace/MAGIC_SPELL_Attacking_Climbing_Bells_stereo.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/WarAndPeace/MAGIC_SPELL_Attacking_Climbing_Bells_stereo.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/WarAndPeace/MAGIC_SPELL_Morphing_Synth_Harp_Scales_Deep_stereo.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/WarAndPeace/MAGIC_SPELL_Morphing_Synth_Harp_Scales_Deep_stereo.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/WarAndPeace/MUSIC_EFFECT_Platform_Positive_03b_Fast_stereo.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/WarAndPeace/MUSIC_EFFECT_Platform_Positive_03b_Fast_stereo.wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/WarAndPeace/card.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sounds/WarAndPeace/card.wav.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,13 +52,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3cd210281d094c12b126fa8d34c6496119000/90/780630f7/AudioListener.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/TextureSizeBuildPreprocessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/ArtefactWinAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/BaseAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationEffects/ChangeImageAnimationEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/SettingsMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ButtonSound.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@e375ff18e90f/Editor/UGUI/UI/GraphicEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@e375ff18e90f/Runtime/UGUI/UI/Core/GraphicRaycaster.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -99,10 +126,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="8612">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="8612" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -160,6 +187,7 @@
       <workItem from="1766142117703" duration="89000" />
       <workItem from="1766142224287" duration="200000" />
       <workItem from="1766142434772" duration="4772000" />
+      <workItem from="1767002738153" duration="4558000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,7 @@ namespace UI.Menu.Buttons
     public class OpenMenuButton : MonoBehaviour
     {
         [SerializeField] private MenuIdentifier identifier;
+        
         private Button button;
 
         private void Awake()

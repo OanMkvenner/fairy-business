@@ -19,7 +19,6 @@ namespace UI.Menu
         {
             startGameButton.onClick.AddListener(StartNewGame);
             randomLocationButton.onClick.AddListener(PickRandomLocations);
-            
         }
 
         public override void OpenMenu()

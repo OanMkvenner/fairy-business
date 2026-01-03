@@ -99,11 +99,13 @@ public class Localizer : MonoBehaviour
 
     JObject lastAppConfigs = null;
     public async UniTask ApplyAppConfigs(JObject appRemoteConfigs){
+        Debug.LogError("test1");
         LoadingManager.AddLoadedValue(0.0f, "InitLocalizer", "ApplyAppConfigs");
         await UniTask.Yield();
         lastAppConfigs = appRemoteConfigs;
         if (localizerInitialized == true)
         {
+        Debug.LogError("test2");
             ClearLoadedLocalizations();
             CheckLanguageSettings(appRemoteConfigs);
             SetInitialLanguage();
@@ -412,7 +414,6 @@ public class Localizer : MonoBehaviour
 
     public void RerenderLanguageDropdownTexts(){
         if (!UniqueNameHash.HasKey("LanguageDropdown")) return;
-
         AdvancedDropdown languageDropdown = UniqueNameHash.Get("LanguageDropdown").GetComponent<AdvancedDropdown>();
         languageDropdown.onChangedValue.RemoveAllListeners();
 

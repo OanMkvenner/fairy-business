@@ -318,6 +318,7 @@ public class Localizer : MonoBehaviour
 
     private void RerenderAllLocalizables()
     {
+        RerenderLanguageDropdownTexts();
         RerenderTexts();
         RerenderGameObjects();
         RerenderEmergencyMessages();
@@ -386,6 +387,41 @@ public class Localizer : MonoBehaviour
                 }
             }
         }
+    }
+    
+    public static void PopulateLanguageDropDown(AdvancedDropdown dropdown, List<string> optionStrings)
+    {
+        dropdown.DeleteAllOptions();
+
+        for(int i = 0; i < optionStrings.Count; i++)//Populate new Options
+        {
+            string newEntry = Localizer.instance.GetNativeLanguageName(optionStrings[i]);
+            string flagName = "flag" + optionStrings[i];
+            Sprite flagSprite = Resources.Load<Sprite>("I18n/" + flagName);
+            var buttonFont = Localizer.instance.GetFontForTextByLanguageCode(optionStrings[i]);
+            dropdown.AddOption( newEntry, flagSprite, buttonFont);//Add new options
+        }
+    }
+
+    public void DropdownSelected(int selection){
+        List<string> languageList = Localizer.instance.GetEnabledLanguagesList();
+        var newLanguageCode = languageList[selection];
+        Localizer.instance.SetLanguage(newLanguageCode);
+        AppUser.SaveOption("currentLanguageCode", newLanguageCode);
+    }
+
+    public void RerenderLanguageDropdownTexts(){
+        if (!UniqueNameHash.HasKey("LanguageDropdown")) return;
+
+        AdvancedDropdown languageDropdown = UniqueNameHash.Get("LanguageDropdown").GetComponent<AdvancedDropdown>();
+        languageDropdown.onChangedValue.RemoveAllListeners();
+
+        int oldValue = languageDropdown.value;
+        List<string> languageList = Localizer.instance.GetEnabledLanguagesList();
+        PopulateLanguageDropDown(languageDropdown, languageList);
+        // set current selected dialog option to same as before
+        languageDropdown.SelectOption(languageList.FindIndex(listItem => listItem == Localizer.instance.currentLanguageCode));
+        languageDropdown.onChangedValue.AddListener(DropdownSelected);
     }
     
     

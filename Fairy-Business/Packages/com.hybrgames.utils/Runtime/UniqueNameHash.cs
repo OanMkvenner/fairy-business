@@ -33,10 +33,16 @@ public class UniqueNameHash : MonoBehaviour
         }
     }
 
-    public static Transform Get(string targetName){
+    public static bool HasKey(string targetName){
+        return nameHashes.ContainsKey(targetName);
+    }
+    public static Transform TryGet(string targetName){
+        return Get(targetName, suppressNotFoundError: true);
+    }
+    public static Transform Get(string targetName, bool suppressNotFoundError = false){
         if (!nameHashes.ContainsKey(targetName))
         {
-            Debug.LogError("UniqueNameHash Dictionary doesnt contain Transform of name: '" +targetName+"'");
+            if (!suppressNotFoundError) Debug.LogError("UniqueNameHash Dictionary doesnt contain Transform of name: '" +targetName+"'");
             return null;
         } else {
             return nameHashes[targetName];

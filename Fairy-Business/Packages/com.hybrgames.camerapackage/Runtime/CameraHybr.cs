@@ -10,7 +10,6 @@ using UnityEngine.UI;
 using VideoKit;
 using UnityEngine.PlayerLoop;
 using Cysharp.Threading.Tasks;
-using VideoKit.Devices;
 using UnityEngine.Events;
 using System.Threading.Tasks;
 
@@ -76,6 +75,20 @@ public class CameraHybr : MonoBehaviour {
             TryFinalizeInit();
             return;
         }
+
+        if (frontcamera)
+            cameraManager.facing = VideoKitCameraManager.Facing.User;
+        else 
+            cameraManager.facing = VideoKitCameraManager.Facing.World;
+
+#if !UNITY_EDITOR
+        // not allowed in editor, as it crashes my graphicsdriver with my shitty ass camera
+        cameraManager.frameRate = VideoKitCameraManager.FrameRate._15;
+#else
+        cameraManager.frameRate = VideoKitCameraManager.FrameRate._30;
+#endif
+        cameraManager.resolution = VideoKitCameraManager.Resolution._640x480;
+
         /*
         // Create a device query for device cameras
         query = new MediaDeviceQuery(MediaDeviceCriteria.CameraDevice);
@@ -100,8 +113,7 @@ public class CameraHybr : MonoBehaviour {
         //device.orientation = ScreenOrientation.Portrait;
         device.previewResolution = (400, 400);
 */
-
-        cameraManager.OnCameraImage += new System.Action<CameraImage>(OnCameraImage);
+        cameraManager.OnPixelBuffer += new System.Action<CameraDevice, PixelBuffer>(OnCameraImage);
         if (!cameraInitialized)
         {
             LoadingManager.AddLoadedValue(1.0f, "InitCamera");
@@ -114,25 +126,30 @@ public class CameraHybr : MonoBehaviour {
         Debug.Log("Starting Camera...");
         // Start camera preview
         await UniTask.Yield();
-        await cameraManager.StartRunning();
+        await cameraManager.StartRunningAsync();
         //device.StartRunning(OnCameraImage);
         await UniTask.Yield();
-        var (minBias, maxBias) = cameraManager.device.exposureBiasRange;
-        cameraManager.device.exposureBias = 0.2f * maxBias;
-        //if (device.exposureLockSupported)
-            //device.exposureLock = true;
-        /*
-        device.exposureBias = maxBias;
-        if (device.exposureLockSupported)
-            device.exposureLock = true;
-        if (device.exposurePointSupported)
-            device.exposurePoint = (0.5f, 0.5f);
-        */
-        //NatSuite.Devices.
         
-        if (cameraManager.device.exposurePointSupported){
-            Debug.LogWarning("exposurePointSupported");
-            cameraManager.device.SetExposurePoint(0.5f, 0.5f);
+        CameraDevice currentCam = cameraManager.device as CameraDevice;
+        if (currentCam.IsExposureModeSupported(VideoKit.CameraDevice.ExposureMode.Manual)){
+            var (minBias, maxBias) = currentCam.exposureBiasRange;
+            
+            currentCam.exposureBias = 0.2f * maxBias;
+            //if (device.exposureLockSupported)
+                //device.exposureLock = true;
+            /*
+            device.exposureBias = maxBias;
+            if (device.exposureLockSupported)
+                device.exposureLock = true;
+            if (device.exposurePointSupported)
+                device.exposurePoint = (0.5f, 0.5f);
+            */
+            //NatSuite.Devices.
+            
+            if (currentCam.exposurePointSupported){
+                Debug.LogWarning("exposurePointSupported");
+                currentCam.SetExposurePoint(0.5f, 0.5f);
+            }
         }
     }
 
@@ -217,14 +234,14 @@ public class CameraHybr : MonoBehaviour {
     }
 
 
-    void OnCameraImage(CameraImage cameraImage) {
+    void OnCameraImage(CameraDevice cameraDevice, PixelBuffer cameraImage) {
         // update visual output if required
         //if (renderOutputActive)
         //{
         //    renderOutput.Update(cameraImage);
         //}
         // process picture
-        openCvLib.NewCameraImage(cameraImage);
+        openCvLib.NewCameraImage(cameraDevice, cameraImage);
     }
     
 

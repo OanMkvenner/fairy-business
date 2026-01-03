@@ -8,7 +8,8 @@
         "hybrgames.utils",
         "UniTask",
         "Unity.TextMeshPro",
-        "hybrgames.saveload.runtime"
+        "hybrgames.saveload.runtime",
+        "boldbarnacles.ui"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

@@ -29,7 +29,7 @@
     
      
       "locationTitle_EnchantedForest":"Enchanted Forest",
-      "locationTitle_Caste":"Castle",
+      "locationTitle_Castle":"Castle",
       "locationTitle_PirateShip":"Pirate Ship",
       "locationTitle_GingerbreadHouse":"Gingerbread House",
       "locationTitle_BottomOfTheSea":"Bottom of the sea",
@@ -39,7 +39,7 @@
       "locationTitle_MagicLibrary":"Magic Library",
       
       "locationDescription_EnchantedForest":"Magic Market: Your (+) cards have 1 extra strength.",
-      "locationDescription_Caste":"Solid Office: Increase hand size by 1.",
+      "locationDescription_Castle":"Solid Office: Increase hand size by 1.",
       "locationDescription_PirateShip":"Aggressive tactics: your (-) cards have 1 extra strength.",
       "locationDescription_GingerbreadHouse":"Sweet dreams: You win all ties.",
       "locationDescription_BottomOfTheSea":"Under the sea: Each time you should reduce opponent control below 0 gain 2 VP.",

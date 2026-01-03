@@ -11,7 +11,7 @@ using Unity.Mathematics;
 using System.Threading.Tasks;
 using System.Timers;
 using Cysharp.Threading.Tasks;
-
+using VideoKit;
 
 /*
 // This is used 
@@ -184,7 +184,8 @@ public class CameraOpencvLib : MonoBehaviour
     public bool isFlippedHorizontally = false;
     public bool mergeSubresultNames = true;
 
-    VideoKit.Devices.Outputs.PixelBufferOutput imageBuffer;
+    bool initializedPixelBuffer = false;
+    VideoKit.PixelBuffer imageBuffer;
     CameraHybr cameraHybr;
 
     private void Awake() {
@@ -247,8 +248,10 @@ public class CameraOpencvLib : MonoBehaviour
         m_Safety = AtomicSafetyHandle.Create();
 #endif
 
-        imageBuffer = new VideoKit.Devices.Outputs.PixelBufferOutput();
-        imageBuffer.orientation = ScreenOrientation.Portrait;
+
+
+        imageBuffer = new VideoKit.PixelBuffer();
+        //imageBuffer.orientation = ScreenOrientation.Portrait;
 
         // load keypoints directly from pictures
         LoadingManager.AddLoadedValue(1.0f, "initCameraLib");
@@ -433,20 +436,32 @@ public class CameraOpencvLib : MonoBehaviour
         //resultArray.Dispose();
         
 
-        FindCardWithExtraData(imageBuffer.pixelBuffer, currentProcessingWidth, currentProcessingHeight, frontCameraValueBuffer);
+        FindCardWithExtraData(imageBuffer.data, currentProcessingWidth, currentProcessingHeight, frontCameraValueBuffer);
         processingCard = false;
     }
 
     bool processingCard = false;
-    public unsafe void NewCameraImage(VideoKit.Devices.CameraImage cameraImage){
+    public unsafe void NewCameraImage(CameraDevice cameraDevice, PixelBuffer cameraBuffer){
         if (scanningPaused){
             return;
         }
 
         if (!processingCard)
         {
+            if (!initializedPixelBuffer){
+                initializedPixelBuffer = true;
+                var length = cameraBuffer.width * cameraBuffer.height * 4;
+                using NativeArray<byte> data = new NativeArray<byte>(length, Allocator.Persistent);
+                imageBuffer = new PixelBuffer(
+                    width: cameraBuffer.width,
+                    height: cameraBuffer.height,
+                    format: PixelBuffer.Format.RGBA8888,
+                    data: data
+                );
+            }
+            cameraBuffer.CopyTo(imageBuffer);
+
             processingCard = true;
-            imageBuffer.Update(cameraImage);
             currentProcessingWidth = imageBuffer.width;
             currentProcessingHeight = imageBuffer.height;
             frontCameraValueBuffer = cameraHybr.frontcamera;
@@ -456,7 +471,7 @@ public class CameraOpencvLib : MonoBehaviour
             currentFindCardTask = Task.Run(AsyncFindCard);
         }
 
-        //imageBuffer.Update(cameraImage);
+        //imageBuffer.Update(cameraBuffer);
         //buffer.Dispose();
         //CameraHybr frontNatCam = GetComponent<CameraHybr>();
 //

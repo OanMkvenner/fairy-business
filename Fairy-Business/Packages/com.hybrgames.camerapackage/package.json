@@ -4,8 +4,6 @@
   "displayName": "HYBR Camera Library",
   "unity": "2022.3",
   "dependencies": {
-    "ai.natml.natml": "1.1.15",
-    "ai.natml.videokit": "0.0.18-alpha.2",
     "com.hybrgames.loadingmanager": "1.0.0"
   },
   "author": {

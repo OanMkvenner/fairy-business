@@ -454,11 +454,32 @@ public class Localizer : MonoBehaviour
 
     public string TranslateToSpecificLanguage(string str, string languageCode)
     {
-        if (availableLocalizations[languageCode].Value<JObject>().ContainsKey(str))
+        if (string.IsNullOrEmpty(str))
         {
-            return (string)availableLocalizations[languageCode][str];
+            Debug.LogError("[Localization] Translation key is null or empty.");
+            return string.Empty;
         }
-        return str;
+        
+        if (!availableLocalizations.ContainsKey(languageCode))
+        {
+            Debug.LogError($"[Localization] LanguageCode '{languageCode}' not found.");
+            return str;
+        }
+
+        var languageObject = availableLocalizations[languageCode].Value<JObject>();
+        if (languageObject == null)
+        {
+            Debug.LogError($"[Localization] Localization object for language '{languageCode}' is null.");
+            return str;
+        }
+
+        if (!languageObject.ContainsKey(str))
+        {
+            Debug.LogWarning($"[Localization] Key '{str}' not found for language '{languageCode}'.");
+            return str;
+        }
+
+        return (string)languageObject[str];
     }
 
     public string GetNativeLanguageName(string languageCode)

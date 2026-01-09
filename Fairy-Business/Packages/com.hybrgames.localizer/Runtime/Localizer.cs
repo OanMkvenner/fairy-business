@@ -98,28 +98,28 @@ public class Localizer : MonoBehaviour
     }
 
     JObject lastAppConfigs = null;
+    bool remoteConfigsLoadedAtLeastOnce = false;
     public async UniTask ApplyAppConfigs(JObject appRemoteConfigs){
-        Debug.LogError("test1");
-        LoadingManager.AddLoadedValue(0.0f, "InitLocalizer", "ApplyAppConfigs");
+        if (!remoteConfigsLoadedAtLeastOnce) LoadingManager.AddLoadedValue(0.0f, "InitLocalizer", "ApplyAppConfigs");
         await UniTask.Yield();
         lastAppConfigs = appRemoteConfigs;
         if (localizerInitialized == true)
         {
-        Debug.LogError("test2");
             ClearLoadedLocalizations();
             CheckLanguageSettings(appRemoteConfigs);
             SetInitialLanguage();
-            LoadingManager.AddLoadedValue(0.1f, "InitLocalizer", "SetInitialLanguage");
+            if (!remoteConfigsLoadedAtLeastOnce) LoadingManager.AddLoadedValue(0.1f, "InitLocalizer", "SetInitialLanguage");
         await UniTask.Yield();
             RegisterAllLocalizations(appRemoteConfigs);
-            LoadingManager.AddLoadedValue(0.1f, "InitLocalizer", "RegisterAllLocalizations");
+            if (!remoteConfigsLoadedAtLeastOnce) LoadingManager.AddLoadedValue(0.1f, "InitLocalizer", "RegisterAllLocalizations");
         await UniTask.Yield();
             SetLanguage(currentLanguageCode);
-            LoadingManager.AddLoadedValue(0.3f, "InitLocalizer", "SetLanguage");
+            if (!remoteConfigsLoadedAtLeastOnce) LoadingManager.AddLoadedValue(0.3f, "InitLocalizer", "SetLanguage");
         await UniTask.Yield();
             InitializeStringElementsPoppingUp();
-            LoadingManager.AddLoadedValue(0.1f, "InitializeRemoteConfig", "ApplyAppConfigs finished", true); // only has effect when InitializeRemoteConfig has started
+            if (!remoteConfigsLoadedAtLeastOnce) LoadingManager.AddLoadedValue(0.1f, "InitializeRemoteConfig", "ApplyAppConfigs finished", true); // only has effect when InitializeRemoteConfig has started
         }
+        remoteConfigsLoadedAtLeastOnce = true; // dont add loadvalues on second remoteconfig call
     }
 
     public void InitializeStringElementsPoppingUp(){

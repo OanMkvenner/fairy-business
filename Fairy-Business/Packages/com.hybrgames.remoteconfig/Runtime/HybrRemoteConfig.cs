@@ -115,39 +115,36 @@ public class HybrRemoteConfig : MonoBehaviour
         await UniTask.Yield();
         // following code is to make sure the order is correct, even if ApplyRemoteSettings is called earlier than FetchDefaultValues
         defaultValuesLoaded = true;
-        if (remoteSettingsLoaded)
-        {
-            await ApplyRemoteSettingsAsync(cachedConfigResponse);
-            cachedConfigResponse = new ConfigResponse();
-        }
+        // use these local remoteConfigs after ~1.5 seconds of waiting (unless remoteConfig answer has already arrived) so we at least have SOMETHING for now. Might be overridden by remote configs once loading is complete
+        await UniTask.Delay(1500);
+        if (!remoteSettingsLoaded) LoadingManager.RunRemoteConfigFinishedCallbacks(appRemoteConfigs);
     }
 
     public void ApplyRemoteSettings(ConfigResponse configResponse)
     {
+        RemoteConfigService.Instance.FetchCompleted -= ApplyRemoteSettings;
+        if (!Application.isPlaying) {
+            return; // dont apply configs if this is called in editor without a running game
+        } 
         _ = ApplyRemoteSettingsAsync(configResponse);
     }
 
-    ConfigResponse cachedConfigResponse;
     bool remoteSettingsLoaded = false;
     async UniTask ApplyRemoteSettingsAsync(ConfigResponse configResponse)
     {
         await UniTask.Yield();
-        // make sure FetchDefaultValues() has been called already. if not, wait for it to complete
-        if (!defaultValuesLoaded){
-            cachedConfigResponse = configResponse;
-            remoteSettingsLoaded = true;
-            return;
-        }
         LoadingManager.AddLoadedValue(0.1f, "InitializeRemoteConfig", "ApplyRemoteSettingsAsync");
 
         // merge remote values into default values if available (Merge overwrites with new values where possible)
         switch (configResponse.requestOrigin)
         {
             case ConfigOrigin.Default:
-                Debug.LogWarning("Remote Values fetched unsuccessful, No Cached values found. Default values will be used");
-                break;
+                Debug.LogError("Remote Values fetched unsuccessful, No Cached values found. Default values will be used");
+                LoadingManager.AddLoadedValue(0.1f, "InitializeRemoteConfig", "Default values kept as is");
+                return;
+                //break;
             case ConfigOrigin.Cached:
-                Debug.LogWarning("Remote Values fetched unsuccessful, Cached values loaded instead");
+                Debug.LogWarning("Remote Values fetched unsuccessful, Cached values loaded instead.");
                 //appRemoteConfigs.Merge(RemoteConfigService.Instance.appConfig.config);
                 appRemoteConfigs = RemoteConfigService.Instance.appConfig.config;
                 break;
@@ -160,6 +157,7 @@ public class HybrRemoteConfig : MonoBehaviour
         LoadingManager.AddLoadedValue(0.1f, "InitializeRemoteConfig", "ApplyRemoteSettingsAsync Merged");
 
         // apply all translations and other values
+        remoteSettingsLoaded = true;
         LoadingManager.RunRemoteConfigFinishedCallbacks(appRemoteConfigs); //indirectly calls Localizer.ApplyAppConfigs(); if Localizer is present and registered itself to LoadingManager
     }
 

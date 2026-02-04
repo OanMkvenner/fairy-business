@@ -241,24 +241,28 @@ public static class Utilities
         T value = jtoken.ToObject<T>();// Value<T>();
         return value;
     }
-    public static T GetKeyOrDefault<T>(this JObject jObject, string keyName, T defaultValue)
+    public static T GetKeyOrDefault<T>(this JObject jObject, string keyName, T defaultValue, bool compressed = false)
     {
         if (jObject.ContainsKey(keyName))
         {
             try{
-                return jObject[keyName].ToType<T>();
+                JToken foundObj = jObject[keyName];
+                if (compressed) foundObj = JToken.Parse(LZStringCSharp.LZString.DecompressFromEncodedURIComponent(foundObj.ToString()));
+                return foundObj.ToType<T>();
             } catch(Exception e){
                 Debug.LogError(e.Message);
             }
         }
         return defaultValue;
     }
-    public static object TryGetKeyByDynamicType(this JObject jObject, string keyName, Type type)
+    public static object TryGetKeyByDynamicType(this JObject jObject, string keyName, Type type, bool compressed = false)
     {
         if (jObject.ContainsKey(keyName))
         {
             try{
-                return jObject[keyName].ToDynamicType(type);
+                JToken foundObj = jObject[keyName];
+                if (compressed) foundObj = JToken.Parse(LZStringCSharp.LZString.DecompressFromEncodedURIComponent(foundObj.ToString()));
+                return foundObj.ToDynamicType(type);
             } catch(Exception e){
                 Debug.LogError(e.Message);
             }
@@ -298,7 +302,7 @@ public static class Utilities
         Debug.LogError("didnt find '" + name + "' inside transform '"+t.name+"' at any depth!");
         return null;
     }
-    public static List<Transform> ChildTransformsSorted(Transform t) {
+    public static List<Transform> GetChildTransformsSorted(Transform t) {
         List<Transform> sorted = new List<Transform>();
         for (int i = 0; i < t.childCount; i++) {
             Transform child = t.GetChild(i);
@@ -306,12 +310,12 @@ public static class Utilities
         }
         return sorted;
     }
-    public static List<Transform> ChildTransformsSortedFullDepth(Transform t) {
+    public static List<Transform> GetChildTransformsSortedFullDepth(Transform t) {
         List<Transform> sorted = new List<Transform>();
         for (int i = 0; i < t.childCount; i++) {
             Transform child = t.GetChild(i);
             sorted.Add( child );
-            sorted.AddRange( ChildTransformsSorted(child) );
+            sorted.AddRange( GetChildTransformsSorted(child) );
         }
         return sorted;
     }
@@ -330,20 +334,22 @@ public static class Utilities
         return sorted;
     }
     // "Fisher–Yates shuffle"
-    public static void ShuffleList<T>(List<T> list)
+    public static void ShuffleList<T>(List<T> list, RandomizerUtil randomizer = null)
     {
+        randomizer ??= RandomizerUtil.global;
         int n = list.Count;
         while (n > 1)
         {
             n--;
-            int k = RandomizerUtil.global.RandomInt(n);
+            int k = randomizer.RandomInt(n);
             T value = list[k];
             list[k] = list[n];
             list[n] = value;
         }
     }
-    public static T GetRandomElementOfList<T>(List<T> list){
-        int k = RandomizerUtil.global.RandomInt(list.Count - 1);
+    public static T GetRandomElementOfList<T>(List<T> list, RandomizerUtil randomizer = null){
+        randomizer ??= RandomizerUtil.global;
+        int k = randomizer.RandomInt(list.Count - 1);
         return list[k];
     }
 

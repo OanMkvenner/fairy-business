@@ -7,6 +7,7 @@ using Newtonsoft.Json.Serialization;
 using System;
 using System.Reflection;
 using Cysharp.Threading.Tasks;
+using NUnit.Framework;
 
 public class EnounteredItem
 {
@@ -43,6 +44,15 @@ public class AppUser : MonoBehaviour
     {
     }
 
+    private bool CheckProgressObjectExists(string prefString)
+    {
+        // use cache if possible
+        if (cachedProgressObjects.ContainsKey(prefString))
+        {
+            return true;
+        }
+        return PlayerPrefs.HasKey(prefString);
+    }
     private JObject GetProgressObject(string prefString)
     {
         // use cache if possible
@@ -57,7 +67,7 @@ public class AppUser : MonoBehaviour
         return progressObj;
     }
 
-    private void SaveData(string prefString, JObject progressObject){
+    private void SaveProgressObject(string prefString, JObject progressObject){
         // update cache
         cachedProgressObjects[prefString] = progressObject;
         // update PlayerPrefs
@@ -110,68 +120,90 @@ public class AppUser : MonoBehaviour
     }
 
     // ************************************** Static Public Functions *************************************
-    
-    static public void RemoveProgressContent(string progressName, string contentName){
-        JObject progressObject = AppUser.instance.GetProgressObject(progressName);
-        progressObject.Remove(contentName);
-        AppUser.instance.SaveData(progressName, progressObject);
+    static public bool CheckSavedDataExists(string saveCategory, string dataName){
+        JObject dataObject = AppUser.instance.GetProgressObject(saveCategory);
+        return dataObject.ContainsKey(dataName);
     }
-
-    static public T GetProgressOrDefault<T>(string progressName, string contentName, T defaultValue){
-        JObject optionsObject = AppUser.instance.GetProgressObject(progressName);
-        return optionsObject.GetKeyOrDefault<T>(contentName, defaultValue);
+    // CAREFUL with float/integer types! This function takes the required type from the defaultValue 
+    // unless specified explicitly. A default value of 0 is always assumed integer without warning!
+    // If you need float, set it to 0.0f or state the type explicitly via GetOptionOrDefault<float>()
+    static public T GetSavedDataOrDefault<T>(string saveCategory, string dataName, T defaultValue, bool compressed = false)
+    {
+        JObject dataObject = AppUser.instance.GetProgressObject(saveCategory);
+        return dataObject.GetKeyOrDefault<T>(dataName, defaultValue, compressed: compressed);
     }
-    static public void SaveProgress<T>(string progressName, string contentName, T value){
-        JObject optionsObject = AppUser.instance.GetProgressObject(progressName);
-        optionsObject[contentName] = ConvertToJToken(value);
-        AppUser.instance.SaveData(progressName, optionsObject);
+    static public object TryGetSavedDataOfDynamicType(string saveCategory, string dataName, Type type, bool compressed = false)
+    {
+        JObject dataObject = AppUser.instance.GetProgressObject(saveCategory);
+        return dataObject.TryGetKeyByDynamicType(dataName, type, compressed: compressed);
     }
-
-    static public JArray GetProgressArray(string progressName, string arrayName){
-        JObject optionsObject = AppUser.instance.GetProgressObject(progressName);
-        return AppUser.instance.GetContentArraySafely(optionsObject, arrayName);
+    static public string ConvertObjectToCompressedString<T>(T value){
+        return LZStringCSharp.LZString.CompressToEncodedURIComponent(ConvertToJToken(value).ToString());
     }
-    static public void AddToProgressArray<T>(string progressName, string arrayName, T value){
-        JObject progressObject = AppUser.instance.GetProgressObject(progressName);
+    static public T ConvertCompressedStringToObject<T>(string valueString){
+        JToken foundObj = JToken.Parse(LZStringCSharp.LZString.DecompressFromEncodedURIComponent(valueString));
+        return foundObj.ToType<T>();
+    }
+    // same as above applies. But since input values are often taken from variables, the danger of mis-typing is smaller.
+    static public void SaveData<T>(string saveCategory, string dataName, T value, bool compressed = false, bool debugPrint = false)
+    {
+        if (compressed) {
+            SaveData(saveCategory, dataName, ConvertObjectToCompressedString(value), compressed: false);
+            return;
+        }
+        JObject dataObject = AppUser.instance.GetProgressObject(saveCategory);
+        dataObject[dataName] = ConvertToJToken(value);
+        if (debugPrint) Debug.LogError(dataObject[dataName]);
+        AppUser.instance.SaveProgressObject(saveCategory, dataObject);
+    }
+    static public void DeleteSavedData(string saveCategory, string dataName)
+    {
+        JObject dataObject = AppUser.instance.GetProgressObject(saveCategory);
+        dataObject.Remove(dataName);
+        AppUser.instance.SaveProgressObject(saveCategory, dataObject);
+    }
+    // note: using compression here means compression on single-element level of the array. If the whole array is compressed, this function does not work! 
+    // (could implement a different one for this, but the performance overhead probably makes the "AddToSavedArray" functions intended use kinda useless)
+    static public void AddToSavedArray<T>(string saveCategory, string arrayName, T value, bool compressed = false){
+        JObject progressObject = AppUser.instance.GetProgressObject(saveCategory);
         JArray array = AppUser.instance.GetContentArraySafely(progressObject, arrayName);
         // array is a reference, so progressObject gets updated when adding items
-        array.Add(ConvertToJToken(value));
+        JToken valueToAdd = ConvertToJToken(value);
+        if (compressed) valueToAdd = JToken.Parse(LZStringCSharp.LZString.CompressToEncodedURIComponent(valueToAdd.ToString()));
+        array.Add(valueToAdd);
         // save the updated progressObject
-        AppUser.instance.SaveData(progressName, progressObject);
+        AppUser.instance.SaveProgressObject(saveCategory, progressObject);
     }
+    // deprecated - can be done via GetSavedDataOrDefault
+    //static public List<T> GetSavedDataArray<T>(string saveCategory, string arrayName){
+    //    JObject optionsObject = AppUser.instance.GetProgressObject(saveCategory);
+    //    JArray jArray = AppUser.instance.GetContentArraySafely(optionsObject, arrayName);
+    //    return jArray.ToObject<List<T>>();
+    //}
 
 
     static public bool CheckOptionExists(string optionName){
-        JObject optionsObject = AppUser.instance.GetProgressObject("Options");
-        return optionsObject.ContainsKey(optionName);
+        return CheckSavedDataExists("Options", optionName);
     }
     // CAREFUL with float/integer types! This function takes the required type from the defaultValue 
     // unless specified explicitly. A default value of 0 is always assumed integer without warning!
     // If you need float, set it to 0.0f or state the type explicitly via GetOptionOrDefault<float>()
     static public T GetOptionOrDefault<T>(string optionName, T defaultValue)
     {
-        JObject optionsObject = AppUser.instance.GetProgressObject("Options");
-        return optionsObject.GetKeyOrDefault<T>(optionName, defaultValue);
+        return GetSavedDataOrDefault("Options", optionName, defaultValue);
     }
-
     static public object TryGetOptionOfDynamicType(string optionName, Type type)
     {
-        JObject optionsObject = AppUser.instance.GetProgressObject("Options");
-        return optionsObject.TryGetKeyByDynamicType(optionName, type);
+        return TryGetSavedDataOfDynamicType("Options", optionName, type);
     }
     // same as above applies. But since input values are often taken from variables, the danger of mis-typing is smaller.
     static public void SaveOption<T>(string optionName, T value, bool debugPrint = false)
     {
-        JObject optionsObject = AppUser.instance.GetProgressObject("Options");
-        optionsObject[optionName] = ConvertToJToken(value);
-        if (debugPrint) Debug.LogError(optionsObject[optionName]);
-        AppUser.instance.SaveData("Options", optionsObject);
+        SaveData("Options", optionName, value, debugPrint);
     }
     static public void DeleteOption(string optionName)
     {
-        JObject optionsObject = AppUser.instance.GetProgressObject("Options");
-        optionsObject.Remove(optionName);
-        AppUser.instance.SaveData("Options", optionsObject);
+        DeleteSavedData("Options", optionName);
     }
 
     //Return true, if is supposed to show tutorial
@@ -199,7 +231,7 @@ public class AppUser : MonoBehaviour
 
         progressObject["tutorialStrings"] = tutorialStrings;
 
-        AppUser.instance.SaveData("Progress_Tutorial", progressObject);
+        AppUser.instance.SaveProgressObject("Progress_Tutorial", progressObject);
 
         //As for testing, return true to always show the tutorial...
         return shouldAddAndShow;
@@ -207,18 +239,7 @@ public class AppUser : MonoBehaviour
 
     static public void ResetTutorialProgress()
     {
-        RemoveProgressContent("Progress_Tutorial", "tutorialStrings");
-    }
-
-    static public void StoreSoloHighscore(int numberOfRounds)
-    {
-        AddToProgressArray("Progress_Solo_Highscore", "scores", numberOfRounds);
-    }
-    
-    static public List<int> GetSoloHighscores()
-    {
-        JArray scores = GetProgressArray("Progress_Solo_Highscore", "scores");
-        return scores.ToObject<List<int>>();
+        DeleteSavedData("Progress_Tutorial", "tutorialStrings");
     }
 
     static public void ShowMeTheProgress()

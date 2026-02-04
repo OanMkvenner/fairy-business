@@ -186,6 +186,7 @@ public class CameraOpencvLib : MonoBehaviour
 
     bool initializedPixelBuffer = false;
     VideoKit.PixelBuffer imageBuffer;
+    NativeArray<byte> imageBufferData;
     CameraHybr cameraHybr;
 
     private void Awake() {
@@ -250,7 +251,14 @@ public class CameraOpencvLib : MonoBehaviour
 
 
 
-        imageBuffer = new VideoKit.PixelBuffer();
+        imageBufferData = new NativeArray<byte>(0, Allocator.Persistent);
+        imageBuffer = new PixelBuffer(
+            width: 0,
+            height: 0,
+            format: PixelBuffer.Format.RGBA8888,
+            data: imageBufferData
+        );
+
         //imageBuffer.orientation = ScreenOrientation.Portrait;
 
         // load keypoints directly from pictures
@@ -445,23 +453,25 @@ public class CameraOpencvLib : MonoBehaviour
         if (scanningPaused){
             return;
         }
-
         if (!processingCard)
         {
-            if (!initializedPixelBuffer){
+            processingCard = true;
+            if (!initializedPixelBuffer || cameraBuffer.width != imageBuffer.width || cameraBuffer.height != imageBuffer.height){
+                if ((cameraBuffer.width != imageBuffer.width || cameraBuffer.height != imageBuffer.height) && initializedPixelBuffer){
+                    Debug.LogError("changing camera buffer size");
+                }
                 initializedPixelBuffer = true;
                 var length = cameraBuffer.width * cameraBuffer.height * 4;
-                using NativeArray<byte> data = new NativeArray<byte>(length, Allocator.Persistent);
+                imageBufferData = new NativeArray<byte>(length, Allocator.Persistent);
                 imageBuffer = new PixelBuffer(
                     width: cameraBuffer.width,
                     height: cameraBuffer.height,
                     format: PixelBuffer.Format.RGBA8888,
-                    data: data
+                    data: imageBufferData
                 );
             }
             cameraBuffer.CopyTo(imageBuffer);
 
-            processingCard = true;
             currentProcessingWidth = imageBuffer.width;
             currentProcessingHeight = imageBuffer.height;
             frontCameraValueBuffer = cameraHybr.frontcamera;
@@ -565,13 +575,15 @@ public class CameraOpencvLib : MonoBehaviour
     // default: 400. higher: scan further away. lower: scan closer.
     public static unsafe void SetScanResolution(float scanResolution)
     {
-        if (scanResolution < 100)
+        const int minScanRes = 100;
+        const int maxScanRes = 1200;
+        if (scanResolution < minScanRes)
         {
-            Debug.LogError("scanResolution < 100 is not allowed. If this is actually desired i'd have to check if its safe to go this low first!");
-        } else if (scanResolution > 2000){
-            Debug.LogError("warning: doing scanResolution above 1200 can result in very high calculation times. Resetting to 1200 for now!");
+            Debug.LogError($"scanResolution < {minScanRes} is not allowed. If this is actually desired i'd have to check if its safe to go this low first!");
+        } else if (scanResolution > maxScanRes){
+            Debug.LogError($"warning: doing scanResolution above {maxScanRes} can result in very high calculation times. Resetting to {maxScanRes} for now!");
         }
-        scanResolution = Mathf.Clamp(scanResolution, 100, 1200);
+        scanResolution = Mathf.Clamp(scanResolution, minScanRes, maxScanRes);
         Comparator.setCustomValues(comparator_obj, "setScanResolution", scanResolution, 0);
     }
     unsafe void FindCardWithExtraData(NativeArray<byte> byteArray, int width, int height, bool frontCamera)

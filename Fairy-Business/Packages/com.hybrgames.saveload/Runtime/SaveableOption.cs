@@ -49,13 +49,13 @@ public class SaveableOption : MonoBehaviour
                 amountOfSaveableComponents++;
                 GetComponent<Slider>().value = (float)value;
                 GetComponent<Slider>().onValueChanged.AddListener(SetValue);
-                SetValue((float)value); // this sets the value from the slider as initial saved value, in case no value was loaded
+                GetComponent<Slider>().onValueChanged.Invoke((float)value); // making sure initial values are synchronized properly
             }
             if (CheckComponentAvailable<TMP_InputField>()){
                 amountOfSaveableComponents++;
                 GetComponent<TMP_InputField>().text = (string)value;
                 GetComponent<TMP_InputField>().onValueChanged.AddListener(SetValue);
-                SetValue((string)value); // this sets the value from the slider as initial saved value, in case no value was loaded
+                GetComponent<TMP_InputField>().onValueChanged.Invoke((string)value); // making sure initial values are synchronized properly
             }
             if (amountOfSaveableComponents == 0){
                 Debug.LogError($"No saveable component found on SaveableOption. GameObject: {name}, please add a saveable component or implement a component to be saveable!");

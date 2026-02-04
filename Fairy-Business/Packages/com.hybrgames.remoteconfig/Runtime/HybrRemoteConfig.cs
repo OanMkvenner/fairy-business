@@ -92,7 +92,6 @@ public class HybrRemoteConfig : MonoBehaviour
         // await RemoteConfigService.Instance.FetchConfigsAsync(configType, new userAttributes(), new appAttributes(), fAttributes);
     }
 
-    bool defaultValuesLoaded = false;
     async UniTask FetchDefaultValues()
     {
         await UniTask.Yield();
@@ -113,8 +112,6 @@ public class HybrRemoteConfig : MonoBehaviour
         }
         LoadingManager.AddLoadedValue(0.1f, "InitializeRemoteConfig", "translationRCFiles");
         await UniTask.Yield();
-        // following code is to make sure the order is correct, even if ApplyRemoteSettings is called earlier than FetchDefaultValues
-        defaultValuesLoaded = true;
         // use these local remoteConfigs after ~1.5 seconds of waiting (unless remoteConfig answer has already arrived) so we at least have SOMETHING for now. Might be overridden by remote configs once loading is complete
         await UniTask.Delay(1500);
         if (!remoteSettingsLoaded) LoadingManager.RunRemoteConfigFinishedCallbacks(appRemoteConfigs);

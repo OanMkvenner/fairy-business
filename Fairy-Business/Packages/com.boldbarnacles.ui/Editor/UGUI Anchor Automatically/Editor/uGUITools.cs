@@ -5,6 +5,7 @@ public class uGUITools : MonoBehaviour {
 	[MenuItem("uGUI/Anchors to Corners %[")]
 	static void AnchorsToCorners(){
 		foreach(Transform transform in Selection.transforms){
+			Undo.RecordObject(transform, "Changed Anchors To Corners");
 			RectTransform t = transform as RectTransform;
 			RectTransform pt = Selection.activeTransform.parent as RectTransform;
 
@@ -24,6 +25,7 @@ public class uGUITools : MonoBehaviour {
 	[MenuItem("uGUI/Corners to Anchors %]")]
 	static void CornersToAnchors(){
 		foreach(Transform transform in Selection.transforms){
+			Undo.RecordObject(transform, "Changed Corners To Anchors");
 			RectTransform t = transform as RectTransform;
 
 			if(t == null) return;
@@ -44,6 +46,7 @@ public class uGUITools : MonoBehaviour {
 
 	static void MirrorHorizontally(bool mirrorAnchors){
 		foreach(Transform transform in Selection.transforms){
+			Undo.RecordObject(transform, "MirrorHorizontally");
 			RectTransform t = transform as RectTransform;
 			RectTransform pt = Selection.activeTransform.parent as RectTransform;
 			
@@ -75,6 +78,7 @@ public class uGUITools : MonoBehaviour {
 	
 	static void MirrorVertically(bool mirrorAnchors){
 		foreach(Transform transform in Selection.transforms){
+			Undo.RecordObject(transform, "MirrorVertically");
 			RectTransform t = transform as RectTransform;
 			RectTransform pt = Selection.activeTransform.parent as RectTransform;
 			

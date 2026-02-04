@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DisallowMultipleComponent]
 public class UniqueNameHash : MonoBehaviour
 {
     public static Dictionary<string, Transform> nameHashes = new Dictionary<string, Transform>();
@@ -27,7 +28,8 @@ public class UniqueNameHash : MonoBehaviour
     public void Init(){
 
         if (nameHashes.ContainsKey(name)){
-            Debug.LogError("UniqueNameHash Dictionary clash: GameObject of name '"+name+"' already added!");
+            Debug.LogError("UniqueNameHash Dictionary clash: GameObject of name '"+name+"' already added!", this.gameObject);
+            Debug.LogError("UniqueNameHash Dictionary clash: This was the originally added Gameobject.", nameHashes[name].gameObject);
         } else {
             nameHashes[name] = transform;
         }

@@ -20,6 +20,7 @@ MonoBehaviour:
     rid: 7334225642423058432
   m_OverrideGlobalSceneList: 0
   m_Scenes: []
+  m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:
@@ -96,6 +97,7 @@ MonoBehaviour:
     - line: '|   androidStartInFullscreen: 1'
     - line: '|   androidRenderOutsideSafeArea: 1'
     - line: '|   androidUseSwappy: 1'
+    - line: '|   androidDisplayOptions: 1'
     - line: '|   androidBlitType: 2'
     - line: '|   androidResizeableActivity: 0'
     - line: '|   androidDefaultWindowWidth: 1920'
@@ -329,9 +331,10 @@ MonoBehaviour:
     - line: '|     tvOS: 0'
     - line: '|   overrideDefaultApplicationIdentifier: 1'
     - line: '|   AndroidBundleVersionCode: 214'
-    - line: '|   AndroidMinSdkVersion: 24'
+    - line: '|   AndroidMinSdkVersion: 25'
     - line: '|   AndroidTargetSdkVersion: 0'
     - line: '|   AndroidPreferredInstallLocation: 1'
+    - line: '|   AndroidPreferredDataLocation: 1'
     - line: '|   aotOptions: '
     - line: '|   stripEngineCode: 1'
     - line: '|   iPhoneStrippingLevel: 0'
@@ -420,6 +423,7 @@ MonoBehaviour:
     - line: '|   useCustomGradleSettingsTemplate: 0'
     - line: '|   useCustomProguardFile: 0'
     - line: '|   AndroidTargetArchitectures: 2'
+    - line: '|   AndroidAllowedArchitectures: -1'
     - line: '|   AndroidSplashScreenScale: 0'
     - line: '|   androidSplashScreen: {fileID: 2800000, guid: 87e8e3c6917f2cd49a1d0e9a2dd9a7c8,
         type: 3}'
@@ -979,6 +983,7 @@ MonoBehaviour:
     - line: '|     LinuxHeadlessSimulation: UNITY_POST_PROCESSING_STACK_V2'
     - line: '|     Lumin: UNITY_POST_PROCESSING_STACK_V2'
     - line: '|     Nintendo Switch: UNITY_POST_PROCESSING_STACK_V2'
+    - line: '|     Nintendo Switch 2: UNITY_POST_PROCESSING_STACK_V2'
     - line: '|     PS4: UNITY_POST_PROCESSING_STACK_V2'
     - line: '|     PS5: UNITY_POST_PROCESSING_STACK_V2'
     - line: '|     QNX: UNITY_POST_PROCESSING_STACK_V2'
@@ -1108,6 +1113,8 @@ MonoBehaviour:
     - line: '|   androidVulkanDenyFilterList: []'
     - line: '|   androidVulkanAllowFilterList: []'
     - line: '|   androidVulkanDeviceFilterListAsset: {instanceID: 0}'
+    - line: '|   d3d12DeviceFilterListAsset: {instanceID: 0}'
+    - line: '|   allowedHttpConnections: 3'
     - line: '| '
   references:
     version: 2
@@ -1128,6 +1135,7 @@ MonoBehaviour:
         m_InstallInBuildFolder: 0
         m_InsightsSettingsContainer:
           m_BuildProfileEngineDiagnosticsState: 2
+        m_AdaptivePerformanceEnabled: 0
         m_BuildSubtarget: 0
         m_BuildSystem: 1
         m_ExportAsGoogleAndroidProject: 0

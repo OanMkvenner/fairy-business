@@ -31,13 +31,17 @@ namespace Locations
 
                 currentOwner = value;
                 
-                locationImage.sprite = currentOwner == PlayerColor.Neutral ? imageDisabled : imageEnabled;
+                //Commented out bc of artefacts now moving and not locations anymore
+                //locationImage.sprite = currentOwner == PlayerColor.Neutral ? imageDisabled : imageEnabled;
+                locationImage.sprite = imageEnabled;
 
                 OnCurrentOwnerChangedEvent?.Invoke(this);
             }
         }
 
         public List<LocationHoverButton> LocationHoverButtons => locationHoverButtons;
+
+        [field: SerializeField] public GameObject Artfecat { get; set; }
 
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
@@ -150,17 +154,17 @@ namespace Locations
 
         public Tween MoveY(float y, float duration)
         {
-            return RectTransform.DOMoveY(y, duration);
+            return Artfecat.GetComponent<RectTransform>().DOMoveY(y, duration);
         }
 
         public Tween MoveX(float x, float duration)
         {
-            return RectTransform.DOLocalMoveX(x, duration);
+            return Artfecat.GetComponent<RectTransform>().DOLocalMoveX(x, duration);
         }
 
         public Tween Rotate(float angle, float duration)
         {
-            return RectTransform.DORotate(new Vector3(0, 0, angle), duration);
+            return Artfecat.GetComponent<RectTransform>().DORotate(new Vector3(0, 0, angle), duration);
         }
 
         #endregion

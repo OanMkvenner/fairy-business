@@ -21,7 +21,7 @@ namespace Locations
 
             foreach (LocationDefinition location in locations)
             {
-                if (locations == null || locations.Count == 0)
+                if (locations.Count == 0)
                 {
                     Debug.LogWarning("[LocationAnimation] No Location for animation found!");
                     return;
@@ -41,16 +41,17 @@ namespace Locations
                 Tween rotateTween = location.Rotate(targetPositionTransform.localEulerAngles.z, duration)
                     .SetEase(rotationEaseMode);
                 
-                Tween rotateHoverButton = location.LocationHoverButtons[0].transform.parent.GetComponent<RectTransform>()
-                    .DORotate(new Vector3(0, 0, 0), duration);
+                //Hover Buttons are invisible needs, but are children from the locations 
+                /*Tween rotateHoverButton = location.LocationHoverButtons[0].transform.parent.GetComponent<RectTransform>()
+                    .DORotate(new Vector3(0, 0, 0), duration);*/
                 
                 
                 sequence.Join(moveTween);
                 sequence.Join(rotateTween);
-                sequence.Join(rotateHoverButton);
+                //sequence.Join(rotateHoverButton);
                 
                 //Set the scale and size of parent
-                location.transform.SetParent(targetPositionTransform);
+                location.transform.SetParent(location.PlayerLine.neutralPosition);
                 location.RectTransform.anchorMin = Vector2.zero;
                 location.RectTransform.anchorMax = Vector2.one;
                 location.RectTransform.offsetMin = Vector2.zero;

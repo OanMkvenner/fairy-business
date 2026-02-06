@@ -4,6 +4,7 @@ using HelperClasses;
 using Player;
 using UI.Menu.BaseMenu;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Locations
 {
@@ -20,6 +21,7 @@ namespace Locations
         [Header("GameField")]
         [SerializeField] private Transform gameFieldParent;
         [SerializeField] private PlayerLine[] lines = new PlayerLine[3];
+        [SerializeField] private List<Sprite> artefactsSprites = new();
 
         private readonly List<LocationDefinition> allAvailableLocations = new List<LocationDefinition>();
         private LocationAnimation locationAnimation;
@@ -106,6 +108,9 @@ namespace Locations
             }
         }
 
+        /// <summary>
+        /// Start the movement animation of the locations.
+        /// </summary>
         public void UpdateLocationAnimation()
         {
             if(locationAnimation == null)
@@ -122,14 +127,20 @@ namespace Locations
             GameLocations[0].AddPlayerPower(PlayerColor.Blue, 5);
             GameLocations[0].AddPlayerPower(PlayerColor.Red, 3);
             GameLocations[0].FinalizePowerAndDetermineWinner();
+            GameLocations[0].Artfecat.SetActive(true);
+            GameLocations[0].Artfecat.GetComponent<Image>().sprite = artefactsSprites[0];
             
             GameLocations[1].AddPlayerPower(PlayerColor.Red, 5);
             GameLocations[1].AddPlayerPower(PlayerColor.Blue, 3);
             GameLocations[1].FinalizePowerAndDetermineWinner();
+            GameLocations[1].Artfecat.SetActive(true);
+            GameLocations[1].Artfecat.GetComponent<Image>().sprite = artefactsSprites[1];
 
             GameLocations[2].AddPlayerPower(PlayerColor.Blue, 4);
             GameLocations[2].AddPlayerPower(PlayerColor.Red, 4);
             GameLocations[2].FinalizePowerAndDetermineWinner();
+            GameLocations[2].Artfecat.SetActive(true);
+            GameLocations[2].Artfecat.GetComponent<Image>().sprite = artefactsSprites[2];
         }
 
         private void SetUpLocations()

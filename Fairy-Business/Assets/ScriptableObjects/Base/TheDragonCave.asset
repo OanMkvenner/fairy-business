@@ -16,9 +16,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 8966533610919338238, guid: 5c016dcd0793b804a80efd3c44091394,
     type: 3}
-  locationType: 4
+  LocationIdentifier: 4
+  ModeIdentifier: 1
   VictoryPoints: 1
-  keyword: Victory per Point Bonus
   localizationDescriptionText: locationDescription_DragonCave
   localizationTitleText: locationTitle_DragonCave
   localizationKeywordText: locationKeyword_DragonCave

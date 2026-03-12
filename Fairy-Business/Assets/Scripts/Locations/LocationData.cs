@@ -7,10 +7,11 @@ namespace Locations
     {
         public Sprite imageEnabled;
         public Sprite imageDisabled;
-        public LocationsType locationType;
+        public LocationsIdentifier LocationIdentifier;
+        public ModeIdentifier ModeIdentifier;
         public int VictoryPoints;
 
-        //Localized Strings
+        [Header("Localizations")]
         public string localizationDescriptionText;
         public string localizationTitleText;
         public string localizationKeywordText;

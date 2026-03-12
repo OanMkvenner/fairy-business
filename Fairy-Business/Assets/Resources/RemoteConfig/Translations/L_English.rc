@@ -42,11 +42,13 @@
       "locationDescription_Castle":"Solid Office: Increase hand size by 1.",
       "locationDescription_PirateShip":"Aggressive tactics: your (-) cards have 1 extra strength.",
       "locationDescription_GingerbreadHouse":"Sweet dreams: You win all ties.",
-      "locationDescription_BottomOfTheSea":"Under the sea: Each time you should reduce opponent control below 0 gain 2 VP.",
+      "locationDescription_BottomOfTheSea":"Increase hand size by 1 (complete to 5 cards instead of 4).",
       "locationDescription_HauntedHouse":"Scary documents! After counting phase opponents discards a random card from hand.",
       "locationDescription_ThroughTheMirror":"We see you: Your (-) cards have half value (round-up) but target all locations.",
       "locationDescription_DragonCave":"Incredible wealth: gain 1 additional VP each round you hold this location.",
       "locationDescription_MagicLibrary":"Back from the grave: after counting phase draw back a card from your discard.",
+      
+      "locationDescriptionExpert_BottomOfTheSea":"Under the sea: Each time you should reduce opponent control below 0 gain 2 VP.",
       
       "locationKeyword_EnchantedForest":"(+) cards bonus",
       "locationKeyword_Caste":"hand size bonus",

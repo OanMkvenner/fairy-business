@@ -16,9 +16,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -5646780793612857680, guid: 8acceb10e503ef54a8c5c0662bac24d7,
     type: 3}
-  locationType: 5
+  LocationIdentifier: 5
+  ModeIdentifier: 1
   VictoryPoints: 3
-  keyword: Win Tie Bonus
   localizationDescriptionText: locationDescription_GingerbreadHouse
   localizationTitleText: locationTitle_GingerbreadHouse
   localizationKeywordText: locationKeyword_GingerbreadHouse

@@ -16,9 +16,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -8476587477302908971, guid: e872d46d9ebd1794295ab81fe54df289,
     type: 3}
-  locationType: 8
+  LocationIdentifier: 8
+  ModeIdentifier: 0
   VictoryPoints: 2
-  keyword: (-) target all Bonus
   localizationDescriptionText: locationDescription_ThroughTheMirror
   localizationTitleText: locationTitle_ThroughTheMirror
   localizationKeywordText: locationKeyword_ThroughTheMirror

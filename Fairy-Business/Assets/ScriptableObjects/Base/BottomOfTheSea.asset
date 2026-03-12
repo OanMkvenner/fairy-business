@@ -16,9 +16,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -5121769818918040099, guid: 8c8df489bc7ef314b9ba9120239c6f16,
     type: 3}
-  locationType: 7
-  VictoryPoints: 2
-  keyword: Below 0 Bonus
-  localizationDescriptionText: locationDescription_BottomOfTheSea
+  LocationIdentifier: 7
+  ModeIdentifier: 2
+  VictoryPoints: 3
+  localizationDescriptionText: locationDescriptioneExpert_BottomOfTheSea
   localizationTitleText: locationTitle_BottomOfTheSea
   localizationKeywordText: locationKeyword_BottomOfTheSea

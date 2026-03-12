@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
+  m_Name: Castle
+  m_EditorClassIdentifier: 
+  imageEnabled: {fileID: -5119980863986964875, guid: 76f9b3c8e3177dd49890c8fb8f269f36,
+    type: 3}
+  imageDisabled: {fileID: -7603078470868985032, guid: 379f5daf8f31a754c8c90057d6faad57,
+    type: 3}
+  LocationIdentifier: 3
+  ModeIdentifier: 1
+  VictoryPoints: 4
+  localizationDescriptionText: locationDescription_Castle
+  localizationTitleText: locationTitle_Castle
+  localizationKeywordText: locationKeyword_Castle

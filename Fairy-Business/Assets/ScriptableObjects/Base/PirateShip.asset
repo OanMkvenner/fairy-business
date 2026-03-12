@@ -16,9 +16,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 3874881954196515463, guid: 28a56cff40ff5074eb8f2cd1e944814d,
     type: 3}
-  locationType: 1
+  LocationIdentifier: 1
+  ModeIdentifier: 1
   VictoryPoints: 2
-  keyword: (-) Card Bonus
   localizationDescriptionText: locationDescription_PirateShip
   localizationTitleText: locationTitle_PirateShip
   localizationKeywordText: locationKeyword_PirateShip

@@ -15,7 +15,7 @@ namespace Locations
     {
         public static event Action<PlayerColor, LocationDefinition> OnNewPowerAddedEvent;
         public static event Action<LocationDefinition> OnCurrentOwnerChangedEvent;
-        public LocationsType LocationType => LocationData.locationType;
+        public LocationsIdentifier LocationIdentifier => LocationData.LocationIdentifier;
         public int VictoryPoints => LocationData.VictoryPoints;
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }

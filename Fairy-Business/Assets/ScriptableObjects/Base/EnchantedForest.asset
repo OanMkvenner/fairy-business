@@ -16,9 +16,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 8691972669833271309, guid: 3dc69dc47159aef418903aa785930076,
     type: 3}
-  locationType: 2
+  LocationIdentifier: 2
+  ModeIdentifier: 1
   VictoryPoints: 2
-  keyword: (+) Card Bonus
   localizationDescriptionText: locationDescription_EnchantedForest
   localizationTitleText: locationTitle_EnchantedForest
   localizationKeywordText: locationKeyword_EnchantedForest

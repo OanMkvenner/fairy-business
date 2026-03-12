@@ -16,9 +16,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 4189789340174923025, guid: 731c868b0aabb62448cf0f22f1b90dbc,
     type: 3}
-  locationType: 6
+  LocationIdentifier: 6
+  ModeIdentifier: 1
   VictoryPoints: 2
-  keyword: Discard Bonus
   localizationDescriptionText: locationDescription_HauntedHouse
   localizationTitleText: locationTitle_HauntedHouse
   localizationKeywordText: locationKeyword_HauntedHouse

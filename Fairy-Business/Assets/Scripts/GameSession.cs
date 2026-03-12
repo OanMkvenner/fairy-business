@@ -98,12 +98,12 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         NextTurn(); 
     }
 
-    private PlayerColor CheckLocationOwner(LocationsType location){
+    private PlayerColor CheckLocationOwner(LocationsIdentifier location){
         
         PlayerColor currentMarketOwner = PlayerColor.Neutral;
         
         foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
-            if (loc.LocationType == location){
+            if (loc.LocationIdentifier == location){
                 currentMarketOwner = loc.CurrentOwner;
             }
         }
@@ -115,11 +115,11 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         
         foreach (LocationDefinition loc in LocationManager.instance.GameLocations)
         {
-            if (loc.LocationType != LocationsType.GingerbreadHouse)
+            if (loc.LocationIdentifier != LocationsIdentifier.GingerbreadHouse)
                 continue;
             
             // on tie, whoever currently owns the special place becomes the new owner! (if its part of the current match, otherwise its Neutral)
-            PlayerColor tieLocationOwner = CheckLocationOwner(LocationsType.GingerbreadHouse);
+            PlayerColor tieLocationOwner = CheckLocationOwner(LocationsIdentifier.GingerbreadHouse);
             loc.CurrentOwner = tieLocationOwner;
             
         }
@@ -313,7 +313,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     {
         // ---------- POLITICS ----------
         // Check who owns the Enchanted Forest (politics modifier location)
-        PlayerColor marketOwner = CheckLocationOwner(LocationsType.EnchantedForest);
+        PlayerColor marketOwner = CheckLocationOwner(LocationsIdentifier.EnchantedForest);
 
         foreach (var actingPlayer in playerColors)
         {
@@ -340,9 +340,9 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
         // ---------- ARMY ----------
         // Location-based modifiers for Army actions
-        PlayerColor sourceOwner = CheckLocationOwner(LocationsType.PirateShip);          // +1 attack
-        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsType.ThroughTheMirror); // Attack all locations at half strength
-        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsType.BottomOfTheSea);      // Gain VP when enemy drops below 0
+        PlayerColor sourceOwner = CheckLocationOwner(LocationsIdentifier.PirateShip);          // +1 attack
+        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror); // Attack all locations at half strength
+        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsIdentifier.BottomOfTheSea);      // Gain VP when enemy drops below 0
 
         foreach (PlayerColor actingPlayer in playerColors)
         {
@@ -469,7 +469,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         
         foreach (LocationDefinition loc in LocationManager.instance.GameLocations)
         {
-            if (loc.LocationType != LocationsType.DragonCave) continue;
+            if (loc.LocationIdentifier != LocationsIdentifier.DragonCave) continue;
             
             if (loc.CurrentOwner != PlayerColor.Neutral){
                     

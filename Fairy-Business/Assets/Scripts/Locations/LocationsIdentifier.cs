@@ -1,8 +1,8 @@
 namespace Locations
 {
-    public enum LocationsType
+    public enum LocationsIdentifier : byte
     {
-        Invalid = -1,
+        None = 0,
         PirateShip = 1,
         EnchantedForest = 2,
         Castle = 3,

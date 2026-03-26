@@ -17,6 +17,10 @@ namespace Locations
         public static event Action<LocationDefinition> OnCurrentOwnerChangedEvent;
         public LocationsIdentifier LocationIdentifier => LocationData.LocationIdentifier;
         public int VictoryPoints => LocationData.VictoryPoints;
+        public int LocationPriority => LocationData.LocationPrio;
+        
+        public bool AreVictoryPointsApplied { get; set; }
+        public bool IsEffectApplied { get; set; }
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }
         public RectTransform RectTransform { get; private set; }
@@ -54,7 +58,6 @@ namespace Locations
         public PlayerColor LastOwner { get; private set; }
 
         public List<LocationHoverButton> LocationHoverButtons => locationHoverButtons;
-
         [field: SerializeField] public GameObject Artfecat { get; set; }
 
         [SerializeField] private TextMeshProUGUI description;
@@ -134,6 +137,7 @@ namespace Locations
         public void SetPlayerPower(PlayerColor playerIdx, int newPower)
         {
             power[playerIdx] = Math.Max(0, newPower);
+            OnNewPowerAddedEvent?.Invoke(playerIdx, this);
         }
 
         /// <summary>

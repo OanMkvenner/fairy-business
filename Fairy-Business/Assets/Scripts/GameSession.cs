@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using ComponentsHYBR.Utilities;
 using TMPro;
 using UnityEngine;
@@ -448,6 +449,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
                 // Award victory points to the acting player
                 victoryPointCounters[actingPlayer] += victoryPoints;
+                
+                UpdateVictoryPointDisplay();
             }
         }
 
@@ -533,7 +536,16 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         if (turnCounter == 1 && roundCounter > 1){
             // apply owned territory points to main score
             
-            foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
+            List<LocationDefinition> gameLocations = LocationManager.instance.GameLocations.OrderBy
+                (p => p.LocationPriority).ToList();
+            
+            foreach (LocationDefinition loc in gameLocations){
+                
+                if(!loc.AreVictoryPointsApplied)
+                {
+                    AddVictoryPointsByPlayer(loc.CurrentOwner, loc.VictoryPoints);
+                    loc.AreVictoryPointsApplied = true;
+                }
 
                 switch (loc.LocationIdentifier)
                 {
@@ -541,7 +553,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     {
                         Random rnd = new Random();
 
-                        int randomVp = rnd.Next(1, 6);
+                        int randomVp = rnd.Next(1, 7);
                         
                         AddVictoryPointsByPlayer(loc.CurrentOwner, randomVp);
                         break;
@@ -576,10 +588,17 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         AddVictoryPointsByPlayer(loc.CurrentOwner, 8);
                         AddVictoryPointsByPlayer(loc.LastOwner, -8);
                         break;
-                    }
-                    default:
+                        
+                    }case LocationsIdentifier.CastleExpert:
                     {
-                        AddVictoryPointsByPlayer(loc.CurrentOwner, loc.VictoryPoints);
+                        foreach (LocationDefinition location in gameLocations)
+                        {
+                            if (loc.CurrentOwner == location.CurrentOwner)
+                            {
+                                AddVictoryPointsByPlayer(loc.CurrentOwner, location.VictoryPoints * 2);
+                                location.AreVictoryPointsApplied = true;
+                            }
+                        }
                         break;
                     }
                 }

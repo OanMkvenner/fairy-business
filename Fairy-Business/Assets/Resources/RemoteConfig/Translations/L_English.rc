@@ -58,7 +58,7 @@
       "locationDescription_HauntedHouse":"Scary documents! After counting phase opponents discards a random card from hand.",
       "locationDescription_ThroughTheMirror":"We see you: Your (-) cards have half value (round-up) but target all locations.",
       "locationDescription_DragonCave":"Incredible wealth: gain 1 additional VP each round you hold this location.",
-      "locationDescription_MagicLibrary":"Back from the grave: after counting phase draw back a card from your discard.",
+      "locationDescription_MagicLibrary":"Once owned gain 8 victory points, once lost loose 8 victory points.",
       
       
       //part of them are new
@@ -80,7 +80,7 @@
       "locationKeyword_HauntedHouse":"Discard",
       "locationKeyword_ThroughTheMirror":"(-) card target all",
       "locationKeyword_DragonCave":"Victory per round",
-      "locationKeyword_MagicLibrary":"Draw from discard",
+      "locationKeyword_MagicLibrary":"+8 VP",
       
       "locationKeywordExpert_EnchantedForest":"Reduce",
       "locationKeywordExpert_Caste":"x2 VP/Count",

@@ -29,15 +29,29 @@ namespace Locations
                 if (currentOwner == value)
                     return;
 
+                // save last owner
+                LastOwner = currentOwner;
+
                 currentOwner = value;
                 
                 //Commented out bc of artefacts now moving and not locations anymore
                 //locationImage.sprite = currentOwner == PlayerColor.Neutral ? imageDisabled : imageEnabled;
-                locationImage.sprite = imageEnabled;
+                
+                if(currentOwner != PlayerColor.Neutral)
+                {
+                    locationImage.sprite = imageEnabled;
+                }
+                else
+                {
+                    locationImage.sprite = imageDisabled;
+                }
+
 
                 OnCurrentOwnerChangedEvent?.Invoke(this);
             }
         }
+        
+        public PlayerColor LastOwner { get; private set; }
 
         public List<LocationHoverButton> LocationHoverButtons => locationHoverButtons;
 

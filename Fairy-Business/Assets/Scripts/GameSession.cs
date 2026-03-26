@@ -555,6 +555,28 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         }
                         break;
                     }
+                    case LocationsIdentifier.MagicLibrary:
+                    {
+                        if (loc.LastOwner == loc.CurrentOwner)
+                        {
+                            AddVictoryPointsByPlayer(loc.CurrentOwner, 8);
+                            break;
+                        }
+
+                        if (loc.LastOwner != PlayerColor.Neutral)
+                        {
+                            //special case bc of first round, bc there is no "last owner"
+                            if (roundCounter == 2)
+                            {
+                                AddVictoryPointsByPlayer(loc.CurrentOwner, 8);
+                                break;
+                            }
+                        }
+                      
+                        AddVictoryPointsByPlayer(loc.CurrentOwner, 8);
+                        AddVictoryPointsByPlayer(loc.LastOwner, -8);
+                        break;
+                    }
                     default:
                     {
                         AddVictoryPointsByPlayer(loc.CurrentOwner, loc.VictoryPoints);

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
+  m_Name: TheDragonCaveExpert
+  m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
+  imageEnabled: {fileID: 6714369015438526544, guid: 3d2f6423df837bd4a916a6f51ec1a9eb,
+    type: 3}
+  imageDisabled: {fileID: 8966533610919338238, guid: 5c016dcd0793b804a80efd3c44091394,
+    type: 3}
+  LocationIdentifier: 13
+  ModeIdentifier: 2
+  VictoryPoints: 1
+  localizationDescriptionText: locationDescriptionExpert_DragonCave
+  localizationTitleText: locationTitleExpert_DragonCave
+  localizationKeywordText: locationKeywordExpert_DragonCave

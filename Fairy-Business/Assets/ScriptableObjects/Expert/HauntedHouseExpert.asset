@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
+  m_Name: HauntedHouseExpert
+  m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
+  imageEnabled: {fileID: -4501777901585999426, guid: d685372966e69b34699e9a866b876663,
+    type: 3}
+  imageDisabled: {fileID: 4189789340174923025, guid: 731c868b0aabb62448cf0f22f1b90dbc,
+    type: 3}
+  LocationIdentifier: 15
+  ModeIdentifier: 2
+  VictoryPoints: 4
+  localizationDescriptionText: locationDescriptionExpert_HauntedHouse
+  localizationTitleText: locationTitleExpert_HauntedHouse
+  localizationKeywordText: locationKeywordExpert_HauntedHouse

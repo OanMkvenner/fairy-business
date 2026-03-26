@@ -38,6 +38,18 @@
       "locationTitle_DragonCave":"Dragon Cave",
       "locationTitle_MagicLibrary":"Magic Library",
       
+      "locationTitleExpert_EnchantedForest":"Enchanted Forest Expert",
+      "locationTitleExpert_Castle":"Castle Expert",
+      "locationTitleExpert_PirateShip":"Pirate Ship Expert",
+      "locationTitleExpert_GingerbreadHouse":"Gingerbread House Expert",
+      "locationTitleExpert_BottomOfTheSea":"Bottom of the sea Expert",
+      "locationTitleExpert_HauntedHouse":"Haunted House Expert",
+      "locationTitleExpert_ThroughTheMirror":"Through the mirror Expert",
+      "locationTitleExpert_DragonCave":"Dragon Cave Expert",
+      "locationTitleExpert_MagicLibrary":"Magic Library Expert",
+      
+      
+      //old description important for keeping track
       "locationDescription_EnchantedForest":"Magic Market: Your (+) cards have 1 extra strength.",
       "locationDescription_Castle":"Solid Office: Increase hand size by 1.",
       "locationDescription_PirateShip":"Aggressive tactics: your (-) cards have 1 extra strength.",
@@ -48,7 +60,17 @@
       "locationDescription_DragonCave":"Incredible wealth: gain 1 additional VP each round you hold this location.",
       "locationDescription_MagicLibrary":"Back from the grave: after counting phase draw back a card from your discard.",
       
+      
+      //part of them are new
+      "locationDescriptionExpert_EnchantedForest":"Divide per 2 victory point when opponent cash-in!",
+      "locationDescriptionExpert_Castle":"During counting phase your other locations victory points are doubled.",
+      "locationDescriptionExpert_PirateShip":"Your (-) cards have half value (round-up) but target all locations.",
+      "locationDescriptionExpert_GingerbreadHouse":"All your (-) cards are changed to (+).",
       "locationDescriptionExpert_BottomOfTheSea":"Under the sea: Each time you should reduce opponent control below 0 gain 2 VP.",
+      "locationDescriptionExpert_HauntedHouse":"Draw from discard/counting.",
+      "locationDescriptionExpert_ThroughTheMirror":"During counting phase victory point gain is in between 1 and 6.",
+      "locationDescriptionExpert_DragonCave":"Each round steal 1 victory point, if you have less.",
+      "locationDescriptionExpert_MagicLibrary":"Your (+/-) 3 cards become (+/-) 5 cards.",
       
       "locationKeyword_EnchantedForest":"(+) cards bonus",
       "locationKeyword_Caste":"hand size bonus",
@@ -59,6 +81,16 @@
       "locationKeyword_ThroughTheMirror":"(-) card target all",
       "locationKeyword_DragonCave":"Victory per round",
       "locationKeyword_MagicLibrary":"Draw from discard",
+      
+      "locationKeywordExpert_EnchantedForest":"Reduce",
+      "locationKeywordExpert_Caste":"x2 VP/Count",
+      "locationKeywordExpert_PirateShip":"(-) card target all",
+      "locationKeywordExpert_GingerbreadHouse":"All (-) = (+)",
+      "locationKeywordExpert_BottomOfTheSea":"Below 0 bonus",
+      "locationKeywordExpert_HauntedHouse":"Draw from discard/counting",
+      "locationKeywordExpert_ThroughTheMirror":"Random VP",
+      "locationKeywordExpert_DragonCave":"Steal VP",
+      "locationKeywordExpert_MagicLibrary":"3=5",
      
       
     }

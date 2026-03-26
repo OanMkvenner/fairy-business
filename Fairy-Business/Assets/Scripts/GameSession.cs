@@ -313,9 +313,9 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     {
         // ---------- POLITICS ----------
         // Check who owns the Enchanted Forest (politics modifier location)
-        PlayerColor marketOwner = CheckLocationOwner(LocationsIdentifier.EnchantedForest);
+        PlayerColor enchantedForestOwner = CheckLocationOwner(LocationsIdentifier.EnchantedForest);
 
-        foreach (var actingPlayer in playerColors)
+        foreach (PlayerColor actingPlayer in playerColors)
         {
             // Only resolve players who played a Politics card
             if (turnActions[actingPlayer].CardAction == CardAction.Politics)
@@ -324,7 +324,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
 
                 // Gain +1 power if the acting player owns the Enchanted Forest
-                int politicsMod = marketOwner == actingPlayer ? 1 : 0;
+                int politicsMod = enchantedForestOwner == actingPlayer ? 1 : 0;
 
                 // Add power to the targeted location
                 LocationManager.instance

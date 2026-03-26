@@ -20,5 +20,5 @@ MonoBehaviour:
   ModeIdentifier: 2
   VictoryPoints: 3
   localizationDescriptionText: locationDescriptioneExpert_BottomOfTheSea
-  localizationTitleText: locationTitle_BottomOfTheSea
-  localizationKeywordText: locationKeyword_BottomOfTheSea
+  localizationTitleText: locationTitleExpert_BottomOfTheSea
+  localizationKeywordText: locationKeywordExpert_BottomOfTheSea

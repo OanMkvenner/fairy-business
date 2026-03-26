@@ -343,7 +343,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // ---------- ARMY ----------
         // Location-based modifiers for Army actions
         PlayerColor sourceOwner = CheckLocationOwner(LocationsIdentifier.PirateShip);          // +1 attack
-        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror); // Attack all locations at half strength
+        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsIdentifier.PirateShipExpert); // Attack all locations at half strength
         PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsIdentifier.BottomOfTheSeaExpert);      // Gain VP when enemy drops below 0
 
         foreach (PlayerColor actingPlayer in playerColors)
@@ -411,6 +411,15 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             if (turnActions[actingPlayer].CardAction == CardAction.War)
             {
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+                
+                PlayerColor throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
+                
+                //if player is the owner of through the mirror location and plays WAR card -> gains 2VP
+                if(throughTheMirror == actingPlayer)
+                {
+                    victoryPointCounters[actingPlayer] += 2;
+                    UpdateVictoryPointDisplay();
+                }
 
                 // War is cancelled if the enemy played Peace at the same location
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber ||
@@ -432,6 +441,15 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 continue;
 
             PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+            
+            PlayerColor throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
+            
+            //if player is the owner of through the mirror location and plays PEACE card -> gains 2VP
+            if(throughTheMirror == actingPlayer)
+            {
+                victoryPointCounters[actingPlayer] += 2;
+                UpdateVictoryPointDisplay();
+            }
 
             // Peace is cancelled if the enemy played War at the same location
             if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber ||

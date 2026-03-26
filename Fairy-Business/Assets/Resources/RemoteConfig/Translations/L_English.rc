@@ -56,15 +56,13 @@
       "locationDescription_GingerbreadHouse":"Sweet dreams: You win all ties.",
       "locationDescription_BottomOfTheSea":"Increase hand size by 1 (complete to 5 cards instead of 4).",
       "locationDescription_HauntedHouse":"Scary documents! After counting phase opponents discards a random card from hand.",
-      "locationDescription_ThroughTheMirror":"We see you: Your (-) cards have half value (round-up) but target all locations.",
+      "locationDescription_ThroughTheMirror":"Gain 2 victory points when you use a special card (cash in or take over).",
       "locationDescription_DragonCave":"Incredible wealth: gain 1 additional VP each round you hold this location.",
       "locationDescription_MagicLibrary":"Once owned gain 8 victory points, once lost loose 8 victory points.",
       
-      
-      //part of them are new
       "locationDescriptionExpert_EnchantedForest":"Divide per 2 victory point when opponent cash-in!",
       "locationDescriptionExpert_Castle":"During counting phase your other locations victory points are doubled.",
-      "locationDescriptionExpert_PirateShip":"Your (-) cards have half value (round-up) but target all locations.",
+      "locationDescriptionExpert_PirateShip":"We see you: Your (-) cards have half value (round-up) but target all locations.",
       "locationDescriptionExpert_GingerbreadHouse":"All your (-) cards are changed to (+).",
       "locationDescriptionExpert_BottomOfTheSea":"Under the sea: Each time you should reduce opponent control below 0 gain 2 VP.",
       "locationDescriptionExpert_HauntedHouse":"Draw from discard/counting.",
@@ -78,7 +76,7 @@
       "locationKeyword_GingerbreadHouse":"Win Tie",
       "locationKeyword_BottomOfTheSea":"hand size bonus",
       "locationKeyword_HauntedHouse":"Discard",
-      "locationKeyword_ThroughTheMirror":"(-) card target all",
+      "locationKeyword_ThroughTheMirror":"special card VP bonus",
       "locationKeyword_DragonCave":"Victory per round",
       "locationKeyword_MagicLibrary":"+8 VP",
       

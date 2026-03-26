@@ -13,6 +13,7 @@ using UI;
 using UI.Gameplay;
 using UI.Menu;
 using UI.Menu.BaseMenu;
+using Random = System.Random;
 
 public enum ScanAction
 {
@@ -33,7 +34,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     public Dictionary<PlayerColor, int> VictoryPointCounters
     {
         get => victoryPointCounters;
-        set => victoryPointCounters = value;
+        private set => victoryPointCounters = value;
     }
 
     [SerializeField] private int maxRoundCount;
@@ -342,7 +343,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // Location-based modifiers for Army actions
         PlayerColor sourceOwner = CheckLocationOwner(LocationsIdentifier.PirateShip);          // +1 attack
         PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror); // Attack all locations at half strength
-        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsIdentifier.BottomOfTheSea);      // Gain VP when enemy drops below 0
+        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsIdentifier.BottomOfTheSeaExpert);      // Gain VP when enemy drops below 0
 
         foreach (PlayerColor actingPlayer in playerColors)
         {
@@ -533,7 +534,34 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             // apply owned territory points to main score
             
             foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
-                AddVictoryPointsByPlayer(loc.CurrentOwner, loc.VictoryPoints);
+
+                switch (loc.LocationIdentifier)
+                {
+                    case LocationsIdentifier.ThroughTheMirrorExpert:
+                    {
+                        Random rnd = new Random();
+
+                        int randomVp = rnd.Next(1, 6);
+                        
+                        AddVictoryPointsByPlayer(loc.CurrentOwner, randomVp);
+                        break;
+                    }
+                    case LocationsIdentifier.DragonCaveExpert:
+                    {
+                        if (victoryPointCounters[loc.CurrentOwner] < victoryPointCounters[GetEnemy(loc.CurrentOwner)])
+                        {
+                            victoryPointCounters[loc.CurrentOwner]++;
+                            victoryPointCounters[GetEnemy(loc.CurrentOwner)]--;
+                        }
+                        break;
+                    }
+                    default:
+                    {
+                        AddVictoryPointsByPlayer(loc.CurrentOwner, loc.VictoryPoints);
+                        break;
+                    }
+                }
+                
             }
             
             UpdateVictoryPointDisplay();

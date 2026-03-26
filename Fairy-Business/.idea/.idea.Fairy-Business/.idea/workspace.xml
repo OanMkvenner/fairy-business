@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,10 +105,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5036">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="27808">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="5036" />
+      <option name="pid" value="27808" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -170,7 +169,7 @@
       <workItem from="1767002738153" duration="4558000" />
       <workItem from="1770369133748" duration="4058000" />
       <workItem from="1773318216889" duration="2327000" />
-      <workItem from="1774520662399" duration="16309000" />
+      <workItem from="1774520662399" duration="19204000" />
     </task>
     <servers />
   </component>
@@ -198,5 +197,63 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>455</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
+            <startOffsets>
+              <option value="16337" />
+            </startOffsets>
+            <endOffsets>
+              <option value="16541" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>459</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
+            <startOffsets>
+              <option value="16634" />
+            </startOffsets>
+            <endOffsets>
+              <option value="16654" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>445</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
+            <startOffsets>
+              <option value="15924" />
+            </startOffsets>
+            <endOffsets>
+              <option value="16027" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>447</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
+            <startOffsets>
+              <option value="16041" />
+            </startOffsets>
+            <endOffsets>
+              <option value="16070" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

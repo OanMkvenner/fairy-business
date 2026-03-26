@@ -443,17 +443,21 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             PlayerColor enemyPlayer = GetEnemy(actingPlayer);
             
             PlayerColor throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
+            PlayerColor enemyEnchantedForestExpert = CheckLocationOwner(LocationsIdentifier.EnchantedForestExpert);
+
+            int additionalPeacePower = 0;
             
-            //if player is the owner of through the mirror location and plays PEACE card -> gains 2VP
+            //if player is the owner of through the mirror location and plays PEACE/CASHIN card -> gains 2VP
             if(throughTheMirror == actingPlayer)
             {
-                victoryPointCounters[actingPlayer] += 2;
-                UpdateVictoryPointDisplay();
+                additionalPeacePower = 2;
             }
+            
+            bool isPeaceBlocked = (turnLocations[enemyPlayer].locationNumber == turnLocations[actingPlayer].locationNumber &&
+                                   turnActions[enemyPlayer].CardAction == CardAction.War);
 
             // Peace is cancelled if the enemy played War at the same location
-            if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber ||
-                turnActions[enemyPlayer].CardAction != CardAction.War)
+            if (!isPeaceBlocked)
             {
                 // Convert current control at the location into victory points
                 int victoryPoints = LocationManager.instance
@@ -464,9 +468,16 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 LocationManager.instance
                     .GameLocations[turnLocations[actingPlayer].locationNumber]
                     .SetPlayerPower(actingPlayer, 0);
+                
+                int peacePower = victoryPoints + additionalPeacePower;
+
+                if (enemyEnchantedForestExpert != actingPlayer && enemyEnchantedForestExpert != PlayerColor.Neutral)
+                {
+                    peacePower /= 2;
+                }
 
                 // Award victory points to the acting player
-                victoryPointCounters[actingPlayer] += victoryPoints;
+                victoryPointCounters[actingPlayer] += peacePower;
                 
                 UpdateVictoryPointDisplay();
             }

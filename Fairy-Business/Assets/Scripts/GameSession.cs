@@ -311,11 +311,17 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     /// Army, War, and Peace. Applies location modifiers, updates control values, awards victory points,
     /// resolves territory ownership, triggers end-of-turn effects, checks end game conditions, and advances to the next turn.
     /// </summary>
+    /// <remarks>I want to distance myself from this method, but that's what happens when you are not allowed to refactor.</remarks>
     private void SolveTurn()
     {
         // ---------- POLITICS (Plus) ----------
-        // Check who owns the Enchanted Forest (politics modifier location)
+        // Politics actions increase the acting player's power on a chosen location.
+        // Some locations provide special modifiers (e.g. bonus power or card upgrade).
+
+        // Check who owns the Enchanted Forest (gives +1 power on Politics actions)
         PlayerColor enchantedForestOwner = CheckLocationOwner(LocationsIdentifier.EnchantedForest);
+
+        // Check who owns the Magic Library Expert (upgrades a value 3 card into value 5)
         PlayerColor magicLibraryExpert = CheckLocationOwner(LocationsIdentifier.MagicLibraryExpert);
 
         foreach (PlayerColor actingPlayer in playerColors)
@@ -323,6 +329,9 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             // Only resolve players who played a Politics card
             if (turnActions[actingPlayer].CardAction == CardAction.Politics)
             {
+                // Magic Library Expert effect:
+                // If the acting player owns the Magic Library Expert location and played a value 3 card,
+                // the card is upgraded to value 5.
                 if (actingPlayer == magicLibraryExpert)
                 {
                     if (turnActions[actingPlayer].value == 3)
@@ -330,37 +339,50 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         turnActions[actingPlayer].value = 5;
                     }
                 }
-                
-                // Gain +1 power if the acting player owns the Enchanted Forest
+
+                // Enchanted Forest modifier:
+                // Gain +1 extra power if the acting player owns the Enchanted Forest.
                 int politicsMod = enchantedForestOwner == actingPlayer ? 1 : 0;
 
-                // Add power to the targeted location
+                // Add power to the selected location for the acting player
                 LocationManager.instance
                     .GameLocations[turnLocations[actingPlayer].locationNumber]
                     .AddPlayerPower(actingPlayer, turnActions[actingPlayer].value + politicsMod);
 
-                // Recalculate control and determine the new winner of the location
+                // Update the location state:
+                // Recalculate power totals and determine which player controls the location now.
                 LocationManager.instance
                     .GameLocations[turnLocations[actingPlayer].locationNumber]
                     .FinalizePowerAndDetermineWinner();
             }
         }
 
-        // ---------- ARMY (Minus)----------
-        // Location-based modifiers for Army actions
-        PlayerColor sourceOwner = CheckLocationOwner(LocationsIdentifier.PirateShip);          // +1 attack
-        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsIdentifier.PirateShipExpert); // Attack all locations at half strength
-        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsIdentifier.BottomOfTheSeaExpert);      // Gain VP when enemy drops below 0
-        PlayerColor gingerbreadExpert = CheckLocationOwner(LocationsIdentifier.GingerbreadHouseExpert); // all (-) turn into (+)
+        // ---------- ARMY (Minus) ----------
+        // Army actions reduce the enemy player's power at one or more locations.
+        // Several locations modify the way attacks work (bonus attack, attack all locations, etc.).
+
+        // Pirate Ship gives +1 attack power
+        PlayerColor sourceOwner = CheckLocationOwner(LocationsIdentifier.PirateShip);
+
+        // Pirate Ship Expert makes Army attack all locations at half strength
+        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsIdentifier.PirateShipExpert);
+
+        // Bottom of the Sea Expert awards VP when the enemy drops below 0
+        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsIdentifier.BottomOfTheSeaExpert);
+
+        // Gingerbread House Expert converts Army (-) actions into Politics (+) actions
+        PlayerColor gingerbreadExpert = CheckLocationOwner(LocationsIdentifier.GingerbreadHouseExpert);
 
         foreach (PlayerColor actingPlayer in playerColors)
         {
             // Only resolve players who played an Army card
             if (turnActions[actingPlayer].CardAction == CardAction.Army)
             {
-                // Get the opposing player
+                // Get the enemy player
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
-                
+
+                // Magic Library Expert effect:
+                // Upgrades a value 3 card into value 5.
                 if (actingPlayer == magicLibraryExpert)
                 {
                     if (turnActions[actingPlayer].value == 3)
@@ -369,19 +391,22 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     }
                 }
 
-                // Gain +1 attack if the acting player owns the Pirate Ship
+                // Pirate Ship modifier:
+                // Gain +1 attack value if the acting player owns the Pirate Ship.
                 int armyMod = sourceOwner == actingPlayer ? 1 : 0;
 
-                // Minimum allowed control value (usually 0)
+                // Minimum allowed control value (usually 0 in this game)
+                // Used to determine if "below 0" logic is allowed.
                 int minControlNumber = 0;
 
-                // Default: attack only the selected location
+                // Default behavior: attack only the selected location
                 int[] attackedLocationNumbers = new int[] { turnLocations[actingPlayer].locationNumber };
 
-                // Base attack value including modifiers
+                // Attack value is based on card value + possible modifiers
                 int attackValue = turnActions[actingPlayer].value + armyMod;
 
-                // If the player owns Through the Mirror, attack all locations at half strength
+                // Pirate Ship Expert effect:
+                // Attack ALL locations but only with half the attack strength.
                 if (WeakAttackOnAllOwner == actingPlayer)
                 {
                     attackedLocationNumbers = allLocationNumbers;
@@ -394,38 +419,44 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     LocationDefinition attackedLocation =
                         LocationManager.instance.GameLocations[attackedLocationNumber];
 
-                    // Current enemy control before the attack
+                    // Current enemy power before the attack
                     int currentEnemyControlValue = attackedLocation.GetPlayerPower(enemyPlayer);
 
-                    // Theoretical control value after the attack (before clamping)
+                    // Calculate what the enemy control value would become after the attack
+                    // (without clamping to minimum values yet)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
 
+                    // Gingerbread House Expert effect:
+                    // Instead of attacking, the Army card is treated like a Politics card
+                    // and adds power to the acting player's selected location.
                     if (actingPlayer == gingerbreadExpert)
                     {
-                        // Gain +1 power if the acting player owns the Enchanted Forest
+                        // Apply Enchanted Forest bonus if applicable
                         int politicsMod = enchantedForestOwner == actingPlayer ? 1 : 0;
 
                         // Add power to the targeted location
                         LocationManager.instance
                             .GameLocations[turnLocations[actingPlayer].locationNumber]
                             .AddPlayerPower(actingPlayer, turnActions[actingPlayer].value + politicsMod);
-                        
-                        // Recalculate control and determine the new winner of the location
+
+                        // Recalculate power totals and determine new controller
                         LocationManager.instance
                             .GameLocations[turnLocations[actingPlayer].locationNumber]
                             .FinalizePowerAndDetermineWinner();
                     }
                     else
                     {
-                        // Reduce enemy power at the location
+                        // Standard Army effect:
+                        // Reduce enemy power at the attacked location.
                         attackedLocation.AddPlayerPower(enemyPlayer, -attackValue);
                     }
 
-                    // Recalculate control and determine the new winner
+                    // Update the location state after modification
                     attackedLocation.FinalizePowerAndDetermineWinner();
 
-                    // If the enemy drops below 0 control and the player owns Bottom of the Sea,
-                    // award 2 victory points (unless the loss was blocked)
+                    // Bottom of the Sea Expert effect:
+                    // If the enemy drops below 0 control and negative values are allowed,
+                    // award 2 victory points to the acting player.
                     if (below0Gain2VPOwner == actingPlayer &&
                         newTheoreticalControlValue < 0 &&
                         minControlNumber <= 0)
@@ -437,28 +468,34 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             }
         }
 
-        // ---------- WAR/TAKEOVER ----------
+        // ---------- WAR / TAKEOVER ----------
+        // War actions attempt to wipe enemy power from a location.
+        // War can be cancelled if the enemy plays Peace at the same location.
+
         foreach (PlayerColor actingPlayer in playerColors)
         {
             // Only resolve players who played a War card
             if (turnActions[actingPlayer].CardAction == CardAction.War)
             {
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
-                
+
+                // Through the Mirror gives bonus VP when playing War
                 PlayerColor throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
-                
-                //if player is the owner of through the mirror location and plays WAR/TAKEOVER card -> gains 2VP
-                if(throughTheMirror == actingPlayer)
+
+                // Through the Mirror effect:
+                // If the acting player owns this location and plays War, gain 2 VP immediately.
+                if (throughTheMirror == actingPlayer)
                 {
                     victoryPointCounters[actingPlayer] += 2;
                     UpdateVictoryPointDisplay();
                 }
 
-                // War is cancelled if the enemy played Peace at the same location
+                // War is blocked if the enemy played Peace at the same location.
+                // If not blocked, remove all enemy power from the targeted location.
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber ||
                     turnActions[enemyPlayer].CardAction != CardAction.Peace)
                 {
-                    // Remove all enemy power from the targeted location
+                    // Set enemy power to 0 at the targeted location (complete takeover)
                     LocationManager.instance
                         .GameLocations[turnLocations[actingPlayer].locationNumber]
                         .SetPlayerPower(enemyPlayer, 0);
@@ -466,7 +503,10 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             }
         }
 
-        // ---------- PEACE/ CASHIN ----------
+        // ---------- PEACE / CASH-IN ----------
+        // Peace converts the player's current power at a location into victory points.
+        // Peace can be cancelled if the enemy plays War at the same location.
+
         foreach (PlayerColor actingPlayer in playerColors)
         {
             // Skip players who did not play Peace
@@ -474,59 +514,71 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 continue;
 
             PlayerColor enemyPlayer = GetEnemy(actingPlayer);
-            
+
+            // Through the Mirror provides a bonus to Peace conversion
             PlayerColor throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
+
+            // Enchanted Forest Expert reduces enemy Peace rewards (halves them)
             PlayerColor enemyEnchantedForestExpert = CheckLocationOwner(LocationsIdentifier.EnchantedForestExpert);
 
             int additionalPeacePower = 0;
-            
-            //if player is the owner of through the mirror location and plays PEACE/CASHIN card -> gains 2VP
-            if(throughTheMirror == actingPlayer)
+
+            // Through the Mirror effect:
+            // If the acting player owns it and plays Peace, add +2 extra VP conversion.
+            if (throughTheMirror == actingPlayer)
             {
                 additionalPeacePower = 2;
             }
-            
-            bool isPeaceBlocked = (turnLocations[enemyPlayer].locationNumber == turnLocations[actingPlayer].locationNumber &&
-                                   turnActions[enemyPlayer].CardAction == CardAction.War);
 
-            // Peace is cancelled if the enemy played War at the same location
+            // Peace is blocked if the enemy played War on the same location
+            bool isPeaceBlocked =
+                (turnLocations[enemyPlayer].locationNumber == turnLocations[actingPlayer].locationNumber &&
+                 turnActions[enemyPlayer].CardAction == CardAction.War);
+
+            // If Peace is not blocked, cash in the player's power for victory points
             if (!isPeaceBlocked)
             {
-                // Convert current control at the location into victory points
+                // Read how much power the acting player currently has at this location
                 int victoryPoints = LocationManager.instance
                     .GameLocations[turnLocations[actingPlayer].locationNumber]
                     .GetPlayerPower(actingPlayer);
 
-                // Remove the player's power from the location
+                // Remove the player's power from the location (cash-in consumes the power)
                 LocationManager.instance
                     .GameLocations[turnLocations[actingPlayer].locationNumber]
                     .SetPlayerPower(actingPlayer, 0);
-                
+
+                // Total Peace reward = current power + any bonus
                 int peacePower = victoryPoints + additionalPeacePower;
 
+                // Enchanted Forest Expert effect:
+                // If the enemy owns this expert location, the Peace reward is halved.
                 if (enemyEnchantedForestExpert != actingPlayer && enemyEnchantedForestExpert != PlayerColor.Neutral)
                 {
                     peacePower /= 2;
                 }
 
-                // Award victory points to the acting player
+                // Add the victory points to the acting player's score
                 victoryPointCounters[actingPlayer] += peacePower;
-                
+
+                // Update UI
                 UpdateVictoryPointDisplay();
             }
         }
 
         // ---------- END OF TURN ----------
-        // Update territory ownership based on final control values
+        // After all actions have been resolved, update the board and proceed.
+
+        // Recalculate territory ownership based on final power values
         ReattributeTerritories();
 
-        // Apply any end-of-turn effects
+        // Apply special end-of-turn effects from locations or cards
         EndOfTurnEffects();
 
-        // Check if end-game conditions are met
+        // Check whether any win/end-game conditions have been met
         CheckEndGame();
 
-        // Advance to the next turn
+        // Move to the next turn
         NextTurn();
     }
 

@@ -313,7 +313,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     /// </summary>
     private void SolveTurn()
     {
-        // ---------- POLITICS ----------
+        // ---------- POLITICS (Plus) ----------
         // Check who owns the Enchanted Forest (politics modifier location)
         PlayerColor enchantedForestOwner = CheckLocationOwner(LocationsIdentifier.EnchantedForest);
 
@@ -322,9 +322,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             // Only resolve players who played a Politics card
             if (turnActions[actingPlayer].CardAction == CardAction.Politics)
             {
-                // Get the opposing player
-                PlayerColor enemyPlayer = GetEnemy(actingPlayer);
-
                 // Gain +1 power if the acting player owns the Enchanted Forest
                 int politicsMod = enchantedForestOwner == actingPlayer ? 1 : 0;
 
@@ -340,11 +337,12 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             }
         }
 
-        // ---------- ARMY ----------
+        // ---------- ARMY (Minus)----------
         // Location-based modifiers for Army actions
         PlayerColor sourceOwner = CheckLocationOwner(LocationsIdentifier.PirateShip);          // +1 attack
         PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsIdentifier.PirateShipExpert); // Attack all locations at half strength
         PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsIdentifier.BottomOfTheSeaExpert);      // Gain VP when enemy drops below 0
+        PlayerColor gingerbreadExpert = CheckLocationOwner(LocationsIdentifier.GingerbreadHouseExpert); // all (-) turn into (+)
 
         foreach (PlayerColor actingPlayer in playerColors)
         {
@@ -385,8 +383,26 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     // Theoretical control value after the attack (before clamping)
                     int newTheoreticalControlValue = currentEnemyControlValue - attackValue;
 
-                    // Reduce enemy power at the location
-                    attackedLocation.AddPlayerPower(enemyPlayer, -attackValue);
+                    if (actingPlayer == gingerbreadExpert)
+                    {
+                        // Gain +1 power if the acting player owns the Enchanted Forest
+                        int politicsMod = enchantedForestOwner == actingPlayer ? 1 : 0;
+
+                        // Add power to the targeted location
+                        LocationManager.instance
+                            .GameLocations[turnLocations[actingPlayer].locationNumber]
+                            .AddPlayerPower(actingPlayer, turnActions[actingPlayer].value + politicsMod);
+                        
+                        // Recalculate control and determine the new winner of the location
+                        LocationManager.instance
+                            .GameLocations[turnLocations[actingPlayer].locationNumber]
+                            .FinalizePowerAndDetermineWinner();
+                    }
+                    else
+                    {
+                        // Reduce enemy power at the location
+                        attackedLocation.AddPlayerPower(enemyPlayer, -attackValue);
+                    }
 
                     // Recalculate control and determine the new winner
                     attackedLocation.FinalizePowerAndDetermineWinner();
@@ -404,7 +420,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             }
         }
 
-        // ---------- WAR ----------
+        // ---------- WAR/TAKEOVER ----------
         foreach (PlayerColor actingPlayer in playerColors)
         {
             // Only resolve players who played a War card
@@ -414,7 +430,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 
                 PlayerColor throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
                 
-                //if player is the owner of through the mirror location and plays WAR card -> gains 2VP
+                //if player is the owner of through the mirror location and plays WAR/TAKEOVER card -> gains 2VP
                 if(throughTheMirror == actingPlayer)
                 {
                     victoryPointCounters[actingPlayer] += 2;
@@ -433,7 +449,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             }
         }
 
-        // ---------- PEACE ----------
+        // ---------- PEACE/ CASHIN ----------
         foreach (PlayerColor actingPlayer in playerColors)
         {
             // Skip players who did not play Peace

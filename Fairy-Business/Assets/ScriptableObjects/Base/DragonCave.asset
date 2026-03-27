@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
-  m_Name: TheDragonCave
+  m_Name: DragonCave
   m_EditorClassIdentifier: 
   imageEnabled: {fileID: 6714369015438526544, guid: 3d2f6423df837bd4a916a6f51ec1a9eb,
     type: 3}

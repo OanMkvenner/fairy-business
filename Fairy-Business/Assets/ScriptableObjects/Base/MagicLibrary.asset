@@ -18,7 +18,8 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 9
   ModeIdentifier: 0
-  VictoryPoints: 3
+  VictoryPoints: 0
+  LocationPrio: 0
   localizationDescriptionText: locationDescription_MagicLibrary
   localizationTitleText: locationTitle_MagicLibrary
   localizationKeywordText: locationKeyword_MagicLibrary

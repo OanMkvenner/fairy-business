@@ -7098,8 +7098,15 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 21de83c733ff84c4e9789fb9f4852964, type: 2}
   - {fileID: 11400000, guid: 2cca2194be151a24483ad5a0f6086582, type: 2}
   - {fileID: 11400000, guid: f7bdecf74d5482a48972cae7f005fcf4, type: 2}
+  - {fileID: 11400000, guid: 4133c16e4b6e97e4bb781e77e6733723, type: 2}
+  - {fileID: 11400000, guid: e08ed2351da3a1740ad212942bb23f3f, type: 2}
+  - {fileID: 11400000, guid: 9877ed9454b35c248bf623078a8f908d, type: 2}
   - {fileID: 11400000, guid: 84f3cbe405da0084493df060857b4992, type: 2}
   - {fileID: 11400000, guid: bd5a3ef6d1a228045bbee325c269917a, type: 2}
+  - {fileID: 11400000, guid: 36e438ec1af820b4486e48114d3389a8, type: 2}
+  - {fileID: 11400000, guid: 2d95538dfb6a2f24cb91efff302113b8, type: 2}
+  - {fileID: 11400000, guid: 2aa2c50b66d31ce4d801e13fdc96c76a, type: 2}
+  - {fileID: 11400000, guid: 2db0e78f7af69fd40acab213a2b1be16, type: 2}
   locationDefinitionPrefab: {fileID: 4396691611671439852, guid: 6db7f4253bb6f4241a69bd8efb667866,
     type: 3}
   locationsParent: {fileID: 1682415736}
@@ -12299,7 +12306,7 @@ RectTransform:
   m_AnchorMin: {x: 0.0709004, y: 0.16839376}
   m_AnchorMax: {x: 0.9290996, y: 0.8693156}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0.0000038146973}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682415737
 MonoBehaviour:
@@ -12324,7 +12331,7 @@ MonoBehaviour:
     bottom: 0
   m_ChildAlignment: 0
   spacing: {x: 20, y: 20}
-  fitType: 2
+  fitType: 0
   rows: 0
   columns: 3
   stretchFill: 0

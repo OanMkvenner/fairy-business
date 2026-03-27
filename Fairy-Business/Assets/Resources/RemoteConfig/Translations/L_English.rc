@@ -47,11 +47,9 @@
       "locationTitleExpert_ThroughTheMirror":"Through the mirror Expert",
       "locationTitleExpert_DragonCave":"Dragon Cave Expert",
       "locationTitleExpert_MagicLibrary":"Magic Library Expert",
-      
-      
-      //old description important for keeping track
+     
       "locationDescription_EnchantedForest":"Magic Market: Your (+) cards have 1 extra strength.",
-      "locationDescription_Castle":"Solid Office: Increase hand size by 1.",
+      "locationDescription_Castle":" ",
       "locationDescription_PirateShip":"Aggressive tactics: your (-) cards have 1 extra strength.",
       "locationDescription_GingerbreadHouse":"Sweet dreams: You win all ties.",
       "locationDescription_BottomOfTheSea":"Increase hand size by 1 (complete to 5 cards instead of 4).",
@@ -71,13 +69,13 @@
       "locationDescriptionExpert_MagicLibrary":"Your (+/-) 3 cards become (+/-) 5 cards.",
       
       "locationKeyword_EnchantedForest":"(+) cards bonus",
-      "locationKeyword_Caste":"hand size bonus",
+      "locationKeyword_Caste":"No Power",
       "locationKeyword_PirateShip":"(-) card bonus",
       "locationKeyword_GingerbreadHouse":"Win Tie",
-      "locationKeyword_BottomOfTheSea":"hand size bonus",
-      "locationKeyword_HauntedHouse":"Discard",
-      "locationKeyword_ThroughTheMirror":"special card VP bonus",
-      "locationKeyword_DragonCave":"Victory per round",
+      "locationKeyword_BottomOfTheSea":"Hand size bonus",
+      "locationKeyword_HauntedHouse":"Opp. Discard/Counting",
+      "locationKeyword_ThroughTheMirror":"Special card VP bonus",
+      "locationKeyword_DragonCave":"1 Victory per round",
       "locationKeyword_MagicLibrary":"+8 VP",
       
       "locationKeywordExpert_EnchantedForest":"Reduce",
@@ -89,8 +87,6 @@
       "locationKeywordExpert_ThroughTheMirror":"Random VP",
       "locationKeywordExpert_DragonCave":"Steal VP",
       "locationKeywordExpert_MagicLibrary":"3=5",
-     
-      
     }
   },
 

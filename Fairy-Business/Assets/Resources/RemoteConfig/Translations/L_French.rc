@@ -37,7 +37,7 @@
       "locationTitle_ThroughTheMirror":"Through the mirror",
       "locationTitle_DragonCave":"Dragon Cave",
       "locationTitle_MagicLibrary":"Magic Library",
-            
+        
       "locationTitleExpert_EnchantedForest":"Enchanted Forest Expert",
       "locationTitleExpert_Castle":"Castle Expert",
       "locationTitleExpert_PirateShip":"Pirate Ship Expert",
@@ -47,41 +47,37 @@
       "locationTitleExpert_ThroughTheMirror":"Through the mirror Expert",
       "locationTitleExpert_DragonCave":"Dragon Cave Expert",
       "locationTitleExpert_MagicLibrary":"Magic Library Expert",
-            
-            
-      //old description important for keeping track
+        
       "locationDescription_EnchantedForest":"Magic Market: Your (+) cards have 1 extra strength.",
-      "locationDescription_Castle":"Solid Office: Increase hand size by 1.",
+      "locationDescription_Castle":" ",
       "locationDescription_PirateShip":"Aggressive tactics: your (-) cards have 1 extra strength.",
       "locationDescription_GingerbreadHouse":"Sweet dreams: You win all ties.",
       "locationDescription_BottomOfTheSea":"Increase hand size by 1 (complete to 5 cards instead of 4).",
       "locationDescription_HauntedHouse":"Scary documents! After counting phase opponents discards a random card from hand.",
-      "locationDescription_ThroughTheMirror":"We see you: Your (-) cards have half value (round-up) but target all locations.",
+      "locationDescription_ThroughTheMirror":"Gain 2 victory points when you use a special card (cash in or take over).",
       "locationDescription_DragonCave":"Incredible wealth: gain 1 additional VP each round you hold this location.",
-      "locationDescription_MagicLibrary":"Back from the grave: after counting phase draw back a card from your discard.",
-            
-            
-      //part of them are new
+      "locationDescription_MagicLibrary":"Once owned gain 8 victory points, once lost loose 8 victory points.",
+        
       "locationDescriptionExpert_EnchantedForest":"Divide per 2 victory point when opponent cash-in!",
       "locationDescriptionExpert_Castle":"During counting phase your other locations victory points are doubled.",
-      "locationDescriptionExpert_PirateShip":"Your (-) cards have half value (round-up) but target all locations.",
+      "locationDescriptionExpert_PirateShip":"We see you: Your (-) cards have half value (round-up) but target all locations.",
       "locationDescriptionExpert_GingerbreadHouse":"All your (-) cards are changed to (+).",
       "locationDescriptionExpert_BottomOfTheSea":"Under the sea: Each time you should reduce opponent control below 0 gain 2 VP.",
       "locationDescriptionExpert_HauntedHouse":"Draw from discard/counting.",
       "locationDescriptionExpert_ThroughTheMirror":"During counting phase victory point gain is in between 1 and 6.",
       "locationDescriptionExpert_DragonCave":"Each round steal 1 victory point, if you have less.",
       "locationDescriptionExpert_MagicLibrary":"Your (+/-) 3 cards become (+/-) 5 cards.",
-           
+        
       "locationKeyword_EnchantedForest":"(+) cards bonus",
-      "locationKeyword_Caste":"hand size bonus",
+      "locationKeyword_Caste":"No Power",
       "locationKeyword_PirateShip":"(-) card bonus",
       "locationKeyword_GingerbreadHouse":"Win Tie",
-      "locationKeyword_BottomOfTheSea":"Below 0 bonus",
-      "locationKeyword_HauntedHouse":"Discard",
-      "locationKeyword_ThroughTheMirror":"(-) card target all",
-      "locationKeyword_DragonCave":"Victory per round",
-      "locationKeyword_MagicLibrary":"Draw from discard",
-            
+      "locationKeyword_BottomOfTheSea":"Hand size bonus",
+      "locationKeyword_HauntedHouse":"Opp. Discard/Counting",
+      "locationKeyword_ThroughTheMirror":"Special card VP bonus",
+      "locationKeyword_DragonCave":"1 Victory per round",
+      "locationKeyword_MagicLibrary":"+8 VP",
+        
       "locationKeywordExpert_EnchantedForest":"Reduce",
       "locationKeywordExpert_Caste":"x2 VP/Count",
       "locationKeywordExpert_PirateShip":"(-) card target all",
@@ -91,8 +87,6 @@
       "locationKeywordExpert_ThroughTheMirror":"Random VP",
       "locationKeywordExpert_DragonCave":"Steal VP",
       "locationKeywordExpert_MagicLibrary":"3=5",
-           
-      
     }
   },
 

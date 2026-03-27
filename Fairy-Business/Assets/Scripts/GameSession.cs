@@ -316,12 +316,21 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // ---------- POLITICS (Plus) ----------
         // Check who owns the Enchanted Forest (politics modifier location)
         PlayerColor enchantedForestOwner = CheckLocationOwner(LocationsIdentifier.EnchantedForest);
+        PlayerColor magicLibraryExpert = CheckLocationOwner(LocationsIdentifier.MagicLibraryExpert);
 
         foreach (PlayerColor actingPlayer in playerColors)
         {
             // Only resolve players who played a Politics card
             if (turnActions[actingPlayer].CardAction == CardAction.Politics)
             {
+                if (actingPlayer == magicLibraryExpert)
+                {
+                    if (turnActions[actingPlayer].value == 3)
+                    {
+                        turnActions[actingPlayer].value = 5;
+                    }
+                }
+                
                 // Gain +1 power if the acting player owns the Enchanted Forest
                 int politicsMod = enchantedForestOwner == actingPlayer ? 1 : 0;
 
@@ -351,6 +360,14 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             {
                 // Get the opposing player
                 PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+                
+                if (actingPlayer == magicLibraryExpert)
+                {
+                    if (turnActions[actingPlayer].value == 3)
+                    {
+                        turnActions[actingPlayer].value = 5;
+                    }
+                }
 
                 // Gain +1 attack if the acting player owns the Pirate Ship
                 int armyMod = sourceOwner == actingPlayer ? 1 : 0;

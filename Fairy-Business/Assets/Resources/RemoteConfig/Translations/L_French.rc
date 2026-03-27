@@ -69,7 +69,7 @@
       "locationDescriptionExpert_MagicLibrary":"Your (+/-) 3 cards become (+/-) 5 cards.",
         
       "locationKeyword_EnchantedForest":"(+) cards bonus",
-      "locationKeyword_Caste":"No Power",
+      "locationKeyword_Castle":"No Power",
       "locationKeyword_PirateShip":"(-) card bonus",
       "locationKeyword_GingerbreadHouse":"Win Tie",
       "locationKeyword_BottomOfTheSea":"Hand size bonus",
@@ -79,7 +79,7 @@
       "locationKeyword_MagicLibrary":"+8 VP",
         
       "locationKeywordExpert_EnchantedForest":"Reduce",
-      "locationKeywordExpert_Caste":"x2 VP/Count",
+      "locationKeywordExpert_Castle":"x2 VP/Count",
       "locationKeywordExpert_PirateShip":"(-) card target all",
       "locationKeywordExpert_GingerbreadHouse":"All (-) = (+)",
       "locationKeywordExpert_BottomOfTheSea":"Below 0 bonus",

@@ -19,6 +19,7 @@ MonoBehaviour:
   LocationIdentifier: 4
   ModeIdentifier: 1
   VictoryPoints: 1
+  LocationPrio: 0
   localizationDescriptionText: locationDescription_DragonCave
   localizationTitleText: locationTitle_DragonCave
   localizationKeywordText: locationKeyword_DragonCave

@@ -19,6 +19,7 @@ MonoBehaviour:
   LocationIdentifier: 7
   ModeIdentifier: 1
   VictoryPoints: 3
+  LocationPrio: 0
   localizationDescriptionText: locationDescription_BottomOfTheSea
   localizationTitleText: locationTitle_BottomOfTheSea
   localizationKeywordText: locationKeyword_BottomOfTheSea

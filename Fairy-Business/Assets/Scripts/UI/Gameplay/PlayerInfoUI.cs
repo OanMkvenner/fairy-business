@@ -9,6 +9,10 @@ namespace UI.Gameplay
     {
         [SerializeField] private LineIdentifier line;
         [SerializeField] private PlayerColor playerColor;
+        [SerializeField] private Sprite highestScoreSprite;
+        [SerializeField] private Sprite defaultScoreSprite;
+        
+        [Space]
         [SerializeField] private TextMeshProUGUI power;
         [SerializeField] private TextMeshProUGUI keyword;
 

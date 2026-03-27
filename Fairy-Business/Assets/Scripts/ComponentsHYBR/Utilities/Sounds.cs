@@ -5,7 +5,7 @@ namespace ComponentsHYBR.Utilities
 {
     public class Sounds : MonobehaviourSingletonCustom<Sounds>
     {
-        [SerializeField] private AudioSource[] sources;
+        private AudioSource[] sources;
         
         private float volume = 1f;
 

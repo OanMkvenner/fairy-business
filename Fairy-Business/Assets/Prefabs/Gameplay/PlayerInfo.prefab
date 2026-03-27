@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 35.67822, y: -50}
-  m_SizeDelta: {x: 71.35644, y: 0}
+  m_AnchoredPosition: {x: 57.50886, y: -50}
+  m_SizeDelta: {x: 115.01772, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4972953436331596277
 CanvasRenderer:
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.45
+  m_fontSize: 50.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 0
-  m_AspectRatio: 1.1167849
+  m_AspectRatio: 1.8001187
 --- !u!1 &5212000952467259164
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,5 +645,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI.Gameplay.PlayerInfoUI
   line: 0
   playerColor: 0
+  highestScoreSprite: {fileID: 0}
+  defaultScoreSprite: {fileID: -6356135366310464590, guid: b3be5f2683fbfbc4b8b4230745b7f0cb,
+    type: 3}
   power: {fileID: 4856669030599699911}
   keyword: {fileID: 180368280664152980}

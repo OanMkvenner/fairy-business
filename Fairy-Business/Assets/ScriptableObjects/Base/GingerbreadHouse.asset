@@ -19,6 +19,7 @@ MonoBehaviour:
   LocationIdentifier: 5
   ModeIdentifier: 1
   VictoryPoints: 3
+  LocationPrio: 0
   localizationDescriptionText: locationDescription_GingerbreadHouse
   localizationTitleText: locationTitle_GingerbreadHouse
   localizationKeywordText: locationKeyword_GingerbreadHouse

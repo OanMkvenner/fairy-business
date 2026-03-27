@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI.Gameplay
 {
@@ -8,7 +9,10 @@ namespace UI.Gameplay
     {
         [SerializeField] private TextMeshProUGUI roundText;
         [SerializeField] private TextMeshProUGUI maxCount;
-        [SerializeField] private List<GameObject> turns;
+        [SerializeField] private List<Sprite> turnImages;
+        [SerializeField] private List<Image> roundBubbles;
+
+        private int roundCount;
 
         private void Awake()
         {
@@ -19,12 +23,7 @@ namespace UI.Gameplay
         {
             turnCounter--;
             
-            turns[turnCounter].SetActive(true);
-
-            if (turnCounter <= 0)
-                return;
-            
-            turns[turnCounter - 1].SetActive(false);
+            roundBubbles[roundCount].sprite = turnImages[turnCounter];
         }
 
         public void UpdateRoundCount(int count)
@@ -32,8 +31,9 @@ namespace UI.Gameplay
             if(count == GameSession.instance.MaxRoundCount)
                 return;
             
+            roundCount = count;
+            
             roundText.text = count.ToString(); 
-            turns[^1].SetActive(false);
         }
     }
 }

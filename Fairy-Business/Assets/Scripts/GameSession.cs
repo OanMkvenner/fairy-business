@@ -6,13 +6,10 @@ using ComponentsHYBR.Utilities;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Unity.Mathematics;
 using DG.Tweening;
 using Locations;
 using Player;
-using UI;
 using UI.Gameplay;
-using UI.Menu;
 using UI.Menu.BaseMenu;
 using Random = System.Random;
 

@@ -18,6 +18,7 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 13
   ModeIdentifier: 2
+  CouplingIdentifier: 4
   VictoryPoints: 1
   localizationDescriptionText: locationDescriptionExpert_DragonCave
   localizationTitleText: locationTitleExpert_DragonCave

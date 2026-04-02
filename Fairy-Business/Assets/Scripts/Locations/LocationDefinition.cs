@@ -15,6 +15,7 @@ namespace Locations
     {
         public static event Action<PlayerColor, LocationDefinition> OnNewPowerAddedEvent;
         public static event Action<LocationDefinition> OnCurrentOwnerChangedEvent;
+        public static event Action<LocationsIdentifier, bool> OnLocationSelectedEvent;
         public LocationsIdentifier LocationIdentifier => LocationData.LocationIdentifier;
         public int VictoryPoints => LocationData.VictoryPoints;
         public bool AreVictoryPointsApplied { get; set; }
@@ -60,13 +61,16 @@ namespace Locations
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
         [SerializeField] private Image locationImage;
+        [SerializeField] private Image notAllowedIcon;
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;
         private LocationUI currenLocatioUI;
         private PlayerColor currentOwner = PlayerColor.None;
         private Dictionary<PlayerColor, int> power = new();
+        
         private bool isSelected;
+        private LocationsIdentifier CouplingLocationIdentifier => LocationData.CouplingIdentifier;
 
         public bool IsSelected
         {
@@ -75,12 +79,21 @@ namespace Locations
             {
                 isSelected = value;
                 UpdateVisuals();
+                
+                OnLocationSelectedEvent?.Invoke(CouplingLocationIdentifier, value);
             }
         }
 
         private void Awake()
         {
             RectTransform = GetComponent<RectTransform>();
+
+            OnLocationSelectedEvent += AllowSelection;
+        }
+
+        private void OnDestroy()
+        {
+            OnLocationSelectedEvent -= AllowSelection;
         }
 
         public void InitializeLocationDefinition(LocationData data, bool isGameView)
@@ -158,7 +171,6 @@ namespace Locations
 
             CurrentOwner = winner;
         }
-
         
         public int GetPlayerPower(PlayerColor playerIdx){
             return power[playerIdx];
@@ -186,6 +198,15 @@ namespace Locations
         public void SetPosition(Vector3 position)
         {
             transform.position = position;
+        }
+
+        private void AllowSelection(LocationsIdentifier locationIdentifier, bool allow)
+        {
+            if (locationIdentifier != LocationIdentifier)
+                return;
+            
+            //Because this image is on top of all other objects, it also blocks, the hovering action
+            notAllowedIcon.enabled = allow;
         }
         
         private void UpdateVisuals(){

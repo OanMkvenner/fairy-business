@@ -18,6 +18,7 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 15
   ModeIdentifier: 2
+  CouplingIdentifier: 6
   VictoryPoints: 4
   localizationDescriptionText: locationDescriptionExpert_HauntedHouse
   localizationTitleText: locationTitleExpert_HauntedHouse

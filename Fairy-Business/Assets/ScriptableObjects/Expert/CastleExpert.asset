@@ -18,6 +18,7 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 12
   ModeIdentifier: 2
+  CouplingIdentifier: 3
   VictoryPoints: 0
   localizationDescriptionText: locationDescriptionExpert_Castle
   localizationTitleText: locationTitleExpert_Castle

@@ -18,6 +18,7 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 1
   ModeIdentifier: 1
+  CouplingIdentifier: 10
   VictoryPoints: 2
   localizationDescriptionText: locationDescription_PirateShip
   localizationTitleText: locationTitle_PirateShip

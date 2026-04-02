@@ -18,6 +18,7 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 17
   ModeIdentifier: 2
+  CouplingIdentifier: 8
   VictoryPoints: 0
   localizationDescriptionText: locationDescriptionExpert_ThroughTheMirror
   localizationTitleText: locationTitleExpert_ThroughTheMirror

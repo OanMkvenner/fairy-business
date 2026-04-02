@@ -18,8 +18,8 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 7
   ModeIdentifier: 1
+  CouplingIdentifier: 16
   VictoryPoints: 3
-  LocationPrio: 0
   localizationDescriptionText: locationDescription_BottomOfTheSea
   localizationTitleText: locationTitle_BottomOfTheSea
   localizationKeywordText: locationKeyword_BottomOfTheSea

@@ -13,8 +13,6 @@ namespace Locations
         [Header("Game Variables")]
         public int VictoryPoints;
 
-        public int LocationPrio = 0;
-
         [Header("Localizations")]
         public string localizationDescriptionText;
         public string localizationTitleText;

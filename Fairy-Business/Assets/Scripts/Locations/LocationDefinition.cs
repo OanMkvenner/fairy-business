@@ -64,6 +64,8 @@ namespace Locations
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
         [SerializeField] private Image locationImage;
+        [SerializeField] private Color blueColor;
+        [SerializeField] private Color redColor;
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;

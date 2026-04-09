@@ -570,8 +570,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sound
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f19af470f32f2cc489aa1833c754b44c, type: 2}
-  m_sharedMaterial: {fileID: 1260962705168134288, guid: f19af470f32f2cc489aa1833c754b44c,
+  m_fontAsset: {fileID: 11400000, guid: 4f600de92694d384f962318b994c0fff, type: 2}
+  m_sharedMaterial: {fileID: 3266199348881688157, guid: 4f600de92694d384f962318b994c0fff,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 39.922707, y: -33.097797}
-  m_SizeDelta: {x: 79.84541, y: 0}
+  m_AnchoredPosition: {x: 49.738262, y: -41.368816}
+  m_SizeDelta: {x: 99.476524, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4972953436331596277
 CanvasRenderer:
@@ -224,12 +224,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Keyword
+  m_text: 'Voir
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e739c7e278b22494ba3eb643d8dcbf48, type: 2}
-  m_sharedMaterial: {fileID: 4209968784747267006, guid: e739c7e278b22494ba3eb643d8dcbf48,
+  m_fontAsset: {fileID: 11400000, guid: 4f600de92694d384f962318b994c0fff, type: 2}
+  m_sharedMaterial: {fileID: 3266199348881688157, guid: 4f600de92694d384f962318b994c0fff,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.15
+  m_fontSize: 36.75
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_MinWidth: -1
   m_MinHeight: -1
   m_PreferredWidth: 493
-  m_PreferredHeight: 70
+  m_PreferredHeight: 40
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 0
-  m_AspectRatio: 1.3214638
+  m_AspectRatio: 2.7245514
 --- !u!1 &5212000952467259164
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,9 +647,6 @@ MonoBehaviour:
   line: 0
   playerColor: 0
   highestScoreSprite: {fileID: 0}
-  defaultScoreSprite: {fileID: -6356135366310464590, guid: b3be5f2683fbfbc4b8b4230745b7f0cb,
-    type: 3}
-  scoreBackground: {fileID: 0}
   power: {fileID: 4856669030599699911}
   keyword: {fileID: 180368280664152980}
 --- !u!114 &6271202068663786917

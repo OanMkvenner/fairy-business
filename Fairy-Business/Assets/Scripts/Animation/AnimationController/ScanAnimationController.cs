@@ -1,4 +1,3 @@
-using Animation.AnimationEffects;
 using Player;
 using UnityEngine;
 using UnityEngine.UI;

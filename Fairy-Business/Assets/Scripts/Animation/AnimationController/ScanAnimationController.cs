@@ -9,8 +9,6 @@ namespace Animation.AnimationController
     {
         [SerializeField] private PlayerColor playerColor;
         [SerializeField] private ScanAction scanAction;
-        
-        [SerializeField] private BaseAnimationEffect changeColorEffect;
         [SerializeField] private Sprite defaultSprite;
         
         private Image image;

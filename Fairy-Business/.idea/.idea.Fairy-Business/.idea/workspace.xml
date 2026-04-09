@@ -5,6 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Player/ActionInput/Score-PJ/Icons-Actions/Base-CreditCard-RED-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Player/ActionInput/Score-PJ/Icons-Actions/Base-CreditCard-RED-on.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Player/ActionInput/Score-PJ/Icons-Actions/Base-CreditCrad-blue-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Player/ActionInput/Score-PJ/Icons-Actions/Base-CreditCrad-blue-on.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Player/ActionInput/Score-PJ/Icons-Actions/Base-Money-RED-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Player/ActionInput/Score-PJ/Icons-Actions/Base-Money-RED-on.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Player/ActionInput/Score-PJ/Icons-Actions/Base-Money-blue-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Player/ActionInput/Score-PJ/Icons-Actions/Base-Money-blue-on.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/ScanAnimationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/ScanAnimationController.cs" afterDir="false" />
     </list>
@@ -171,7 +179,7 @@
       <workItem from="1773318216889" duration="2327000" />
       <workItem from="1774520662399" duration="19204000" />
       <workItem from="1774603755971" duration="90000" />
-      <workItem from="1775730720538" duration="339000" />
+      <workItem from="1775730720538" duration="903000" />
     </task>
     <servers />
   </component>

@@ -13377,6 +13377,10 @@ GameObject:
   - component: {fileID: 1993749943}
   - component: {fileID: 1993749942}
   - component: {fileID: 1993749941}
+  - component: {fileID: 1993749948}
+  - component: {fileID: 1993749947}
+  - component: {fileID: 1993749946}
+  - component: {fileID: 1993749945}
   m_Layer: 5
   m_Name: MoneyAction
   m_TagString: Untagged
@@ -13476,6 +13480,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1993749939}
   m_CullTransparentMesh: 1
+--- !u!114 &1993749945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993749939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d3919bd175486ebddd453415647c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.Tweens.ShakeScaleTweenAnimation
+  <AnimationSettings>k__BackingField:
+    <Duration>k__BackingField: 0
+    <Ease>k__BackingField: 0
+    <UiEndPosition>k__BackingField: {fileID: 0}
+    <SequenceInsertType>k__BackingField: 0
+    <AppendInterval>k__BackingField: 0
+    <AppendIntervalTime>k__BackingField: 0
+  animationEffect: {fileID: 1993749947}
+  strength: 0
+  vibrato: 0
+  randomness: 0
+  fadeOut: 0
+  shakeRandomnessMode: 0
+--- !u!114 &1993749946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993749939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa846191253471d9b8514d261da8f69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationFlow
+  playOnEnable: 0
+--- !u!114 &1993749947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993749939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
+  sprite: {fileID: 0}
+--- !u!114 &1993749948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1993749939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d9551798aa43078ce6938c2fca9d18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.ScanAnimationController
+  priority: 0
+  defaultAnimationFlows:
+  - {fileID: 1993749946}
+  playerColor: 1
+  scanAction: 2
+  defaultSprite: {fileID: -787067421565895199, guid: f735d4627f369634bafabfb2257a5a14,
+    type: 3}
 --- !u!1 &2003280869
 GameObject:
   m_ObjectHideFlags: 0

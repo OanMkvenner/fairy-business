@@ -1,8 +1,7 @@
 using Animation.AnimationEffects;
 using Player;
 using UnityEngine;
-using Color = UnityEngine.Color;
-using Image = UnityEngine.UI.Image;
+using UnityEngine.UI;
 
 namespace Animation.AnimationController
 {
@@ -12,12 +11,15 @@ namespace Animation.AnimationController
         [SerializeField] private ScanAction scanAction;
         
         [SerializeField] private BaseAnimationEffect changeColorEffect;
-        [SerializeField] private Color color;
-        [SerializeField] private Image image;
+        [SerializeField] private Sprite defaultSprite;
+        
+        private Image image;
 
         protected override void Awake()
         {
             base.Awake();
+            
+            image = GetComponent<Image>();
 
             GameSession.OnCardScanned += OnCardScanned;
             GameSession.OnTurnReset += ResetAnimation;
@@ -39,7 +41,7 @@ namespace Animation.AnimationController
 
         private void ResetAnimation()
         {
-            image.color = color;
+            image.sprite = defaultSprite;
         }
     }
 }

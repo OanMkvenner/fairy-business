@@ -2,29 +2,39 @@ using Locations;
 using Player;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI.Gameplay
 {
+    [RequireComponent(typeof(Image))]
     public class PlayerInfoUI : MonoBehaviour
     {
         [SerializeField] private LineIdentifier line;
         [SerializeField] private PlayerColor playerColor;
         [SerializeField] private Sprite highestScoreSprite;
-        [SerializeField] private Sprite defaultScoreSprite;
-        
+
         [Space]
         [SerializeField] private TextMeshProUGUI power;
         [SerializeField] private TextMeshProUGUI keyword;
 
+        private Image scoreBackground;
+        private Sprite defaultScoreSprite;
+
         private void Awake()
         {
+            scoreBackground = GetComponent<Image>();
+            defaultScoreSprite = scoreBackground.sprite;
+            
             LocationDefinition.OnNewPowerAddedEvent += SetTurnPoints;
+            LocationDefinition.OnCurrentOwnerChangedEvent += ChangeScoreBackground;
             LocationManager.OnNewLocationCreatedEvent += AssignLocationKeyword;
+            
         }
 
         private void OnDestroy()
         {
             LocationDefinition.OnNewPowerAddedEvent -= SetTurnPoints;
+            LocationDefinition.OnCurrentOwnerChangedEvent -= ChangeScoreBackground;
             LocationManager.OnNewLocationCreatedEvent -= AssignLocationKeyword;
         }
 
@@ -50,6 +60,21 @@ namespace UI.Gameplay
             
             int power = locationDefinition.GetPlayerPower(currentPlayerColor);
             this.power.text = power.ToString();
+        }
+
+        private void ChangeScoreBackground(LocationDefinition locationDefinition)
+        {
+            if (locationDefinition.PlayerLine.line != this.line)
+                return;
+            
+            if (locationDefinition.CurrentOwner != playerColor)
+            {
+                scoreBackground.sprite = defaultScoreSprite;
+            }
+            else
+            {
+                scoreBackground.sprite = highestScoreSprite;
+            }
         }
     }
 }

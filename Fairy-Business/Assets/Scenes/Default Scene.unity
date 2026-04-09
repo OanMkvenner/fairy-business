@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
-  sprite: {fileID: 4472873871231627073, guid: 660c350c10785634fa5bd4657e996fd3, type: 3}
+  sprite: {fileID: -5557122684580789018, guid: f2c2a6c1492bea24da5c6a1291982f57, type: 3}
 --- !u!114 &116541900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,7 +1276,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationController.ScanAnimationController
   priority: 0
-  defaultAnimationFlows: []
+  defaultAnimationFlows:
+  - {fileID: 116541902}
   playerColor: 2
   scanAction: 1
   defaultSprite: {fileID: -1197617110338327413, guid: 5980f6bcdc0595d4e93e6e3e12898a4b,

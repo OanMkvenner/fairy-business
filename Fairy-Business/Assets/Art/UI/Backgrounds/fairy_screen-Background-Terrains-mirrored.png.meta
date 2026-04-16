@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f9f4c19085d24d8488238a5b8b72dabb
+guid: cbd9a5eb27d17fb439dea0be016852a1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6904124115692128502
-    second: FairyInkTerrain_0
+      213: -2091447414784934409
+    second: fairy_screen-Background-Terrains-mirrored_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: FairyInkTerrain_0
+      name: fairy_screen-Background-Terrains-mirrored_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 578
-        height: 533
+        width: 2413
+        height: 1081
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0776f642bf9f20a0800000000000000
-      internalID: -6904124115692128502
+      spriteID: 7fdb55f38afa9f2e0800000000000000
+      internalID: -2091447414784934409
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      FairyInkTerrain_0: -6904124115692128502
+      fairy_screen-Background-Terrains-mirrored_0: -2091447414784934409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1034,11 +1034,11 @@ RectTransform:
   - {fileID: 1469781166}
   m_Father: {fileID: 1165143809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200.41504, y: 171.42786}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 171, y: -171}
   m_SizeDelta: {x: 140, y: 140}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &85307867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7716,7 +7716,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1214371915}
   m_Layer: 5
-  m_Name: ProfileHolderBlue
+  m_Name: ProfileHolderRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8548,7 +8548,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9040996371627970604, guid: bd666164e08f25047a61ab921e219a15,
+  m_Sprite: {fileID: -2091447414784934409, guid: cbd9a5eb27d17fb439dea0be016852a1,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -10288,7 +10288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1553593276}
   m_Layer: 5
-  m_Name: ProfileHolderRed
+  m_Name: ProfileHolderBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12719,11 +12719,11 @@ RectTransform:
   - {fileID: 1203418044}
   m_Father: {fileID: 1165143809}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 203.78809, y: -167.97595}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 171, y: 171}
   m_SizeDelta: {x: 140, y: 140}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1924296183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14384,7 +14384,7 @@ PrefabInstance:
     - target: {fileID: 569912504463680352, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_Name
-      value: LineProfilesBlue
+      value: LineProfilesRed
       objectReference: {fileID: 0}
     - target: {fileID: 607885801669159740, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
@@ -14649,7 +14649,7 @@ PrefabInstance:
     - target: {fileID: 3363100164967157100, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: playerColor
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3363100164967157100, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
@@ -14736,7 +14736,7 @@ PrefabInstance:
     - target: {fileID: 4960723984045888711, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: playerColor
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4960723984045888711, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
@@ -14763,7 +14763,7 @@ PrefabInstance:
     - target: {fileID: 5827388074464004736, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: playerColor
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5827388074464004736, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
@@ -14932,7 +14932,7 @@ PrefabInstance:
     - target: {fileID: 569912504463680352, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_Name
-      value: LineProfilesRed
+      value: LineProfilesBlue
       objectReference: {fileID: 0}
     - target: {fileID: 607885801669159740, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
@@ -15207,7 +15207,7 @@ PrefabInstance:
     - target: {fileID: 3363100164967157100, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: playerColor
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3363100164967157100, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
@@ -15294,7 +15294,7 @@ PrefabInstance:
     - target: {fileID: 4960723984045888711, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: playerColor
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4960723984045888711, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
@@ -15326,7 +15326,7 @@ PrefabInstance:
     - target: {fileID: 5827388074464004736, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: playerColor
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5827388074464004736, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}

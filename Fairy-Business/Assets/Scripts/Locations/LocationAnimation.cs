@@ -35,21 +35,23 @@ namespace Locations
                     continue;
                 }
                 
-                Tween moveTween = location.MoveY(targetPositionTransform.position.y, duration)
+                Tween popArtifact = location.Artifact.GetComponent<RectTransform>().DOPunchScale(Vector3.one * 0.2f, duration);
+                
+                Tween moveTween = location.MoveObject.MoveY(targetPositionTransform.position.y, duration)
                     .SetEase(rotationEaseMode);
 
-                Tween rotateTween = location.Rotate(targetPositionTransform.localEulerAngles.z, duration)
+                Tween rotateTween = location.MoveObject.Rotate(targetPositionTransform.localEulerAngles.z, duration)
                     .SetEase(rotationEaseMode);
                 
                 //Hover Buttons are invisible needs, but are children from the locations 
-                /*Tween rotateHoverButton = location.LocationHoverButtons[0].transform.parent.GetComponent<RectTransform>()
-                    .DORotate(new Vector3(0, 0, 0), duration);*/
-                
-                
+                Tween rotateHoverButton = location.LocationHoverButtons[0].transform.parent.GetComponent<RectTransform>()
+                    .DORotate(new Vector3(0, 0, 0), duration);
+
                 sequence.Join(moveTween);
                 sequence.Join(rotateTween);
-                //sequence.Join(rotateHoverButton);
-                
+                sequence.Join(rotateHoverButton);
+                sequence.Append(popArtifact);
+
                 //Set the scale and size of parent
                 location.transform.SetParent(location.PlayerLine.neutralPosition);
                 location.RectTransform.anchorMin = Vector2.zero;

@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using DG.Tweening;
+using Animation;
 using Player;
 using TMPro;
 using UI;
@@ -10,21 +10,18 @@ using UnityEngine.UI;
 
 namespace Locations
 {
-    [RequireComponent((typeof(RectTransform)))]
-    public class LocationDefinition : MonoBehaviour, ITweenAnimation
+    [RequireComponent((typeof(RectTransform)), (typeof(MoveRotateObject)))]
+    public class LocationDefinition : MonoBehaviour
     {
         public static event Action<PlayerColor, LocationDefinition> OnNewPowerAddedEvent;
         public static event Action<LocationDefinition> OnCurrentOwnerChangedEvent;
         public LocationsIdentifier LocationIdentifier => LocationData.LocationIdentifier;
         public int VictoryPoints => LocationData.VictoryPoints;
         public int LocationPriority => LocationData.LocationPrio;
-        
         public bool AreVictoryPointsApplied { get; set; }
-        public bool IsEffectApplied { get; set; }
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }
         public RectTransform RectTransform { get; private set; }
-
         public PlayerColor CurrentOwner
         {
             get => currentOwner;
@@ -39,26 +36,15 @@ namespace Locations
                 currentOwner = value;
                 
                 //Commented out bc of artefacts now moving and not locations anymore
-                //locationImage.sprite = currentOwner == PlayerColor.Neutral ? imageDisabled : imageEnabled;
-                
-                if(currentOwner != PlayerColor.Neutral)
-                {
-                    locationImage.sprite = imageEnabled;
-                }
-                else
-                {
-                    locationImage.sprite = imageDisabled;
-                }
-
+                locationImage.sprite = currentOwner == PlayerColor.Neutral ? imageDisabled : imageEnabled;
 
                 OnCurrentOwnerChangedEvent?.Invoke(this);
             }
         }
-        
+        public MoveRotateObject MoveObject { get; private set; }
         public PlayerColor LastOwner { get; private set; }
-
         public List<LocationHoverButton> LocationHoverButtons => locationHoverButtons;
-        [field: SerializeField] public GameObject Artfecat { get; set; }
+        [field: SerializeField] public GameObject Artifact { get; set; }
 
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
@@ -87,6 +73,7 @@ namespace Locations
         private void Awake()
         {
             RectTransform = GetComponent<RectTransform>();
+            MoveObject = GetComponent<MoveRotateObject>();
         }
 
         public void InitializeLocationDefinition(LocationData data, bool isGameView)
@@ -121,7 +108,7 @@ namespace Locations
             string locationDescription = Localizer.instance.TranslateToSpecificLanguage(LocationData.localizationDescriptionText, 
                 activeLanguageCode);
             
-            currenLocatioUI.Init(Color.gray, imageEnabled, locationTitle, locationDescription);
+            currenLocatioUI.Init(imageEnabled, locationTitle, locationDescription);
         }
         
         public void AddPlayerPower(PlayerColor playerIdx, int newPower)
@@ -164,31 +151,11 @@ namespace Locations
 
             CurrentOwner = winner;
         }
-
         
         public int GetPlayerPower(PlayerColor playerIdx){
             return power[playerIdx];
         }
-
-        #region IAnimation
-
-        public Tween MoveY(float y, float duration)
-        {
-            return Artfecat.GetComponent<RectTransform>().DOMoveY(y, duration);
-        }
-
-        public Tween MoveX(float x, float duration)
-        {
-            return Artfecat.GetComponent<RectTransform>().DOLocalMoveX(x, duration);
-        }
-
-        public Tween Rotate(float angle, float duration)
-        {
-            return Artfecat.GetComponent<RectTransform>().DORotate(new Vector3(0, 0, angle), duration);
-        }
-
-        #endregion
-
+        
         public void SetPosition(Vector3 position)
         {
             transform.position = position;

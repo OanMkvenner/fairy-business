@@ -18,6 +18,7 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 14
   ModeIdentifier: 2
+  CouplingIdentifier: 5
   VictoryPoints: 0
   localizationDescriptionText: locationDescriptionExpert_GingerbreadHouse
   localizationTitleText: locationTitleExpert_GingerbreadHouse

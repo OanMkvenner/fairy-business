@@ -17,7 +17,8 @@ MonoBehaviour:
   imageDisabled: {fileID: -8476587477302908971, guid: e872d46d9ebd1794295ab81fe54df289,
     type: 3}
   LocationIdentifier: 8
-  ModeIdentifier: 0
+  ModeIdentifier: 1
+  CouplingIdentifier: 17
   VictoryPoints: 2
   localizationDescriptionText: locationDescription_ThroughTheMirror
   localizationTitleText: locationTitle_ThroughTheMirror

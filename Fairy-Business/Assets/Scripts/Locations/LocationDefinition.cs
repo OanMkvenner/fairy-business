@@ -15,9 +15,9 @@ namespace Locations
     {
         public static event Action<PlayerColor, LocationDefinition> OnNewPowerAddedEvent;
         public static event Action<LocationDefinition> OnCurrentOwnerChangedEvent;
+        public static event Action<LocationsIdentifier, bool> OnLocationSelectedEvent;
         public LocationsIdentifier LocationIdentifier => LocationData.LocationIdentifier;
         public int VictoryPoints => LocationData.VictoryPoints;
-        public int LocationPriority => LocationData.LocationPrio;
         public bool AreVictoryPointsApplied { get; set; }
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }
@@ -50,6 +50,7 @@ namespace Locations
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
         [SerializeField] private Image locationImage;
+        [SerializeField] private Image notAllowedIcon;
         [SerializeField] private Color blueColor;
         [SerializeField] private Color redColor;
 
@@ -58,7 +59,9 @@ namespace Locations
         private LocationUI currenLocatioUI;
         private PlayerColor currentOwner = PlayerColor.None;
         private Dictionary<PlayerColor, int> power = new();
+        
         private bool isSelected;
+        private LocationsIdentifier CouplingLocationIdentifier => LocationData.CouplingIdentifier;
 
         public bool IsSelected
         {
@@ -67,6 +70,8 @@ namespace Locations
             {
                 isSelected = value;
                 UpdateVisuals();
+                
+                OnLocationSelectedEvent?.Invoke(CouplingLocationIdentifier, value);
             }
         }
 
@@ -74,6 +79,13 @@ namespace Locations
         {
             RectTransform = GetComponent<RectTransform>();
             MoveObject = GetComponent<MoveRotateObject>();
+
+            OnLocationSelectedEvent += AllowSelection;
+        }
+
+        private void OnDestroy()
+        {
+            OnLocationSelectedEvent -= AllowSelection;
         }
 
         public void InitializeLocationDefinition(LocationData data, bool isGameView)
@@ -159,6 +171,15 @@ namespace Locations
         public void SetPosition(Vector3 position)
         {
             transform.position = position;
+        }
+
+        private void AllowSelection(LocationsIdentifier locationIdentifier, bool allow)
+        {
+            if (locationIdentifier != LocationIdentifier)
+                return;
+            
+            //Because this image is on top of all other objects, it also blocks, the hovering action
+            notAllowedIcon.enabled = allow;
         }
         
         private void UpdateVisuals(){

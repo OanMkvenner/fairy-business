@@ -434,7 +434,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                             .GameLocations[turnLocations[actingPlayer].locationNumber]
                             .AddPlayerPower(actingPlayer, turnActions[actingPlayer].value + politicsMod);
 
-                        // Recalculate power totals and determine new controller
+                        // Recalculate power totals and determine new controller    
                         LocationManager.instance
                             .GameLocations[turnLocations[actingPlayer].locationNumber]
                             .FinalizePowerAndDetermineWinner();
@@ -643,12 +643,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     private void CheckScoringPhase(){
         
         if (turnCounter == 1 && roundCounter > 1){
-            // apply owned territory points to main score
             
-            List<LocationDefinition> gameLocations = LocationManager.instance.GameLocations.OrderBy
-                (p => p.LocationPriority).ToList();
-            
-            foreach (LocationDefinition loc in gameLocations){
+            foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
                 
                 if(!loc.AreVictoryPointsApplied)
                 {
@@ -700,7 +696,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         
                     }case LocationsIdentifier.CastleExpert:
                     {
-                        foreach (LocationDefinition location in gameLocations)
+                        foreach (LocationDefinition location in LocationManager.instance.GameLocations)
                         {
                             if (loc.CurrentOwner == location.CurrentOwner)
                             {

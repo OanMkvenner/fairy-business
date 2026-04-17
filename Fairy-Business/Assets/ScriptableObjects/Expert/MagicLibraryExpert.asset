@@ -18,6 +18,7 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 18
   ModeIdentifier: 2
+  CouplingIdentifier: 9
   VictoryPoints: 2
   localizationDescriptionText: locationDescriptionExpert_MagicLibrary
   localizationTitleText: locationTitleExpert_MagicLibrary

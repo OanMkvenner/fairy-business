@@ -9,11 +9,10 @@ namespace Locations
         public Sprite imageDisabled;
         public LocationsIdentifier LocationIdentifier;
         public ModeIdentifier ModeIdentifier;
+        public LocationsIdentifier CouplingIdentifier;
         
         [Header("Game Variables")]
         public int VictoryPoints;
-
-        public int LocationPrio = 0;
 
         [Header("Localizations")]
         public string localizationDescriptionText;

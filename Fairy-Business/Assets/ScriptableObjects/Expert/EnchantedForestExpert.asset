@@ -18,6 +18,7 @@ MonoBehaviour:
     type: 3}
   LocationIdentifier: 11
   ModeIdentifier: 2
+  CouplingIdentifier: 2
   VictoryPoints: 1
   localizationDescriptionText: locationDescriptionExpert_EnchantedForest
   localizationTitleText: locationTitleExpert_EnchantedForest

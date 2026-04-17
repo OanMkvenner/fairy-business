@@ -34,10 +34,8 @@ namespace Locations
 
         public void CreateGameLocations()
         {
-            Debug.Log(SelectedLocations.Count + " Count");
             for (int index = 0; index < SelectedLocations.Count; index++)
             {
-                Debug.Log($"{index} + {GameLocations.Count} + {SelectedLocations.Count}");
                 GameLocations[index].InitializeLocationDefinition(SelectedLocations[index].LocationData, true);
                 GameLocations[index].IsSelected = true;
                 GameLocations[index].PlayerLine = lines[index];
@@ -62,7 +60,10 @@ namespace Locations
             SelectedLocations.Clear();
         }
         
-        public void SetupSelectLocation(LocationDefinition locationDefinition){
+        public void SetupSelectLocation(LocationDefinition locationDefinition)
+        {
+            if (locationDefinition.IsLocationBlocked)
+                return;
             
             if (SelectedLocations.Contains(locationDefinition))
             {
@@ -130,13 +131,15 @@ namespace Locations
         {
             foreach (LocationData locationData in locationDataCollection)
             {
+                Debug.Log(locationData.name, this);
                 LocationDefinition locationDefinition = Instantiate(locationDefinitionPrefab, locationsParent);
                 locationDefinition.InitializeLocationDefinition(locationData, false);
                 allAvailableLocations.Add(locationDefinition);
             }
         }
 
-        private void CheckEnoughLocationsSelected(){
+        private void CheckEnoughLocationsSelected()
+        {
             if (SelectedLocations.Count == 3){
                 MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);
             }

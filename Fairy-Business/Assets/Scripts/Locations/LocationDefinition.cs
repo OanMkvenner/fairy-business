@@ -19,6 +19,7 @@ namespace Locations
         public LocationsIdentifier LocationIdentifier => LocationData.LocationIdentifier;
         public int VictoryPoints => LocationData.VictoryPoints;
         public bool AreVictoryPointsApplied { get; set; }
+        public bool IsLocationBlocked { get; private set; }
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }
         public RectTransform RectTransform { get; private set; }
@@ -50,9 +51,7 @@ namespace Locations
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
         [SerializeField] private Image locationImage;
-        [SerializeField] private Image notAllowedIcon;
-        [SerializeField] private Color blueColor;
-        [SerializeField] private Color redColor;
+        [SerializeField] private Image blockingIcon;
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;
@@ -80,12 +79,12 @@ namespace Locations
             RectTransform = GetComponent<RectTransform>();
             MoveObject = GetComponent<MoveRotateObject>();
 
-            OnLocationSelectedEvent += AllowSelection;
+            OnLocationSelectedEvent += BlockSelection;
         }
 
         private void OnDestroy()
         {
-            OnLocationSelectedEvent -= AllowSelection;
+            OnLocationSelectedEvent -= BlockSelection;
         }
 
         public void InitializeLocationDefinition(LocationData data, bool isGameView)
@@ -141,6 +140,10 @@ namespace Locations
             OnNewPowerAddedEvent?.Invoke(playerIdx, this);
         }
 
+        public int GetPlayerPower(PlayerColor playerIdx){
+            return power[playerIdx];
+        }
+
         /// <summary>
         /// Call this once after all power values were assigned.
         /// </summary>
@@ -163,23 +166,31 @@ namespace Locations
 
             CurrentOwner = winner;
         }
-        
-        public int GetPlayerPower(PlayerColor playerIdx){
-            return power[playerIdx];
-        }
-        
+
         public void SetPosition(Vector3 position)
         {
             transform.position = position;
         }
 
-        private void AllowSelection(LocationsIdentifier locationIdentifier, bool allow)
+        /// <summary>
+        /// Toggles the blocked state of a location based on the given identifier and block flag.
+        /// </summary>
+        /// <param name="locationIdentifier">The location identifier to match against this instance.</param>
+        /// <param name="allow">If true, blocks the location; if false, unblocks it.</param>
+        private void BlockSelection(LocationsIdentifier locationIdentifier, bool allow)
         {
+            if (LocationData == null)
+            {
+                Debug.LogError("Location Data is null, could be bc this Location Definition exists in the scene but " +
+                               "was not initialized yet!", this);
+                return;
+            }
+
             if (locationIdentifier != LocationIdentifier)
                 return;
             
-            //Because this image is on top of all other objects, it also blocks, the hovering action
-            notAllowedIcon.enabled = allow;
+            blockingIcon.enabled = allow;
+            IsLocationBlocked = allow;
         }
         
         private void UpdateVisuals(){

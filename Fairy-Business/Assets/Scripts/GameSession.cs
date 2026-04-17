@@ -69,10 +69,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             LocationManager.instance.SelectedLocations.Clear();
     }
 
-    private void ResetGamesession(){
-        
-        LocationManager.instance.ResetGameLocations();
-        
+    private void ResetGameSession()
+    {
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
         roundCounter = 0; // first "NextTurn" action iterates this up to 1
         victoryPointCounters = new();
@@ -87,7 +85,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
     public void NewRound()
     {
-        ResetGamesession();
+        ResetGameSession();
         
         LocationManager.instance.CreateGameLocations();
         

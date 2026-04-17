@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/Item-Base.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/Item-Base.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/MoveRotateObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Animation/MoveRotateObject.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (19).unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (19).unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (20).unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (20).unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (21).unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (21).unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (22).unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (22).unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (23).unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/_Recovery/0 (23).unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Item-Base.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/Item-Base.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/LineProfiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/LineProfiles.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WarAndPeace/Locations/LocationUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WarAndPeace/Locations/LocationUI.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationAnimation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationAnimation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LocationUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LocationUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DpaMonitoringSettings">
-    <option name="autoShow" value="false" />
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -50,9 +32,6 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3cd210281d094c12b126fa8d34c6496119000/90/780630f7/AudioListener.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5c2380b11c444983ac3ffcbc73d04ba8255000/d3/c51e3ea3/IMGUIContainer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/TextureSizeBuildPreprocessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/ArtefactWinAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/BaseAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -78,27 +57,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.5005192&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;UIRework&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "XThreadsFramesViewSplitterKey": "0.5005192",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "UIRework",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/UnityBuild/WarAndPeace\WarAndPeace.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\marie\UnityBuild\WarAndPeace" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
@@ -106,7 +93,9 @@
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
@@ -114,27 +103,40 @@
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business" />
       <option name="PASS_PARENT_ENVS" value="1" />
-      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="ENV_FILE_PATHS" value="" />
+      <option name="REDIRECT_INPUT_PATH" value="" />
+      <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list />
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="3764">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="3764" />
       <option name="projectPathOnTarget" />
+      <option name="runtimes">
+        <list>
+          <MonoRuntime />
+        </list>
+      </option>
       <option name="selectedOptions">
         <list />
       </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to" type="UnityDevicePlayer" factoryName="UnityAttachToDevicePlayer">
       <method v="2" />
     </configuration>
   </component>
@@ -195,6 +197,7 @@
       <workItem from="1774603755971" duration="90000" />
       <workItem from="1775730720538" duration="903000" />
       <workItem from="1776325391233" duration="3123000" />
+      <workItem from="1776449532422" duration="1916000" />
     </task>
     <servers />
   </component>
@@ -224,6 +227,22 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.Tasks.TaskCanceledException" breakIfHandledByOtherCode="false" displayValue="System.Threading.Tasks.TaskCanceledException" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
+          <properties exception="System.Threading.ThreadAbortException" breakIfHandledByOtherCode="false" displayValue="System.Threading.ThreadAbortException" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Locations.LocationDefinition" memberName="CurrentOwner" />

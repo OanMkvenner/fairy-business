@@ -11,19 +11,20 @@ namespace Locations
     public class LocationManager : MonobehaviourSingletonCustom<LocationManager>
     {
         public static event Action<LocationDefinition> OnNewLocationCreatedEvent; 
-        public List<LocationDefinition> SelectedLocations { get; private set; } = new List<LocationDefinition>();
-        public List<LocationDefinition> GameLocations { get; private set; } 
+        public List<LocationDefinition> SelectedLocations { get; private set; } = new ();
+        [field: SerializeField] public List<LocationDefinition> GameLocations { get; private set; } = new();
 
+        [Header("Selection Field")]
         [SerializeField] private List<LocationData> locationDataCollection;
         [SerializeField] private LocationDefinition locationDefinitionPrefab;
         [SerializeField] private Transform locationsParent;
 
-        [Header("GameField")]
+        [Header("Game Field")]
         [SerializeField] private Transform gameFieldParent;
         [SerializeField] private PlayerLine[] lines = new PlayerLine[3];
         [SerializeField] private List<Sprite> artefactsSprites = new();
 
-        private readonly List<LocationDefinition> allAvailableLocations = new List<LocationDefinition>();
+        private readonly List<LocationDefinition> allAvailableLocations = new ();
         private LocationAnimation locationAnimation;
 
         private void Awake()
@@ -33,20 +34,14 @@ namespace Locations
 
         public void CreateGameLocations()
         {
-            GameLocations = new List<LocationDefinition>();
-
-            foreach (var locationDefinition in SelectedLocations)
+            Debug.Log(SelectedLocations.Count + " Count");
+            for (int index = 0; index < SelectedLocations.Count; index++)
             {
-                LocationDefinition gameLocationDefinition = Instantiate(locationDefinitionPrefab, gameFieldParent);
-                gameLocationDefinition.InitializeLocationDefinition(locationDefinition.LocationData, true);
-                gameLocationDefinition.IsSelected = true;
-
-                GameLocations.Add(gameLocationDefinition);
+                Debug.Log($"{index} + {GameLocations.Count} + {SelectedLocations.Count}");
+                GameLocations[index].InitializeLocationDefinition(SelectedLocations[index].LocationData, true);
+                GameLocations[index].IsSelected = true;
+                GameLocations[index].PlayerLine = lines[index];
             }
-
-            GameLocations[0].PlayerLine = lines[0];
-            GameLocations[1].PlayerLine = lines[1];
-            GameLocations[2].PlayerLine = lines[2];
             
             AssignLocationOwner();
 
@@ -55,18 +50,6 @@ namespace Locations
                 gameLocation.SetPosition(gameLocation.PlayerLine.neutralPosition.position);
                 OnNewLocationCreatedEvent?.Invoke(gameLocation);
             }
-        }
-
-        public void ResetGameLocations()
-        {
-            if (GameLocations == null)
-                return;
-            
-            foreach (LocationDefinition child in GameLocations) {
-                Destroy(child.gameObject);
-            }
-            
-            GameLocations.Clear();
         }
 
         public void ResetSelectedLocations()

@@ -22,7 +22,7 @@ namespace UI.Menu
         private void OnReturnToStartScreenButtonClicked()
         {
             CloseMenu();
-            LocationManager.instance.ResetGameLocations();
+            
             UiManager.CallbackUiEvent("MainMenu");
         }
     }

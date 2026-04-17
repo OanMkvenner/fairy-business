@@ -24,8 +24,6 @@ namespace UI.Gameplay
             turnCounter--;
             
             roundBubbles[roundCount-1].sprite = turnImages[turnCounter];
-
-            Debug.Log(roundCount - 1 + ". Runde, " + turnCounter + ". Zug");
         }
 
         public void UpdateRoundCount(int count)

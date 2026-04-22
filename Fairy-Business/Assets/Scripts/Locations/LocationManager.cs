@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using HelperClasses;
 using Player;
 using UI.Menu.BaseMenu;
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Locations
@@ -13,11 +13,13 @@ namespace Locations
         public static event Action<LocationDefinition> OnNewLocationCreatedEvent; 
         public List<LocationDefinition> SelectedLocations { get; private set; } = new ();
         [field: SerializeField] public List<LocationDefinition> GameLocations { get; private set; } = new();
-
+        
         [Header("Selection Field")]
-        [SerializeField] private List<LocationData> locationDataCollection;
-        [SerializeField] private LocationDefinition locationDefinitionPrefab;
-        [SerializeField] private Transform locationsParent;
+        [SerializeField] private List<LocationData> baseLocationDataCollection;
+        [SerializeField] private List<LocationData> expertLocationDataCollection;
+        [SerializeField] private LocationDefinition baseLocationPrefab;
+        [SerializeField] private Transform baseLocationsParent;
+        [SerializeField] private Transform expertLocationsParent;
 
         [Header("Game Field")]
         [SerializeField] private Transform gameFieldParent;
@@ -89,8 +91,6 @@ namespace Locations
                 
                 SetupSelectLocation(allAvailableLocations[randomIndex]);
             }
-
-            Debug.Log("Ende");
         }
 
         /// <summary>
@@ -130,10 +130,16 @@ namespace Locations
 
         private void SetUpLocations()
         {
-            foreach (LocationData locationData in locationDataCollection)
+            foreach (LocationData locationData in baseLocationDataCollection)
             {
-                Debug.Log(locationData.name, this);
-                LocationDefinition locationDefinition = Instantiate(locationDefinitionPrefab, locationsParent);
+                LocationDefinition locationDefinition = Instantiate(baseLocationPrefab, baseLocationsParent);
+                locationDefinition.InitializeLocationDefinition(locationData, false);
+                allAvailableLocations.Add(locationDefinition);
+            }
+
+            foreach (LocationData locationData in expertLocationDataCollection)
+            {
+                LocationDefinition locationDefinition = Instantiate(baseLocationPrefab, expertLocationsParent);
                 locationDefinition.InitializeLocationDefinition(locationData, false);
                 allAvailableLocations.Add(locationDefinition);
             }

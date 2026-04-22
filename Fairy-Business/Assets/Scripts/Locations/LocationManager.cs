@@ -82,14 +82,15 @@ namespace Locations
         public void PickRandomLocations()
         {
             SelectedLocations.Clear();
-
-            List<LocationDefinition> shuffledLocations = allAvailableLocations.Shuffled();
-
-            // Nimm die ersten 3 (oder weniger, falls die Liste kürzer ist)
-            for (int i = 0; i < Math.Min(3, shuffledLocations.Count); i++)
+            
+            while (SelectedLocations.Count < 3)
             {
-                SetupSelectLocation(shuffledLocations[i]);
+                int randomIndex = UnityEngine.Random.Range(0, allAvailableLocations.Count);
+                
+                SetupSelectLocation(allAvailableLocations[randomIndex]);
             }
+
+            Debug.Log("Ende");
         }
 
         /// <summary>

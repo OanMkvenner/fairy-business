@@ -69,8 +69,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             LocationManager.instance.SelectedLocations.Clear();
     }
 
-    private void ResetGameSession()
-    {
+    private void ResetGamesession(){
+        
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
         roundCounter = 0; // first "NextTurn" action iterates this up to 1
         victoryPointCounters = new();
@@ -85,7 +85,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
     public void NewRound()
     {
-        ResetGameSession();
+        ResetGamesession();
         
         LocationManager.instance.CreateGameLocations();
         
@@ -434,7 +434,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                             .GameLocations[turnLocations[actingPlayer].locationNumber]
                             .AddPlayerPower(actingPlayer, turnActions[actingPlayer].value + politicsMod);
 
-                        // Recalculate power totals and determine new controller    
+                        // Recalculate power totals and determine new controller
                         LocationManager.instance
                             .GameLocations[turnLocations[actingPlayer].locationNumber]
                             .FinalizePowerAndDetermineWinner();
@@ -576,8 +576,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // Move to the next turn
         NextTurn();
     }
-
-
+    
     private void EndOfTurnEffects(){
         
         foreach (LocationDefinition loc in LocationManager.instance.GameLocations)
@@ -644,6 +643,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         
         if (turnCounter == 1 && roundCounter > 1){
             
+            // apply owned territory points to main score
             foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
                 
                 if(!loc.AreVictoryPointsApplied)

@@ -54,6 +54,10 @@ namespace Locations
 
                 //Set the scale and size of parent
                 location.transform.SetParent(location.PlayerLine.neutralPosition);
+                location.RectTransform.anchorMin = Vector2.zero;
+                location.RectTransform.anchorMax = Vector2.one;
+                location.RectTransform.offsetMin = Vector2.zero;
+                location.RectTransform.offsetMax = Vector2.zero;
             }
         }
     

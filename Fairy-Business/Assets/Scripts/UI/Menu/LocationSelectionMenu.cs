@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using Locations;
 using UI.Menu.BaseMenu;
 using UnityEngine;
@@ -12,7 +13,7 @@ namespace UI.Menu
         [SerializeField] private Button randomLocationButton;
 
         [SerializeField] private GameSession gameSession;
-        [SerializeField] private Transform locationsParent;
+        [SerializeField] private List<Transform> locationsParents = new();
         [SerializeField] private LocationUI locationUI;
  
         private void Awake()
@@ -33,17 +34,24 @@ namespace UI.Menu
             
             LocationManager.instance.ResetSelectedLocations();
             
-            foreach (Transform child in locationsParent.transform) {
-                GameObject.Destroy(child.gameObject);
+            foreach (Transform parentTransform in locationsParents)
+            {
+                parentTransform.Cast<Transform>().ToList().ForEach(child => Destroy(child.gameObject));
             }
         }
 
         private void CreateLocationUICards(List<LocationDefinition> locationDefinitions)
         {
-            foreach (LocationDefinition locationDefenition in locationDefinitions)
+            for (int index = 0; index < locationDefinitions.Count; index++)
             {
-                LocationUI newLocationUI = Instantiate(locationUI, locationsParent);
+                LocationDefinition locationDefenition = locationDefinitions[index];
+                LocationUI newLocationUI = Instantiate(locationUI, locationsParents[index]);
+                newLocationUI.GetComponent<RectTransform>().anchorMin = Vector2.zero;
+                newLocationUI.GetComponent<RectTransform>().anchorMax = Vector2.one;
+                newLocationUI.GetComponent<RectTransform>().offsetMin = Vector2.zero;
+                newLocationUI.GetComponent<RectTransform>().offsetMax = Vector2.zero;
                 locationDefenition.InitializeLocationUI(newLocationUI);
+                
             }
         }
 

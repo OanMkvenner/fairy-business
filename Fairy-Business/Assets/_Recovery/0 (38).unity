@@ -2288,7 +2288,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1108.9479, y: 0}
-  m_SizeDelta: {x: 73.8174, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335081723
 MonoBehaviour:
@@ -3031,8 +3031,6 @@ MonoBehaviour:
   - {fileID: 1040929938}
   - {fileID: 1625002656}
   - {fileID: 535178557}
-  defaultTurnImage: {fileID: -9075454117376800757, guid: 3cf0bb5dc52e11042a861915dda6cd6f,
-    type: 3}
 --- !u!1 &476597457
 GameObject:
   m_ObjectHideFlags: 0
@@ -13742,7 +13740,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 123.21643, y: 0}
-  m_SizeDelta: {x: 73.8174, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966147833
 MonoBehaviour:
@@ -13795,7 +13793,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 616.08215, y: 0}
-  m_SizeDelta: {x: 9.227175, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1979516076
 MonoBehaviour:

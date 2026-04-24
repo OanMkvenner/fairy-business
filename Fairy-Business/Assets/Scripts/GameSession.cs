@@ -76,6 +76,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         victoryPointCounters = new();
         victoryPointCounters[PlayerColor.Blue] = 0;
         victoryPointCounters[PlayerColor.Red] = 0;
+        
+        turnRoundUI.ResetUI();
 
         UpdateVictoryPointDisplay();
         disallowNewCards = false;

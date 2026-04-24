@@ -11,6 +11,7 @@ namespace UI.Gameplay
         [SerializeField] private TextMeshProUGUI maxCount;
         [SerializeField] private List<Sprite> turnImages;
         [SerializeField] private List<Image> roundBubbles;
+        [SerializeField] private Sprite defaultTurnImage;
 
         private int roundCount;
 
@@ -34,6 +35,16 @@ namespace UI.Gameplay
             roundCount = count;
             
             roundText.text = count.ToString(); 
+        }
+
+        public void ResetUI()
+        {
+            roundText.text = "0";
+
+            foreach (Image bubble in roundBubbles)
+            {
+                bubble.sprite = defaultTurnImage;
+            }
         }
     }
 }

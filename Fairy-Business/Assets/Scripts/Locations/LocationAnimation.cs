@@ -27,6 +27,8 @@ namespace Locations
                     return;
                 }
                 
+                Sequence locationSequence = DOTween.Sequence();
+                
                 Transform targetPositionTransform = GetTargetTransform(location.CurrentOwner, location.PlayerLine);
                 
                 if (targetPositionTransform == null)
@@ -47,17 +49,20 @@ namespace Locations
                 Tween rotateHoverButton = location.LocationHoverButtons[0].transform.parent.GetComponent<RectTransform>()
                     .DORotate(new Vector3(0, 0, 0), duration);
 
-                sequence.Join(moveTween);
-                sequence.Join(rotateTween);
-                sequence.Join(rotateHoverButton);
-                sequence.Append(popArtifact);
+                locationSequence.Join(moveTween);
+                locationSequence.Join(rotateTween);
+                locationSequence.Join(rotateHoverButton);
+                locationSequence.Append(popArtifact).OnComplete(() =>
+                {
+                    //Set the scale and size of parent
+                    location.transform.SetParent(targetPositionTransform);
+                    location.RectTransform.anchorMin = Vector2.zero;
+                    location.RectTransform.anchorMax = Vector2.one;
+                    location.RectTransform.offsetMin = Vector2.zero;
+                    location.RectTransform.offsetMax = Vector2.zero;
+                });
 
-                //Set the scale and size of parent
-                location.transform.SetParent(targetPositionTransform);
-                location.RectTransform.anchorMin = Vector2.zero;
-                location.RectTransform.anchorMax = Vector2.one;
-                location.RectTransform.offsetMin = Vector2.zero;
-                location.RectTransform.offsetMax = Vector2.zero;
+                sequence.Join(locationSequence);
             }
         }
     

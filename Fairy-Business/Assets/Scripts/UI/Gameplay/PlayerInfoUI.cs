@@ -25,7 +25,6 @@ namespace UI.Gameplay
             scoreBackground = GetComponent<Image>();
             defaultScoreSprite = scoreBackground.sprite;
             
-            LocationDefinition.OnNewPowerAddedEvent += SetTurnPoints;
             LocationDefinition.OnCurrentOwnerChangedEvent += ChangeScoreBackground;
             LocationManager.OnNewLocationCreatedEvent += AssignLocationKeyword;
             
@@ -33,7 +32,6 @@ namespace UI.Gameplay
 
         private void OnDestroy()
         {
-            LocationDefinition.OnNewPowerAddedEvent -= SetTurnPoints;
             LocationDefinition.OnCurrentOwnerChangedEvent -= ChangeScoreBackground;
             LocationManager.OnNewLocationCreatedEvent -= AssignLocationKeyword;
         }
@@ -51,18 +49,6 @@ namespace UI.Gameplay
             
             int victoryPoints = locationDefinition.VictoryPoints;
             this.locationVictoryPoints.text = victoryPoints.ToString();
-        }
-        
-        private void SetTurnPoints(PlayerColor currentPlayerColor, LocationDefinition locationDefinition)
-        {
-            if (playerColor != currentPlayerColor)
-                return;
-            
-            if (locationDefinition.PlayerLine.line != this.line)
-                return;
-            
-            int power = locationDefinition.GetPlayerPower(currentPlayerColor);
-            this.locationVictoryPoints.text = power.ToString();
         }
 
         private void ChangeScoreBackground(LocationDefinition locationDefinition)

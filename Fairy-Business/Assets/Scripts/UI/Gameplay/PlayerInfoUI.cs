@@ -14,7 +14,7 @@ namespace UI.Gameplay
         [SerializeField] private Sprite highestScoreSprite;
 
         [Space]
-        [SerializeField] private TextMeshProUGUI power;
+        [SerializeField] private TextMeshProUGUI locationVictoryPoints;
         [SerializeField] private TextMeshProUGUI keyword;
 
         private Image scoreBackground;
@@ -48,6 +48,9 @@ namespace UI.Gameplay
                 activeLanguageCode);
             
             keyword.text = localizedKeyword;
+            
+            int victoryPoints = locationDefinition.VictoryPoints;
+            this.locationVictoryPoints.text = victoryPoints.ToString();
         }
         
         private void SetTurnPoints(PlayerColor currentPlayerColor, LocationDefinition locationDefinition)
@@ -59,7 +62,7 @@ namespace UI.Gameplay
                 return;
             
             int power = locationDefinition.GetPlayerPower(currentPlayerColor);
-            this.power.text = power.ToString();
+            this.locationVictoryPoints.text = power.ToString();
         }
 
         private void ChangeScoreBackground(LocationDefinition locationDefinition)

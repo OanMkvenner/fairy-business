@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 46.64589, y: -38.763046}
-  m_SizeDelta: {x: 93.29178, y: 0}
+  m_AnchoredPosition: {x: 36.023598, y: -29.81223}
+  m_SizeDelta: {x: 72.047195, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4972953436331596277
 CanvasRenderer:
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 7855244314810780839}
   - component: {fileID: 1577641251805615485}
   m_Layer: 5
-  m_Name: LocationPoints
+  m_Name: VictoryPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 0
-  m_AspectRatio: 2.5551581
+  m_AspectRatio: 1.9732926
 --- !u!1 &5212000952467259164
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +429,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 45.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -647,7 +647,7 @@ MonoBehaviour:
   line: 0
   playerColor: 0
   highestScoreSprite: {fileID: 0}
-  power: {fileID: 4856669030599699911}
+  locationVictoryPoints: {fileID: 4856669030599699911}
   keyword: {fileID: 180368280664152980}
 --- !u!114 &6271202068663786917
 MonoBehaviour:

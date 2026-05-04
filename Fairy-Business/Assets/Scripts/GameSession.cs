@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using ComponentsHYBR.Utilities;
 using TMPro;
 using UnityEngine;
@@ -34,6 +33,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         get => victoryPointCounters;
         private set => victoryPointCounters = value;
     }
+    
+    [HideInInspector] public bool IsEndOfGame { get; private set; }
 
     [SerializeField] private int maxRoundCount;
 
@@ -47,6 +48,9 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     private Dictionary<PlayerColor, int> victoryPointCounters;
     
     private Coroutine sendEventCoroutine;
+
+    private readonly float eventDelayTime = 2f;
+    private readonly float openDisplayMenuDelayTime = 2f;
 
     private void Start() {
 
@@ -76,6 +80,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         victoryPointCounters = new();
         victoryPointCounters[PlayerColor.Blue] = 0;
         victoryPointCounters[PlayerColor.Red] = 0;
+        IsEndOfGame = false;
         
         turnRoundUI.ResetUI();
 
@@ -574,9 +579,19 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
         // Check whether any win/end-game conditions have been met
         CheckEndGame();
+        
+        // I don't like it, but I don't want to fix the mess someone else did, we open the control display menu after 2f sec,
+        // bc we wait for animations to finish
+        StartCoroutine(OpenControlDisplayMenu());
 
         // Move to the next turn
         NextTurn();
+    }
+
+    private IEnumerator OpenControlDisplayMenu()
+    {
+        yield return new WaitForSeconds(openDisplayMenuDelayTime);
+        MenuManager.instance.OpenMenu(MenuIdentifier.ControlDisplayMenu);
     }
     
     private void EndOfTurnEffects(){
@@ -605,7 +620,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
     private IEnumerator SendEvent()
     {
-        yield return new WaitForSeconds(2f);
+        //we wait until screen animations are finished
+        yield return new WaitForSeconds(eventDelayTime);
         OnTurnReset?.Invoke();
         sendEventCoroutine = null;
     }
@@ -738,17 +754,12 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
     private bool CheckEndGame(){
         
-        if (roundCounter >= maxRoundCount){
-            FinishGameAndShowWinner();
-            return true;
-        }
-        
-        return false;
-    }
-
-    private void FinishGameAndShowWinner(){
+        if (roundCounter < maxRoundCount) 
+            return IsEndOfGame;
         
         disallowNewCards = true;
-        MenuManager.instance.OpenMenu(MenuIdentifier.WinScreen);
+        IsEndOfGame = true;
+
+        return IsEndOfGame;
     }
 }

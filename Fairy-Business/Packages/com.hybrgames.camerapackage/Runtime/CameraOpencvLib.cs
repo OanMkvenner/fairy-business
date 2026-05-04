@@ -324,7 +324,8 @@ public class CameraOpencvLib : MonoBehaviour
     public void _StopScanning(){
         StopScanning();
     }
-    static public void StartScanning()
+    
+    public static void StartScanning()
     {
         // if we ordered a camera stop, no point in actually stopping now!
         instance.cameraStopOrdered = false;
@@ -332,7 +333,8 @@ public class CameraOpencvLib : MonoBehaviour
         instance.cameraStartingOrdered = true;
         instance.scanningPaused = false;
     }
-    static public void StopScanning()
+    
+    public static void StopScanning()
     {
         // cant stop Camera while last image ist sill being processed! (would release used buffer)
         instance.cameraStopOrdered = true;

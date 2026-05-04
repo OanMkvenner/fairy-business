@@ -70,7 +70,9 @@ public class CardInput : MonoBehaviour {
     float evaluationSuccessTime = float.PositiveInfinity;
     float evaluationResetTime = float.PositiveInfinity;
     float timeToAllowSameCardAgain = 0;
+    
     public void CheckNewCardReceived(){
+        
         ScanResult newScanResult;
         // check Scan override
         if (scanInputOverride != null)

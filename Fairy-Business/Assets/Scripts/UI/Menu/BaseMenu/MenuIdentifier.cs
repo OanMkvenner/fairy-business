@@ -8,5 +8,6 @@ namespace UI.Menu.BaseMenu
         WinScreen = 3,
         HoverSelectionMenu = 4,
         SettingsMenu = 5,
+        ControlDisplayMenu = 6,
     }
 }

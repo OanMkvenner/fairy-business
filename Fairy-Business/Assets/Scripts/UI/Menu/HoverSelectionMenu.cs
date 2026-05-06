@@ -24,6 +24,7 @@ namespace UI.Menu
         [Space]
         [SerializeField] private TextMeshProUGUI artefactTitleText;
         [SerializeField] private TextMeshProUGUI artefactDescriptionText;
+        [SerializeField] private Image artefactIcon;
         [Header("Objects that are disabled in selection view")]
         [SerializeField] private List<GameObject> objectsToDisableWhileNotInGameView;
 
@@ -71,6 +72,8 @@ namespace UI.Menu
             artefactDescriptionText.text = Localizer.instance.TranslateToSpecificLanguage(
                 hoveredLocation.LocationData.localizationDescriptionText,
                 activeLanguageCode);
+
+            artefactIcon.sprite = hoveredLocation.LocationData.artefactIcon;
             
             base.OpenMenu();
         }
@@ -90,10 +93,13 @@ namespace UI.Menu
             switch (playerColorIdentifier)
             {
                 case PlayerColorIdentifier.Blue:
+                    currentOwnerBackground.color = Color.blue;
                     return bluePlayerLocalization;
                 case PlayerColorIdentifier.Red:
+                    currentOwnerBackground.color = Color.red;
                     return redPlayerLocalization;
                 default:
+                    currentOwnerBackground.color = Color.white;
                     return neutralPlayerLocalization;
             }
         }

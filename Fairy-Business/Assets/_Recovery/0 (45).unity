@@ -2639,7 +2639,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1126.9718, y: 0}
-  m_SizeDelta: {x: 73.8174, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335081723
 MonoBehaviour:
@@ -10233,8 +10233,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14938,7 +14938,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 742.3888, y: 0}
-  m_SizeDelta: {x: 150, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1956986582
 MonoBehaviour:
@@ -15050,10 +15050,9 @@ MonoBehaviour:
   bankNameText: {fileID: 1290780577}
   bankIconImage: {fileID: 1956986582}
   currentOwnerText: {fileID: 1376712623}
-  currentOwnerBackground: {fileID: 2002888224}
+  currentOwnerBackground: {fileID: 0}
   artefactTitleText: {fileID: 933793538}
   artefactDescriptionText: {fileID: 1033301319}
-  artefactIcon: {fileID: 1488833187}
   objectsToDisableWhileNotInGameView:
   - {fileID: 2002888222}
   - {fileID: 263696612}
@@ -15092,7 +15091,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 125.21912, y: 0}
-  m_SizeDelta: {x: 73.8174, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966147833
 MonoBehaviour:
@@ -15145,7 +15144,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 626.09546, y: 0}
-  m_SizeDelta: {x: 9.227175, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1979516076
 MonoBehaviour:

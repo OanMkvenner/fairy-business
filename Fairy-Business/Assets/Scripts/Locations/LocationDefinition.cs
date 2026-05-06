@@ -13,7 +13,7 @@ namespace Locations
     [RequireComponent((typeof(RectTransform)), (typeof(MoveRotateObject)))]
     public class LocationDefinition : MonoBehaviour
     {
-        public static event Action<PlayerColor, LocationDefinition> OnNewPowerAddedEvent;
+        public static event Action<PlayerColorIdentifier, LocationDefinition> OnNewPowerAddedEvent;
         public static event Action<LocationDefinition> OnCurrentOwnerChangedEvent;
         public static event Action<LocationsIdentifier, bool> OnLocationSelectedEvent;
         public LocationsIdentifier LocationIdentifier => LocationData.LocationIdentifier;
@@ -22,8 +22,9 @@ namespace Locations
         public bool IsLocationBlocked { get; private set; }
         public LocationData LocationData { get; private set; }
         public PlayerLine PlayerLine { get; set; }
+        public BankWrapper BankWrapper { get; private set; }
         public RectTransform RectTransform { get; private set; }
-        public PlayerColor CurrentOwner
+        public PlayerColorIdentifier CurrentOwner
         {
             get => currentOwner;
             set
@@ -37,13 +38,13 @@ namespace Locations
                 currentOwner = value;
                 
                 //Commented out bc of artefacts now moving and not locations anymore
-                locationImage.sprite = currentOwner == PlayerColor.Neutral ? imageDisabled : imageEnabled;
+                locationImage.sprite = currentOwner == PlayerColorIdentifier.Neutral ? imageDisabled : imageEnabled;
 
                 OnCurrentOwnerChangedEvent?.Invoke(this);
             }
         }
         public MoveRotateObject MoveObject { get; private set; }
-        public PlayerColor LastOwner { get; private set; }
+        public PlayerColorIdentifier LastOwner { get; private set; }
         public List<LocationHoverButton> LocationHoverButtons => locationHoverButtons;
         [field: SerializeField] public GameObject Artifact { get; set; }
 
@@ -56,8 +57,8 @@ namespace Locations
         private Sprite imageEnabled;
         private Sprite imageDisabled;
         private LocationUI currenLocatioUI;
-        private PlayerColor currentOwner = PlayerColor.None;
-        private Dictionary<PlayerColor, int> power = new();
+        private PlayerColorIdentifier currentOwner = PlayerColorIdentifier.None;
+        private Dictionary<PlayerColorIdentifier, int> power = new();
         
         private bool isSelected;
         private LocationsIdentifier CouplingLocationIdentifier => LocationData.CouplingIdentifier;
@@ -87,11 +88,13 @@ namespace Locations
             OnLocationSelectedEvent -= BlockSelection;
         }
 
-        public void InitializeLocationDefinition(LocationData data, bool isGameView)
+        public void InitializeLocationDefinition(LocationData data, bool isGameView, BankWrapper bankWrapper = null)
         {
             this.LocationData = data;
             this.imageEnabled = data.imageEnabled;
             this.imageDisabled = data.imageDisabled;
+            
+            if(bankWrapper != null) this.BankWrapper = bankWrapper;
 
             UpdateVisuals();
 
@@ -122,7 +125,7 @@ namespace Locations
             currenLocatioUI.Init(imageEnabled, locationTitle, locationDescription);
         }
         
-        public void AddPlayerPower(PlayerColor playerIdx, int newPower)
+        public void AddPlayerPower(PlayerColorIdentifier playerIdx, int newPower)
         {
             if (power.ContainsKey(playerIdx))
                 power[playerIdx] += newPower;
@@ -134,13 +137,13 @@ namespace Locations
             OnNewPowerAddedEvent?.Invoke(playerIdx, this);
         }
 
-        public void SetPlayerPower(PlayerColor playerIdx, int newPower)
+        public void SetPlayerPower(PlayerColorIdentifier playerIdx, int newPower)
         {
             power[playerIdx] = Math.Max(0, newPower);
             OnNewPowerAddedEvent?.Invoke(playerIdx, this);
         }
 
-        public int GetPlayerPower(PlayerColor playerIdx){
+        public int GetPlayerPower(PlayerColorIdentifier playerIdx){
             return power[playerIdx];
         }
 
@@ -149,20 +152,20 @@ namespace Locations
         /// </summary>
         public void FinalizePowerAndDetermineWinner()
         {
-            int blue = power.ContainsKey(PlayerColor.Blue) ? power[PlayerColor.Blue] : 0;
-            int red = power.ContainsKey(PlayerColor.Red) ? power[PlayerColor.Red] : 0;
-            int neutral = power.ContainsKey(PlayerColor.Neutral) ? power[PlayerColor.Neutral] : 0;
+            int blue = power.ContainsKey(PlayerColorIdentifier.Blue) ? power[PlayerColorIdentifier.Blue] : 0;
+            int red = power.ContainsKey(PlayerColorIdentifier.Red) ? power[PlayerColorIdentifier.Red] : 0;
+            int neutral = power.ContainsKey(PlayerColorIdentifier.Neutral) ? power[PlayerColorIdentifier.Neutral] : 0;
 
-            PlayerColor winner;
+            PlayerColorIdentifier winner;
 
             if (blue == red)
-                winner = PlayerColor.Neutral;
+                winner = PlayerColorIdentifier.Neutral;
             else if (red > blue && red > neutral)
-                winner = PlayerColor.Red;
+                winner = PlayerColorIdentifier.Red;
             else if (blue > red && blue > neutral)
-                winner = PlayerColor.Blue;
+                winner = PlayerColorIdentifier.Blue;
             else
-                winner = PlayerColor.Neutral;
+                winner = PlayerColorIdentifier.Neutral;
 
             CurrentOwner = winner;
         }

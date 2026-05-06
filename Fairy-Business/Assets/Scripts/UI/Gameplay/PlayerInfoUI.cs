@@ -10,7 +10,7 @@ namespace UI.Gameplay
     public class PlayerInfoUI : MonoBehaviour
     {
         [SerializeField] private LineIdentifier line;
-        [SerializeField] private PlayerColor playerColor;
+        [SerializeField] private PlayerColorIdentifier playerColorIdentifier;
         [SerializeField] private Sprite highestScoreSprite;
 
         [Space]
@@ -56,7 +56,7 @@ namespace UI.Gameplay
             if (locationDefinition.PlayerLine.line != this.line)
                 return;
             
-            if (locationDefinition.CurrentOwner != playerColor)
+            if (locationDefinition.CurrentOwner != playerColorIdentifier)
             {
                 scoreBackground.sprite = defaultScoreSprite;
             }

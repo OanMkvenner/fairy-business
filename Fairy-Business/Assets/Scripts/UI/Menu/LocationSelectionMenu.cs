@@ -57,6 +57,7 @@ namespace UI.Menu
 
         private void StartNewGame()
         {
+            GameSession.instance.GameHasStarted = true;
             UiManager.CallbackUiEvent("EnoughLocationsSelected");
             CloseMenu();
         }

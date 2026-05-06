@@ -33,7 +33,7 @@ namespace UI.Menu
 
         private void InitializeUI()
         {
-            Dictionary<PlayerColor, int> victoryPoints = GameSession.instance.VictoryPointCounters;
+            Dictionary<PlayerColorIdentifier, int> victoryPoints = GameSession.instance.VictoryPointCounters;
 
             string activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
             string win = Localizer.instance.TranslateToSpecificLanguage("winGame", 
@@ -41,12 +41,12 @@ namespace UI.Menu
             string lost = Localizer.instance.TranslateToSpecificLanguage("looseGame", 
                 activeLanguageCode);
             
-            if (victoryPoints[PlayerColor.Red] > victoryPoints[PlayerColor.Blue]){
+            if (victoryPoints[PlayerColorIdentifier.Red] > victoryPoints[PlayerColorIdentifier.Blue]){
             
                 gameStateTextPlayerRed.text = win;
                 gameStateTextPlayerBlue.text = lost;
             
-            } else if (victoryPoints[PlayerColor.Red] < victoryPoints[PlayerColor.Blue]){
+            } else if (victoryPoints[PlayerColorIdentifier.Red] < victoryPoints[PlayerColorIdentifier.Blue]){
             
                 gameStateTextPlayerRed.text = lost;
                 gameStateTextPlayerBlue.text = win;
@@ -55,13 +55,14 @@ namespace UI.Menu
             string locationVictoryPoint = Localizer.instance.TranslateToSpecificLanguage("victoryPoints", 
                 activeLanguageCode);
 
-            victoryPointsPlayerBlue.text = $"{locationVictoryPoint}: {victoryPoints[PlayerColor.Blue]}";
-            victoryPointsPlayerRed.text = $"{locationVictoryPoint}: {victoryPoints[PlayerColor.Red]}";
+            victoryPointsPlayerBlue.text = $"{locationVictoryPoint}: {victoryPoints[PlayerColorIdentifier.Blue]}";
+            victoryPointsPlayerRed.text = $"{locationVictoryPoint}: {victoryPoints[PlayerColorIdentifier.Red]}";
         }
 
         private void ReturnToStartButton()
         {
             CloseMenu();
+            GameSession.instance.GameHasStarted = false;
             UiManager.CallbackUiEvent("MainMenu");
         }
     }

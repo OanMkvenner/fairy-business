@@ -7,7 +7,7 @@ namespace Animation.AnimationController
     public class ArtefactWinAnimationController : BaseAnimationController
     {
         [SerializeField] private LineIdentifier line;
-        [SerializeField] private PlayerColor playerColor;
+        [SerializeField] private PlayerColorIdentifier playerColorIdentifier;
         [SerializeField] private RectTransform rectTransform;
         
         protected override void Awake()
@@ -27,7 +27,7 @@ namespace Animation.AnimationController
             if (locationDefinition.PlayerLine.line != line)
                 return;
             
-            if (locationDefinition.CurrentOwner != playerColor || locationDefinition.CurrentOwner == PlayerColor.Neutral)
+            if (locationDefinition.CurrentOwner != playerColorIdentifier || locationDefinition.CurrentOwner == PlayerColorIdentifier.Neutral)
             {
                 rectTransform.localScale = Vector3.zero;
                 return;

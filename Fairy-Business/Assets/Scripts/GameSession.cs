@@ -23,18 +23,19 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     public int MaxRoundCount => maxRoundCount;
     public static event Action<LocationDefinition, int> OnSpyCardPlayed;
     public static event Action OnTurnReset;
-    public static event Action<PlayerColor, ScanAction> OnCardScanned;
+    public static event Action<PlayerColorIdentifier, ScanAction> OnCardScanned;
     
     public CardInput cardInput;
     public Image ScanEffect;
 
-    public Dictionary<PlayerColor, int> VictoryPointCounters
+    public Dictionary<PlayerColorIdentifier, int> VictoryPointCounters
     {
         get => victoryPointCounters;
         private set => victoryPointCounters = value;
     }
     
-    [HideInInspector] public bool IsEndOfGame { get; private set; }
+    public bool IsEndOfGame { get; private set; }
+    public bool GameHasStarted { get; set; }
 
     [SerializeField] private int maxRoundCount;
 
@@ -45,7 +46,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
     private int roundCounter;
 
-    private Dictionary<PlayerColor, int> victoryPointCounters;
+    private Dictionary<PlayerColorIdentifier, int> victoryPointCounters;
     
     private Coroutine sendEventCoroutine;
 
@@ -78,8 +79,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
         roundCounter = 0; // first "NextTurn" action iterates this up to 1
         victoryPointCounters = new();
-        victoryPointCounters[PlayerColor.Blue] = 0;
-        victoryPointCounters[PlayerColor.Red] = 0;
+        victoryPointCounters[PlayerColorIdentifier.Blue] = 0;
+        victoryPointCounters[PlayerColorIdentifier.Red] = 0;
         IsEndOfGame = false;
         
         turnRoundUI.ResetUI();
@@ -102,9 +103,9 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         NextTurn(); 
     }
 
-    private PlayerColor CheckLocationOwner(LocationsIdentifier location){
+    private PlayerColorIdentifier CheckLocationOwner(LocationsIdentifier location){
         
-        PlayerColor currentMarketOwner = PlayerColor.Neutral;
+        PlayerColorIdentifier currentMarketOwner = PlayerColorIdentifier.Neutral;
         
         foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
             if (loc.LocationIdentifier == location){
@@ -123,7 +124,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 continue;
             
             // on tie, whoever currently owns the special place becomes the new owner! (if its part of the current match, otherwise its Neutral)
-            PlayerColor tieLocationOwner = CheckLocationOwner(LocationsIdentifier.GingerbreadHouse);
+            PlayerColorIdentifier tieLocationOwner = CheckLocationOwner(LocationsIdentifier.GingerbreadHouse);
             loc.CurrentOwner = tieLocationOwner;
             
         }
@@ -178,8 +179,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         public int locationNumber;
     }
 
-    Dictionary<PlayerColor, TurnAction> turnActions = new();
-    Dictionary<PlayerColor, TurnLocation> turnLocations = new();
+    Dictionary<PlayerColorIdentifier, TurnAction> turnActions = new();
+    Dictionary<PlayerColorIdentifier, TurnLocation> turnLocations = new();
 
     public void AddTurnAction(Card card){
         if (disallowNewCards)
@@ -224,8 +225,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // remember action/location
         if (card.playerColor == "Blue"){
             if (actionFound) {
-                turnActions[PlayerColor.Blue] = turnAction;
-                NewActionLoggedIn(PlayerColor.Blue);
+                turnActions[PlayerColorIdentifier.Blue] = turnAction;
+                NewActionLoggedIn(PlayerColorIdentifier.Blue);
             }
             if (locationFound) {
                 if (LocationManager.instance.GameLocations[turnLocation.locationNumber] == null){
@@ -233,14 +234,14 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     Debug.LogError($"Location {turnLocation.locationNumber} is not part of the current match!");
                     return;
                 }
-                turnLocations[PlayerColor.Blue] = turnLocation;
-                NewLocationLoggedIn(PlayerColor.Blue);
+                turnLocations[PlayerColorIdentifier.Blue] = turnLocation;
+                NewLocationLoggedIn(PlayerColorIdentifier.Blue);
             }
         }
         if (card.playerColor == "Red"){
             if (actionFound) {
-                turnActions[PlayerColor.Red] = turnAction;
-                NewActionLoggedIn(PlayerColor.Red);
+                turnActions[PlayerColorIdentifier.Red] = turnAction;
+                NewActionLoggedIn(PlayerColorIdentifier.Red);
             }
             if (locationFound) {
                 if (LocationManager.instance.GameLocations[turnLocation.locationNumber] == null){
@@ -249,8 +250,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     return;
                 }
                 
-                turnLocations[PlayerColor.Red] = turnLocation;
-                NewLocationLoggedIn(PlayerColor.Red);
+                turnLocations[PlayerColorIdentifier.Red] = turnLocation;
+                NewLocationLoggedIn(PlayerColorIdentifier.Red);
             }
         }
         
@@ -268,41 +269,41 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             .SetLoops(2, LoopType.Yoyo);
     }
 
-    private void NewActionLoggedIn(PlayerColor playerColor){
-        OnCardScanned?.Invoke(playerColor, ScanAction.ControlCard);
+    private void NewActionLoggedIn(PlayerColorIdentifier playerColorIdentifier){
+        OnCardScanned?.Invoke(playerColorIdentifier, ScanAction.ControlCard);
         Sounds.instance.Play("ConfirmScannedCard");
     }
 
-    private void NewLocationLoggedIn(PlayerColor playerColor){
-        OnCardScanned?.Invoke(playerColor, ScanAction.CreditCard);
+    private void NewLocationLoggedIn(PlayerColorIdentifier playerColorIdentifier){
+        OnCardScanned?.Invoke(playerColorIdentifier, ScanAction.CreditCard);
         Sounds.instance.Play("ConfirmScannedCard");
     }
 
     private void CheckTurnComplete(){
         
-        if (turnActions[PlayerColor.Blue] != null && turnLocations[PlayerColor.Blue] != null && turnActions[PlayerColor.Red] != null && turnLocations[PlayerColor.Red] != null){
+        if (turnActions[PlayerColorIdentifier.Blue] != null && turnLocations[PlayerColorIdentifier.Blue] != null && turnActions[PlayerColorIdentifier.Red] != null && turnLocations[PlayerColorIdentifier.Red] != null){
             SolveTurn();
         } else {
             // more actions/locations needed for turn to resolve
         }
     }
     
-    PlayerColor[] playerColors= new PlayerColor[]{
-        PlayerColor.Red,
-        PlayerColor.Blue,
+    PlayerColorIdentifier[] playerColors= new PlayerColorIdentifier[]{
+        PlayerColorIdentifier.Red,
+        PlayerColorIdentifier.Blue,
     };
 
-    private PlayerColor GetEnemy(PlayerColor firstPlayer)
+    private PlayerColorIdentifier GetEnemy(PlayerColorIdentifier firstPlayer)
     {
         switch (firstPlayer)
         {
-            case PlayerColor.Red:
-                return PlayerColor.Blue;
-            case PlayerColor.Blue:
-                return PlayerColor.Red;
+            case PlayerColorIdentifier.Red:
+                return PlayerColorIdentifier.Blue;
+            case PlayerColorIdentifier.Blue:
+                return PlayerColorIdentifier.Red;
             default:
                 Debug.LogError("invalid color provided");
-                return PlayerColor.Red;
+                return PlayerColorIdentifier.Red;
         }
     }
 
@@ -321,12 +322,12 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // Some locations provide special modifiers (e.g. bonus power or card upgrade).
 
         // Check who owns the Enchanted Forest (gives +1 power on Politics actions)
-        PlayerColor enchantedForestOwner = CheckLocationOwner(LocationsIdentifier.EnchantedForest);
+        PlayerColorIdentifier enchantedForestOwner = CheckLocationOwner(LocationsIdentifier.EnchantedForest);
 
         // Check who owns the Magic Library Expert (upgrades a value 3 card into value 5)
-        PlayerColor magicLibraryExpert = CheckLocationOwner(LocationsIdentifier.MagicLibraryExpert);
+        PlayerColorIdentifier magicLibraryExpert = CheckLocationOwner(LocationsIdentifier.MagicLibraryExpert);
 
-        foreach (PlayerColor actingPlayer in playerColors)
+        foreach (PlayerColorIdentifier actingPlayer in playerColors)
         {
             // Only resolve players who played a Politics card
             if (turnActions[actingPlayer].CardAction == CardAction.Politics)
@@ -364,24 +365,24 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // Several locations modify the way attacks work (bonus attack, attack all locations, etc.).
 
         // Pirate Ship gives +1 attack power
-        PlayerColor sourceOwner = CheckLocationOwner(LocationsIdentifier.PirateShip);
+        PlayerColorIdentifier sourceOwner = CheckLocationOwner(LocationsIdentifier.PirateShip);
 
         // Pirate Ship Expert makes Army attack all locations at half strength
-        PlayerColor WeakAttackOnAllOwner = CheckLocationOwner(LocationsIdentifier.PirateShipExpert);
+        PlayerColorIdentifier WeakAttackOnAllOwner = CheckLocationOwner(LocationsIdentifier.PirateShipExpert);
 
         // Bottom of the Sea Expert awards VP when the enemy drops below 0
-        PlayerColor below0Gain2VPOwner = CheckLocationOwner(LocationsIdentifier.BottomOfTheSeaExpert);
+        PlayerColorIdentifier below0Gain2VPOwner = CheckLocationOwner(LocationsIdentifier.BottomOfTheSeaExpert);
 
         // Gingerbread House Expert converts Army (-) actions into Politics (+) actions
-        PlayerColor gingerbreadExpert = CheckLocationOwner(LocationsIdentifier.GingerbreadHouseExpert);
+        PlayerColorIdentifier gingerbreadExpert = CheckLocationOwner(LocationsIdentifier.GingerbreadHouseExpert);
 
-        foreach (PlayerColor actingPlayer in playerColors)
+        foreach (PlayerColorIdentifier actingPlayer in playerColors)
         {
             // Only resolve players who played an Army card
             if (turnActions[actingPlayer].CardAction == CardAction.Army)
             {
                 // Get the enemy player
-                PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+                PlayerColorIdentifier enemyPlayer = GetEnemy(actingPlayer);
 
                 // Magic Library Expert effect:
                 // Upgrades a value 3 card into value 5.
@@ -474,15 +475,15 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // War actions attempt to wipe enemy power from a location.
         // War can be cancelled if the enemy plays Peace at the same location.
 
-        foreach (PlayerColor actingPlayer in playerColors)
+        foreach (PlayerColorIdentifier actingPlayer in playerColors)
         {
             // Only resolve players who played a War card
             if (turnActions[actingPlayer].CardAction == CardAction.War)
             {
-                PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+                PlayerColorIdentifier enemyPlayer = GetEnemy(actingPlayer);
 
                 // Through the Mirror gives bonus VP when playing War
-                PlayerColor throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
+                PlayerColorIdentifier throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
 
                 // Through the Mirror effect:
                 // If the acting player owns this location and plays War, gain 2 VP immediately.
@@ -509,19 +510,19 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // Peace converts the player's current power at a location into victory points.
         // Peace can be cancelled if the enemy plays War at the same location.
 
-        foreach (PlayerColor actingPlayer in playerColors)
+        foreach (PlayerColorIdentifier actingPlayer in playerColors)
         {
             // Skip players who did not play Peace
             if (turnActions[actingPlayer].CardAction != CardAction.Peace)
                 continue;
 
-            PlayerColor enemyPlayer = GetEnemy(actingPlayer);
+            PlayerColorIdentifier enemyPlayer = GetEnemy(actingPlayer);
 
             // Through the Mirror provides a bonus to Peace conversion
-            PlayerColor throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
+            PlayerColorIdentifier throughTheMirror = CheckLocationOwner(LocationsIdentifier.ThroughTheMirror);
 
             // Enchanted Forest Expert reduces enemy Peace rewards (halves them)
-            PlayerColor enemyEnchantedForestExpert = CheckLocationOwner(LocationsIdentifier.EnchantedForestExpert);
+            PlayerColorIdentifier enemyEnchantedForestExpert = CheckLocationOwner(LocationsIdentifier.EnchantedForestExpert);
 
             int additionalPeacePower = 0;
 
@@ -555,7 +556,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
                 // Enchanted Forest Expert effect:
                 // If the enemy owns this expert location, the Peace reward is halved.
-                if (enemyEnchantedForestExpert != actingPlayer && enemyEnchantedForestExpert != PlayerColor.Neutral)
+                if (enemyEnchantedForestExpert != actingPlayer && enemyEnchantedForestExpert != PlayerColorIdentifier.Neutral)
                 {
                     peacePower /= 2;
                 }
@@ -600,9 +601,9 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         {
             if (loc.LocationIdentifier != LocationsIdentifier.DragonCave) continue;
             
-            if (loc.CurrentOwner != PlayerColor.Neutral){
+            if (loc.CurrentOwner != PlayerColorIdentifier.Neutral){
                     
-                PlayerColor actingPlayer = loc.CurrentOwner;
+                PlayerColorIdentifier actingPlayer = loc.CurrentOwner;
                 victoryPointCounters[actingPlayer]++;
             }
         }
@@ -610,10 +611,10 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
     private void ResetTurn(){
         
-        turnActions[PlayerColor.Blue] = null;
-        turnActions[PlayerColor.Red] = null;
-        turnLocations[PlayerColor.Blue] = null;
-        turnLocations[PlayerColor.Red] = null;
+        turnActions[PlayerColorIdentifier.Blue] = null;
+        turnActions[PlayerColorIdentifier.Red] = null;
+        turnLocations[PlayerColorIdentifier.Blue] = null;
+        turnLocations[PlayerColorIdentifier.Red] = null;
 
         sendEventCoroutine = StartCoroutine(SendEvent());
     }
@@ -649,12 +650,12 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         }
     }
 
-    private void AddVictoryPointsByPlayer(PlayerColor color, int vp){
+    private void AddVictoryPointsByPlayer(PlayerColorIdentifier colorIdentifier, int vp){
         
-        if (color == PlayerColor.Neutral)
+        if (colorIdentifier == PlayerColorIdentifier.Neutral)
             return;
         
-        victoryPointCounters[color] += vp;
+        victoryPointCounters[colorIdentifier] += vp;
     }
 
     private void CheckScoringPhase(){
@@ -698,7 +699,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                             break;
                         }
 
-                        if (loc.LastOwner != PlayerColor.Neutral)
+                        if (loc.LastOwner != PlayerColorIdentifier.Neutral)
                         {
                             //special case bc of first round, bc there is no "last owner"
                             if (roundCounter == 2)
@@ -733,8 +734,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     }
     private void UpdateVictoryPointDisplay(){
         
-        UniqueNameHash.Get("VictoryPointsRed").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColor.Red].ToString();
-        UniqueNameHash.Get("VictoryPointsBlue").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColor.Blue].ToString();
+        UniqueNameHash.Get("VictoryPointsRed").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColorIdentifier.Red].ToString();
+        UniqueNameHash.Get("VictoryPointsBlue").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColorIdentifier.Blue].ToString();
     }
 
     private void ShowPower()

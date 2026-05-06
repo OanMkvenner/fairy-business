@@ -1,6 +1,6 @@
 namespace Player
 {
-    public enum PlayerColor : byte
+    public enum PlayerColorIdentifier : byte
     {
         Neutral = 0,
         Red = 1,

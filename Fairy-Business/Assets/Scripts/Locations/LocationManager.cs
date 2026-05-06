@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Player;
 using UI.Menu.BaseMenu;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Locations
@@ -25,6 +24,9 @@ namespace Locations
         [SerializeField] private Transform gameFieldParent;
         [SerializeField] private PlayerLine[] lines = new PlayerLine[3];
         [SerializeField] private List<Sprite> artefactsSprites = new();
+        
+        [Header("Bank Infos")]
+        [SerializeField] private List<BankWrapper> bankIdentifierByIndex = new();
 
         private readonly List<LocationDefinition> allAvailableLocations = new ();
         private LocationAnimation locationAnimation;
@@ -38,7 +40,9 @@ namespace Locations
         {
             for (int index = 0; index < SelectedLocations.Count; index++)
             {
-                GameLocations[index].InitializeLocationDefinition(SelectedLocations[index].LocationData, true);
+                GameLocations[index].InitializeLocationDefinition(SelectedLocations[index].LocationData, true, 
+                    bankIdentifierByIndex[index]);
+                
                 GameLocations[index].IsSelected = true;
                 GameLocations[index].PlayerLine = lines[index];
             }
@@ -109,20 +113,20 @@ namespace Locations
         /// </summary>
         private void AssignLocationOwner()
         {
-            GameLocations[0].AddPlayerPower(PlayerColor.Blue, 5);
-            GameLocations[0].AddPlayerPower(PlayerColor.Red, 3);
+            GameLocations[0].AddPlayerPower(PlayerColorIdentifier.Blue, 5);
+            GameLocations[0].AddPlayerPower(PlayerColorIdentifier.Red, 3);
             GameLocations[0].FinalizePowerAndDetermineWinner();
             GameLocations[0].Artifact.SetActive(true);
             GameLocations[0].Artifact.GetComponent<Image>().sprite = artefactsSprites[0];
             
-            GameLocations[1].AddPlayerPower(PlayerColor.Red, 5);
-            GameLocations[1].AddPlayerPower(PlayerColor.Blue, 3);
+            GameLocations[1].AddPlayerPower(PlayerColorIdentifier.Red, 5);
+            GameLocations[1].AddPlayerPower(PlayerColorIdentifier.Blue, 3);
             GameLocations[1].FinalizePowerAndDetermineWinner();
             GameLocations[1].Artifact.SetActive(true);
             GameLocations[1].Artifact.GetComponent<Image>().sprite = artefactsSprites[1];
 
-            GameLocations[2].AddPlayerPower(PlayerColor.Blue, 4);
-            GameLocations[2].AddPlayerPower(PlayerColor.Red, 4);
+            GameLocations[2].AddPlayerPower(PlayerColorIdentifier.Blue, 4);
+            GameLocations[2].AddPlayerPower(PlayerColorIdentifier.Red, 4);
             GameLocations[2].FinalizePowerAndDetermineWinner();
             GameLocations[2].Artifact.SetActive(true);
             GameLocations[2].Artifact.GetComponent<Image>().sprite = artefactsSprites[2];

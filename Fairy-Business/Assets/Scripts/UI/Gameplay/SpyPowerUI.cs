@@ -26,8 +26,8 @@ namespace UI.Gameplay
             if (line != currentLine)
                 return;
             
-            redPower.text = locationDefinition.GetPlayerPower(PlayerColor.Red).ToString();
-            bluePower.text = locationDefinition.GetPlayerPower(PlayerColor.Blue).ToString();
+            redPower.text = locationDefinition.GetPlayerPower(PlayerColorIdentifier.Red).ToString();
+            bluePower.text = locationDefinition.GetPlayerPower(PlayerColorIdentifier.Blue).ToString();
         }
 
     }

@@ -66,13 +66,13 @@ namespace Locations
             }
         }
     
-        private Transform GetTargetTransform(PlayerColor owner, PlayerLine playerLine)
+        private Transform GetTargetTransform(PlayerColorIdentifier owner, PlayerLine playerLine)
         {
             return owner switch
             {
-                PlayerColor.Neutral => playerLine.neutralPosition,
-                PlayerColor.Blue => playerLine.bluePosition,
-                PlayerColor.Red => playerLine.redPosition,
+                PlayerColorIdentifier.Neutral => playerLine.neutralPosition,
+                PlayerColorIdentifier.Blue => playerLine.bluePosition,
+                PlayerColorIdentifier.Red => playerLine.redPosition,
                 _ => null
             };
         }

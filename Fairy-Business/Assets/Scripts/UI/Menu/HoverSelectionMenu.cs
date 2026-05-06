@@ -1,47 +1,102 @@
 using System.Collections.Generic;
 using Locations;
 using Player;
+using TMPro;
+using UI.Buttons;
+using UI.Gameplay;
 using UI.Menu.BaseMenu;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI.Menu
 {
     public class HoverSelectionMenu : MenuElement
     {
-        [SerializeField] protected List<Transform> hoverParent;
-        [SerializeField] protected LocationUI locationUIPrefab;
+        [SerializeField] private ScoreHoverUI scoreHoverUIPrefab;
+        [SerializeField] private Transform scoreHoverUIParent;
+        [Space]
+        [SerializeField] private TextMeshProUGUI bankNameText;
+        [SerializeField] private Image bankIconImage;
+        [Space]
+        [SerializeField] private TextMeshProUGUI currentOwnerText;
+        [Space]
+        [SerializeField] private TextMeshProUGUI artefactTitleText;
+        [SerializeField] private TextMeshProUGUI artefactDescriptionText;
+        [Header("Objects that are disabled in selection view")]
+        [SerializeField] private List<GameObject> objectsToDisableWhileNotInGameView;
 
-        public override void OpenMenu()
+        private void Awake()
         {
-            base.OpenMenu();
-            InitializeUI();
+            LocationHoverButton.LongPressDetectionEvent += InitializeUI;
         }
 
-        private void InitializeUI( )
+        private void OnDestroy()
         {
-            LocationDefinition locationDefinition = LocationHoverManager.instance.HoveredLocation;
-            PlayerColor playerColor = LocationHoverManager.instance.CurrentPlayerColor;
-            int index = LocationHoverManager.instance.LineIndex();
-            
-            LocationUI locationUI = Instantiate(locationUIPrefab, hoverParent[index]);
-            locationDefinition.InitializeLocationUI(locationUI);
+            LocationHoverButton.LongPressDetectionEvent -= InitializeUI;
+        }
 
-            if (playerColor == PlayerColor.Red)
+        private void InitializeUI(LocationDefinition hoveredLocation)
+        {
+            string activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
+
+            foreach (GameObject activeStateObjects in objectsToDisableWhileNotInGameView)
             {
-                //Turn UI around
-                locationUI.GetComponent<RectTransform>().localScale = new Vector3(-1f, -1f, 1f);
+                activeStateObjects.SetActive(GameSession.instance.GameHasStarted);
             }
+            
+            if (GameSession.instance.GameHasStarted)
+            {
+                currentOwnerText.text = GetOwnerLocalizedString(hoveredLocation.CurrentOwner, activeLanguageCode);
+                bankNameText.text = GetLocalizedBankName(hoveredLocation.BankWrapper, activeLanguageCode);
+                bankIconImage.sprite = hoveredLocation.BankWrapper.BankIcon;
+            }
+
+            artefactTitleText.text = Localizer.instance.TranslateToSpecificLanguage(
+                hoveredLocation.LocationData.localizationTitleText,
+                activeLanguageCode);
+            
+            artefactDescriptionText.text = Localizer.instance.TranslateToSpecificLanguage(
+                hoveredLocation.LocationData.localizationDescriptionText,
+                activeLanguageCode);
+            
+            base.OpenMenu();
         }
 
         public override void CloseMenu()
         {
             base.CloseMenu();
-            
-            foreach (Transform parent in hoverParent)
+
+            foreach (GameObject child in scoreHoverUIParent)
             {
-                foreach (Transform child in parent.transform) {
-                    Destroy(child.gameObject);
-                }
+                Destroy(child);
+            }
+        }
+
+        private string GetOwnerLocalizedString(PlayerColorIdentifier playerColorIdentifier, string activeLanguageCode)
+        {
+            switch (playerColorIdentifier)
+            {
+                case PlayerColorIdentifier.Blue:
+                    return "Fairy Ink";
+                case PlayerColorIdentifier.Red:
+                    return "Evil Corp";
+                default:
+                    return "no one";
+            }
+        }
+
+        private string GetLocalizedBankName(BankWrapper bankWrapper, string activeLanguageCode)
+        {
+            switch (bankWrapper.BankIdentifier)
+            {
+                case BankIdentifier.CasterCard:
+                    return "Caster Card";
+                case BankIdentifier.KingdomExpress:
+                    return "Kingdom Express";
+                case BankIdentifier.Vizard:
+                    return "Vizard";
+                default:
+                    return "No one";
             }
         }
     }

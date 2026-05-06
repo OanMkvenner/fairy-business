@@ -6,7 +6,7 @@ namespace Animation.AnimationController
 {
     public class ScanAnimationController : BaseAnimationController
     {
-        [SerializeField] private PlayerColor playerColor;
+        [SerializeField] private PlayerColorIdentifier playerColorIdentifier;
         [SerializeField] private ScanAction scanAction;
         [SerializeField] private Sprite defaultSprite;
         
@@ -28,9 +28,9 @@ namespace Animation.AnimationController
             GameSession.OnTurnReset -= ResetAnimation;
         }
 
-        private void OnCardScanned(PlayerColor playerColor, ScanAction scanAction)
+        private void OnCardScanned(PlayerColorIdentifier playerColorIdentifier, ScanAction scanAction)
         {
-            if (playerColor != this.playerColor || scanAction != this.scanAction)
+            if (playerColorIdentifier != this.playerColorIdentifier || scanAction != this.scanAction)
                 return;
 
             StartAnimations();

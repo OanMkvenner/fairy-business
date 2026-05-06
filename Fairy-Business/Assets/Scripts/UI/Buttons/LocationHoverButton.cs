@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Locations;
 using Player;
@@ -10,11 +11,12 @@ namespace UI.Buttons
     [RequireComponent(typeof(EventTrigger))]
     public class LocationHoverButton : MonoBehaviour
     {
+        public static event Action<LocationDefinition> LongPressDetectionEvent;
+        
         [SerializeField] private bool inGameView;
         [SerializeField] private LocationDefinition locationDefinition;
-        [SerializeField] private PlayerColor playerColor;
+        [SerializeField] private PlayerColorIdentifier playerColorIdentifier;
         
-        private LineIdentifier line => locationDefinition.PlayerLine.line;
         private Coroutine longPressCoroutine;
         private bool isLongPressTriggered = false;
         private readonly float longPressedTime = 0.3f;
@@ -43,10 +45,7 @@ namespace UI.Buttons
 
         private void LongPressedAction()
         {
-            LocationHoverManager.instance.HoveredLocation = locationDefinition;
-            LocationHoverManager.instance.CurrentLine = line;
-            LocationHoverManager.instance.CurrentPlayerColor = playerColor;
-            MenuManager.instance.OpenMenu(MenuIdentifier.HoverSelectionMenu);
+            LongPressDetectionEvent?.Invoke(locationDefinition);
         }
         
         private IEnumerator LongPressDetection()

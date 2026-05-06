@@ -22,7 +22,7 @@ namespace UI.Menu
         private void OnReturnToStartScreenButtonClicked()
         {
             CloseMenu();
-            
+            GameSession.instance.GameHasStarted = false;
             UiManager.CallbackUiEvent("MainMenu");
         }
     }

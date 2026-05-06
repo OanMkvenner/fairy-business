@@ -8,6 +8,8 @@ namespace UI.Gameplay
         [SerializeField] private TextMeshProUGUI blueScoreText;
         [SerializeField] private TextMeshProUGUI redScoreText;
         [SerializeField] private TextMeshProUGUI scorePhaseText;
+        
+        private const string scoreTextLocalization = "hoverMenu_ScoringPhase";
 
         public void Init(int blueScore, int redScore, int scorePhase)
         {

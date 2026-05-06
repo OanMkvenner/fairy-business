@@ -19,11 +19,22 @@ namespace UI.Menu
         [SerializeField] private Image bankIconImage;
         [Space]
         [SerializeField] private TextMeshProUGUI currentOwnerText;
+
+        [SerializeField] private Image currentOwnerBackground;
         [Space]
         [SerializeField] private TextMeshProUGUI artefactTitleText;
         [SerializeField] private TextMeshProUGUI artefactDescriptionText;
         [Header("Objects that are disabled in selection view")]
         [SerializeField] private List<GameObject> objectsToDisableWhileNotInGameView;
+
+        private const string bluePlayerLocalization = "hoverMenu_BluePlayer";
+        private const string redPlayerLocalization = "hoverMenu_RedPlayer";
+        private const string neutralPlayerLocalization = "hoverMenu_NeutralPlayer";
+        private const string ownerTextLocalization = "hoverMenu_OwnerText";
+        
+        private const string casterCard = "casterCard";
+        private const string vizardCard = "vizardCard";
+        private const string kingdomExpressCard = "kingdomExpressCard";
 
         private void Awake()
         {
@@ -46,8 +57,10 @@ namespace UI.Menu
             
             if (GameSession.instance.GameHasStarted)
             {
-                currentOwnerText.text = GetOwnerLocalizedString(hoveredLocation.CurrentOwner, activeLanguageCode);
-                bankNameText.text = GetLocalizedBankName(hoveredLocation.BankWrapper, activeLanguageCode);
+                currentOwnerText.text = Localizer.instance.TranslateToSpecificLanguage(ownerTextLocalization, activeLanguageCode) + 
+                                        " " + Localizer.instance.TranslateToSpecificLanguage(GetOwnerLocalizedString(hoveredLocation.CurrentOwner), activeLanguageCode);
+                
+                bankNameText.text = Localizer.instance.TranslateToSpecificLanguage(GetLocalizedBankName(hoveredLocation.BankWrapper), activeLanguageCode);
                 bankIconImage.sprite = hoveredLocation.BankWrapper.BankIcon;
             }
 
@@ -72,29 +85,29 @@ namespace UI.Menu
             }
         }
 
-        private string GetOwnerLocalizedString(PlayerColorIdentifier playerColorIdentifier, string activeLanguageCode)
+        private string GetOwnerLocalizedString(PlayerColorIdentifier playerColorIdentifier)
         {
             switch (playerColorIdentifier)
             {
                 case PlayerColorIdentifier.Blue:
-                    return "Fairy Ink";
+                    return bluePlayerLocalization;
                 case PlayerColorIdentifier.Red:
-                    return "Evil Corp";
+                    return redPlayerLocalization;
                 default:
-                    return "no one";
+                    return neutralPlayerLocalization;
             }
         }
 
-        private string GetLocalizedBankName(BankWrapper bankWrapper, string activeLanguageCode)
+        private string GetLocalizedBankName(BankWrapper bankWrapper)
         {
             switch (bankWrapper.BankIdentifier)
             {
                 case BankIdentifier.CasterCard:
-                    return "Caster Card";
+                    return casterCard;
                 case BankIdentifier.KingdomExpress:
-                    return "Kingdom Express";
+                    return kingdomExpressCard;
                 case BankIdentifier.Vizard:
-                    return "Vizard";
+                    return vizardCard;
                 default:
                     return "No one";
             }

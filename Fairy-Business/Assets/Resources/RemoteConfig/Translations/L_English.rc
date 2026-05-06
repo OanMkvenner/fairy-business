@@ -13,11 +13,13 @@
       "chooseLanguage": "Choose a language",
       "playGame": "Play",
       
+      "casterCard": "Caster Card",
+      "vizardCard": "Vizard",
+      "kingdomExpressCard": "Kingdom Express",
+      
       "winGame": "Won!",
       "looseGame": "Lost!",
       "victoryPoints": "Victory points",
-     
-      "newTurn": "New Turn",
       
       "menuTitle_MenuSelection": "Selected Locations",
       "menuSelection_locationSelection": "Select 3 locations",
@@ -27,6 +29,11 @@
       "menuTitle_MenuPause": "Pause",
       "menuPause_returnStart": "Return to Start",
     
+      "hoverMenu_BluePlayer": "Fairy Ink.",
+      "hoverMenu_RedPlayer": "Evil Corp",
+      "hoverMenu_NeutralPlayer": "no one",
+      "hoverMenu_OwnerText": "Currently owned by",
+      "hoverMenu_ScoringPhase": "Scoring phase",
      
       "locationTitle_EnchantedForest":"Enchanted Forest",
       "locationTitle_Castle":"Castle",

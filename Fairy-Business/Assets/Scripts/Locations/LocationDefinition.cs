@@ -46,7 +46,7 @@ namespace Locations
         public MoveRotateObject MoveObject { get; private set; }
         public PlayerColorIdentifier LastOwner { get; private set; }
         public List<LocationHoverButton> LocationHoverButtons => locationHoverButtons;
-        [field: SerializeField] public GameObject Artifact { get; set; }
+        [field: SerializeField] public Image Artifact { get; private set; }
 
         [SerializeField] private TextMeshProUGUI description;
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
@@ -104,6 +104,8 @@ namespace Locations
                 {
                     locationHoverButton.gameObject.SetActive(true);
                 }
+                
+                SetArtefactSprite();
             }
             else
             {
@@ -175,6 +177,12 @@ namespace Locations
             transform.position = position;
         }
 
+        private void SetArtefactSprite()
+        {
+            Artifact.enabled = true;
+            Artifact.sprite = LocationData.artefactIcon;
+        }
+        
         /// <summary>
         /// Toggles the blocked state of a location based on the given identifier and block flag.
         /// </summary>

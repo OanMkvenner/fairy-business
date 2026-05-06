@@ -6782,10 +6782,6 @@ MonoBehaviour:
     redPosition: {fileID: 1799719036}
     neutralPosition: {fileID: 1794067263}
     bluePosition: {fileID: 1841480514}
-  artefactsSprites:
-  - {fileID: -9114616584026453734, guid: 220a7d8c2a2aedb4c93c3f3bd5649006, type: 3}
-  - {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90, type: 3}
-  - {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6, type: 3}
   bankIdentifierByIndex:
   - BankIdentifier: 2
     BankIcon: {fileID: -7088293726365515107, guid: 773e3d1ebc28f7e43815d1f751ed68d0,
@@ -14883,6 +14879,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6349612856844245060, guid: 6db7f4253bb6f4241a69bd8efb667866,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6569513929371730598, guid: 6db7f4253bb6f4241a69bd8efb667866,
         type: 3}
       propertyPath: m_Name
@@ -15049,6 +15050,7 @@ MonoBehaviour:
   bankNameText: {fileID: 1290780577}
   bankIconImage: {fileID: 1956986582}
   currentOwnerText: {fileID: 1376712623}
+  currentOwnerBackground: {fileID: 0}
   artefactTitleText: {fileID: 933793538}
   artefactDescriptionText: {fileID: 1033301319}
   objectsToDisableWhileNotInGameView:
@@ -15088,7 +15090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 125.21909, y: 0}
+  m_AnchoredPosition: {x: 125.21912, y: 0}
   m_SizeDelta: {x: 73.8174, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966147833
@@ -17273,7 +17275,7 @@ PrefabInstance:
     - target: {fileID: 6756642394585229120, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 152.23442
+      value: 152.23444
       objectReference: {fileID: 0}
     - target: {fileID: 6756642394585229120, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
@@ -17836,7 +17838,7 @@ PrefabInstance:
     - target: {fileID: 6756642394585229120, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 152.23442
+      value: 152.23444
       objectReference: {fileID: 0}
     - target: {fileID: 6756642394585229120, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}

@@ -23,13 +23,13 @@ namespace Locations
         [Header("Game Field")]
         [SerializeField] private Transform gameFieldParent;
         [SerializeField] private PlayerLine[] lines = new PlayerLine[3];
-        [SerializeField] private List<Sprite> artefactsSprites = new();
         
         [Header("Bank Infos")]
         [SerializeField] private List<BankWrapper> bankIdentifierByIndex = new();
 
         private readonly List<LocationDefinition> allAvailableLocations = new ();
         private LocationAnimation locationAnimation;
+        private Sprite ArtefactSprite;
 
         private void Awake()
         {
@@ -116,20 +116,14 @@ namespace Locations
             GameLocations[0].AddPlayerPower(PlayerColorIdentifier.Blue, 5);
             GameLocations[0].AddPlayerPower(PlayerColorIdentifier.Red, 3);
             GameLocations[0].FinalizePowerAndDetermineWinner();
-            GameLocations[0].Artifact.SetActive(true);
-            GameLocations[0].Artifact.GetComponent<Image>().sprite = artefactsSprites[0];
             
             GameLocations[1].AddPlayerPower(PlayerColorIdentifier.Red, 5);
             GameLocations[1].AddPlayerPower(PlayerColorIdentifier.Blue, 3);
             GameLocations[1].FinalizePowerAndDetermineWinner();
-            GameLocations[1].Artifact.SetActive(true);
-            GameLocations[1].Artifact.GetComponent<Image>().sprite = artefactsSprites[1];
 
             GameLocations[2].AddPlayerPower(PlayerColorIdentifier.Blue, 4);
             GameLocations[2].AddPlayerPower(PlayerColorIdentifier.Red, 4);
             GameLocations[2].FinalizePowerAndDetermineWinner();
-            GameLocations[2].Artifact.SetActive(true);
-            GameLocations[2].Artifact.GetComponent<Image>().sprite = artefactsSprites[2];
         }
 
         private void SetUpLocations()

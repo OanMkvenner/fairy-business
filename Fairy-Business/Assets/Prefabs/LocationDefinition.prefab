@@ -312,7 +312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGameView: 0
   locationDefinition: {fileID: 4396691611671439852}
-  playerColor: 0
+  playerColorIdentifier: 0
 --- !u!1 &4546590714643077816
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGameView: 1
   locationDefinition: {fileID: 4396691611671439852}
-  playerColor: 2
+  playerColorIdentifier: 0
 --- !u!114 &4371157710601828018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,12 +540,12 @@ GameObject:
   - component: {fileID: 7235261487508227706}
   - component: {fileID: 6349612856844245060}
   m_Layer: 5
-  m_Name: Artfecat
+  m_Name: ArtfecatIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7381816463416950880
 RectTransform:
   m_ObjectHideFlags: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6032114177652433426}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -784,7 +784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe21f6907604f6b4e93314f9cd474867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Artifact>k__BackingField: {fileID: 6032114177652433426}
+  <Artifact>k__BackingField: {fileID: 6349612856844245060}
   description: {fileID: 2458245211491674348}
   locationHoverButtons:
   - {fileID: 4997785977417539323}
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGameView: 1
   locationDefinition: {fileID: 4396691611671439852}
-  playerColor: 1
+  playerColorIdentifier: 0
 --- !u!114 &925844361685313537
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ namespace Locations
     {
         public Sprite imageEnabled;
         public Sprite imageDisabled;
+        public Sprite artefactIcon;
         public LocationsIdentifier LocationIdentifier;
         public ModeIdentifier ModeIdentifier;
         public LocationsIdentifier CouplingIdentifier;

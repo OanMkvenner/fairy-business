@@ -16,6 +16,8 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -5121769818918040099, guid: 8c8df489bc7ef314b9ba9120239c6f16,
     type: 3}
+  artefactIcon: {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90,
+    type: 3}
   LocationIdentifier: 7
   ModeIdentifier: 1
   CouplingIdentifier: 16

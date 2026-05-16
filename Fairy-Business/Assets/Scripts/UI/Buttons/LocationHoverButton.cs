@@ -11,11 +11,11 @@ namespace UI.Buttons
     [RequireComponent(typeof(EventTrigger))]
     public class LocationHoverButton : MonoBehaviour
     {
-        public static event Action<LocationDefinition> LongPressDetectionEvent;
-        
+        public static event Action<LocationDefinition, bool> LongPressDetectionEvent;
+
+        [SerializeField] private bool isTop;
         [SerializeField] private bool inGameView;
         [SerializeField] private LocationDefinition locationDefinition;
-        [SerializeField] private PlayerColorIdentifier playerColorIdentifier;
         
         private Coroutine longPressCoroutine;
         private bool isLongPressTriggered = false;
@@ -45,7 +45,7 @@ namespace UI.Buttons
 
         private void LongPressedAction()
         {
-            LongPressDetectionEvent?.Invoke(locationDefinition);
+            LongPressDetectionEvent?.Invoke(locationDefinition, isTop);
         }
         
         private IEnumerator LongPressDetection()

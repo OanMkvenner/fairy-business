@@ -12,6 +12,7 @@ namespace UI.Menu
 {
     public class HoverSelectionMenu : MenuElement
     {
+        [SerializeField] private RectTransform layoutGroup;
         [SerializeField] private ScoreHoverUI scoreHoverUIPrefab;
         [SerializeField] private Transform scoreHoverUIParent;
         [Space]
@@ -47,7 +48,7 @@ namespace UI.Menu
             LocationHoverButton.LongPressDetectionEvent -= InitializeUI;
         }
 
-        private void InitializeUI(LocationDefinition hoveredLocation)
+        private void InitializeUI(LocationDefinition hoveredLocation, bool isTop)
         {
             string activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
 
@@ -74,6 +75,8 @@ namespace UI.Menu
                 activeLanguageCode);
 
             artefactIcon.sprite = hoveredLocation.LocationData.artefactIcon;
+            
+            FlipMenuContent(isTop);
             
             base.OpenMenu();
         }
@@ -117,6 +120,11 @@ namespace UI.Menu
                 default:
                     return "No one";
             }
+        }
+
+        private void FlipMenuContent(bool isTop)
+        {
+            layoutGroup.rotation = isTop ? Quaternion.Euler(0, 0, -180): Quaternion.Euler(0, 0, 0);
         }
     }
 }

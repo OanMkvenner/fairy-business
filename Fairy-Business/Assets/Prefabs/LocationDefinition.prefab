@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6e16cd6bcc465d82e9ed577dacb808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTop: 0
   inGameView: 0
   locationDefinition: {fileID: 4396691611671439852}
   playerColorIdentifier: 0
@@ -402,6 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6e16cd6bcc465d82e9ed577dacb808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTop: 0
   inGameView: 1
   locationDefinition: {fileID: 4396691611671439852}
   playerColorIdentifier: 0
@@ -1183,6 +1185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e6e16cd6bcc465d82e9ed577dacb808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTop: 1
   inGameView: 1
   locationDefinition: {fileID: 4396691611671439852}
   playerColorIdentifier: 0

@@ -51,7 +51,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     private Coroutine sendEventCoroutine;
 
     private readonly float eventDelayTime = 2f;
-    private readonly float openDisplayMenuDelayTime = 2f;
+    private readonly float openDisplayMenuDelayTime = 1f;
 
     private void Start() {
 
@@ -580,10 +580,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
         // Check whether any win/end-game conditions have been met
         CheckEndGame();
-        
-        // I don't like it, but I don't want to fix the mess someone else did, we open the control display menu after 2f sec,
-        // bc we wait for animations to finish
-        StartCoroutine(OpenControlDisplayMenu());
 
         // Move to the next turn
         NextTurn();
@@ -640,6 +636,13 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         }
         
         CheckScoringPhase();
+
+        if (roundCounter > 1)
+        {
+            // I don't like it, but I don't want to fix the mess someone else did, we open the control display menu after 2f sec,
+            // bc we wait for animations to finish
+            StartCoroutine(OpenControlDisplayMenu());
+        }
         
         bool gameEnded = CheckEndGame();
         

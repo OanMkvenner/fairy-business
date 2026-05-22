@@ -15,7 +15,14 @@ namespace UI.Gameplay
         {
             blueScoreText.text = blueScore.ToString();
             redScoreText.text = redScore.ToString();
-            scorePhaseText.text = scorePhase.ToString();
+            scorePhaseText.text = scorePhase + " " + Localizer.instance.TranslateToSpecificLanguage(scoreTextLocalization, Localizer.instance.GetCurrentlySetLanguage());
+        }
+
+        public void Clear()
+        {
+            blueScoreText.text = "";
+            redScoreText.text = "";
+            scorePhaseText.text = "";
         }
     }
 }

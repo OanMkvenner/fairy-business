@@ -13,7 +13,7 @@ namespace UI.Menu
     public class HoverSelectionMenu : MenuElement
     {
         [SerializeField] private RectTransform layoutGroup;
-        [SerializeField] private ScoreHoverUI scoreHoverUIPrefab;
+        [SerializeField] private List<ScoreHoverUI> scoreHoverUIPrefabs = new();
         [SerializeField] private Transform scoreHoverUIParent;
         [Space]
         [SerializeField] private TextMeshProUGUI bankNameText;
@@ -38,9 +38,13 @@ namespace UI.Menu
         private const string vizardCard = "vizardCard";
         private const string kingdomExpressCard = "kingdomExpressCard";
 
+        private string activeLanguageCode;
+
         private void Awake()
         {
             LocationHoverButton.LongPressDetectionEvent += InitializeUI;
+            
+            activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
         }
 
         private void OnDestroy()
@@ -50,8 +54,6 @@ namespace UI.Menu
 
         private void InitializeUI(LocationDefinition hoveredLocation, bool isTop)
         {
-            string activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
-
             foreach (GameObject activeStateObjects in objectsToDisableWhileNotInGameView)
             {
                 activeStateObjects.SetActive(GameSession.instance.GameHasStarted);
@@ -78,17 +80,33 @@ namespace UI.Menu
             
             FlipMenuContent(isTop);
             
+            InitializeScoreHoverUI();
+            
             base.OpenMenu();
         }
 
-        public override void CloseMenu()
+        private void InitializeScoreHoverUI()
         {
-            base.CloseMenu();
-
-            foreach (GameObject child in scoreHoverUIParent)
+            if (!GameSession.instance.GameHasStarted)
             {
-                Destroy(child);
+                foreach (ScoreHoverUI scoreUI in scoreHoverUIPrefabs)
+                {
+                    scoreUI.gameObject.SetActive(false);
+                    scoreUI.Clear();
+                }
+
+                return;
             }
+            
+            if (scoreHoverUIPrefabs[GameSession.instance.RoundCounter - 1].gameObject.activeSelf)
+                return;
+            
+            scoreHoverUIPrefabs[GameSession.instance.RoundCounter - 1].gameObject.SetActive(true);
+            scoreHoverUIPrefabs[GameSession.instance.RoundCounter - 1].Init(
+                GameSession.instance.VictoryPointCounters[PlayerColorIdentifier.Blue], 
+                GameSession.instance.VictoryPointCounters[PlayerColorIdentifier.Red],
+                GameSession.instance.RoundCounter - 1
+                );
         }
 
         private string GetOwnerLocalizedString(PlayerColorIdentifier playerColorIdentifier)

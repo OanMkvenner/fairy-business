@@ -24,30 +24,18 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     public static event Action<LocationDefinition, int> OnSpyCardPlayed;
     public static event Action OnTurnReset;
     public static event Action<PlayerColorIdentifier, ScanAction> OnCardScanned;
-    
     public CardInput cardInput;
     public Image ScanEffect;
-
-    public Dictionary<PlayerColorIdentifier, int> VictoryPointCounters
-    {
-        get => victoryPointCounters;
-        private set => victoryPointCounters = value;
-    }
-    
+    public Dictionary<PlayerColorIdentifier, int> VictoryPointCounters { get; private set; }
     public bool IsEndOfGame { get; private set; }
     public bool GameHasStarted { get; set; }
-
-    [SerializeField] private int maxRoundCount;
+    public int RoundCounter { get; private set; }
 
     [Space]
     [SerializeField] private TurnRoundUI turnRoundUI;
+    [SerializeField] private int maxRoundCount;
 
     private int turnCounter;
-
-    private int roundCounter;
-
-    private Dictionary<PlayerColorIdentifier, int> victoryPointCounters;
-    
     private Coroutine sendEventCoroutine;
 
     private readonly float eventDelayTime = 2f;
@@ -77,10 +65,10 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     private void ResetGamesession(){
         
         turnCounter = 5; // first "NextTurn" action iterates this back down to 1
-        roundCounter = 0; // first "NextTurn" action iterates this up to 1
-        victoryPointCounters = new();
-        victoryPointCounters[PlayerColorIdentifier.Blue] = 0;
-        victoryPointCounters[PlayerColorIdentifier.Red] = 0;
+        RoundCounter = 0; // first "NextTurn" action iterates this up to 1
+        VictoryPointCounters = new();
+        VictoryPointCounters[PlayerColorIdentifier.Blue] = 0;
+        VictoryPointCounters[PlayerColorIdentifier.Red] = 0;
         IsEndOfGame = false;
         
         turnRoundUI.ResetUI();
@@ -464,7 +452,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         newTheoreticalControlValue < 0 &&
                         minControlNumber <= 0)
                     {
-                        victoryPointCounters[below0Gain2VPOwner] += 2;
+                        VictoryPointCounters[below0Gain2VPOwner] += 2;
                         UpdateVictoryPointDisplay();
                     }
                 }
@@ -489,7 +477,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 // If the acting player owns this location and plays War, gain 2 VP immediately.
                 if (throughTheMirror == actingPlayer)
                 {
-                    victoryPointCounters[actingPlayer] += 2;
+                    VictoryPointCounters[actingPlayer] += 2;
                     UpdateVictoryPointDisplay();
                 }
 
@@ -562,7 +550,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 }
 
                 // Add the victory points to the acting player's score
-                victoryPointCounters[actingPlayer] += peacePower;
+                VictoryPointCounters[actingPlayer] += peacePower;
 
                 // Update UI
                 UpdateVictoryPointDisplay();
@@ -600,7 +588,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             if (loc.CurrentOwner != PlayerColorIdentifier.Neutral){
                     
                 PlayerColorIdentifier actingPlayer = loc.CurrentOwner;
-                victoryPointCounters[actingPlayer]++;
+                VictoryPointCounters[actingPlayer]++;
             }
         }
     }
@@ -630,14 +618,14 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         if (turnCounter >= 5)
         {
             turnCounter = 1;
-            roundCounter++;
+            RoundCounter++;
             
-            turnRoundUI.UpdateRoundCount(roundCounter);
+            turnRoundUI.UpdateRoundCount(RoundCounter);
         }
         
         CheckScoringPhase();
 
-        if (roundCounter > 1)
+        if (RoundCounter > 1)
         {
             // I don't like it, but I don't want to fix the mess someone else did, we open the control display menu after 2f sec,
             // bc we wait for animations to finish
@@ -658,12 +646,12 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         if (colorIdentifier == PlayerColorIdentifier.Neutral)
             return;
         
-        victoryPointCounters[colorIdentifier] += vp;
+        VictoryPointCounters[colorIdentifier] += vp;
     }
 
     private void CheckScoringPhase(){
         
-        if (turnCounter == 1 && roundCounter > 1){
+        if (turnCounter == 1 && RoundCounter > 1){
             
             // apply owned territory points to main score
             foreach (LocationDefinition loc in LocationManager.instance.GameLocations){
@@ -687,10 +675,10 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     }
                     case LocationsIdentifier.DragonCaveExpert:
                     {
-                        if (victoryPointCounters[loc.CurrentOwner] < victoryPointCounters[GetEnemy(loc.CurrentOwner)])
+                        if (VictoryPointCounters[loc.CurrentOwner] < VictoryPointCounters[GetEnemy(loc.CurrentOwner)])
                         {
-                            victoryPointCounters[loc.CurrentOwner]++;
-                            victoryPointCounters[GetEnemy(loc.CurrentOwner)]--;
+                            VictoryPointCounters[loc.CurrentOwner]++;
+                            VictoryPointCounters[GetEnemy(loc.CurrentOwner)]--;
                         }
                         break;
                     }
@@ -705,7 +693,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         if (loc.LastOwner != PlayerColorIdentifier.Neutral)
                         {
                             //special case bc of first round, bc there is no "last owner"
-                            if (roundCounter == 2)
+                            if (RoundCounter == 2)
                             {
                                 AddVictoryPointsByPlayer(loc.CurrentOwner, 8);
                                 break;
@@ -737,8 +725,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     }
     private void UpdateVictoryPointDisplay(){
         
-        UniqueNameHash.Get("VictoryPointsRed").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColorIdentifier.Red].ToString();
-        UniqueNameHash.Get("VictoryPointsBlue").GetComponent<TMP_Text>().text = victoryPointCounters[PlayerColorIdentifier.Blue].ToString();
+        UniqueNameHash.Get("VictoryPointsRed").GetComponent<TMP_Text>().text = VictoryPointCounters[PlayerColorIdentifier.Red].ToString();
+        UniqueNameHash.Get("VictoryPointsBlue").GetComponent<TMP_Text>().text = VictoryPointCounters[PlayerColorIdentifier.Blue].ToString();
     }
 
     private void ShowPower()
@@ -758,7 +746,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 
     private bool CheckEndGame(){
         
-        if (roundCounter < maxRoundCount) 
+        if (RoundCounter < maxRoundCount) 
             return IsEndOfGame;
         
         disallowNewCards = true;

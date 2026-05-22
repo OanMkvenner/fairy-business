@@ -10,6 +10,9 @@
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/ScoreHoverUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/ScoreHoverUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/HoverSelectionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/HoverSelectionMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +196,7 @@
       <workItem from="1778065091064" duration="11499000" />
       <workItem from="1778153754189" duration="1788000" />
       <workItem from="1778942074594" duration="1091000" />
-      <workItem from="1779438741875" duration="1336000" />
+      <workItem from="1779438741875" duration="3414000" />
     </task>
     <servers />
   </component>
@@ -223,62 +226,6 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Buttons/LocationHoverButton.cs</url>
-          <line>47</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Buttons\LocationHoverButton.cs" containingFunctionPresentation="Method 'LongPressedAction'">
-            <startOffsets>
-              <option value="1509" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1568" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/HoverSelectionMenu.cs</url>
-          <line>78</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Menu\HoverSelectionMenu.cs" containingFunctionPresentation="Method 'InitializeUI'">
-            <startOffsets>
-              <option value="3380" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3403" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/HoverSelectionMenu.cs</url>
-          <line>76</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Menu\HoverSelectionMenu.cs" containingFunctionPresentation="Method 'InitializeUI'">
-            <startOffsets>
-              <option value="3290" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3354" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/HoverSelectionMenu.cs</url>
-          <line>80</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Menu\HoverSelectionMenu.cs" containingFunctionPresentation="Method 'InitializeUI'">
-            <startOffsets>
-              <option value="3429" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3445" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#Locations.LocationDefinition" memberName="CurrentOwner" />

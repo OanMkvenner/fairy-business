@@ -4,7 +4,6 @@ namespace UI.Menu
 {
     public class ControlDisplayMenu : MenuElement
     {
-
         public override void OpenMenu()
         {
             base.OpenMenu();

@@ -25,6 +25,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     public event Action OnTurnReset;
     public event Action<PlayerColorIdentifier, ScanAction> OnCardScanned;
     public event Action<int> OnRoundCounterChanged;
+    public event Action OnGameReset;
     
     public CardInput cardInput;
     public Image ScanEffect;
@@ -96,6 +97,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         disallowNewCards = false;
         
         HidePower();
+        
+        OnGameReset?.Invoke();
     }
 
     public void NewRound()

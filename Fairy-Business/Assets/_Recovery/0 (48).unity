@@ -2890,7 +2890,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 1108.9479, y: 0}
-  m_SizeDelta: {x: 73.8174, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &335081723
 MonoBehaviour:
@@ -15606,7 +15606,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 731.84033, y: 0}
-  m_SizeDelta: {x: 150, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1956986582
 MonoBehaviour:
@@ -15763,7 +15763,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 123.21643, y: 0}
-  m_SizeDelta: {x: 73.8174, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1966147833
 MonoBehaviour:
@@ -15816,7 +15816,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 616.08215, y: 0}
-  m_SizeDelta: {x: 9.227175, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1979516076
 MonoBehaviour:
@@ -17064,7 +17064,7 @@ MonoBehaviour:
   cardInput: {fileID: 1781368454}
   ScanEffect: {fileID: 990261458}
   turnRoundUI: {fileID: 452984846}
-  maxRoundCount: 5
+  maxRoundCount: 2
   _roundCounter: 0
 --- !u!224 &2108983917
 RectTransform:

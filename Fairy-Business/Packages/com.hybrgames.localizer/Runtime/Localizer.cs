@@ -188,8 +188,7 @@ public class Localizer : MonoBehaviour
     {
         availableLocalizations = new JObject();
     }
-
-
+    
     public void CheckLanguageSettings(JObject appRemoteConfigs)
     {
         // find ALL language settings within

@@ -18,7 +18,7 @@ namespace UI.Gameplay
             scorePhaseText.text = scorePhase + " " + Localizer.instance.TranslateToSpecificLanguage(scoreTextLocalization, Localizer.instance.GetCurrentlySetLanguage());
         }
 
-        public void Clear()
+        public void ClearUI()
         {
             blueScoreText.text = "";
             redScoreText.text = "";

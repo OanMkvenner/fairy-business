@@ -42,13 +42,13 @@ namespace UI.Menu
         private void Awake()
         {
             LocationHoverButton.LongPressDetectionEvent += InitializeUI;
-            
-            activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
+            GameSession.instance.OnGameReset += ClearScoreHoverUI;
         }
 
         private void OnDestroy()
         {
             LocationHoverButton.LongPressDetectionEvent -= InitializeUI;
+            GameSession.instance.OnGameReset -= ClearScoreHoverUI;
         }
 
         private void InitializeUI(LocationDefinition hoveredLocation, bool isTop)
@@ -57,6 +57,8 @@ namespace UI.Menu
             {
                 activeStateObjects.SetActive(GameSession.instance.GameHasStarted);
             }
+            
+            activeLanguageCode = Localizer.instance.GetCurrentlySetLanguage();
             
             if (GameSession.instance.GameHasStarted)
             {
@@ -88,14 +90,12 @@ namespace UI.Menu
         {
             if (!GameSession.instance.GameHasStarted)
             {
-                foreach (ScoreHoverUI scoreUI in scoreHoverUIPrefabs)
-                {
-                    scoreUI.gameObject.SetActive(false);
-                    scoreUI.Clear();
-                }
-
+                ClearScoreHoverUI();
                 return;
             }
+
+            if (GameSession.instance.RoundCounter <= 1)
+                return;
             
             if (scoreHoverUIPrefabs[GameSession.instance.RoundCounter - 1].gameObject.activeSelf)
                 return;
@@ -106,6 +106,15 @@ namespace UI.Menu
                 GameSession.instance.VictoryPointCounters[PlayerColorIdentifier.Red],
                 GameSession.instance.RoundCounter - 1
                 );
+        }
+
+        private void ClearScoreHoverUI()
+        {
+            foreach (ScoreHoverUI scoreUI in scoreHoverUIPrefabs)
+            {
+                scoreUI.ClearUI();
+                scoreUI.gameObject.SetActive(false);
+            }
         }
 
         private string GetOwnerLocalizedString(PlayerColorIdentifier playerColorIdentifier)

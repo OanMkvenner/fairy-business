@@ -209,6 +209,8 @@ namespace Locations
             if (isSelected)
             {
                 locationImage.sprite = imageEnabled;
+                blockingIcon.enabled = false;
+                IsLocationBlocked = false;
                 return;
             }
             

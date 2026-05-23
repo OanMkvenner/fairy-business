@@ -27,7 +27,6 @@ namespace UI.Gameplay
             
             LocationDefinition.OnCurrentOwnerChangedEvent += ChangeScoreBackground;
             LocationManager.OnNewLocationCreatedEvent += AssignLocationKeyword;
-            
         }
 
         private void OnDestroy()

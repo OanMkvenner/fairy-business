@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Player;
 using UI.Menu.BaseMenu;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Locations
 {

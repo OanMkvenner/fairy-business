@@ -22,15 +22,34 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 {
     public int MaxRoundCount => maxRoundCount;
     public static event Action<LocationDefinition, int> OnSpyCardPlayed;
-    public static event Action OnTurnReset;
-    public static event Action<PlayerColorIdentifier, ScanAction> OnCardScanned;
+    public event Action OnTurnReset;
+    public event Action<PlayerColorIdentifier, ScanAction> OnCardScanned;
+    public event Action<int> OnRoundCounterChanged;
+    
     public CardInput cardInput;
     public Image ScanEffect;
     public Dictionary<PlayerColorIdentifier, int> VictoryPointCounters { get; private set; }
     public bool IsEndOfGame { get; private set; }
     public bool GameHasStarted { get; set; }
-    public int RoundCounter { get; private set; }
 
+    public int RoundCounter
+    {
+        get => _roundCounter;
+        private set
+        {
+            if (_roundCounter == value) 
+                return;
+            
+            _roundCounter = value;
+            OnRoundCounterChanged?.Invoke(value);
+
+            if (value <= 1)
+                return;
+            
+            MenuManager.instance.OpenMenu(MenuIdentifier.ControlDisplayMenu);
+        }
+    }
+  
     [Space]
     [SerializeField] private TurnRoundUI turnRoundUI;
     [SerializeField] private int maxRoundCount;
@@ -296,6 +315,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     }
 
     readonly int[] allLocationNumbers = new int[]{ 0, 1, 2};
+    [SerializeField] private int _roundCounter;
 
     /// <summary>
     /// Resolves all player actions for the current turn. Processes card actions in the following order: Politics,
@@ -572,12 +592,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         // Move to the next turn
         NextTurn();
     }
-
-    private IEnumerator OpenControlDisplayMenu()
-    {
-        yield return new WaitForSeconds(openDisplayMenuDelayTime);
-        MenuManager.instance.OpenMenu(MenuIdentifier.ControlDisplayMenu);
-    }
     
     private void EndOfTurnEffects(){
         
@@ -624,13 +638,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         }
         
         CheckScoringPhase();
-
-        if (RoundCounter > 1)
-        {
-            // I don't like it, but I don't want to fix the mess someone else did, we open the control display menu after 2f sec,
-            // bc we wait for animations to finish
-            StartCoroutine(OpenControlDisplayMenu());
-        }
         
         bool gameEnded = CheckEndGame();
         

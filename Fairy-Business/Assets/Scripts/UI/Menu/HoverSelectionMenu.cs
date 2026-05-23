@@ -14,7 +14,6 @@ namespace UI.Menu
     {
         [SerializeField] private RectTransform layoutGroup;
         [SerializeField] private List<ScoreHoverUI> scoreHoverUIPrefabs = new();
-        [SerializeField] private Transform scoreHoverUIParent;
         [Space]
         [SerializeField] private TextMeshProUGUI bankNameText;
         [SerializeField] private Image bankIconImage;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -18,6 +19,13 @@ namespace UI.Gameplay
         private void Awake()
         {
             maxCount.text = GameSession.instance.MaxRoundCount.ToString();
+
+            GameSession.instance.OnRoundCounterChanged += UpdateRoundCount;
+        }
+
+        private void OnDestroy()
+        {
+            GameSession.instance.OnRoundCounterChanged -= UpdateRoundCount;
         }
 
         public void FillCurrentTurn(int turnCounter)

@@ -18,14 +18,14 @@ namespace Animation.AnimationController
             
             image = GetComponent<Image>();
 
-            GameSession.instance.OnCardScanned += OnCardScanned;
-            GameSession.instance.OnTurnReset += ResetAnimation;
+            GameSession.OnCardScanned += OnCardScanned;
+            GameSession.OnTurnReset += ResetAnimation;
         }
 
         private void OnDestroy()
         {
-            GameSession.instance.OnCardScanned -= OnCardScanned;
-            GameSession.instance.OnTurnReset -= ResetAnimation;
+            GameSession.OnCardScanned -= OnCardScanned;
+            GameSession.OnTurnReset -= ResetAnimation;
         }
 
         private void OnCardScanned(PlayerColorIdentifier playerColorIdentifier, ScanAction scanAction)

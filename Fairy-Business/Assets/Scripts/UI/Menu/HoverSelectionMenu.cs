@@ -42,13 +42,13 @@ namespace UI.Menu
         private void Awake()
         {
             LocationHoverButton.LongPressDetectionEvent += InitializeUI;
-            GameSession.instance.OnGameReset += ClearScoreHoverUI;
+            GameSession.OnGameReset += ClearScoreHoverUI;
         }
 
         private void OnDestroy()
         {
             LocationHoverButton.LongPressDetectionEvent -= InitializeUI;
-            GameSession.instance.OnGameReset -= ClearScoreHoverUI;
+            GameSession.OnGameReset -= ClearScoreHoverUI;
         }
 
         private void InitializeUI(LocationDefinition hoveredLocation, bool isTop)

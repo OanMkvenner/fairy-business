@@ -17,7 +17,7 @@ namespace UI.Menu.BaseMenu
         
         private bool isOpen = false;
         
-        private void Start()
+        protected virtual void Start()
         {
             MenuManager.instance.RegisterMenuElement(this);
             menuContent.SetActive(false);

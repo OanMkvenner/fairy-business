@@ -20,12 +20,12 @@ namespace UI.Gameplay
         {
             maxCount.text = GameSession.instance.MaxRoundCount.ToString();
 
-            GameSession.instance.OnRoundCounterChanged += UpdateRoundCount;
+            GameSession.OnRoundCounterChanged += UpdateRoundCount;
         }
 
         private void OnDestroy()
         {
-            GameSession.instance.OnRoundCounterChanged -= UpdateRoundCount;
+            GameSession.OnRoundCounterChanged -= UpdateRoundCount;
         }
 
         public void FillCurrentTurn(int turnCounter)

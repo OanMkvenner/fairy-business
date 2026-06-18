@@ -9,5 +9,6 @@ namespace UI.Menu.BaseMenu
         HoverSelectionMenu = 4,
         SettingsMenu = 5,
         ControlDisplayMenu = 6,
+        InstallationWindowMenu = 7,
     }
 }

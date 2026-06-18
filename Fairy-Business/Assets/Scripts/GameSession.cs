@@ -22,10 +22,10 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
 {
     public int MaxRoundCount => maxRoundCount;
     public static event Action<LocationDefinition, int> OnSpyCardPlayed;
-    public event Action OnTurnReset;
-    public event Action<PlayerColorIdentifier, ScanAction> OnCardScanned;
-    public event Action<int> OnRoundCounterChanged;
-    public event Action OnGameReset;
+    public static event Action OnTurnReset;
+    public static event Action<PlayerColorIdentifier, ScanAction> OnCardScanned;
+    public static event Action<int> OnRoundCounterChanged;
+    public static event Action OnGameReset;
     
     public CardInput cardInput;
     public Image ScanEffect;

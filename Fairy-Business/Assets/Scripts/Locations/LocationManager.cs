@@ -67,9 +67,6 @@ namespace Locations
         
         public void SetupSelectLocation(LocationDefinition locationDefinition)
         {
-            if (locationDefinition.IsLocationBlocked)
-                return;
-            
             if (SelectedLocations.Contains(locationDefinition))
             {
                 SelectedLocations.Remove(locationDefinition);

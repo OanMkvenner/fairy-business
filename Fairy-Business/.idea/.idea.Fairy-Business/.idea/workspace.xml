@@ -8,11 +8,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/BaseButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/BaseButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/PickRandomLocationsButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/PickRandomLocationsButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ReturnToMainMenuButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ReturnToMainMenuButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ShowEffectKeywordButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ShowEffectKeywordButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/StartNewGame.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/StartNewGame.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/PickRandomLocationsButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/PickRandomLocationsButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/PauseMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +76,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ChangeStateButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/CloseMenuButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/PickRandomLocationsButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ReturnToMainMenuButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ShowEffectKeywordButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/StartNewGame.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -130,13 +162,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="11692">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="11692" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -214,7 +248,7 @@
       <workItem from="1779438741875" duration="3453000" />
       <workItem from="1779539343577" duration="2981000" />
       <workItem from="1781768911184" duration="1924000" />
-      <workItem from="1787481091257" duration="5302000" />
+      <workItem from="1787481091257" duration="10320000" />
     </task>
     <servers />
   </component>
@@ -245,6 +279,34 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs</url>
+          <line>72</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationManager.cs" containingFunctionPresentation="Method 'SetupSelectLocation'">
+            <startOffsets>
+              <option value="2754" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2792" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs</url>
+          <line>77</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationManager.cs" containingFunctionPresentation="Method 'SetupSelectLocation'">
+            <startOffsets>
+              <option value="2923" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2960" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="DotNet_Exception_Breakpoints" />
         <breakpoint type="CMakeExceptionBreakpoint" />

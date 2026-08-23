@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Locations;
@@ -14,11 +15,6 @@ namespace UI.Menu
         [SerializeField] private GameSession gameSession;
         [SerializeField] private List<Transform> locationsParents = new();
         [SerializeField] private LocationUI locationUI;
- 
-        private void Awake()
-        {
-            startGameButton.onClick.AddListener(StartNewGame);
-        }
 
         public override void OpenMenu()
         {
@@ -50,13 +46,6 @@ namespace UI.Menu
                 newLocationUI.GetComponent<RectTransform>().offsetMax = Vector2.zero;
                 locationDefenition.InitializeLocationUI(newLocationUI);
             }
-        }
-
-        private void StartNewGame()
-        {
-            GameSession.instance.GameHasStarted = true;
-            UiManager.CallbackUiEvent("EnoughLocationsSelected");
-            CloseMenu();
         }
     }
 }

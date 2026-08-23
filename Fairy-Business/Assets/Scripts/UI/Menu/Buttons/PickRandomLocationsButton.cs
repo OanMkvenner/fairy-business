@@ -1,4 +1,5 @@
 using Locations;
+using UI.Menu.BaseMenu;
 
 namespace UI.Menu.Buttons
 {
@@ -7,6 +8,7 @@ namespace UI.Menu.Buttons
         protected override void OnClick()
         {
             LocationManager.instance.PickRandomLocations();  
+            MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);
         }
     }
 }

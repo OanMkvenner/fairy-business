@@ -2067,6 +2067,7 @@ GameObject:
   - component: {fileID: 199928300}
   - component: {fileID: 199928303}
   - component: {fileID: 199928304}
+  - component: {fileID: 199928305}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -2201,6 +2202,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 1
   m_AspectRatio: 1
+--- !u!114 &199928305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199928298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9879e49a9804cda9d84a4a03778d410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Menu.Buttons.StartNewGame
 --- !u!1 &200381881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2642,6 +2655,7 @@ GameObject:
   - component: {fileID: 265550523}
   - component: {fileID: 265550524}
   - component: {fileID: 265550525}
+  - component: {fileID: 265550526}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -2740,6 +2754,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &265550526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265550522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92a4902658984788bc60a491684dfd83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Menu.Buttons.ReturnToMainMenuButton
+  menuToClose: 2
 --- !u!1001 &271127900
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3006,6 +3033,8 @@ GameObject:
   - component: {fileID: 304768195}
   - component: {fileID: 304768194}
   - component: {fileID: 304768193}
+  - component: {fileID: 304768197}
+  - component: {fileID: 304768196}
   m_Layer: 5
   m_Name: HideEffectButton
   m_TagString: Untagged
@@ -3063,7 +3092,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: -4948421506105386389, guid: 0c2486cff2a680e4e861ff551b96a011,
+    m_PressedSprite: {fileID: 1905083580207471708, guid: a3d12c98e40a1454fa2f54246ff5d008,
       type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
@@ -3117,6 +3146,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304768191}
   m_CullTransparentMesh: 1
+--- !u!114 &304768196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304768191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58923fc83e344a2d9ddba4b5a071c5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Menu.Buttons.ChangeStateButton
+  objectsToActivate:
+  - {fileID: 1887460445}
+  objectsToDeactivate:
+  - {fileID: 304768191}
+--- !u!114 &304768197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304768191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922144081031483998f3ffbaaa8d6b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Menu.Buttons.ShowEffectKeywordButton
+  showEffectKeyword: 0
 --- !u!1001 &349879189
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5646,7 +5704,6 @@ MonoBehaviour:
   menuIdentifier: 1
   menuContent: {fileID: 2013878327}
   startGameButton: {fileID: 199928300}
-  randomLocationButton: {fileID: 2059871381}
   gameSession: {fileID: 2108983916}
   locationsParents:
   - {fileID: 1437640283}
@@ -8176,6 +8233,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8294882024319606490, guid: 6db7f4253bb6f4241a69bd8efb667866,
+        type: 3}
+      propertyPath: m_BlockingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10193,17 +10255,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221499524}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 304768192}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -36.771423, y: -0.000061035156}
-  m_SizeDelta: {x: 165.564, y: 33.054}
+  m_AnchorMin: {x: 0.3340903, y: 0.3524375}
+  m_AnchorMax: {x: 0.9089653, y: 0.6475625}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1221499526
 MonoBehaviour:
@@ -16412,6 +16474,8 @@ GameObject:
   - component: {fileID: 1887460449}
   - component: {fileID: 1887460448}
   - component: {fileID: 1887460447}
+  - component: {fileID: 1887460451}
+  - component: {fileID: 1887460450}
   m_Layer: 5
   m_Name: ShowEffectButton
   m_TagString: Untagged
@@ -16523,6 +16587,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887460445}
   m_CullTransparentMesh: 1
+--- !u!114 &1887460450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887460445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58923fc83e344a2d9ddba4b5a071c5ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Menu.Buttons.ChangeStateButton
+  objectsToActivate:
+  - {fileID: 304768191}
+  objectsToDeactivate:
+  - {fileID: 1887460445}
+--- !u!114 &1887460451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887460445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 922144081031483998f3ffbaaa8d6b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Menu.Buttons.ShowEffectKeywordButton
+  showEffectKeyword: 1
 --- !u!1 &1896640576
 GameObject:
   m_ObjectHideFlags: 0
@@ -18211,6 +18304,7 @@ GameObject:
   - component: {fileID: 2059871382}
   - component: {fileID: 2059871381}
   - component: {fileID: 2059871384}
+  - component: {fileID: 2059871386}
   - component: {fileID: 2059871385}
   m_Layer: 5
   m_Name: RandomLocationBtn
@@ -18359,6 +18453,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.AspectRatioFitter
   m_AspectMode: 2
   m_AspectRatio: 1
+--- !u!114 &2059871386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059871379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f497b0f9f40e43d496d92d2abcb700b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Menu.Buttons.PickRandomLocationsButton
 --- !u!1 &2061357214
 GameObject:
   m_ObjectHideFlags: 0

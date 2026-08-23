@@ -18,6 +18,10 @@ MonoBehaviour:
     type: 3}
   artefactIcon: {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90,
     type: 3}
+  effectEnabledIcon: {fileID: 9029061209948082837, guid: 0f4632e6e9b39f644bcb23b54e245337,
+    type: 3}
+  effectDisabledIcon: {fileID: -6477343132540518922, guid: 9017e38676d4b9f4b989b74d034ceb6b,
+    type: 3}
   LocationIdentifier: 7
   ModeIdentifier: 1
   CouplingIdentifier: 16

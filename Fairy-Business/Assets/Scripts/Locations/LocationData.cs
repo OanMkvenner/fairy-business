@@ -8,9 +8,10 @@ namespace Locations
         public Sprite imageEnabled;
         public Sprite imageDisabled;
         public Sprite artefactIcon;
+        public Sprite effectEnabledIcon;
+        public Sprite effectDisabledIcon;
         public LocationsIdentifier LocationIdentifier;
         public ModeIdentifier ModeIdentifier;
-        public LocationsIdentifier CouplingIdentifier;
         
         [Header("Game Variables")]
         public int VictoryPoints;

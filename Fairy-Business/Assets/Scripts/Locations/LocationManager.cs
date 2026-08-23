@@ -55,9 +55,14 @@ namespace Locations
             }
         }
 
+        public bool CheckEnoughLocationsSelected()
+        {
+            return SelectedLocations.Count == 3;
+        }
+        
         public void ResetSelectedLocations()
         {
-            foreach (LocationDefinition locationDefinition in SelectedLocations)
+            foreach (LocationDefinition locationDefinition in allAvailableLocations)
             {
                 locationDefinition.IsSelected = false;
             }
@@ -78,7 +83,8 @@ namespace Locations
                 locationDefinition.IsSelected = true;
             }
             
-            CheckEnoughLocationsSelected();
+            if(CheckEnoughLocationsSelected())
+                MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);;
         }
 
         public void PickRandomLocations()
@@ -140,13 +146,6 @@ namespace Locations
             
             //deactivate expert mode, bc its at first glance not visiable for the player
             expertLocationsParent.gameObject.SetActive(false);
-        }
-
-        private void CheckEnoughLocationsSelected()
-        {
-            if (SelectedLocations.Count == 3){
-                MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);
-            }
         }
     }
 }

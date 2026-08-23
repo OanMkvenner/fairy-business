@@ -1,3 +1,4 @@
+using Locations;
 using UI.Menu.BaseMenu;
 
 namespace UI.Menu.Buttons
@@ -11,8 +12,10 @@ namespace UI.Menu.Buttons
 
         public void StartGame()
         {
-            GameSession.instance.GameHasStarted = true;
+            if (!LocationManager.instance.CheckEnoughLocationsSelected())
+                return;
             UiManager.CallbackUiEvent("EnoughLocationsSelected");
+            GameSession.instance.GameHasStarted = true;
             MenuManager.instance.CloseMenu(MenuIdentifier.LocationSelectionMenu);
         }
     }

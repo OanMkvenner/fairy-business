@@ -9,14 +9,10 @@
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/StartNewGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/StartNewGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UiGraphs/Main Ui Graph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UiGraphs/Main Ui Graph.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UiGraphs/SubMainMenu.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UiGraphs/SubMainMenu.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UiGraphs/SubSelectionMenu.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UiGraphs/SubSelectionMenu.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,13 +133,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="35908">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="35908" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -253,6 +251,86 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs</url>
+          <line>66</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationManager.cs" containingFunctionPresentation="Method 'ResetSelectedLocations'">
+            <startOffsets>
+              <option value="2514" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2552" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationDefinition.cs" containingFunctionPresentation="Property 'IsSelected'">
+            <startOffsets>
+              <option value="1690" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1709" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationDefinition.cs" containingFunctionPresentation="Property 'IsSelected'">
+            <startOffsets>
+              <option value="1726" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1742" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs</url>
+          <line>213</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationDefinition.cs" containingFunctionPresentation="Method 'UpdateVisuals'">
+            <startOffsets>
+              <option value="7214" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7241" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs</url>
+          <line>215</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationDefinition.cs" containingFunctionPresentation="Method 'UpdateVisuals'">
+            <startOffsets>
+              <option value="7255" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7318" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs</url>
+          <line>217</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationDefinition.cs" containingFunctionPresentation="Method 'UpdateVisuals'">
+            <startOffsets>
+              <option value="7332" />
+            </startOffsets>
+            <endOffsets>
+              <option value="7375" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="DotNet_Exception_Breakpoints" />
         <breakpoint type="CMakeExceptionBreakpoint" />

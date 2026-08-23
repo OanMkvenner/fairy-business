@@ -23,6 +23,7 @@ namespace UI.Menu
             base.CloseMenu();
             
             DestroySelection();
+            LocationManager.instance.ResetSelectedLocations();
         }
 
         private void CreateLocationUICards(List<LocationDefinition> locationDefinitions)

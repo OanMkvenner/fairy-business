@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using Locations;
 using Player;
 using TMPro;
-using UI.Buttons;
 using UI.Gameplay;
 using UI.Menu.BaseMenu;
+using UI.Menu.Buttons;
 using UnityEngine;
 using UnityEngine.UI;
 

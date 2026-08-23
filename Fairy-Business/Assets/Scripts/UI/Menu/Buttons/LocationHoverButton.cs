@@ -1,12 +1,11 @@
 using System;
 using System.Collections;
 using Locations;
-using Player;
 using UI.Menu.BaseMenu;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace UI.Buttons
+namespace UI.Menu.Buttons
 {
     [RequireComponent(typeof(EventTrigger))]
     public class LocationHoverButton : MonoBehaviour

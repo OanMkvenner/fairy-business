@@ -11,7 +11,7 @@
       "languageFR": "french",
       "languageEN": "english",
       "chooseLanguage": "Choose a language",
-      "playGame": "Play",
+      "playGame": "New Game",
       
       "winGame": "Won!",
       "looseGame": "Lost!",
@@ -20,9 +20,8 @@
       "newTurn": "New Turn",
       
       "menuTitle_MenuSelection": "Selected Locations",
-      "menuSelection_locationSelection": "Select 3 locations",
-      "menuSelection_pickRandom": "Pick random",
-      "menuTitle_MenuSettings": "Settings",
+      "menuSelection_locationSelection": "Select 3 Items",
+      "menuTitle_MenuSettings": "Options",
       "menuSettings_Sound" : "Sound",
       "menuTitle_MenuPause": "Pause",
       "menuPause_returnStart": "Return to start",

@@ -140,6 +140,9 @@ namespace Locations
                 locationDefinition.InitializeLocationDefinition(locationData, false);
                 allAvailableLocations.Add(locationDefinition);
             }
+            
+            //deactivate expert mode, bc its at first glance not visiable for the player
+            expertLocationsParent.gameObject.SetActive(false);
         }
 
         private void CheckEnoughLocationsSelected()

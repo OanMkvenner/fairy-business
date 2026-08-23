@@ -4,7 +4,7 @@ using Animation;
 using Player;
 using TMPro;
 using UI;
-using UI.Buttons;
+using UI.Menu.Buttons;
 using UnityEngine;
 using UnityEngine.UI;
 

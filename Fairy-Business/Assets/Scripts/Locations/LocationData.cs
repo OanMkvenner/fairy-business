@@ -10,6 +10,7 @@ namespace Locations
         public Sprite artefactIcon;
         public Sprite effectEnabledIcon;
         public Sprite effectDisabledIcon;
+        public Sprite locationBackground;
         public LocationsIdentifier LocationIdentifier;
         public ModeIdentifier ModeIdentifier;
         
@@ -20,5 +21,6 @@ namespace Locations
         public string localizationDescriptionText;
         public string localizationTitleText;
         public string localizationKeywordText;
+        public string localizationArtifact;
     }
 }

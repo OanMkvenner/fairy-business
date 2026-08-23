@@ -22,10 +22,12 @@ MonoBehaviour:
     type: 3}
   effectDisabledIcon: {fileID: 7590595430626789800, guid: 541b62d56dedc534c8f6ee660cc2c0b7,
     type: 3}
+  locationBackground: {fileID: 4965694188397592350, guid: ca81da799a488ee4cbce84e827b97f20,
+    type: 3}
   LocationIdentifier: 15
   ModeIdentifier: 2
-  CouplingIdentifier: 6
   VictoryPoints: 4
   localizationDescriptionText: locationDescriptionExpert_HauntedHouse
   localizationTitleText: locationTitleExpert_HauntedHouse
   localizationKeywordText: locationKeywordExpert_HauntedHouse
+  localizationArtifact: locationArtifactTitle_Book

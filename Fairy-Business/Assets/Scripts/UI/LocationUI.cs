@@ -6,16 +6,19 @@ namespace UI
 {
     public class LocationUI : MonoBehaviour
     {
-        [SerializeField] private Image background;
-        [SerializeField] private Image locationImage;
+        [SerializeField] private Image locationBackground;
+        [SerializeField] private Image artifactImage;
         [SerializeField] private TextMeshProUGUI locationTitle;
-        [SerializeField] private TextMeshProUGUI description;
+        [SerializeField] private TextMeshProUGUI artifactTitle;
+        [SerializeField] private TextMeshProUGUI keyword;
 
-        public void Init(Sprite locationImage, string locationTitle, string description)
+        public void Init(Sprite locationBackgroundImage, Sprite artifact, string artifactName, string locationTitle, string keyword)
         {
-            this.locationImage.sprite = locationImage;
+            this.locationBackground.sprite = locationBackgroundImage;
+            this.artifactImage.sprite = artifact;
             this.locationTitle.text = locationTitle;
-            this.description.text = description;
+            this.artifactTitle.text = artifactName;
+            this.keyword.text = keyword;
         }
     }
 }

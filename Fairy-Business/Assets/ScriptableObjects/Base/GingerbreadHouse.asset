@@ -22,10 +22,12 @@ MonoBehaviour:
     type: 3}
   effectDisabledIcon: {fileID: -6258378862754106892, guid: 41f26f784aea32d40a3302fd4b9a866c,
     type: 3}
+  locationBackground: {fileID: -4516700160097963135, guid: c5eac04c8324686478186f7245999b09,
+    type: 3}
   LocationIdentifier: 5
   ModeIdentifier: 1
-  CouplingIdentifier: 14
   VictoryPoints: 3
   localizationDescriptionText: locationDescription_GingerbreadHouse
   localizationTitleText: locationTitle_GingerbreadHouse
   localizationKeywordText: locationKeyword_GingerbreadHouse
+  localizationArtifact: locationArtifactTitle_Book

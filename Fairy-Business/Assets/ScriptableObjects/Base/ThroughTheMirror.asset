@@ -22,10 +22,12 @@ MonoBehaviour:
     type: 3}
   effectDisabledIcon: {fileID: -7600365422203778848, guid: 64ccb05936fde8e45bbbc894e9e0f52d,
     type: 3}
+  locationBackground: {fileID: 3398861000044739082, guid: d7bb78a7a148a8a4696d79451164376c,
+    type: 3}
   LocationIdentifier: 8
   ModeIdentifier: 1
-  CouplingIdentifier: 17
   VictoryPoints: 2
   localizationDescriptionText: locationDescription_ThroughTheMirror
   localizationTitleText: locationTitle_ThroughTheMirror
   localizationKeywordText: locationKeyword_ThroughTheMirror
+  localizationArtifact: locationArtifactTitle_Amulett

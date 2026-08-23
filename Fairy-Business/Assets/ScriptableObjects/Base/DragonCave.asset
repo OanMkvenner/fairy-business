@@ -22,10 +22,12 @@ MonoBehaviour:
     type: 3}
   effectDisabledIcon: {fileID: -4054773423996380481, guid: 42b3cb2d09ae6b740b2ef1f176e112d7,
     type: 3}
+  locationBackground: {fileID: 2995696712886752986, guid: ab0bed43d895bc54b8f494d4e92b59a6,
+    type: 3}
   LocationIdentifier: 4
   ModeIdentifier: 1
-  CouplingIdentifier: 13
   VictoryPoints: 1
   localizationDescriptionText: locationDescription_DragonCave
   localizationTitleText: locationTitle_DragonCave
   localizationKeywordText: locationKeyword_DragonCave
+  localizationArtifact: locationArtifactTitle_Horn

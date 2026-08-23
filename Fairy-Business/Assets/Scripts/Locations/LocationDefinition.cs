@@ -132,10 +132,14 @@ namespace Locations
             string locationTitle = Localizer.instance.TranslateToSpecificLanguage(LocationData.localizationTitleText, 
                 activeLanguageCode);
             
-            string locationDescription = Localizer.instance.TranslateToSpecificLanguage(LocationData.localizationDescriptionText, 
+            string locationKeyword = Localizer.instance.TranslateToSpecificLanguage(LocationData.localizationKeywordText, 
                 activeLanguageCode);
             
-            currenLocatioUI.Init(imageEnabled, locationTitle, locationDescription);
+            string artifactTitle = Localizer.instance.TranslateToSpecificLanguage(LocationData.localizationArtifact, 
+                activeLanguageCode);
+            
+            currenLocatioUI.Init(LocationData.locationBackground, LocationData.artefactIcon, artifactTitle, 
+                locationTitle, locationKeyword);
         }
         
         public void AddPlayerPower(PlayerColorIdentifier playerIdx, int newPower)

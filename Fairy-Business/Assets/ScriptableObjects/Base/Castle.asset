@@ -22,10 +22,12 @@ MonoBehaviour:
     type: 3}
   effectDisabledIcon: {fileID: -8214492244181162128, guid: 3f82057fd9c02b1428d9acef272c9062,
     type: 3}
+  locationBackground: {fileID: 7165924914710862749, guid: 6badcf98425032c44a460116a1e69347,
+    type: 3}
   LocationIdentifier: 3
   ModeIdentifier: 1
-  CouplingIdentifier: 12
   VictoryPoints: 4
   localizationDescriptionText: locationDescription_Castle
   localizationTitleText: locationTitle_Castle
   localizationKeywordText: locationKeyword_Castle
+  localizationArtifact: locationArtifactTitle_Horn

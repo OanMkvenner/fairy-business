@@ -22,10 +22,12 @@ MonoBehaviour:
     type: 3}
   effectDisabledIcon: {fileID: -1956667926938944583, guid: 52c0896ceef240944bc2eec5ce8fdc8c,
     type: 3}
+  locationBackground: {fileID: 8328248506073472367, guid: 23a8204888fb7304fb2b587ace5cb5ab,
+    type: 3}
   LocationIdentifier: 11
   ModeIdentifier: 2
-  CouplingIdentifier: 2
   VictoryPoints: 1
   localizationDescriptionText: locationDescriptionExpert_EnchantedForest
   localizationTitleText: locationTitleExpert_EnchantedForest
   localizationKeywordText: locationKeywordExpert_EnchantedForest
+  localizationArtifact: locationArtifactTitle_Book

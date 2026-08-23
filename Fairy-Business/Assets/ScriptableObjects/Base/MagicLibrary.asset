@@ -22,10 +22,12 @@ MonoBehaviour:
     type: 3}
   effectDisabledIcon: {fileID: 1787429254725022344, guid: 30be2305eb78404409aa4bafae8de09b,
     type: 3}
+  locationBackground: {fileID: -8761745422611648803, guid: 6feee968e7646864488e4b77e99818a7,
+    type: 3}
   LocationIdentifier: 9
   ModeIdentifier: 0
-  CouplingIdentifier: 18
   VictoryPoints: 0
   localizationDescriptionText: locationDescription_MagicLibrary
   localizationTitleText: locationTitle_MagicLibrary
   localizationKeywordText: locationKeyword_MagicLibrary
+  localizationArtifact: locationArtifactTitle_Book

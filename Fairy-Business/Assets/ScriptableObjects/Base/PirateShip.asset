@@ -22,10 +22,12 @@ MonoBehaviour:
     type: 3}
   effectDisabledIcon: {fileID: 8438961065936819608, guid: 0f3709161f662f647894c57a191cfd7c,
     type: 3}
+  locationBackground: {fileID: 597594124879807736, guid: 3a1c4e466f29dcb41bea0b6e1ef8f888,
+    type: 3}
   LocationIdentifier: 1
   ModeIdentifier: 1
-  CouplingIdentifier: 10
   VictoryPoints: 2
   localizationDescriptionText: locationDescription_PirateShip
   localizationTitleText: locationTitle_PirateShip
   localizationKeywordText: locationKeyword_PirateShip
+  localizationArtifact: locationArtifactTitle_Book

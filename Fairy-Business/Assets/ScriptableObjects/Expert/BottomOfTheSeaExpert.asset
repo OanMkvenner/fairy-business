@@ -22,10 +22,12 @@ MonoBehaviour:
     type: 3}
   effectDisabledIcon: {fileID: -6477343132540518922, guid: 9017e38676d4b9f4b989b74d034ceb6b,
     type: 3}
+  locationBackground: {fileID: 8875730847190090070, guid: 9c1b30c915a50e94d9b4b211d24b2648,
+    type: 3}
   LocationIdentifier: 16
   ModeIdentifier: 2
-  CouplingIdentifier: 7
   VictoryPoints: 3
   localizationDescriptionText: locationDescriptionExpert_BottomOfTheSea
   localizationTitleText: locationTitleExpert_BottomOfTheSea
   localizationKeywordText: locationKeywordExpert_BottomOfTheSea
+  localizationArtifact: locationArtifactTitle_Amulett

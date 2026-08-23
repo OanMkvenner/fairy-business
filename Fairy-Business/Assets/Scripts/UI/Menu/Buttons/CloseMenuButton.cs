@@ -1,27 +1,13 @@
 using UI.Menu.BaseMenu;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace UI.Menu.Buttons
 {
-    [RequireComponent(typeof(Button))]
-    public class CloseMenuButton : MonoBehaviour
+    public class CloseMenuButton : BaseButton
     {
         [SerializeField] private MenuIdentifier menuIdentifier;
-        private Button closeButton;
-        
-        private void Awake()
-        {
-            closeButton = GetComponent<Button>();
-            closeButton.onClick.AddListener(CloseMenu);
-        }
 
-        private void OnDestroy()
-        {
-            closeButton.onClick.RemoveAllListeners();
-        }
-
-        private void CloseMenu()
+        protected override void OnClick()
         {
             MenuManager.instance.CloseMenu(menuIdentifier);
         }

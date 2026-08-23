@@ -10,7 +10,6 @@ namespace UI.Menu
     public class LocationSelectionMenu : MenuElement
     {
         [SerializeField] private Button startGameButton;
-        [SerializeField] private Button randomLocationButton;
 
         [SerializeField] private GameSession gameSession;
         [SerializeField] private List<Transform> locationsParents = new();
@@ -19,7 +18,6 @@ namespace UI.Menu
         private void Awake()
         {
             startGameButton.onClick.AddListener(StartNewGame);
-            randomLocationButton.onClick.AddListener(PickRandomLocations);
         }
 
         public override void OpenMenu()
@@ -51,7 +49,6 @@ namespace UI.Menu
                 newLocationUI.GetComponent<RectTransform>().offsetMin = Vector2.zero;
                 newLocationUI.GetComponent<RectTransform>().offsetMax = Vector2.zero;
                 locationDefenition.InitializeLocationUI(newLocationUI);
-                
             }
         }
 
@@ -60,11 +57,6 @@ namespace UI.Menu
             GameSession.instance.GameHasStarted = true;
             UiManager.CallbackUiEvent("EnoughLocationsSelected");
             CloseMenu();
-        }
-
-        private void PickRandomLocations()
-        {
-            LocationManager.instance.PickRandomLocations();    
         }
     }
 }

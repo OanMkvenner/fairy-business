@@ -8,54 +8,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Haunt_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Haunt_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Item-Base.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Item-Base.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/LocationSelectionNotPossible.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/LocationSelectionNotPossible.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Magic_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Magic_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Mirror_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Mirror_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Sweets_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/Sweets_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/bank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/bank.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/banke_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/banke_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/castle.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/castle.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/castle_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/castle_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/dark_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/dark_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/forest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/forest.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/forest_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/forest_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/golden.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/golden.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/haunt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/haunt.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/magic.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/magic.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/mirror.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/mirror.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/ocean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/ocean.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/ocean_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/ocean_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/pirate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/pirate.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/pirate_grey.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/pirate_grey.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/silver.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/silver.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/sweets.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/sweets.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/BaseButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/BaseButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/PickRandomLocationsButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/PickRandomLocationsButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,8 +43,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Settings/SoundSettingsToggle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/ScoreHoverUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ButtonSound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/BaseButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ChangeStateButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/CloseMenuButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/PickRandomLocationsButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -255,7 +214,7 @@
       <workItem from="1779438741875" duration="3453000" />
       <workItem from="1779539343577" duration="2981000" />
       <workItem from="1781768911184" duration="1924000" />
-      <workItem from="1787481091257" duration="4353000" />
+      <workItem from="1787481091257" duration="5302000" />
     </task>
     <servers />
   </component>

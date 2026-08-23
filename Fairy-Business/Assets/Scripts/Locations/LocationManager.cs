@@ -37,9 +37,11 @@ namespace Locations
 
         public void CreateGameLocations()
         {
+            GameSession.instance.GameHasStarted = true;
+            
             for (int index = 0; index < SelectedLocations.Count; index++)
             {
-                GameLocations[index].InitializeLocationDefinition(SelectedLocations[index].LocationData, true, 
+                GameLocations[index].InitializeLocationDefinition(SelectedLocations[index].LocationData, GameSession.instance.GameHasStarted, 
                     bankIdentifierByIndex[index]);
                 
                 GameLocations[index].IsSelected = true;

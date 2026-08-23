@@ -761,6 +761,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         
         disallowNewCards = true;
         IsEndOfGame = true;
+        GameHasStarted = false;
 
         return IsEndOfGame;
     }

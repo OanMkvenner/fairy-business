@@ -32,11 +32,7 @@ namespace Locations
 
                 // save last owner
                 LastOwner = currentOwner;
-
                 currentOwner = value;
-                
-                //Commented out bc of artefacts now moving and not locations anymore
-                locationImage.sprite = currentOwner == PlayerColorIdentifier.Neutral ? imageDisabled : imageEnabled;
 
                 OnCurrentOwnerChangedEvent?.Invoke(this);
             }
@@ -99,11 +95,6 @@ namespace Locations
             ShowEffectKeywordButton.OnEffectKeywordSelected -= SetEffectKeywordEnabled;
         }
 
-        private void OnEnable()
-        {
-            UpdateVisuals();
-        }
-
         public void InitializeLocationDefinition(LocationData data, bool isGameView, BankWrapper bankWrapper = null)
         {
             this.LocationData = data;
@@ -113,7 +104,7 @@ namespace Locations
             if(bankWrapper != null) this.BankWrapper = bankWrapper;
 
             UpdateVisuals();
-
+            
             if (isGameView)
             {
                 foreach (LocationHoverButton locationHoverButton in locationHoverButtons)
@@ -121,6 +112,7 @@ namespace Locations
                     locationHoverButton.gameObject.SetActive(true);
                 }
                 
+                locationImage.sprite = LocationData.imageGameView;
                 SetArtefactSprite();
             }
             else
@@ -211,6 +203,9 @@ namespace Locations
         
         private void UpdateVisuals()
         {
+            if (GameSession.instance.GameHasStarted)
+                return;
+            
             bool selected = isSelected;
 
             locationImage.sprite = selected ? imageEnabled : imageDisabled;

@@ -12,6 +12,8 @@
       "languageEN": "english",
       "chooseLanguage": "Choose a language",
       "playGame": "New Game",
+      "resumeGame": "Resume",
+      "quitGame": "Quit",
       
       "winGame": "Won!",
       "looseGame": "Lost!",

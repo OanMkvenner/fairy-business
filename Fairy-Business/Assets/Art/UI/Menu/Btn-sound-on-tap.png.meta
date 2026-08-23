@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 9daa643838456e34a942039d715756b1
+guid: 02c1380b79798ac45ad444a148241cfc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6523474295705429427
-    second: soundicon_0
-  - first:
-      213: -6776384095889436844
-    second: soundicon_1
-  - first:
-      213: 3226689987380226320
-    second: soundicon_2
-  - first:
-      213: -5962874301017921882
-    second: soundicon_3
+      213: 8134562505019081023
+    second: Btn-sound-on-tap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -81,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: soundicon_0
+      name: Btn-sound-on-tap_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 132
-        width: 527
-        height: 740
+        x: 9
+        y: 9
+        width: 176
+        height: 176
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b5e9e02f49088a50800000000000000
-      internalID: 6523474295705429427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soundicon_1
-      rect:
-        serializedVersion: 2
-        x: 620
-        y: 319
-        width: 115
-        height: 364
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 45f47ee419275f1a0800000000000000
-      internalID: -6776384095889436844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soundicon_2
-      rect:
-        serializedVersion: 2
-        x: 717
-        y: 222
-        width: 151
-        height: 558
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 019ab12a27187cc20800000000000000
-      internalID: 3226689987380226320
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: soundicon_3
-      rect:
-        serializedVersion: 2
-        x: 805
-        y: 134
-        width: 188
-        height: 734
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a665877a6d9f3da0800000000000000
-      internalID: -5962874301017921882
+      spriteID: f31cfd2ef75c3e070800000000000000
+      internalID: 8134562505019081023
       vertices: []
       indices: 
       edges: []
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      soundicon_0: 6523474295705429427
-      soundicon_1: -6776384095889436844
-      soundicon_2: 3226689987380226320
-      soundicon_3: -5962874301017921882
+      Btn-sound-on-tap_0: 8134562505019081023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

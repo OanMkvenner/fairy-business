@@ -99,6 +99,11 @@ namespace Locations
             ShowEffectKeywordButton.OnEffectKeywordSelected -= SetEffectKeywordEnabled;
         }
 
+        private void OnEnable()
+        {
+            UpdateVisuals();
+        }
+
         public void InitializeLocationDefinition(LocationData data, bool isGameView, BankWrapper bankWrapper = null)
         {
             this.LocationData = data;

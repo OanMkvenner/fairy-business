@@ -1370,7 +1370,12 @@ PrefabInstance:
     - target: {fileID: 7989741245606277471, guid: 390f902ccec966a4d95e6ac0c73cd543,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989741245606277471, guid: 390f902ccec966a4d95e6ac0c73cd543,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: OptionButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3366,6 +3371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: localizationString
       value: menuSelection_nextButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7989741245606277471, guid: 390f902ccec966a4d95e6ac0c73cd543,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: StartButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6128,7 +6138,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 749542764}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7934293553796877107, guid: a36123d890234fc489997796144891aa,
+          type: 2}
+        m_TargetAssemblyTypeName: XNode.UiStateGraph.UiStateNode, hybrgames.nodeeditor
+        m_MethodName: MoveAlongPort
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SettingsMenuButton
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &749542764
 MonoBehaviour:
   m_ObjectHideFlags: 0

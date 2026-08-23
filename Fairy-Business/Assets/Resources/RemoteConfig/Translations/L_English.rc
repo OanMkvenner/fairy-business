@@ -32,9 +32,9 @@
       "menuTitle_MenuPause": "Pause",
       "menuPause_returnStart": "Return to start",
     
-      "locationArtifactTitle_Horn": "Horn";
-      "locationArtifactTitle_Amulett": "Amulett";
-      "locationArtifactTitle_Book": "Book";
+      "locationArtifactTitle_Horn": "Horn",
+      "locationArtifactTitle_Amulett": "Amulett",
+      "locationArtifactTitle_Book": "Book",
     
       "locationTitle_EnchantedForest":"Enchanted Forest",
       "locationTitle_Castle":"Castle",

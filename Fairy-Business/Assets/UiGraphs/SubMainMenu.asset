@@ -387,6 +387,8 @@ MonoBehaviour:
     - enter
     - passThrough
     - StartGameButton
+    - OptionButton
+    - SettingsMenuButton
     values:
     - _fieldName: enter
       _node: {fileID: 7934293553796877107}
@@ -417,6 +419,24 @@ MonoBehaviour:
       - fieldName: enter
         node: {fileID: -7934788314539571962}
         reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: OptionButton
+      _node: {fileID: 7934293553796877107}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: SettingsMenuButton
+      _node: {fileID: 7934293553796877107}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0

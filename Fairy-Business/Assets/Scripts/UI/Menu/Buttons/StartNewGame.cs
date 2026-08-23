@@ -6,6 +6,11 @@ namespace UI.Menu.Buttons
     {
         protected override void OnClick()
         {
+            StartGame();
+        }
+
+        public void StartGame()
+        {
             GameSession.instance.GameHasStarted = true;
             UiManager.CallbackUiEvent("EnoughLocationsSelected");
             MenuManager.instance.CloseMenu(MenuIdentifier.LocationSelectionMenu);

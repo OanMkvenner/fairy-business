@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: GingerbreadHouseExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
-  imageEnabled: {fileID: 5615069187222856334, guid: 606703ba9cda91a46b16046e262c2bcd,
+  imageEnabled: {fileID: -1525245392750082236, guid: 8cd6b26e04eb68147a6eb197272db8fc,
     type: 3}
-  imageDisabled: {fileID: -5646780793612857680, guid: 8acceb10e503ef54a8c5c0662bac24d7,
+  imageDisabled: {fileID: -1835665994482058080, guid: a4f74b71180d43643a52f819882e31a0,
     type: 3}
   artefactIcon: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
     type: 3}

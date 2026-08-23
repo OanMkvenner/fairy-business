@@ -52,7 +52,6 @@ namespace Locations
         [SerializeField] private List<LocationHoverButton> locationHoverButtons = new();
         [SerializeField] private LocationHoverButton locationHoverButton;
         [SerializeField] private Image locationImage;
-        [SerializeField] private Image blockingIcon;
 
         private Sprite imageEnabled;
         private Sprite imageDisabled;
@@ -79,13 +78,6 @@ namespace Locations
         {
             RectTransform = GetComponent<RectTransform>();
             MoveObject = GetComponent<MoveRotateObject>();
-
-            OnLocationSelectedEvent += BlockSelection;
-        }
-
-        private void OnDestroy()
-        {
-            OnLocationSelectedEvent -= BlockSelection;
         }
 
         public void InitializeLocationDefinition(LocationData data, bool isGameView, BankWrapper bankWrapper = null)
@@ -183,33 +175,11 @@ namespace Locations
             Artifact.sprite = LocationData.artefactIcon;
         }
         
-        /// <summary>
-        /// Toggles the blocked state of a location based on the given identifier and block flag.
-        /// </summary>
-        /// <param name="locationIdentifier">The location identifier to match against this instance.</param>
-        /// <param name="allow">If true, blocks the location; if false, unblocks it.</param>
-        private void BlockSelection(LocationsIdentifier locationIdentifier, bool allow)
-        {
-            if (LocationData == null)
-            {
-                Debug.LogError("Location Data is null, could be bc this Location Definition exists in the scene but " +
-                               "was not initialized yet!", this);
-                return;
-            }
-
-            if (locationIdentifier != LocationIdentifier)
-                return;
-            
-            blockingIcon.enabled = allow;
-            IsLocationBlocked = allow;
-        }
-        
         private void UpdateVisuals(){
 
             if (isSelected)
             {
                 locationImage.sprite = imageEnabled;
-                blockingIcon.enabled = false;
                 IsLocationBlocked = false;
                 return;
             }

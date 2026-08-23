@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: PirateShipExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
-  imageEnabled: {fileID: 488566688391327861, guid: cb0a2531482d526499edc1794b17e392,
+  imageEnabled: {fileID: -3059022212724647460, guid: 421ce1c008b8aba44a7cb250ca9b916e,
     type: 3}
-  imageDisabled: {fileID: 3874881954196515463, guid: 28a56cff40ff5074eb8f2cd1e944814d,
+  imageDisabled: {fileID: -6220615198652187530, guid: c4e9ad64b353b324c8043bfe499302af,
     type: 3}
   artefactIcon: {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90,
     type: 3}

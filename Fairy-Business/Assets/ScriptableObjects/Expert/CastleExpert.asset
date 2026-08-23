@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: CastleExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
-  imageEnabled: {fileID: -5119980863986964875, guid: 76f9b3c8e3177dd49890c8fb8f269f36,
+  imageEnabled: {fileID: -1280232501870456617, guid: 5667d4b296c97f541aacbce5f5ba91d4,
     type: 3}
-  imageDisabled: {fileID: -7603078470868985032, guid: 379f5daf8f31a754c8c90057d6faad57,
+  imageDisabled: {fileID: 318529651930935085, guid: bc5eefeed60900f4c8fab59b36961d1d,
     type: 3}
   artefactIcon: {fileID: -9114616584026453734, guid: 220a7d8c2a2aedb4c93c3f3bd5649006,
     type: 3}

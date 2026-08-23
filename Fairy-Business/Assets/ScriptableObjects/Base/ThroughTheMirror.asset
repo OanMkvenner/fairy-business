@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: ThroughTheMirror
   m_EditorClassIdentifier: 
-  imageEnabled: {fileID: 5632821140356901969, guid: 4a79ab17f29a5a74a943721e9718e39c,
+  imageEnabled: {fileID: -4796380105603636701, guid: 110a2a1794b79524d8311888cebb8626,
     type: 3}
-  imageDisabled: {fileID: -8476587477302908971, guid: e872d46d9ebd1794295ab81fe54df289,
+  imageDisabled: {fileID: 4335388530601257093, guid: dc2d26904acc9f24dafffda2ff9461dd,
     type: 3}
   artefactIcon: {fileID: -9114616584026453734, guid: 220a7d8c2a2aedb4c93c3f3bd5649006,
     type: 3}

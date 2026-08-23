@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: BottomOfTheSea
   m_EditorClassIdentifier: 
-  imageEnabled: {fileID: -2760148759867663336, guid: 74f2e4d649eb50f43a1cc2c23f11c88f,
+  imageEnabled: {fileID: -6414859201818423085, guid: 69d73130f82edb146b0f0c6632944bd7,
     type: 3}
-  imageDisabled: {fileID: -5121769818918040099, guid: 8c8df489bc7ef314b9ba9120239c6f16,
+  imageDisabled: {fileID: 4373916652557415318, guid: bb48a81b39ed25345a8c0d3ba7a2c627,
     type: 3}
   artefactIcon: {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90,
     type: 3}

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: MagicLibraryExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
-  imageEnabled: {fileID: -2256524004051076624, guid: 9f1b47597bfd1394fa5cf00cc82db2f6,
+  imageEnabled: {fileID: -5904797684756438432, guid: 46ba6a752be5c5145a526fdcc5ffa469,
     type: 3}
-  imageDisabled: {fileID: -2622302334424321132, guid: e3ac7293f44e4b5449dcad51295cae70,
+  imageDisabled: {fileID: 7076393882549360678, guid: afca6bd867e114a409c01c83dae5b35d,
     type: 3}
   artefactIcon: {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90,
     type: 3}

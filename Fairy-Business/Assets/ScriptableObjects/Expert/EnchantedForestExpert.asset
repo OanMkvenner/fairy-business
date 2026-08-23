@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: EnchantedForestExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
-  imageEnabled: {fileID: -1343518637512107228, guid: cc83e20f6a5c4c54c99faa6d5533e719,
+  imageEnabled: {fileID: -5534797415213101912, guid: 52df297df3f29f642a46ac4cc596a67d,
     type: 3}
-  imageDisabled: {fileID: 8691972669833271309, guid: 3dc69dc47159aef418903aa785930076,
+  imageDisabled: {fileID: -1751484391319276772, guid: 2bf1336b0b33e78429720fd368f6cc73,
     type: 3}
   artefactIcon: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
     type: 3}

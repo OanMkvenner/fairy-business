@@ -30,6 +30,11 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     public CardInput cardInput;
     public Image ScanEffect;
     public Dictionary<PlayerColorIdentifier, int> VictoryPointCounters { get; private set; }
+
+    /// <summary>
+    /// Item 1: blue, Item 2: red
+    /// </summary>
+    public Dictionary<int, (int, int)> VictoryPointCountsPerPhase { get; private set; } = new();
     public bool IsEndOfGame { get; private set; }
     public bool GameHasStarted { get; set; }
 
@@ -729,7 +734,6 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         break;
                     }
                 }
-                
             }
             
             UpdateVictoryPointDisplay();
@@ -739,9 +743,12 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         
         UniqueNameHash.Get("VictoryPointsRed").GetComponent<TMP_Text>().text = VictoryPointCounters[PlayerColorIdentifier.Red].ToString();
         UniqueNameHash.Get("VictoryPointsBlue").GetComponent<TMP_Text>().text = VictoryPointCounters[PlayerColorIdentifier.Blue].ToString();
+        
+        //saves vp point over all phases.
+        VictoryPointCountsPerPhase[RoundCounter] = (VictoryPointCounters[PlayerColorIdentifier.Blue],VictoryPointCounters[PlayerColorIdentifier.Red]);
     }
 
-    private void ShowPower()
+    public void ShowPower()
     {
         UniqueNameHash.Get("PointOverview").gameObject.SetActive(true);
         
@@ -752,7 +759,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
         }
     }
 
-    private void HidePower(){
+    public void HidePower(){
        UniqueNameHash.Get("PointOverview").gameObject.SetActive(false);
     }
 

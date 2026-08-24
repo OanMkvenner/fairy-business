@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: faa132e19465dbe448a50cd779933e76
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5725064972462901670
+    second: EvilCorp_logo_0
+  - first:
+      213: -3826013301240633565
+    second: EvilCorp_logo_1
+  - first:
+      213: 4960422352362303755
+    second: EvilCorp_logo_2
+  - first:
+      213: -3798758612831299322
+    second: EvilCorp_logo_3
+  - first:
+      213: -4193879244110931987
+    second: EvilCorp_logo_4
+  - first:
+      213: -1972525044237075126
+    second: EvilCorp_logo_5
+  - first:
+      213: 8879165935918445310
+    second: EvilCorp_logo_6
+  - first:
+      213: 4576392723766304079
+    second: EvilCorp_logo_7
+  - first:
+      213: 8149612584725329494
+    second: EvilCorp_logo_8
+  - first:
+      213: -8109248201047082701
+    second: EvilCorp_logo_9
+  - first:
+      213: -5163379271903321377
+    second: EvilCorp_logo_10
+  - first:
+      213: 8700083223552317535
+    second: EvilCorp_logo_11
+  - first:
+      213: 4083986113498744333
+    second: EvilCorp_logo_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EvilCorp_logo_0
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 91
+        width: 844
+        height: 759
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a9ceaf7244837f40800000000000000
+      internalID: 5725064972462901670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_1
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 394
+        width: 233
+        height: 448
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 327e1a17c2547eac0800000000000000
+      internalID: -3826013301240633565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_2
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 394
+        width: 310
+        height: 245
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01767819d5f6d440800000000000000
+      internalID: 4960422352362303755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 344
+        width: 695
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6091cb61b29184bc0800000000000000
+      internalID: -3798758612831299322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_4
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 126
+        width: 72
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de752ef2c095cc5c0800000000000000
+      internalID: -4193879244110931987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_5
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 126
+        width: 90
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4dffa35cee20a4e0800000000000000
+      internalID: -1972525044237075126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 126
+        width: 26
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef2fa28ff52293b70800000000000000
+      internalID: 8879165935918445310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_7
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 126
+        width: 72
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4dd5cc7fec928f30800000000000000
+      internalID: 4576392723766304079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_8
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 126
+        width: 78
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6563b91a77d391170800000000000000
+      internalID: 8149612584725329494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_9
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 126
+        width: 81
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 339fc1dc9b9267f80800000000000000
+      internalID: -8109248201047082701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_10
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 126
+        width: 86
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd26691b8edf758b0800000000000000
+      internalID: -5163379271903321377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_11
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 126
+        width: 79
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f58db28c897ecb870800000000000000
+      internalID: 8700083223552317535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EvilCorp_logo_12
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 126
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0688ba7bbb3da830800000000000000
+      internalID: 4083986113498744333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6ad69e20b9a2863408e4cbbd0664d80b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EvilCorp_logo_0: 5725064972462901670
+      EvilCorp_logo_1: -3826013301240633565
+      EvilCorp_logo_10: -5163379271903321377
+      EvilCorp_logo_11: 8700083223552317535
+      EvilCorp_logo_12: 4083986113498744333
+      EvilCorp_logo_2: 4960422352362303755
+      EvilCorp_logo_3: -3798758612831299322
+      EvilCorp_logo_4: -4193879244110931987
+      EvilCorp_logo_5: -1972525044237075126
+      EvilCorp_logo_6: 8879165935918445310
+      EvilCorp_logo_7: 4576392723766304079
+      EvilCorp_logo_8: 8149612584725329494
+      EvilCorp_logo_9: -8109248201047082701
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

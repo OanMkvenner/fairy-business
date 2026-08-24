@@ -108,8 +108,6 @@ namespace Locations
                     .Where(ld => ld.LocationData.ModeIdentifier == CurrentMode)
                     .ToList();
             
-            //separate availableLocations into expert and base mode
-            
             while (SelectedLocations.Count < 3)
             {
                 int randomIndex = UnityEngine.Random.Range(0, locationsBasedOnMode.Count);

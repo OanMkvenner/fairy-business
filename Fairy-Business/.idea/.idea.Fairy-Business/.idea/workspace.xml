@@ -8,11 +8,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/SetGameModeButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/SetGameModeButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/EndScreenInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/EndScreenInfo.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ReturnToMainMenuButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/ReturnToMainMenuButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/WinScreenMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/WinScreenMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +226,7 @@
       <workItem from="1781768911184" duration="1924000" />
       <workItem from="1787481091257" duration="14789000" />
       <workItem from="1787498457339" duration="1069000" />
-      <workItem from="1787560726845" duration="2609000" />
+      <workItem from="1787560726845" duration="9225000" />
     </task>
     <servers />
   </component>
@@ -255,17 +259,30 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs</url>
-          <line>105</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\Locations\LocationManager.cs" containingFunctionPresentation="Method 'PickRandomLocations'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs</url>
+          <line>23</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Menu\ControlDisplayMenu.cs" containingFunctionPresentation="Method 'CloseMenu'">
             <startOffsets>
-              <option value="3759" />
+              <option value="526" />
             </startOffsets>
             <endOffsets>
-              <option value="3955" />
+              <option value="582" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Menu\ControlDisplayMenu.cs" containingFunctionPresentation="Method 'CloseMenu'">
+            <startOffsets>
+              <option value="356" />
+            </startOffsets>
+            <endOffsets>
+              <option value="373" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

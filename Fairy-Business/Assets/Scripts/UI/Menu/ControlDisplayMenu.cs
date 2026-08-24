@@ -1,4 +1,3 @@
-using System;
 using UI.Menu.BaseMenu;
 
 namespace UI.Menu
@@ -10,20 +9,24 @@ namespace UI.Menu
             base.OpenMenu();
 
             CameraOpencvLib.instance._StopScanning();
+
+            GameSession.instance.ShowPower();
         }
 
         public override void CloseMenu()
         {
             base.CloseMenu();
             
-            CameraOpencvLib.instance._StartScanning();
+            if (GameSession.instance.IsEndOfGame)
+            {
+                CameraOpencvLib.instance._StopScanning();
 
-            if (!GameSession.instance.IsEndOfGame) 
+                MenuManager.instance.OpenMenu(MenuIdentifier.WinScreen);
                 return;
-            
-            CameraOpencvLib.instance._StopScanning();
-            
-            MenuManager.instance.OpenMenu(MenuIdentifier.WinScreen);
+            }
+
+            GameSession.instance.HidePower();
+            CameraOpencvLib.instance._StartScanning();
         }
     }
 }

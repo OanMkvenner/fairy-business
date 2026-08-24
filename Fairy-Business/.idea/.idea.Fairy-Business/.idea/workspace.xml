@@ -8,10 +8,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: MagicLibraryExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
+  imageGameView: {fileID: 3124127866253895524, guid: 9ea2d96ff3aa11e40bfc97dc8ec9f2ae,
+    type: 3}
   imageEnabled: {fileID: -5904797684756438432, guid: 46ba6a752be5c5145a526fdcc5ffa469,
     type: 3}
   imageDisabled: {fileID: 7076393882549360678, guid: afca6bd867e114a409c01c83dae5b35d,

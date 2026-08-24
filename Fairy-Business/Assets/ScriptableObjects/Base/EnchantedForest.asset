@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: EnchantedForest
   m_EditorClassIdentifier: 
+  imageGameView: {fileID: 3275756823722363233, guid: bd88e78a053dae34b912a934de477891,
+    type: 3}
   imageEnabled: {fileID: -5534797415213101912, guid: 52df297df3f29f642a46ac4cc596a67d,
     type: 3}
   imageDisabled: {fileID: -1751484391319276772, guid: 2bf1336b0b33e78429720fd368f6cc73,

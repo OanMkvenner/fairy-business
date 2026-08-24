@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: HauntedHouseExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
+  imageGameView: {fileID: 6032394529768997136, guid: 3bb47786331025e4eae043d1d0377344,
+    type: 3}
   imageEnabled: {fileID: -4995256564430336350, guid: 1a70377e384b82e47acdf10906d1970f,
     type: 3}
   imageDisabled: {fileID: 8813795866632363934, guid: ad5eb7c41b6f30647b805c6f540f92fd,

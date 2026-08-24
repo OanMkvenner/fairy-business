@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: DragonCaveExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
+  imageGameView: {fileID: 3523605709306591098, guid: 852320da64304b747a31b740f9cc912d,
+    type: 3}
   imageEnabled: {fileID: -1505433301851322107, guid: c94b94040ac07a448aaa5188e604664d,
     type: 3}
   imageDisabled: {fileID: 2045247488099608576, guid: a4341fd8b1afdb0419ecb36d47a0461b,

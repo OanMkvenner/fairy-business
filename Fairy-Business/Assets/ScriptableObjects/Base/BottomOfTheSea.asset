@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: BottomOfTheSea
   m_EditorClassIdentifier: 
+  imageGameView: {fileID: 5353642068034378650, guid: 5b89fb3a9ec1c244ca5d524922e92067,
+    type: 3}
   imageEnabled: {fileID: -6414859201818423085, guid: 69d73130f82edb146b0f0c6632944bd7,
     type: 3}
   imageDisabled: {fileID: 4373916652557415318, guid: bb48a81b39ed25345a8c0d3ba7a2c627,

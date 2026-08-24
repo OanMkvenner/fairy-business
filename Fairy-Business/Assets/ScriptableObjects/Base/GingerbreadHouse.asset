@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: GingerbreadHouse
   m_EditorClassIdentifier: 
+  imageGameView: {fileID: -1155080479326810074, guid: a41ab40dda93cb3489a1786c0306cafb,
+    type: 3}
   imageEnabled: {fileID: -1525245392750082236, guid: 8cd6b26e04eb68147a6eb197272db8fc,
     type: 3}
   imageDisabled: {fileID: -1835665994482058080, guid: a4f74b71180d43643a52f819882e31a0,

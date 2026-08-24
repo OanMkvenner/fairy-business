@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: PirateShipExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
+  imageGameView: {fileID: 5865785250619424965, guid: c73d7a61ff4b9bd42817ebf2101dd84f,
+    type: 3}
   imageEnabled: {fileID: -3059022212724647460, guid: 421ce1c008b8aba44a7cb250ca9b916e,
     type: 3}
   imageDisabled: {fileID: -6220615198652187530, guid: c4e9ad64b353b324c8043bfe499302af,

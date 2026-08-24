@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
   m_Name: Castle
   m_EditorClassIdentifier: 
+  imageGameView: {fileID: -1457983503019533557, guid: 8eebc9419053ae448accbb5e38ef8335,
+    type: 3}
   imageEnabled: {fileID: -1280232501870456617, guid: 5667d4b296c97f541aacbce5f5ba91d4,
     type: 3}
   imageDisabled: {fileID: 318529651930935085, guid: bc5eefeed60900f4c8fab59b36961d1d,

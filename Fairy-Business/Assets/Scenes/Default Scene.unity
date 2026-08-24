@@ -1592,7 +1592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
-  sprite: {fileID: 7536146075102061058, guid: 9839875244e1e664ab63601de7bc0b1a, type: 3}
+  sprite: {fileID: 3893680041201703245, guid: 5abb7eae857e25645b23cdecf63d48c0, type: 3}
 --- !u!114 &116541900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18660,10 +18660,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2085867858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 647.31714, y: 0}
-  m_SizeDelta: {x: 86.45703, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 647.31714, y: -86.45703}
+  m_SizeDelta: {x: 0, y: 86.45703}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &2059871381
 MonoBehaviour:

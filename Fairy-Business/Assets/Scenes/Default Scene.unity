@@ -10732,9 +10732,10 @@ GameObject:
   - component: {fileID: 1276076814}
   - component: {fileID: 1276076813}
   - component: {fileID: 1276076812}
+  - component: {fileID: 1276076816}
   - component: {fileID: 1276076815}
   m_Layer: 5
-  m_Name: ExpertModeButton
+  m_Name: NormalModeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10862,6 +10863,19 @@ MonoBehaviour:
   objectsToDeactivate:
   - {fileID: 1804782003}
   - {fileID: 1276076810}
+--- !u!114 &1276076816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276076810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87e9906ec874eae98f39e0b9a4e87e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Menu.Buttons.SetGameModeButton
+  modeIdentifier: 1
 --- !u!1 &1277620851
 GameObject:
   m_ObjectHideFlags: 0
@@ -14918,8 +14932,8 @@ RectTransform:
   - {fileID: 1804782004}
   m_Father: {fileID: 1736882803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.06378643, y: 0.21165077}
-  m_AnchorMax: {x: 0.95312655, y: 0.7883492}
+  m_AnchorMin: {x: 0.06378643, y: 0.16946328}
+  m_AnchorMax: {x: 0.95312655, y: 0.74616176}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -18250,9 +18264,10 @@ GameObject:
   - component: {fileID: 2013329855}
   - component: {fileID: 2013329854}
   - component: {fileID: 2013329853}
+  - component: {fileID: 2013329857}
   - component: {fileID: 2013329856}
   m_Layer: 5
-  m_Name: NormalModeButton
+  m_Name: ExpertModeButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18380,6 +18395,19 @@ MonoBehaviour:
   objectsToDeactivate:
   - {fileID: 640000961}
   - {fileID: 2013329851}
+--- !u!114 &2013329857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013329851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c87e9906ec874eae98f39e0b9a4e87e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI.Menu.Buttons.SetGameModeButton
+  modeIdentifier: 2
 --- !u!1 &2013878327
 GameObject:
   m_ObjectHideFlags: 0
@@ -20127,6 +20155,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6098509347298978887, guid: 3982fdeaaa331fe4bab45ee973be4527,
         type: 3}
+    - target: {fileID: 3363100164967157100, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: playerColorIdentifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3716603194266640511, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_Sprite
@@ -20214,6 +20247,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6098509347298978887, guid: 3982fdeaaa331fe4bab45ee973be4527,
         type: 3}
+    - target: {fileID: 4960723984045888711, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: playerColorIdentifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5174325644608074185, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_fontSize
@@ -20241,6 +20279,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6098509347298978887, guid: 3982fdeaaa331fe4bab45ee973be4527,
         type: 3}
+    - target: {fileID: 5827388074464004736, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: playerColorIdentifier
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6037611279325622158, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_fontSize
@@ -20691,6 +20734,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5608924400061453509, guid: 76b89cda0973083458bdd24dfb3c22d7,
         type: 3}
+    - target: {fileID: 3363100164967157100, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: playerColorIdentifier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3716603194266640511, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_Sprite
@@ -20776,8 +20824,13 @@ PrefabInstance:
         type: 3}
       propertyPath: highestScoreSprite
       value: 
-      objectReference: {fileID: 6098509347298978887, guid: 3982fdeaaa331fe4bab45ee973be4527,
+      objectReference: {fileID: 5608924400061453509, guid: 76b89cda0973083458bdd24dfb3c22d7,
         type: 3}
+    - target: {fileID: 4960723984045888711, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: playerColorIdentifier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5174325644608074185, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_fontSize
@@ -20808,8 +20861,13 @@ PrefabInstance:
         type: 3}
       propertyPath: highestScoreSprite
       value: 
-      objectReference: {fileID: 6098509347298978887, guid: 3982fdeaaa331fe4bab45ee973be4527,
+      objectReference: {fileID: 5608924400061453509, guid: 76b89cda0973083458bdd24dfb3c22d7,
         type: 3}
+    - target: {fileID: 5827388074464004736, guid: dbe75fbcb11809d498ea631db7948634,
+        type: 3}
+      propertyPath: playerColorIdentifier
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6037611279325622158, guid: dbe75fbcb11809d498ea631db7948634,
         type: 3}
       propertyPath: m_fontSize

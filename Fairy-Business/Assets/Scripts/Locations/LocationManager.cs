@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Player;
 using UI.Menu.BaseMenu;
 using UnityEngine;
@@ -10,6 +11,9 @@ namespace Locations
     {
         public static event Action<LocationDefinition> OnNewLocationCreatedEvent; 
         public List<LocationDefinition> SelectedLocations { get; private set; } = new ();
+        
+        public ModeIdentifier CurrentMode { get; set; } = ModeIdentifier.Base;
+        
         [field: SerializeField] public List<LocationDefinition> GameLocations { get; private set; } = new();
         
         [Header("Selection Field")]
@@ -91,13 +95,26 @@ namespace Locations
 
         public void PickRandomLocations()
         {
+            if (CurrentMode == ModeIdentifier.None)
+            {
+                Debug.LogError("No Location mode set!");
+                return;
+            }
+            
             SelectedLocations.Clear();
+
+            List<LocationDefinition> locationsBasedOnMode =
+                allAvailableLocations
+                    .Where(ld => ld.LocationData.ModeIdentifier == CurrentMode)
+                    .ToList();
+            
+            //separate availableLocations into expert and base mode
             
             while (SelectedLocations.Count < 3)
             {
-                int randomIndex = UnityEngine.Random.Range(0, allAvailableLocations.Count);
+                int randomIndex = UnityEngine.Random.Range(0, locationsBasedOnMode.Count);
                 
-                SetupSelectLocation(allAvailableLocations[randomIndex]);
+                SetupSelectLocation(locationsBasedOnMode[randomIndex]);
             }
         }
 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ac45f2d5770dae24282449b750afda9f
+guid: 44fd089a9e082a2408cd61efe42d8cb9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -917646366210910332
-    second: CardsIcon_CasterCard_0
+      213: -719772718571386999
+    second: CasterCard-Icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CardsIcon_CasterCard_0
+      name: CasterCard-Icon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 165
-        height: 133
+        width: 164
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4871298ed7dd343f0800000000000000
-      internalID: -917646366210910332
+      spriteID: 9870986a68ad206f0800000000000000
+      internalID: -719772718571386999
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CardsIcon_CasterCard_0: -917646366210910332
+      CasterCard-Icon_0: -719772718571386999
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

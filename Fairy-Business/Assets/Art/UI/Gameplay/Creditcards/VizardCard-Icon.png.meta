@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 773e3d1ebc28f7e43815d1f751ed68d0
+guid: 76f1de8f53423154aab80269bb73426e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7088293726365515107
-    second: CardsIcon_KingdomExpress_0
+      213: 7986107479931576319
+    second: VizardCard-Icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CardsIcon_KingdomExpress_0
+      name: VizardCard-Icon_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 165
-        height: 134
+        width: 164
+        height: 131
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d928a58496251ad90800000000000000
-      internalID: -7088293726365515107
+      spriteID: fff5967d07a54de60800000000000000
+      internalID: 7986107479931576319
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CardsIcon_KingdomExpress_0: -7088293726365515107
+      VizardCard-Icon_0: 7986107479931576319
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

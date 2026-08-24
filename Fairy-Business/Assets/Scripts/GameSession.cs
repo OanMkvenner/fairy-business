@@ -151,6 +151,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     
     private void NewCard(ScanResult result){
         Debug.Log($"New Card: {result.name}");
+        ShowWhiteFlash();
         string[] labelData = result.name.Split('_');
         Card card = new Card();
         if (labelData.Length < 1) return;
@@ -325,7 +326,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
     /// Army, War, and Peace. Applies location modifiers, updates control values, awards victory points,
     /// resolves territory ownership, triggers end-of-turn effects, checks end game conditions, and advances to the next turn.
     /// </summary>
-    /// <remarks>I want to distance myself from this method, but that's what happens when you are not allowed to refactor.</remarks>
+    /// <remarks>I want to distance myself from this method, but that's what happens when you are not allowed to refactor
+    /// somebody else's code (Marie).</remarks>
     private void SolveTurn()
     {
         // ---------- POLITICS (Plus) ----------

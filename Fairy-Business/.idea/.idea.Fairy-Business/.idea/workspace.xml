@@ -8,24 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Creditcards/CardsIcon_CasterCard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Creditcards/CardsIcon_CasterCard.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Creditcards/CardsIcon_KingdomExpress.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Creditcards/CardsIcon_KingdomExpress.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Creditcards/CardsIcon_Vizard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Gameplay/Creditcards/CardsIcon_Vizard.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/LineProfiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Gameplay/LineProfiles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,15 +138,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="40464">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="40464" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -234,6 +224,7 @@
       <workItem from="1781768911184" duration="1924000" />
       <workItem from="1787481091257" duration="14789000" />
       <workItem from="1787498457339" duration="1069000" />
+      <workItem from="1787560726845" duration="778000" />
     </task>
     <servers />
   </component>

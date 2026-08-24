@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: c33e4499f9296e1458ba5dfa5422ec51
+guid: 6c809cfe94fe15147b80a8daa6733d16
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7430077874004767955
-    second: Base-CreditCard-RED-on_0
-  - first:
-      213: -5578972805740384902
-    second: Base-CreditCard-RED-on_1
+      213: -7389107168565762209
+    second: PlayerAction-CreditCard-red-off_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Base-CreditCard-RED-on_0
+      name: PlayerAction-CreditCard-red-off_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 103
-        height: 103
+        x: 0
+        y: 0
+        width: 136
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d43b8dc570fc1760800000000000000
-      internalID: 7430077874004767955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base-CreditCard-RED-on_1
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 63
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7da746bac18392b0800000000000000
-      internalID: -5578972805740384902
+      spriteID: f57685aed2e947990800000000000000
+      internalID: -7389107168565762209
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Base-CreditCard-RED-on_0: 7430077874004767955
-      Base-CreditCard-RED-on_1: -5578972805740384902
+      PlayerAction-CreditCard-red-off_0: -7389107168565762209
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

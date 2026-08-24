@@ -1542,7 +1542,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1197617110338327413, guid: 5980f6bcdc0595d4e93e6e3e12898a4b,
+  m_Sprite: {fileID: -7407549159454127545, guid: 56fa46a09977c5d4c91a046ce0370674,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
-  sprite: {fileID: -5557122684580789018, guid: f2c2a6c1492bea24da5c6a1291982f57, type: 3}
+  sprite: {fileID: 7536146075102061058, guid: 9839875244e1e664ab63601de7bc0b1a, type: 3}
 --- !u!114 &116541900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1666,7 +1666,7 @@ MonoBehaviour:
   - {fileID: 116541902}
   playerColorIdentifier: 2
   scanAction: 1
-  defaultSprite: {fileID: -1197617110338327413, guid: 5980f6bcdc0595d4e93e6e3e12898a4b,
+  defaultSprite: {fileID: -7407549159454127545, guid: 56fa46a09977c5d4c91a046ce0370674,
     type: 3}
 --- !u!1001 &142661055
 PrefabInstance:
@@ -8608,7 +8608,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2489596038133665894, guid: b5bdaa2e642b9354ba7d432d5dd4230a,
+  m_Sprite: {fileID: -7389107168565762209, guid: 6c809cfe94fe15147b80a8daa6733d16,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -8680,7 +8680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
-  sprite: {fileID: 7430077874004767955, guid: c33e4499f9296e1458ba5dfa5422ec51, type: 3}
+  sprite: {fileID: 3330928368467583776, guid: e2deac7b7c956c44ca99c40b3b3171d1, type: 3}
 --- !u!114 &1060773770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8732,7 +8732,7 @@ MonoBehaviour:
   - {fileID: 1060773771}
   playerColorIdentifier: 1
   scanAction: 1
-  defaultSprite: {fileID: 2489596038133665894, guid: b5bdaa2e642b9354ba7d432d5dd4230a,
+  defaultSprite: {fileID: -7389107168565762209, guid: 6c809cfe94fe15147b80a8daa6733d16,
     type: 3}
 --- !u!1 &1063015742
 GameObject:
@@ -17977,7 +17977,7 @@ GameObject:
   - component: {fileID: 1993749947}
   - component: {fileID: 1993749949}
   m_Layer: 5
-  m_Name: MoneyAction
+  m_Name: CharacterCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18056,7 +18056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -787067421565895199, guid: f735d4627f369634bafabfb2257a5a14,
+  m_Sprite: {fileID: -8646019504433984340, guid: f9b9583407d7019459b495438f9bfcb1,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -18100,7 +18100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
-  sprite: {fileID: 4472873871231627073, guid: 660c350c10785634fa5bd4657e996fd3, type: 3}
+  sprite: {fileID: -4012723524926729385, guid: ee7a1ff1914c16d43a1820d2dfe09651, type: 3}
 --- !u!114 &1993749948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18118,7 +18118,7 @@ MonoBehaviour:
   - {fileID: 1993749946}
   playerColorIdentifier: 1
   scanAction: 2
-  defaultSprite: {fileID: -787067421565895199, guid: f735d4627f369634bafabfb2257a5a14,
+  defaultSprite: {fileID: -8646019504433984340, guid: f9b9583407d7019459b495438f9bfcb1,
     type: 3}
 --- !u!114 &1993749949
 MonoBehaviour:
@@ -18478,7 +18478,7 @@ GameObject:
   - component: {fileID: 2037991843}
   - component: {fileID: 2037991842}
   m_Layer: 5
-  m_Name: MoneyAction
+  m_Name: CharacterCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18557,7 +18557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1116591463163404344, guid: cbe26bd2da151e740a5d629027c23d3a,
+  m_Sprite: {fileID: 3801487079615489832, guid: 294a10f2d621a354892b85577bdbb568,
     type: 3}
   m_Type: 0
   m_PreserveAspect: 0
@@ -18588,7 +18588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d2627ac55e484fbfc541a0c4f81193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animation.AnimationEffects.ChangeImageAnimationEffect
-  sprite: {fileID: 5694416254066981901, guid: e92d10df1c1392f4b9a36000c5cbe8b5, type: 3}
+  sprite: {fileID: 7536146075102061058, guid: 9839875244e1e664ab63601de7bc0b1a, type: 3}
 --- !u!114 &2037991843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18661,7 +18661,7 @@ MonoBehaviour:
   - {fileID: 2037991845}
   playerColorIdentifier: 2
   scanAction: 2
-  defaultSprite: {fileID: -1116591463163404344, guid: cbe26bd2da151e740a5d629027c23d3a,
+  defaultSprite: {fileID: 3801487079615489832, guid: 294a10f2d621a354892b85577bdbb568,
     type: 3}
 --- !u!1001 &2045078425
 PrefabInstance:

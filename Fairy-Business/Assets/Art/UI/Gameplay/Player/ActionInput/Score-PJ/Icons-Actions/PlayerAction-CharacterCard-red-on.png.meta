@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f735d4627f369634bafabfb2257a5a14
+guid: ee7a1ff1914c16d43a1820d2dfe09651
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -787067421565895199
-    second: Base-Icon-red-off_0
+      213: -4012723524926729385
+    second: PlayerAction-CharacterCard-red-on_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Base-Icon-red-off_0
+      name: PlayerAction-CharacterCard-red-on_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 103
-        height: 103
+        x: 0
+        y: 0
+        width: 150
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ed3843a956c315f0800000000000000
-      internalID: -787067421565895199
+      spriteID: 75393e2e631ff48c0800000000000000
+      internalID: -4012723524926729385
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Base-Icon-red-off_0: -787067421565895199
+      PlayerAction-CharacterCard-red-on_0: -4012723524926729385
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: e92d10df1c1392f4b9a36000c5cbe8b5
+guid: 9839875244e1e664ab63601de7bc0b1a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5694416254066981901
-    second: Base-Money-blue-on_0
-  - first:
-      213: 5993671053110319851
-    second: Base-Money-blue-on_1
+      213: 7536146075102061058
+    second: PlayerAction-CharacterCard-blue-on_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -116,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Base-Money-blue-on_0
+      name: PlayerAction-CharacterCard-blue-on_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 16
-        width: 103
-        height: 103
+        x: 0
+        y: 0
+        width: 150
+        height: 135
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0c7fdaa961a60f40800000000000000
-      internalID: 5694416254066981901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base-Money-blue-on_1
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 63
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bea9e25211ccd2350800000000000000
-      internalID: 5993671053110319851
+      spriteID: 202a9e55de4c59860800000000000000
+      internalID: 7536146075102061058
       vertices: []
       indices: 
       edges: []
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Base-Money-blue-on_0: 5694416254066981901
-      Base-Money-blue-on_1: 5993671053110319851
+      PlayerAction-CharacterCard-blue-on_0: 7536146075102061058
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

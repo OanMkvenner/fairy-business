@@ -1,5 +1,7 @@
+using System;
 using Locations;
 using UI.Menu.BaseMenu;
+using UnityEngine;
 
 namespace UI.Menu.Buttons
 {
@@ -8,6 +10,11 @@ namespace UI.Menu.Buttons
         protected override void OnClick()
         {
             StartGame();
+        }
+
+        private void OnEnable()
+        {
+            Debug.Log("Bub");
         }
 
         public void StartGame()

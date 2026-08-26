@@ -1,40 +1,43 @@
 {
   "$schema": "https://ugs-config-schemas.unity3d.com/v1/remote-config.schema.json",
   "entries": {
-    "translation_en":{
+    "translation_fr":{
       "emergencyMessage": "",
       "buttonFont": "Georgia SDF",
       "textFieldFont": "Georgia SDF",
-
+              
       "gameName": "Fairy Business",
       "language": "Language",
       "languageFR": "french",
       "languageEN": "english",
       "chooseLanguage": "Choose a language",
-      "playGame": "Play",
-      
-      "casterCard": "Caster Card",
-      "vizardCard": "Vizard",
-      "kingdomExpressCard": "Kingdom Express",
+      "playGame": "New Game",
+      "resumeGame": "Resume",
+      "quitGame": "Quit",
       
       "winGame": "Won!",
       "looseGame": "Lost!",
       "victoryPoints": "Victory points",
+     
+      "newTurn": "New Turn",
       
       "menuTitle_MenuSelection": "Selected Locations",
-      "menuSelection_locationSelection": "Select 3 locations",
-      "menuSelection_pickRandom": "Pick random",
-      "menuTitle_MenuSettings": "Settings",
+      "menuSelection_locationSelection": "Select 3 Items",
+      "menuSelection_nextButton": "Next",
+      "menuSelection_backButton": "Back",
+      "menuSelection_normalModeTitle": "Mode: Normal",
+      "menuSelection_expertModeTitle": "Mode: Expert",
+      "menuSelection_showEffectTitle": "Show Effect",
+      "menuSelection_hideEffectTitle": "Hide Effect",
+      "menuTitle_MenuSettings": "Options",
       "menuSettings_Sound" : "Sound",
       "menuTitle_MenuPause": "Pause",
-      "menuPause_returnStart": "Return to Start",
+      "menuPause_returnStart": "Return to start",
     
-      "hoverMenu_BluePlayer": "Fairy Ink.",
-      "hoverMenu_RedPlayer": "Evil Corp",
-      "hoverMenu_NeutralPlayer": "no one",
-      "hoverMenu_OwnerText": "Currently owned by",
-      "hoverMenu_ScoringPhase": "Scoring phase",
-     
+      "locationArtifactTitle_Horn": "Horn",
+      "locationArtifactTitle_Amulett": "Amulett",
+      "locationArtifactTitle_Book": "Book",
+    
       "locationTitle_EnchantedForest":"Enchanted Forest",
       "locationTitle_Castle":"Castle",
       "locationTitle_PirateShip":"Pirate Ship",
@@ -44,7 +47,7 @@
       "locationTitle_ThroughTheMirror":"Through the mirror",
       "locationTitle_DragonCave":"Dragon Cave",
       "locationTitle_MagicLibrary":"Magic Library",
-      
+        
       "locationTitleExpert_EnchantedForest":"Enchanted Forest Expert",
       "locationTitleExpert_Castle":"Castle Expert",
       "locationTitleExpert_PirateShip":"Pirate Ship Expert",
@@ -54,7 +57,7 @@
       "locationTitleExpert_ThroughTheMirror":"Through the mirror Expert",
       "locationTitleExpert_DragonCave":"Dragon Cave Expert",
       "locationTitleExpert_MagicLibrary":"Magic Library Expert",
-     
+        
       "locationDescription_EnchantedForest":"Magic Market: Your (+) cards have 1 extra strength.",
       "locationDescription_Castle":" ",
       "locationDescription_PirateShip":"Aggressive tactics: your (-) cards have 1 extra strength.",
@@ -64,7 +67,7 @@
       "locationDescription_ThroughTheMirror":"Gain 2 victory points when you use a special card (cash in or take over).",
       "locationDescription_DragonCave":"Incredible wealth: gain 1 additional VP each round you hold this location.",
       "locationDescription_MagicLibrary":"Once owned gain 8 victory points, once lost loose 8 victory points.",
-      
+        
       "locationDescriptionExpert_EnchantedForest":"Divide per 2 victory point when opponent cash-in!",
       "locationDescriptionExpert_Castle":"During counting phase your other locations victory points are doubled.",
       "locationDescriptionExpert_PirateShip":"We see you: Your (-) cards have half value (round-up) but target all locations.",
@@ -74,23 +77,23 @@
       "locationDescriptionExpert_ThroughTheMirror":"During counting phase victory point gain is in between 1 and 6.",
       "locationDescriptionExpert_DragonCave":"Each round steal 1 victory point, if you have less.",
       "locationDescriptionExpert_MagicLibrary":"Your (+/-) 3 cards become (+/-) 5 cards.",
-      
-      "locationKeyword_EnchantedForest":"(+) cards bonus",
+        
+      "locationKeyword_EnchantedForest":"(+) Cards Bonus",
       "locationKeyword_Castle":"No Power",
-      "locationKeyword_PirateShip":"(-) card bonus",
+      "locationKeyword_PirateShip":"(-) Card Bonus",
       "locationKeyword_GingerbreadHouse":"Win Tie",
-      "locationKeyword_BottomOfTheSea":"Hand size bonus",
+      "locationKeyword_BottomOfTheSea":"Hand Size Bonus",
       "locationKeyword_HauntedHouse":"Opp. Discard/Counting",
-      "locationKeyword_ThroughTheMirror":"Special card VP bonus",
-      "locationKeyword_DragonCave":"1 Victory per round",
+      "locationKeyword_ThroughTheMirror":"Special Card VP Bonus",
+      "locationKeyword_DragonCave":"1 Victory Per Round",
       "locationKeyword_MagicLibrary":"+8 VP",
-      
+        
       "locationKeywordExpert_EnchantedForest":"Reduce",
       "locationKeywordExpert_Castle":"x2 VP/Count",
-      "locationKeywordExpert_PirateShip":"(-) card target all",
+      "locationKeywordExpert_PirateShip":"(-) Card TargetAall",
       "locationKeywordExpert_GingerbreadHouse":"All (-) = (+)",
-      "locationKeywordExpert_BottomOfTheSea":"Below 0 bonus",
-      "locationKeywordExpert_HauntedHouse":"Draw from discard/counting",
+      "locationKeywordExpert_BottomOfTheSea":"Below 0 Bonus",
+      "locationKeywordExpert_HauntedHouse":"Draw From Discard/Counting",
       "locationKeywordExpert_ThroughTheMirror":"Random VP",
       "locationKeywordExpert_DragonCave":"Steal VP",
       "locationKeywordExpert_MagicLibrary":"3=5",

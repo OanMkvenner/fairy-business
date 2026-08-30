@@ -482,7 +482,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         newTheoreticalControlValue < 0 &&
                         minControlNumber <= 0)
                     {
-                        VictoryPointCounters[below0Gain2VPOwner] += 2;
+                        AddVictoryPointsByPlayer(below0Gain2VPOwner, 2);
                         UpdateVictoryPointDisplay();
                     }
                 }
@@ -507,7 +507,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 // If the acting player owns this location and plays War, gain 2 VP immediately.
                 if (throughTheMirror == actingPlayer)
                 {
-                    VictoryPointCounters[actingPlayer] += 2;
+                    AddVictoryPointsByPlayer(actingPlayer, 2);
                     UpdateVictoryPointDisplay();
                 }
 
@@ -591,7 +591,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                 }
 
                 // Add the victory points to the acting player's score
-                VictoryPointCounters[actingPlayer] += peacePower;
+                AddVictoryPointsByPlayer(actingPlayer, peacePower);
 
                 // Update UI
                 UpdateVictoryPointDisplay();
@@ -628,7 +628,7 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             if (loc.CurrentOwner != PlayerColorIdentifier.Neutral){
                     
                 PlayerColorIdentifier actingPlayer = loc.CurrentOwner;
-                VictoryPointCounters[actingPlayer]++;
+                AddVictoryPointsByPlayer(actingPlayer, 1);
             }
         }
     }
@@ -711,7 +711,8 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         if (VictoryPointCounters[loc.CurrentOwner] < VictoryPointCounters[GetEnemy(loc.CurrentOwner)])
                         {
                             VictoryPointCounters[loc.CurrentOwner]++;
-                            VictoryPointCounters[GetEnemy(loc.CurrentOwner)]--;
+                            AddVictoryPointsByPlayer(loc.CurrentOwner, 1);
+                            AddVictoryPointsByPlayer(GetEnemy(loc.CurrentOwner), -1);
                         }
                         break;
                     }

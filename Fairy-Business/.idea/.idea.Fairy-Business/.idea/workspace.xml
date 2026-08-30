@@ -8,16 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/ArtefactWinAnimationController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/ArtefactWinAnimationController.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameSession.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Blur/BlurUIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Blur/BlurUIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/SpyPowerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/ControlPowerUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/SpyPowerUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/ControlPowerUI.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/BaseMenu/MenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/BaseMenu/MenuManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/StartNewGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/StartNewGame.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,10 +265,10 @@
           <line>498</line>
           <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
             <startOffsets>
-              <option value="19053" />
+              <option value="19055" />
             </startOffsets>
             <endOffsets>
-              <option value="19112" />
+              <option value="19114" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="26" />
@@ -287,10 +278,10 @@
           <line>510</line>
           <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
             <startOffsets>
-              <option value="19686" />
+              <option value="19690" />
             </startOffsets>
             <endOffsets>
-              <option value="19714" />
+              <option value="19718" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="27" />
@@ -300,10 +291,10 @@
           <line>525</line>
           <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
             <startOffsets>
-              <option value="20454" />
+              <option value="20458" />
             </startOffsets>
             <endOffsets>
-              <option value="20618" />
+              <option value="20622" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="28" />

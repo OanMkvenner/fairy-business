@@ -7,7 +7,7 @@ namespace UI.Menu.BaseMenu
 {
     public class MenuManager : MonobehaviourSingletonCustom<MenuManager>
     {
-        public static event Action OnMenuOpened;
+        public static event Action<MenuIdentifier> OnMenuOpened;
         private static readonly List<MenuElement> menuElements = new List<MenuElement>();
 
         public void RegisterMenuElement(MenuElement menuElement)
@@ -26,7 +26,7 @@ namespace UI.Menu.BaseMenu
             }
             
             menuElement.OpenMenu();
-            OnMenuOpened?.Invoke();
+            OnMenuOpened?.Invoke(menuIdentifier);
         }
 
         public void CloseMenu(MenuIdentifier menuIdentifier)

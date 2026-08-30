@@ -13,13 +13,13 @@ namespace UI.Blur
 
         private void Awake()
         {
-            MenuManager.OnMenuOpened += AddBlurMaterial;
+            //MenuManager.OnMenuOpened += AddBlurMaterial;
             MenuElement.OnMenuClosed += RemoveBlurMaterial;
         }
 
         private void OnDestroy()
         {
-            MenuManager.OnMenuOpened -= AddBlurMaterial;
+            //MenuManager.OnMenuOpened -= AddBlurMaterial;
             MenuElement.OnMenuClosed -= RemoveBlurMaterial;
         }
 

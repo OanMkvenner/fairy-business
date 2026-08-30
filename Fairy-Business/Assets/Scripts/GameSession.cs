@@ -511,6 +511,12 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                     UpdateVictoryPointDisplay();
                 }
 
+                Debug.Log(
+                    $"WAR: ActingPlayer={actingPlayer}, " +
+                    $"EnemyPlayer={enemyPlayer}, " +
+                    $"Location={turnLocations[actingPlayer].locationNumber}"
+                );
+
                 // War is blocked if the enemy played Peace at the same location.
                 // If not blocked, remove all enemy power from the targeted location.
                 if (turnLocations[enemyPlayer].locationNumber != turnLocations[actingPlayer].locationNumber ||
@@ -522,6 +528,11 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
                         .SetPlayerPower(enemyPlayer, 0);
                 }
             }
+        }
+        
+        foreach (LocationDefinition gameLocation in LocationManager.instance.GameLocations)
+        {
+            gameLocation.FinalizePowerAndDetermineWinner();
         }
 
         // ---------- PEACE / CASH-IN ----------
@@ -587,6 +598,11 @@ public class GameSession : MonobehaviourSingletonCustom<GameSession>
             }
         }
 
+        foreach (LocationDefinition gameLocation in LocationManager.instance.GameLocations)
+        {
+            gameLocation.FinalizePowerAndDetermineWinner();
+        }
+        
         // ---------- END OF TURN ----------
         // After all actions have been resolved, update the board and proceed.
 

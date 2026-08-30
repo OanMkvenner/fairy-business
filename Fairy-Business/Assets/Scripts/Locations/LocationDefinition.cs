@@ -27,6 +27,9 @@ namespace Locations
             get => currentOwner;
             set
             {
+                if(currentOwner == PlayerColorIdentifier.Neutral)
+                    Debug.Log(LocationData.LocationIdentifier + " on location");
+                
                 if (currentOwner == value)
                     return;
 

@@ -532,6 +532,11 @@ public class CameraOpencvLib : MonoBehaviour
         {
             ret.rotation = -ret.rotation;
         }
+#if !UNITY_STANDALONE && !UNITY_EDITOR
+        ret.rotation -= 90; // on mobile devices, cameras are always recording in landscape mode, but we expect portrait mode. (legacy from how VideoKit worked before)
+        // normalize back to -180° to 180°
+        ret.rotation = ((ret.rotation +180f + 720f) % 360f) - 180f;
+#endif
         return ret;
     }
     unsafe List<ScanResult> GatherResultsFromIndexList(List<int> indexList, int width, int height, bool frontCamera, Unity.Collections.NativeArray<ComparisonReturnStruct> returnStructs){

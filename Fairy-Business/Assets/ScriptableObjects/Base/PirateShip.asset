@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -6220615198652187530, guid: c4e9ad64b353b324c8043bfe499302af,
     type: 3}
-  artefactIcon: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
+  artefactIcon: {fileID: -8590230676535877846, guid: dd566ca8dfdcdac41805fb16b90ecab8,
+    type: 3}
+  artefactIconDisabled: {fileID: -2922828313919438409, guid: e57c8b0450b63344b85cd66388d0550e,
     type: 3}
   effectEnabledIcon: {fileID: 387407860680228484, guid: c02f37629340d114cb19c6b24ee12ee8,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescription_PirateShip
   localizationTitleText: locationTitle_PirateShip
   localizationKeywordText: locationKeyword_PirateShip
-  localizationArtifact: locationArtifactTitle_Book
+  localizationArtifact: locationArtifactTitle_PirateShip_Crochet

@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 318529651930935085, guid: bc5eefeed60900f4c8fab59b36961d1d,
     type: 3}
-  artefactIcon: {fileID: -9114616584026453734, guid: 220a7d8c2a2aedb4c93c3f3bd5649006,
+  artefactIcon: {fileID: 4832784258408712112, guid: 561d3c1e25a9d7e46bec6b353657c945,
+    type: 3}
+  artefactIconDisabled: {fileID: 7410720237392302707, guid: bfd1430919b5d5c4bb8817fab7bc1e88,
     type: 3}
   effectEnabledIcon: {fileID: -7488448086270001212, guid: 2d8030e4cebe8a94b94993607bfa7685,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescriptionExpert_Castle
   localizationTitleText: locationTitleExpert_Castle
   localizationKeywordText: locationKeywordExpert_Castle
-  localizationArtifact: locationArtifactTitle_Amulett
+  localizationArtifact: locationArtifactTitle_Castle_OberonWand

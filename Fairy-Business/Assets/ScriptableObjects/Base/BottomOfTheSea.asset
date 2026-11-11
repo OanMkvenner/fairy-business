@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 4373916652557415318, guid: bb48a81b39ed25345a8c0d3ba7a2c627,
     type: 3}
-  artefactIcon: {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90,
+  artefactIcon: {fileID: 6131324083951566149, guid: 5c6c6e4f0ac97d14fb0c0128fcf00187,
+    type: 3}
+  artefactIconDisabled: {fileID: -7252568203461014857, guid: ee52206dfa3e49e409f81a952562e9d0,
     type: 3}
   effectEnabledIcon: {fileID: 9029061209948082837, guid: 0f4632e6e9b39f644bcb23b54e245337,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescription_BottomOfTheSea
   localizationTitleText: locationTitle_BottomOfTheSea
   localizationKeywordText: locationKeyword_BottomOfTheSea
-  localizationArtifact: locationArtifactTitle_Horn
+  localizationArtifact: locationArtifactTitle_BottomOfSea_MermaidNecklace

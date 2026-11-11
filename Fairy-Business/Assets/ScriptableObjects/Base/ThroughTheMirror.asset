@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 4335388530601257093, guid: dc2d26904acc9f24dafffda2ff9461dd,
     type: 3}
-  artefactIcon: {fileID: -9114616584026453734, guid: 220a7d8c2a2aedb4c93c3f3bd5649006,
+  artefactIcon: {fileID: -266136468793084376, guid: c4067a23892d3e4499ffef9c559f9719,
+    type: 3}
+  artefactIconDisabled: {fileID: 6203438412004330915, guid: 32843ac0b0fa6f64c8a374982ce21758,
     type: 3}
   effectEnabledIcon: {fileID: 4228980801746542053, guid: 00c1a089b7c7f2a4eb698b2f12e09b4f,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescription_ThroughTheMirror
   localizationTitleText: locationTitle_ThroughTheMirror
   localizationKeywordText: locationKeyword_ThroughTheMirror
-  localizationArtifact: locationArtifactTitle_Amulett
+  localizationArtifact: locationArtifactTitle_ThroughTheMirror_MagicCrystal

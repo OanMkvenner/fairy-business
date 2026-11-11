@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -1835665994482058080, guid: a4f74b71180d43643a52f819882e31a0,
     type: 3}
-  artefactIcon: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
+  artefactIcon: {fileID: 8093746298553011224, guid: 535ad25b56c8ddd4b9313b9b0746451f,
+    type: 3}
+  artefactIconDisabled: {fileID: 7288659508499833865, guid: d47979abbbd00244997719e41a69e09a,
     type: 3}
   effectEnabledIcon: {fileID: -2112216326769978790, guid: 3887e3ada7a4c7d4abf59fc468d69950,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescriptionExpert_GingerbreadHouse
   localizationTitleText: locationTitleExpert_GingerbreadHouse
   localizationKeywordText: locationKeywordExpert_GingerbreadHouse
-  localizationArtifact: locationArtifactTitle_Book
+  localizationArtifact: locationArtifactTitle_GingerbreadHouse_Cornucopia

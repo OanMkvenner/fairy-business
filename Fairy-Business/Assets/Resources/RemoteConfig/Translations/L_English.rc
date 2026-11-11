@@ -1,7 +1,7 @@
 {
   "$schema": "https://ugs-config-schemas.unity3d.com/v1/remote-config.schema.json",
   "entries": {
-    "translation_fr":{
+    "translation_en":{
       "emergencyMessage": "",
       "buttonFont": "Georgia SDF",
       "textFieldFont": "Georgia SDF",
@@ -34,9 +34,26 @@
       "menuTitle_MenuPause": "Pause",
       "menuPause_returnStart": "Return to start",
     
-      "locationArtifactTitle_Horn": "Horn",
-      "locationArtifactTitle_Amulett": "Amulett",
-      "locationArtifactTitle_Book": "Book",
+	
+      "locationArtifactTitle_Castle_MagicBoots": "Magic Boots",
+      "locationArtifactTitle_Castle_OberonWand": "Oberon Wand",
+      "locationArtifactTitle_MagicLibrary_MagicWand": "Magic Wand",
+      "locationArtifactTitle_MagicLibrary_MelusineBook": "Melusine Book",
+      "locationArtifactTitle_BottomOfSea_MermaidNecklace": "Mermaid Necklace",
+      "locationArtifactTitle_BottomOfSea_Trident": "Trident",
+      "locationArtifactTitle_DragonCave_Egg": "Egg",
+      "locationArtifactTitle_DragonCave_InvisibilityCloak": "Invisibility Cloak",
+      "locationArtifactTitle_EnchantedForest_EnchantedRose": "Enchanted Rose",
+      "locationArtifactTitle_EnchantedForest_MagicBean": "Magic Bean",
+      "locationArtifactTitle_GingerbreadHouse_Cornucopia": "Cornucopia",
+      "locationArtifactTitle_GingerbreadHouse_GingerbreadMan": "Gingerbread Man",
+      "locationArtifactTitle_HauntedHouse_CursedAmulet": "Cursed Amulet",
+      "locationArtifactTitle_HauntedHouse_PoisonedApple": "Poisoned Apple",
+      "locationArtifactTitle_PirateShip_Crochet": "Crochet",
+      "locationArtifactTitle_PirateShip_GhostSaber": "Ghost Saber",
+      "locationArtifactTitle_ThroughTheMirror_MagicCrystal": "Magic Crystal",
+      "locationArtifactTitle_ThroughTheMirror_MagicDice": "Magic Dice",
+	  
     
       "locationTitle_EnchantedForest":"Enchanted Forest",
       "locationTitle_Castle":"Castle",

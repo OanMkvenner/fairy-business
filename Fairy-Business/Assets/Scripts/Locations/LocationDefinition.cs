@@ -113,7 +113,7 @@ namespace Locations
                 }
                 
                 locationImage.sprite = LocationData.imageGameView;
-                SetArtefactSprite();
+                SetArtefactSprite(selected:false);
             }
             else
             {
@@ -189,10 +189,13 @@ namespace Locations
             transform.position = position;
         }
 
-        private void SetArtefactSprite()
+        private void SetArtefactSprite(bool selected)
         {
             Artifact.enabled = true;
-            Artifact.sprite = LocationData.artefactIcon;
+            Artifact.sprite =  selected
+                ? LocationData.artefactIcon
+                : LocationData.artefactIconDisabled;
+            Artifact.color = new Color(1,1,1);
         }
         
         private void SetEffectKeywordEnabled(bool enabled)
@@ -219,12 +222,16 @@ namespace Locations
                 return;
 
             effectImage.gameObject.SetActive(show);
+            SetArtefactSprite(selected);
 
+            effectKeyword.enabled = show;
+            
             if (!show)
                 return;
 
             string languageCode = Localizer.instance.GetCurrentlySetLanguage();
 
+            Artifact.color = new Color(0.3f,0.3f,0.3f); // darken the artifact image (because its behind the keyword text)
             effectKeyword.text = Localizer.instance.TranslateToSpecificLanguage(
                 LocationData.localizationKeywordText,
                 languageCode

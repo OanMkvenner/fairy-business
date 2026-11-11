@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 2045247488099608576, guid: a4341fd8b1afdb0419ecb36d47a0461b,
     type: 3}
-  artefactIcon: {fileID: -9114616584026453734, guid: 220a7d8c2a2aedb4c93c3f3bd5649006,
+  artefactIcon: {fileID: 2526634444856553859, guid: 04be8f37da1f43149826e2620ab5b09c,
+    type: 3}
+  artefactIconDisabled: {fileID: 807291038892508067, guid: 766f8c724f184d8409cabda06eeaca46,
     type: 3}
   effectEnabledIcon: {fileID: -882816498597982139, guid: 6c0ceff9a9bfcaf4fbcbf27ef6d141a4,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescriptionExpert_DragonCave
   localizationTitleText: locationTitleExpert_DragonCave
   localizationKeywordText: locationKeywordExpert_DragonCave
-  localizationArtifact: locationArtifactTitle_Amulett
+  localizationArtifact: locationArtifactTitle_DragonCave_InvisibilityCloak

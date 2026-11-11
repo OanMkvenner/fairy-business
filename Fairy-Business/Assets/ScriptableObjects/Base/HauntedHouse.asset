@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 8813795866632363934, guid: ad5eb7c41b6f30647b805c6f540f92fd,
     type: 3}
-  artefactIcon: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
+  artefactIcon: {fileID: 9147461975721839333, guid: b3fa213d0d44a63409d3ee41c9249658,
+    type: 3}
+  artefactIconDisabled: {fileID: -2120776973233072616, guid: 11260c683fafa7d4aa81cdc8f0cb8aef,
     type: 3}
   effectEnabledIcon: {fileID: -4209846483730356258, guid: 8b0b072b98215f0449001b95623db864,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescription_HauntedHouse
   localizationTitleText: locationTitle_HauntedHouse
   localizationKeywordText: locationKeyword_HauntedHouse
-  localizationArtifact: locationArtifactTitle_Book
+  localizationArtifact: locationArtifactTitle_HauntedHouse_PoisonedApple

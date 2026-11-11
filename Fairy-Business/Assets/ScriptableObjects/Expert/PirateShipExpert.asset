@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -6220615198652187530, guid: c4e9ad64b353b324c8043bfe499302af,
     type: 3}
-  artefactIcon: {fileID: 5133931477187961767, guid: 38e87bf78034a0742a88589b881d0b90,
+  artefactIcon: {fileID: 1319675580533549669, guid: 3476213e32f44c041807940e03850b08,
+    type: 3}
+  artefactIconDisabled: {fileID: 1226539742384706089, guid: c29d3d3b82e999e4fbbbb8b3fdf1db0a,
     type: 3}
   effectEnabledIcon: {fileID: 387407860680228484, guid: c02f37629340d114cb19c6b24ee12ee8,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescriptionExpert_PirateShip
   localizationTitleText: locationTitleExpert_PirateShip
   localizationKeywordText: locationKeywordExpert_PirateShip
-  localizationArtifact: locationArtifactTitle_Horn
+  localizationArtifact: locationArtifactTitle_PirateShip_GhostSaber

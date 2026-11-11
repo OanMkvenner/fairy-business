@@ -9,6 +9,7 @@ namespace Locations
         public Sprite imageEnabled;
         public Sprite imageDisabled;
         public Sprite artefactIcon;
+        public Sprite artefactIconDisabled;
         public Sprite effectEnabledIcon;
         public Sprite effectDisabledIcon;
         public Sprite locationBackground;

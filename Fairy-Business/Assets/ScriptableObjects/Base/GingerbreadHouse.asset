@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -1835665994482058080, guid: a4f74b71180d43643a52f819882e31a0,
     type: 3}
-  artefactIcon: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
+  artefactIcon: {fileID: -5748485383308906136, guid: d857df2ed06a1d14b9083481385fbec5,
+    type: 3}
+  artefactIconDisabled: {fileID: 4625339676421840410, guid: 74ce8e596cf1cd04a8805fbdab487e63,
     type: 3}
   effectEnabledIcon: {fileID: -2112216326769978790, guid: 3887e3ada7a4c7d4abf59fc468d69950,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescription_GingerbreadHouse
   localizationTitleText: locationTitle_GingerbreadHouse
   localizationKeywordText: locationKeyword_GingerbreadHouse
-  localizationArtifact: locationArtifactTitle_Book
+  localizationArtifact: locationArtifactTitle_GingerbreadHouse_GingerbreadMan

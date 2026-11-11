@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 7076393882549360678, guid: afca6bd867e114a409c01c83dae5b35d,
     type: 3}
-  artefactIcon: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
+  artefactIcon: {fileID: -6321996955012567426, guid: ad1b73b967667ba4385fcaf87715f042,
+    type: 3}
+  artefactIconDisabled: {fileID: 8426672948490700551, guid: 5d0ae5629bdf3e9469ef38477fe418d4,
     type: 3}
   effectEnabledIcon: {fileID: 1803959502202254199, guid: 61c8f19e3d8b4c246b0f081b74e0cb63,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescription_MagicLibrary
   localizationTitleText: locationTitle_MagicLibrary
   localizationKeywordText: locationKeyword_MagicLibrary
-  localizationArtifact: locationArtifactTitle_Book
+  localizationArtifact: locationArtifactTitle_MagicLibrary_MelusineBook

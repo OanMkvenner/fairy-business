@@ -18,7 +18,9 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 8813795866632363934, guid: ad5eb7c41b6f30647b805c6f540f92fd,
     type: 3}
-  artefactIcon: {fileID: -7565456428824601016, guid: 19dae2dcde5c3a14aaa939471cbbf7a6,
+  artefactIcon: {fileID: -6893876973594072461, guid: 8290e53eb56e7d74e8efb18acc289814,
+    type: 3}
+  artefactIconDisabled: {fileID: -7441298732778210424, guid: 438d5d6310318c6439d38360791ea443,
     type: 3}
   effectEnabledIcon: {fileID: -4209846483730356258, guid: 8b0b072b98215f0449001b95623db864,
     type: 3}
@@ -32,4 +34,4 @@ MonoBehaviour:
   localizationDescriptionText: locationDescriptionExpert_HauntedHouse
   localizationTitleText: locationTitleExpert_HauntedHouse
   localizationKeywordText: locationKeywordExpert_HauntedHouse
-  localizationArtifact: locationArtifactTitle_Book
+  localizationArtifact: locationArtifactTitle_HauntedHouse_CursedAmulet

@@ -8,41 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/CreateNewLocationsButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/CreateNewLocationsButton.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/FB_Select_Screen_BG.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/FB_Select_Screen_BG.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/FB_TitleScreen-BG.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/FB_TitleScreen-BG.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/fairy_screen-Background-Terrains-mirrored.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/fairy_screen-Background-Terrains-mirrored.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/fairy_screen-Background-Terrains.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/fairy_screen-Background-Terrains.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/fairy_screen-Background-vide.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Backgrounds/fairy_screen-Background-vide.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/FB-Item-Castle-BG.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/FB-Item-Castle-BG.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/FB_Item_TheHauntedHouse_BG_Off.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/FB_Item_TheHauntedHouse_BG_Off.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/FB_Item_TheHauntedHouse_BG_Off.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/FB_Item_TheHauntedHouse_BG_Off.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WarAndPeace/Locations/LocationUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WarAndPeace/Locations/LocationUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.camerapackage/Runtime/CameraOpencvLib.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.camerapackage/Runtime/CameraOpencvLib.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +35,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d9024bdc2a414b3c81b047ea3e343594a66a00/38/af1aa808/AssemblyReloadEvents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/TextureSizeBuildPreprocessor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/ArtefactWinAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationController/BaseAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Animation/AnimationEffects/ChangeImageAnimationEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BankWrapper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,6 +43,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Settings/SoundSettingsToggle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/ScoreHoverUI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ButtonSound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/CreateNewLocationsButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/SettingsMenu.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -92,20 +62,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/UnityBuild/WarAndPeace\WarAndPeace.exe" />
@@ -118,7 +86,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\6000.3.2f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.2f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -128,7 +96,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\6000.3.2f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.2f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -150,10 +118,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="16188">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" useMixedMode="false" ignored-value-for-modified-check="17396">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="16188" />
+      <option name="pid" value="17396" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -240,7 +208,6 @@
       <workItem from="1787498457339" duration="1069000" />
       <workItem from="1787560726845" duration="9715000" />
       <workItem from="1787781093875" duration="1704000" />
-      <workItem from="1794395590518" duration="6035000" />
     </task>
     <servers />
   </component>
@@ -273,43 +240,147 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs</url>
-          <line>17</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Menu\ControlDisplayMenu.cs" containingFunctionPresentation="Method 'CloseMenu'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/ControlPowerUI.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Gameplay\SpyPowerUI.cs" containingFunctionPresentation="Method 'SetPower'">
             <startOffsets>
-              <option value="356" />
+              <option value="721" />
             </startOffsets>
             <endOffsets>
-              <option value="373" />
+              <option value="809" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="17" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/ControlDisplayMenu.cs</url>
-          <line>27</line>
-          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Menu\ControlDisplayMenu.cs" containingFunctionPresentation="Method 'CloseMenu'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Gameplay/ControlPowerUI.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\UI\Gameplay\SpyPowerUI.cs" containingFunctionPresentation="Method 'SetPower'">
             <startOffsets>
-              <option value="634" />
+              <option value="822" />
             </startOffsets>
             <endOffsets>
-              <option value="667" />
+              <option value="912" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UI/Menu/Buttons/StartNewGame.cs</url>
-          <line>16</line>
-          <properties documentPath="C:\Users\marie\fairy-business\Fairy-Business\Assets\Scripts\UI\Menu\Buttons\StartNewGame.cs" containingFunctionPresentation="Method 'OnEnable'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>498</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
             <startOffsets>
-              <option value="294" />
+              <option value="19055" />
             </startOffsets>
             <endOffsets>
-              <option value="311" />
+              <option value="19114" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>510</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
+            <startOffsets>
+              <option value="19690" />
+            </startOffsets>
+            <endOffsets>
+              <option value="19718" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>525</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
+            <startOffsets>
+              <option value="20458" />
+            </startOffsets>
+            <endOffsets>
+              <option value="20622" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>232</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'AddTurnAction'">
+            <startOffsets>
+              <option value="6745" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6784" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>500</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
+            <startOffsets>
+              <option value="19145" />
+            </startOffsets>
+            <endOffsets>
+              <option value="19204" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>503</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'SolveTurn'">
+            <startOffsets>
+              <option value="19292" />
+            </startOffsets>
+            <endOffsets>
+              <option value="19390" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>228</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'AddTurnAction'">
+            <startOffsets>
+              <option value="6613" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6654" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>223</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'AddTurnAction'">
+            <startOffsets>
+              <option value="6426" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6466" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameSession.cs</url>
+          <line>218</line>
+          <properties documentPath="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business\Assets\Scripts\GameSession.cs" containingFunctionPresentation="Method 'AddTurnAction'">
+            <startOffsets>
+              <option value="6236" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6280" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <breakpoint enabled="true" type="DotNet_Exception_Breakpoints">
           <properties exception="System.OperationCanceledException" breakIfHandledByOtherCode="false" displayValue="System.OperationCanceledException" />

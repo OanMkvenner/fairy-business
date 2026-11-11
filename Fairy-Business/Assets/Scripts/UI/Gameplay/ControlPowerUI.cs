@@ -1,11 +1,12 @@
 using Locations;
 using Player;
 using TMPro;
+using UI.Menu.BaseMenu;
 using UnityEngine;
 
 namespace UI.Gameplay
 {
-    public class SpyPowerUI : MonoBehaviour
+    public class ControlPowerUI : MonoBehaviour
     {
         [SerializeField] private int line;
         [SerializeField] private TextMeshProUGUI redPower;

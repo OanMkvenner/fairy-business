@@ -34,11 +34,6 @@ namespace Locations
         private LocationAnimation locationAnimation;
         private Sprite ArtefactSprite;
 
-        private void Awake()
-        {
-            SetUpLocations();
-        }
-
         public void CreateGameLocations()
         {
             GameSession.instance.GameHasStarted = true;
@@ -145,8 +140,13 @@ namespace Locations
             GameLocations[2].FinalizePowerAndDetermineWinner();
         }
 
-        private void SetUpLocations()
+        public void SetUpLocations()
         {
+            foreach (Transform child in baseLocationsParent)
+            {
+                Destroy(child.gameObject);
+            }
+
             foreach (LocationData locationData in baseLocationDataCollection)
             {
                 LocationDefinition locationDefinition = Instantiate(baseLocationPrefab, baseLocationsParent);
@@ -154,6 +154,11 @@ namespace Locations
                 allAvailableLocations.Add(locationDefinition);
             }
 
+            foreach (Transform child in expertLocationsParent)
+            {
+                Destroy(child.gameObject);
+            }
+            
             foreach (LocationData locationData in expertLocationDataCollection)
             {
                 LocationDefinition locationDefinition = Instantiate(baseLocationPrefab, expertLocationsParent);
@@ -161,7 +166,7 @@ namespace Locations
                 allAvailableLocations.Add(locationDefinition);
             }
             
-            //deactivate expert mode, bc its at first glance not visiable for the player
+            //deactivate expert mode, bc it's at first glance not visible for the player
             expertLocationsParent.gameObject.SetActive(false);
         }
     }

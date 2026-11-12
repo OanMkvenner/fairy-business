@@ -4,7 +4,6 @@ using UnityEngine.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-using NaughtyAttributes;
 using System.Collections.Generic;
 using Unity.Mathematics;
 

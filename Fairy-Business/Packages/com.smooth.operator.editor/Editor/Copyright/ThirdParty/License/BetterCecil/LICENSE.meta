@@ -1,10 +1,5 @@
 fileFormatVersion: 2
 guid: b20b4f3affa479c4b90eb2f44f19939d
-DefaultImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
   productId: 271378
@@ -12,3 +7,8 @@ AssetOrigin:
   packageVersion: 1.1.1
   assetPath: Packages/com.smooth.operator.editor/Editor/Copyright/ThirdParty/License/BetterCecil/LICENSE
   uploadId: 683502
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,11 +10,14 @@
         "hybrgames.nodeeditor",
         "NaughtyAttributes.Core",
         "Unity.Burst",
-        "hybrgames.utils"
+        "hybrgames.utils",
+        "DOTween.Modules",
+        "MathfsAsmdef",
+        "MemoryPack.Unity"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
-    "allowUnsafeCode": false,
+    "allowUnsafeCode": true,
     "overrideReferences": false,
     "precompiledReferences": [],
     "autoReferenced": true,

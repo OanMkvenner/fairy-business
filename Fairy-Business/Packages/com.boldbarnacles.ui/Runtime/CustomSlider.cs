@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 using Sirenix.OdinInspector;
 using Unity.Mathematics;
 using DG.Tweening;
+using Freya;
 
 
 #if UNITY_EDITOR
@@ -75,8 +76,9 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
 
     
     [SerializeField]
-    [OnValueChanged("UpdateVisuals")]
+    [OnValueChanged("@Set(m_Value, true, true)")]
 	[FoldoutGroup("Values")]
+    [PropertyRange("minValue", "maxValue")]
     protected float m_Value;
     public virtual float value
     {
@@ -93,10 +95,12 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
 	[FoldoutGroup("Setup")]
     public bool useOffset = false;
     [SerializeField]
-    [OnValueChanged("UpdateVisuals")]
+    [OnValueChanged("@SetOffset(m_OffsetValue, true)")]
     [ShowIf("useOffset")]
     [HorizontalGroup]
 	[FoldoutGroup("Setup")]
+    [Tooltip("Cuts away a portion of the bar in the front without changing how the bar reacts to value changes. Useful if you want to make sure that a value of 0 actually " +
+             "doesnt show any bar, instead of a little bit of it still being visible (because the last bit gets squished instead of removed).")]
     protected float m_OffsetValue;
     public virtual float offsetValue
     {
@@ -180,26 +184,26 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
     {
         get
         {
-            if (Mathf.Approximately(minValue, maxValue))
+            if (Mathfs.Approximately(minValue, maxValue))
                 return 0;
-            return Mathf.InverseLerp(minValue, maxValue, value);
+            return Mathfs.InverseLerp(minValue, maxValue, value);
         }
         set
         {
-            this.value = Mathf.Lerp(minValue, maxValue, value);
+            this.value = Mathfs.Lerp(minValue, maxValue, value);
         }
     }
     public float normalizedOffsetValue
     {
         get
         {
-            if (Mathf.Approximately(minValue, maxValue))
+            if (Mathfs.Approximately(minValue, maxValue))
                 return 0;
-            return Mathf.InverseLerp(minValue, maxValue, offsetValue);
+            return Mathfs.InverseLerp(minValue, maxValue, offsetValue);
         }
         set
         {
-            this.offsetValue = Mathf.Lerp(minValue, maxValue, value);
+            this.offsetValue = Mathfs.Lerp(minValue, maxValue, value);
         }
     }
 
@@ -208,6 +212,8 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
     [SerializeField]
 	[FoldoutGroup("Events")]
     public SliderEvent m_OnValueChanged = new SliderEvent();
+    // allows access to m_OnValueChanged via more readable name "onValueChanged"
+    public SliderEvent onValueChanged { get { return m_OnValueChanged; } set { m_OnValueChanged = value; } }
 
     private Transform m_HandleTransform;
     private RectTransform m_HandleContainerRect;
@@ -380,7 +386,7 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
 
     float ClampValue(float input)
     {
-        float newValue = Mathf.Clamp(input, Mathf.Max(minValue, rangeLimit.x), Mathf.Min(maxValue, rangeLimit.y));
+        float newValue = Mathfs.Clamp(input, Mathfs.Max(minValue, rangeLimit.x), Mathfs.Min(maxValue, rangeLimit.y));
         return newValue;
     }
 
@@ -406,36 +412,24 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
         if (sendCallback)
         {
             UISystemProfilerApi.AddMarker("Slider.value", this);
-            m_OnValueChanged.Invoke(newValue);
-            SendNewData(newValue);
+            if (Application.isPlaying){
+                m_OnValueChanged.Invoke(newValue);
+                SendNewData(newValue);
+            }
         }
     }
 
     /// <summary>
-    /// Set the value of the slider.
-    /// </summary>
-    /// <param name="input">The new value for the slider.</param>
-    /// <param name="sendCallback">If the OnValueChanged callback should be invoked.</param>
-    /// <remarks>
-    /// Process the input to ensure the value is between min and max value. If the input is different set the value and send the callback is required.
-    /// </remarks>
-    protected virtual void SetOffset(float offsetInput, bool sendCallback = true, bool forceUpdate = false)
+    /// Set the offset of the slider. 
+    protected virtual void SetOffset(float offsetInput, bool forceUpdate = false)
     {
-        // Clamp the input
-        float newValue = ClampValue(offsetInput);
-
         // If the stepped value doesn't match the last one, it's time to update
-        if (m_OffsetValue == newValue && !forceUpdate)
+        if (m_OffsetValue == offsetInput && !forceUpdate)
             return;
 
-        m_OffsetValue = newValue;
+        m_OffsetValue = offsetInput;
         UpdateVisuals();
-        if (sendCallback)
-        {
-            UISystemProfilerApi.AddMarker("Slider.offsetValue", this);
-            //m_OnValueChanged.Invoke(newValue);
-            //SendNewData(newValue);
-        }
+        UISystemProfilerApi.AddMarker("Slider.offsetValue", this);
     }
 
     protected override void OnRectTransformDimensionsChange()
@@ -603,15 +597,15 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
                 // old way of doing DIRECT input depending on where you had your mousepointer. I might still implement a variant of this as an option for CustomSlider (to allow the old behaviour again)
                 //var unmodifiedLocalCursor = localCursor;
                 //localCursor -= clickRect.rect.position;
-                //float val = Mathf.Clamp01((localCursor - m_Offset)[0] / clickRect.rect.size[0]);
+                //float val = Mathfs.Clamp01((localCursor - m_Offset)[0] / clickRect.rect.size[0]);
                 //unmodifiedLocalCursor.y = 0;
-                //unmodifiedLocalCursor.x = Mathf.Clamp(unmodifiedLocalCursor.x, m_Offset.x - clickRect.rect.size.x / 2, m_Offset.x + clickRect.rect.size.x / 2);
+                //unmodifiedLocalCursor.x = Mathfs.Clamp(unmodifiedLocalCursor.x, m_Offset.x - clickRect.rect.size.x / 2, m_Offset.x + clickRect.rect.size.x / 2);
                 //var modifiedWorldPos = clickRect.TransformPoint(unmodifiedLocalCursor);
 
                 // jump the cursor back to the origin of the handle (it is hidden already, but if the hidden cursor hovers over a highlightable, it lights up, which looks 
                 // like a bug and is distracting) need to round values BEFORE calculating warpOffset, because WarpCursorPosition() rounds them later, but without notifying us.
-                handleScreenPos.x = Mathf.FloorToInt(handleScreenPos.x);
-                handleScreenPos.y = Mathf.FloorToInt(handleScreenPos.y);
+                handleScreenPos.x = Mathfs.FloorToInt(handleScreenPos.x);
+                handleScreenPos.y = Mathfs.FloorToInt(handleScreenPos.y);
 
                 // warpOffset will get calculated out of next drag-operation mouse-move
                 warpOffset = handleScreenPos - position;
@@ -648,7 +642,7 @@ public class CustomSlider : UIBehaviour, ICanvasElement, IDataReceiver
         int result = -1;
         for (int i = 0; i < steps.Count; i++)
         {
-            float newDist = Mathf.Abs(steps[i] - normalizedX);
+            float newDist = Mathfs.Abs(steps[i] - normalizedX);
             if (newDist < distance) {
                 distance = newDist;
                 result = i;

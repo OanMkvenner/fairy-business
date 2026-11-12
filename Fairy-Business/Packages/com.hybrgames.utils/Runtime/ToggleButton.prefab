@@ -161,6 +161,12 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
+  onChangedOn:
+    m_PersistentCalls:
+      m_Calls: []
+  onChangedOff:
+    m_PersistentCalls:
+      m_Calls: []
   m_IsOn: 1
 --- !u!1 &6003651720299012724
 GameObject:

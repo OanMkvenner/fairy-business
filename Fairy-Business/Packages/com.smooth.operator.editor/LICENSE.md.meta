@@ -1,10 +1,5 @@
 fileFormatVersion: 2
 guid: 4bc323592312c0a44a60ff1128eb5c58
-TextScriptImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
   productId: 271378
@@ -12,3 +7,8 @@ AssetOrigin:
   packageVersion: 1.1.1
   assetPath: Packages/com.smooth.operator.editor/LICENSE.md
   uploadId: 683502
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

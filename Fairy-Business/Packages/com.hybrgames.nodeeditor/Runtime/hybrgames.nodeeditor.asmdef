@@ -6,7 +6,8 @@
         "Unity.TextMeshPro",
         "XNode",
         "XNodeEditor",
-        "hybrgames.tweenanimator"
+        "hybrgames.tweenanimator",
+        "DOTween.Modules"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

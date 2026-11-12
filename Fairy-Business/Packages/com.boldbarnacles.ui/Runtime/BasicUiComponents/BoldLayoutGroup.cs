@@ -24,6 +24,15 @@ namespace UnityEngine.UI
             public float bottom;
             public float horizontal { get { return left + right; } }
             public float vertical { get { return top + bottom; } }
+
+            public static PaddingFloats operator + (PaddingFloats a, float b)
+            {
+                a.left += b;
+                a.right += b;
+                a.top += b;
+                a.bottom += b;
+                return a;
+            }
         }
         
         [SerializeField] protected PaddingFloats m_Padding = new PaddingFloats();

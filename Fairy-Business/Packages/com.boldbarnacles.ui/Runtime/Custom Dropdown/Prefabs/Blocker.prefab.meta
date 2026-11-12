@@ -1,10 +1,5 @@
 fileFormatVersion: 2
 guid: 59b25222924e32c44a5af57e24d6d0f6
-PrefabImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
   productId: 212824
@@ -12,3 +7,8 @@ AssetOrigin:
   packageVersion: 1.1
   assetPath: Assets/Custom Dropdown/Prefabs/Blocker.prefab
   uploadId: 528094
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-[AddComponentMenu("Custom UI/Custom Ui Click Handler", 30)]
+[AddComponentMenu("Custom UI/Custom Ui Interaction Handler", 30)]
 [RequireComponent(typeof(RectTransform))]
 public class CustomUiInteractionHandler : Selectable, IDragHandler, IEndDragHandler, IInitializePotentialDragHandler, ISubmitHandler, ICanvasElement
 {

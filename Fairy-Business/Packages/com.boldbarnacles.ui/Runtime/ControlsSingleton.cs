@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Freya;
 using Unity.Burst;
 using Unity.Mathematics;
 using UnityEngine;
@@ -13,11 +14,42 @@ public class ControlsSingleton : MonobehaviourSingletonCustom<PlayerInput> {
     static public Vector2 GetMouseScreenPosition(){
         return ControlsSingleton.instance.actions["Point"].ReadValue<Vector2>();
     }
-
-    static public Vector3 GetMousePosLocalOfUiElement(RectTransform rect, Vector2 screenPoint){
-        Debug.LogError("Warning: This function is untested!");
-        RectTransformUtility.ScreenPointToLocalPointInRectangle(rect, screenPoint, null, out Vector2 result);
+    // get mouse position within the given rect (returns Vector2 instead of Vector3)
+    static public Vector2 GetMousePosLocal2D(RectTransform rect, Camera overrideCam = null)
+    {
+        return GetMousePosLocal(rect, overrideCam).XY();
+    }
+    // get mouse position within the given rect
+    static public Vector3 GetMousePosLocal(RectTransform rect, Camera overrideCam = null)
+    {
+        return GetLocalPosFromScreenPos(rect, GetMouseScreenPosition(), overrideCam);
+    }
+    
+    // get local position within the given rect from given screen position
+    // screenPos axis: BottomRight of screen is (0,0) - TopRight of screen is (Screen.width, Screen.height)
+    static public Vector3 GetLocalPosFromScreenPos(RectTransform rect, Vector2 screenPos, Camera camera = null){
+        camera ??= Camera.main; // use default cam if not specified otherwise
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(rect, screenPos, camera, out Vector2 result);
         return new Vector3(result.x, result.y, 0);
+    }
+    // get screen position from given local position of rectTransform
+    static public Vector2 GetScreenPosFromLocalPos(RectTransform rect, Vector3 localPos, Camera camera = null){
+        camera ??= Camera.main; // use default cam if not specified otherwise
+        return RectTransformUtility.WorldToScreenPoint(camera, rect.TransformPoint(localPos));
+    }
+    // move a screenspace position along localVec within local space of rect. Value is returned in screenspace again.
+    static public Vector2 MoveScreenPosAlongLocalVec(RectTransform rect, Vector2 screenPos, Vector3 localVec, Camera camera = null){
+        camera ??= Camera.main; // use default cam if not specified otherwise
+        var localPos = ControlsSingleton.GetLocalPosFromScreenPos(rect, screenPos, camera);
+        localPos += localVec;
+        return GetScreenPosFromLocalPos(rect, localPos, camera);
+    }
+
+    // takes a localposition of a source recttransform and transforms it into the localPos of the plane of the target Transform (height = 0),
+    // but not based on its world position but on its position on the screen!
+    static public Vector3 TransformLocalPosToLocalPosByScreenPos(RectTransform srcRect, RectTransform tgtRect, Vector3 srcLocalPos, Camera camera = null) {
+        var screenPos = GetScreenPosFromLocalPos(srcRect, srcLocalPos, camera);
+        return GetLocalPosFromScreenPos(tgtRect, screenPos, camera);
     }
 
     //[BurstCompile]
@@ -108,7 +140,7 @@ public class DragDropManager
         mouseDragStartedPos = ControlsSingleton.GetMouseScreenPosition();
         mouseCurrentPos = mouseDragStartedPos;
     }
-    static float dragMoveDelta = 0.5f;
+    static float dragMoveDelta = 10.5f;
     private void UpdateDragging(CallbackContext ctx){
         if (tryStartDragging){
             if (!isDragging){

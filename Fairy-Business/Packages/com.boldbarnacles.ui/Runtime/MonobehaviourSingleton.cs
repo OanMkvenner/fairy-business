@@ -1,22 +1,23 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class MonobehaviourSingletonCustom<T> : MonoBehaviour where T : MonoBehaviour  {
+public class MonobehaviourSingletonCustom<T> : SerializedMonoBehaviour where T : MonoBehaviour  {
     private static T inst = null;
     public static T instance {
         get {
             if (!Application.isPlaying) {
-                Debug.LogError($"trying to access MonobheaviourSingletonCustom {typeof(T)} outside of running game. Please make sure you are only accessing it at runtime!");
+                Debug.LogError($"trying to access MonobehaviourSingletonCustom {typeof(T)} outside of running game. Please make sure you are only accessing it at runtime!");
                 return null;
             }
             if (!inst) {
-                var instances = FindObjectsByType(typeof(T), FindObjectsInactive.Include, FindObjectsSortMode.None);
+                var instances = FindObjectsByType(typeof(T), FindObjectsInactive.Include);
                 if (instances.Length == 0) {
                     Debug.LogError($"No instance of type {typeof(T)} found in Scene.\nPlease add it somewhere into the Scene.");
                     return null;
                 } else {
                     inst = (T)instances[0];
                     if (instances.Length > 1){
-                        Debug.LogError($"More than 1 instance of type {typeof(T)} was found, but MonobheaviourSingletonCustom expected singleton. Choosing first found instance");
+                        Debug.LogError($"More than 1 instance of type {typeof(T)} was found, but MonobehaviourSingletonCustom expected singleton. Choosing first found instance");
                     }
                 }
             }

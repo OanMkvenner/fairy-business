@@ -2,27 +2,16 @@
 using UnityEngine;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using Unity.Mathematics;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Reflection;
 using Cysharp.Threading.Tasks;
-using NUnit.Framework;
 
-public class EnounteredItem
+public class AppUser : MonobehaviourSingletonCustom<AppUser>
 {
-    public string itemName = "";
-    public int encounteredCount = 0;
-}
-
-public class AppUser : MonoBehaviour
-{
-    public static AppUser instance { get; private set; }
-
     Dictionary<string, JObject> cachedProgressObjects = new Dictionary<string, JObject>();
 
     void Awake() {
-        if (instance == null) { instance = this; }
         cachedProgressObjects = new Dictionary<string, JObject>();
     }
 
@@ -147,6 +136,10 @@ public class AppUser : MonoBehaviour
     // same as above applies. But since input values are often taken from variables, the danger of mis-typing is smaller.
     static public void SaveData<T>(string saveCategory, string dataName, T value, bool compressed = false, bool debugPrint = false)
     {
+        if (dataName == ""){
+            Debug.LogError("Option with empty name is invalid");
+            return;
+        }
         if (compressed) {
             SaveData(saveCategory, dataName, ConvertObjectToCompressedString(value), compressed: false);
             return;
@@ -158,6 +151,10 @@ public class AppUser : MonoBehaviour
     }
     static public void DeleteSavedData(string saveCategory, string dataName)
     {
+        if (dataName == ""){
+            Debug.LogError("Option with empty name is invalid");
+            return;
+        }
         JObject dataObject = AppUser.instance.GetProgressObject(saveCategory);
         dataObject.Remove(dataName);
         AppUser.instance.SaveProgressObject(saveCategory, dataObject);

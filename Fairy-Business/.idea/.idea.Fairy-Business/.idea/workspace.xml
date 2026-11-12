@@ -9,102 +9,496 @@
   <component name="ChangeListManager">
     <list default="true" id="4045b036-3bc5-40cb-a1f0-480301a5773c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fairy-Business/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Astounding news SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Astounding news SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Astounding news.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Astounding news.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Audiowide-Regular SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Audiowide-Regular SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Audiowide-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Audiowide-Regular.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Gotham-Medium SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Gotham-Medium SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Gotham-Medium.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Font/Gotham-Medium.otf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Castle/castle - Magic boots.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Castle/castle - Magic boots.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Castle/castle - Magic boots_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Castle/castle - Magic boots_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Castle/castle - Oberon wand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Castle/castle - Oberon wand.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Castle/castle - Oberon wand_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Castle/castle - Oberon wand_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Magic Library/Magic Library - Melusine book.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Magic Library/Magic Library - Melusine book.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Magic Library/Magic Library - Melusine book_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Magic Library/Magic Library - Melusine book_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Magic Library/Magic Library - magic wand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Magic Library/Magic Library - magic wand.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Magic Library/Magic Library - magic wand_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Magic Library/Magic Library - magic wand_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Bottom Of the Sea/the bottom of the sea - mermaid necklace.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Bottom Of the Sea/the bottom of the sea - mermaid necklace.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Bottom Of the Sea/the bottom of the sea - mermaid necklace_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Bottom Of the Sea/the bottom of the sea - mermaid necklace_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Bottom Of the Sea/the bottom of the sea - trident.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Bottom Of the Sea/the bottom of the sea - trident.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Bottom Of the Sea/the bottom of the sea - trident_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Bottom Of the Sea/the bottom of the sea - trident_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Dragon Cave/the dragon cave - Dragon egg.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Dragon Cave/the dragon cave - Dragon egg.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Dragon Cave/the dragon cave - Dragon egg_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Dragon Cave/the dragon cave - Dragon egg_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Dragon Cave/the dragon cave - invisibility cloak.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Dragon Cave/the dragon cave - invisibility cloak.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Dragon Cave/the dragon cave - invisibility cloak_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Dragon Cave/the dragon cave - invisibility cloak_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Enchanted Forest/the enchanted forest - Magic bean.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Enchanted Forest/the enchanted forest - Magic bean.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Enchanted Forest/the enchanted forest - Magic bean_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Enchanted Forest/the enchanted forest - Magic bean_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Enchanted Forest/the enchanted forest - enchanted rose.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Enchanted Forest/the enchanted forest - enchanted rose.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Enchanted Forest/the enchanted forest - enchanted rose_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Enchanted Forest/the enchanted forest - enchanted rose_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Gingerbread House/the gingerbread house - cornucopia.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Gingerbread House/the gingerbread house - cornucopia.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Gingerbread House/the gingerbread house - cornucopia_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Gingerbread House/the gingerbread house - cornucopia_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Gingerbread House/the gingerbread house - gingerbread man.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Gingerbread House/the gingerbread house - gingerbread man.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Gingerbread House/the gingerbread house - gingerbread man_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Gingerbread House/the gingerbread house - gingerbread man_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/FB_Item_TheHauntedHouse_BG_Off_hover.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/FB_Item_TheHauntedHouse_BG_Off_hover.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/FB_Item_TheHauntedHouse_BG_Off_hover.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/FB_Item_TheHauntedHouse_BG_Off_hover.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/the haunted house -  cursed amulet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/the haunted house -  cursed amulet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/the haunted house -  cursed amulet_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/the haunted house -  cursed amulet_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/the haunted house -  poisoned apple.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/the haunted house -  poisoned apple.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/the haunted house -  poisoned apple_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Haunted House/the haunted house -  poisoned apple_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Pirate Ship/the pirate ship - crochet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Pirate Ship/the pirate ship - crochet.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Pirate Ship/the pirate ship - crochet_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Pirate Ship/the pirate ship - crochet_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Pirate Ship/the pirate ship - ghost saber.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Pirate Ship/the pirate ship - ghost saber.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Pirate Ship/the pirate ship - ghost saber_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/The Pirate Ship/the pirate ship - ghost saber_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Through The Mirror/through the mirror - Magic Dice.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Through The Mirror/through the mirror - Magic Dice.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Through The Mirror/through the mirror - Magic Dice_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Through The Mirror/through the mirror - Magic Dice_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Through The Mirror/through the mirror - magic cristal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Through The Mirror/through the mirror - magic cristal.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Through The Mirror/through the mirror - magic cristal_BlackAndWhite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/UI/Locations/New/Through The Mirror/through the mirror - magic cristal_BlackAndWhite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/LocationDefinition.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/WarAndPeace/Locations/LocationUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/WarAndPeace/Locations/LocationUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_English.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/RemoteConfig/Translations/L_French.rc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Default Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/BottomOfTheSea.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/Castle.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/DragonCave.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/EnchantedForest.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/GingerbreadHouse.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/HauntedHouse.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/MagicLibrary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/PirateShip.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Base/ThroughTheMirror.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/BottomOfTheSeaExpert.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/CastleExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/DragonCaveExpert.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/EnchantedForestExpert.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/GingerbreadHouseExpert.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/HauntedHouseExpert.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/MagicLibraryExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/PirateShipExpert.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/Expert/ThroughTheMirrorExpert.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationDefinition.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Locations/LocationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LocationUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LocationUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Menu/LocationSelectionMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UiGraphs/Main Ui Graph.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UiGraphs/Main Ui Graph.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UiGraphs/SubGameplay.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UiGraphs/SubGameplay.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UiGraphs/SubMainMenu.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UiGraphs/SubMainMenu.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UiGraphs/SubSelectionMenu.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UiGraphs/SubSelectionMenu.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Editor/UGUI Anchor Automatically/Editor/uGUITools.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Editor/UGUI Anchor Automatically/Editor/uGUITools.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Editor/UGUI Anchor Automatically/Editor/uGUITools.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Editor/UGUI Anchor Automatically/Editor/uGUITools.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Editor/UGUI Anchor Automatically/How_To_Set_Up.pdf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Editor/UGUI Anchor Automatically/How_To_Set_Up.pdf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Editor/UGUI Anchor Automatically/How_To_Set_Up.rtf.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Editor/UGUI Anchor Automatically/How_To_Set_Up.rtf.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/AnimationSequenceHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/AnimationSequenceHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/AnimatorUiElement.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/AnimatorUiElement.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldFlexibleGridLayoutGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldFlexibleGridLayoutGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldFlexibleGridLayoutGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldFlexibleGridLayoutGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldGridLayoutGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldGridLayoutGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldHorizontalLayoutGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldHorizontalLayoutGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldHorizontalOrVerticalLayoutGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldHorizontalOrVerticalLayoutGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldLayoutGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldLayoutGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldLayoutGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldLayoutGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldVerticalLayoutGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BasicUiComponents/BoldVerticalLayoutGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;T3Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;T3Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;T3Round2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;T3Round2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;W1Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;W1Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;W2Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;W2Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;W3Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B&amp;W3Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B1Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B1Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B2Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B2Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B3Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B3Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B4Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/B4Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/G&amp;W2Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/G&amp;W2Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/W1Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/W1Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/W2Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/W2Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/W3Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/W3Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/W4Round.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/BorderImages/W4Round.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ControlsSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ControlsSingleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ControlsSingleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ControlsSingleton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Prefabs/Blocker.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Prefabs/Blocker.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Prefabs/Blocker.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Prefabs/Blocker.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Readme.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Readme.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Scripts/AdvancedDropdown.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Scripts/AdvancedDropdown.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Scripts/AutoSizeLayoutDropdown.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Scripts/AutoSizeLayoutDropdown.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Scripts/OptionScript.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/Custom Dropdown/Scripts/OptionScript.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomButtonGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomButtonGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomGauge.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomGauge.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomGauge.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomGauge.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomSlider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomSlider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomSlider.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomSlider.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomSliderSet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomSliderSet.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomUiInteractionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomUiInteractionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomUiInteractionHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/CustomUiInteractionHandler.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/Dropdown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/Dropdown.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/Dropdown.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/Dropdown.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/LanguageDropdown.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/LanguageDropdown.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Bottom.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Bottom.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Group 236 - resizable.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Group 236 - resizable.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Rectangle 35.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Rectangle 35.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Rectangle 36 - resizable.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Rectangle 36 - resizable.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Top.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ElementPrefabs/languagesTestUi/Top.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/EventsHelpers/MouseEventForwarder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/EventsHelpers/MouseEventForwarder.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/IDataConnector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/IDataConnector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/MonobehaviourSingleton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/MonobehaviourSingleton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/MonobehaviourSingleton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/MonobehaviourSingleton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/MousePointerChanger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/MousePointerChanger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/MousePointerChangerSO.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/MousePointerChangerSO.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/RotationNeutralisation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/RotationNeutralisation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/RotationNeutralisation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/RotationNeutralisation.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ScriptableSingletonCustom.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/ScriptableSingletonCustom.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UiElementSoundSetSO.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UiElementSoundSetSO.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UiElementSounds.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UiElementSounds.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UtilitiesGeometry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UtilitiesGeometry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UtilitiesGeometry.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UtilitiesGeometry.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UtilitiesUi.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UtilitiesUi.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UtilitiesUi.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/UtilitiesUi.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/boldbarnacles.ui.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.boldbarnacles.ui/Runtime/boldbarnacles.ui.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/ArrayPool.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/ArrayPool.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/ArrayPoolUtil.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/ArrayPoolUtil.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/ArrayUtil.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/ArrayUtil.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/Error.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/Error.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/RuntimeHelpersAbstraction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Internal/RuntimeHelpersAbstraction.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Linq/Merge.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/Linq/Merge.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/UnityAwaitableExtensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.cysharp.unitask/Runtime/UnityAwaitableExtensions.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.cysharp.unitask/package.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.cysharp.unitask/package.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/README.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/README.html.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/DemoScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/DemoScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/DemoSceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/DemoSceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/Cube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/Cube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/DummyAnimation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/DummyAnimation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/DummyAnimatorController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/DummyAnimatorController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/NaughtyScriptableObject.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/NaughtyScriptableObject.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/TestScriptableObjectA.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/TestScriptableObjectA.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/TestScriptableObjectB.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/TestScriptableObjectB.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/icon-github.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Samples/DemoScene/TestAssets/icon-github.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/AllowNestingAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/AllowNestingAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/AnimatorParamAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/AnimatorParamAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/CurveRangeAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/CurveRangeAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/DrawerAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/DropdownAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/DropdownAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/EnumFlagsAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/EnumFlagsAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/Expandable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/Expandable.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/HorizontalLineAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/HorizontalLineAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/InfoBoxAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/InfoBoxAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/InputAxisAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/InputAxisAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/LayerAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/LayerAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/MinMaxSliderAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/MinMaxSliderAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/ProgressBarAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/ProgressBarAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/ResizableTextAreaAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/ResizableTextAreaAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/SceneAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/SceneAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/ShowAssetPreviewAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/ShowAssetPreviewAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/SortingLayerAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/SortingLayerAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/TagAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes/TagAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/ButtonAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/ButtonAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/ReorderableListAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/ReorderableListAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/ShowNativePropertyAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/ShowNativePropertyAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/ShowNonSerializedFieldAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/ShowNonSerializedFieldAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/SpecialCaseDrawerAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/DrawerAttributes_SpecialCase/SpecialCaseDrawerAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/INaughtyAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/INaughtyAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/BoxGroupAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/BoxGroupAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/DisableIfAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/DisableIfAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/EnableIfAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/EnableIfAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/EnableIfAttributeBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/EnableIfAttributeBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/FoldoutAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/FoldoutAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/HideIfAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/HideIfAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/IGroupAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/IGroupAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/LabelAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/LabelAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/MetaAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/MetaAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/OnValueChangedAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/OnValueChangedAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/ReadOnlyAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/ReadOnlyAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/ShowIfAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/ShowIfAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/ShowIfAttributeBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/MetaAttributes/ShowIfAttributeBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/NaughtyAttributes.Core.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/NaughtyAttributes.Core.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/Utility.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/Utility/EColor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/Utility/EColor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/Utility/EConditionOperator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/Utility/EConditionOperator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/MaxValueAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/MaxValueAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/MinValueAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/MinValueAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/RequiredAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/RequiredAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/ValidateInputAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/ValidateInputAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/ValidatorAttribute.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Core/ValidatorAttributes/ValidatorAttribute.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/DecoratorDrawers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/DecoratorDrawers/HorizontalLineDecoratorDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/DecoratorDrawers/HorizontalLineDecoratorDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/DecoratorDrawers/InfoBoxDecoratorDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/DecoratorDrawers/InfoBoxDecoratorDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/NaughtyAttributes.Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/NaughtyAttributes.Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/NaughtyInspector.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/NaughtyInspector.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/AllowNestingPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/AllowNestingPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/AnimatorParamPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/AnimatorParamPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/CurveRangePropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/CurveRangePropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/DropdownPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/DropdownPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/EnumFlagsPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/EnumFlagsPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ExpandablePropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ExpandablePropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/InputAxisPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/InputAxisPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/LayerPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/LayerPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/MinMaxSliderPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/MinMaxSliderPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ProgressBarPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ProgressBarPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/PropertyDrawerBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/PropertyDrawerBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ResizableTextAreaPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ResizableTextAreaPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ScenePropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ScenePropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/ShowAssetPreviewPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/SortingLayerPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/SortingLayerPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/TagPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers/TagPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers_SpecialCase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers_SpecialCase/ReorderableListPropertyDrawer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers_SpecialCase/ReorderableListPropertyDrawer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers_SpecialCase/SpecialCasePropertyDrawerBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyDrawers_SpecialCase/SpecialCasePropertyDrawerBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/MaxValuePropertyValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/MaxValuePropertyValidator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/MinValuePropertyValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/MinValuePropertyValidator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/PropertyValidatorBase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/PropertyValidatorBase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/RequiredPropertyValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/RequiredPropertyValidator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/ValidateInputPropertyValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/PropertyValidators/ValidateInputPropertyValidator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/ButtonUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/ButtonUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/NaughtyEditorGUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/NaughtyEditorGUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/PropertyUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/PropertyUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/ReflectionUtility.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/ReflectionUtility.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/SavedBool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Editor/Utility/SavedBool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/AnimatorParamTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/AnimatorParamTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/BoxGroupTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/BoxGroupTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ButtonTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ButtonTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/CurveRangeTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/CurveRangeTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/DisableIfTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/DisableIfTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/DropdownTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/DropdownTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/EnableIfTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/EnableIfTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/EnumFlagsTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/EnumFlagsTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ExpandableTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ExpandableTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/FoldoutTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/FoldoutTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/HideIfTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/HideIfTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/HorizontalLineTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/HorizontalLineTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/InfoBoxTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/InfoBoxTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/InputAxisTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/InputAxisTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/LabelTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/LabelTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/LayerTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/LayerTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/MinMaxSliderTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/MinMaxSliderTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/MinMaxValueTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/MinMaxValueTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/NaughtyAttributes.Test.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/NaughtyAttributes.Test.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/OnValueChangedTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/OnValueChangedTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ProgressBarTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ProgressBarTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ReadOnlyTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ReadOnlyTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ReorderableListTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ReorderableListTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/RequiredTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/RequiredTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ResizableTextAreaTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ResizableTextAreaTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/SceneTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/SceneTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ShowAssetPreviewTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ShowAssetPreviewTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ShowIfTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ShowIfTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ShowNativePropertyTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ShowNativePropertyTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ShowNonSerializedFieldTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ShowNonSerializedFieldTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/SortingLayerTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/SortingLayerTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/TagTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/TagTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ValidateInputTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/ValidateInputTest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/_NaughtyComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/_NaughtyComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/_NaughtyScriptableObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/_NaughtyScriptableObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/_TestScriptableObjectA.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/_TestScriptableObjectA.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/_TestScriptableObjectB.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/Scripts/Test/_TestScriptableObjectB.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.dbrizov.naughtyattributes/package.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Attributes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Attributes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Attributes/NodeEnum.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Attributes/NodeEnum.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Drawers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Drawers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Drawers/NodeEnumDrawer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Drawers/NodeEnumDrawer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorAction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorAction.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorAssetModProcessor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorAssetModProcessor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorGUILayout.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorGUILayout.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorPreferences.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorPreferences.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorReflection.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorReflection.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorResources.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorResources.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorUtilities.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorUtilities.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorWindow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeEditorWindow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeGraphEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/NodeGraphEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/RenamePopup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/RenamePopup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/ScriptTemplates.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/ScriptTemplates.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/ScriptTemplates/xNode_NodeGraphTemplate.cs.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/ScriptTemplates/xNode_NodeGraphTemplate.cs.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/ScriptTemplates/xNode_NodeTemplate.cs.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/ScriptTemplates/xNode_NodeTemplate.cs.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_dot.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_dot.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_dot_outer.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_dot_outer.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_node.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_node.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_node_highlight.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_node_highlight.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_node_workfile.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Editor/Resources/xnode_node_workfile.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Node.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/Node.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/NodeDataCache.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/NodeDataCache.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/NodeGraph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/NodeGraph.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/NodePort.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/Scripts/NodePort.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/package.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.github.siccity.xnode/package.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.loadingmanager/Runtime/LoadingManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.loadingmanager/Runtime/LoadingManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.loadingmanager/Runtime/hybrgames.loadingmanager.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.loadingmanager/Runtime/hybrgames.loadingmanager.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.loadingmanager/Runtime/loadingManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.loadingmanager/Runtime/loadingManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Fonts/Fonts/Arvo-Bold.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Fonts/Fonts/Arvo-Bold.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Fonts/Fonts/Arvo-Regular.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Fonts/Fonts/Arvo-Regular.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Fonts/Fonts/AtlanticCruise SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Fonts/Fonts/AtlanticCruise SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Fonts/MainFontsContainers/ButtonFont.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Fonts/MainFontsContainers/ButtonFont.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/LocalizedGameobject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/LocalizedGameobject.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/LocalizedText.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/LocalizedText.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Localizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Localizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Localizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.localizer/Runtime/Localizer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Editor/CustomNodesHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Editor/CustomNodesHelper.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Editor/StateGraphEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Editor/StateGraphEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/CrossSceneReference/Runtime.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/CrossSceneReference/Runtime.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/CustomComponents/ButtonContainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/CustomComponents/ButtonContainer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/Nodes.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/Nodes.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/Nodes/StartNode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/Nodes/StartNode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/Nodes/ViewNodePortConnector.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/Nodes/ViewNodePortConnector.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/Nodes/ViewNodeReferencer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/Nodes/ViewNodeReferencer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/StateGraph.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/StateGraph.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/hybrgames.nodeeditor.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.nodeeditor/Runtime/hybrgames.nodeeditor.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/GameUpdater.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/GameUpdater.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/HybrRemoteConfig.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/HybrRemoteConfig.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/RemoteConfigHelpers/PreprocessorScriptForStreamingAssets.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/RemoteConfigHelpers/PreprocessorScriptForStreamingAssets.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/RemoteConfigHelpers/PreprocessorScriptForStreamingAssets.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/RemoteConfigHelpers/PreprocessorScriptForStreamingAssets.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/RemoteConfigHelpers/StreamingAssetsExtension.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.remoteconfig/Runtime/RemoteConfigHelpers/StreamingAssetsExtension.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/AppUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/AppUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/AppUser.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/AppUser.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/SaveLoadManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/SaveLoadManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/SaveableOption.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/SaveableOption.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/SaveableOption.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/SaveableOption.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/hybrgames.saveload.runtime.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.saveload/Runtime/hybrgames.saveload.runtime.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Editor/TweenAnimatorEditor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Editor/TweenAnimatorEditor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/CanvasGroupReseter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/CanvasGroupReseter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/MainCanvasReferencer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/MainCanvasReferencer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/TransformReseter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/TransformReseter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/TweenAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/TweenAnimator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/hybrgames.tweenanimator.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.tweenanimator/Runtime/hybrgames.tweenanimator.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/DOTween.XML" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/DOTween.XML" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/DOTween.XML.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/DOTween.XML.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/DOTween.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/DOTween.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/DOTween.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/DOTween.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/DOTweenEditor.XML" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/DOTweenEditor.XML" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/DOTweenEditor.XML.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/DOTweenEditor.XML.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/DOTweenEditor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/DOTweenEditor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/DOTweenEditor.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/DOTweenEditor.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/DOTweenIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/DOTweenIcon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/DOTweenMiniIcon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/DOTweenMiniIcon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/Footer.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/Footer.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/Footer_dark.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/Footer_dark.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/Header.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Editor/Imgs/Header.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleAudio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleAudio.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleAudio.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleEPOOutline.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleEPOOutline.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleEPOOutline.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleEPOOutline.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModulePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModulePhysics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModulePhysics.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModulePhysics.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModulePhysics2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModulePhysics2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModulePhysics2D.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModulePhysics2D.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleSprite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleSprite.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleSprite.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleSprite.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUI.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUnityVersion.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUnityVersion.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUtils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUtils.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUtils.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/Modules/DOTweenModuleUtils.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/readme.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/DOTween/readme.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Icaria-Noise-main/CellularNoise2D.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Icaria-Noise-main/CellularNoise2D.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Icaria-Noise-main/GradientNoise2D.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Icaria-Noise-main/GradientNoise2D.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Icaria-Noise-main/GradientNoise3D.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Icaria-Noise-main/GradientNoise3D.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Icaria-Noise-main/NoisePeriod.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Icaria-Noise-main/NoisePeriod.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/RandomSquirrel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/RandomSquirrel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Randomizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Randomizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Randomizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Randomizer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/ToggleButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/ToggleButton.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/ToggleableButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/ToggleableButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/ToggleableButtonGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/ToggleableButtonGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/UniqueNameHash.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/UniqueNameHash.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Utilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Utilities.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Utilities.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/Utilities.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/compression/DiffMatchPatch.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/compression/DiffMatchPatch.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/compression/HttpEncoder.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/compression/HttpEncoder.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/compression/LZString.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/compression/LZString.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/compression/httpUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/compression/httpUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/hybrgames.utils.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.hybrgames.utils/Runtime/hybrgames.utils.asmdef" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/CHANGELOG.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/CHANGELOG.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/AssemblyInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/AssemblyInfo.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/Copyright/CopyrightNotice.txt.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/Copyright/CopyrightNotice.txt.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/Copyright/ThirdParty/License/BetterCecil/LICENSE.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/Copyright/ThirdParty/License/BetterCecil/LICENSE.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/Extensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/Extensions.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/MethodExtensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/MethodExtensions.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/ModuleExtension.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/ModuleExtension.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/OperatorWeaver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/OperatorWeaver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/PostProcessorAssemblyResolver.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/PostProcessorAssemblyResolver.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/PostProcessorReflectionImporter.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/PostProcessorReflectionImporter.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/SmoothOperator.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/SmoothOperator.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/TypeExtensions.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/TypeExtensions.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/Unity.SMOperator.CodeGen.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/Unity.SMOperator.CodeGen.asmdef.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/WeaverBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/WeaverBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/WeaverLogger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/Editor/WeaverLogger.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/LICENSE.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/LICENSE.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/README.md.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/README.md.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/package.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/com.smooth.operator.editor/package.json.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +520,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/493b407efcb64dddad59f28bb0b831d3212400/6b/d4eeed7f/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/493b407efcb64dddad59f28bb0b831d3212400/6b/d4eeed7f/Component.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/493b407efcb64dddad59f28bb0b831d3212400/7a/23e6ffa3/Texture2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/493b407efcb64dddad59f28bb0b831d3212400/e8/f288216e/Sprite.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/91d4a33c39fa4892a9311a7400c121fc6800/53/8edb38fd/ImageConversion.cs" root0="SKIP_HIGHLIGHTING" />
@@ -159,19 +553,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$USER_HOME$/UnityBuild/WarAndPeace\WarAndPeace.exe" />
@@ -184,7 +578,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\6000.3.2f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\6000.4.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -194,7 +588,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="C:\Program Files\Unity\6000.3.2f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="C:\Program Files\Unity\6000.4.9f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="C:\Users\marie\Repositories\WarAndPeace\fairy-business\Fairy-Business" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -304,7 +698,11 @@
       <workItem from="1787498457339" duration="1069000" />
       <workItem from="1787560726845" duration="9715000" />
       <workItem from="1787781093875" duration="1704000" />
-      <workItem from="1794482631338" duration="8791000" />
+      <workItem from="1794482631338" duration="11505000" />
+      <workItem from="1794502833655" duration="1385000" />
+      <workItem from="1794504404555" duration="218000" />
+      <workItem from="1794504641040" duration="81000" />
+      <workItem from="1794504786666" duration="683000" />
     </task>
     <servers />
   </component>

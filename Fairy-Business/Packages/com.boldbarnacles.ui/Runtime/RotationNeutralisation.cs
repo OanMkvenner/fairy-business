@@ -4,13 +4,13 @@ using Unity.Mathematics;
 // counters the rotation of the parent transform. Allows you to keep original rotation while moving along the parent rotation position
 public class RotationNeutralisation : MonoBehaviour {
     private quaternion cachedOriginalRotation = new quaternion();
+    bool initialized = false;
     private void Awake() {
         cachedOriginalRotation = transform.localRotation;
+        initialized = true;
     }
-    bool initialized = false;
     private void Start() {
         NeutralizeRotation();
-        initialized = true;
     }
     private quaternion cachedParentRotation = new quaternion();
     private void Update() {

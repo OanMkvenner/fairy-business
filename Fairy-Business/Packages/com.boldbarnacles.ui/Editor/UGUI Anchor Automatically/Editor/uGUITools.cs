@@ -21,6 +21,11 @@ public class uGUITools : MonoBehaviour {
 			t.offsetMin = t.offsetMax = new Vector2(0, 0);
 		}
 	}
+	[MenuItem("uGUI/Reserialize Everything %[")]
+	static void ReserializeAll(){
+		AssetDatabase.ForceReserializeAssets();
+		AssetDatabase.SaveAssets();
+	}
 
 	[MenuItem("uGUI/Corners to Anchors %]")]
 	static void CornersToAnchors(){

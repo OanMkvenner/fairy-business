@@ -4,7 +4,6 @@ using UnityEngine.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-using NaughtyAttributes;
 using System.Collections.Generic;
 using Unity.Mathematics;
 
@@ -34,7 +33,7 @@ public class CustomGauge : UIBehaviour, IDataReceiver
     public virtual void GraphicUpdateComplete(){}
     
 #if UNITY_EDITOR
-    override protected void Reset(){} // similar to "awake" but it also executes even if disabled (i think)
+    override protected void Reset(){} // similar to "awake" but it also executes even if disabled (I think)
 #endif
     public virtual void Rebuild(CanvasUpdate executing)
     {

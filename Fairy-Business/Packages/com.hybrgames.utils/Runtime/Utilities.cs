@@ -8,8 +8,8 @@ using Cysharp.Threading.Tasks;
 using System.Linq;
 using System;
 using UnityEngine.InputSystem;
-
-
+using DG.Tweening;
+using UnityEngine.UI;
 
 
 #if (UNITY_EDITOR)
@@ -45,8 +45,74 @@ public class VersionNumber
         return a.major < b.major || a.major == b.major && a.minor < b.minor || a.major == b.major && a.minor == b.minor && a.patch < b.patch;
     }
 }
+
+namespace DG.Tweening
+{
+    public static class DoTweenUtilities
+    {
+        /// <summary>Tweens a Text's text to the given value.
+        /// Also stores the Text as the tween's target so it can be used for filtered operations</summary>
+        /// <param name="endValue">The end string to tween to</param><param name="duration">The duration of the tween</param>
+        /// <param name="richTextEnabled">If TRUE (default), rich text will be interpreted correctly while animated,
+        /// otherwise all tags will be considered as normal text</param>
+        /// <param name="scrambleMode">The type of scramble mode to use, if any</param>
+        /// <param name="scrambleChars">A string containing the characters to use for scrambling.
+        /// Use as many characters as possible (minimum 10) because DOTween uses a fast scramble mode which gives better results with more characters.
+        /// Leave it to NULL (default) to use default ones</param>
+        public static Core.TweenerCore<string, string, Plugins.Options.StringOptions> DOText(this Text target, string endValue, float duration, bool richTextEnabled = true, ScrambleMode scrambleMode = ScrambleMode.None, string scrambleChars = null)
+        {
+            if (endValue == null) {
+                if (Core.Debugger.logPriority > 0) Core.Debugger.LogWarning("You can't pass a NULL string to DOText: an empty string will be used instead to avoid errors");
+                endValue = "";
+            }
+            Core.TweenerCore<string, string, Plugins.Options.StringOptions> t = DOTween.To(() => target.text, x => target.text = x, endValue, duration);
+            t.SetOptions(richTextEnabled, scrambleMode, scrambleChars)
+                .SetTarget(target);
+            return t;
+        }
+
+        /// <summary>Tweens a Text's text to the given value.
+        /// Also stores the Text as the tween's target so it can be used for filtered operations</summary>
+        /// <param name="endValue">The end string to tween to</param><param name="duration">The duration of the tween</param>
+        /// <param name="richTextEnabled">If TRUE (default), rich text will be interpreted correctly while animated,
+        /// otherwise all tags will be considered as normal text</param>
+        /// <param name="scrambleMode">The type of scramble mode to use, if any</param>
+        /// <param name="scrambleChars">A string containing the characters to use for scrambling.
+        /// Use as many characters as possible (minimum 10) because DOTween uses a fast scramble mode which gives better results with more characters.
+        /// Leave it to NULL (default) to use default ones</param>
+        public static Core.TweenerCore<string, string, Plugins.Options.StringOptions> DOText(this TMP_Text target, string endValue, float duration, bool richTextEnabled = true, ScrambleMode scrambleMode = ScrambleMode.None, string scrambleChars = null)
+        {
+            if (endValue == null)
+            {
+                if (Core.Debugger.logPriority > 0) Core.Debugger.LogWarning("You can't pass a NULL string to DOText: an empty string will be used instead to avoid errors");
+                endValue = "";
+            }
+            Core.TweenerCore<string, string, Plugins.Options.StringOptions> t = DOTween.To(() => target.text, x => target.text = x, endValue, duration);
+            t.SetOptions(richTextEnabled, scrambleMode, scrambleChars)
+                .SetTarget(target);
+            return t;
+        }
+    }
+}
+
+public static class VectorUtilities
+{
+    
+    public static bool ApproxEquals(this Vector3 vec1, Vector3 vec2, float delta)
+    {
+        return (vec1 - vec2).sqrMagnitude < (delta * delta);
+    }
+}
+
 public static class Utilities
 {
+    public static Color GetColorFromHex(string hexString)
+    {
+        if (hexString.Length == 0) return new Color();
+        if (hexString[0] != '#') hexString = "#" + hexString;
+        ColorUtility.TryParseHtmlString(hexString, out var color);
+        return color;
+    } 
     public static void Invoke(this MonoBehaviour mb, Action f, float delay)
     {
         mb.StartCoroutine(InvokeRoutine(f, delay));
@@ -56,6 +122,10 @@ public static class Utilities
     {
         yield return new WaitForSeconds(delay);
         f();
+    }
+    public static bool IsGenericList(this Type oType)
+    {
+        return (oType.IsGenericType && (oType.GetGenericTypeDefinition() == typeof(List<>)));
     }
     [HideInInspector] public static Dictionary<string, bool> inputPolling = new Dictionary<string, bool>();
     public static PlayerInput input = null;
@@ -218,6 +288,7 @@ public static class Utilities
         }
         return new List<T>(srcList);
     }
+    // uses Copy-constructor
     public static void CopyListDeep<T>(List<T> srcList, ref List<T> tgtList){
         if (srcList == null){
             tgtList = null;
@@ -229,6 +300,20 @@ public static class Utilities
         for (int i = 0; i < srcList.Count; i++)
         {
             tgtList.Add((T)System.Activator.CreateInstance(typeof(T), srcList[i]));
+        }
+    }
+    // uses Clone
+    public static void CopyListDeepUsingClone<T>(List<T> srcList, ref List<T> tgtList) where T: ICloneable {
+        if (srcList == null){
+            tgtList = null;
+            return;
+        }
+
+        //tgtList = new List<T>(srcList);
+        tgtList = new List<T>();
+        for (int i = 0; i < srcList.Count; i++)
+        {
+            tgtList.Add((T)srcList[i].Clone());
         }
     }
 
@@ -365,6 +450,9 @@ public static class Utilities
         }
     }
 
+    public static List<T> ShallowCopy<T>(this List<T> list) {
+        return new(list);
+    }
     
     public static float3 EaseInSquared(float3 difference, float slowdown_range, float easing_speed)
     {
@@ -544,6 +632,35 @@ public static class RectTransformExtensions
         var wordlPos= target.position + target.TransformVector(offset);
         target.pivot = pivot;
         target.position = wordlPos;
+    }
+}
+
+public static class ListExtensions {
+    // only adds the item if it is not already in the list
+    public static bool AddUnique<T>(this List<T> list, T itemToAdd) {
+        if (!list.Contains(itemToAdd)) {
+            list.Add(itemToAdd);
+            return true;
+        }
+        return false;
+    }
+    // Union's the second list INTO the first list (Union = only unique elements are added)
+    public static void AddRangeUnion<T>(this List<T> list, List<T> listToUnifyIntoFirstList) {
+        var unionList = list.Union(listToUnifyIntoFirstList).ToList();
+        list.Clear();
+        list.AddRange(unionList);
+    }
+}
+
+public static class DictExtensions {
+    // adds item to dictionary, but checks if the key is already present - in which case it will log an error!
+    public static bool AddWithUniquenessCheck<T,K>(this Dictionary<T,K> dict, T key, K itemToAdd) {
+        if (!dict.ContainsKey(key)) {
+            dict[key] = itemToAdd;
+            return true;
+        }
+        Debug.LogError($"dictionary already contains {key}!");
+        return false;
     }
 }
 public abstract class UnitySerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver

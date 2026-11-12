@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MemoryPack.Core</name>
+    </assembly>
+    <members>
+        <member name="M:MemoryPack.MemoryPackableAttribute.#ctor(MemoryPack.GenerateType)">
+            <summary>
+            [generateType, (VersionTolerant or CircularReference) ? SerializeLayout.Explicit : SerializeLayout.Sequential]
+            </summary>
+            <param name="generateType"></param>
+        </member>
+        <member name="M:MemoryPack.MemoryPackableAttribute.#ctor(MemoryPack.SerializeLayout)">
+            <summary>
+            [GenerateType.Object, serializeLayout]
+            </summary>
+        </member>
+        <member name="M:MemoryPack.MemoryPackReader.DangerousTryReadCollectionHeader(System.Int32@)">
+            <summary>
+            no validate collection size, be careful to use.
+            </summary>
+        </member>
+        <member name="T:MemoryPack.Net10DateTimeOffset">
+            <summary>
+            <see cref="T:System.DateTimeOffset"/> compatible struct that binary layout is fixed to the layout of .NET 10 or later(int offsetMinutes, long utcTicks).
+            <para>
+            <see cref="T:System.DateTimeOffset"/> is serialized as its memory layout but it is different by runtime(.NET 9 or lower is (short offsetMinutes, long utcTicks), Unity is (long utcTicks, short offsetMinutes)).
+            If use this type instead of <see cref="T:System.DateTimeOffset"/>, the binary is same in all runtimes and it is compatible with <see cref="T:System.DateTimeOffset"/> of .NET 10 or later.
+            </para>
+            <para>
+            In deserialize, the binary serialized by <see cref="T:System.DateTimeOffset"/> of .NET 9 or lower can also be read.
+            The binary serialized by <see cref="T:System.DateTimeOffset"/> of Unity can not be read, use <see cref="T:MemoryPack.UnityDateTimeOffset"/> for it.
+            </para>
+            </summary>
+        </member>
+        <member name="M:MemoryPack.Net10DateTimeOffset.ToDateTimeOffset">
+            <summary>
+            Convert to <see cref="T:System.DateTimeOffset"/>, throws <see cref="T:System.ArgumentOutOfRangeException"/> if the value(comes from malformed data) is out of range.
+            </summary>
+        </member>
+        <member name="T:MemoryPack.SafeNullable`1">
+            <summary>
+            <see cref="T:System.Nullable`1"/> compatible struct that has no padding.
+            <para>
+            <see cref="T:System.Nullable`1"/> of unmanaged type is serialized as its memory layout(bool hasValue, padding, T value) and the padding is not initialized,
+            so the binary of the same value is not always same and it may include the garbage of memory.
+            This type is (T hasValue, T value) so there is no padding, the binary of the same value is always same.
+            </para>
+            <para>
+            When T is primitive type(int, long, double, bool, etc...) or enum, the binary is compatible with <see cref="T:System.Nullable`1"/>(the both can read each other).
+            In other types(Guid, decimal, user-defined struct, etc...), the binary is NOT compatible with <see cref="T:System.Nullable`1"/>.
+            </para>
+            </summary>
+        </member>
+        <member name="T:MemoryPack.UnityDateTimeOffset">
+            <summary>
+            <see cref="T:System.DateTimeOffset"/> compatible struct that binary layout is fixed to the layout of Unity(Mono, IL2CPP)(long utcTicks, short offsetMinutes).
+            <para>
+            <see cref="T:System.DateTimeOffset"/> is serialized as its memory layout but it is different by runtime(.NET 9 or lower is (short offsetMinutes, long utcTicks), .NET 10 or later is (int offsetMinutes, long utcTicks)).
+            If use this type instead of <see cref="T:System.DateTimeOffset"/>, the binary is same in all runtimes and it is compatible with the binary serialized by <see cref="T:System.DateTimeOffset"/> of Unity.
+            </para>
+            <para>
+            If there is no need to read the binary that was serialized in Unity, use <see cref="T:MemoryPack.Net10DateTimeOffset"/>.
+            </para>
+            </summary>
+        </member>
+        <member name="M:MemoryPack.UnityDateTimeOffset.ToDateTimeOffset">
+            <summary>
+            Convert to <see cref="T:System.DateTimeOffset"/>, throws <see cref="T:System.ArgumentOutOfRangeException"/> if the value(comes from malformed data) is out of range.
+            </summary>
+        </member>
+    </members>
+</doc>

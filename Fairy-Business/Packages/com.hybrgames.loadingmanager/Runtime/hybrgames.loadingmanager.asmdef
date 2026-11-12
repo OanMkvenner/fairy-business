@@ -2,7 +2,8 @@
     "name": "hybrgames.loadingmanager",
     "rootNamespace": "",
     "references": [
-        "hybrgames.utils"
+        "hybrgames.utils",
+        "DOTween.Modules"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

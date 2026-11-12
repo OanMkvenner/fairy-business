@@ -1,10 +1,5 @@
 fileFormatVersion: 2
 guid: f403fea27ba781d4790352849c7c1802
-AssemblyDefinitionImporter:
-  externalObjects: {}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
   productId: 271378
@@ -12,3 +7,8 @@ AssetOrigin:
   packageVersion: 1.1.1
   assetPath: Packages/com.smooth.operator.editor/Editor/Unity.SMOperator.CodeGen.asmdef
   uploadId: 683502
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

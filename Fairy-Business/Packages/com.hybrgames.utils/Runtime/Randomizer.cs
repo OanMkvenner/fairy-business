@@ -1,18 +1,23 @@
 // squirrel-based randomizer with static state
 using System;
+using MemoryPack;
 using UnityEngine;
 
-[Serializable]
-public class RandomizerUtil
+[Serializable][MemoryPackable]
+public partial class RandomizerUtil
 {
-	static public RandomizerUtil global = new(initialGlobalRandomizer : true);
-	int  rndState = 0;
-	uint seed = 0;
+	[NonSerialized]
+	public static RandomizerUtil global = new(initialGlobalRandomizer : true);
+	[SerializeField]
+	private int  rndState = 0;
+	[SerializeField]
+	private uint seed = 0;
 	public RandomizerUtil(uint initialSeed = 0, int initialRndState = 0){
 		SetSeed(initialSeed);
 		rndState = initialRndState;
 	}
 	// without parameters it seeds randomly
+	[MemoryPackConstructor]
 	public RandomizerUtil(){
 		rndState = 0;
 		CheckGlobalRandomizerInitialized(); // this is relevant here, as im unsure in which order constructors are called during initialization

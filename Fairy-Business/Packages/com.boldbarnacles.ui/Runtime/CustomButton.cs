@@ -330,8 +330,8 @@ public class CustomButton : UIBehaviour
         if (interactionComponent == null)
         {
             interactionSurface.AddComponent<CustomUiInteractionHandler>();
+            interactionComponent = interactionSurface.GetComponent<CustomUiInteractionHandler>();
         }
-        interactionComponent = interactionSurface.GetComponent<CustomUiInteractionHandler>();
         interactionComponent.onPointerDownEvent.AddListener(PointerDown);
         interactionComponent.onPointerUpEvent.AddListener(PointerUp);
         interactionComponent.onPointerEnter.AddListener(PointerEnter);
@@ -356,15 +356,18 @@ public class CustomButton : UIBehaviour
     }
     public void PointerEnter(PointerEventData eventData)
     {
+        if (!isInteractable) return;
         GetComponent<AnimatorUiElement>()?.HighlightOnHovering();
     }
     public void PointerExit(PointerEventData eventData)
     {
+        if (!isInteractable) return;
         GetComponent<AnimatorUiElement>()?.StopHighlightOnHovering();
     }
     bool wasOnDuringPointerDown = false;
     public void PointerDown(PointerEventData eventData)
     {
+        if (!isInteractable) return;
         if (toggleableButton){
             wasOnDuringPointerDown = m_IsOn;
             SetDepressed();
@@ -385,6 +388,7 @@ public class CustomButton : UIBehaviour
     }
     public void PointerUp(PointerEventData eventData)
     {
+        if (!isInteractable) return;
         if (toggleableButton){
             ReleaseDepressed();
             if (!wasOnDuringPointerDown){
@@ -408,13 +412,21 @@ public class CustomButton : UIBehaviour
             sounds.PlaySound(UiSoundType.MouseUpDefault);
         }
     }
-    
-    public void SetInteractable(bool interactable){
-        if (interactable){
-            interactionSurface.SetActive(true);
+
+    private bool isInteractable = true;
+    public void SetInteractable(bool interactable, bool disableInteractionSurface = false){
+        isInteractable = interactable;
+        if (disableInteractionSurface){
+            interactionSurface.SetActive(interactable);
+        }
+        SetDisabledVisuals(interactable);
+    }
+
+    public void SetDisabledVisuals(bool visualState)
+    {
+        if (visualState){
             disabledGraphic.color = Color.white;
         } else {
-            interactionSurface.SetActive(false);
             GetComponent<AnimatorUiElement>()?.StopHighlightOnHovering();
             disabledGraphic.color = new Color(0.8f,0.8f,0.8f,1.0f);
         }

@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: b1bc697fe6898f443bb0c1f063228d5c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 194621
+  packageName: UGUI-UI Anchor Automatically
+  packageVersion: 1.0
+  assetPath: Assets/UGUI Anchor Automatically/Editor/uGUITools.cs
+  uploadId: 431543
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -9,10 +16,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 194621
-  packageName: UGUI-UI Anchor Automatically
-  packageVersion: 1.0
-  assetPath: Assets/UGUI Anchor Automatically/Editor/uGUITools.cs
-  uploadId: 431543

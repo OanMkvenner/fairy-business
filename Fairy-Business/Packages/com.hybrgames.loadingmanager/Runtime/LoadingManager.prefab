@@ -44,3 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc1b1400c2fefd44bcb447f5923efb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadingImage: {fileID: 0}
+  fadeImageWhenDone: 1
+  loadingFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  loadingRemoteConfigFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  loadingLocalizerFinished:
+    m_PersistentCalls:
+      m_Calls: []

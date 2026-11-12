@@ -14,11 +14,11 @@ class BuildProcessor : IPreprocessBuildWithReport
         Debug.LogWarning("OnPreprocessBuild");
 
         //SaveStreamingAssetPaths();
-        CopyAndRenameAllRcFilesInRessourcesFolder();
+        CopyAndRenameAllRcFilesInResourcesFolder();
     }
 
 
-    private void CopyAndRenameAllRcFilesInRessourcesFolder()
+    private void CopyAndRenameAllRcFilesInResourcesFolder()
     {
         string localResourcesPath = Application.dataPath + "/Resources";
         List<string> paths = StreamingAssetsExtension.GetAllRcFilesRecursively(localResourcesPath, "RemoteConfig"); // Gets list of files from StreamingAssets/directory

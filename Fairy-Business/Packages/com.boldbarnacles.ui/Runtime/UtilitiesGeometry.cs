@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Burst;
 using UnityEngine;
 
@@ -100,21 +101,6 @@ public sealed class UtilitiesGeometry
 
     //
     // Summary:
-    //     Distance from a point p in 2d to a line defined by two points a and b.
-    //
-    // Parameters:
-    //   p:
-    //
-    //   a:
-    //
-    //   b:
-    public static float DistancePointLine2D(Vector2 p, Vector2 a, Vector2 b)
-    {
-        return Mathf.Abs((b.x - a.x) * (a.y - p.y) - (a.x - p.x) * (b.y - a.y)) / (b - a).magnitude;
-    }
-
-    //
-    // Summary:
     //     Distance from a point p in 2d to a line segment defined by two points a and b.
     //
     //
@@ -152,7 +138,38 @@ public sealed class UtilitiesGeometry
     {
         return (l1.y - l0.y) * (point.x - l0.x) - (l1.x - l0.x) * (point.y - l0.y);
     }
+    public static float DistancePointToRect(Vector2 point, Rect rect)
+    {
+        Vector2 halfSize = rect.size / 2f;
+        point -= rect.center;
+        Vector2 cwed = new Vector2(Mathf.Abs(point.x), Mathf.Abs(point.y)) - halfSize;
+        float outsideDistance = new Vector2(Mathf.Max(cwed.x, 0f), Mathf.Max(cwed.y, 0f)).magnitude;
+        float insideDistance = Mathf.Min(0f, Mathf.Max(cwed.x, cwed.y));
+        return outsideDistance + insideDistance;
+    }
 
+    public static float DistancePointToRectTransform_WorldPoint(Vector2 worldPoint, RectTransform rect) {
+        Vector3[] points = new Vector3[4];
+        rect.GetWorldCorners(points);
+        List<Vector2> hull = new List<Vector2>(4);
+        for (int i = 0; i < points.Length; i++) {
+             hull.Add(points[i]);
+        }
+        return DistancePointToConvexHull(worldPoint, hull);
+    }
+    public static float DistancePointToRectTransform_ParentLocalPoint(Vector2 localParentPoint, RectTransform rect) {
+        if (rect.parent == null) {
+            Debug.LogError($"tried getting parent of {rect} but couldnt find one");
+            return float.MaxValue;
+        }
+        Vector3[] points = new Vector3[4];
+        rect.GetWorldCorners(points);
+        List<Vector2> hull = new List<Vector2>(4);
+        for (int i = 0; i < points.Length; i++) {
+            hull.Add(rect.parent.InverseTransformPoint(points[i]));
+        }
+        return DistancePointToConvexHull(localParentPoint, hull);
+    }
     public static float DistancePointToConvexHull(Vector2 p, List<Vector2> hull)
     {
         float num = float.PositiveInfinity;
@@ -242,5 +259,95 @@ public sealed class UtilitiesGeometry
 
         outHull.RemoveAt(outHull.Count - 1);
     }
+    public static float DistancePointLine2D(Vector2 point, Vector2 lineStart, Vector2 lineEnd)
+    {
+        return (ProjectPointLine2D(point, lineStart, lineEnd) - point).magnitude;
+    }
+    public static Vector2 ProjectPointLine2D(Vector2 point, Vector2 lineStart, Vector2 lineEnd)
+    {
+        Vector2 rhs = point - lineStart;
+        Vector2 vector2 = lineEnd - lineStart;
+        float magnitude = vector2.magnitude;
+        Vector2 lhs = vector2;
+        if (magnitude > 1E-06f)
+        {
+            lhs = (Vector2)(lhs / magnitude);
+        }
+        float num2 = Mathf.Clamp(Vector2.Dot(lhs, rhs), 0f, magnitude);
+        return (lineStart + ((Vector2)(lhs * num2)));
+    }
 
+
+    public static float ClosestDistanceToPolygon(Vector2[] vertices, Vector2 checkPoint)
+    {
+        int nvert = vertices.Length;
+        int i, j = 0;
+        float minDistance = Mathf.Infinity;
+        for (i = 0, j = nvert - 1; i < nvert; j = i++)
+        {
+            float distance = DistancePointLine2D(checkPoint, vertices[i], vertices[j]);
+            minDistance = Mathf.Min(minDistance, distance);
+        }
+
+        return minDistance;
+    }
+
+    public static Vector2 GetClosestPointInsidePolygon(List<Vector2> vertices, Vector2 checkPoint, float margin = 1E-06f) {
+        return GetClosestPointInsidePolygon(vertices.ToArray(), checkPoint, margin);
+    }
+    public static Vector2 GetClosestPointInsidePolygon(Vector2[] vertices, Vector2 checkPoint, float margin = 1E-06f) {
+        if (IsInsidePolygon(vertices, checkPoint, margin)) return checkPoint;
+        
+        int nvert = vertices.Length;
+        int i, j = 0;
+        float minDistance = Mathf.Infinity;
+        List<Vector2> closestPoints = new List<Vector2>(vertices.Length - 1);
+        var closestPoint = checkPoint;
+        for (i = 0, j = nvert - 1; i < nvert; j = i++) {
+            var newPoint = ProjectPointLine2D(checkPoint, vertices[i], vertices[j]);
+            closestPoints.Add(newPoint);
+            
+            float distance = (newPoint - checkPoint).magnitude;
+            if (distance < minDistance) {
+                closestPoint = newPoint;
+                minDistance = distance;
+            }
+        }
+
+        return closestPoint;
+    }
+    public static bool IsInsidePolygon(Vector2[] vertices, Vector2 checkPoint, float margin = 1E-06f)
+    {
+        // check if on border
+        if(ClosestDistanceToPolygon(vertices, checkPoint) < margin)
+        {
+            return true;
+        }
+        // otherwise check if inside
+        float[] vertX = new float[vertices.Length];
+        float[] vertY = new float[vertices.Length];
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            vertX[i] = vertices[i].x;
+            vertY[i] = vertices[i].y;
+        }
+
+        return IsInsidePolygon(vertices.Length, vertX, vertY, checkPoint.x, checkPoint.y);
+    }
+
+    static bool IsInsidePolygon(int nvert, float[] vertx, float[] verty, float testx, float testy)
+    {
+        bool c = false;
+        int i, j = 0;
+        for (i = 0, j = nvert - 1; i < nvert; j = i++)
+        {
+            if ((((verty[i] <= testy) && (testy < verty[j])) ||
+
+                 ((verty[j] <= testy) && (testy < verty[i]))) &&
+
+                (testx < (vertx[j] - vertx[i]) * (testy - verty[i]) / (verty[j] - verty[i]) + vertx[i]))
+                c = !c;
+        }
+        return c;
+    }
 }

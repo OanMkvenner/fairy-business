@@ -6,7 +6,10 @@
         "Unity.Mathematics",
         "hybrgames.utils",
         "UniTask",
-        "Unity.TextMeshPro"
+        "Unity.TextMeshPro",
+        "boldbarnacles.ui",
+        "DomainReloadHelper.Runtime",
+        "MathfsAsmdef"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

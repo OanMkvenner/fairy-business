@@ -70,6 +70,8 @@ namespace Locations
         [SerializeField] private Image effectImage;
 
         [SerializeField] private TextMeshProUGUI effectKeyword;
+        [SerializeField] private TextMeshProUGUI effectVpAmount;
+        [SerializeField] private GameObject effectVpAmountSymbol;
 
         private bool effectKeyWordEnabled = false;
 
@@ -139,7 +141,7 @@ namespace Locations
                 activeLanguageCode);
             
             currenLocatioUI.Init(LocationData.locationBackground, LocationData.artefactIcon, artifactTitle, 
-                locationTitle, locationKeyword);
+                locationTitle, locationKeyword, VictoryPoints.ToString());
         }
         
         public void AddPlayerPower(PlayerColorIdentifier playerIdx, int newPower)
@@ -228,6 +230,7 @@ namespace Locations
             SetArtefactSprite(selected);
 
             effectKeyword.enabled = show;
+            effectVpAmountSymbol.SetActive(show);
             
             if (!show)
                 return;
@@ -239,6 +242,8 @@ namespace Locations
                 LocationData.localizationKeywordText,
                 languageCode
             );
+            effectVpAmount.text = VictoryPoints.ToString();
+            
 
             effectImage.sprite = selected
                 ? LocationData.effectEnabledIcon

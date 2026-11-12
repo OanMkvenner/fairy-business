@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
-  m_Name: HauntedHouse
+  m_Name: TheHauntedHouse
   m_EditorClassIdentifier: 
   imageGameView: {fileID: 6032394529768997136, guid: 3bb47786331025e4eae043d1d0377344,
     type: 3}
@@ -18,9 +18,8 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 8813795866632363934, guid: ad5eb7c41b6f30647b805c6f540f92fd,
     type: 3}
-  artefactIcon: {fileID: 9147461975721839333, guid: b3fa213d0d44a63409d3ee41c9249658,
-    type: 3}
-  artefactIconDisabled: {fileID: -2120776973233072616, guid: 11260c683fafa7d4aa81cdc8f0cb8aef,
+  artefactIcon: {fileID: 21300000, guid: b3fa213d0d44a63409d3ee41c9249658, type: 3}
+  artefactIconDisabled: {fileID: 21300000, guid: 11260c683fafa7d4aa81cdc8f0cb8aef,
     type: 3}
   effectEnabledIcon: {fileID: -4209846483730356258, guid: 8b0b072b98215f0449001b95623db864,
     type: 3}

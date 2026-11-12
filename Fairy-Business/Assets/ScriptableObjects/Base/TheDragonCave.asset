@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
-  m_Name: DragonCave
+  m_Name: TheDragonCave
   m_EditorClassIdentifier: 
   imageGameView: {fileID: 3523605709306591098, guid: 852320da64304b747a31b740f9cc912d,
     type: 3}
@@ -18,9 +18,8 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 2045247488099608576, guid: a4341fd8b1afdb0419ecb36d47a0461b,
     type: 3}
-  artefactIcon: {fileID: -5751386723105156256, guid: 776c156d044bb11419f785d54f8107bc,
-    type: 3}
-  artefactIconDisabled: {fileID: 8439124489806925584, guid: 7e043b536cfc60c48b19538ab8e21f8d,
+  artefactIcon: {fileID: 21300000, guid: 776c156d044bb11419f785d54f8107bc, type: 3}
+  artefactIconDisabled: {fileID: 21300000, guid: 7e043b536cfc60c48b19538ab8e21f8d,
     type: 3}
   effectEnabledIcon: {fileID: -882816498597982139, guid: 6c0ceff9a9bfcaf4fbcbf27ef6d141a4,
     type: 3}

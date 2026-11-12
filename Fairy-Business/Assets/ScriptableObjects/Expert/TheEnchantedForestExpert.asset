@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
-  m_Name: EnchantedForest
-  m_EditorClassIdentifier: 
+  m_Name: TheEnchantedForestExpert
+  m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
   imageGameView: {fileID: 3275756823722363233, guid: bd88e78a053dae34b912a934de477891,
     type: 3}
   imageEnabled: {fileID: -5534797415213101912, guid: 52df297df3f29f642a46ac4cc596a67d,
     type: 3}
   imageDisabled: {fileID: -1751484391319276772, guid: 2bf1336b0b33e78429720fd368f6cc73,
     type: 3}
-  artefactIcon: {fileID: -8244985732472280339, guid: 71bdc12b008cf9f48a149936fd3f48b2,
-    type: 3}
-  artefactIconDisabled: {fileID: -8699526034111165831, guid: 0eb8f92930fffbd4ca138d166d7889e5,
+  artefactIcon: {fileID: 21300000, guid: d1a10c94c1c950849a61cc912fedd51b, type: 3}
+  artefactIconDisabled: {fileID: 21300000, guid: 96382df8821c8ba4b8821b2224d9769c,
     type: 3}
   effectEnabledIcon: {fileID: 8115087323478472779, guid: 2034d0331fb687c4fb120dc19e40e135,
     type: 3}
@@ -28,10 +27,10 @@ MonoBehaviour:
     type: 3}
   locationBackground: {fileID: 8328248506073472367, guid: 23a8204888fb7304fb2b587ace5cb5ab,
     type: 3}
-  LocationIdentifier: 2
-  ModeIdentifier: 1
-  VictoryPoints: 2
-  localizationDescriptionText: locationDescription_EnchantedForest
-  localizationTitleText: locationTitle_EnchantedForest
-  localizationKeywordText: locationKeyword_EnchantedForest
-  localizationArtifact: locationArtifactTitle_EnchantedForest_MagicBean
+  LocationIdentifier: 11
+  ModeIdentifier: 2
+  VictoryPoints: 1
+  localizationDescriptionText: locationDescriptionExpert_EnchantedForest
+  localizationTitleText: locationTitleExpert_EnchantedForest
+  localizationKeywordText: locationKeywordExpert_EnchantedForest
+  localizationArtifact: locationArtifactTitle_EnchantedForest_EnchantedRose

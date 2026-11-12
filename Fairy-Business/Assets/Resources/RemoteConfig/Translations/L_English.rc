@@ -22,9 +22,10 @@
       "newTurn": "New Turn",
       
       "menuTitle_MenuSelection": "Selected Locations",
-      "menuSelection_locationSelection": "Select 3 Items",
+      "menuSelection_locationSelection": "Select 3 Magical Items",
+      "menuSelection_locationSelected": "Your Selection",
       "menuSelection_nextButton": "Next",
-      "menuSelection_backButton": "Back",
+      "menuSelection_randomizeButton": "Select Random",
       "menuSelection_normalModeTitle": "Mode: Normal",
       "menuSelection_expertModeTitle": "Mode: Expert",
       "menuSelection_showEffectTitle": "Show Effect",

@@ -116,12 +116,12 @@ TextureImporter:
       name: FB_Item_TheHauntedHouse_BG_Off_hover_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 43
-        width: 432
-        height: 430
+        x: 12
+        y: 13
+        width: 492
+        height: 490
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
-  m_Name: BottomOfTheSea
+  m_Name: TheBottomOfTheSeaExpert
   m_EditorClassIdentifier: 
   imageGameView: {fileID: 5353642068034378650, guid: 5b89fb3a9ec1c244ca5d524922e92067,
     type: 3}
@@ -18,9 +18,8 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 4373916652557415318, guid: bb48a81b39ed25345a8c0d3ba7a2c627,
     type: 3}
-  artefactIcon: {fileID: 6131324083951566149, guid: 5c6c6e4f0ac97d14fb0c0128fcf00187,
-    type: 3}
-  artefactIconDisabled: {fileID: -7252568203461014857, guid: ee52206dfa3e49e409f81a952562e9d0,
+  artefactIcon: {fileID: 21300000, guid: 1eb188ee400d8c241978ade395607d04, type: 3}
+  artefactIconDisabled: {fileID: 21300000, guid: 2eda61a8c27eaaf489c42db35a952fd9,
     type: 3}
   effectEnabledIcon: {fileID: 9029061209948082837, guid: 0f4632e6e9b39f644bcb23b54e245337,
     type: 3}
@@ -28,10 +27,10 @@ MonoBehaviour:
     type: 3}
   locationBackground: {fileID: 8875730847190090070, guid: 9c1b30c915a50e94d9b4b211d24b2648,
     type: 3}
-  LocationIdentifier: 7
-  ModeIdentifier: 1
+  LocationIdentifier: 16
+  ModeIdentifier: 2
   VictoryPoints: 3
-  localizationDescriptionText: locationDescription_BottomOfTheSea
-  localizationTitleText: locationTitle_BottomOfTheSea
-  localizationKeywordText: locationKeyword_BottomOfTheSea
-  localizationArtifact: locationArtifactTitle_BottomOfSea_MermaidNecklace
+  localizationDescriptionText: locationDescriptionExpert_BottomOfTheSea
+  localizationTitleText: locationTitleExpert_BottomOfTheSea
+  localizationKeywordText: locationKeywordExpert_BottomOfTheSea
+  localizationArtifact: locationArtifactTitle_BottomOfSea_Trident

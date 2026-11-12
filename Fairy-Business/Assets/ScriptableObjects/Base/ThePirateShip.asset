@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
-  m_Name: PirateShip
+  m_Name: ThePirateShip
   m_EditorClassIdentifier: 
   imageGameView: {fileID: 5865785250619424965, guid: c73d7a61ff4b9bd42817ebf2101dd84f,
     type: 3}
@@ -18,9 +18,8 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -6220615198652187530, guid: c4e9ad64b353b324c8043bfe499302af,
     type: 3}
-  artefactIcon: {fileID: -8590230676535877846, guid: dd566ca8dfdcdac41805fb16b90ecab8,
-    type: 3}
-  artefactIconDisabled: {fileID: -2922828313919438409, guid: e57c8b0450b63344b85cd66388d0550e,
+  artefactIcon: {fileID: 21300000, guid: dd566ca8dfdcdac41805fb16b90ecab8, type: 3}
+  artefactIconDisabled: {fileID: 21300000, guid: e57c8b0450b63344b85cd66388d0550e,
     type: 3}
   effectEnabledIcon: {fileID: 387407860680228484, guid: c02f37629340d114cb19c6b24ee12ee8,
     type: 3}

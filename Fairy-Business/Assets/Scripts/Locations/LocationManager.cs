@@ -79,13 +79,18 @@ namespace Locations
                 locationDefinition.IsSelected = false;
                 
             } else {
-                
-                SelectedLocations.Add(locationDefinition);
-                locationDefinition.IsSelected = true;
+                if (!CheckEnoughLocationsSelected()) {
+                    SelectedLocations.Add(locationDefinition);
+                    locationDefinition.IsSelected = true;
+                } else {
+                    Debug.LogError("test2");
+                    //TagJK_implement could sound an error/show effect, but might also be fine as is
+                    // also: enable the "next" button
+                }
             }
             
-            if(CheckEnoughLocationsSelected())
-                MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);;
+            //if(CheckEnoughLocationsSelected())
+            //    MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);
         }
 
         public void PickRandomLocations()
@@ -95,13 +100,16 @@ namespace Locations
                 Debug.LogError("No Location mode set!");
                 return;
             }
-            
+            foreach (var loc in SelectedLocations) {
+                loc.IsSelected = false;
+            }
             SelectedLocations.Clear();
 
             List<LocationDefinition> locationsBasedOnMode =
                 allAvailableLocations
                     .Where(ld => ld.LocationData.ModeIdentifier == CurrentMode)
                     .ToList();
+
             
             while (SelectedLocations.Count < 3)
             {
@@ -109,6 +117,9 @@ namespace Locations
                 
                 SetupSelectLocation(locationsBasedOnMode[randomIndex]);
             }
+            
+            UI.Menu.LocationSelectionMenu.CreateLocationUICards(LocationManager.instance.SelectedLocations);
+            //if(CheckEnoughLocationsSelected()) MenuManager.instance.OpenMenu(MenuIdentifier.LocationSelectionMenu);
         }
 
         /// <summary>
@@ -146,6 +157,11 @@ namespace Locations
             {
                 Destroy(child.gameObject);
             }
+            foreach (LocationDefinition child in allAvailableLocations)
+            {
+                Destroy(child.gameObject);
+            }
+            allAvailableLocations.Clear();
 
             foreach (LocationData locationData in baseLocationDataCollection)
             {

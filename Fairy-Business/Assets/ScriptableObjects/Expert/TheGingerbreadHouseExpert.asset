@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
-  m_Name: GingerbreadHouse
-  m_EditorClassIdentifier: 
+  m_Name: TheGingerbreadHouseExpert
+  m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
   imageGameView: {fileID: -1155080479326810074, guid: a41ab40dda93cb3489a1786c0306cafb,
     type: 3}
   imageEnabled: {fileID: -1525245392750082236, guid: 8cd6b26e04eb68147a6eb197272db8fc,
     type: 3}
   imageDisabled: {fileID: -1835665994482058080, guid: a4f74b71180d43643a52f819882e31a0,
     type: 3}
-  artefactIcon: {fileID: -5748485383308906136, guid: d857df2ed06a1d14b9083481385fbec5,
-    type: 3}
-  artefactIconDisabled: {fileID: 4625339676421840410, guid: 74ce8e596cf1cd04a8805fbdab487e63,
+  artefactIcon: {fileID: 21300000, guid: 535ad25b56c8ddd4b9313b9b0746451f, type: 3}
+  artefactIconDisabled: {fileID: 21300000, guid: d47979abbbd00244997719e41a69e09a,
     type: 3}
   effectEnabledIcon: {fileID: -2112216326769978790, guid: 3887e3ada7a4c7d4abf59fc468d69950,
     type: 3}
@@ -28,10 +27,10 @@ MonoBehaviour:
     type: 3}
   locationBackground: {fileID: -4516700160097963135, guid: c5eac04c8324686478186f7245999b09,
     type: 3}
-  LocationIdentifier: 5
-  ModeIdentifier: 1
-  VictoryPoints: 3
-  localizationDescriptionText: locationDescription_GingerbreadHouse
-  localizationTitleText: locationTitle_GingerbreadHouse
-  localizationKeywordText: locationKeyword_GingerbreadHouse
-  localizationArtifact: locationArtifactTitle_GingerbreadHouse_GingerbreadMan
+  LocationIdentifier: 14
+  ModeIdentifier: 2
+  VictoryPoints: 0
+  localizationDescriptionText: locationDescriptionExpert_GingerbreadHouse
+  localizationTitleText: locationTitleExpert_GingerbreadHouse
+  localizationKeywordText: locationKeywordExpert_GingerbreadHouse
+  localizationArtifact: locationArtifactTitle_GingerbreadHouse_Cornucopia

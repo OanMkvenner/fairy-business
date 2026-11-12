@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 186107277ca3cb54d87ce11479950726, type: 3}
-  m_Name: Graph Exit
+  m_Name: Continue
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
   position: {x: 1256, y: -56}
@@ -106,7 +106,7 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   active: 0
-  oldName: Graph Exit
+  oldName: Continue
 --- !u!114 &-3479012110221791581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +238,58 @@ MonoBehaviour:
   z: 0
   k: 0
   duration: 0.5
+--- !u!114 &-1438950283734801749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 186107277ca3cb54d87ce11479950726, type: 3}
+  m_Name: BtnBack
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1176, y: 232}
+  ports:
+    keys:
+    - exitGraph
+    - enter
+    - passThrough
+    values:
+    - _fieldName: exitGraph
+      _node: {fileID: -1438950283734801749}
+      _typeQualifiedName: XNode.UiStateGraph.GraphExitNode+AnyNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: BtnBack
+        node: {fileID: 4441277829143299856}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: enter
+      _node: {fileID: -1438950283734801749}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+EnterNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: passThrough
+      _node: {fileID: -1438950283734801749}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ImmideateExitPort, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  active: 0
+  oldName: BtnBack
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,11 +313,12 @@ MonoBehaviour:
   - {fileID: 6009096967774085166}
   - {fileID: -3479012110221791581}
   - {fileID: 4625546848334044090}
+  - {fileID: -1438950283734801749}
   _startNodes: []
   queuedRepaint: 0
   parentSubgraphNode: {fileID: 6338481848995445560, guid: a7b5c991d3e35c1409739ca87195a515,
     type: 2}
-  previouselySelectedNode: {fileID: 7413654576601580126}
+  previouselySelectedNode: {fileID: -6917695554716887388}
 --- !u!114 &961669715515258502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,6 +389,9 @@ MonoBehaviour:
     keys:
     - enter
     - passThrough
+    - BtnBack
+    - BtnRandom
+    - BtnNext
     values:
     - _fieldName: enter
       _node: {fileID: 4441277829143299856}
@@ -364,6 +420,36 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
+    - _fieldName: BtnBack
+      _node: {fileID: 4441277829143299856}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: exitGraph
+        node: {fileID: -1438950283734801749}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: BtnRandom
+      _node: {fileID: 4441277829143299856}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: BtnNext
+      _node: {fileID: 4441277829143299856}
+      _typeQualifiedName: XNode.UiStateGraph.UiStateNode+ButtonNode, hybrgames.nodeeditor,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   active: 0
   drb: {fileID: 0}
   assignedCanvasRef:

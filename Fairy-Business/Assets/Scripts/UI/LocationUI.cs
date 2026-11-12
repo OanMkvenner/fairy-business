@@ -11,14 +11,16 @@ namespace UI
         [SerializeField] private TextMeshProUGUI locationTitle;
         [SerializeField] private TextMeshProUGUI artifactTitle;
         [SerializeField] private TextMeshProUGUI keyword;
+        [SerializeField] private TextMeshProUGUI vpAmount;
 
-        public void Init(Sprite locationBackgroundImage, Sprite artifact, string artifactName, string locationTitle, string keyword)
+        public void Init(Sprite locationBackgroundImage, Sprite artifact, string artifactName, string locationTitle, string keyword, string vpAmount)
         {
             this.locationBackground.sprite = locationBackgroundImage;
             this.artifactImage.sprite = artifact;
             this.locationTitle.text = locationTitle;
             this.artifactTitle.text = artifactName;
             this.keyword.text = keyword;
+            this.vpAmount.text = vpAmount;
         }
     }
 }

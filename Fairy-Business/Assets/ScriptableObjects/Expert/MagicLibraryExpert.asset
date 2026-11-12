@@ -18,9 +18,8 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: 7076393882549360678, guid: afca6bd867e114a409c01c83dae5b35d,
     type: 3}
-  artefactIcon: {fileID: 7982705498322868722, guid: a107cbe2bde3c2046996533cf411fadf,
-    type: 3}
-  artefactIconDisabled: {fileID: 3287249393508774036, guid: a975157c8d4b1694985ab00feaa015fb,
+  artefactIcon: {fileID: 21300000, guid: a107cbe2bde3c2046996533cf411fadf, type: 3}
+  artefactIconDisabled: {fileID: 21300000, guid: a975157c8d4b1694985ab00feaa015fb,
     type: 3}
   effectEnabledIcon: {fileID: 1803959502202254199, guid: 61c8f19e3d8b4c246b0f081b74e0cb63,
     type: 3}

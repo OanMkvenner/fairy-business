@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40aeae347c6a45699de2d1c03171ba52, type: 3}
-  m_Name: PirateShipExpert
+  m_Name: ThePirateShipExpert
   m_EditorClassIdentifier: Assembly-CSharp::Locations.LocationData
   imageGameView: {fileID: 5865785250619424965, guid: c73d7a61ff4b9bd42817ebf2101dd84f,
     type: 3}
@@ -18,9 +18,8 @@ MonoBehaviour:
     type: 3}
   imageDisabled: {fileID: -6220615198652187530, guid: c4e9ad64b353b324c8043bfe499302af,
     type: 3}
-  artefactIcon: {fileID: 1319675580533549669, guid: 3476213e32f44c041807940e03850b08,
-    type: 3}
-  artefactIconDisabled: {fileID: 1226539742384706089, guid: c29d3d3b82e999e4fbbbb8b3fdf1db0a,
+  artefactIcon: {fileID: 21300000, guid: 3476213e32f44c041807940e03850b08, type: 3}
+  artefactIconDisabled: {fileID: 21300000, guid: c29d3d3b82e999e4fbbbb8b3fdf1db0a,
     type: 3}
   effectEnabledIcon: {fileID: 387407860680228484, guid: c02f37629340d114cb19c6b24ee12ee8,
     type: 3}
